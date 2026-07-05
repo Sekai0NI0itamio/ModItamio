@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="mod_icon.png"
+credits="Thanks to the Minecraft modding community for reporting this long-standing issue."
+authors="${mod_authors}"
+description='''This mod fixes the issue where when opening any sort of container in minecraft, the game experiences lag and you see stutters and lag spikes that hinder game processes, this mod fixes this issue by deferring container screen initialization over 2-3 frames and pre-warming item render data so the spike becomes imperceptible and re-opening containers is instant, and to give you a smoother and less laggy experience.'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

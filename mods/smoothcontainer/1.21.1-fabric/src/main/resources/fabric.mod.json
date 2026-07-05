@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "smoothcontainer",
+    "version": "${version}",
+    "name": "SmoothContainer",
+    "description": "This mod fixes the issue where when opening any sort of container in minecraft, the game experiences lag and you see stutters and lag spikes that hinder game processes, this mod fixes this issue by deferring container screen initialization over 2-3 frames and pre-warming item render data so the spike becomes imperceptible and re-opening containers is instant, and to give you a smoother and less laggy experience.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "All Rights Reserved",
+    "icon": "mod_icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "asd.itamio.smoothcontainer.SmoothContainer"
+        ]
+    },
+    "mixins": [
+        "smoothcontainer.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
