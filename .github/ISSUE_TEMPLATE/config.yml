@@ -1,0 +1,7 @@
+# Disallow blank issues — users must pick a template.
+# This keeps the issue tracker structured and filterable by label.
+blank_issues_enabled: false
+contact_links:
+  - name: Modrinth Project Pages
+    url: https://modrinth.com/user/Sekai0NI0itamio
+    about: Browse published mods on Modrinth.

@@ -1,0 +1,88 @@
+name: Crash Report
+description: Report a game crash that happens with this mod installed
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template if the game **crashes** (closes unexpectedly,
+        shows a crash report screen, or freezes). For non-crashing bugs
+        (wrong behavior but the game keeps running), use the Bug Report
+        template instead.
+
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Mod
+      options:
+        - SmoothContainer
+        - Other (specify in title)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mc-version
+    attributes:
+      label: Minecraft Version
+      options:
+        - 1.20.1
+        - 1.21.1
+        - 1.21.11
+        - 26.1.2
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader
+      options:
+        - Fabric
+        - Forge
+        - NeoForge
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod Version
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: when
+    attributes:
+      label: When does the crash happen?
+      options:
+        - On game startup
+        - When opening a screen/container
+        - When performing an action in-game
+        - Randomly during gameplay
+        - On world load
+        - On game exit
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash-log
+    attributes:
+      label: Crash Log
+      description: |
+        Paste the full crash log here. For Minecraft crashes, this is
+        usually `crash-reports/crash-<timestamp>-client.txt`. For
+        AssetDesign app launches, include any `[MODAPP-ERROR]` lines.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction Steps
+      description: What were you doing when the crash happened?
+    validations:
+      required: false

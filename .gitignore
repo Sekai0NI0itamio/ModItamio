@@ -1,0 +1,31 @@
+# Build artifacts — never commit these (they're per-machine)
+build/
+.gradle/
+run/
+out/
+*.log
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.eclipse/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gradle wrapper binaries are committed (small, required for `./gradlew`)
+# but the global gradle cache is not:
+gradle/.gradle/
+
+# Minecraft runtime files that may end up in run/
+run/.minecraft/
+run/saves/
+run/logs/
+run/crash-reports/

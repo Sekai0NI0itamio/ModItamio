@@ -1,0 +1,43 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea for how a mod could be better? Tell us about it.
+
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Mod
+      description: Which mod is this feature for? (If "Other", name it in the title.)
+      options:
+        - SmoothContainer
+        - Other (specify in title)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Use Case
+      description: What problem does this feature solve, or what does it improve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Behavior
+      description: How do you think it should work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any other ways you thought about solving this?
+    validations:
+      required: false
