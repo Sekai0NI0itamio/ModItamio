@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "asd.itamio.seedprotect.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "FarmBlockMixin"
+    ],
+    "client": [],
+    "server": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

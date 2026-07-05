@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 1,
+    "id": "seedprotect",
+    "version": "${version}",
+    "name": "Seed Protect",
+    "description": "Prevents farmland and planted crops from being trampled by players and mobs. Cancels the vanilla FarmBlock fallOn dirt conversion so farmland stays as farmland and crops remain intact when entities walk or fall on them.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.seedprotect.SeedProtect"
+        ]
+    },
+    "mixins": [
+        "seedprotect.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~26.1.2",
+        "java": ">=25"
+    }
+}
