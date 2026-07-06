@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 1,
+    "id": "dontbreakcropsthatarenotgrownyet",
+    "version": "${version}",
+    "name": "Dont Break crops that are not grown yet",
+    "description": "Cancels player block-break events on unripe crops (wheat, carrots, potatoes, beetroots, torchflower crop, pitcher crop, nether wart, sweet berry bush) so accidental clicks don't destroy growing harvests. Sneak to bypass for intentional removal.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.dontbreakcropsthatarenotgrownyet.DontBreakcropsthatarenotgrownyet"
+        ]
+    },
+    "mixins": [
+        "dontbreakcropsthatarenotgrownyet.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.11",
+        "minecraft": "~1.20.1",
+        "java": ">=17"
+    }
+}

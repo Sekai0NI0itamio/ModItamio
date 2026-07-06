@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="mod_icon.png"
+credits="Asd1281yss"
+authors="${mod_authors}"
+description='''Cancels player block-break events on unripe crops (wheat, carrots, potatoes, beetroots, torchflower crop, pitcher crop, nether wart, sweet berry bush) so accidental clicks don't destroy growing harvests. Sneak to bypass for intentional removal.'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
