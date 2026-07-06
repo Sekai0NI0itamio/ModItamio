@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "${mod_id}",
+    "name": "${mod_name}",
+    "description": "${mod_description}",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "logoFile": "mod_icon.png",
+    "authorList": ["Itamio", "Asd1281yss"],
+    "license": "${mod_license}"
+  }
+]

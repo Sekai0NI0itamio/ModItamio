@@ -1,0 +1,27 @@
+{
+    "schemaVersion": 1,
+    "id": "tnt_duper",
+    "version": "${version}",
+    "name": "TNT Duper",
+    "description": "Why look for TNT dupers when you could just build one with one dispenser and one tnt?",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.tntduper.TNTDuper"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21"
+    }
+}
