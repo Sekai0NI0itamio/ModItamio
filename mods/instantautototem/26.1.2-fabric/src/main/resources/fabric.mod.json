@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "instantautototem",
+    "version": "${version}",
+    "name": "Instant Auto Totem",
+    "description": "Hate dying because you forget to keep a Totem of Undying in your offhand? This mod fixes that.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.instantautototem.InstantAutoTotem"
+        ],
+        "client": [
+            "asd.itamio.instantautototem.InstantAutoTotemClient"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~26.1.2",
+        "java": ">=25",
+        "fabric-api": "*"
+    }
+}
