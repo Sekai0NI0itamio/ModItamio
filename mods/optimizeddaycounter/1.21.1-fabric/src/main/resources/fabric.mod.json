@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "optimizeddaycounter",
+    "version": "${version}",
+    "name": "Optimized Day Counter",
+    "description": "Want to know what day it is and what hour it is in your minecraft world? Well this mod does exactly that.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.optimizeddaycounter.OptimizedDayCounter"
+        ],
+        "client": [
+            "asd.itamio.optimizeddaycounter.OptimizedDayCounterClient"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
