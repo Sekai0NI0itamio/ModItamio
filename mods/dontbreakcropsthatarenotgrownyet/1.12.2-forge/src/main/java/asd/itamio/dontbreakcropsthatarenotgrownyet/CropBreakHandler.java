@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -38,7 +39,9 @@ public final class CropBreakHandler {
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
         try {
             // Sneak to bypass: lets players intentionally remove unripe crops.
-            if (event.getPlayer().isSneaking()) {
+            // Cast to EntityLivingBase to avoid MCP SRG remapping issues with
+            // EntityPlayer.isSneaking() in stable_39 mappings.
+            if (((EntityLivingBase) event.getPlayer()).isSneaking()) {
                 return;
             }
             if (isUnripeCrop(event.getState())) {
