@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="givemorethan64"
+version="1.0.0"
+displayName="give more than 64"
+logoFile="mod_icon.png"
+credits="Asd1281yss"
+authors="Itamio, Asd1281yss"
+description='''
+Allows the /give command to give amounts exceeding an item's natural stack limit by distributing items across multiple stacks.
+'''
+
+[[dependencies.givemorethan64]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.234,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.givemorethan64]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
