@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "givemorethan64",
+    "version": "${version}",
+    "name": "give more than 64",
+    "description": "Removes the /give command cap, allowing you to give any number of items above the stack limit.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.givemorethan64.GiveMoreThan64"
+        ]
+    },
+    "mixins": [
+        "givemorethan64.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
