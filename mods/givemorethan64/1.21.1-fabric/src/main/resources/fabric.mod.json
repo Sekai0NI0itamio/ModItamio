@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "givemorethan64",
+    "version": "${version}",
+    "name": "give more than 64",
+    "description": "Allows the /give command to give amounts exceeding an item's natural stack limit by distributing items across multiple stacks.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.givemorethan64.Givemorethan64"
+        ]
+    },
+    "mixins": [
+        "givemorethan64.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
