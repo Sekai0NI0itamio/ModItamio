@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="mod_icon.png"
+credits="Asd1281yss"
+authors="Itamio, Asd1281yss"
+description='''
+Automatically keeps a Totem of Undying in your offhand at all times.
+Press O to toggle the auto-equip feature on/off. When enabled, if your offhand is empty or has a non-totem item, the mod will search your inventory for a Totem of Undying and swap it to your offhand.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
