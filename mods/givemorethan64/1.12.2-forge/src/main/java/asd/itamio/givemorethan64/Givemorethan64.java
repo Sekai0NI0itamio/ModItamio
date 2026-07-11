@@ -24,6 +24,7 @@ public class Givemorethan64 {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        net.minecraftforge.common.MinecraftForge.EVENT_BUS.register(new CommandGiveHandler());
         LOGGER.info("GiveMoreThan64 initialized - /give command now supports amounts above stack limit");
     }
 }
