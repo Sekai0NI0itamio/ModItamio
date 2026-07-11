@@ -33,8 +33,11 @@ public class GuiSellGui extends Screen {
     protected void init() {
         super.init();
         this.clearWidgets();
-        this.addRenderableWidget(Button.builder(Component.literal("\u00a7aSell All Items"), button -> {
-            sellAllItems();
+        this.addRenderableWidget(Button.builder(Component.literal("\u00a7aSell All Items"), new Button.OnPress() {
+            @Override
+            public void onPress(Button button) {
+                sellAllItems();
+            }
         }).bounds(this.width / 2 - 100, this.height - 25, 200, 20).build());
     }
 

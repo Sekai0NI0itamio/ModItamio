@@ -23,75 +23,100 @@ public class ModCommands {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         // /shop
         dispatcher.register(Commands.literal("shop")
-                .executes(context -> {
-                    CommandSourceStack source = context.getSource();
-                    if (source.getEntity() instanceof ServerPlayer player) {
-                        FriendlyByteBuf buf = PacketByteBufs.create();
-                        ShopPacket.write(ShopPacket.openShop(), buf);
-                        ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
-                    } else {
-                        source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                    @Override
+                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                        CommandSourceStack source = context.getSource();
+                        if (source.getEntity() instanceof ServerPlayer player) {
+                            FriendlyByteBuf buf = PacketByteBufs.create();
+                            ShopPacket.write(ShopPacket.openShop(), buf);
+                            ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
+                        } else {
+                            source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                        }
+                        return 1;
                     }
-                    return 1;
                 })
         );
 
         // /sellhand
         dispatcher.register(Commands.literal("sellhand")
-                .executes(context -> {
-                    CommandSourceStack source = context.getSource();
-                    if (source.getEntity() instanceof ServerPlayer player) {
-                        FriendlyByteBuf buf = PacketByteBufs.create();
-                        ShopPacket.write(ShopPacket.sellHand(), buf);
-                        ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
-                    } else {
-                        source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                    @Override
+                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                        CommandSourceStack source = context.getSource();
+                        if (source.getEntity() instanceof ServerPlayer player) {
+                            FriendlyByteBuf buf = PacketByteBufs.create();
+                            ShopPacket.write(ShopPacket.sellHand(), buf);
+                            ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
+                        } else {
+                            source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                        }
+                        return 1;
                     }
-                    return 1;
                 })
         );
 
         // /sellgui
         dispatcher.register(Commands.literal("sellgui")
-                .executes(context -> {
-                    CommandSourceStack source = context.getSource();
-                    if (source.getEntity() instanceof ServerPlayer player) {
-                        FriendlyByteBuf buf = PacketByteBufs.create();
-                        ShopPacket.write(ShopPacket.openSellGui(), buf);
-                        ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
-                    } else {
-                        source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                    @Override
+                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                        CommandSourceStack source = context.getSource();
+                        if (source.getEntity() instanceof ServerPlayer player) {
+                            FriendlyByteBuf buf = PacketByteBufs.create();
+                            ShopPacket.write(ShopPacket.openSellGui(), buf);
+                            ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
+                        } else {
+                            source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                        }
+                        return 1;
                     }
-                    return 1;
                 })
         );
 
         // /balance and /bal
         dispatcher.register(Commands.literal("balance")
-                .executes(context -> {
-                    CommandSourceStack source = context.getSource();
-                    if (source.getEntity() instanceof ServerPlayer player) {
-                        EconomyData economy = EconomyData.get(player.serverLevel());
-                        double balance = economy.getBalance(player.getUUID());
-                        source.sendSuccess(() -> Component.literal("\u00a7aBalance: $" + String.format("%.2f", balance)), false);
-                    } else {
-                        source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                    @Override
+                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                        CommandSourceStack source = context.getSource();
+                        if (source.getEntity() instanceof ServerPlayer player) {
+                            EconomyData economy = EconomyData.get(player.serverLevel());
+                            double balance = economy.getBalance(player.getUUID());
+                            source.sendSuccess(new java.util.function.Supplier<Component>() {
+                                @Override
+                                public Component get() {
+                                    return Component.literal("\u00a7aBalance: $" + String.format("%.2f", balance));
+                                }
+                            }, false);
+                        } else {
+                            source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                        }
+                        return 1;
                     }
-                    return 1;
                 })
         );
 
         dispatcher.register(Commands.literal("bal")
-                .executes(context -> {
-                    CommandSourceStack source = context.getSource();
-                    if (source.getEntity() instanceof ServerPlayer player) {
-                        EconomyData economy = EconomyData.get(player.serverLevel());
-                        double balance = economy.getBalance(player.getUUID());
-                        source.sendSuccess(() -> Component.literal("\u00a7aBalance: $" + String.format("%.2f", balance)), false);
-                    } else {
-                        source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                    @Override
+                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                        CommandSourceStack source = context.getSource();
+                        if (source.getEntity() instanceof ServerPlayer player) {
+                            EconomyData economy = EconomyData.get(player.serverLevel());
+                            double balance = economy.getBalance(player.getUUID());
+                            source.sendSuccess(new java.util.function.Supplier<Component>() {
+                                @Override
+                                public Component get() {
+                                    return Component.literal("\u00a7aBalance: $" + String.format("%.2f", balance));
+                                }
+                            }, false);
+                        } else {
+                            source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                        }
+                        return 1;
                     }
-                    return 1;
                 })
         );
 
@@ -99,11 +124,21 @@ public class ModCommands {
         dispatcher.register(Commands.literal("pay")
                 .then(Commands.argument("player", StringArgumentType.word())
                         .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0.01))
-                                .executes(context -> executePay(context, StringArgumentType.getString(context, "player"), DoubleArgumentType.getDouble(context, "amount")))
+                                .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                                    @Override
+                                    public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                                        return executePay(context, StringArgumentType.getString(context, "player"), DoubleArgumentType.getDouble(context, "amount"));
+                                    }
+                                })
                         )
                 )
                 .then(Commands.literal("confirm")
-                        .executes(context -> executeConfirm(context))
+                        .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                            @Override
+                            public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                                return executeConfirm(context);
+                            }
+                        })
                 )
         );
     }
@@ -145,8 +180,18 @@ public class ModCommands {
         }
 
         pendingPayments.put(senderUuid, new PendingPayment(targetName, amount));
-        source.sendSuccess(() -> Component.literal("\u00a7eConfirm payment of $" + String.format("%.2f", amount) + " to " + targetName + "?"), false);
-        source.sendSuccess(() -> Component.literal("\u00a7aType \u00a7f/pay confirm \u00a7ato confirm, or wait 30 seconds to cancel."), false);
+        source.sendSuccess(new java.util.function.Supplier<Component>() {
+            @Override
+            public Component get() {
+                return Component.literal("\u00a7eConfirm payment of $" + String.format("%.2f", amount) + " to " + targetName + "?");
+            }
+        }, false);
+        source.sendSuccess(new java.util.function.Supplier<Component>() {
+            @Override
+            public Component get() {
+                return Component.literal("\u00a7aType \u00a7f/pay confirm \u00a7ato confirm, or wait 30 seconds to cancel.");
+            }
+        }, false);
         return 1;
     }
 
@@ -183,8 +228,18 @@ public class ModCommands {
 
         economy.addBalance(targetUuid, pending.amount);
         pendingPayments.remove(senderUuid);
-        source.sendSuccess(() -> Component.literal("\u00a7aPaid $" + String.format("%.2f", pending.amount) + " to " + pending.targetName + "!"), false);
-        source.sendSuccess(() -> Component.literal("\u00a77Your balance: $" + String.format("%.2f", economy.getBalance(senderUuid))), false);
+        source.sendSuccess(new java.util.function.Supplier<Component>() {
+            @Override
+            public Component get() {
+                return Component.literal("\u00a7aPaid $" + String.format("%.2f", pending.amount) + " to " + pending.targetName + "!");
+            }
+        }, false);
+        source.sendSuccess(new java.util.function.Supplier<Component>() {
+            @Override
+            public Component get() {
+                return Component.literal("\u00a77Your balance: $" + String.format("%.2f", economy.getBalance(senderUuid)));
+            }
+        }, false);
 
         ServerPlayer targetPlayer = player.getServer().getPlayerList().getPlayerByName(pending.targetName);
         if (targetPlayer != null) {

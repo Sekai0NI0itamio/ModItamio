@@ -18,7 +18,17 @@ public class EconomyData extends SavedData {
     }
 
     public static EconomyData get(ServerLevel level) {
-        return level.getDataStorage().computeIfAbsent(EconomyData::new, EconomyData::new, DATA_NAME);
+        return level.getDataStorage().computeIfAbsent(new java.util.function.Function<CompoundTag, EconomyData>() {
+            @Override
+            public EconomyData apply(CompoundTag tag) {
+                return new EconomyData(tag);
+            }
+        }, new java.util.function.Supplier<EconomyData>() {
+            @Override
+            public EconomyData get() {
+                return new EconomyData();
+            }
+        }, DATA_NAME);
     }
 
     public EconomyData(CompoundTag nbt) {

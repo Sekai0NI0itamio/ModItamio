@@ -55,42 +55,54 @@ public class GuiShopItems extends Screen {
             int centerX = this.width / 2;
             int bottomY = this.height - 10;
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7aBuy"), button -> {
-                int qty = getQuantity();
-                if (qty > 0 && detailItemIndex >= 0) {
-                    ItemStack item = this.items.get(detailItemIndex);
-                    int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
-                    sendToServer(ShopPacket.buyItem(this.categoryIndex, this.detailItemIndex, actualItems));
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7aBuy"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    int qty = getQuantity();
+                    if (qty > 0 && detailItemIndex >= 0) {
+                        ItemStack item = GuiShopItems.this.items.get(detailItemIndex);
+                        int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
+                        sendToServer(ShopPacket.buyItem(GuiShopItems.this.categoryIndex, GuiShopItems.this.detailItemIndex, actualItems));
+                    }
                 }
             }).bounds(centerX - btnW - 2, bottomY - btnH * 2 - 8, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack"), button -> {
-                this.detailView = false;
-                this.detailItemIndex = -1;
-                rebuildButtons();
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    GuiShopItems.this.detailView = false;
+                    GuiShopItems.this.detailItemIndex = -1;
+                    rebuildButtons();
+                }
             }).bounds(centerX + 2, bottomY - btnH * 2 - 8, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal(stackMode ? "\u00a77Mode: Stacks" : "\u00a77Mode: Items"), button -> {
-                this.stackMode = !this.stackMode;
-                if (this.quantityField != null) {
-                    this.quantityField.setValue("1");
+            this.addRenderableWidget(Button.builder(Component.literal(stackMode ? "\u00a77Mode: Stacks" : "\u00a77Mode: Items"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    GuiShopItems.this.stackMode = !GuiShopItems.this.stackMode;
+                    if (GuiShopItems.this.quantityField != null) {
+                        GuiShopItems.this.quantityField.setValue("1");
+                    }
+                    rebuildButtons();
                 }
-                rebuildButtons();
             }).bounds(centerX - btnW - 2, bottomY - btnH - 4, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7eMax Afford"), button -> {
-                if (detailItemIndex >= 0 && detailItemIndex < this.items.size()) {
-                    ItemStack item = this.items.get(detailItemIndex);
-                    double buyPrice = WorldShop.getPriceEngine().getBuyPrice(item);
-                    double balance = 999999999.0;
-                    int maxAfford = (int) (balance / buyPrice);
-                    if (stackMode) {
-                        int maxStacks = maxAfford / item.getMaxStackSize();
-                        if (this.quantityField != null) {
-                            this.quantityField.setValue(String.valueOf(maxStacks));
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7eMax Afford"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    if (detailItemIndex >= 0 && detailItemIndex < GuiShopItems.this.items.size()) {
+                        ItemStack item = GuiShopItems.this.items.get(detailItemIndex);
+                        double buyPrice = WorldShop.getPriceEngine().getBuyPrice(item);
+                        double balance = 999999999.0;
+                        int maxAfford = (int) (balance / buyPrice);
+                        if (stackMode) {
+                            int maxStacks = maxAfford / item.getMaxStackSize();
+                            if (GuiShopItems.this.quantityField != null) {
+                                GuiShopItems.this.quantityField.setValue(String.valueOf(maxStacks));
+                            }
+                        } else if (GuiShopItems.this.quantityField != null) {
+                            GuiShopItems.this.quantityField.setValue(String.valueOf(maxAfford));
                         }
-                    } else if (this.quantityField != null) {
-                        this.quantityField.setValue(String.valueOf(maxAfford));
                     }
                 }
             }).bounds(centerX + 2, bottomY - btnH - 4, btnW, btnH).build());
@@ -102,11 +114,19 @@ public class GuiShopItems extends Screen {
             this.quantityField.setValue("1");
             this.quantityField.setFocused(true);
             this.quantityField.setMaxLength(5);
-            this.quantityField.setFilter(s -> s.matches("\\d*"));
+            this.quantityField.setFilter(new java.util.function.Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return s.matches("\\d*");
+            }
+        });
             this.addRenderableWidget(this.quantityField);
         } else {
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack to Categories"), button -> {
-                Minecraft.getInstance().setScreen(new GuiShopCategories());
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack to Categories"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    Minecraft.getInstance().setScreen(new GuiShopCategories());
+                }
             }).bounds(this.width / 2 - 100, this.height - 22, 200, 20).build());
         }
     }
