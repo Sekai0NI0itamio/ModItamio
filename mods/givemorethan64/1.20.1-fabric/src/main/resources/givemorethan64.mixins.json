@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "asd.itamio.givemorethan64.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "MixinGiveCommand"
+    ],
+    "client": [
+    ],
+    "server": [
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
