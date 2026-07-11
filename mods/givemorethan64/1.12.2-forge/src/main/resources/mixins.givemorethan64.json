@@ -1,0 +1,11 @@
+{
+    "package": "asd.itamio.givemorethan64.mixin",
+    "required": true,
+    "refmap": "mixins.givemorethan64.refmap.json",
+    "target": "@env(DEFAULT)",
+    "minVersion": "0.7.11",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "MixinCommandGive"
+    ]
+}

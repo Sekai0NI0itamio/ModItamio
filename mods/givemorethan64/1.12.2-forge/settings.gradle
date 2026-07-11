@@ -1,0 +1,2 @@
+// JAR archive name is set via archivesBaseName in build.gradle
+rootProject.name = 'mod-build'
