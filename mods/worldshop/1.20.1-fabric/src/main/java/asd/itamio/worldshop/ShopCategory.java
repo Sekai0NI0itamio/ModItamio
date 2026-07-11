@@ -41,6 +41,12 @@ public class ShopCategory {
             if (icon == null || icon.isEmpty()) continue;
             String tabName = tab.getDisplayName().getString();
             ShopCategory category = new ShopCategory(tabName, icon.copy());
+            // Populate items from the creative tab's display items
+            for (ItemStack item : tab.getDisplayItems()) {
+                if (item == null || item.isEmpty()) continue;
+                category.addItem(item.copy());
+            }
+            if (category.getItems().isEmpty()) continue;
             categories.add(category);
         }
         return categories;
