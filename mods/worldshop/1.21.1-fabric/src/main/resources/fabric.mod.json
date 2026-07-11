@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "worldshop",
+    "version": "${version}",
+    "name": "World Shop",
+    "description": "A full-featured economy mod with buy/sell GUIs, recipe-based pricing, and player-to-player payments.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.worldshop.WorldShop"
+        ],
+        "client": [
+            "asd.itamio.worldshop.WorldShopClient"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
