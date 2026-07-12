@@ -12,6 +12,7 @@ import java.util.List;
 public class GuiShopCategories extends Screen {
     private List<ShopCategory> categories = WorldShop.getCategories();
     private int scrollOffset = 0;
+    private double accumulatedScroll = 0.0;
     private static final int ICON_SIZE = 28;
     private static final int COLUMNS = 9;
 
@@ -102,10 +103,13 @@ public class GuiShopCategories extends Screen {
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollDelta) {
         int rowsPerPage = Math.max(1, (this.height - 75) / 34);
-        if (scrollDelta > 0) {
-            this.scrollOffset = Math.max(0, this.scrollOffset - 1);
-        } else if (scrollDelta < 0) {
-            this.scrollOffset = Math.min(getMaxScrollPages(rowsPerPage) - 1, this.scrollOffset + 1);
+        this.accumulatedScroll += scrollDelta;
+        double SCROLL_THRESHOLD = 5.0;
+        int steps = (int) (this.accumulatedScroll / SCROLL_THRESHOLD);
+        if (steps != 0) {
+            this.accumulatedScroll -= steps * SCROLL_THRESHOLD;
+            int maxPages = getMaxScrollPages(rowsPerPage);
+            this.scrollOffset = Math.max(0, Math.min(maxPages - 1, this.scrollOffset - steps));
         }
         return true;
     }

@@ -4,6 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.core.RegistryAccess;
 
 import java.util.List;
 import java.util.UUID;
@@ -46,7 +47,9 @@ public class ServerPacketHandler {
                 return;
             }
             ItemStack itemStack = items.get(itemIndex);
-            double pricePerItem = WorldShop.getPriceEngine().getBuyPrice(itemStack);
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
+            double pricePerItem = WorldShop.getPriceEngine().getBuyPrice(itemStack, recipeManager, registryAccess);
             double totalCost = pricePerItem * (double) quantity;
             EconomyData economy = EconomyData.get(player.serverLevel());
             UUID uuid = player.getUUID();
@@ -83,7 +86,9 @@ public class ServerPacketHandler {
             }
 
             PriceEngine priceEngine = WorldShop.getPriceEngine();
-            double sellPricePerItem = priceEngine.getSellPrice(held);
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
+            double sellPricePerItem = priceEngine.getSellPrice(held, recipeManager, registryAccess);
             int totalSold = 0;
 
             for (int i = 0; i < player.getInventory().items.size(); i++) {
@@ -119,12 +124,14 @@ public class ServerPacketHandler {
             }
 
             PriceEngine priceEngine = WorldShop.getPriceEngine();
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
             double totalEarnings = 0.0;
             int totalSold = 0;
 
             for (ItemStack sellStack : items) {
                 if (sellStack == null || sellStack.isEmpty()) continue;
-                double sellPrice = priceEngine.getSellPrice(sellStack);
+                double sellPrice = priceEngine.getSellPrice(sellStack, recipeManager, registryAccess);
                 totalEarnings += sellPrice * (double) sellStack.getCount();
                 totalSold += sellStack.getCount();
             }
