@@ -2,9 +2,11 @@ package asd.itamio.worldshop;
 
 import asd.itamio.ModInfoPrinter;
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -150,7 +152,9 @@ public class WorldShop {
                 return;
             }
             net.minecraft.world.item.ItemStack itemStack = items.get(itemIndex);
-            double pricePerItem = priceEngine.getBuyPrice(itemStack);
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
+            double pricePerItem = priceEngine.getBuyPrice(itemStack, recipeManager, registryAccess);
             double totalCost = pricePerItem * (double) quantity;
             EconomyData economy = EconomyData.get(player.serverLevel());
             java.util.UUID uuid = player.getUUID();
@@ -199,7 +203,9 @@ public class WorldShop {
                 return;
             }
 
-            double sellPricePerItem = priceEngine.getSellPrice(held);
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
+            double sellPricePerItem = priceEngine.getSellPrice(held, recipeManager, registryAccess);
             double totalEarnings = sellPricePerItem * (double) totalSold;
             EconomyData economy = EconomyData.get(player.serverLevel());
             economy.addBalance(player.getUUID(), totalEarnings);
@@ -220,12 +226,14 @@ public class WorldShop {
                 return;
             }
 
+            RecipeManager recipeManager = player.serverLevel().getRecipeManager();
+            RegistryAccess registryAccess = player.serverLevel().registryAccess();
             double totalEarnings = 0.0;
             int totalSold = 0;
 
             for (net.minecraft.world.item.ItemStack sellStack : items) {
                 if (sellStack == null || sellStack.isEmpty()) continue;
-                double sellPrice = priceEngine.getSellPrice(sellStack);
+                double sellPrice = priceEngine.getSellPrice(sellStack, recipeManager, registryAccess);
                 totalEarnings += sellPrice * (double) sellStack.getCount();
                 totalSold += sellStack.getCount();
             }

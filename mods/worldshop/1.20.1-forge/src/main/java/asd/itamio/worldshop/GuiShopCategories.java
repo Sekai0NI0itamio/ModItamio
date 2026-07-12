@@ -1,6 +1,5 @@
 package asd.itamio.worldshop;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -11,13 +10,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class GuiShopCategories extends Screen {
-    private List<ShopCategory> categories = WorldShop.getCategories();
+    private final List<ShopCategory> categories;
     private int scrollOffset = 0;
+    private double accumulatedScroll = 0.0;
     private static final int ICON_SIZE = 28;
     private static final int COLUMNS = 9;
 
     protected GuiShopCategories() {
         super(Component.literal("Shop - Categories"));
+        this.categories = WorldShop.getCategories();
     }
 
     @Override
@@ -29,11 +30,9 @@ public class GuiShopCategories extends Screen {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
 
-        // Background
         guiGraphics.fill(0, 0, this.width, this.height, -870441442);
 
-        int titleY = 12;
-        guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7lShop - Categories", this.width / 2, titleY, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7lShop - Categories", this.width / 2, 12, 0xFFFFFF);
 
         int cellSize = 34;
         int gridWidth = COLUMNS * cellSize - 6;
@@ -43,7 +42,6 @@ public class GuiShopCategories extends Screen {
         int visibleCount = COLUMNS * rowsPerPage;
         int startIndex = this.scrollOffset * COLUMNS;
 
-        // Draw category icons
         for (int i = 0; i < visibleCount && startIndex + i < this.categories.size(); i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
@@ -56,7 +54,6 @@ public class GuiShopCategories extends Screen {
             guiGraphics.renderItem(icon, x + 6, y + 6);
         }
 
-        // Draw tooltips
         for (int i = 0; i < visibleCount && startIndex + i < this.categories.size(); i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
@@ -106,10 +103,13 @@ public class GuiShopCategories extends Screen {
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollDelta) {
         int rowsPerPage = Math.max(1, (this.height - 75) / 34);
-        if (scrollDelta > 0) {
-            this.scrollOffset = Math.max(0, this.scrollOffset - 1);
-        } else if (scrollDelta < 0) {
-            this.scrollOffset = Math.min(getMaxScrollPages(rowsPerPage) - 1, this.scrollOffset + 1);
+        this.accumulatedScroll += scrollDelta;
+        double SCROLL_THRESHOLD = 5.0;
+        int steps = (int) (this.accumulatedScroll / SCROLL_THRESHOLD);
+        if (steps != 0) {
+            this.accumulatedScroll -= steps * SCROLL_THRESHOLD;
+            int maxPages = getMaxScrollPages(rowsPerPage);
+            this.scrollOffset = Math.max(0, Math.min(maxPages - 1, this.scrollOffset - steps));
         }
         return true;
     }
