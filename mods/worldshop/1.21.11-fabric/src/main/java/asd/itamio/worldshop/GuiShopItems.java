@@ -14,11 +14,13 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GuiShopItems extends Screen {
     private final ShopCategory category;
     private final int categoryIndex;
-    private final List<ItemStack> items;
+    private final List<ItemStack> allItems;
+    private List<ItemStack> filteredItems;
     private int scrollOffset = 0;
     private static final int SLOT_SIZE = 22;
     private static final int COLUMNS = 9;
@@ -28,24 +30,58 @@ public class GuiShopItems extends Screen {
     private boolean detailView = false;
     private int detailItemIndex = -1;
     private EditBox quantityField;
+    private EditBox searchBox;
     private boolean stackMode = false;
+    private double accumulatedScroll = 0.0;
+    private static final double SCROLL_THRESHOLD = 1.0;
 
     public GuiShopItems(ShopCategory category, int categoryIndex) {
         super(Component.literal("Shop - " + category.getName()));
         this.category = category;
         this.categoryIndex = categoryIndex;
-        this.items = category.getItems();
+        this.allItems = category.getItems();
+        this.filteredItems = new ArrayList<>(this.allItems);
     }
 
     @Override
     protected void init() {
         super.init();
         this.clearWidgets();
+
+        // Add search bar (top of screen, below title)
+        int searchWidth = Math.min(250, this.width - 40);
+        int searchX = (this.width - searchWidth) / 2;
+        this.searchBox = new EditBox(this.font, searchX, 8, searchWidth, 14, Component.literal("Search items..."));
+        this.searchBox.setMaxLength(50);
+        this.searchBox.setResponder(s -> {
+            filterItems(s);
+            this.scrollOffset = 0;
+        });
+        this.addRenderableWidget(this.searchBox);
+
         rebuildButtons();
     }
 
+    private void filterItems(String search) {
+        if (search == null || search.trim().isEmpty()) {
+            this.filteredItems = new ArrayList<>(this.allItems);
+        } else {
+            String lower = search.toLowerCase();
+            this.filteredItems = this.allItems.stream()
+                    .filter(item -> item.getDisplayName().getString().toLowerCase().contains(lower))
+                    .collect(Collectors.toList());
+        }
+    }
+
     private void rebuildButtons() {
-        this.clearWidgets();
+        // Clear all widgets except the search box
+        var widgets = this.children();
+        for (var widget : new ArrayList<>(widgets)) {
+            if (widget != this.searchBox) {
+                this.removeWidget(widget);
+            }
+        }
+
         if (detailView) {
             int btnW = 95;
             int btnH = 20;
@@ -54,10 +90,10 @@ public class GuiShopItems extends Screen {
 
             this.addRenderableWidget(Button.builder(Component.literal("\u00a7aBuy"), button -> {
                 int qty = getQuantity();
-                if (qty > 0 && detailItemIndex >= 0) {
-                    ItemStack item = this.items.get(detailItemIndex);
+                if (qty > 0 && detailItemIndex >= 0 && detailItemIndex < filteredItems.size()) {
+                    ItemStack item = this.filteredItems.get(detailItemIndex);
                     int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
-                    ClientPlayNetworking.send(new ShopPayload(ShopPayload.ShopMessage.buyItem(this.categoryIndex, this.detailItemIndex, actualItems)));
+                    ClientPlayNetworking.send(new ShopPayload(ShopPayload.ShopMessage.buyItem(this.categoryIndex, findOriginalIndex(this.filteredItems.get(detailItemIndex)), actualItems)));
                 }
             }).bounds(centerX - btnW - 2, bottomY - btnH * 2 - 8, btnW, btnH).build());
 
@@ -76,8 +112,8 @@ public class GuiShopItems extends Screen {
             }).bounds(centerX - btnW - 2, bottomY - btnH - 4, btnW, btnH).build());
 
             this.addRenderableWidget(Button.builder(Component.literal("\u00a7eMax Afford"), button -> {
-                if (detailItemIndex >= 0 && detailItemIndex < this.items.size()) {
-                    ItemStack item = this.items.get(detailItemIndex);
+                if (detailItemIndex >= 0 && detailItemIndex < this.filteredItems.size()) {
+                    ItemStack item = this.filteredItems.get(detailItemIndex);
                     PriceEngine priceEngine = WorldShop.getPriceEngine();
                     double buyPrice = priceEngine.getBuyPrice(item);
                     double balance = getClientBalance();
@@ -108,6 +144,15 @@ public class GuiShopItems extends Screen {
         }
     }
 
+    private int findOriginalIndex(ItemStack filteredStack) {
+        for (int i = 0; i < this.allItems.size(); i++) {
+            if (ItemStack.isSameItem(this.allItems.get(i), filteredStack)) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         guiGraphics.fill(0, 0, this.width, this.height, -870441442);
@@ -122,43 +167,53 @@ public class GuiShopItems extends Screen {
     }
 
     private void drawGridView(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        guiGraphics.drawCenteredString(this.font, Component.literal("\u00a76\u00a7lShop - " + formatCategoryName(this.category.getName())), this.width / 2, 8, 0xFFFFFF);
+        // Title (moved down to account for search bar)
+        int titleY = 26;
+        guiGraphics.drawCenteredString(this.font, Component.literal("\u00a76\u00a7lShop - " + formatCategoryName(this.category.getName())), this.width / 2, titleY, 0xFFFFFF);
 
         int cellSize = 26;
         int gridWidth = COLUMNS * cellSize - SPACING;
         int guiLeft = (this.width - gridWidth) / 2;
-        int guiTop = 25;
+        int guiTop = 38;
         int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
         int rowsPerPage = Math.max(1, availableHeight / cellSize);
         int visibleCount = COLUMNS * rowsPerPage;
         int startIndex = this.scrollOffset * COLUMNS;
 
         // Draw items
-        for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+        for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
             int x = guiLeft + col * cellSize;
             int y = guiTop + row * cellSize;
             drawSlotBackground(guiGraphics, x, y, SLOT_SIZE, SLOT_SIZE);
-            guiGraphics.renderItem(this.items.get(startIndex + i), x + 3, y + 3);
+            guiGraphics.renderItem(this.filteredItems.get(startIndex + i), x + 3, y + 3);
         }
 
         // Draw bottom bar
         int barTop = this.height - BOTTOM_BAR_HEIGHT;
         guiGraphics.fill(0, barTop, this.width, this.height, -14013910);
 
-        if (this.items.size() > visibleCount) {
-            String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + getMaxScrollPages(rowsPerPage);
-            guiGraphics.drawCenteredString(this.font, Component.literal(scrollInfo), this.width / 2, barTop + 2, 0xFFFFFF);
+        // Scroll info
+        int totalRows = (int) Math.ceil((double) this.filteredItems.size() / (double) COLUMNS);
+        int currentRow = this.scrollOffset + 1;
+        String scrollInfo = "\u00a77Row: " + currentRow + "/" + Math.max(1, totalRows);
+        guiGraphics.drawCenteredString(this.font, Component.literal(scrollInfo), this.width / 2, barTop + 2, 0xFFFFFF);
+
+        // Search results count
+        if (this.filteredItems.size() != this.allItems.size()) {
+            String resultInfo = "\u00a77Found " + this.filteredItems.size() + " items";
+            guiGraphics.drawCenteredString(this.font, Component.literal(resultInfo), this.width / 2 + 120, barTop + 2, 0xAAAAAA);
         }
+
         guiGraphics.drawCenteredString(this.font, Component.literal("\u00a77Left-click: Buy menu | Right-click: Quick buy stack | ESC: Back"), this.width / 2, barTop + 14, 0xAAAAAA);
     }
 
     private void drawDetailView(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        if (detailItemIndex < 0 || detailItemIndex >= this.items.size()) {
+        if (detailItemIndex < 0 || detailItemIndex >= this.filteredItems.size()) {
             return;
         }
-        ItemStack item = this.items.get(detailItemIndex);
+        ItemStack item = this.filteredItems.get(detailItemIndex);
         PriceEngine priceEngine = WorldShop.getPriceEngine();
         double buyPricePerItem = priceEngine.getBuyPrice(item);
         double sellPricePerItem = priceEngine.getSellPrice(item);
@@ -218,13 +273,13 @@ public class GuiShopItems extends Screen {
             int cellSize = 26;
             int gridWidth = COLUMNS * cellSize - SPACING;
             int guiLeft = (this.width - gridWidth) / 2;
-            int guiTop = 25;
+            int guiTop = 38;
             int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
             int rowsPerPage = Math.max(1, availableHeight / cellSize);
             int visibleCount = COLUMNS * rowsPerPage;
             int startIndex = this.scrollOffset * COLUMNS;
 
-            for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+            for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
                 int col = i % COLUMNS;
                 int x = guiLeft + col * cellSize;
                 int row = i / COLUMNS;
@@ -244,13 +299,13 @@ public class GuiShopItems extends Screen {
             int cellSize = 26;
             int gridWidth = COLUMNS * cellSize - SPACING;
             int guiLeft = (this.width - gridWidth) / 2;
-            int guiTop = 25;
+            int guiTop = 38;
             int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
             int rowsPerPage = Math.max(1, availableHeight / cellSize);
             int visibleCount = COLUMNS * rowsPerPage;
             int startIndex = this.scrollOffset * COLUMNS;
 
-            for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+            for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
                 int col = i % COLUMNS;
                 int x = guiLeft + col * cellSize;
                 int row = i / COLUMNS;
@@ -266,10 +321,10 @@ public class GuiShopItems extends Screen {
     }
 
     private void quickBuyStack(int itemIndex) {
-        if (itemIndex < 0 || itemIndex >= this.items.size()) {
+        if (itemIndex < 0 || itemIndex >= this.filteredItems.size()) {
             return;
         }
-        ItemStack item = this.items.get(itemIndex);
+        ItemStack item = this.filteredItems.get(itemIndex);
         PriceEngine priceEngine = WorldShop.getPriceEngine();
         double buyPrice = priceEngine.getBuyPrice(item);
         double balance = getClientBalance();
@@ -279,7 +334,8 @@ public class GuiShopItems extends Screen {
         if (quantity <= 0) {
             return;
         }
-        ClientPlayNetworking.send(new ShopPayload(ShopPayload.ShopMessage.buyItem(this.categoryIndex, itemIndex, quantity)));
+        int originalIndex = findOriginalIndex(item);
+        ClientPlayNetworking.send(new ShopPayload(ShopPayload.ShopMessage.buyItem(this.categoryIndex, originalIndex, quantity)));
     }
 
     @Override
@@ -311,11 +367,24 @@ public class GuiShopItems extends Screen {
             return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
         }
         if (scrollY != 0) {
+            // Accumulate scroll for smoother row-by-row scrolling
+            accumulatedScroll += scrollY;
+
             int cellSize = 26;
-            int guiTop = 25;
+            int guiTop = 38;
             int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
             int rowsPerPage = Math.max(1, availableHeight / cellSize);
-            this.scrollOffset = scrollY > 0 ? Math.max(0, this.scrollOffset - 1) : Math.min(getMaxScrollPages(rowsPerPage) - 1, this.scrollOffset + 1);
+            int totalRows = (int) Math.ceil((double) this.filteredItems.size() / (double) COLUMNS);
+            int maxScrollOffset = Math.max(0, totalRows - rowsPerPage);
+
+            // Process accumulated scroll (1 row per scroll unit)
+            int scrollUnits = (int) Math.floor(Math.abs(accumulatedScroll) / SCROLL_THRESHOLD);
+            if (scrollUnits > 0) {
+                int direction = accumulatedScroll > 0 ? -1 : 1; // Positive Y = scroll down
+                int newOffset = this.scrollOffset + direction * scrollUnits;
+                this.scrollOffset = Math.max(0, Math.min(maxScrollOffset, newOffset));
+                accumulatedScroll = accumulatedScroll % SCROLL_THRESHOLD;
+            }
             return true;
         }
         return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
@@ -334,11 +403,6 @@ public class GuiShopItems extends Screen {
 
     private double getClientBalance() {
         return 999999999.0;
-    }
-
-    private int getMaxScrollPages(int rowsPerPage) {
-        int totalSlots = COLUMNS * rowsPerPage;
-        return Math.max(1, (int) Math.ceil((double) this.items.size() / (double) totalSlots));
     }
 
     private String formatCategoryName(String raw) {
