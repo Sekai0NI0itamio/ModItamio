@@ -73,6 +73,7 @@ public class ModCommands {
     }
 
     private static int executeSellHand(ServerPlayer player) {
+        WorldShop.getPriceEngine().setLevel(player.serverLevel());
         ItemStack held = player.getMainHandItem();
         if (held.isEmpty()) {
             player.sendSystemMessage(Component.literal("\u00a7cYou are not holding any item."));
