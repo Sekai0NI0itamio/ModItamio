@@ -37,6 +37,32 @@ public class ModCommands {
                         return 1;
                     }
                 })
+                .then(Commands.literal("reset")
+                        .requires(source -> source.hasPermission(2))
+                        .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                            @Override
+                            public int run(CommandContext<CommandSourceStack> context) {
+                                CommandSourceStack source = context.getSource();
+                                // Clear the in-memory price cache
+                                WorldShop.getPriceEngine().clearCache();
+                                // Clear the persistent price config file so prices are recalculated fresh
+                                PriceConfig config = WorldShop.getPriceEngine().getPriceConfig();
+                                if (config != null) {
+                                    config.clearAllPrices();
+                                }
+                                // Rebuild shop categories
+                                WorldShop.buildShopCategories();
+                                source.sendSuccess(new java.util.function.Supplier<Component>() {
+                                    @Override
+                                    public Component get() {
+                                        return Component.literal("\u00a7aShop prices have been reset and recalculated from recipes!");
+                                    }
+                                }, true);
+                                WorldShop.LOGGER.info("Shop prices reset by {} (config file cleared)", source.getTextName());
+                                return 1;
+                            }
+                        })
+                )
         );
 
         // /sellhand

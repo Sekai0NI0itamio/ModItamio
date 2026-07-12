@@ -181,4 +181,18 @@ public class PriceConfig {
     public String getConfigFilePath() {
         return configFile != null ? configFile.getAbsolutePath() : "unknown";
     }
+
+    /**
+     * Clear all stored prices and delete the config file.
+     * This forces the price engine to recalculate all prices from scratch
+     * using the current world's recipe manager on the next query.
+     */
+    public void clearAllPrices() {
+        prices.clear();
+        if (configFile != null && configFile.exists()) {
+            configFile.delete();
+        }
+        save();
+        WorldShop.LOGGER.info("All shop prices cleared from config file");
+    }
 }

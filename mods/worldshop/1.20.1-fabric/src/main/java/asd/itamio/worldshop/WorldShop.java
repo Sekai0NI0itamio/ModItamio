@@ -89,7 +89,7 @@ public class WorldShop implements ModInitializer {
         LOGGER.info("World Shop initialized with {} categories", categories.size());
     }
 
-    private void buildShopCategories() {
+    public static void buildShopCategories() {
         categories = ShopCategory.buildFromCreativeTabs();
         priceEngine.clearCache();
         LOGGER.info("Built {} shop categories from creative tabs", categories.size());
