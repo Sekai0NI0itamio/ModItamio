@@ -29,6 +29,7 @@ public class ShopPacketHandler implements IPayloadHandler<ShopPacket> {
     }
 
     private void handleBuy(ServerPlayer player, int categoryIndex, int itemIndex, int quantity) {
+        WorldShop.getPriceEngine().setLevel(player.serverLevel());
         List<ShopCategory> categories = WorldShop.getCategories();
         if (categoryIndex < 0 || categoryIndex >= categories.size()) {
             player.sendSystemMessage(Component.literal("\u00a7cInvalid category."));
@@ -65,6 +66,7 @@ public class ShopPacketHandler implements IPayloadHandler<ShopPacket> {
     }
 
     private void handleSellHand(ServerPlayer player) {
+        WorldShop.getPriceEngine().setLevel(player.serverLevel());
         ItemStack held = player.getMainHandItem();
         if (held.isEmpty()) {
             player.sendSystemMessage(Component.literal("\u00a7cYou are not holding any item."));
@@ -97,6 +99,7 @@ public class ShopPacketHandler implements IPayloadHandler<ShopPacket> {
     }
 
     private void handleSellGuiItems(ServerPlayer player, List<ItemStack> items) {
+        WorldShop.getPriceEngine().setLevel(player.serverLevel());
         if (items.isEmpty()) {
             player.sendSystemMessage(Component.literal("\u00a7cNo items to sell."));
             return;

@@ -27,6 +27,7 @@ public class CommandSellHand {
             return 0;
         }
 
+        WorldShop.getPriceEngine().setLevel(player.serverLevel());
         PriceEngine priceEngine = WorldShop.getPriceEngine();
         double sellPricePerItem = priceEngine.getSellPrice(held);
         int totalSold = 0;
