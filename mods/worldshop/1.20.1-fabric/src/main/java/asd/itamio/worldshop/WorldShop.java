@@ -23,6 +23,7 @@ public class WorldShop implements ModInitializer {
 
     private static List<ShopCategory> categories = Collections.emptyList();
     private static PriceEngine priceEngine = new PriceEngine();
+    private static MinecraftServer currentServer = null;
 
     @Override
     public void onInitialize() {
@@ -33,6 +34,14 @@ public class WorldShop implements ModInitializer {
             }
         }, MOD_NAME, VERSION);
         LOGGER.info("World Shop mod initializing...");
+
+        // Initialize PriceConfig from the server config directory
+        // This will be properly set later when the server starts, but we create an initial client-side one too
+        PriceConfig clientConfig = PriceConfig.forClient();
+        if (clientConfig != null) {
+            priceEngine.setPriceConfig(clientConfig);
+            LOGGER.info("World Shop price config initialized: {}", clientConfig.getConfigFilePath());
+        }
 
         // Register server packet handler
         ServerPlayNetworking.registerGlobalReceiver(ShopPacket.PACKET_ID, new ServerPlayNetworking.PlayChannelHandler() {
@@ -64,6 +73,15 @@ public class WorldShop implements ModInitializer {
                 EconomyData economy = EconomyData.get(player.serverLevel());
                 economy.registerPlayer(player.getScoreboardName(), player.getUUID());
                 LOGGER.info("Registered player {} -> {}", player.getScoreboardName(), player.getUUID());
+
+                // Re-initialize PriceConfig with the server's config directory
+                // This ensures prices are properly persisted server-side
+                if (currentServer == null || currentServer != server) {
+                    currentServer = server;
+                    PriceConfig serverConfig = PriceConfig.forServer(server);
+                    priceEngine.setPriceConfig(serverConfig);
+                    LOGGER.info("World Shop server price config initialized: {}", serverConfig.getConfigFilePath());
+                }
             }
         });
 
@@ -83,5 +101,12 @@ public class WorldShop implements ModInitializer {
 
     public static PriceEngine getPriceEngine() {
         return priceEngine;
+    }
+
+    /**
+     * Get the current server instance (may be null on client).
+     */
+    public static MinecraftServer getCurrentServer() {
+        return currentServer;
     }
 }
