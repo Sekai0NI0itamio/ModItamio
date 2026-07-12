@@ -6,6 +6,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.display.RecipeDisplay;
+import net.minecraft.world.item.crafting.display.SlotDisplay;
 import net.minecraft.world.level.Level;
 
 import java.util.*;
@@ -19,6 +21,8 @@ public class PriceEngine {
     private final Map<String, Double> priceCache = new HashMap<>();
     private final Set<String> computing = new HashSet<>();
     private MinecraftServer server;
+    private int recipeCount = 0;
+    private boolean loggedRecipeInfo = false;
 
     public void setServer(MinecraftServer server) {
         this.server = server;
@@ -58,6 +62,17 @@ public class PriceEngine {
                 return UNCRAFTABLE_PRICE;
             }
             RecipeManager recipeManager = server.getRecipeManager();
+
+            // Log recipe info once for debugging
+            if (!loggedRecipeInfo) {
+                recipeCount = 0;
+                for (RecipeHolder<?> ignored : recipeManager.getRecipes()) {
+                    recipeCount++;
+                }
+                WorldShop.LOGGER.info("PriceEngine: " + recipeCount + " total recipes available");
+                loggedRecipeInfo = true;
+            }
+
             List<RecipeHolder<?>> recipes = findRecipesFor(stack, recipeManager);
             if (recipes.isEmpty()) {
                 return UNCRAFTABLE_PRICE;
@@ -69,13 +84,13 @@ public class PriceEngine {
                 return UNCRAFTABLE_PRICE;
             }
 
+            // Get ingredients from placement info
             List<Ingredient> ingredients = recipe.placementInfo().ingredients();
             double totalIngredientPrice = 0.0;
             boolean hasIngredients = false;
 
             for (Ingredient ingredient : ingredients) {
                 if (ingredient == null || ingredient.isEmpty()) continue;
-                // Get the first matching item stack from this ingredient
                 Iterator<Holder<Item>> it = ingredient.items().iterator();
                 if (!it.hasNext()) continue;
                 ItemStack ingredientStack = new ItemStack(it.next());
@@ -89,9 +104,8 @@ public class PriceEngine {
                 return UNCRAFTABLE_PRICE;
             }
 
-            // Get the output count - use the result from the recipe
-            ItemStack output = getRecipeResult(recipe);
-            int outputCount = output.getCount();
+            // Get the output count using the properly supported API
+            int outputCount = getRecipeOutputCount(recipe);
             if (outputCount <= 0) {
                 outputCount = 1;
             }
@@ -103,16 +117,30 @@ public class PriceEngine {
         }
     }
 
-    private ItemStack getRecipeResult(Recipe<?> recipe) {
-        // Try to get result via display (modern approach)
-        // For crafting recipes, assemble with empty input returns the result
+    private int getRecipeOutputCount(Recipe<?> recipe) {
+        // Method 1: Try assemble (returns result.copy() for ShapedRecipe/ShapelessRecipe)
         if (recipe instanceof ShapedRecipe shaped) {
-            return shaped.assemble(CraftingInput.EMPTY);
+            ItemStack result = shaped.assemble(CraftingInput.EMPTY);
+            return result.getCount();
         } else if (recipe instanceof ShapelessRecipe shapeless) {
-            return shapeless.assemble(CraftingInput.EMPTY);
+            ItemStack result = shapeless.assemble(CraftingInput.EMPTY);
+            return result.getCount();
         }
-        // Fallback
-        return ItemStack.EMPTY;
+
+        // Method 2: Try getting result from recipe displays
+        try {
+            List<RecipeDisplay> displays = recipe.display();
+            if (!displays.isEmpty()) {
+                SlotDisplay resultSlot = displays.get(0).result();
+                if (resultSlot instanceof SlotDisplay.ItemStackSlotDisplay itemStackSlot) {
+                    return itemStackSlot.stack().count();
+                }
+            }
+        } catch (Exception e) {
+            // Fallback
+        }
+
+        return 1;
     }
 
     private List<RecipeHolder<?>> findRecipesFor(ItemStack stack, RecipeManager recipeManager) {
@@ -120,18 +148,41 @@ public class PriceEngine {
         for (RecipeHolder<?> holder : recipeManager.getRecipes()) {
             Recipe<?> recipe = holder.value();
             if (!(recipe instanceof CraftingRecipe)) continue;
-            ItemStack output = getRecipeResult(recipe);
+            ItemStack output = tryGetRecipeOutput(recipe);
             if (output == null || output.isEmpty() || !isSameItem(output, stack)) continue;
             result.add(holder);
         }
         return result;
     }
 
+    private ItemStack tryGetRecipeOutput(Recipe<?> recipe) {
+        // Method 1: assemble (returns result.copy() for ShapedRecipe/ShapelessRecipe)
+        if (recipe instanceof ShapedRecipe shaped) {
+            return shaped.assemble(CraftingInput.EMPTY);
+        } else if (recipe instanceof ShapelessRecipe shapeless) {
+            return shapeless.assemble(CraftingInput.EMPTY);
+        }
+
+        // Method 2: Try recipe displays
+        try {
+            List<RecipeDisplay> displays = recipe.display();
+            if (!displays.isEmpty()) {
+                SlotDisplay resultSlot = displays.get(0).result();
+                if (resultSlot instanceof SlotDisplay.ItemStackSlotDisplay itemStackSlot) {
+                    return itemStackSlot.stack().create();
+                }
+            }
+        } catch (Exception e) {
+            // Fallback
+        }
+
+        return ItemStack.EMPTY;
+    }
+
     private boolean isSameItem(ItemStack a, ItemStack b) {
         if (a.getItem() != b.getItem()) {
             return false;
         }
-        // In modern Minecraft, damage value is part of components
         return true;
     }
 
