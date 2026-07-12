@@ -13,8 +13,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
 public class PriceEngine {
-    public static final double BASE_MATERIAL_PRICE = 2.0;
-    public static final double UNCRAFTABLE_PRICE = 1000.0;
+    public static final double MIN_BASE_PRICE = 1200.0;
+    public static final double BASE_MATERIAL_PRICE = 1200.0;
+    public static final double UNCRAFTABLE_PRICE = 1200.0;
     public static final double BUY_MULTIPLIER = 1.2;
     public static final double SELL_MULTIPLIER = 0.8;
 
@@ -200,7 +201,9 @@ public class PriceEngine {
                 return UNCRAFTABLE_PRICE;
             }
 
-            return Math.round(cheapestPrice * 100.0) / 100.0;
+            // Enforce minimum price of $1200 for ALL items
+            double finalPrice = Math.max(MIN_BASE_PRICE, cheapestPrice);
+            return Math.round(finalPrice * 100.0) / 100.0;
         } finally {
             computing.remove(key);
         }
