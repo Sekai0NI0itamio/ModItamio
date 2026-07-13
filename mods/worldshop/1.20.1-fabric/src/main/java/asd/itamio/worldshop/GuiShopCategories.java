@@ -221,29 +221,29 @@ public class GuiShopCategories extends Screen {
             }
         }
 
-        // Convert to int array
-        int[] newOrder = new int[newOrderList.size()];
+        // Build array of category NAMES in the new order — using names instead of
+        // indices makes the server-side reordering order-independent (works even
+        // if the client has already modified the list in singleplayer).
+        String[] newOrderNames = new String[newOrderList.size()];
         for (int i = 0; i < newOrderList.size(); i++) {
-            newOrder[i] = newOrderList.get(i);
+            newOrderNames[i] = categories.get(newOrderList.get(i)).getName();
         }
 
-        // Reorder the shared categories list in-place
+        // Send packet to server with names
+        FriendlyByteBuf buf = PacketByteBufs.create();
+        ShopPacket.write(ShopPacket.reorderCategories(newOrderNames), buf);
+        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
+
+        // Reorder the local list so the new screen shows the correct order immediately
         List<ShopCategory> cats = WorldShop.getCategories();
         List<ShopCategory> reordered = new ArrayList<>();
-        for (int idx : newOrder) {
+        for (int idx : newOrderList) {
             reordered.add(cats.get(idx));
         }
         cats.clear();
         cats.addAll(reordered);
 
-        // Send packet to server
-        FriendlyByteBuf buf = PacketByteBufs.create();
-        ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
-        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
-
-        // Defer the screen transition to the next client tick using execute().
-        // This ensures the current button handler fully completes before the new
-        // screen is set up, avoiding lifecycle conflicts.
+        // Defer the screen transition to the next client tick
         Minecraft.getInstance().execute(() -> {
             Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
         });

@@ -41,7 +41,7 @@ public class ServerPacketHandler {
                     handleEditItem(player, packet.getCategoryIndex(), packet.getStringData1(), packet.getStringData2(), packet.getStringData3(), packet.getDoubleData1(), packet.getDoubleData2());
                     break;
                 case ShopPacket.REORDER_CATEGORIES:
-                    handleReorderCategories(player, packet.getIntArrayData());
+                    handleReorderCategories(player, packet.getStringArrayData());
                     break;
                 default:
                     player.sendSystemMessage(Component.literal("\u00a7cUnknown packet type."));
@@ -427,31 +427,44 @@ public class ServerPacketHandler {
      * Reorder the categories list based on the new ordering provided by the client.
      * This is an OP-only operation for shop management.
      */
-    private static void handleReorderCategories(ServerPlayer player, int[] newOrder) {
+    private static void handleReorderCategories(ServerPlayer player, String[] categoryNames) {
         try {
             if (!player.hasPermissions(2)) {
                 player.sendSystemMessage(Component.literal("\u00a7cYou need OP level 2 to manage the shop."));
                 return;
             }
-            if (newOrder == null || newOrder.length == 0) {
+            if (categoryNames == null || categoryNames.length == 0) {
                 player.sendSystemMessage(Component.literal("\u00a7cInvalid reorder data."));
                 return;
             }
             List<ShopCategory> categories = WorldShop.getCategories();
-            if (newOrder.length != categories.size()) {
+            if (categoryNames.length != categories.size()) {
                 player.sendSystemMessage(Component.literal("\u00a7cReorder data size mismatch."));
                 return;
             }
-            // Build the reordered list
+            // Reorder by name — this is order-independent so it works even if
+            // the client already reordered the list in singleplayer
             List<ShopCategory> reordered = new java.util.ArrayList<>();
-            for (int idx : newOrder) {
-                if (idx < 0 || idx >= categories.size()) {
-                    player.sendSystemMessage(Component.literal("\u00a7cInvalid category index in reorder."));
+            for (String name : categoryNames) {
+                boolean found = false;
+                for (ShopCategory cat : categories) {
+                    if (cat.getName().equals(name) && !reordered.contains(cat)) {
+                        reordered.add(cat);
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    player.sendSystemMessage(Component.literal("\u00a7cUnknown category: " + name));
                     return;
                 }
-                reordered.add(categories.get(idx));
             }
-            // Clear and re-add in new order
+            // Add any new categories not in the saved order
+            for (ShopCategory cat : categories) {
+                if (!reordered.contains(cat)) {
+                    reordered.add(cat);
+                }
+            }
             categories.clear();
             categories.addAll(reordered);
 

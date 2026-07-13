@@ -48,7 +48,7 @@ public class ShopPacket {
     private double doubleData2;  // sell price
 
     // Reorder fields
-    private int[] intArrayData;  // reordered category indices
+    private String[] stringArrayData;  // reordered category names (as alternative to intArrayData)
 
     public ShopPacket() {}
 
@@ -144,10 +144,10 @@ public class ShopPacket {
         return pkt;
     }
 
-    public static ShopPacket reorderCategories(int[] order) {
+    public static ShopPacket reorderCategories(String[] categoryNames) {
         ShopPacket pkt = new ShopPacket();
         pkt.type = REORDER_CATEGORIES;
-        pkt.intArrayData = order;
+        pkt.stringArrayData = categoryNames;
         return pkt;
     }
 
@@ -196,12 +196,12 @@ public class ShopPacket {
                 buf.writeUtf(pkt.stringData1 != null ? pkt.stringData1 : "");
                 break;
             case REORDER_CATEGORIES:
-                if (pkt.intArrayData == null) {
+                if (pkt.stringArrayData == null) {
                     buf.writeInt(0);
                 } else {
-                    buf.writeInt(pkt.intArrayData.length);
-                    for (int idx : pkt.intArrayData) {
-                        buf.writeInt(idx);
+                    buf.writeInt(pkt.stringArrayData.length);
+                    for (String name : pkt.stringArrayData) {
+                        buf.writeUtf(name);
                     }
                 }
                 break;
@@ -253,9 +253,9 @@ public class ShopPacket {
                 break;
             case REORDER_CATEGORIES:
                 int len = buf.readInt();
-                pkt.intArrayData = new int[len];
+                pkt.stringArrayData = new String[len];
                 for (int i = 0; i < len; i++) {
-                    pkt.intArrayData[i] = buf.readInt();
+                    pkt.stringArrayData[i] = buf.readUtf();
                 }
                 break;
         }
@@ -282,5 +282,5 @@ public class ShopPacket {
     public String getStringData3() { return stringData3 != null ? stringData3 : ""; }
     public double getDoubleData1() { return doubleData1; }
     public double getDoubleData2() { return doubleData2; }
-    public int[] getIntArrayData() { return intArrayData; }
+    public String[] getStringArrayData() { return stringArrayData; }
 }
