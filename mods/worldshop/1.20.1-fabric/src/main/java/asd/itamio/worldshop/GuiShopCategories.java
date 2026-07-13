@@ -221,38 +221,32 @@ public class GuiShopCategories extends Screen {
             }
         }
 
-        // Build array of category NAMES in the new order — using names instead of
-        // indices makes the server-side reordering order-independent (works even
-        // if the client has already modified the list in singleplayer).
+        // Build array of category NAMES in the new order
         String[] newOrderNames = new String[newOrderList.size()];
         for (int i = 0; i < newOrderList.size(); i++) {
             newOrderNames[i] = categories.get(newOrderList.get(i)).getName();
         }
+
+        // Reorder the local list FIRST
+        List<ShopCategory> cats = WorldShop.getCategories();
+        List<ShopCategory> reorderedLocal = new ArrayList<>();
+        for (int idx : newOrderList) {
+            reorderedLocal.add(cats.get(idx));
+        }
+        cats.clear();
+        cats.addAll(reorderedLocal);
 
         // Send packet to server with names
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.reorderCategories(newOrderNames), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Reorder the local list so the new screen shows the correct order immediately
-        List<ShopCategory> cats = WorldShop.getCategories();
-        List<ShopCategory> reordered = new ArrayList<>();
-        for (int idx : newOrderList) {
-            reordered.add(cats.get(idx));
-        }
-        cats.clear();
-        cats.addAll(reordered);
-
-        // Defer the screen transition to the next client tick
-        Minecraft.getInstance().execute(() -> {
-            Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
-        });
+        // Open a fresh screen immediately — setScreen() calls init() synchronously
+        Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
     }
 
     private void cancelLayout() {
-        Minecraft.getInstance().execute(() -> {
-            Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
-        });
+        Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
     }
 
     // ========== Search ==========
