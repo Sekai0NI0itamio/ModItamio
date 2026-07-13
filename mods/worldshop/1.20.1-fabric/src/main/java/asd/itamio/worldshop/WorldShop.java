@@ -108,7 +108,7 @@ public class WorldShop implements ModInitializer {
      */
     public static void saveCategoryOrder(List<ShopCategory> orderedCategories) {
         if (currentServer == null) {
-            WorldShop.LOGGER.warn("Cannot save category order: no server instance");
+            WorldShop.LOGGER.warn("[CAT_ORDER] Cannot save category order: no server instance");
             return;
         }
         try {
@@ -128,9 +128,24 @@ public class WorldShop implements ModInitializer {
                 writer.write(json);
                 writer.flush();
             }
-            WorldShop.LOGGER.info("Saved category order to {} ({} categories)", orderFile.getAbsolutePath(), names.size());
+            WorldShop.LOGGER.info("[CAT_ORDER] SAVED category order to {} ({} categories): {}", orderFile.getAbsolutePath(), names.size(), names);
+            // Verify by re-reading immediately
+            if (orderFile.exists()) {
+                WorldShop.LOGGER.info("[CAT_ORDER] Verify: file exists at {}", orderFile.getAbsolutePath());
+                StringBuilder verifyContent = new StringBuilder();
+                try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader(orderFile))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        verifyContent.append(line);
+                    }
+                }
+                WorldShop.LOGGER.info("[CAT_ORDER] Verify: file content = {}", verifyContent.toString());
+            } else {
+                WorldShop.LOGGER.error("[CAT_ORDER] Verify FAILED: file does NOT exist after write!");
+            }
         } catch (Exception e) {
-            WorldShop.LOGGER.error("Failed to save category order: {}", e.getMessage());
+            WorldShop.LOGGER.error("[CAT_ORDER] Failed to save category order: {}", e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -139,13 +154,30 @@ public class WorldShop implements ModInitializer {
      * Called when the server is fully started and the config directory is available.
      */
     public static void applyPersistedCategoryOrder() {
-        if (currentServer == null) return;
+        WorldShop.LOGGER.info("[CAT_ORDER] applyPersistedCategoryOrder() called — currentServer={}", currentServer != null ? currentServer.getServerDirectory().getAbsolutePath() : "null");
+        if (currentServer == null) {
+            WorldShop.LOGGER.warn("[CAT_ORDER] Cannot apply category order: currentServer is null");
+            return;
+        }
         try {
             File configDir = new File(currentServer.getServerDirectory(), "config");
-            if (!configDir.exists()) return;
+            WorldShop.LOGGER.info("[CAT_ORDER] Config dir = {}", configDir.getAbsolutePath());
+            WorldShop.LOGGER.info("[CAT_ORDER] Config dir exists = {}", configDir.exists());
+            if (configDir.exists()) {
+                String[] files = configDir.list();
+                if (files != null) {
+                    WorldShop.LOGGER.info("[CAT_ORDER] Files in config dir: {}", String.join(", ", files));
+                }
+            }
+            if (!configDir.exists()) {
+                WorldShop.LOGGER.info("[CAT_ORDER] Config dir does not exist, cannot load category order");
+                return;
+            }
             File orderFile = new File(configDir, "worldshop_category_order.json");
+            WorldShop.LOGGER.info("[CAT_ORDER] Order file path = {}", orderFile.getAbsolutePath());
+            WorldShop.LOGGER.info("[CAT_ORDER] Order file exists = {}", orderFile.exists());
             if (!orderFile.exists()) {
-                WorldShop.LOGGER.info("No persisted category order file found at {}", orderFile.getAbsolutePath());
+                WorldShop.LOGGER.info("[CAT_ORDER] No persisted category order file found");
                 return;
             }
 
@@ -157,43 +189,63 @@ public class WorldShop implements ModInitializer {
                     content.append(line);
                 }
             }
+            WorldShop.LOGGER.info("[CAT_ORDER] Raw file content: '{}'", content.toString());
+
             com.google.gson.Gson gson = new com.google.gson.Gson();
             java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<java.util.List<String>>() {}.getType();
             java.util.List<String> nameOrder = gson.fromJson(content.toString(), listType);
             if (nameOrder == null || nameOrder.isEmpty()) {
-                WorldShop.LOGGER.info("Persisted category order file is empty");
+                WorldShop.LOGGER.info("[CAT_ORDER] Parsed nameOrder is null or empty, not applying");
                 return;
             }
 
-            WorldShop.LOGGER.info("Loaded category order from {}: {}", orderFile.getAbsolutePath(), nameOrder);
+            WorldShop.LOGGER.info("[CAT_ORDER] Loaded {} category names from file: {}", nameOrder.size(), nameOrder);
+
+            // Log current categories before reordering
+            List<String> currentNames = new java.util.ArrayList<>();
+            for (ShopCategory c : categories) currentNames.add(c.getName());
+            WorldShop.LOGGER.info("[CAT_ORDER] Current categories before reorder ({}): {}", categories.size(), currentNames);
 
             // Reorder the in-memory categories list to match the saved order
             List<ShopCategory> reordered = new java.util.ArrayList<>();
             for (String name : nameOrder) {
+                boolean found = false;
                 for (ShopCategory cat : categories) {
                     if (cat.getName().equals(name) && !reordered.contains(cat)) {
                         reordered.add(cat);
+                        found = true;
+                        WorldShop.LOGGER.info("[CAT_ORDER]   Matched name '{}' -> category '{}'", name, cat.getName());
                         break;
                     }
+                }
+                if (!found) {
+                    WorldShop.LOGGER.warn("[CAT_ORDER]   Name '{}' did NOT match any existing category!", name);
                 }
             }
             // Add any new categories not in the saved order (e.g. from mods)
             for (ShopCategory cat : categories) {
                 if (!reordered.contains(cat)) {
                     reordered.add(cat);
-                    WorldShop.LOGGER.info("  - Added new category not in saved order: {}", cat.getName());
+                    WorldShop.LOGGER.info("[CAT_ORDER]   Added new category not in saved order: {}", cat.getName());
                 }
             }
             if (reordered.size() == categories.size()) {
                 categories.clear();
                 categories.addAll(reordered);
-                WorldShop.LOGGER.info("Applied persisted category order ({} categories)", categories.size());
+                WorldShop.LOGGER.info("[CAT_ORDER] SUCCESS: Applied persisted category order ({} categories)", categories.size());
+                // Log final order
+                StringBuilder orderStr = new StringBuilder();
+                for (int i = 0; i < categories.size(); i++) {
+                    if (i > 0) orderStr.append(", ");
+                    orderStr.append(i).append(":").append(categories.get(i).getName());
+                }
+                WorldShop.LOGGER.info("[CAT_ORDER] Final category order: [{}]", orderStr.toString());
             } else {
-                WorldShop.LOGGER.warn("Category count mismatch: saved {} names, but have {} categories. Not applying order.",
+                WorldShop.LOGGER.warn("[CAT_ORDER] Category count mismatch: saved {} names, but have {} categories. Not applying order.",
                     nameOrder.size(), categories.size());
             }
         } catch (Exception e) {
-            WorldShop.LOGGER.error("Could not apply persisted category order: {}", e.getMessage());
+            WorldShop.LOGGER.error("[CAT_ORDER] Could not apply persisted category order: {}", e.getMessage());
             e.printStackTrace();
         }
     }

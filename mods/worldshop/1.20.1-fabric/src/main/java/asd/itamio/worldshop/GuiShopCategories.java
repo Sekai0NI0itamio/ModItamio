@@ -107,6 +107,13 @@ public class GuiShopCategories extends Screen {
         this.filteredCategories = categories;
         boolean isOp = Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasPermissions(2);
         this.adminMode = isOp && !forcePlayerMode;
+        // Debug: log the category order this screen sees
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < categories.size() && i < 11; i++) {
+            if (i > 0) sb.append(", ");
+            sb.append(i).append(":").append(categories.get(i).getName());
+        }
+        WorldShop.LOGGER.info("[GUI_ORDER] GuiShopCategories created with {} categories: [{}]", categories.size(), sb.toString());
     }
 
     @Override
