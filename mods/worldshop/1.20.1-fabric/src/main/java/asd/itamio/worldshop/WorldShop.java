@@ -103,19 +103,71 @@ public class WorldShop implements ModInitializer {
     }
 
     /**
-     * Apply the persisted category order from ShopData (if available).
-     * Called when the server is fully started and ShopData can be loaded.
+     * Save the current category order to a simple JSON file in the server config directory.
+     * This is called from ServerPacketHandler.handleReorderCategories.
+     */
+    public static void saveCategoryOrder(List<ShopCategory> orderedCategories) {
+        if (currentServer == null) {
+            WorldShop.LOGGER.warn("Cannot save category order: no server instance");
+            return;
+        }
+        try {
+            File configDir = new File(currentServer.getServerDirectory(), "config");
+            if (!configDir.exists()) configDir.mkdirs();
+            File orderFile = new File(configDir, "worldshop_category_order.json");
+
+            // Build a list of category names in the current display order
+            List<String> names = new java.util.ArrayList<>();
+            for (ShopCategory cat : orderedCategories) {
+                names.add(cat.getName());
+            }
+
+            // Write as JSON array
+            String json = new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(names);
+            try (java.io.FileWriter writer = new java.io.FileWriter(orderFile)) {
+                writer.write(json);
+                writer.flush();
+            }
+            WorldShop.LOGGER.info("Saved category order to {} ({} categories)", orderFile.getAbsolutePath(), names.size());
+        } catch (Exception e) {
+            WorldShop.LOGGER.error("Failed to save category order: {}", e.getMessage());
+        }
+    }
+
+    /**
+     * Apply the persisted category order from worldshop_category_order.json.
+     * Called when the server is fully started and the config directory is available.
      */
     public static void applyPersistedCategoryOrder() {
         if (currentServer == null) return;
         try {
             File configDir = new File(currentServer.getServerDirectory(), "config");
             if (!configDir.exists()) return;
-            ShopData shopData = new ShopData(configDir);
-            List<String> nameOrder = shopData.getCategoryOrder();
-            if (nameOrder == null || nameOrder.isEmpty()) return;
+            File orderFile = new File(configDir, "worldshop_category_order.json");
+            if (!orderFile.exists()) {
+                WorldShop.LOGGER.info("No persisted category order file found at {}", orderFile.getAbsolutePath());
+                return;
+            }
 
-            // Reorder categories to match the saved order
+            // Read JSON array of category names
+            StringBuilder content = new StringBuilder();
+            try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader(orderFile))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    content.append(line);
+                }
+            }
+            com.google.gson.Gson gson = new com.google.gson.Gson();
+            java.lang.reflect.Type listType = new com.google.gson.reflect.TypeToken<java.util.List<String>>() {}.getType();
+            java.util.List<String> nameOrder = gson.fromJson(content.toString(), listType);
+            if (nameOrder == null || nameOrder.isEmpty()) {
+                WorldShop.LOGGER.info("Persisted category order file is empty");
+                return;
+            }
+
+            WorldShop.LOGGER.info("Loaded category order from {}: {}", orderFile.getAbsolutePath(), nameOrder);
+
+            // Reorder the in-memory categories list to match the saved order
             List<ShopCategory> reordered = new java.util.ArrayList<>();
             for (String name : nameOrder) {
                 for (ShopCategory cat : categories) {
@@ -125,19 +177,24 @@ public class WorldShop implements ModInitializer {
                     }
                 }
             }
-            // Add any new categories not in the saved order
+            // Add any new categories not in the saved order (e.g. from mods)
             for (ShopCategory cat : categories) {
                 if (!reordered.contains(cat)) {
                     reordered.add(cat);
+                    WorldShop.LOGGER.info("  - Added new category not in saved order: {}", cat.getName());
                 }
             }
             if (reordered.size() == categories.size()) {
                 categories.clear();
                 categories.addAll(reordered);
-                LOGGER.info("Applied persisted category order from shop_data.json ({} categories)", categories.size());
+                WorldShop.LOGGER.info("Applied persisted category order ({} categories)", categories.size());
+            } else {
+                WorldShop.LOGGER.warn("Category count mismatch: saved {} names, but have {} categories. Not applying order.",
+                    nameOrder.size(), categories.size());
             }
         } catch (Exception e) {
-            LOGGER.warn("Could not apply persisted category order: {}", e.getMessage());
+            WorldShop.LOGGER.error("Could not apply persisted category order: {}", e.getMessage());
+            e.printStackTrace();
         }
     }
 

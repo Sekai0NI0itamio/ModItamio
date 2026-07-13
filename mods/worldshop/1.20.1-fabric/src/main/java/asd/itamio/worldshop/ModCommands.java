@@ -68,6 +68,7 @@ public class ModCommands {
                                 }
                                 // Rebuild shop categories
                                 WorldShop.buildShopCategories();
+                                WorldShop.applyPersistedCategoryOrder();
                                 source.sendSuccess(new java.util.function.Supplier<Component>() {
                                     @Override
                                     public Component get() {

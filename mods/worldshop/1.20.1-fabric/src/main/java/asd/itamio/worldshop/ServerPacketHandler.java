@@ -9,7 +9,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
-import java.io.File;
 import java.util.List;
 import java.util.UUID;
 
@@ -456,27 +455,9 @@ public class ServerPacketHandler {
             categories.clear();
             categories.addAll(reordered);
 
-            // Persist the new order to ShopData so it survives restarts and /shop reset
-            try {
-                PriceConfig priceConfig = WorldShop.getPriceEngine().getPriceConfig();
-                if (priceConfig != null) {
-                    net.minecraft.server.MinecraftServer server = player.server;
-                    if (server != null) {
-                        // Create ShopData from server config directory
-                        File configDir = new File(server.getServerDirectory(), "config");
-                        if (!configDir.exists()) configDir.mkdirs();
-                        ShopData shopData = new ShopData(configDir);
-                        List<String> nameOrder = new java.util.ArrayList<>();
-                        for (ShopCategory cat : reordered) {
-                            nameOrder.add(cat.getName());
-                        }
-                        shopData.setCategoryOrder(nameOrder);
-                        player.sendSystemMessage(Component.literal("\u00a77Category order saved to shop_data.json."));
-                    }
-                }
-            } catch (Exception e2) {
-                System.err.println("[MODAPP-ERROR] Could not persist category order: " + e2.getMessage());
-            }
+            // Persist the new order using WorldShop's simple file-based persistence
+            WorldShop.saveCategoryOrder(reordered);
+            player.sendSystemMessage(Component.literal("\u00a77Category order saved to worldshop_category_order.json."));
 
             player.sendSystemMessage(Component.literal("\u00a7aCategories reordered successfully."));
         } catch (Exception e) {
