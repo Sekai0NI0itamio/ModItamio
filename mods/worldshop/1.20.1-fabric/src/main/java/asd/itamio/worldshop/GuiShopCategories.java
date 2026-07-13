@@ -226,26 +226,25 @@ public class GuiShopCategories extends Screen {
         ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Reorder locally
+        // Reorder locally so the new screen shows the new order immediately
         List<ShopCategory> reordered = new ArrayList<>();
         for (int idx : newOrder) {
             reordered.add(categories.get(idx));
         }
         categories.clear();
         categories.addAll(reordered);
-        this.filteredCategories = categories;
 
-        // Exit layout mode
-        layoutEditMode = false;
-        pickedUpSlot = -1;
-        init();
+        // Open a completely fresh categories screen — this properly re-renders
+        // with the new category order visible in the grid.
+        ScreenManager.open(new GuiShopCategories(!adminMode));
     }
 
     private void cancelLayout() {
         layoutEditMode = false;
         pickedUpSlot = -1;
         this.scrollOffset = layoutScrollSnapshot;
-        init();
+        // Open a fresh categories screen to properly reset
+        ScreenManager.open(new GuiShopCategories(!adminMode));
     }
 
     // ========== Search ==========
