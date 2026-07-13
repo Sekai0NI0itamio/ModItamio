@@ -75,6 +75,9 @@ public class GuiShopCategories extends Screen {
     /** Fully opaque background to prevent text overlap from previous screen. */
     private static final int BG_COLOR = 0xFF1A1A1A;
 
+    // Debug: track last rendered order to avoid spam
+    private String lastRenderedOrder = "";
+
     // Helper class for search results
     private static class SearchResult {
         final int categoryIndex;
@@ -227,26 +230,48 @@ public class GuiShopCategories extends Screen {
             newOrderNames[i] = categories.get(newOrderList.get(i)).getName();
         }
 
-        // Reorder the local list FIRST
-        List<ShopCategory> cats = WorldShop.getCategories();
-        List<ShopCategory> reorderedLocal = new ArrayList<>();
-        for (int idx : newOrderList) {
-            reorderedLocal.add(cats.get(idx));
-        }
-        cats.clear();
-        cats.addAll(reorderedLocal);
-
         // Send packet to server with names
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.reorderCategories(newOrderNames), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Open a fresh screen immediately — setScreen() calls init() synchronously
-        Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
+        // Reorder the shared categories list in-place
+        List<ShopCategory> cats = WorldShop.getCategories();
+        List<ShopCategory> reordered = new ArrayList<>();
+        for (int idx : newOrderList) {
+            reordered.add(cats.get(idx));
+        }
+        cats.clear();
+        cats.addAll(reordered);
+
+        // Exit layout mode and rebuild widgets for the NORMAL view on THIS screen.
+        // Since this.categories references the static WorldShop.getCategories() list,
+        // the render method will automatically draw the reordered categories.
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = 0;
+        this.searchText = "";
+        this.searchItemsMode = false;
+        this.detailView = false;
+        this.detailResult = null;
+        this.searchResults.clear();
+        this.filteredCategories = cats;
+        this.clearWidgets();
+        rebuildButtons();
     }
 
     private void cancelLayout() {
-        Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = layoutScrollSnapshot;
+        this.searchText = "";
+        this.searchItemsMode = false;
+        this.detailView = false;
+        this.detailResult = null;
+        this.searchResults.clear();
+        this.filteredCategories = categories;
+        this.clearWidgets();
+        rebuildButtons();
     }
 
     // ========== Search ==========
@@ -386,6 +411,20 @@ public class GuiShopCategories extends Screen {
             // ---- CATEGORIES MODE - show category tiles ----
             int visibleCount = COLUMNS * rowsPerPage;
             int startIndex = this.scrollOffset * COLUMNS;
+
+            // Debug: log the order of categories being rendered (only when it changes)
+            if (!layoutEditMode && filteredCategories.size() > 0) {
+                StringBuilder orderStr = new StringBuilder();
+                for (int i = 0; i < Math.min(11, filteredCategories.size()); i++) {
+                    if (i > 0) orderStr.append(", ");
+                    orderStr.append(i).append(":").append(filteredCategories.get(i).getName());
+                }
+                String currentOrder = orderStr.toString();
+                if (!currentOrder.equals(lastRenderedOrder)) {
+                    lastRenderedOrder = currentOrder;
+                    WorldShop.LOGGER.info("[GUI_RENDER] Cat order: [{}] (scrollOffset={})", currentOrder, this.scrollOffset);
+                }
+            }
 
             // Calculate scrollbar position
             int gridRight = guiLeft + gridWidth;
