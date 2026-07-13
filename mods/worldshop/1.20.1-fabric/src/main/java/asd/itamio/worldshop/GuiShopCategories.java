@@ -202,7 +202,6 @@ public class GuiShopCategories extends Screen {
     private void saveLayout() {
         // Build the new flat order: iterate layoutGrid from slot 0 to end, collect non-empty indices in order
         List<Integer> newOrderList = new ArrayList<>();
-        // First collect all filled slots from the grid in order
         for (int slot = 0; slot < layoutGrid.length; slot++) {
             if (layoutGrid[slot] >= 0 && !newOrderList.contains(layoutGrid[slot])) {
                 newOrderList.add(layoutGrid[slot]);
@@ -226,25 +225,27 @@ public class GuiShopCategories extends Screen {
         ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Reorder locally so the new screen shows the new order immediately
+        // Reorder categories directly in WorldShop's static list
+        List<ShopCategory> currentCategories = WorldShop.getCategories();
         List<ShopCategory> reordered = new ArrayList<>();
         for (int idx : newOrder) {
-            reordered.add(categories.get(idx));
+            reordered.add(currentCategories.get(idx));
         }
-        categories.clear();
-        categories.addAll(reordered);
+        currentCategories.clear();
+        currentCategories.addAll(reordered);
 
-        // Open a completely fresh categories screen — this properly re-renders
-        // with the new category order visible in the grid.
-        ScreenManager.open(new GuiShopCategories(!adminMode));
+        // Open a brand new screen — forcing a complete fresh init
+        // passing the CORRECT forcePlayerMode (false = admin mode, not true)
+        boolean forcePlayer = !adminMode; // if adminMode=true, forcePlayer=false (stay admin)
+        Minecraft.getInstance().setScreen(new GuiShopCategories(forcePlayer));
     }
 
     private void cancelLayout() {
         layoutEditMode = false;
         pickedUpSlot = -1;
         this.scrollOffset = layoutScrollSnapshot;
-        // Open a fresh categories screen to properly reset
-        ScreenManager.open(new GuiShopCategories(!adminMode));
+        boolean forcePlayer = !adminMode;
+        Minecraft.getInstance().setScreen(new GuiShopCategories(forcePlayer));
     }
 
     // ========== Search ==========
@@ -449,12 +450,6 @@ public class GuiShopCategories extends Screen {
             }
         }
 
-        String footer = searchItemsMode
-                ? "\u00a77Click a result to browse items | Right-click: Quick buy | ESC to close"
-                : adminMode
-                ? "\u00a77Click a category to browse items | \u00a7cX to remove \u00a77| \u00a7eEdit Layout \u00a77| ESC to close"
-                : "\u00a77Click a category to browse items | ESC to close";
-        guiGraphics.drawCenteredString(this.font, footer, this.width / 2, this.height - 12, 0xAAAAAA);
     }
 
     // ========== Layout Editor Rendering ==========

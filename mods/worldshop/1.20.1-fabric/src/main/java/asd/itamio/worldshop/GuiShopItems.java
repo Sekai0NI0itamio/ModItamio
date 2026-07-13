@@ -316,10 +316,6 @@ public class GuiShopItems extends Screen {
             String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + getMaxScrollPages(rowsPerPage);
             guiGraphics.drawCenteredString(this.font, scrollInfo, this.width / 2, barTop + 2, 0xFFFFFF);
         }
-        String footer = adminMode
-                ? "\u00a77Left: Buy menu | \u00a7cX: Remove \u00a77| \u00a7bE: Edit \u00a77| Right: Quick buy | ESC: Back"
-                : "\u00a77Left-click: Buy menu | Right-click: Quick buy stack | ESC: Back";
-        guiGraphics.drawCenteredString(this.font, footer, this.width / 2, barTop + 14, 0xAAAAAA);
     }
 
     private void drawDetailView(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
