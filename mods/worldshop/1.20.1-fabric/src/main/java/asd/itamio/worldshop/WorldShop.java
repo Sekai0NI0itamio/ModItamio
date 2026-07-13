@@ -12,6 +12,7 @@ import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
@@ -81,6 +82,8 @@ public class WorldShop implements ModInitializer {
                     PriceConfig serverConfig = PriceConfig.forServer(server);
                     priceEngine.setPriceConfig(serverConfig);
                     LOGGER.info("World Shop server price config initialized: {}", serverConfig.getConfigFilePath());
+                    // Apply persisted category order after server config is ready
+                    applyPersistedCategoryOrder();
                 }
             }
         });
@@ -97,6 +100,45 @@ public class WorldShop implements ModInitializer {
 
     public static List<ShopCategory> getCategories() {
         return categories;
+    }
+
+    /**
+     * Apply the persisted category order from ShopData (if available).
+     * Called when the server is fully started and ShopData can be loaded.
+     */
+    public static void applyPersistedCategoryOrder() {
+        if (currentServer == null) return;
+        try {
+            File configDir = new File(currentServer.getServerDirectory(), "config");
+            if (!configDir.exists()) return;
+            ShopData shopData = new ShopData(configDir);
+            List<String> nameOrder = shopData.getCategoryOrder();
+            if (nameOrder == null || nameOrder.isEmpty()) return;
+
+            // Reorder categories to match the saved order
+            List<ShopCategory> reordered = new java.util.ArrayList<>();
+            for (String name : nameOrder) {
+                for (ShopCategory cat : categories) {
+                    if (cat.getName().equals(name) && !reordered.contains(cat)) {
+                        reordered.add(cat);
+                        break;
+                    }
+                }
+            }
+            // Add any new categories not in the saved order
+            for (ShopCategory cat : categories) {
+                if (!reordered.contains(cat)) {
+                    reordered.add(cat);
+                }
+            }
+            if (reordered.size() == categories.size()) {
+                categories.clear();
+                categories.addAll(reordered);
+                LOGGER.info("Applied persisted category order from shop_data.json ({} categories)", categories.size());
+            }
+        } catch (Exception e) {
+            LOGGER.warn("Could not apply persisted category order: {}", e.getMessage());
+        }
     }
 
     public static PriceEngine getPriceEngine() {

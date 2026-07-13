@@ -40,6 +40,9 @@ public class ShopData {
     // Item overrides (custom name, icon, prices)
     private final Map<String, ItemOverride> itemOverrides = new ConcurrentHashMap<>();
 
+    // Persistent category order (list of category names in order)
+    private final List<String> categoryOrder = Collections.synchronizedList(new ArrayList<>());
+
     // In-memory cached data loaded from JSON
     private DataModel cachedData = new DataModel();
 
@@ -89,6 +92,8 @@ public class ShopData {
         Set<String> hiddenCategories = new HashSet<>();
         Map<String, CustomCategory> customCategories = new LinkedHashMap<>();
         Map<String, ItemOverride> itemOverrides = new LinkedHashMap<>();
+        /** Ordered list of category names preserving custom layout. */
+        List<String> categoryOrder = new ArrayList<>();
     }
 
     public static class CustomCategory {
@@ -133,6 +138,10 @@ public class ShopData {
                 hiddenCategories.addAll(loaded.hiddenCategories);
                 if (loaded.customCategories != null) customCategories.putAll(loaded.customCategories);
                 if (loaded.itemOverrides != null) itemOverrides.putAll(loaded.itemOverrides);
+                if (loaded.categoryOrder != null) {
+                    categoryOrder.clear();
+                    categoryOrder.addAll(loaded.categoryOrder);
+                }
             }
         } catch (Exception e) {
             WorldShop.LOGGER.warn("Could not load shop data from {}: {}", configFile.getAbsolutePath(), e.getMessage());
@@ -150,6 +159,7 @@ public class ShopData {
             model.hiddenCategories = new HashSet<>(hiddenCategories);
             model.customCategories = new LinkedHashMap<>(customCategories);
             model.itemOverrides = new LinkedHashMap<>(itemOverrides);
+            model.categoryOrder = new ArrayList<>(categoryOrder);
 
             try (FileWriter writer = new FileWriter(configFile)) {
                 GSON.toJson(model, writer);
@@ -252,6 +262,25 @@ public class ShopData {
     public void removeItemOverride(ItemStack stack) {
         if (stack == null || stack.isEmpty()) return;
         itemOverrides.remove(getItemKey(stack));
+        save();
+    }
+
+    // ========== Category Order Persistence ==========
+
+    /**
+     * Get the persistent category order (list of category names).
+     * Returns an empty list if no custom order has been saved.
+     */
+    public List<String> getCategoryOrder() {
+        return new ArrayList<>(categoryOrder);
+    }
+
+    /**
+     * Set and persist the category order (list of category names in desired display order).
+     */
+    public void setCategoryOrder(List<String> order) {
+        categoryOrder.clear();
+        categoryOrder.addAll(order);
         save();
     }
 

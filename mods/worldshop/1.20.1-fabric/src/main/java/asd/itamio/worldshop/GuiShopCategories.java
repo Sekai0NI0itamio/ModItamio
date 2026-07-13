@@ -144,19 +144,19 @@ public class GuiShopCategories extends Screen {
             this.searchField.setResponder(this::onSearchChanged);
             this.addRenderableWidget(this.searchField);
 
-            // Admin buttons at bottom
+            // Admin buttons at bottom — moved up to avoid overlapping scroll info (height-25) and footer (height-12)
             if (adminMode) {
                 int btnW = 120;
                 this.editLayoutButton = Button.builder(
                         Component.literal("\u00a7e\u00a7lEdit Layout"),
                         btn -> enterLayoutMode()
-                ).bounds(this.width / 2 - btnW - 5, this.height - 45, btnW, 20).build();
+                ).bounds(this.width / 2 - btnW - 5, this.height - 55, btnW, 20).build();
                 this.addRenderableWidget(this.editLayoutButton);
 
                 this.addCategoryButton = Button.builder(
                         Component.literal("\u00a7a+ Add Category"),
                         btn -> ScreenManager.open(new GuiAddCategory(this))
-                ).bounds(this.width / 2 + 5, this.height - 45, btnW, 20).build();
+                ).bounds(this.width / 2 + 5, this.height - 55, btnW, 20).build();
                 this.addRenderableWidget(this.addCategoryButton);
             }
         }
@@ -453,7 +453,7 @@ public class GuiShopCategories extends Screen {
         String footer = searchItemsMode
                 ? "\u00a77Click a result to browse items | Right-click: Quick buy | ESC to close"
                 : adminMode
-                ? "\u00a77Click a category to browse items | \u00a7cX to remove \u00a77| ESC to close"
+                ? "\u00a77Click a category to browse items | \u00a7cX to remove \u00a77| \u00a7eEdit Layout \u00a77| ESC to close"
                 : "\u00a77Click a category to browse items | ESC to close";
         guiGraphics.drawCenteredString(this.font, footer, this.width / 2, this.height - 12, 0xAAAAAA);
     }
