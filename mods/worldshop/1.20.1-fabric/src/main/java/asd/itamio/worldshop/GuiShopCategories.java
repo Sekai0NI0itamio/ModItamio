@@ -234,33 +234,18 @@ public class GuiShopCategories extends Screen {
         ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Exit layout mode and reset all internal state to show normal view
-        layoutEditMode = false;
-        pickedUpSlot = -1;
-        this.scrollOffset = 0;
-        this.searchText = "";
-        this.searchItemsMode = false;
-        this.detailView = false;
-        this.detailResult = null;
-        this.searchResults.clear();
-        this.filteredCategories = cats;
-        this.clearWidgets();
-        // Rebuild normal widgets by calling rebuildButtons
-        rebuildButtons();
+        // Defer the screen transition to the next client tick using execute().
+        // This ensures the current button handler fully completes before the new
+        // screen is set up, avoiding lifecycle conflicts.
+        Minecraft.getInstance().execute(() -> {
+            Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
+        });
     }
 
     private void cancelLayout() {
-        layoutEditMode = false;
-        pickedUpSlot = -1;
-        this.scrollOffset = layoutScrollSnapshot;
-        this.searchText = "";
-        this.searchItemsMode = false;
-        this.detailView = false;
-        this.detailResult = null;
-        this.searchResults.clear();
-        this.filteredCategories = categories;
-        this.clearWidgets();
-        rebuildButtons();
+        Minecraft.getInstance().execute(() -> {
+            Minecraft.getInstance().setScreen(new GuiShopCategories(!adminMode));
+        });
     }
 
     // ========== Search ==========
