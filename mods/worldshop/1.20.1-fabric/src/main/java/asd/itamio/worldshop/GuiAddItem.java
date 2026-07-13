@@ -32,6 +32,7 @@ public class GuiAddItem extends ScreenManager.PopupScreen {
     private static final int ROWS = 5;
     /** Fully opaque background color to prevent visual overlap with parent screen. */
     private static final int BG_COLOR = 0xFF1A1A1A;
+    private static final int GAP_BELOW_WIDGET = 10;
 
     public GuiAddItem(Screen parent, int categoryIndex, String categoryName) {
         super(parent, Component.literal("Add Item to " + categoryName));
@@ -44,7 +45,7 @@ public class GuiAddItem extends ScreenManager.PopupScreen {
         super.init();
         int centerX = this.width / 2;
 
-        this.searchField = new EditBox(this.font, centerX - 120, 30, 240, 16, Component.literal("Search blocks/items..."));
+        this.searchField = new EditBox(this.font, centerX - 120, 32, 240, 16, Component.literal("Search blocks/items..."));
         this.searchField.setMaxLength(40);
         this.searchField.setFocused(true);
         this.searchField.setResponder(this::onSearchChanged);
@@ -82,16 +83,23 @@ public class GuiAddItem extends ScreenManager.PopupScreen {
         int centerX = this.width / 2;
 
         guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7lAdd Item to \u00a7f" + categoryName, centerX, 8, 0xFFFFFF);
+        // Label above search field (y=32)
         guiGraphics.drawCenteredString(this.font, "\u00a77Search blocks/items:", centerX, 20, 0xAAAAAA);
 
+        // Determine startY for search results (below search field at y=32 + 16 = 48)
+        int searchFieldBottom = 48;
+        int startY = searchFieldBottom + GAP_BELOW_WIDGET;
+
+        // If there's a feedback message, draw it between search field and results
         if (!message.isEmpty()) {
-            guiGraphics.drawCenteredString(this.font, "\u00a7a" + message, centerX, 52, 0xFFFFFF);
+            guiGraphics.drawCenteredString(this.font, "\u00a7a" + message, centerX, searchFieldBottom + 2, 0xFFFFFF);
+            // Push results down so they don't overlap the message
+            startY = searchFieldBottom + 14 + GAP_BELOW_WIDGET;
         }
 
         // Draw search results grid
         int availableWidth = COLS * (SLOT_SIZE + 2);
         int guiLeft = (this.width - availableWidth) / 2;
-        int startY = message.isEmpty() ? 55 : 65;
 
         for (int i = 0; i < COLS * ROWS && i + searchScroll * COLS < searchResults.size(); i++) {
             int col = i % COLS;
@@ -136,9 +144,14 @@ public class GuiAddItem extends ScreenManager.PopupScreen {
         }
 
         // Check search result clicks
+        int searchFieldBottom = 48;
+        int startY = searchFieldBottom + GAP_BELOW_WIDGET;
+        if (!message.isEmpty()) {
+            startY = searchFieldBottom + 14 + GAP_BELOW_WIDGET;
+        }
+
         int availableWidth = COLS * (SLOT_SIZE + 2);
         int guiLeft = (this.width - availableWidth) / 2;
-        int startY = message.isEmpty() ? 55 : 65;
 
         for (int i = 0; i < COLS * ROWS && i + searchScroll * COLS < searchResults.size(); i++) {
             int col = i % COLS;

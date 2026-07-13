@@ -33,6 +33,7 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
     private static final int SLOT_SIZE = 20;
     /** Fully opaque background color to prevent visual overlap with parent screen. */
     private static final int BG_COLOR = 0xFF1A1A1A;
+    private static final int GAP_BELOW_WIDGET = 10;
 
     public GuiAddCategory(Screen parent) {
         super(parent, Component.literal("Add Category"));
@@ -45,13 +46,13 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
         int centerX = this.width / 2;
 
         // Category name field
-        this.nameField = new EditBox(this.font, centerX - 100, 30, 200, 20, Component.literal("Category Name"));
+        this.nameField = new EditBox(this.font, centerX - 100, 32, 200, 20, Component.literal("Category Name"));
         this.nameField.setMaxLength(40);
         this.nameField.setFocused(true);
         this.addRenderableWidget(this.nameField);
 
-        // Search field for icon
-        this.searchField = new EditBox(this.font, centerX - 100, 60, 200, 16, Component.literal("Search icon..."));
+        // Search field for icon (with gap below name field)
+        this.searchField = new EditBox(this.font, centerX - 100, 68, 200, 16, Component.literal("Search icon..."));
         this.searchField.setMaxLength(40);
         this.searchField.setResponder(this::onSearchChanged);
         this.addRenderableWidget(this.searchField);
@@ -60,7 +61,6 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
         this.addRenderableWidget(Button.builder(Component.literal("\u00a7aConfirm"), btn -> {
             String name = nameField.getValue().trim();
             if (!name.isEmpty() && selectedIcon != null) {
-                // Send add category packet
                 sendAddCategory(name, selectedIconId);
                 closeToParent();
             }
@@ -98,18 +98,29 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
         int centerX = this.width / 2;
 
         guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7lAdd Category", centerX, 8, 0xFFFFFF);
+        // Label above name field (y=32)
         guiGraphics.drawCenteredString(this.font, "\u00a77Category Name:", centerX, 20, 0xAAAAAA);
-        guiGraphics.drawCenteredString(this.font, "\u00a77Search for icon block/item:", centerX, 52, 0xAAAAAA);
+        // Label above search field (y=68)
+        guiGraphics.drawCenteredString(this.font, "\u00a77Search for icon block/item:", centerX, 56, 0xAAAAAA);
 
-        // Draw selected icon preview
+        // Determine startY for search results - depends on whether icon preview is shown
+        int searchFieldBottom = 68 + 16; // y=84
+        int startY;
+
+        // Draw selected icon preview with generous gap below search field
         if (selectedIcon != null) {
-            guiGraphics.drawCenteredString(this.font, "\u00a7aSelected Icon:", centerX, 82, 0xAAAAAA);
-            drawSlot(guiGraphics, centerX - 12, 90, 24, 24);
-            guiGraphics.renderItem(selectedIcon, centerX - 10, 92);
+            startY = searchFieldBottom + GAP_BELOW_WIDGET + 10 + 24 + GAP_BELOW_WIDGET;
+            // Icon label
+            int previewLabelY = searchFieldBottom + GAP_BELOW_WIDGET;
+            guiGraphics.drawCenteredString(this.font, "\u00a7aSelected Icon:", centerX, previewLabelY, 0xAAAAAA);
+            // Icon slot
+            drawSlot(guiGraphics, centerX - 12, previewLabelY + 10, 24, 24);
+            guiGraphics.renderItem(selectedIcon, centerX - 10, previewLabelY + 12);
+        } else {
+            startY = searchFieldBottom + GAP_BELOW_WIDGET;
         }
 
-        // Draw search results
-        int startY = selectedIcon != null ? 120 : 85;
+        // Draw search results grid
         int availableWidth = SEARCH_COLS * (SLOT_SIZE + 2);
         int guiLeft = (this.width - availableWidth) / 2;
 
@@ -152,7 +163,15 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
         }
 
         // Check search result clicks
-        int startY = selectedIcon != null ? 120 : 85;
+        int searchFieldBottom = 68 + 16;
+        int startY;
+
+        if (selectedIcon != null) {
+            startY = searchFieldBottom + GAP_BELOW_WIDGET + 10 + 24 + GAP_BELOW_WIDGET;
+        } else {
+            startY = searchFieldBottom + GAP_BELOW_WIDGET;
+        }
+
         int availableWidth = SEARCH_COLS * (SLOT_SIZE + 2);
         int guiLeft = (this.width - availableWidth) / 2;
 
@@ -209,7 +228,6 @@ public class GuiAddCategory extends ScreenManager.PopupScreen {
     }
 
     private void sendAddCategory(String name, String iconItemId) {
-        // Send packet to server
         net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.send(
                 ShopPacket.PACKET_ID,
                 ShopPacket.writeDirect(ShopPacket.addCategory(name, iconItemId))
