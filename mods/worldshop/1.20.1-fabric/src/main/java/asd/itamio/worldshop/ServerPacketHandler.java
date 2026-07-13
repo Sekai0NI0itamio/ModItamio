@@ -40,6 +40,9 @@ public class ServerPacketHandler {
                 case ShopPacket.EDIT_ITEM:
                     handleEditItem(player, packet.getCategoryIndex(), packet.getStringData1(), packet.getStringData2(), packet.getStringData3(), packet.getDoubleData1(), packet.getDoubleData2());
                     break;
+                case ShopPacket.REORDER_CATEGORIES:
+                    handleReorderCategories(player, packet.getIntArrayData());
+                    break;
                 default:
                     player.sendSystemMessage(Component.literal("\u00a7cUnknown packet type."));
             }
@@ -416,6 +419,44 @@ public class ServerPacketHandler {
             player.sendSystemMessage(Component.literal("\u00a7aItem \"" + targetStack.getHoverName().getString() + "\" updated."));
         } catch (Exception e) {
             System.err.println("[MODAPP-ERROR] Error handling edit item: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Reorder the categories list based on the new ordering provided by the client.
+     * This is an OP-only operation for shop management.
+     */
+    private static void handleReorderCategories(ServerPlayer player, int[] newOrder) {
+        try {
+            if (!player.hasPermissions(2)) {
+                player.sendSystemMessage(Component.literal("\u00a7cYou need OP level 2 to manage the shop."));
+                return;
+            }
+            if (newOrder == null || newOrder.length == 0) {
+                player.sendSystemMessage(Component.literal("\u00a7cInvalid reorder data."));
+                return;
+            }
+            List<ShopCategory> categories = WorldShop.getCategories();
+            if (newOrder.length != categories.size()) {
+                player.sendSystemMessage(Component.literal("\u00a7cReorder data size mismatch."));
+                return;
+            }
+            // Build the reordered list
+            List<ShopCategory> reordered = new java.util.ArrayList<>();
+            for (int idx : newOrder) {
+                if (idx < 0 || idx >= categories.size()) {
+                    player.sendSystemMessage(Component.literal("\u00a7cInvalid category index in reorder."));
+                    return;
+                }
+                reordered.add(categories.get(idx));
+            }
+            // Clear and re-add in new order
+            categories.clear();
+            categories.addAll(reordered);
+            player.sendSystemMessage(Component.literal("\u00a7aCategories reordered successfully."));
+        } catch (Exception e) {
+            System.err.println("[MODAPP-ERROR] Error handling reorder categories: " + e.getMessage());
             e.printStackTrace();
         }
     }

@@ -29,6 +29,9 @@ public class ShopPacket {
     public static final int OPEN_PLAYER_SHOP = 10;
     public static final int SYNC_SHOP_DATA = 11;
 
+    // Admin: reorder categories
+    public static final int REORDER_CATEGORIES = 12;
+
     public static final ResourceLocation PACKET_ID = new ResourceLocation(WorldShop.MOD_ID, "shop_packet");
 
     private int type;
@@ -43,6 +46,9 @@ public class ShopPacket {
     private String stringData3;  // icon item ID for edit
     private double doubleData1;  // buy price
     private double doubleData2;  // sell price
+
+    // Reorder fields
+    private int[] intArrayData;  // reordered category indices
 
     public ShopPacket() {}
 
@@ -138,6 +144,13 @@ public class ShopPacket {
         return pkt;
     }
 
+    public static ShopPacket reorderCategories(int[] order) {
+        ShopPacket pkt = new ShopPacket();
+        pkt.type = REORDER_CATEGORIES;
+        pkt.intArrayData = order;
+        return pkt;
+    }
+
     public static void write(ShopPacket pkt, FriendlyByteBuf buf) {
         buf.writeInt(pkt.type);
         switch (pkt.type) {
@@ -181,6 +194,16 @@ public class ShopPacket {
                 break;
             case SYNC_SHOP_DATA:
                 buf.writeUtf(pkt.stringData1 != null ? pkt.stringData1 : "");
+                break;
+            case REORDER_CATEGORIES:
+                if (pkt.intArrayData == null) {
+                    buf.writeInt(0);
+                } else {
+                    buf.writeInt(pkt.intArrayData.length);
+                    for (int idx : pkt.intArrayData) {
+                        buf.writeInt(idx);
+                    }
+                }
                 break;
             // OPEN_SHOP, SELL_HAND, OPEN_SELL_GUI, OPEN_PLAYER_SHOP have no extra data
         }
@@ -228,6 +251,13 @@ public class ShopPacket {
             case SYNC_SHOP_DATA:
                 pkt.stringData1 = buf.readUtf();
                 break;
+            case REORDER_CATEGORIES:
+                int len = buf.readInt();
+                pkt.intArrayData = new int[len];
+                for (int i = 0; i < len; i++) {
+                    pkt.intArrayData[i] = buf.readInt();
+                }
+                break;
         }
         return pkt;
     }
@@ -252,4 +282,5 @@ public class ShopPacket {
     public String getStringData3() { return stringData3 != null ? stringData3 : ""; }
     public double getDoubleData1() { return doubleData1; }
     public double getDoubleData2() { return doubleData2; }
+    public int[] getIntArrayData() { return intArrayData; }
 }

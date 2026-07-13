@@ -12,7 +12,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,6 +53,28 @@ public class GuiShopCategories extends Screen {
     // Admin: "Add Category" button
     private Button addCategoryButton;
 
+    // ========== Layout Edit Mode ==========
+    private boolean layoutEditMode = false;
+    /** Slot -> category index in categories list (-1 = empty). Only first page's slots. */
+    private int[] layoutGrid;
+    /** Snapshot of the original category order for Cancel. */
+    private int[] originalOrder;
+    /** Which grid slot is currently "picked up" (-1 = none). */
+    private int pickedUpSlot = -1;
+    /** Scroll offset snapshot when entering layout mode. */
+    private int layoutScrollSnapshot = 0;
+    /** Number of visible slots per page. */
+    private int layoutVisibleCount = 0;
+    /** Rows per page in layout mode. */
+    private int layoutRowsPerPage = 0;
+
+    private Button editLayoutButton;
+    private Button saveLayoutButton;
+    private Button cancelLayoutButton;
+
+    /** Fully opaque background to prevent text overlap from previous screen. */
+    private static final int BG_COLOR = 0xFF1A1A1A;
+
     // Helper class for search results
     private static class SearchResult {
         final int categoryIndex;
@@ -91,25 +112,143 @@ public class GuiShopCategories extends Screen {
     @Override
     protected void init() {
         super.init();
-        // Create search field at top
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        rebuildButtons();
+    }
+
+    private void rebuildButtons() {
+        this.clearWidgets();
         int fieldW = 250;
         int fieldH = 16;
         int fieldY = 30;
-        this.searchField = new EditBox(this.font, this.width / 2 - fieldW / 2, fieldY, fieldW, fieldH, Component.literal("Search items across all categories..."));
-        this.searchField.setMaxLength(40);
-        this.searchField.setResponder(this::onSearchChanged);
-        this.addRenderableWidget(this.searchField);
 
-        // Admin: Add Category button at bottom
-        if (adminMode) {
-            int btnW = 120;
-            this.addCategoryButton = Button.builder(
-                    Component.literal("\u00a7a+ Add Category"),
-                    btn -> ScreenManager.open(new GuiAddCategory(this))
-            ).bounds(this.width / 2 - btnW / 2, this.height - 45, btnW, 20).build();
-            this.addRenderableWidget(this.addCategoryButton);
+        if (layoutEditMode) {
+            // In layout edit mode: only show Save/Cancel buttons
+            int btnW = 100;
+            this.saveLayoutButton = Button.builder(
+                    Component.literal("\u00a7aSave Layout"),
+                    btn -> saveLayout()
+            ).bounds(this.width / 2 - btnW - 5, this.height - 25, btnW, 20).build();
+            this.addRenderableWidget(this.saveLayoutButton);
+
+            this.cancelLayoutButton = Button.builder(
+                    Component.literal("\u00a7cCancel"),
+                    btn -> cancelLayout()
+            ).bounds(this.width / 2 + 5, this.height - 25, btnW, 20).build();
+            this.addRenderableWidget(this.cancelLayoutButton);
+        } else {
+            // Normal mode: search field
+            this.searchField = new EditBox(this.font, this.width / 2 - fieldW / 2, fieldY, fieldW, fieldH, Component.literal("Search items across all categories..."));
+            this.searchField.setMaxLength(40);
+            this.searchField.setResponder(this::onSearchChanged);
+            this.addRenderableWidget(this.searchField);
+
+            // Admin buttons at bottom
+            if (adminMode) {
+                int btnW = 120;
+                this.editLayoutButton = Button.builder(
+                        Component.literal("\u00a7e\u00a7lEdit Layout"),
+                        btn -> enterLayoutMode()
+                ).bounds(this.width / 2 - btnW - 5, this.height - 45, btnW, 20).build();
+                this.addRenderableWidget(this.editLayoutButton);
+
+                this.addCategoryButton = Button.builder(
+                        Component.literal("\u00a7a+ Add Category"),
+                        btn -> ScreenManager.open(new GuiAddCategory(this))
+                ).bounds(this.width / 2 + 5, this.height - 45, btnW, 20).build();
+                this.addRenderableWidget(this.addCategoryButton);
+            }
         }
     }
+
+    // ========== Layout Edit Mode ==========
+
+    private void enterLayoutMode() {
+        layoutEditMode = true;
+        pickedUpSlot = -1;
+        layoutScrollSnapshot = this.scrollOffset;
+
+        // Build the layout grid from the current page's visible categories
+        int cellSize = 34;
+        int gridWidth = COLUMNS * cellSize - 4;
+        int guiLeft = (this.width - gridWidth) / 2;
+        int guiTop = 30; // Move grid higher to leave room
+        int availableHeight = this.height - guiTop - 70;
+        layoutRowsPerPage = Math.max(1, availableHeight / (cellSize + 10));
+        layoutVisibleCount = COLUMNS * layoutRowsPerPage;
+
+        // Build the grid: each slot maps to a category index in the categories list
+        layoutGrid = new int[layoutVisibleCount];
+        int startIndex = this.scrollOffset * COLUMNS;
+        for (int i = 0; i < layoutVisibleCount; i++) {
+            int catIndex = startIndex + i;
+            if (catIndex < categories.size()) {
+                layoutGrid[i] = catIndex;
+            } else {
+                layoutGrid[i] = -1;
+            }
+        }
+
+        // Snapshot original order for cancel
+        originalOrder = new int[categories.size()];
+        for (int i = 0; i < categories.size(); i++) {
+            originalOrder[i] = i;
+        }
+
+        rebuildButtons();
+    }
+
+    private void saveLayout() {
+        // Build the new flat order: iterate layoutGrid from slot 0 to end, collect non-empty indices in order
+        List<Integer> newOrderList = new ArrayList<>();
+        // First collect all filled slots from the grid in order
+        for (int slot = 0; slot < layoutGrid.length; slot++) {
+            if (layoutGrid[slot] >= 0 && !newOrderList.contains(layoutGrid[slot])) {
+                newOrderList.add(layoutGrid[slot]);
+            }
+        }
+        // Add any categories that might have been scrolled out (not visible in grid)
+        for (int i = 0; i < categories.size(); i++) {
+            if (!newOrderList.contains(i)) {
+                newOrderList.add(i);
+            }
+        }
+
+        // Convert to int array
+        int[] newOrder = new int[newOrderList.size()];
+        for (int i = 0; i < newOrderList.size(); i++) {
+            newOrder[i] = newOrderList.get(i);
+        }
+
+        // Send to server
+        FriendlyByteBuf buf = PacketByteBufs.create();
+        ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
+        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
+
+        // Reorder locally
+        List<ShopCategory> reordered = new ArrayList<>();
+        for (int idx : newOrder) {
+            reordered.add(categories.get(idx));
+        }
+        categories.clear();
+        categories.addAll(reordered);
+        this.filteredCategories = categories;
+
+        // Exit layout mode
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        init();
+    }
+
+    private void cancelLayout() {
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = layoutScrollSnapshot;
+        init();
+    }
+
+    // ========== Search ==========
 
     private void onSearchChanged(String text) {
         this.searchText = text.toLowerCase().trim();
@@ -152,7 +291,13 @@ public class GuiShopCategories extends Screen {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
 
-        guiGraphics.fill(0, 0, this.width, this.height, -870441442);
+        // Fully opaque background — prevents any text overlap from previous screen
+        guiGraphics.fill(0, 0, this.width, this.height, BG_COLOR);
+
+        if (layoutEditMode) {
+            drawLayoutEditor(guiGraphics, mouseX, mouseY);
+            return;
+        }
 
         int titleY = 8;
         String title = "\u00a76\u00a7lShop - " + (searchItemsMode ? "Search Results" : "Categories");
@@ -288,7 +433,6 @@ public class GuiShopCategories extends Screen {
                     int row = i / COLUMNS;
                     int x = guiLeft + col * cellSize + ICON_SIZE - 10;
                     int y = guiTop + row * cellSize;
-                    // Draw red "x" in top-right corner of category slot
                     guiGraphics.fill(x, y, x + 10, y + 10, 0xCCFF4444);
                     guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", x + 1, y + 1, 0xFFFFFF);
                 }
@@ -314,29 +458,83 @@ public class GuiShopCategories extends Screen {
         guiGraphics.drawCenteredString(this.font, footer, this.width / 2, this.height - 12, 0xAAAAAA);
     }
 
-    /**
-     * Draw a vertical scrollbar track and thumb.
-     */
-    private void drawScrollbar(GuiGraphics guiGraphics, int x, int top, int height, int maxPages, int mouseX, int mouseY) {
-        if (maxPages <= 1) return; // No scrollbar needed
+    // ========== Layout Editor Rendering ==========
 
-        // Track background
-        guiGraphics.fill(x, top, x + SCROLLBAR_WIDTH, top + height, 0xFF333333);
+    private void drawLayoutEditor(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+        // Title
+        guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7l\u00a7nEdit Category Layout", this.width / 2, 8, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "\u00a77Click a category to pick it up, then click a slot to place it", this.width / 2, 20, 0xAAAAAA);
 
-        // Thumb
-        int thumbHeight = Math.max(8, height / maxPages);
-        int maxScrollPos = height - thumbHeight;
-        int thumbY = top + (maxPages > 1 ? (this.scrollOffset * maxScrollPos) / (maxPages - 1) : 0);
-        int thumbColor = 0xFF888888;
-        // Highlight on hover
-        if (mouseX >= x && mouseX < x + SCROLLBAR_WIDTH && mouseY >= thumbY && mouseY < thumbY + thumbHeight) {
-            thumbColor = 0xFFAAAAAA;
+        int cellSize = 34;
+        int gridWidth = COLUMNS * cellSize - 4;
+        int guiLeft = (this.width - gridWidth) / 2;
+        int guiTop = 30;
+        int availableHeight = this.height - guiTop - 70;
+        int rowsPerPage = Math.max(1, availableHeight / (cellSize + 2));
+        int visibleCount = COLUMNS * rowsPerPage;
+
+        // Rebuild grid if screen was resized
+        if (layoutVisibleCount != visibleCount) {
+            layoutVisibleCount = visibleCount;
+            layoutGrid = new int[layoutVisibleCount];
+            int startIndex = this.scrollOffset * COLUMNS;
+            for (int i = 0; i < layoutVisibleCount; i++) {
+                int catIndex = startIndex + i;
+                if (catIndex < categories.size()) {
+                    layoutGrid[i] = catIndex;
+                } else {
+                    layoutGrid[i] = -1;
+                }
+            }
         }
-        guiGraphics.fill(x, thumbY, x + SCROLLBAR_WIDTH, thumbY + thumbHeight, thumbColor);
+
+        for (int i = 0; i < layoutVisibleCount; i++) {
+            int col = i % COLUMNS;
+            int row = i / COLUMNS;
+            int x = guiLeft + col * cellSize;
+            int y = guiTop + row * cellSize;
+            int catIndex = layoutGrid[i];
+
+            if (catIndex >= 0 && catIndex < categories.size()) {
+                // Occupied slot — draw the category
+                boolean isPickedUp = (pickedUpSlot == i);
+                if (isPickedUp) {
+                    // Highlight picked-up slot
+                    guiGraphics.fill(x - 1, y - 1, x + ICON_SIZE + 1, y + ICON_SIZE + 1, 0xFFFFFF44);
+                }
+                drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
+                ShopCategory category = categories.get(catIndex);
+                guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
+
+                // Draw slot number indicator (small)
+                String numStr = String.valueOf(i + 1);
+                guiGraphics.drawString(this.font, "\u00a77" + numStr, x + ICON_SIZE - 8, y + ICON_SIZE - 8, 0x888888);
+
+                // Tooltip
+                if (!isPickedUp && isMouseInSlot(mouseX, mouseY, x, y, ICON_SIZE, ICON_SIZE)) {
+                    guiGraphics.renderTooltip(this.font, Component.literal("\u00a7f" + formatCategoryName(category.getName()) + " \u00a77(Slot " + (i + 1) + ")"), mouseX, mouseY);
+                }
+            } else {
+                // Empty slot — draw outline
+                guiGraphics.fill(x, y, x + ICON_SIZE, y + ICON_SIZE, 0xFF333333);
+                guiGraphics.fill(x + 1, y + 1, x + ICON_SIZE - 1, y + ICON_SIZE - 1, BG_COLOR);
+                // Draw a faint "empty" indicator
+                guiGraphics.drawCenteredString(this.font, "\u00a78" + (i + 1), x + ICON_SIZE / 2, y + ICON_SIZE / 2 - 4, 0x555555);
+            }
+        }
+
+        // Legend at bottom
+        guiGraphics.drawCenteredString(this.font, "\u00a77Pick up a category (click it), then click a slot to place. \u00a7aSave \u00a77or \u00a7cCancel \u00a77below.", this.width / 2, this.height - 38, 0xAAAAAA);
     }
+
+    // ========== Mouse Handling ==========
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
+        if (layoutEditMode) {
+            return handleLayoutClick(mouseX, mouseY, mouseButton);
+        }
+
         // Check search field first
         if (this.searchField != null) {
             this.searchField.mouseClicked(mouseX, mouseY, mouseButton);
@@ -360,23 +558,26 @@ public class GuiShopCategories extends Screen {
             int maxPages = Math.max(1, (int) Math.ceil((double) totalSize / (double) visibleCount));
 
             if (maxPages > 1 && mouseX >= scrollbarX && mouseX < scrollbarX + SCROLLBAR_WIDTH && mouseY >= scrollbarTop && mouseY < scrollbarTop + scrollbarHeight) {
-                // Clicked on scrollbar
                 int thumbHeight = Math.max(8, scrollbarHeight / maxPages);
                 int maxScrollPos = scrollbarHeight - thumbHeight;
                 int thumbY = scrollbarTop + (maxPages > 1 ? (this.scrollOffset * maxScrollPos) / (maxPages - 1) : 0);
 
                 if (mouseY < thumbY) {
-                    // Click above thumb - scroll up one page
                     this.scrollOffset = Math.max(0, this.scrollOffset - 1);
                 } else if (mouseY > thumbY + thumbHeight) {
-                    // Click below thumb - scroll down one page
                     this.scrollOffset = Math.min(maxPages - 1, this.scrollOffset + 1);
                 } else {
-                    // Click on thumb - start dragging
                     this.isDraggingScrollbar = true;
                     this.dragStartMouseY = mouseY;
                     this.dragStartScrollOffset = this.scrollOffset;
                 }
+                return true;
+            }
+        }
+
+        // Check buttons
+        for (var widget : this.children()) {
+            if (widget instanceof Button btn && btn.mouseClicked(mouseX, mouseY, mouseButton)) {
                 return true;
             }
         }
@@ -403,19 +604,17 @@ public class GuiShopCategories extends Screen {
                     int resultIndex = startIndex + i;
                     SearchResult result = searchResults.get(resultIndex);
                     if (mouseButton == 0) {
-                        // Open the detail view
                         this.detailView = true;
                         this.detailResult = result;
                         this.stackMode = false;
                         initDetailView();
                     } else if (mouseButton == 1) {
-                        // Quick buy stack
                         quickBuyFromSearch(result);
                     }
                     return true;
                 }
             } else {
-                // Handle category clicks (existing behavior)
+                // Handle category clicks
                 boolean clickedX = false;
 
                 // In admin mode, check X button clicks first
@@ -430,7 +629,6 @@ public class GuiShopCategories extends Screen {
                             ShopCategory category = this.filteredCategories.get(catIndex);
                             int originalIndex = this.categories.indexOf(category);
                             if (originalIndex >= 0) {
-                                // Send remove category packet
                                 sendRemoveCategory(originalIndex);
                                 clickedX = true;
                             }
@@ -441,7 +639,7 @@ public class GuiShopCategories extends Screen {
 
                 if (clickedX) return true;
 
-                // Handle category clicks (existing behavior)
+                // Handle category clicks
                 for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
                     int col = i % COLUMNS;
                     int x = guiLeft + col * cellSize;
@@ -458,6 +656,63 @@ public class GuiShopCategories extends Screen {
                 }
             }
         }
+        return super.mouseClicked(mouseX, mouseY, mouseButton);
+    }
+
+    private boolean handleLayoutClick(double mouseX, double mouseY, int mouseButton) {
+        // Check Save/Cancel buttons first
+        for (var widget : this.children()) {
+            if (widget instanceof Button btn && btn.mouseClicked(mouseX, mouseY, mouseButton)) {
+                return true;
+            }
+        }
+
+        int cellSize = 34;
+        int gridWidth = COLUMNS * cellSize - 4;
+        int guiLeft = (this.width - gridWidth) / 2;
+        int guiTop = 30;
+        int availableHeight = this.height - guiTop - 70;
+        int rowsPerPage = Math.max(1, availableHeight / (cellSize + 2));
+        int visibleCount = COLUMNS * rowsPerPage;
+
+        // Find which slot was clicked
+        for (int i = 0; i < visibleCount; i++) {
+            int col = i % COLUMNS;
+            int row = i / COLUMNS;
+            int x = guiLeft + col * cellSize;
+            int y = guiTop + row * cellSize;
+            if (!isMouseInSlot((int) mouseX, (int) mouseY, x, y, ICON_SIZE, ICON_SIZE)) continue;
+
+            if (pickedUpSlot == -1) {
+                // Nothing picked up yet — pick up this slot if it has a category
+                if (layoutGrid[i] >= 0) {
+                    pickedUpSlot = i;
+                }
+            } else {
+                // Something is picked up — place it in this slot
+                int pickedCatIndex = layoutGrid[pickedUpSlot];
+                int targetCatIndex = layoutGrid[i];
+
+                if (pickedUpSlot == i) {
+                    // Clicked same slot — drop it back (deselect)
+                    pickedUpSlot = -1;
+                } else if (targetCatIndex >= 0) {
+                    // Target slot has a category — swap
+                    // Place the picked category into target slot
+                    // The displaced category goes into the picked-up slot
+                    layoutGrid[pickedUpSlot] = targetCatIndex;
+                    layoutGrid[i] = pickedCatIndex;
+                    pickedUpSlot = -1;
+                } else {
+                    // Target slot is empty — move the picked category there
+                    layoutGrid[pickedUpSlot] = -1;
+                    layoutGrid[i] = pickedCatIndex;
+                    pickedUpSlot = -1;
+                }
+            }
+            return true;
+        }
+
         return super.mouseClicked(mouseX, mouseY, mouseButton);
     }
 
@@ -495,9 +750,8 @@ public class GuiShopCategories extends Screen {
         return super.mouseReleased(mouseX, mouseY, button);
     }
 
-    /**
-     * Init the detail view for a search result.
-     */
+    // ========== Detail View ==========
+
     private void initDetailView() {
         this.clearWidgets();
         if (this.searchField != null) {
@@ -628,15 +882,10 @@ public class GuiShopCategories extends Screen {
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
     }
 
-    /**
-     * Send a packet to remove a category (admin/OP only).
-     * The server will verify permissions before executing.
-     */
     private void sendRemoveCategory(int categoryIndex) {
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.removeCategory(categoryIndex), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
-        // Remove from local list immediately for responsive UI
         if (categoryIndex >= 0 && categoryIndex < categories.size()) {
             categories.remove(categoryIndex);
             applyFilter();
@@ -645,7 +894,7 @@ public class GuiShopCategories extends Screen {
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollDelta) {
-        if (detailView) return false;
+        if (detailView || layoutEditMode) return false;
 
         int cellSize = searchItemsMode ? 22 : 34;
         int guiTop = 52;
@@ -682,7 +931,6 @@ public class GuiShopCategories extends Screen {
             }
         }
 
-        // Handle search field input
         if (this.searchField != null && this.searchField.isFocused()) {
             if (this.searchField.keyPressed(keyCode, scanCode, modifiers)) {
                 return true;
@@ -700,7 +948,6 @@ public class GuiShopCategories extends Screen {
             return true;
         }
 
-        // Handle search field character typing
         if (this.searchField != null && this.searchField.isFocused()) {
             return this.searchField.charTyped(codePoint, modifiers);
         }
@@ -714,12 +961,6 @@ public class GuiShopCategories extends Screen {
         } catch (NumberFormatException e) {
             return 0;
         }
-    }
-
-    private int getMaxScrollPages(int rowsPerPage) {
-        int totalSlots = COLUMNS * rowsPerPage;
-        int totalSize = searchItemsMode ? searchResults.size() : filteredCategories.size();
-        return Math.max(1, (int) Math.ceil((double) totalSize / (double) totalSlots));
     }
 
     private String formatCategoryName(String raw) {
@@ -743,6 +984,22 @@ public class GuiShopCategories extends Screen {
 
     private boolean isMouseInSlot(int mouseX, int mouseY, int x, int y, int w, int h) {
         return mouseX >= x && mouseX < x + w && mouseY >= y && mouseY < y + h;
+    }
+
+    /** Draw a vertical scrollbar track and thumb. */
+    private void drawScrollbar(GuiGraphics guiGraphics, int x, int top, int height, int maxPages, int mouseX, int mouseY) {
+        if (maxPages <= 1) return;
+
+        guiGraphics.fill(x, top, x + SCROLLBAR_WIDTH, top + height, 0xFF333333);
+
+        int thumbHeight = Math.max(8, height / maxPages);
+        int maxScrollPos = height - thumbHeight;
+        int thumbY = top + (maxPages > 1 ? (this.scrollOffset * maxScrollPos) / (maxPages - 1) : 0);
+        int thumbColor = 0xFF888888;
+        if (mouseX >= x && mouseX < x + SCROLLBAR_WIDTH && mouseY >= thumbY && mouseY < thumbY + thumbHeight) {
+            thumbColor = 0xFFAAAAAA;
+        }
+        guiGraphics.fill(x, thumbY, x + SCROLLBAR_WIDTH, thumbY + thumbHeight, thumbColor);
     }
 
     @Override
