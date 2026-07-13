@@ -220,36 +220,32 @@ public class GuiShopCategories extends Screen {
             newOrder[i] = newOrderList.get(i);
         }
 
-        // Send to server
-        FriendlyByteBuf buf = PacketByteBufs.create();
-        ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
-        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
-
-        // Reorder the shared categories list in-place using index-based reordering
-        // We rebuild the list from scratch by index, then swap it in
+        // Reorder the shared categories list in-place BEFORE opening new screen
         List<ShopCategory> oldList = WorldShop.getCategories();
         List<ShopCategory> reordered = new ArrayList<>();
         for (int idx : newOrder) {
             reordered.add(oldList.get(idx));
         }
-        // Clear and refill the shared list
         oldList.clear();
         oldList.addAll(reordered);
 
-        // Now just exit layout mode on THIS screen — no need to open a new screen
-        // since `this.categories` and `this.filteredCategories` both reference the
-        // WorldShop.getCategories() list which has already been reordered
-        layoutEditMode = false;
-        pickedUpSlot = -1;
-        this.scrollOffset = 0;
-        init();
+        // Send packet to server
+        FriendlyByteBuf buf = PacketByteBufs.create();
+        ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
+        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
+
+        // Open a fresh screen — this is the ONLY proper way to force a full re-init
+        // in Minecraft's screen lifecycle. init() called from a button handler
+        // does not reliably refresh the display.
+        Minecraft minecraft = Minecraft.getInstance();
+        minecraft.setScreen(new GuiShopCategories(!adminMode));
     }
 
     private void cancelLayout() {
-        layoutEditMode = false;
-        pickedUpSlot = -1;
-        this.scrollOffset = layoutScrollSnapshot;
-        init();
+        // Restore original order from snapshot
+        // (layoutGrid was never modified until save was pressed, so just re-init)
+        Minecraft minecraft = Minecraft.getInstance();
+        minecraft.setScreen(new GuiShopCategories(!adminMode));
     }
 
     // ========== Search ==========
