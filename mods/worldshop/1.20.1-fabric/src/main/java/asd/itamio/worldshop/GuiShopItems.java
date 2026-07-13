@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 public class GuiShopItems extends Screen {
     private final ShopCategory category;
     private final int categoryIndex;
+    private final boolean adminMode;
     private final List<ItemStack> items;
     private List<ItemStack> filteredItems;
     private int scrollOffset = 0;
@@ -34,10 +35,18 @@ public class GuiShopItems extends Screen {
     private EditBox searchField;
     private String searchText = "";
 
+    // Admin buttons
+    private Button addBlockButton;
+
     public GuiShopItems(ShopCategory category, int categoryIndex) {
+        this(category, categoryIndex, false);
+    }
+
+    public GuiShopItems(ShopCategory category, int categoryIndex, boolean adminMode) {
         super(Component.literal("Shop - " + category.getName()));
         this.category = category;
         this.categoryIndex = categoryIndex;
+        this.adminMode = adminMode;
         this.items = category.getItems();
         this.filteredItems = new ArrayList<>(this.items);
     }
@@ -179,6 +188,15 @@ public class GuiShopItems extends Screen {
                 }
             }).bounds(this.width / 2 - 100, this.height - 22, 200, 20).build());
 
+            // Admin: Add Block button
+            if (adminMode) {
+                this.addBlockButton = Button.builder(
+                        Component.literal("\u00a7a+ Add Block"),
+                        btn -> Minecraft.getInstance().setScreen(new GuiAddItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, GuiShopItems.this.category.getName()))
+                ).bounds(this.width / 2 - 50, this.height - 45, 100, 20).build();
+                this.addRenderableWidget(this.addBlockButton);
+            }
+
             // Re-add search field
             if (this.searchField != null) {
                 int fieldW = 200;
@@ -232,6 +250,17 @@ public class GuiShopItems extends Screen {
             ItemStack item = displayItems.get(itemIndex);
             drawSlotBackground(guiGraphics, x, y, SLOT_SIZE, SLOT_SIZE);
             guiGraphics.renderItem(item, x + 3, y + 3);
+
+            // In admin mode, draw X button and edit indicator
+            if (adminMode) {
+                // Red X in top-right corner
+                guiGraphics.fill(x + SLOT_SIZE - 8, y, x + SLOT_SIZE, y + 8, 0xCCFF4444);
+                guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", x + SLOT_SIZE - 7, y, 0xFFFFFF);
+
+                // Edit indicator (pencil icon) in top-left corner
+                guiGraphics.fill(x, y, x + 8, y + 8, 0xCC44AAFF);
+                guiGraphics.drawString(this.font, "\u00a7b\u00a7lE", x + 1, y, 0xFFFFFF);
+            }
         }
 
         for (int i = 0; i < visibleCount && startIndex + i < displayItems.size(); i++) {
@@ -248,9 +277,17 @@ public class GuiShopItems extends Screen {
             tooltip.add(Component.literal("\u00a7f" + item.getHoverName().getString()));
             tooltip.add(Component.literal("\u00a7aBuy: $" + String.format("%.2f", buyPrice)));
             tooltip.add(Component.literal("\u00a7cSell: $" + String.format("%.2f", sellPrice)));
-            tooltip.add(Component.literal(""));
-            tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
-            tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            if (adminMode) {
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.literal("\u00a7cX: Remove item"));
+                tooltip.add(Component.literal("\u00a7eEdit: Edit item"));
+                tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
+                tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            } else {
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
+                tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            }
             guiGraphics.renderTooltip(this.font, tooltip, java.util.Optional.empty(), mouseX, mouseY);
             break;
         }
@@ -262,7 +299,9 @@ public class GuiShopItems extends Screen {
             String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + getMaxScrollPages(rowsPerPage);
             guiGraphics.drawCenteredString(this.font, scrollInfo, this.width / 2, barTop + 2, 0xFFFFFF);
         }
-        String footer = "\u00a77Left-click: Buy menu | Right-click: Quick buy stack | ESC: Back";
+        String footer = adminMode
+                ? "\u00a77Left: Buy menu | \u00a7cX: Remove \u00a77| \u00a7bE: Edit \u00a77| Right: Quick buy | ESC: Back"
+                : "\u00a77Left-click: Buy menu | Right-click: Quick buy stack | ESC: Back";
         guiGraphics.drawCenteredString(this.font, footer, this.width / 2, barTop + 14, 0xAAAAAA);
     }
 
@@ -348,6 +387,22 @@ public class GuiShopItems extends Screen {
             int displayIndex = startIndex + i;
             int originalIndex = getOriginalIndex(displayIndex);
             if (originalIndex < 0) continue;
+
+            // Check admin button clicks first (only left click)
+            if (mouseButton == 0 && adminMode) {
+                // X button (top-right corner)
+                if (mouseX >= x + SLOT_SIZE - 8 && mouseX < x + SLOT_SIZE && mouseY >= y && mouseY < y + 8) {
+                    sendRemoveItem(originalIndex);
+                    return true;
+                }
+                // Edit button (top-left corner)
+                if (mouseX >= x && mouseX < x + 8 && mouseY >= y && mouseY < y + 8) {
+                    ItemStack item = GuiShopItems.this.items.get(originalIndex);
+                    Minecraft.getInstance().setScreen(new GuiEditItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, item));
+                    return true;
+                }
+            }
+
             if (mouseButton == 0) {
                 this.detailView = true;
                 this.detailItemIndex = originalIndex;
@@ -376,6 +431,19 @@ public class GuiShopItems extends Screen {
             return;
         }
         sendToServer(ShopPacket.buyItem(this.categoryIndex, itemIndex, quantity));
+    }
+
+    /**
+     * Send a packet to remove an item from the category (admin/OP only).
+     * The server will verify permissions.
+     */
+    private void sendRemoveItem(int itemIndex) {
+        sendToServer(ShopPacket.removeItem(this.categoryIndex, itemIndex));
+        // Remove from local list for responsive UI
+        if (itemIndex >= 0 && itemIndex < items.size()) {
+            items.remove(itemIndex);
+            applyFilter();
+        }
     }
 
     @Override

@@ -19,7 +19,10 @@ public class ClientPacketHandler {
                     public void run() {
                         switch (packet.getType()) {
                             case ShopPacket.OPEN_SHOP:
-                                Minecraft.getInstance().setScreen(new GuiShopCategories());
+                                Minecraft.getInstance().setScreen(new GuiShopCategories(false));
+                                break;
+                            case ShopPacket.OPEN_PLAYER_SHOP:
+                                Minecraft.getInstance().setScreen(new GuiShopCategories(true));
                                 break;
                             case ShopPacket.OPEN_SELL_GUI:
                                 Minecraft.getInstance().setScreen(new GuiSellGui());

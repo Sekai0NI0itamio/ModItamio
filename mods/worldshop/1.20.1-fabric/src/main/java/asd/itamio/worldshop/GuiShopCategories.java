@@ -24,6 +24,9 @@ public class GuiShopCategories extends Screen {
     private static final int ICON_SIZE = 28;
     private static final int COLUMNS = 9;
 
+    // Admin mode: if true, admin controls (X buttons, Add Category) are shown
+    private final boolean adminMode;
+
     // Search mode: when searching, we show items (not categories)
     private EditBox searchField;
     private String searchText = "";
@@ -48,6 +51,9 @@ public class GuiShopCategories extends Screen {
     private EditBox quantityField;
     private boolean stackMode = false;
 
+    // Admin: "Add Category" button
+    private Button addCategoryButton;
+
     // Helper class for search results
     private static class SearchResult {
         final int categoryIndex;
@@ -63,10 +69,23 @@ public class GuiShopCategories extends Screen {
         }
     }
 
+    /**
+     * Create with automatic admin mode detection based on player permissions.
+     */
     protected GuiShopCategories() {
+        this(false);
+    }
+
+    /**
+     * Create shop categories screen.
+     * @param forcePlayerMode if true, hide all admin controls regardless of OP status
+     */
+    protected GuiShopCategories(boolean forcePlayerMode) {
         super(Component.literal("Shop - Categories"));
         this.categories = WorldShop.getCategories();
         this.filteredCategories = categories;
+        boolean isOp = Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasPermissions(2);
+        this.adminMode = isOp && !forcePlayerMode;
     }
 
     @Override
@@ -80,6 +99,16 @@ public class GuiShopCategories extends Screen {
         this.searchField.setMaxLength(40);
         this.searchField.setResponder(this::onSearchChanged);
         this.addRenderableWidget(this.searchField);
+
+        // Admin: Add Category button at bottom
+        if (adminMode) {
+            int btnW = 120;
+            this.addCategoryButton = Button.builder(
+                    Component.literal("\u00a7a+ Add Category"),
+                    btn -> Minecraft.getInstance().setScreen(new GuiAddCategory(this))
+            ).bounds(this.width / 2 - btnW / 2, this.height - 45, btnW, 20).build();
+            this.addRenderableWidget(this.addCategoryButton);
+        }
     }
 
     private void onSearchChanged(String text) {
@@ -242,8 +271,27 @@ public class GuiShopCategories extends Screen {
                 ShopCategory category = this.filteredCategories.get(catIndex);
                 String name = formatCategoryName(category.getName());
                 int itemCount = category.getItems().size();
-                guiGraphics.renderTooltip(this.font, Collections.singletonList(Component.literal("\u00a7f" + name + " \u00a77(" + itemCount + " items)")), java.util.Optional.empty(), mouseX, mouseY);
+                List<Component> tooltipLines = new ArrayList<>();
+                tooltipLines.add(Component.literal("\u00a7f" + name + " \u00a77(" + itemCount + " items)"));
+                if (adminMode) {
+                    tooltipLines.add(Component.literal(""));
+                    tooltipLines.add(Component.literal("\u00a7cX: Remove category"));
+                }
+                guiGraphics.renderTooltip(this.font, tooltipLines, java.util.Optional.empty(), mouseX, mouseY);
                 break;
+            }
+
+            // Draw X buttons on categories in admin mode
+            if (adminMode) {
+                for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+                    int col = i % COLUMNS;
+                    int row = i / COLUMNS;
+                    int x = guiLeft + col * cellSize + ICON_SIZE - 10;
+                    int y = guiTop + row * cellSize;
+                    // Draw red "x" in top-right corner of category slot
+                    guiGraphics.fill(x, y, x + 10, y + 10, 0xCCFF4444);
+                    guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", x + 1, y + 1, 0xFFFFFF);
+                }
             }
 
             // Draw scrollbar
@@ -260,6 +308,8 @@ public class GuiShopCategories extends Screen {
 
         String footer = searchItemsMode
                 ? "\u00a77Click a result to browse items | Right-click: Quick buy | ESC to close"
+                : adminMode
+                ? "\u00a77Click a category to browse items | \u00a7cX to remove \u00a77| ESC to close"
                 : "\u00a77Click a category to browse items | ESC to close";
         guiGraphics.drawCenteredString(this.font, footer, this.width / 2, this.height - 12, 0xAAAAAA);
     }
@@ -366,6 +416,32 @@ public class GuiShopCategories extends Screen {
                 }
             } else {
                 // Handle category clicks (existing behavior)
+                boolean clickedX = false;
+
+                // In admin mode, check X button clicks first
+                if (adminMode) {
+                    for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+                        int col = i % COLUMNS;
+                        int row = i / COLUMNS;
+                        int x = guiLeft + col * cellSize + ICON_SIZE - 10;
+                        int y = guiTop + row * cellSize;
+                        if (mouseX >= x && mouseX < x + 10 && mouseY >= y && mouseY < y + 10) {
+                            int catIndex = startIndex + i;
+                            ShopCategory category = this.filteredCategories.get(catIndex);
+                            int originalIndex = this.categories.indexOf(category);
+                            if (originalIndex >= 0) {
+                                // Send remove category packet
+                                sendRemoveCategory(originalIndex);
+                                clickedX = true;
+                            }
+                            return true;
+                        }
+                    }
+                }
+
+                if (clickedX) return true;
+
+                // Handle category clicks (existing behavior)
                 for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
                     int col = i % COLUMNS;
                     int x = guiLeft + col * cellSize;
@@ -376,7 +452,7 @@ public class GuiShopCategories extends Screen {
                     ShopCategory category = this.filteredCategories.get(catIndex);
                     int originalIndex = this.categories.indexOf(category);
                     if (originalIndex >= 0) {
-                        Minecraft.getInstance().setScreen(new GuiShopItems(category, originalIndex));
+                        Minecraft.getInstance().setScreen(new GuiShopItems(category, originalIndex, adminMode));
                     }
                     return true;
                 }
@@ -550,6 +626,21 @@ public class GuiShopCategories extends Screen {
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.buyItem(categoryIndex, itemIndex, quantity), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
+    }
+
+    /**
+     * Send a packet to remove a category (admin/OP only).
+     * The server will verify permissions before executing.
+     */
+    private void sendRemoveCategory(int categoryIndex) {
+        FriendlyByteBuf buf = PacketByteBufs.create();
+        ShopPacket.write(ShopPacket.removeCategory(categoryIndex), buf);
+        ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
+        // Remove from local list immediately for responsive UI
+        if (categoryIndex >= 0 && categoryIndex < categories.size()) {
+            categories.remove(categoryIndex);
+            applyFilter();
+        }
     }
 
     @Override

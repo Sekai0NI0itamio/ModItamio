@@ -37,6 +37,22 @@ public class ModCommands {
                         return 1;
                     }
                 })
+                .then(Commands.literal("player")
+                        .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
+                            @Override
+                            public int run(CommandContext<CommandSourceStack> context) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+                                CommandSourceStack source = context.getSource();
+                                if (source.getEntity() instanceof ServerPlayer player) {
+                                    FriendlyByteBuf buf = PacketByteBufs.create();
+                                    ShopPacket.write(ShopPacket.openPlayerShop(), buf);
+                                    ServerPlayNetworking.send(player, ShopPacket.PACKET_ID, buf);
+                                } else {
+                                    source.sendFailure(Component.literal("\u00a7cOnly players can use this command."));
+                                }
+                                return 1;
+                            }
+                        })
+                )
                 .then(Commands.literal("reset")
                         .requires(source -> source.hasPermission(2))
                         .executes(new com.mojang.brigadier.Command<CommandSourceStack>() {
