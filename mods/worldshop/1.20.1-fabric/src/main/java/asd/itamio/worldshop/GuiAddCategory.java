@@ -7,20 +7,18 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Popup screen for adding a new category.
  * OP can name the category and set a block/item icon by searching.
+ * Uses ScreenManager.PopupScreen for clean screen transitions.
  */
-public class GuiAddCategory extends Screen {
-    private final Screen parent;
+public class GuiAddCategory extends ScreenManager.PopupScreen {
     private final int categoryIndex; // -1 for new, or index to edit custom category
 
     private EditBox nameField;
@@ -33,10 +31,11 @@ public class GuiAddCategory extends Screen {
 
     private static final int SEARCH_COLS = 7;
     private static final int SLOT_SIZE = 20;
+    /** Fully opaque background color to prevent visual overlap with parent screen. */
+    private static final int BG_COLOR = 0xFF1A1A1A;
 
     public GuiAddCategory(Screen parent) {
-        super(Component.literal("Add Category"));
-        this.parent = parent;
+        super(parent, Component.literal("Add Category"));
         this.categoryIndex = -1;
     }
 
@@ -63,12 +62,12 @@ public class GuiAddCategory extends Screen {
             if (!name.isEmpty() && selectedIcon != null) {
                 // Send add category packet
                 sendAddCategory(name, selectedIconId);
-                Minecraft.getInstance().setScreen(parent);
+                closeToParent();
             }
         }).bounds(centerX - 105, this.height - 30, 100, 20).build());
 
         this.addRenderableWidget(Button.builder(Component.literal("\u00a7cCancel"), btn -> {
-            Minecraft.getInstance().setScreen(parent);
+            closeToParent();
         }).bounds(centerX + 5, this.height - 30, 100, 20).build());
     }
 
@@ -93,7 +92,8 @@ public class GuiAddCategory extends Screen {
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
-        guiGraphics.fill(0, 0, this.width, this.height, -1437247880);
+        // Fully opaque background to prevent parent screen overlap
+        guiGraphics.fill(0, 0, this.width, this.height, BG_COLOR);
 
         int centerX = this.width / 2;
 
@@ -185,7 +185,7 @@ public class GuiAddCategory extends Screen {
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == 256) { // ESC
-            Minecraft.getInstance().setScreen(parent);
+            closeToParent();
             return true;
         }
         if (this.nameField != null && this.nameField.isFocused()) {

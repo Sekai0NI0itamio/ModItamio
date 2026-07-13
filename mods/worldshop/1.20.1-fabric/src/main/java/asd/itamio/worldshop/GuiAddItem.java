@@ -1,7 +1,6 @@
 package asd.itamio.worldshop;
 
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
@@ -16,9 +15,9 @@ import java.util.List;
 
 /**
  * Popup screen for OPs to search and add blocks/items to a category.
+ * Uses ScreenManager.PopupScreen for clean screen transitions.
  */
-public class GuiAddItem extends Screen {
-    private final Screen parent;
+public class GuiAddItem extends ScreenManager.PopupScreen {
     private final int categoryIndex;
     private final String categoryName;
 
@@ -31,10 +30,11 @@ public class GuiAddItem extends Screen {
     private static final int COLS = 9;
     private static final int SLOT_SIZE = 20;
     private static final int ROWS = 5;
+    /** Fully opaque background color to prevent visual overlap with parent screen. */
+    private static final int BG_COLOR = 0xFF1A1A1A;
 
     public GuiAddItem(Screen parent, int categoryIndex, String categoryName) {
-        super(Component.literal("Add Item to " + categoryName));
-        this.parent = parent;
+        super(parent, Component.literal("Add Item to " + categoryName));
         this.categoryIndex = categoryIndex;
         this.categoryName = categoryName;
     }
@@ -51,7 +51,7 @@ public class GuiAddItem extends Screen {
         this.addRenderableWidget(this.searchField);
 
         this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack"), btn -> {
-            Minecraft.getInstance().setScreen(parent);
+            closeToParent();
         }).bounds(centerX - 50, this.height - 25, 100, 20).build());
     }
 
@@ -76,7 +76,8 @@ public class GuiAddItem extends Screen {
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
-        guiGraphics.fill(0, 0, this.width, this.height, -1437247880);
+        // Fully opaque background to prevent parent screen overlap
+        guiGraphics.fill(0, 0, this.width, this.height, BG_COLOR);
 
         int centerX = this.width / 2;
 
@@ -168,7 +169,7 @@ public class GuiAddItem extends Screen {
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == 256) {
-            Minecraft.getInstance().setScreen(parent);
+            closeToParent();
             return true;
         }
         if (this.searchField != null && this.searchField.isFocused()) {

@@ -16,9 +16,9 @@ import java.util.List;
 
 /**
  * Popup screen for OPs to edit an item's display name, icon, buy price, and sell price.
+ * Uses ScreenManager.PopupScreen for clean screen transitions.
  */
-public class GuiEditItem extends Screen {
-    private final Screen parent;
+public class GuiEditItem extends ScreenManager.PopupScreen {
     private final int categoryIndex;
     private final String itemId;
     private final ItemStack originalItem;
@@ -35,10 +35,11 @@ public class GuiEditItem extends Screen {
 
     private static final int COLS = 7;
     private static final int SLOT_SIZE = 20;
+    /** Fully opaque background color to prevent visual overlap with parent screen. */
+    private static final int BG_COLOR = 0xFF1A1A1A;
 
     public GuiEditItem(Screen parent, int categoryIndex, ItemStack item) {
-        super(Component.literal("Edit " + item.getHoverName().getString()));
-        this.parent = parent;
+        super(parent, Component.literal("Edit " + item.getHoverName().getString()));
         this.categoryIndex = categoryIndex;
         this.originalItem = item.copy();
         this.itemId = BuiltInRegistries.ITEM.getKey(item.getItem()).toString();
@@ -109,11 +110,11 @@ public class GuiEditItem extends Screen {
                 // Only send name if it changed
                 String displayName = newName.equalsIgnoreCase(originalItem.getHoverName().getString()) ? null : newName;
                 sendEditItem(categoryIndex, itemId, displayName, iconId, buyP, sellP);
-                Minecraft.getInstance().setScreen(parent);
+                closeToParent();
             }).bounds(centerX - 105, this.height - 30, 100, 20).build());
 
             this.addRenderableWidget(Button.builder(Component.literal("\u00a7cCancel"), btn -> {
-                Minecraft.getInstance().setScreen(parent);
+                closeToParent();
             }).bounds(centerX + 5, this.height - 30, 100, 20).build());
         }
     }
@@ -139,7 +140,8 @@ public class GuiEditItem extends Screen {
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
-        guiGraphics.fill(0, 0, this.width, this.height, -1437247880);
+        // Fully opaque background to prevent parent screen overlap
+        guiGraphics.fill(0, 0, this.width, this.height, BG_COLOR);
 
         int centerX = this.width / 2;
 
@@ -263,7 +265,7 @@ public class GuiEditItem extends Screen {
                 init();
                 return true;
             }
-            Minecraft.getInstance().setScreen(parent);
+            closeToParent();
             return true;
         }
         if (showingIconPicker && this.searchField != null && this.searchField.isFocused()) {

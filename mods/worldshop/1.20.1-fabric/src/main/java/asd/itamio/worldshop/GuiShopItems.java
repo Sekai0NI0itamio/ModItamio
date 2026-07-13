@@ -26,6 +26,10 @@ public class GuiShopItems extends Screen {
     private static final int SLOT_SIZE = 22;
     private static final int COLUMNS = 9;
     private static final int BOTTOM_BAR_HEIGHT = 50;
+    // In admin mode, extra height below each slot for X/E buttons
+    private static final int ADMIN_BUTTON_BAR_HEIGHT = 10;
+    private static final int BASE_CELL_SIZE = 26;
+    private static final int ADMIN_CELL_SIZE = BASE_CELL_SIZE + ADMIN_BUTTON_BAR_HEIGHT;
 
     private boolean detailView = false;
     private int detailItemIndex = -1;
@@ -106,6 +110,16 @@ public class GuiShopItems extends Screen {
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
     }
 
+    /** Returns the actual cell size based on admin mode. */
+    private int getCellSize() {
+        return adminMode ? ADMIN_CELL_SIZE : BASE_CELL_SIZE;
+    }
+
+    /** Returns the Y position of the admin button bar for a cell (below the slot). */
+    private int getAdminButtonY(int cellY) {
+        return cellY + SLOT_SIZE + 1;
+    }
+
     private void rebuildButtons() {
         this.clearWidgets();
         if (detailView) {
@@ -184,7 +198,7 @@ public class GuiShopItems extends Screen {
             this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack to Categories"), new Button.OnPress() {
                 @Override
                 public void onPress(Button button) {
-                    Minecraft.getInstance().setScreen(new GuiShopCategories());
+                    ScreenManager.open(new GuiShopCategories());
                 }
             }).bounds(this.width / 2 - 100, this.height - 22, 200, 20).build());
 
@@ -192,7 +206,7 @@ public class GuiShopItems extends Screen {
             if (adminMode) {
                 this.addBlockButton = Button.builder(
                         Component.literal("\u00a7a+ Add Block"),
-                        btn -> Minecraft.getInstance().setScreen(new GuiAddItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, GuiShopItems.this.category.getName()))
+                        btn -> ScreenManager.open(new GuiAddItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, GuiShopItems.this.category.getName()))
                 ).bounds(this.width / 2 - 50, this.height - 45, 100, 20).build();
                 this.addRenderableWidget(this.addBlockButton);
             }
@@ -231,7 +245,7 @@ public class GuiShopItems extends Screen {
         // Draw search label above search field
         guiGraphics.drawCenteredString(this.font, "\u00a77Search:", this.width / 2, 43, 0xAAAAAA);
 
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int gridWidth = COLUMNS * cellSize - 4;
         int guiLeft = (this.width - gridWidth) / 2;
         int guiTop = 75; // Move down to make room for search bar
@@ -248,18 +262,21 @@ public class GuiShopItems extends Screen {
             int y = guiTop + row * cellSize;
             int itemIndex = startIndex + i;
             ItemStack item = displayItems.get(itemIndex);
+            // Draw the item slot at the top of the cell
             drawSlotBackground(guiGraphics, x, y, SLOT_SIZE, SLOT_SIZE);
             guiGraphics.renderItem(item, x + 3, y + 3);
 
-            // In admin mode, draw X button and edit indicator
+            // In admin mode, draw X and E buttons BELOW the slot (not overlapping the item)
             if (adminMode) {
-                // Red X in top-right corner
-                guiGraphics.fill(x + SLOT_SIZE - 8, y, x + SLOT_SIZE, y + 8, 0xCCFF4444);
-                guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", x + SLOT_SIZE - 7, y, 0xFFFFFF);
-
-                // Edit indicator (pencil icon) in top-left corner
-                guiGraphics.fill(x, y, x + 8, y + 8, 0xCC44AAFF);
-                guiGraphics.drawString(this.font, "\u00a7b\u00a7lE", x + 1, y, 0xFFFFFF);
+                int btnY = getAdminButtonY(y);
+                // E (Edit) button on the left below the slot
+                int editBtnWidth = 12;
+                guiGraphics.fill(x, btnY, x + editBtnWidth, btnY + ADMIN_BUTTON_BAR_HEIGHT - 1, 0xCC44AAFF);
+                guiGraphics.drawString(this.font, "\u00a7b\u00a7lE", x + 2, btnY + 1, 0xFFFFFF);
+                // X (Remove) button on the right below the slot
+                int xBtnStartX = x + SLOT_SIZE - editBtnWidth;
+                guiGraphics.fill(xBtnStartX, btnY, x + SLOT_SIZE, btnY + ADMIN_BUTTON_BAR_HEIGHT - 1, 0xCCFF4444);
+                guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", xBtnStartX + 2, btnY + 1, 0xFFFFFF);
             }
         }
 
@@ -320,9 +337,11 @@ public class GuiShopItems extends Screen {
 
         y += 16;
         int itemCenterY = y + 24;
+        // Draw centered slot (48x48)
         drawSlotBackground(guiGraphics, centerX - 24, itemCenterY - 24, 48, 48);
+        // Render item centered in the slot: translate so the 32x32 scaled item is centered
         guiGraphics.pose().pushPose();
-        guiGraphics.pose().translate((float) (centerX - 8), (float) (itemCenterY - 8), 0.0f);
+        guiGraphics.pose().translate((float) (centerX - 16), (float) (itemCenterY - 16), 0.0f);
         guiGraphics.pose().scale(2.0f, 2.0f, 2.0f);
         guiGraphics.renderItem(item, 0, 0);
         guiGraphics.pose().popPose();
@@ -368,7 +387,7 @@ public class GuiShopItems extends Screen {
             return true;
         }
 
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int gridWidth = COLUMNS * cellSize - 4;
         int guiLeft = (this.width - gridWidth) / 2;
         int guiTop = 75;
@@ -383,35 +402,40 @@ public class GuiShopItems extends Screen {
             int x = guiLeft + col * cellSize;
             int row = i / COLUMNS;
             int y = guiTop + row * cellSize;
-            if (!isMouseInSlot((int) mouseX, (int) mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) continue;
             int displayIndex = startIndex + i;
             int originalIndex = getOriginalIndex(displayIndex);
             if (originalIndex < 0) continue;
 
-            // Check admin button clicks first (only left click)
+            // Check admin button clicks first (only left click) — buttons are BELOW the slot now
             if (mouseButton == 0 && adminMode) {
-                // X button (top-right corner)
-                if (mouseX >= x + SLOT_SIZE - 8 && mouseX < x + SLOT_SIZE && mouseY >= y && mouseY < y + 8) {
-                    sendRemoveItem(originalIndex);
+                int btnY = getAdminButtonY(y);
+                int editBtnWidth = 12;
+                int xBtnStartX = x + SLOT_SIZE - editBtnWidth;
+                // E (Edit) button below-left
+                if (mouseX >= x && mouseX < x + editBtnWidth && mouseY >= btnY && mouseY < btnY + ADMIN_BUTTON_BAR_HEIGHT - 1) {
+                    ItemStack item = GuiShopItems.this.items.get(originalIndex);
+                    ScreenManager.open(new GuiEditItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, item));
                     return true;
                 }
-                // Edit button (top-left corner)
-                if (mouseX >= x && mouseX < x + 8 && mouseY >= y && mouseY < y + 8) {
-                    ItemStack item = GuiShopItems.this.items.get(originalIndex);
-                    Minecraft.getInstance().setScreen(new GuiEditItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, item));
+                // X (Remove) button below-right
+                if (mouseX >= xBtnStartX && mouseX < x + SLOT_SIZE && mouseY >= btnY && mouseY < btnY + ADMIN_BUTTON_BAR_HEIGHT - 1) {
+                    sendRemoveItem(originalIndex);
                     return true;
                 }
             }
 
-            if (mouseButton == 0) {
-                this.detailView = true;
-                this.detailItemIndex = originalIndex;
-                this.stackMode = false;
-                rebuildButtons();
-            } else if (mouseButton == 1) {
-                quickBuyStack(originalIndex);
+            // Check click on the item slot area (not admin buttons)
+            if (isMouseInSlot((int) mouseX, (int) mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) {
+                if (mouseButton == 0) {
+                    this.detailView = true;
+                    this.detailItemIndex = originalIndex;
+                    this.stackMode = false;
+                    rebuildButtons();
+                } else if (mouseButton == 1) {
+                    quickBuyStack(originalIndex);
+                }
+                return true;
             }
-            return true;
         }
 
         return super.mouseClicked(mouseX, mouseY, mouseButton);
@@ -451,7 +475,7 @@ public class GuiShopItems extends Screen {
         if (detailView) {
             return false;
         }
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int guiTop = 75;
         int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
         int rowsPerPage = Math.max(1, availableHeight / cellSize);

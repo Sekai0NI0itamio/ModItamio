@@ -105,7 +105,7 @@ public class GuiShopCategories extends Screen {
             int btnW = 120;
             this.addCategoryButton = Button.builder(
                     Component.literal("\u00a7a+ Add Category"),
-                    btn -> Minecraft.getInstance().setScreen(new GuiAddCategory(this))
+                    btn -> ScreenManager.open(new GuiAddCategory(this))
             ).bounds(this.width / 2 - btnW / 2, this.height - 45, btnW, 20).build();
             this.addRenderableWidget(this.addCategoryButton);
         }
@@ -452,7 +452,7 @@ public class GuiShopCategories extends Screen {
                     ShopCategory category = this.filteredCategories.get(catIndex);
                     int originalIndex = this.categories.indexOf(category);
                     if (originalIndex >= 0) {
-                        Minecraft.getInstance().setScreen(new GuiShopItems(category, originalIndex, adminMode));
+                        ScreenManager.open(new GuiShopItems(category, originalIndex, adminMode));
                     }
                     return true;
                 }
@@ -588,7 +588,7 @@ public class GuiShopCategories extends Screen {
         int itemCenterY = y + 24;
         drawSlotBackground(guiGraphics, centerX - 24, itemCenterY - 24, 48, 48);
         guiGraphics.pose().pushPose();
-        guiGraphics.pose().translate((float) (centerX - 8), (float) (itemCenterY - 8), 0.0f);
+        guiGraphics.pose().translate((float) (centerX - 16), (float) (itemCenterY - 16), 0.0f);
         guiGraphics.pose().scale(2.0f, 2.0f, 2.0f);
         guiGraphics.renderItem(item, 0, 0);
         guiGraphics.pose().popPose();
