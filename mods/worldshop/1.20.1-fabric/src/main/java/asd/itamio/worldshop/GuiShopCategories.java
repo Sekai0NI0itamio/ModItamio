@@ -220,32 +220,47 @@ public class GuiShopCategories extends Screen {
             newOrder[i] = newOrderList.get(i);
         }
 
-        // Reorder the shared categories list in-place BEFORE opening new screen
-        List<ShopCategory> oldList = WorldShop.getCategories();
+        // Reorder the shared categories list in-place
+        List<ShopCategory> cats = WorldShop.getCategories();
         List<ShopCategory> reordered = new ArrayList<>();
         for (int idx : newOrder) {
-            reordered.add(oldList.get(idx));
+            reordered.add(cats.get(idx));
         }
-        oldList.clear();
-        oldList.addAll(reordered);
+        cats.clear();
+        cats.addAll(reordered);
 
         // Send packet to server
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Open a fresh screen — this is the ONLY proper way to force a full re-init
-        // in Minecraft's screen lifecycle. init() called from a button handler
-        // does not reliably refresh the display.
-        Minecraft minecraft = Minecraft.getInstance();
-        minecraft.setScreen(new GuiShopCategories(!adminMode));
+        // Exit layout mode and reset all internal state to show normal view
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = 0;
+        this.searchText = "";
+        this.searchItemsMode = false;
+        this.detailView = false;
+        this.detailResult = null;
+        this.searchResults.clear();
+        this.filteredCategories = cats;
+        this.clearWidgets();
+        // Rebuild normal widgets by calling rebuildButtons
+        rebuildButtons();
     }
 
     private void cancelLayout() {
-        // Restore original order from snapshot
-        // (layoutGrid was never modified until save was pressed, so just re-init)
-        Minecraft minecraft = Minecraft.getInstance();
-        minecraft.setScreen(new GuiShopCategories(!adminMode));
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = layoutScrollSnapshot;
+        this.searchText = "";
+        this.searchItemsMode = false;
+        this.detailView = false;
+        this.detailResult = null;
+        this.searchResults.clear();
+        this.filteredCategories = categories;
+        this.clearWidgets();
+        rebuildButtons();
     }
 
     // ========== Search ==========
