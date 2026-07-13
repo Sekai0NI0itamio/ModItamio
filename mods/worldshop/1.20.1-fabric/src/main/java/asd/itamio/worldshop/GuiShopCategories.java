@@ -225,27 +225,31 @@ public class GuiShopCategories extends Screen {
         ShopPacket.write(ShopPacket.reorderCategories(newOrder), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Reorder categories directly in WorldShop's static list
-        List<ShopCategory> currentCategories = WorldShop.getCategories();
+        // Reorder the shared categories list in-place using index-based reordering
+        // We rebuild the list from scratch by index, then swap it in
+        List<ShopCategory> oldList = WorldShop.getCategories();
         List<ShopCategory> reordered = new ArrayList<>();
         for (int idx : newOrder) {
-            reordered.add(currentCategories.get(idx));
+            reordered.add(oldList.get(idx));
         }
-        currentCategories.clear();
-        currentCategories.addAll(reordered);
+        // Clear and refill the shared list
+        oldList.clear();
+        oldList.addAll(reordered);
 
-        // Open a brand new screen — forcing a complete fresh init
-        // passing the CORRECT forcePlayerMode (false = admin mode, not true)
-        boolean forcePlayer = !adminMode; // if adminMode=true, forcePlayer=false (stay admin)
-        Minecraft.getInstance().setScreen(new GuiShopCategories(forcePlayer));
+        // Now just exit layout mode on THIS screen — no need to open a new screen
+        // since `this.categories` and `this.filteredCategories` both reference the
+        // WorldShop.getCategories() list which has already been reordered
+        layoutEditMode = false;
+        pickedUpSlot = -1;
+        this.scrollOffset = 0;
+        init();
     }
 
     private void cancelLayout() {
         layoutEditMode = false;
         pickedUpSlot = -1;
         this.scrollOffset = layoutScrollSnapshot;
-        boolean forcePlayer = !adminMode;
-        Minecraft.getInstance().setScreen(new GuiShopCategories(forcePlayer));
+        init();
     }
 
     // ========== Search ==========
