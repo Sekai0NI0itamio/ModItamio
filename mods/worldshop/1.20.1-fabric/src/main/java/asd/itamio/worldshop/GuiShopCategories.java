@@ -192,10 +192,10 @@ public class GuiShopCategories extends Screen {
     }
 
     private void saveLayout() {
-        // The compact grid IS the order
+        // Collect category indices from the grid, skipping empty (-1) slots
         List<Integer> newOrderList = new ArrayList<>();
         for (int catIdx : layoutGrid) {
-            if (!newOrderList.contains(catIdx)) {
+            if (catIdx >= 0 && !newOrderList.contains(catIdx)) {
                 newOrderList.add(catIdx);
             }
         }
@@ -476,7 +476,7 @@ public class GuiShopCategories extends Screen {
 
     private void drawLayoutEditor(GuiGraphics guiGraphics, int mouseX, int mouseY) {
         guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7l\u00a7nEdit Category Layout", this.width / 2, 8, 0xFFFFFF);
-        guiGraphics.drawCenteredString(this.font, "\u00a77Click a category to pick it up, then click another category to swap, or click an empty slot at the end to insert it there", this.width / 2, 20, 0xAAAAAA);
+        guiGraphics.drawCenteredString(this.font, "\u00a77Click a category to pick it up, then click another to swap, or click an empty slot to insert it there", this.width / 2, 20, 0xAAAAAA);
 
         int cellSize = 34;
         int gridWidth = COLUMNS * cellSize - 4;
@@ -486,42 +486,38 @@ public class GuiShopCategories extends Screen {
         int rowsPerPage = Math.max(1, availableHeight / (cellSize + 2));
         int visibleCount = COLUMNS * rowsPerPage;
 
-        // Draw categories first (compact block)
-        for (int i = 0; i < layoutGrid.length; i++) {
+        // Draw ALL visible slots. CatIndex -1 means empty (drawn as outlined).
+        for (int i = 0; i < visibleCount; i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
-            if (row >= rowsPerPage) break;
             int x = guiLeft + col * cellSize;
             int y = guiTop + row * cellSize;
-            int catIndex = layoutGrid[i];
 
-            boolean isPickedUp = (pickedUpSlot == i);
-            if (isPickedUp) {
-                guiGraphics.fill(x - 1, y - 1, x + ICON_SIZE + 1, y + ICON_SIZE + 1, 0xFFFFFF44);
-            }
-            drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
-            ShopCategory category = categories.get(catIndex);
-            guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
-            String numStr = String.valueOf(i + 1);
-            guiGraphics.drawString(this.font, "\u00a77" + numStr, x + ICON_SIZE - 8, y + ICON_SIZE - 8, 0x888888);
-            if (!isPickedUp && isMouseInSlot(mouseX, mouseY, x, y, ICON_SIZE, ICON_SIZE)) {
-                guiGraphics.renderTooltip(this.font, Component.literal("\u00a7f" + formatCategoryName(category.getName()) + " \u00a77(Slot " + (i + 1) + ")"), mouseX, mouseY);
+            int catIndex = (i < layoutGrid.length) ? layoutGrid[i] : -1;
+
+            if (catIndex >= 0 && catIndex < categories.size()) {
+                // Occupied slot with a valid category
+                boolean isPickedUp = (pickedUpSlot == i);
+                if (isPickedUp) {
+                    guiGraphics.fill(x - 1, y - 1, x + ICON_SIZE + 1, y + ICON_SIZE + 1, 0xFFFFFF44);
+                }
+                drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
+                ShopCategory category = categories.get(catIndex);
+                guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
+                String numStr = String.valueOf(i + 1);
+                guiGraphics.drawString(this.font, "\u00a77" + numStr, x + ICON_SIZE - 8, y + ICON_SIZE - 8, 0x888888);
+                if (!isPickedUp && isMouseInSlot(mouseX, mouseY, x, y, ICON_SIZE, ICON_SIZE)) {
+                    guiGraphics.renderTooltip(this.font, Component.literal("\u00a7f" + formatCategoryName(category.getName()) + " \u00a77(Slot " + (i + 1) + ")"), mouseX, mouseY);
+                }
+            } else {
+                // Empty slot — draw outline
+                guiGraphics.fill(x, y, x + ICON_SIZE, y + ICON_SIZE, 0xFF333333);
+                guiGraphics.fill(x + 1, y + 1, x + ICON_SIZE - 1, y + ICON_SIZE - 1, BG_COLOR);
+                guiGraphics.drawCenteredString(this.font, "\u00a78" + (i + 1), x + ICON_SIZE / 2, y + ICON_SIZE / 2 - 4, 0x555555);
             }
         }
 
-        // Draw empty insertion slots beyond the compact block (up to visibleCount)
-        for (int i = layoutGrid.length; i < visibleCount; i++) {
-            int col = i % COLUMNS;
-            int row = i / COLUMNS;
-            if (row >= rowsPerPage) break;
-            int x = guiLeft + col * cellSize;
-            int y = guiTop + row * cellSize;
-            guiGraphics.fill(x, y, x + ICON_SIZE, y + ICON_SIZE, 0xFF333333);
-            guiGraphics.fill(x + 1, y + 1, x + ICON_SIZE - 1, y + ICON_SIZE - 1, BG_COLOR);
-            guiGraphics.drawCenteredString(this.font, "\u00a78" + (i + 1), x + ICON_SIZE / 2, y + ICON_SIZE / 2 - 4, 0x555555);
-        }
-
-        guiGraphics.drawCenteredString(this.font, "\u00a77Pick up, then click another category to swap, or an empty slot to insert. \u00a7aSave \u00a77\u00a7cCancel", this.width / 2, this.height - 38, 0xAAAAAA);
+        guiGraphics.drawCenteredString(this.font, "\u00a77Pick up, swap, or insert into empty slots. \u00a7aSave \u00a77\u00a7cCancel", this.width / 2, this.height - 38, 0xAAAAAA);
     }
 
     // ========== Mouse Handling ==========
