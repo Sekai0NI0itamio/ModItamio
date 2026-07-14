@@ -55,7 +55,7 @@ public class GuiShopCategories extends Screen {
 
     // ========== Layout Edit Mode ==========
     private boolean layoutEditMode = false;
-    /** Category indices in display order (compact, no gaps). */
+    /** Grid slot -> category index (-1 = empty). Full visual grid. */
     private int[] layoutGrid;
     /** Snapshot of the original category order for Cancel. */
     private int[] originalOrder;
@@ -175,73 +175,78 @@ public class GuiShopCategories extends Screen {
         pickedUpSlot = -1;
         layoutScrollSnapshot = this.scrollOffset;
 
-        // Full visual grid — one slot per category, then empty slots beyond
         int cellSize = 34;
         int guiTop = 30;
         int availableHeight = this.height - guiTop - 70;
         int rowsPerPage = Math.max(1, availableHeight / (cellSize + 2));
         int visibleCount = COLUMNS * rowsPerPage;
 
+        // Build grid from WorldShop's saved positions or sequentially
+        int[] savedPositions = WorldShop.getCategorySlotPositions();
         layoutGrid = new int[visibleCount];
         java.util.Arrays.fill(layoutGrid, -1);
-        for (int i = 0; i < categories.size() && i < visibleCount; i++) {
-            layoutGrid[i] = i;
+
+        if (savedPositions != null && savedPositions.length > 0) {
+            for (int i = 0; i < savedPositions.length && i < layoutGrid.length; i++) {
+                layoutGrid[i] = savedPositions[i];
+            }
+            WorldShop.LOGGER.info("[LAYOUT] enter: restored from slotPositions");
+        } else {
+            for (int i = 0; i < categories.size() && i < visibleCount; i++) {
+                layoutGrid[i] = i;
+            }
+            WorldShop.LOGGER.info("[LAYOUT] enter: sequential (grid={}, cats={})", layoutGrid.length, categories.size());
         }
 
         originalOrder = new int[categories.size()];
         for (int i = 0; i < categories.size(); i++) {
             originalOrder[i] = i;
         }
-        WorldShop.LOGGER.info("[LAYOUT] enter: gridSize={}, cats={}", layoutGrid.length, categories.size());
         rebuildButtons();
     }
 
     private void saveLayout() {
-        // Build expanded list: categories at exact grid positions, null for gaps
+        // Build compact name list from non-empty grid slots
+        List<String> nameList = new ArrayList<>();
         List<ShopCategory> cats = WorldShop.getCategories();
-        
-        // Find max occupied slot
-        int maxSlot = layoutGrid.length - 1;
-        for (int i = layoutGrid.length - 1; i >= 0; i--) {
-            if (layoutGrid[i] < 0) maxSlot = i - 1;
-            else break;
-        }
-        if (maxSlot < 0) maxSlot = layoutGrid.length - 1;
-
-        // Build expanded list from slot positions
-        List<ShopCategory> expanded = new ArrayList<>();
-        for (int i = 0; i <= maxSlot; i++) {
-            int catIdx = (i < layoutGrid.length) ? layoutGrid[i] : -1;
-            if (catIdx >= 0 && catIdx < cats.size()) {
-                expanded.add(cats.get(catIdx));
-            } else {
-                expanded.add(null);
+        for (int slot = 0; slot < layoutGrid.length; slot++) {
+            int catIdx = layoutGrid[slot];
+            if (catIdx >= 0 && catIdx < cats.size() && cats.get(catIdx) != null) {
+                nameList.add(cats.get(catIdx).getName());
             }
         }
 
         // Log
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < expanded.size(); i++) {
-            if (expanded.get(i) != null) {
+        for (int i = 0; i < layoutGrid.length; i++) {
+            if (layoutGrid[i] >= 0 && layoutGrid[i] < cats.size()) {
                 if (sb.length() > 0) sb.append(", ");
-                sb.append(i).append(":").append(expanded.get(i).getName());
+                sb.append(i).append(":").append(cats.get(layoutGrid[i]).getName());
             }
         }
-        WorldShop.LOGGER.info("[LAYOUT] save: expanded(size={}) [{}]", expanded.size(), sb.toString());
+        WorldShop.LOGGER.info("[LAYOUT] save: positions=[{}]", sb.toString());
 
-        // Send names to server (compact, no gaps)
-        List<String> nameList = new ArrayList<>();
-        for (ShopCategory cat : expanded) {
-            if (cat != null) nameList.add(cat.getName());
-        }
+        // Send compact names to server
         String[] newOrderNames = nameList.toArray(new String[0]);
         FriendlyByteBuf buf = PacketByteBufs.create();
         ShopPacket.write(ShopPacket.reorderCategories(newOrderNames), buf);
         ClientPlayNetworking.send(ShopPacket.PACKET_ID, buf);
 
-        // Replace categories list with expanded version (with nulls for gaps)
+        // Persist grid positions for home page rendering
+        WorldShop.setCategorySlotPositions(layoutGrid.clone());
+
+        // Reorder local categories compactly
+        List<ShopCategory> reordered = new ArrayList<>();
+        for (String name : newOrderNames) {
+            for (ShopCategory cat : cats) {
+                if (cat.getName().equals(name) && !reordered.contains(cat)) {
+                    reordered.add(cat);
+                    break;
+                }
+            }
+        }
         cats.clear();
-        cats.addAll(expanded);
+        cats.addAll(reordered);
 
         layoutEditMode = false;
         pickedUpSlot = -1;
@@ -406,62 +411,37 @@ public class GuiShopCategories extends Screen {
             }
         } else {
             // ---- CATEGORIES MODE - show category tiles ----
+            // Use slotPositions to place categories at exact grid positions
+            int[] slotPos = WorldShop.getCategorySlotPositions();
             int visibleCount = COLUMNS * rowsPerPage;
-            int startIndex = this.scrollOffset * COLUMNS;
+            int gridTotalSlots = (slotPos != null && slotPos.length > 0) ? slotPos.length : filteredCategories.size();
 
-            // Debug: log the order of categories being rendered (only when it changes)
-            if (!layoutEditMode && filteredCategories.size() > 0) {
-                StringBuilder orderStr = new StringBuilder();
-                int count = 0;
-                for (int i = 0; i < filteredCategories.size() && count < 11; i++) {
-                    ShopCategory c = filteredCategories.get(i);
-                    if (c != null) {
-                        if (orderStr.length() > 0) orderStr.append(", ");
-                        orderStr.append(i).append(":").append(c.getName());
-                        count++;
-                    }
-                }
-                String currentOrder = orderStr.toString();
-                if (!currentOrder.equals(lastRenderedOrder)) {
-                    lastRenderedOrder = currentOrder;
-                    WorldShop.LOGGER.info("[GUI_RENDER] Cat order: [{}] (size={}, scrollOffset={})", currentOrder, filteredCategories.size(), this.scrollOffset);
-                }
-            }
-
-            // Calculate scrollbar position
-            int gridRight = guiLeft + gridWidth;
-            scrollbarX = gridRight + 4;
-            scrollbarTop = guiTop;
-            scrollbarHeight = availableHeight;
-
-            // Draw category icons (null entries = empty gap slots)
-            for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+            // Draw category icons at their slot positions
+            for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                 int col = i % COLUMNS;
                 int row = i / COLUMNS;
                 int x = guiLeft + col * cellSize;
                 int y = guiTop + row * cellSize;
-                int catIndex = startIndex + i;
-                ShopCategory category = this.filteredCategories.get(catIndex);
-                if (category != null) {
-                    drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
-                    ItemStack icon = category.getIcon();
-                    guiGraphics.renderItem(icon, x + 6, y + 6);
-                } else {
-                    // Empty gap slot — draw outlined but no item
-                    guiGraphics.fill(x, y, x + ICON_SIZE, y + ICON_SIZE, 0xFF333333);
-                    guiGraphics.fill(x + 1, y + 1, x + ICON_SIZE - 1, y + ICON_SIZE - 1, BG_COLOR);
-                }
+
+                int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
+                if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
+                ShopCategory category = filteredCategories.get(catIdx);
+                if (category == null) continue;
+                drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
+                guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
             }
 
-            // Draw tooltips for non-null categories
-            for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+            // Tooltips for categories at their slot positions
+            for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                 int col = i % COLUMNS;
                 int row = i / COLUMNS;
                 int x = guiLeft + col * cellSize;
                 int y = guiTop + row * cellSize;
                 if (!isMouseInSlot(mouseX, mouseY, x, y, ICON_SIZE, ICON_SIZE)) continue;
-                int catIndex = startIndex + i;
-                ShopCategory category = this.filteredCategories.get(catIndex);
+
+                int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
+                if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
+                ShopCategory category = filteredCategories.get(catIdx);
                 if (category == null) continue;
                 String name = formatCategoryName(category.getName());
                 int itemCount = category.getItems().size();
@@ -475,27 +455,28 @@ public class GuiShopCategories extends Screen {
                 break;
             }
 
-            // Draw X buttons on categories in admin mode (only for non-null)
+            // X buttons (admin mode) — only for categories at slot positions
             if (adminMode) {
-                for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+                for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                     int col = i % COLUMNS;
                     int row = i / COLUMNS;
                     int x = guiLeft + col * cellSize + ICON_SIZE - 10;
                     int y = guiTop + row * cellSize;
-                    int catIndex = startIndex + i;
-                    ShopCategory category = this.filteredCategories.get(catIndex);
+
+                    int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
+                    if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
+                    ShopCategory category = filteredCategories.get(catIdx);
                     if (category == null) continue;
                     guiGraphics.fill(x, y, x + 10, y + 10, 0xCCFF4444);
                     guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", x + 1, y + 1, 0xFFFFFF);
                 }
             }
 
-            // Draw scrollbar (based on non-null count for meaningful page count)
-            int totalCats = this.filteredCategories.size();
+            // Scrollbar
+            int totalCats = filteredCategories.size();
             int maxPages = Math.max(1, (int) Math.ceil((double) totalCats / (double) visibleCount));
             drawScrollbar(guiGraphics, scrollbarX, scrollbarTop, scrollbarHeight, maxPages, mouseX, mouseY);
 
-            // Scroll info
             if (totalCats > visibleCount) {
                 String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + maxPages;
                 guiGraphics.drawCenteredString(this.font, scrollInfo, this.width / 2, this.height - 25, 0xFFFFFF);
@@ -639,21 +620,24 @@ public class GuiShopCategories extends Screen {
                     return true;
                 }
             } else {
-                // Handle category clicks
+                // Handle category clicks using slotPositions
+                int[] slotPos = WorldShop.getCategorySlotPositions();
+                int gridTotalSlots = (slotPos != null && slotPos.length > 0) ? slotPos.length : filteredCategories.size();
                 boolean clickedX = false;
 
                 // In admin mode, check X button clicks first
                 if (adminMode) {
-                    for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+                    for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                         int col = i % COLUMNS;
                         int row = i / COLUMNS;
                         int x = guiLeft + col * cellSize + ICON_SIZE - 10;
                         int y = guiTop + row * cellSize;
                         if (mouseX >= x && mouseX < x + 10 && mouseY >= y && mouseY < y + 10) {
-                            int catIndex = startIndex + i;
-                            ShopCategory category = this.filteredCategories.get(catIndex);
+                            int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
+                            if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
+                            ShopCategory category = filteredCategories.get(catIdx);
                             if (category == null) continue;
-                            int originalIndex = this.categories.indexOf(category);
+                            int originalIndex = categories.indexOf(category);
                             if (originalIndex >= 0) {
                                 sendRemoveCategory(originalIndex);
                                 clickedX = true;
@@ -665,15 +649,16 @@ public class GuiShopCategories extends Screen {
 
                 if (clickedX) return true;
 
-                // Handle category clicks (skip null = empty gap slots)
-                for (int i = 0; i < visibleCount && startIndex + i < this.filteredCategories.size(); i++) {
+                // Handle category clicks
+                for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                     int col = i % COLUMNS;
                     int x = guiLeft + col * cellSize;
                     int row = i / COLUMNS;
                     int y = guiTop + row * cellSize;
                     if (!isMouseInSlot((int) mouseX, (int) mouseY, x, y, ICON_SIZE, ICON_SIZE)) continue;
-                    int catIndex = startIndex + i;
-                    ShopCategory category = this.filteredCategories.get(catIndex);
+                    int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
+                    if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
+                    ShopCategory category = filteredCategories.get(catIdx);
                     if (category == null) continue;
                     int originalIndex = this.categories.indexOf(category);
                     if (originalIndex >= 0) {

@@ -25,6 +25,8 @@ public class WorldShop implements ModInitializer {
     private static List<ShopCategory> categories = Collections.emptyList();
     private static PriceEngine priceEngine = new PriceEngine();
     private static MinecraftServer currentServer = null;
+    /** Grid slot -> category index (-1 = empty). Persists layout positions. */
+    private static int[] categorySlotPositions = null;
 
     @Override
     public void onInitialize() {
@@ -100,6 +102,16 @@ public class WorldShop implements ModInitializer {
 
     public static List<ShopCategory> getCategories() {
         return categories;
+    }
+
+    /** Get the persisted grid slot positions (grid slot -> category index, -1 = empty). */
+    public static int[] getCategorySlotPositions() {
+        return categorySlotPositions;
+    }
+
+    /** Set the persisted grid slot positions for reuse across screens. */
+    public static void setCategorySlotPositions(int[] positions) {
+        categorySlotPositions = positions;
     }
 
     /**
