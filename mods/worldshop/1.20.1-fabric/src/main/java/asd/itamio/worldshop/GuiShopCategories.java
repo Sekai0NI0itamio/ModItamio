@@ -411,12 +411,12 @@ public class GuiShopCategories extends Screen {
             }
         } else {
             // ---- CATEGORIES MODE - show category tiles ----
+            int visibleCount = COLUMNS * rowsPerPage;
             // Use slotPositions to place categories at exact grid positions
             int[] slotPos = WorldShop.getCategorySlotPositions();
-            int visibleCount = COLUMNS * rowsPerPage;
             int gridTotalSlots = (slotPos != null && slotPos.length > 0) ? slotPos.length : filteredCategories.size();
 
-            // Draw category icons at their slot positions
+            // Draw tiles at their exact slot positions
             for (int i = 0; i < Math.min(visibleCount, gridTotalSlots); i++) {
                 int col = i % COLUMNS;
                 int row = i / COLUMNS;
@@ -424,11 +424,17 @@ public class GuiShopCategories extends Screen {
                 int y = guiTop + row * cellSize;
 
                 int catIdx = (slotPos != null && i < slotPos.length) ? slotPos[i] : i;
-                if (catIdx < 0 || catIdx >= filteredCategories.size()) continue;
-                ShopCategory category = filteredCategories.get(catIdx);
-                if (category == null) continue;
-                drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
-                guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
+                if (catIdx >= 0 && catIdx < filteredCategories.size()) {
+                    ShopCategory category = filteredCategories.get(catIdx);
+                    if (category != null) {
+                        drawSlotBackground(guiGraphics, x, y, ICON_SIZE, ICON_SIZE);
+                        guiGraphics.renderItem(category.getIcon(), x + 6, y + 6);
+                        continue;
+                    }
+                }
+                // Empty slot — draw outlined cell
+                guiGraphics.fill(x, y, x + ICON_SIZE, y + ICON_SIZE, 0xFF333333);
+                guiGraphics.fill(x + 1, y + 1, x + ICON_SIZE - 1, y + ICON_SIZE - 1, BG_COLOR);
             }
 
             // Tooltips for categories at their slot positions
@@ -672,7 +678,6 @@ public class GuiShopCategories extends Screen {
     }
 
     private boolean handleLayoutClick(double mouseX, double mouseY, int mouseButton) {
-        // Check Save/Cancel buttons first
         for (var widget : this.children()) {
             if (widget instanceof Button btn && btn.mouseClicked(mouseX, mouseY, mouseButton)) {
                 return true;
@@ -695,39 +700,47 @@ public class GuiShopCategories extends Screen {
             if (!isMouseInSlot((int) mouseX, (int) mouseY, x, y, ICON_SIZE, ICON_SIZE)) continue;
 
             if (pickedUpSlot == -1) {
-                if (i < layoutGrid.length) {
+                // Pick up a category — only if this slot has one
+                if (i < layoutGrid.length && layoutGrid[i] >= 0) {
                     pickedUpSlot = i;
                     WorldShop.LOGGER.info("[LAYOUT] Picked slot {} ({})", i, categories.get(layoutGrid[i]).getName());
                 }
+            } else if (pickedUpSlot == i) {
+                // Clicked same slot — deselect
+                pickedUpSlot = -1;
+                WorldShop.LOGGER.info("[LAYOUT] Deselected");
             } else {
+                // Place the picked category at slot i.
+                // If target also has a category, SWAP them.
+                // The original slot becomes EMPTY (-1) only if we moved to an empty slot.
                 int pickedIdx = layoutGrid[pickedUpSlot];
-                if (pickedUpSlot == i) {
-                    pickedUpSlot = -1;
-                    WorldShop.LOGGER.info("[LAYOUT] Deselected");
-                } else {
-                    // Build list without the picked category, then insert at i
-                    List<Integer> list = new ArrayList<>();
+                int targetCurrent = (i < layoutGrid.length) ? layoutGrid[i] : -1;
+
+                // Ensure grid is big enough
+                if (i >= layoutGrid.length) {
+                    int[] newGrid = new int[i + 1];
+                    java.util.Arrays.fill(newGrid, -1);
                     for (int j = 0; j < layoutGrid.length; j++) {
-                        if (j != pickedUpSlot) {
-                            list.add(layoutGrid[j]);
-                        }
+                        newGrid[j] = layoutGrid[j];
                     }
-                    // If target is beyond current list, pad with -1
-                    while (list.size() < i) {
-                        list.add(-1);
-                    }
-                    // Insert the picked category at position i
-                    list.add(i, pickedIdx);
-                    // Convert back to array
-                    layoutGrid = new int[list.size()];
-                    for (int j = 0; j < list.size(); j++) {
-                        layoutGrid[j] = list.get(j);
-                    }
-                    pickedUpSlot = -1;
-                    WorldShop.LOGGER.info("[LAYOUT] Placed at slot {} (grid size={})", i, layoutGrid.length);
+                    layoutGrid = newGrid;
+                    targetCurrent = -1; // new slot is always empty
                 }
 
-                // Log current grid
+                if (targetCurrent >= 0) {
+                    // SWAP: exchange the two categories
+                    layoutGrid[pickedUpSlot] = targetCurrent;
+                    layoutGrid[i] = pickedIdx;
+                    WorldShop.LOGGER.info("[LAYOUT] Swapped slot {} <-> {}", pickedUpSlot, i);
+                } else {
+                    // MOVE: old slot becomes empty
+                    layoutGrid[pickedUpSlot] = -1;
+                    layoutGrid[i] = pickedIdx;
+                    WorldShop.LOGGER.info("[LAYOUT] Moved from slot {} to empty slot {}", pickedUpSlot, i);
+                }
+                pickedUpSlot = -1;
+
+                // Log current grid (non-empty slots)
                 StringBuilder gs = new StringBuilder();
                 for (int g = 0; g < layoutGrid.length; g++) {
                     if (layoutGrid[g] >= 0) {
@@ -735,7 +748,15 @@ public class GuiShopCategories extends Screen {
                         gs.append(g).append(":").append(categories.get(layoutGrid[g]).getName());
                     }
                 }
-                WorldShop.LOGGER.info("[LAYOUT] Grid: [{}]", gs.toString());
+                // Also log empty gaps
+                StringBuilder emptyGs = new StringBuilder();
+                for (int g = 0; g < layoutGrid.length; g++) {
+                    if (layoutGrid[g] < 0) {
+                        if (emptyGs.length() > 0) emptyGs.append(", ");
+                        emptyGs.append(g);
+                    }
+                }
+                WorldShop.LOGGER.info("[LAYOUT] Grid: [{}]. Empty slots: [{}]", gs.toString(), emptyGs.toString());
             }
             return true;
         }
