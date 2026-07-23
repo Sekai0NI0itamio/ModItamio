@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class EconomyData extends SavedData {
+public class EconomyData extends SavedData implements EconomyProvider {
     private static final String DATA_NAME = "worldshop_economy";
     private final Map<UUID, Double> balances = new HashMap<>();
     private final Map<String, UUID> nameToUuid = new HashMap<>();
@@ -84,5 +84,37 @@ public class EconomyData extends SavedData {
 
     public UUID getUuidByName(String name) {
         return nameToUuid.get(name.toLowerCase());
+    }
+
+    // ========== EconomyProvider interface methods ==========
+
+    @Override
+    public double getBalance(ServerLevel level, UUID player) {
+        return getBalance(player);
+    }
+
+    @Override
+    public void setBalance(ServerLevel level, UUID player, double amount) {
+        setBalance(player, amount);
+    }
+
+    @Override
+    public void addBalance(ServerLevel level, UUID player, double amount) {
+        addBalance(player, amount);
+    }
+
+    @Override
+    public boolean subtractBalance(ServerLevel level, UUID player, double amount) {
+        return subtractBalance(player, amount);
+    }
+
+    @Override
+    public void registerPlayer(ServerLevel level, String name, UUID uuid) {
+        registerPlayer(name, uuid);
+    }
+
+    @Override
+    public UUID getUuidByName(ServerLevel level, String name) {
+        return getUuidByName(name);
     }
 }
