@@ -35,12 +35,23 @@ public class GuiShopItems extends Screen {
     private double accumulatedScroll = 0.0;
     private static final double SCROLL_THRESHOLD = 1.0;
 
+    // Pending detail index (set by deep-link from OPEN_ITEM_DETAIL packet)
+    private int pendingDetail = -1;
+
     public GuiShopItems(ShopCategory category, int categoryIndex) {
         super(Component.literal("Shop - " + category.getName()));
         this.category = category;
         this.categoryIndex = categoryIndex;
         this.allItems = category.getItems();
         this.filteredItems = new ArrayList<>(this.allItems);
+    }
+
+    /**
+     * Set a pending detail index to auto-open the detail view at this item
+     * when the screen is initialized.
+     */
+    public void setPendingDetail(int itemIndex) {
+        this.pendingDetail = itemIndex;
     }
 
     @Override
@@ -58,6 +69,14 @@ public class GuiShopItems extends Screen {
             this.scrollOffset = 0;
         });
         this.addRenderableWidget(this.searchBox);
+
+        // Consume pending deep-link: auto-open detail view at the requested item
+        if (pendingDetail >= 0 && pendingDetail < this.filteredItems.size()) {
+            this.detailView = true;
+            this.detailItemIndex = pendingDetail;
+            this.stackMode = false;
+            this.pendingDetail = -1;
+        }
 
         rebuildButtons();
     }
