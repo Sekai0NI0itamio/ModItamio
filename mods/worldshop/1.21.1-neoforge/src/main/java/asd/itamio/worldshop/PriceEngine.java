@@ -1,101 +1,188 @@
 package asd.itamio.worldshop;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
 public class PriceEngine {
-    public static final double BASE_MATERIAL_PRICE = 2.0;
-    public static final double UNCRAFTABLE_PRICE = 1000.0;
+    public static final double MIN_BASE_PRICE = 1.0;
+    public static final double BASE_MATERIAL_PRICE = 1.0;
+    public static final double UNCRAFTABLE_PRICE = 1.0;
     public static final double BUY_MULTIPLIER = 1.2;
     public static final double SELL_MULTIPLIER = 0.8;
 
     private final Map<String, Double> priceCache = new HashMap<>();
     private final Set<String> computing = new HashSet<>();
-    private Level level;
+    private PriceConfig priceConfig;
 
-    public void setLevel(Level level) {
-        this.level = level;
+    public void setPriceConfig(PriceConfig config) {
+        this.priceConfig = config;
     }
 
     public double getBuyPrice(ItemStack stack) {
-        double base = getBasePrice(stack);
+        double base = getBasePriceClient(stack);
         return Math.round(base * BUY_MULTIPLIER * 100.0) / 100.0;
     }
 
     public double getSellPrice(ItemStack stack) {
-        double base = getBasePrice(stack);
+        double base = getBasePriceClient(stack);
         return Math.round(base * SELL_MULTIPLIER * 100.0) / 100.0;
     }
 
-    public double getBasePrice(ItemStack stack) {
+    private double getBasePriceClient(ItemStack stack) {
+        try {
+            Minecraft mc = Minecraft.getInstance();
+            if (mc != null && mc.level != null) {
+                RecipeManager recipeManager = mc.level.getRecipeManager();
+                RegistryAccess registryAccess = mc.level.registryAccess();
+                if (recipeManager != null && registryAccess != null) {
+                    return getBasePrice(stack, recipeManager, registryAccess);
+                }
+            }
+        } catch (Exception ignored) {
+        }
+
+        if (priceConfig != null && priceConfig.hasPrice(stack)) {
+            double configPrice = priceConfig.getPrice(stack);
+            if (configPrice >= 0) {
+                return configPrice;
+            }
+        }
+
+        return UNCRAFTABLE_PRICE * ItemRarity.getRarityMultiplier(stack) * ItemRarity.getBulkDiscountMultiplier(stack);
+    }
+
+    public double getBuyPrice(ItemStack stack, @Nullable RecipeManager recipeManager, @Nullable RegistryAccess registryAccess) {
+        double base = getBasePrice(stack, recipeManager, registryAccess);
+        return Math.round(base * BUY_MULTIPLIER * 100.0) / 100.0;
+    }
+
+    public double getSellPrice(ItemStack stack, @Nullable RecipeManager recipeManager, @Nullable RegistryAccess registryAccess) {
+        double base = getBasePrice(stack, recipeManager, registryAccess);
+        return Math.round(base * SELL_MULTIPLIER * 100.0) / 100.0;
+    }
+
+    public double getBasePrice(ItemStack stack, @Nullable RecipeManager recipeManager, @Nullable RegistryAccess registryAccess) {
         if (stack == null || stack.isEmpty()) {
             return 0.0;
         }
         String key = getItemKey(stack);
+
         if (priceCache.containsKey(key)) {
             return priceCache.get(key);
         }
-        double price = computeBasePrice(stack);
+
+        if (priceConfig != null && priceConfig.hasPrice(stack)) {
+            double configPrice = priceConfig.getPrice(stack);
+            if (configPrice >= 0) {
+                priceCache.put(key, configPrice);
+                return configPrice;
+            }
+        }
+
+        double price = computeBasePrice(stack, recipeManager, registryAccess);
+
         priceCache.put(key, price);
+
+        if (priceConfig != null) {
+            priceConfig.setPrice(stack, price);
+        }
+
         return price;
     }
 
-    private double computeBasePrice(ItemStack stack) {
+    public double getBasePrice(ItemStack stack) {
+        return getBasePriceClient(stack);
+    }
+
+    private double computeBasePrice(ItemStack stack, @Nullable RecipeManager recipeManager, @Nullable RegistryAccess registryAccess) {
         String key = getItemKey(stack);
         if (computing.contains(key)) {
-            return BASE_MATERIAL_PRICE;
+            return BASE_MATERIAL_PRICE * ItemRarity.getRarityMultiplier(stack) * ItemRarity.getBulkDiscountMultiplier(stack);
         }
         computing.add(key);
         try {
-            if (level == null) {
-                return UNCRAFTABLE_PRICE;
+            if (recipeManager == null || registryAccess == null) {
+                return UNCRAFTABLE_PRICE * ItemRarity.getRarityMultiplier(stack) * ItemRarity.getBulkDiscountMultiplier(stack);
             }
-            List<RecipeHolder<?>> recipes = findRecipesFor(stack);
+
+            List<Recipe<?>> recipes = findRecipesFor(stack, recipeManager, registryAccess);
             if (recipes.isEmpty()) {
-                return UNCRAFTABLE_PRICE;
+                return UNCRAFTABLE_PRICE * ItemRarity.getRarityMultiplier(stack) * ItemRarity.getBulkDiscountMultiplier(stack);
             }
-            RecipeHolder<?> recipeHolder = recipes.get(0);
-            net.minecraft.world.item.crafting.Recipe<?> recipe = recipeHolder.value();
-            double totalIngredientPrice = 0.0;
-            boolean hasIngredients = false;
-            for (Ingredient ingredient : recipe.getIngredients()) {
-                if (ingredient == Ingredient.EMPTY) continue;
-                ItemStack[] matchingStacks = ingredient.getItems();
-                if (matchingStacks == null || matchingStacks.length == 0) continue;
-                ItemStack ingredientStack = matchingStacks[0];
-                double ingredientPrice = getBasePrice(ingredientStack);
-                totalIngredientPrice += ingredientPrice;
-                hasIngredients = true;
+
+            double cheapestPrice = Double.MAX_VALUE;
+            boolean foundRecipe = false;
+
+            for (Recipe<?> recipe : recipes) {
+                double totalIngredientPrice = 0.0;
+                boolean hasIngredients = false;
+                for (Ingredient ingredient : recipe.getIngredients()) {
+                    if (ingredient == Ingredient.EMPTY) continue;
+                    ItemStack[] matchingStacks = ingredient.getItems();
+                    if (matchingStacks == null || matchingStacks.length == 0) continue;
+                    double cheapestIngredient = Double.MAX_VALUE;
+                    for (ItemStack ingredientStack : matchingStacks) {
+                        if (ingredientStack == null || ingredientStack.isEmpty()) continue;
+                        double ingredientPrice = getBasePrice(ingredientStack, recipeManager, registryAccess);
+                        if (ingredientPrice < cheapestIngredient) {
+                            cheapestIngredient = ingredientPrice;
+                        }
+                    }
+                    if (cheapestIngredient < Double.MAX_VALUE) {
+                        totalIngredientPrice += cheapestIngredient;
+                        hasIngredients = true;
+                    }
+                }
+
+                if (!hasIngredients) {
+                    continue;
+                }
+
+                int outputCount = recipe.getResultItem(registryAccess).getCount();
+                if (outputCount <= 0) {
+                    outputCount = 1;
+                }
+
+                double perItemPrice = totalIngredientPrice / (double) outputCount;
+                if (perItemPrice < cheapestPrice) {
+                    cheapestPrice = perItemPrice;
+                    foundRecipe = true;
+                }
             }
-            if (!hasIngredients) {
-                return UNCRAFTABLE_PRICE;
+
+            if (!foundRecipe) {
+                return UNCRAFTABLE_PRICE * ItemRarity.getRarityMultiplier(stack) * ItemRarity.getBulkDiscountMultiplier(stack);
             }
-            ItemStack result = recipe.getResultItem(level.registryAccess());
-            int outputCount = result.getCount();
-            if (outputCount <= 0) {
-                outputCount = 1;
-            }
-            double perItemPrice = totalIngredientPrice / (double) outputCount;
-            return Math.round(perItemPrice * 100.0) / 100.0;
+
+            double rarityAdjustedPrice = cheapestPrice * ItemRarity.getCraftedRarityMultiplier(stack);
+            double finalPrice = Math.max(MIN_BASE_PRICE, rarityAdjustedPrice);
+            return Math.round(finalPrice * 100.0) / 100.0;
         } finally {
             computing.remove(key);
         }
     }
 
-    private List<RecipeHolder<?>> findRecipesFor(ItemStack stack) {
-        List<RecipeHolder<?>> result = new ArrayList<>();
-        for (RecipeHolder<?> holder : level.getRecipeManager().getRecipes()) {
+    private List<Recipe<?>> findRecipesFor(ItemStack stack, RecipeManager recipeManager, RegistryAccess registryAccess) {
+        List<Recipe<?>> result = new ArrayList<>();
+        for (RecipeHolder<?> holder : recipeManager.getRecipes()) {
             try {
-                ItemStack output = holder.value().getResultItem(level.registryAccess());
-                if (output == null || output.isEmpty() || !isSameItem(output, stack)) continue;
-                result.add(holder);
-            } catch (Exception e) {
-                // Skip recipes that error
+                Recipe<?> recipe = holder.value();
+                ItemStack output = recipe.getResultItem(registryAccess);
+                if (output == null || output.isEmpty()) continue;
+                if (isSameItem(output, stack)) {
+                    result.add(recipe);
+                }
+            } catch (Exception ignored) {
             }
         }
         return result;
@@ -106,11 +193,17 @@ public class PriceEngine {
     }
 
     private String getItemKey(ItemStack stack) {
-        return stack.getItem().toString();
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(stack.getItem());
+        return id != null ? id.toString() : "unknown";
     }
 
     public void clearCache() {
         priceCache.clear();
         computing.clear();
+    }
+
+    @Nullable
+    public PriceConfig getPriceConfig() {
+        return priceConfig;
     }
 }

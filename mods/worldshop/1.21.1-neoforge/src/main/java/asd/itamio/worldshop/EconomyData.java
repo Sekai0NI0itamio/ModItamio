@@ -9,7 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class EconomyData extends SavedData {
+/**
+ * Built-in economy store, persisted per-level via SavedData.
+ * Implements {@link EconomyProvider} so it can be returned from
+ * {@link WorldShop#getEconomyProvider(ServerLevel)} when no external
+ * economy mod has registered a custom provider.
+ */
+public class EconomyData extends SavedData implements EconomyProvider {
     private static final String DATA_NAME = "WorldShopEconomy";
     private final Map<UUID, Double> balances = new HashMap<>();
     private final Map<String, UUID> nameToUuid = new HashMap<>();
@@ -28,6 +34,40 @@ public class EconomyData extends SavedData {
                 net.minecraft.util.datafix.DataFixTypes.LEVEL
         ), DATA_NAME);
     }
+
+    // ---- EconomyProvider interface (ServerLevel-overloaded) ----
+
+    @Override
+    public double getBalance(ServerLevel level, UUID player) {
+        return getBalance(player);
+    }
+
+    @Override
+    public void setBalance(ServerLevel level, UUID player, double amount) {
+        setBalance(player, amount);
+    }
+
+    @Override
+    public void addBalance(ServerLevel level, UUID player, double amount) {
+        addBalance(player, amount);
+    }
+
+    @Override
+    public boolean subtractBalance(ServerLevel level, UUID player, double amount) {
+        return subtractBalance(player, amount);
+    }
+
+    @Override
+    public void registerPlayer(ServerLevel level, String name, UUID uuid) {
+        registerPlayer(name, uuid);
+    }
+
+    @Override
+    public UUID getUuidByName(ServerLevel level, String name) {
+        return getUuidByName(name);
+    }
+
+    // ---- Direct UUID-keyed accessors (used by commands/handlers) ----
 
     public double getBalance(UUID uuid) {
         return balances.getOrDefault(uuid, 0.0);
