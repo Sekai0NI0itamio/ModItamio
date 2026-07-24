@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class EconomyData extends WorldSavedData {
+public class EconomyData extends WorldSavedData implements EconomyProvider {
     private static final String DATA_NAME = "WorldShopEconomy";
     private final Map<UUID, Double> balances = new HashMap<>();
     private final Map<String, UUID> nameToUuid = new HashMap<>();
@@ -60,6 +60,38 @@ public class EconomyData extends WorldSavedData {
 
     public UUID getUuidByName(String name) {
         return nameToUuid.get(name.toLowerCase());
+    }
+
+    // ========== EconomyProvider interface (World param is ignored — instance is per-world) ==========
+
+    @Override
+    public double getBalance(World level, UUID player) {
+        return getBalance(player);
+    }
+
+    @Override
+    public void setBalance(World level, UUID player, double amount) {
+        setBalance(player, amount);
+    }
+
+    @Override
+    public void addBalance(World level, UUID player, double amount) {
+        addBalance(player, amount);
+    }
+
+    @Override
+    public boolean subtractBalance(World level, UUID player, double amount) {
+        return subtractBalance(player, amount);
+    }
+
+    @Override
+    public void registerPlayer(World level, String name, UUID uuid) {
+        registerPlayer(name, uuid);
+    }
+
+    @Override
+    public UUID getUuidByName(World level, String name) {
+        return getUuidByName(name);
     }
 
     @Override

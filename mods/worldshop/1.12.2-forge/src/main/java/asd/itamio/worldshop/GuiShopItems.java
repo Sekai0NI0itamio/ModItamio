@@ -17,7 +17,9 @@ import java.util.List;
 public class GuiShopItems extends GuiScreen {
     private final ShopCategory category;
     private final int categoryIndex;
+    private final boolean adminMode;
     private final List<ItemStack> items;
+    private List<ItemStack> filteredItems;
     private int scrollOffset = 0;
     private static final int SLOT_SIZE = 22;
     private static final int SPACING = 4;
@@ -26,13 +28,26 @@ public class GuiShopItems extends GuiScreen {
 
     private boolean detailView = false;
     private int detailItemIndex = -1;
+    private int pendingDetailIndex = -1;
     private GuiTextField quantityField;
+    private GuiTextField searchField;
+    private String searchQuery = "";
     private boolean stackMode = false;
 
-    public GuiShopItems(ShopCategory category, int categoryIndex) {
+    public GuiShopItems(ShopCategory category, int categoryIndex, boolean adminMode) {
         this.category = category;
         this.categoryIndex = categoryIndex;
+        this.adminMode = adminMode;
         this.items = category.getItems();
+        this.filteredItems = new ArrayList<>(items);
+    }
+
+    public GuiShopItems(ShopCategory category, int categoryIndex) {
+        this(category, categoryIndex, false);
+    }
+
+    public void setPendingDetail(int itemIndex) {
+        this.pendingDetailIndex = itemIndex;
     }
 
     @Override
@@ -40,6 +55,20 @@ public class GuiShopItems extends GuiScreen {
         super.initGui();
         Keyboard.enableRepeatEvents(true);
         this.buttonList.clear();
+
+        int searchW = 120;
+        int searchH = 14;
+        this.searchField = new GuiTextField(1, this.fontRenderer, this.width - searchW - 8, 8, searchW, searchH);
+        this.searchField.setText(searchQuery);
+        this.searchField.setMaxStringLength(32);
+
+        if (pendingDetailIndex >= 0 && pendingDetailIndex < filteredItems.size()) {
+            this.detailView = true;
+            this.detailItemIndex = pendingDetailIndex;
+            this.pendingDetailIndex = -1;
+            this.stackMode = false;
+        }
+
         rebuildButtons();
     }
 
@@ -61,8 +90,16 @@ public class GuiShopItems extends GuiScreen {
             this.quantityField.setText("1");
             this.quantityField.setFocused(true);
             this.quantityField.setMaxStringLength(5);
+
+            if (adminMode) {
+                this.buttonList.add(new GuiButton(5, 4, bottomY - btnH - 4, 80, btnH, "\u00a7cRemove"));
+                this.buttonList.add(new GuiButton(6, 4, bottomY - btnH * 2 - 8, 80, btnH, "\u00a7eEdit"));
+            }
         } else {
             this.buttonList.add(new GuiButton(0, this.width / 2 - 100, this.height - 22, 200, 20, "\u00a7cBack to Categories"));
+            if (adminMode) {
+                this.buttonList.add(new GuiButton(4, 4, this.height - 22, 80, 20, "\u00a7aAdd Item"));
+            }
         }
     }
 
@@ -78,6 +115,20 @@ public class GuiShopItems extends GuiScreen {
         GlStateManager.disableDepth();
         GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
         GlStateManager.enableTexture2D();
+    }
+
+    private void updateFilteredItems() {
+        if (searchQuery == null || searchQuery.trim().isEmpty()) {
+            filteredItems = new ArrayList<>(items);
+        } else {
+            String query = searchQuery.toLowerCase().trim();
+            filteredItems = new ArrayList<>();
+            for (ItemStack item : items) {
+                if (item.getDisplayName().toLowerCase().contains(query)) {
+                    filteredItems.add(item);
+                }
+            }
+        }
     }
 
     @Override
@@ -97,11 +148,20 @@ public class GuiShopItems extends GuiScreen {
         for (GuiButton button : this.buttonList) {
             button.drawButton(this.mc, mouseX, mouseY, partialTicks);
         }
+
+        if (!detailView && this.searchField != null) {
+            this.searchField.drawTextBox();
+        }
     }
 
     private void drawGridView(int mouseX, int mouseY) {
         String title = "\u00a76\u00a7lShop - " + formatCategoryName(this.category.getName());
+        if (adminMode) title += " \u00a7c[ADMIN]";
         this.drawCenteredString(this.fontRenderer, title, this.width / 2, 8, 0xFFFFFF);
+
+        if (this.searchField != null) {
+            this.drawString(this.fontRenderer, "\u00a77Search:", this.width - 134, 12, 0xAAAAAA);
+        }
 
         int cellSize = 26;
         int gridWidth = COLUMNS * cellSize - SPACING;
@@ -112,29 +172,28 @@ public class GuiShopItems extends GuiScreen {
         int visibleCount = COLUMNS * rowsPerPage;
         int startIndex = this.scrollOffset * COLUMNS;
 
-        // Draw items
-        for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+        for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
             int x = guiLeft + col * cellSize;
             int y = guiTop + row * cellSize;
             int itemIndex = startIndex + i;
-            ItemStack item = this.items.get(itemIndex);
+            ItemStack item = this.filteredItems.get(itemIndex);
             drawSlotBackground(x, y, SLOT_SIZE, SLOT_SIZE);
             renderItem(item, x + 3, y + 3);
         }
 
         this.resetGlState();
 
-        // Draw tooltips
-        for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+        for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
             int x = guiLeft + col * cellSize;
             int y = guiTop + row * cellSize;
             if (!isMouseInSlot(mouseX, mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) continue;
             int itemIndex = startIndex + i;
-            ItemStack item = this.items.get(itemIndex);
+            ItemStack item = this.filteredItems.get(itemIndex);
+            int originalIndex = this.items.indexOf(item);
             PriceEngine priceEngine = WorldShop.getPriceEngine();
             double buyPrice = priceEngine.getBuyPrice(item);
             double sellPrice = priceEngine.getSellPrice(item);
@@ -145,6 +204,9 @@ public class GuiShopItems extends GuiScreen {
             tooltip.add("");
             tooltip.add("\u00a7eLeft-click: Buy menu");
             tooltip.add("\u00a7bRight-click: Quick buy stack");
+            if (adminMode) {
+                tooltip.add("\u00a7c[ADMIN] Shift+Click: Remove item");
+            }
             this.drawHoveringText(tooltip, mouseX, mouseY);
             break;
         }
@@ -154,7 +216,7 @@ public class GuiShopItems extends GuiScreen {
         int barTop = this.height - BOTTOM_BAR_HEIGHT;
         drawRect(0, barTop, this.width, this.height, -14013910);
 
-        if (this.items.size() > visibleCount) {
+        if (this.filteredItems.size() > visibleCount) {
             String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + getMaxScrollPages(rowsPerPage);
             this.drawCenteredString(this.fontRenderer, scrollInfo, this.width / 2, barTop + 2, 0xFFFFFF);
         }
@@ -163,10 +225,10 @@ public class GuiShopItems extends GuiScreen {
     }
 
     private void drawDetailView(int mouseX, int mouseY) {
-        if (detailItemIndex < 0 || detailItemIndex >= this.items.size()) {
+        if (detailItemIndex < 0 || detailItemIndex >= this.filteredItems.size()) {
             return;
         }
-        ItemStack item = this.items.get(detailItemIndex);
+        ItemStack item = this.filteredItems.get(detailItemIndex);
         PriceEngine priceEngine = WorldShop.getPriceEngine();
         double buyPricePerItem = priceEngine.getBuyPrice(item);
         double sellPricePerItem = priceEngine.getSellPrice(item);
@@ -219,6 +281,10 @@ public class GuiShopItems extends GuiScreen {
 
     @Override
     protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
+        if (!detailView && this.searchField != null) {
+            this.searchField.mouseClicked(mouseX, mouseY, mouseButton);
+        }
+
         for (GuiButton button : this.buttonList) {
             if (!button.mousePressed(this.mc, mouseX, mouseY)) continue;
             button.playPressSound(this.mc.getSoundHandler());
@@ -233,7 +299,6 @@ public class GuiShopItems extends GuiScreen {
             return;
         }
 
-        // Handle grid clicks
         int cellSize = 26;
         int gridWidth = COLUMNS * cellSize - SPACING;
         int guiLeft = (this.width - gridWidth) / 2;
@@ -243,13 +308,21 @@ public class GuiShopItems extends GuiScreen {
         int visibleCount = COLUMNS * rowsPerPage;
         int startIndex = this.scrollOffset * COLUMNS;
 
-        for (int i = 0; i < visibleCount && startIndex + i < this.items.size(); i++) {
+        for (int i = 0; i < visibleCount && startIndex + i < this.filteredItems.size(); i++) {
             int col = i % COLUMNS;
             int x = guiLeft + col * cellSize;
             int row = i / COLUMNS;
             int y = guiTop + row * cellSize;
             if (!isMouseInSlot(mouseX, mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) continue;
             int itemIndex = startIndex + i;
+            ItemStack clickedItem = this.filteredItems.get(itemIndex);
+            int originalIndex = this.items.indexOf(clickedItem);
+
+            if (adminMode && isShiftKeyDown()) {
+                WorldShop.NETWORK.sendToServer(ShopPacket.removeItem(this.categoryIndex, originalIndex));
+                return;
+            }
+
             if (mouseButton == 0) {
                 this.detailView = true;
                 this.detailItemIndex = itemIndex;
@@ -263,10 +336,11 @@ public class GuiShopItems extends GuiScreen {
     }
 
     private void quickBuyStack(int itemIndex) {
-        if (itemIndex < 0 || itemIndex >= this.items.size()) {
+        if (itemIndex < 0 || itemIndex >= this.filteredItems.size()) {
             return;
         }
-        ItemStack item = this.items.get(itemIndex);
+        ItemStack item = this.filteredItems.get(itemIndex);
+        int originalIndex = this.items.indexOf(item);
         PriceEngine priceEngine = WorldShop.getPriceEngine();
         double buyPrice = priceEngine.getBuyPrice(item);
         double balance = getClientBalance();
@@ -276,7 +350,7 @@ public class GuiShopItems extends GuiScreen {
         if (quantity <= 0) {
             return;
         }
-        WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, itemIndex, quantity));
+        WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, originalIndex, quantity));
     }
 
     @Override
@@ -284,10 +358,11 @@ public class GuiShopItems extends GuiScreen {
         if (detailView) {
             if (button.id == 0) {
                 int qty = getQuantity();
-                if (qty > 0 && detailItemIndex >= 0) {
-                    ItemStack item = this.items.get(detailItemIndex);
+                if (qty > 0 && detailItemIndex >= 0 && detailItemIndex < this.filteredItems.size()) {
+                    ItemStack item = this.filteredItems.get(detailItemIndex);
+                    int originalIndex = this.items.indexOf(item);
                     int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
-                    WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, this.detailItemIndex, actualItems));
+                    WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, originalIndex, actualItems));
                 }
             } else if (button.id == 1) {
                 this.detailView = false;
@@ -299,8 +374,8 @@ public class GuiShopItems extends GuiScreen {
                     this.quantityField.setText("1");
                 }
                 rebuildButtons();
-            } else if (button.id == 3 && detailItemIndex >= 0 && detailItemIndex < this.items.size()) {
-                ItemStack item = this.items.get(detailItemIndex);
+            } else if (button.id == 3 && detailItemIndex >= 0 && detailItemIndex < this.filteredItems.size()) {
+                ItemStack item = this.filteredItems.get(detailItemIndex);
                 PriceEngine priceEngine = WorldShop.getPriceEngine();
                 double buyPrice = priceEngine.getBuyPrice(item);
                 double balance = getClientBalance();
@@ -313,9 +388,27 @@ public class GuiShopItems extends GuiScreen {
                 } else if (this.quantityField != null) {
                     this.quantityField.setText(String.valueOf(maxAfford));
                 }
+            } else if (button.id == 5 && detailItemIndex >= 0 && detailItemIndex < this.filteredItems.size()) {
+                // Remove item (admin)
+                ItemStack item = this.filteredItems.get(detailItemIndex);
+                int originalIndex = this.items.indexOf(item);
+                WorldShop.NETWORK.sendToServer(ShopPacket.removeItem(this.categoryIndex, originalIndex));
+                this.detailView = false;
+                this.detailItemIndex = -1;
+                rebuildButtons();
+            } else if (button.id == 6 && detailItemIndex >= 0 && detailItemIndex < this.filteredItems.size()) {
+                // Edit item (admin)
+                ItemStack item = this.filteredItems.get(detailItemIndex);
+                String itemId = item.getItem().getRegistryName().toString();
+                ScreenManager.open(new GuiEditItem(this, this.categoryIndex, itemId));
             }
-        } else if (button.id == 0) {
-            Minecraft.getMinecraft().displayGuiScreen(new GuiShopCategories());
+        } else {
+            if (button.id == 0) {
+                Minecraft.getMinecraft().displayGuiScreen(new GuiShopCategories(adminMode));
+            } else if (button.id == 4) {
+                // Add item (admin)
+                ScreenManager.open(new GuiAddItem(this, this.categoryIndex));
+            }
         }
     }
 
@@ -323,15 +416,24 @@ public class GuiShopItems extends GuiScreen {
     protected void keyTyped(char typedChar, int keyCode) throws IOException {
         if (detailView && this.quantityField != null && this.quantityField.isFocused()) {
             if (keyCode == 28) {
-                // Enter key - trigger buy
                 this.actionPerformed(this.buttonList.get(0));
                 return;
             }
-            // Only allow digits, backspace, delete, left/right arrows
             if (Character.isDigit(typedChar) || keyCode == 14 || keyCode == 211 || keyCode == 203 || keyCode == 205) {
                 this.quantityField.textboxKeyTyped(typedChar, keyCode);
                 return;
             }
+        }
+        if (!detailView && this.searchField != null && this.searchField.isFocused()) {
+            if (keyCode == Keyboard.KEY_ESCAPE) {
+                this.searchField.setFocused(false);
+                return;
+            }
+            this.searchField.textboxKeyTyped(typedChar, keyCode);
+            searchQuery = this.searchField.getText();
+            updateFilteredItems();
+            this.scrollOffset = 0;
+            return;
         }
         super.keyTyped(typedChar, keyCode);
     }
@@ -363,14 +465,13 @@ public class GuiShopItems extends GuiScreen {
         }
     }
 
-    // Client-side balance is a placeholder — the server validates actual balance
     private double getClientBalance() {
         return 999999999.0;
     }
 
     private int getMaxScrollPages(int rowsPerPage) {
         int totalSlots = COLUMNS * rowsPerPage;
-        return Math.max(1, (int) Math.ceil((double) this.items.size() / (double) totalSlots));
+        return Math.max(1, (int) Math.ceil((double) this.filteredItems.size() / (double) totalSlots));
     }
 
     private String formatCategoryName(String raw) {
