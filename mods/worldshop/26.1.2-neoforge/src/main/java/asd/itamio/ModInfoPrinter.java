@@ -14,12 +14,12 @@ public class ModInfoPrinter {
     private static final String STATEMENT3 = "Hope you enjoy :)";
 
     private static final int WIDTH = 52;
-    private static final String HORIZ = "═";
-    private static final String VERT = "║";
-    private static final String TL = "╔";
-    private static final String TR = "╗";
-    private static final String BL = "╚";
-    private static final String BR = "╝";
+    private static final String HORIZ = "\u2550";
+    private static final String VERT = "\u2551";
+    private static final String TL = "\u2554";
+    private static final String TR = "\u2557";
+    private static final String BL = "\u255A";
+    private static final String BR = "\u255D";
 
     /**
      * Prints the mod info card to the given logger at INFO level.
@@ -32,13 +32,13 @@ public class ModInfoPrinter {
             "",
             TL + repeat(HORIZ, WIDTH - 2) + TR,
             VERT + padCenter("MOD INFO CARD", WIDTH - 2) + VERT,
-            VERT + repeat("─", WIDTH - 2) + VERT,
+            VERT + repeat("\u2500", WIDTH - 2) + VERT,
             VERT + padLeft("  Mod: " + modName, WIDTH - 2) + VERT,
             VERT + padLeft("  Version: " + version, WIDTH - 2) + VERT,
-            VERT + repeat("─", WIDTH - 2) + VERT,
+            VERT + repeat("\u2500", WIDTH - 2) + VERT,
             VERT + padLeft("  Author: " + AUTHOR, WIDTH - 2) + VERT,
             VERT + padLeft("  Contributor: " + CONTRIBUTOR, WIDTH - 2) + VERT,
-            VERT + repeat("─", WIDTH - 2) + VERT,
+            VERT + repeat("\u2500", WIDTH - 2) + VERT,
             VERT + padCenter(STATEMENT, WIDTH - 2) + VERT,
             VERT + padCenter(STATEMENT2, WIDTH - 2) + VERT,
             VERT + padCenter(STATEMENT3, WIDTH - 2) + VERT,

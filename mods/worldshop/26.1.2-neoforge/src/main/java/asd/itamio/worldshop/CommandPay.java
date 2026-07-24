@@ -101,7 +101,7 @@ public class CommandPay {
         }
 
         if (targetName.equalsIgnoreCase(player.getName().getString())) {
-            boolean isOp = source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+            boolean isOp = player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
             boolean isCreative = player.isCreative();
             if (!isOp && !isCreative) {
                 player.sendSystemMessage(Component.literal("\u00a7cYou can't pay yourself. (OP/Creative only)"));
@@ -131,7 +131,7 @@ public class CommandPay {
     private static UUID resolveTargetUuid(net.minecraft.server.MinecraftServer server, EconomyData economy, String name) {
         ServerPlayer onlinePlayer = server.getPlayerList().getPlayerByName(name);
         if (onlinePlayer != null) {
-            economy.registerPlayer(onlinePlayer.getGameProfile().name(), onlinePlayer.getUUID());
+            economy.registerPlayer(onlinePlayer.getScoreboardName(), onlinePlayer.getUUID());
             return onlinePlayer.getUUID();
         }
         return economy.getUuidByName(name);

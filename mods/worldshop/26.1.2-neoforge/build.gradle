@@ -44,7 +44,7 @@ runs {
     }
 
     gameTestServer {
-        systemProperty 'neoforge.enabledGameTestNamespaces', 'givemorethan64'
+        systemProperty 'neoforge.enabledGameTestNamespaces', 'worldshop'
     }
 
     // Data generation is not needed for this mod — no data gen run is configured.
@@ -65,7 +65,7 @@ tasks.withType(ProcessResources).configureEach {
             neo_version            : neo_version,
             loader_version_range   : loader_version_range,
             mod_id                 : 'worldshop',
-            mod_name               : 'World Shop',
+            mod_name               : 'Modern Shop',
             mod_license            : 'MIT',
             mod_version            : '1.0.0',
     ]

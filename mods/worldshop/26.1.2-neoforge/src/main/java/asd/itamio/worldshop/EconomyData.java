@@ -5,6 +5,8 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.UUIDUtil;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.datafix.DataFixTypes;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.saveddata.SavedDataType;
 
@@ -12,39 +14,80 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class EconomyData extends SavedData {
-    private static final Identifier DATA_ID = Identifier.fromNamespaceAndPath("worldshop", "economy");
-
+/**
+ * Built-in economy store, persisted per-level via SavedData.
+ * Implements {@link EconomyProvider} so it can be returned from
+ * {@link WorldShop#getEconomyProvider(ServerLevel)} when no external
+ * economy mod has registered a custom provider.
+ */
+public class EconomyData extends SavedData implements EconomyProvider {
+    private static final String DATA_NAME = "worldshop_economy";
     private final Map<UUID, Double> balances = new HashMap<>();
     private final Map<String, UUID> nameToUuid = new HashMap<>();
 
-    // Codec for serialization - declared before TYPE to avoid forward reference
-    private static final Codec<EconomyData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+    public static final Codec<EconomyData> CODEC = RecordCodecBuilder.create(
+        instance -> instance.group(
             Codec.unboundedMap(UUIDUtil.CODEC, Codec.DOUBLE)
-                    .fieldOf("Balances")
-                    .forGetter(data -> data.balances),
+                .fieldOf("balances")
+                .forGetter(data -> data.balances),
             Codec.unboundedMap(Codec.STRING, UUIDUtil.CODEC)
-                    .fieldOf("NameMap")
-                    .forGetter(data -> data.nameToUuid)
-    ).apply(instance, (balances, nameMap) -> {
-        EconomyData data = new EconomyData();
-        data.balances.putAll(balances);
-        data.nameToUuid.putAll(nameMap);
-        return data;
-    }));
-
-    public static final SavedDataType<EconomyData> TYPE = new SavedDataType<>(
-            DATA_ID,
-            EconomyData::new,
-            CODEC
+                .fieldOf("name_to_uuid")
+                .forGetter(data -> data.nameToUuid)
+        ).apply(instance, (balances, nameToUuid) -> {
+            EconomyData data = new EconomyData();
+            data.balances.putAll(balances);
+            data.nameToUuid.putAll(nameToUuid);
+            return data;
+        })
     );
 
-    private EconomyData() {
+    public static final SavedDataType<EconomyData> TYPE = new SavedDataType<>(
+        Identifier.fromNamespaceAndPath(WorldShop.MOD_ID, "economy"), EconomyData::new, CODEC, DataFixTypes.SAVED_DATA_MAP_DATA
+    );
+
+    public EconomyData() {
     }
 
-    public static EconomyData get(ServerLevel level) {
-        return level.getDataStorage().computeIfAbsent(TYPE);
+    public static EconomyData get(Level level) {
+        if (!(level instanceof ServerLevel serverLevel)) {
+            return new EconomyData();
+        }
+        return serverLevel.getDataStorage().computeIfAbsent(TYPE);
     }
+
+    // ---- EconomyProvider interface (ServerLevel-overloaded) ----
+
+    @Override
+    public double getBalance(ServerLevel level, UUID player) {
+        return getBalance(player);
+    }
+
+    @Override
+    public void setBalance(ServerLevel level, UUID player, double amount) {
+        setBalance(player, amount);
+    }
+
+    @Override
+    public void addBalance(ServerLevel level, UUID player, double amount) {
+        addBalance(player, amount);
+    }
+
+    @Override
+    public boolean subtractBalance(ServerLevel level, UUID player, double amount) {
+        return subtractBalance(player, amount);
+    }
+
+    @Override
+    public void registerPlayer(ServerLevel level, String name, UUID uuid) {
+        registerPlayer(name, uuid);
+    }
+
+    @Override
+    public UUID getUuidByName(ServerLevel level, String name) {
+        return getUuidByName(name);
+    }
+
+    // ---- Direct UUID-keyed accessors (used by commands/handlers) ----
 
     public double getBalance(UUID uuid) {
         return balances.getOrDefault(uuid, 0.0);
