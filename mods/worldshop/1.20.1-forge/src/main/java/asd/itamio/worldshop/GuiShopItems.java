@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 public class GuiShopItems extends Screen {
     private final ShopCategory category;
     private final int categoryIndex;
+    private final boolean adminMode;
     private final List<ItemStack> items;
     private List<ItemStack> filteredItems;
     private int scrollOffset = 0;
@@ -22,26 +24,62 @@ public class GuiShopItems extends Screen {
     private static final int SLOT_SIZE = 22;
     private static final int COLUMNS = 9;
     private static final int BOTTOM_BAR_HEIGHT = 50;
+    // In admin mode, extra height below each slot for X/E buttons
+    private static final int ADMIN_BUTTON_BAR_HEIGHT = 10;
+    private static final int BASE_CELL_SIZE = 26;
+    private static final int ADMIN_CELL_SIZE = BASE_CELL_SIZE + ADMIN_BUTTON_BAR_HEIGHT;
 
     private boolean detailView = false;
     private int detailItemIndex = -1;
     private EditBox quantityField;
     private boolean stackMode = false;
 
+    // Pending detail-view request: when set (>= 0), init() immediately enters
+    // the buy/detail view for this item. Used by the OPEN_ITEM_DETAIL packet
+    // (from /shop goto / clickable search results) to deep-link into the
+    // item's buy page. Reset to -1 after being consumed by init().
+    private int pendingDetailIndex = -1;
+
     private EditBox searchField;
     private String searchText = "";
 
+    // Admin buttons
+    private Button addBlockButton;
+
     public GuiShopItems(ShopCategory category, int categoryIndex) {
+        this(category, categoryIndex, false);
+    }
+
+    public GuiShopItems(ShopCategory category, int categoryIndex, boolean adminMode) {
         super(Component.literal("Shop - " + category.getName()));
         this.category = category;
         this.categoryIndex = categoryIndex;
+        this.adminMode = adminMode;
         this.items = category.getItems();
         this.filteredItems = new ArrayList<>(this.items);
+    }
+
+    /**
+     * Set a pending detail-view index that will be consumed by init() to
+     * immediately enter the buy/detail view for the specified item. Used by
+     * the OPEN_ITEM_DETAIL packet (from /shop goto / clickable search results)
+     * to deep-link into the item's buy page.
+     */
+    public void setPendingDetail(int index) {
+        this.pendingDetailIndex = index;
     }
 
     @Override
     protected void init() {
         super.init();
+        // Consume a pending deep-link request: enter the detail/buy view for
+        // the requested item before building buttons so rebuildButtons() draws
+        // the detail layout. Bounds-checked against the current item list.
+        if (pendingDetailIndex >= 0 && pendingDetailIndex < items.size()) {
+            detailView = true;
+            detailItemIndex = pendingDetailIndex;
+        }
+        pendingDetailIndex = -1;
         rebuildButtons();
         // Create search field at top
         int fieldW = 200;
@@ -69,16 +107,37 @@ public class GuiShopItems extends Screen {
         }
     }
 
+    private int getFilteredIndex(int originalIndex) {
+        // Map from the original item index to the filtered list index
+        // This is used for buy/sell operations that reference the original items list
+        return originalIndex;
+    }
+
     private int getOriginalIndex(int filteredIndex) {
         if (searchText.isEmpty()) {
             return filteredIndex;
         }
+        // Find the original index of the filtered item
         if (filteredIndex < 0 || filteredIndex >= filteredItems.size()) return -1;
         ItemStack target = filteredItems.get(filteredIndex);
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i) == target) return i;
         }
         return filteredIndex;
+    }
+
+    private void sendToServer(ShopPacket packet) {
+            WorldShop.NETWORK.sendToServer(packet);
+    }
+
+    /** Returns the actual cell size based on admin mode. */
+    private int getCellSize() {
+        return adminMode ? ADMIN_CELL_SIZE : BASE_CELL_SIZE;
+    }
+
+    /** Returns the Y position of the admin button bar for a cell (below the slot). */
+    private int getAdminButtonY(int cellY) {
+        return cellY + SLOT_SIZE + 1;
     }
 
     private void rebuildButtons() {
@@ -89,42 +148,54 @@ public class GuiShopItems extends Screen {
             int centerX = this.width / 2;
             int bottomY = this.height - 10;
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7aBuy"), button -> {
-                int qty = getQuantity();
-                if (qty > 0 && detailItemIndex >= 0) {
-                    ItemStack item = this.items.get(detailItemIndex);
-                    int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
-                    WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, this.detailItemIndex, actualItems));
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7aBuy"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    int qty = getQuantity();
+                    if (qty > 0 && detailItemIndex >= 0) {
+                        ItemStack item = GuiShopItems.this.items.get(detailItemIndex);
+                        int actualItems = stackMode ? qty * item.getMaxStackSize() : qty;
+                        sendToServer(ShopPacket.buyItem(GuiShopItems.this.categoryIndex, GuiShopItems.this.detailItemIndex, actualItems));
+                    }
                 }
             }).bounds(centerX - btnW - 2, bottomY - btnH * 2 - 8, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack"), button -> {
-                this.detailView = false;
-                this.detailItemIndex = -1;
-                rebuildButtons();
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    GuiShopItems.this.detailView = false;
+                    GuiShopItems.this.detailItemIndex = -1;
+                    rebuildButtons();
+                }
             }).bounds(centerX + 2, bottomY - btnH * 2 - 8, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal(stackMode ? "\u00a77Mode: Stacks" : "\u00a77Mode: Items"), button -> {
-                this.stackMode = !this.stackMode;
-                if (this.quantityField != null) {
-                    this.quantityField.setValue("1");
+            this.addRenderableWidget(Button.builder(Component.literal(stackMode ? "\u00a77Mode: Stacks" : "\u00a77Mode: Items"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    GuiShopItems.this.stackMode = !GuiShopItems.this.stackMode;
+                    if (GuiShopItems.this.quantityField != null) {
+                        GuiShopItems.this.quantityField.setValue("1");
+                    }
+                    rebuildButtons();
                 }
-                rebuildButtons();
             }).bounds(centerX - btnW - 2, bottomY - btnH - 4, btnW, btnH).build());
 
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7eMax Afford"), button -> {
-                if (detailItemIndex >= 0 && detailItemIndex < this.items.size()) {
-                    ItemStack item = this.items.get(detailItemIndex);
-                    double buyPrice = WorldShop.getPriceEngine().getBuyPrice(item);
-                    double balance = 999999999.0;
-                    int maxAfford = (int) (balance / buyPrice);
-                    if (stackMode) {
-                        int maxStacks = maxAfford / item.getMaxStackSize();
-                        if (this.quantityField != null) {
-                            this.quantityField.setValue(String.valueOf(maxStacks));
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7eMax Afford"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    if (detailItemIndex >= 0 && detailItemIndex < GuiShopItems.this.items.size()) {
+                        ItemStack item = GuiShopItems.this.items.get(detailItemIndex);
+                        double buyPrice = WorldShop.getPriceEngine().getBuyPrice(item);
+                        double balance = 999999999.0;
+                        int maxAfford = (int) (balance / buyPrice);
+                        if (stackMode) {
+                            int maxStacks = maxAfford / item.getMaxStackSize();
+                            if (GuiShopItems.this.quantityField != null) {
+                                GuiShopItems.this.quantityField.setValue(String.valueOf(maxStacks));
+                            }
+                        } else if (GuiShopItems.this.quantityField != null) {
+                            GuiShopItems.this.quantityField.setValue(String.valueOf(maxAfford));
                         }
-                    } else if (this.quantityField != null) {
-                        this.quantityField.setValue(String.valueOf(maxAfford));
                     }
                 }
             }).bounds(centerX + 2, bottomY - btnH - 4, btnW, btnH).build());
@@ -136,19 +207,40 @@ public class GuiShopItems extends Screen {
             this.quantityField.setValue("1");
             this.quantityField.setFocused(true);
             this.quantityField.setMaxLength(5);
-            this.quantityField.setFilter(s -> s.matches("\\d*"));
+            this.quantityField.setFilter(new java.util.function.Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return s.matches("\\d*");
+            }
+        });
             this.addRenderableWidget(this.quantityField);
         } else {
-            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack to Categories"), button -> {
-                Minecraft.getInstance().setScreen(new GuiShopCategories());
+            this.addRenderableWidget(Button.builder(Component.literal("\u00a7cBack to Categories"), new Button.OnPress() {
+                @Override
+                public void onPress(Button button) {
+                    // Preserve the admin/player mode: if this screen was
+                    // opened in player mode (adminMode=false), force the
+                    // categories screen back into player mode too. Otherwise
+                    // an OP player who used /shop player would see admin
+                    // controls re-appear after browsing a category.
+                    ScreenManager.open(new GuiShopCategories(!adminMode));
+                }
             }).bounds(this.width / 2 - 100, this.height - 22, 200, 20).build());
+
+            // Admin: Add Block button
+            if (adminMode) {
+                this.addBlockButton = Button.builder(
+                        Component.literal("\u00a7a+ Add Block"),
+                        btn -> ScreenManager.open(new GuiAddItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, GuiShopItems.this.category.getName()))
+                ).bounds(this.width / 2 - 50, this.height - 45, 100, 20).build();
+                this.addRenderableWidget(this.addBlockButton);
+            }
 
             // Re-add search field
             if (this.searchField != null) {
                 int fieldW = 200;
                 int fieldH = 16;
                 this.searchField.setWidth(fieldW);
-                this.searchField.setHeight(fieldH);
                 this.searchField.setX(this.width / 2 - fieldW / 2);
                 this.searchField.setY(55);
                 this.addRenderableWidget(this.searchField);
@@ -160,6 +252,19 @@ public class GuiShopItems extends Screen {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
         guiGraphics.fill(0, 0, this.width, this.height, -870441442);
+
+        // Draw a lighter background behind the search bar for better visibility
+        // Only show the search bar on the items grid view — hide it when in
+        // the detail/buy view so the detail page is clean and uncluttered.
+        if (this.searchField != null && !detailView) {
+            int sbX = this.width / 2 - 102;
+            int sbY = 53;
+            int sbW = 204;
+            int sbH = 20;
+            guiGraphics.fill(sbX, sbY, sbX + sbW, sbY + sbH, 0xFF3A3A3A);
+            guiGraphics.fill(sbX + 1, sbY + 1, sbX + sbW - 1, sbY + sbH - 1, 0xFF2E2E2E);
+            this.searchField.render(guiGraphics, mouseX, mouseY, partialTick);
+        }
 
         if (detailView) {
             drawDetailView(guiGraphics, mouseX, mouseY, partialTick);
@@ -178,7 +283,7 @@ public class GuiShopItems extends Screen {
         // Draw search label above search field
         guiGraphics.drawCenteredString(this.font, "\u00a77Search:", this.width / 2, 43, 0xAAAAAA);
 
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int gridWidth = COLUMNS * cellSize - 4;
         int guiLeft = (this.width - gridWidth) / 2;
         int guiTop = 75; // Move down to make room for search bar
@@ -195,8 +300,22 @@ public class GuiShopItems extends Screen {
             int y = guiTop + row * cellSize;
             int itemIndex = startIndex + i;
             ItemStack item = displayItems.get(itemIndex);
+            // Draw the item slot at the top of the cell
             drawSlotBackground(guiGraphics, x, y, SLOT_SIZE, SLOT_SIZE);
             guiGraphics.renderItem(item, x + 3, y + 3);
+
+            // In admin mode, draw X and E buttons BELOW the slot (not overlapping the item)
+            if (adminMode) {
+                int btnY = getAdminButtonY(y);
+                // E (Edit) button on the left below the slot
+                int editBtnWidth = 12;
+                guiGraphics.fill(x, btnY, x + editBtnWidth, btnY + ADMIN_BUTTON_BAR_HEIGHT - 1, 0xCC44AAFF);
+                guiGraphics.drawString(this.font, "\u00a7b\u00a7lE", x + 2, btnY + 1, 0xFFFFFF);
+                // X (Remove) button on the right below the slot
+                int xBtnStartX = x + SLOT_SIZE - editBtnWidth;
+                guiGraphics.fill(xBtnStartX, btnY, x + SLOT_SIZE, btnY + ADMIN_BUTTON_BAR_HEIGHT - 1, 0xCCFF4444);
+                guiGraphics.drawString(this.font, "\u00a7c\u00a7lx", xBtnStartX + 2, btnY + 1, 0xFFFFFF);
+            }
         }
 
         for (int i = 0; i < visibleCount && startIndex + i < displayItems.size(); i++) {
@@ -213,9 +332,17 @@ public class GuiShopItems extends Screen {
             tooltip.add(Component.literal("\u00a7f" + item.getHoverName().getString()));
             tooltip.add(Component.literal("\u00a7aBuy: $" + String.format("%.2f", buyPrice)));
             tooltip.add(Component.literal("\u00a7cSell: $" + String.format("%.2f", sellPrice)));
-            tooltip.add(Component.literal(""));
-            tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
-            tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            if (adminMode) {
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.literal("\u00a7cX: Remove item"));
+                tooltip.add(Component.literal("\u00a7eEdit: Edit item"));
+                tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
+                tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            } else {
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.literal("\u00a7eLeft-click: Buy menu"));
+                tooltip.add(Component.literal("\u00a7bRight-click: Quick buy stack"));
+            }
             guiGraphics.renderTooltip(this.font, tooltip, java.util.Optional.empty(), mouseX, mouseY);
             break;
         }
@@ -227,8 +354,6 @@ public class GuiShopItems extends Screen {
             String scrollInfo = "\u00a77Scroll: " + (this.scrollOffset + 1) + "/" + getMaxScrollPages(rowsPerPage);
             guiGraphics.drawCenteredString(this.font, scrollInfo, this.width / 2, barTop + 2, 0xFFFFFF);
         }
-        String footer = "\u00a77Left-click: Buy menu | Right-click: Quick buy stack | ESC: Back";
-        guiGraphics.drawCenteredString(this.font, footer, this.width / 2, barTop + 14, 0xAAAAAA);
     }
 
     private void drawDetailView(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
@@ -246,9 +371,11 @@ public class GuiShopItems extends Screen {
 
         y += 16;
         int itemCenterY = y + 24;
+        // Draw centered slot (48x48)
         drawSlotBackground(guiGraphics, centerX - 24, itemCenterY - 24, 48, 48);
+        // Render item centered in the slot: translate so the 32x32 scaled item is centered
         guiGraphics.pose().pushPose();
-        guiGraphics.pose().translate((float) (centerX - 8), (float) (itemCenterY - 8), 0.0f);
+        guiGraphics.pose().translate((float) (centerX - 16), (float) (itemCenterY - 16), 0.0f);
         guiGraphics.pose().scale(2.0f, 2.0f, 2.0f);
         guiGraphics.renderItem(item, 0, 0);
         guiGraphics.pose().popPose();
@@ -279,7 +406,7 @@ public class GuiShopItems extends Screen {
             this.searchField.mouseClicked(mouseX, mouseY, mouseButton);
         }
 
-        for (var widget : this.renderables) {
+        for (var widget : this.children()) {
             if (widget instanceof Button button) {
                 if (button.mouseClicked(mouseX, mouseY, mouseButton)) {
                     return true;
@@ -294,7 +421,7 @@ public class GuiShopItems extends Screen {
             return true;
         }
 
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int gridWidth = COLUMNS * cellSize - 4;
         int guiLeft = (this.width - gridWidth) / 2;
         int guiTop = 75;
@@ -309,19 +436,40 @@ public class GuiShopItems extends Screen {
             int x = guiLeft + col * cellSize;
             int row = i / COLUMNS;
             int y = guiTop + row * cellSize;
-            if (!isMouseInSlot((int) mouseX, (int) mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) continue;
             int displayIndex = startIndex + i;
             int originalIndex = getOriginalIndex(displayIndex);
             if (originalIndex < 0) continue;
-            if (mouseButton == 0) {
-                this.detailView = true;
-                this.detailItemIndex = originalIndex;
-                this.stackMode = false;
-                rebuildButtons();
-            } else if (mouseButton == 1) {
-                quickBuyStack(originalIndex);
+
+            // Check admin button clicks first (only left click) — buttons are BELOW the slot now
+            if (mouseButton == 0 && adminMode) {
+                int btnY = getAdminButtonY(y);
+                int editBtnWidth = 12;
+                int xBtnStartX = x + SLOT_SIZE - editBtnWidth;
+                // E (Edit) button below-left
+                if (mouseX >= x && mouseX < x + editBtnWidth && mouseY >= btnY && mouseY < btnY + ADMIN_BUTTON_BAR_HEIGHT - 1) {
+                    ItemStack item = GuiShopItems.this.items.get(originalIndex);
+                    ScreenManager.open(new GuiEditItem(GuiShopItems.this, GuiShopItems.this.categoryIndex, item));
+                    return true;
+                }
+                // X (Remove) button below-right
+                if (mouseX >= xBtnStartX && mouseX < x + SLOT_SIZE && mouseY >= btnY && mouseY < btnY + ADMIN_BUTTON_BAR_HEIGHT - 1) {
+                    sendRemoveItem(originalIndex);
+                    return true;
+                }
             }
-            return true;
+
+            // Check click on the item slot area (not admin buttons)
+            if (isMouseInSlot((int) mouseX, (int) mouseY, x, y, SLOT_SIZE, SLOT_SIZE)) {
+                if (mouseButton == 0) {
+                    this.detailView = true;
+                    this.detailItemIndex = originalIndex;
+                    this.stackMode = false;
+                    rebuildButtons();
+                } else if (mouseButton == 1) {
+                    quickBuyStack(originalIndex);
+                }
+                return true;
+            }
         }
 
         return super.mouseClicked(mouseX, mouseY, mouseButton);
@@ -340,7 +488,20 @@ public class GuiShopItems extends Screen {
         if (quantity <= 0) {
             return;
         }
-        WorldShop.NETWORK.sendToServer(ShopPacket.buyItem(this.categoryIndex, itemIndex, quantity));
+        sendToServer(ShopPacket.buyItem(this.categoryIndex, itemIndex, quantity));
+    }
+
+    /**
+     * Send a packet to remove an item from the category (admin/OP only).
+     * The server will verify permissions.
+     */
+    private void sendRemoveItem(int itemIndex) {
+        sendToServer(ShopPacket.removeItem(this.categoryIndex, itemIndex));
+        // Remove from local list for responsive UI
+        if (itemIndex >= 0 && itemIndex < items.size()) {
+            items.remove(itemIndex);
+            applyFilter();
+        }
     }
 
     @Override
@@ -348,7 +509,7 @@ public class GuiShopItems extends Screen {
         if (detailView) {
             return false;
         }
-        int cellSize = 26;
+        int cellSize = getCellSize();
         int guiTop = 75;
         int availableHeight = this.height - guiTop - BOTTOM_BAR_HEIGHT;
         int rowsPerPage = Math.max(1, availableHeight / cellSize);
@@ -374,7 +535,7 @@ public class GuiShopItems extends Screen {
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (detailView && this.quantityField != null && this.quantityField.isFocused()) {
             if (keyCode == 257 || keyCode == 335) {
-                for (var widget : this.renderables) {
+                for (var widget : this.children()) {
                     if (widget instanceof Button button && button.getMessage().getString().contains("Buy")) {
                         button.onPress();
                         return true;

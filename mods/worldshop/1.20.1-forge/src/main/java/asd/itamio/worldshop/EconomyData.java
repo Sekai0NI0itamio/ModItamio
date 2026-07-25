@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class EconomyData extends SavedData {
+public class EconomyData extends SavedData implements EconomyProvider {
     private static final String DATA_NAME = "WorldShopEconomy";
     private final Map<UUID, Double> balances = new HashMap<>();
     private final Map<String, UUID> nameToUuid = new HashMap<>();
@@ -17,45 +17,23 @@ public class EconomyData extends SavedData {
         super();
     }
 
+    public static EconomyData get(ServerLevel level) {
+        return level.getDataStorage().computeIfAbsent(new java.util.function.Function<CompoundTag, EconomyData>() {
+            @Override
+            public EconomyData apply(CompoundTag tag) {
+                return new EconomyData(tag);
+            }
+        }, new java.util.function.Supplier<EconomyData>() {
+            @Override
+            public EconomyData get() {
+                return new EconomyData();
+            }
+        }, DATA_NAME);
+    }
+
     public EconomyData(CompoundTag nbt) {
         this();
         load(nbt);
-    }
-
-    public static EconomyData get(ServerLevel level) {
-        return level.getDataStorage().computeIfAbsent(EconomyData::new, EconomyData::new, DATA_NAME);
-    }
-
-    public double getBalance(UUID uuid) {
-        return balances.getOrDefault(uuid, 0.0);
-    }
-
-    public void setBalance(UUID uuid, double amount) {
-        balances.put(uuid, amount);
-        setDirty();
-    }
-
-    public void addBalance(UUID uuid, double amount) {
-        double current = getBalance(uuid);
-        setBalance(uuid, current + amount);
-    }
-
-    public boolean subtractBalance(UUID uuid, double amount) {
-        double current = getBalance(uuid);
-        if (current >= amount) {
-            setBalance(uuid, current - amount);
-            return true;
-        }
-        return false;
-    }
-
-    public void registerPlayer(String name, UUID uuid) {
-        nameToUuid.put(name.toLowerCase(), uuid);
-        setDirty();
-    }
-
-    public UUID getUuidByName(String name) {
-        return nameToUuid.get(name.toLowerCase());
     }
 
     public void load(CompoundTag nbt) {
@@ -98,5 +76,69 @@ public class EconomyData extends SavedData {
         compound.put("NameMap", nameTag);
 
         return compound;
+    }
+
+    public double getBalance(UUID uuid) {
+        return balances.getOrDefault(uuid, 0.0);
+    }
+
+    public void setBalance(UUID uuid, double amount) {
+        balances.put(uuid, amount);
+        setDirty();
+    }
+
+    public void addBalance(UUID uuid, double amount) {
+        double current = getBalance(uuid);
+        setBalance(uuid, current + amount);
+    }
+
+    public boolean subtractBalance(UUID uuid, double amount) {
+        double current = getBalance(uuid);
+        if (current >= amount) {
+            setBalance(uuid, current - amount);
+            return true;
+        }
+        return false;
+    }
+
+    public void registerPlayer(String name, UUID uuid) {
+        nameToUuid.put(name.toLowerCase(), uuid);
+        setDirty();
+    }
+
+    public UUID getUuidByName(String name) {
+        return nameToUuid.get(name.toLowerCase());
+    }
+
+    // ========== EconomyProvider interface methods ==========
+
+    @Override
+    public double getBalance(ServerLevel level, UUID player) {
+        return getBalance(player);
+    }
+
+    @Override
+    public void setBalance(ServerLevel level, UUID player, double amount) {
+        setBalance(player, amount);
+    }
+
+    @Override
+    public void addBalance(ServerLevel level, UUID player, double amount) {
+        addBalance(player, amount);
+    }
+
+    @Override
+    public boolean subtractBalance(ServerLevel level, UUID player, double amount) {
+        return subtractBalance(player, amount);
+    }
+
+    @Override
+    public void registerPlayer(ServerLevel level, String name, UUID uuid) {
+        registerPlayer(name, uuid);
+    }
+
+    @Override
+    public UUID getUuidByName(ServerLevel level, String name) {
+        return getUuidByName(name);
     }
 }

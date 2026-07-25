@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -30,8 +31,11 @@ public class GuiSellGui extends Screen {
     protected void init() {
         super.init();
         this.clearWidgets();
-        this.addRenderableWidget(Button.builder(Component.literal("\u00a7aSell All Items"), button -> {
-            sellAllItems();
+        this.addRenderableWidget(Button.builder(Component.literal("\u00a7aSell All Items"), new Button.OnPress() {
+            @Override
+            public void onPress(Button button) {
+                sellAllItems();
+            }
         }).bounds(this.width / 2 - 100, this.height - 25, 200, 20).build());
     }
 
@@ -41,6 +45,10 @@ public class GuiSellGui extends Screen {
         if (!soldItems) {
             returnItemsToInventory();
         }
+    }
+
+    private void sendToServer(ShopPacket packet) {
+            WorldShop.NETWORK.sendToServer(packet);
     }
 
     private int getGuiLeft() {
@@ -67,7 +75,6 @@ public class GuiSellGui extends Screen {
         guiGraphics.drawCenteredString(this.font, "\u00a76\u00a7lSell Items", this.width / 2, 8, 0xFFFFFF);
         guiGraphics.drawCenteredString(this.font, "\u00a77Items to Sell", this.width / 2, getSellTop() - 10, 0xAAAAAA);
 
-        // Draw sell slots
         for (int i = 0; i < 27; i++) {
             int col = i % COLUMNS;
             int row = i / COLUMNS;
@@ -85,7 +92,6 @@ public class GuiSellGui extends Screen {
 
         Player player = Minecraft.getInstance().player;
         if (player != null) {
-            // Draw main inventory (3 rows)
             for (int row = 0; row < 3; row++) {
                 for (int col = 0; col < COLUMNS; col++) {
                     int x = guiLeft + col * CELL_SIZE;
@@ -99,7 +105,6 @@ public class GuiSellGui extends Screen {
                 }
             }
 
-            // Draw hotbar
             int hotbarY = getInvTop() + 3 * CELL_SIZE + 6;
             for (int col = 0; col < COLUMNS; col++) {
                 int x = guiLeft + col * CELL_SIZE;
@@ -132,7 +137,6 @@ public class GuiSellGui extends Screen {
             break;
         }
 
-        // Tooltips for inventory
         if (player != null) {
             for (int row = 0; row < 3; row++) {
                 for (int col = 0; col < COLUMNS; col++) {
@@ -153,7 +157,6 @@ public class GuiSellGui extends Screen {
                 }
             }
 
-            // Tooltips for hotbar
             int hotbarY = getInvTop() + 3 * CELL_SIZE + 6;
             for (int col = 0; col < COLUMNS; col++) {
                 int x = guiLeft + col * CELL_SIZE;
@@ -180,8 +183,7 @@ public class GuiSellGui extends Screen {
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
-        // Handle widget buttons
-        for (var widget : this.renderables) {
+        for (var widget : this.children()) {
             if (widget instanceof Button button) {
                 if (button.mouseClicked(mouseX, mouseY, mouseButton)) {
                     return true;
@@ -351,7 +353,7 @@ public class GuiSellGui extends Screen {
             return;
         }
         soldItems = true;
-        WorldShop.NETWORK.sendToServer(ShopPacket.sellGuiItems(toSell));
+        sendToServer(ShopPacket.sellGuiItems(toSell));
         for (int i = 0; i < sellSlots.size(); i++) {
             sellSlots.set(i, ItemStack.EMPTY);
         }
