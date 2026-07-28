@@ -3,6 +3,7 @@
 const PAGE_SIZE = 20;
 let ALL_MODS = [];
 let PARAMS = { q: "", c: [], l: [], v: [], s: "downloads", p: 1 };
+let DRAFT_Q = "";
 let FACET_SEARCH = { cat: "", loader: "", version: "" };
 let _activeElement = null;
 let _activeSelection = { start: 0, end: 0 };
@@ -53,6 +54,7 @@ function renderSearchInlineAd() {
 function readUrl() {
   const p = new URLSearchParams(location.search);
   PARAMS.q = p.get("q") || "";
+  DRAFT_Q = PARAMS.q;
   PARAMS.c = p.getAll("c");
   PARAMS.l = p.getAll("l");
   PARAMS.v = p.getAll("v");
@@ -76,6 +78,7 @@ function writeUrl() {
 function syncSearchBox() {
   const ns = document.getElementById("nav-search");
   if (ns) ns.value = PARAMS.q;
+  DRAFT_Q = PARAMS.q;
 }
 
 function saveState() {
@@ -166,6 +169,7 @@ function setSort(s) {
 function clearFilters() {
   saveState();
   PARAMS.q = ""; PARAMS.c = []; PARAMS.l = []; PARAMS.v = []; PARAMS.p = 1;
+  DRAFT_Q = "";
   FACET_SEARCH = { cat: "", loader: "", version: "" };
   writeUrl(); render();
 }
@@ -173,28 +177,43 @@ function clearFilters() {
 function goPage(p) { PARAMS.p = p; writeUrl(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
 
 function onMainSearchInput(e) {
-  saveState();
-  PARAMS.q = e.target.value;
-  PARAMS.p = 1;
-  writeUrl(); render();
+  DRAFT_Q = e.target.value;
+  const clearBtn = document.querySelector(".main-search-bar__clear");
+  if (clearBtn) {
+    clearBtn.style.display = DRAFT_Q ? "" : "none";
+  } else if (DRAFT_Q) {
+    const bar = e.target.closest(".main-search-bar");
+    if (bar) {
+      const btn = document.createElement("button");
+      btn.className = "main-search-bar__clear";
+      btn.innerHTML = "&times;";
+      btn.onclick = clearMainSearch;
+      bar.appendChild(btn);
+    }
+  }
 }
 
-function onFacetSearchInput(type, e) {
+function onMainSearchKeydown(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    commitMainSearch();
+  }
+}
+
+function commitMainSearch() {
   saveState();
-  FACET_SEARCH[type] = e.target.value;
+  PARAMS.q = DRAFT_Q.trim();
+  PARAMS.p = 1;
+  writeUrl();
   render();
 }
 
-function render() {
-  const root = document.getElementById("app");
-  const filtered = sortMods(applyFilters(ALL_MODS));
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-  PARAMS.p = Math.min(PARAMS.p, totalPages);
-  const page = filtered.slice((PARAMS.p - 1) * PAGE_SIZE, PARAMS.p * PAGE_SIZE);
+function onFacetSearchInput(type, e) {
+  FACET_SEARCH[type] = e.target.value;
+  renderSidebarFacets();
+}
 
-  const hasFilters = !!(PARAMS.q || PARAMS.c.length || PARAMS.l.length || PARAMS.v.length);
-  const allCounts = allFacetCounts();
-
+function buildSidebarHtml(hasFilters, allCounts) {
   function facetMatches(facetVal, searchTerm) {
     if (!searchTerm) return true;
     return facetVal.toLowerCase().includes(searchTerm.toLowerCase());
@@ -262,6 +281,45 @@ function render() {
   }
   versionHtml += '</div>';
 
+  return '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()">' + ICONS.filter + ' Clear filters</button>' +
+    catHtml + loaderHtml + versionHtml +
+    renderSidebarAd();
+}
+
+function renderSidebarFacets() {
+  const sidebar = document.querySelector(".search-sidebar");
+  if (!sidebar) return;
+  const facetInput = document.activeElement;
+  let facetId = null;
+  let facetSelStart = 0;
+  let facetSelEnd = 0;
+  if (facetInput && facetInput.classList.contains("facet-search__input")) {
+    facetId = facetInput.id;
+    facetSelStart = facetInput.selectionStart || 0;
+    facetSelEnd = facetInput.selectionEnd || 0;
+  }
+  const allCounts = allFacetCounts();
+  const hasFilters = !!(PARAMS.q || PARAMS.c.length || PARAMS.l.length || PARAMS.v.length);
+  sidebar.innerHTML = buildSidebarHtml(hasFilters, allCounts);
+  if (facetId) {
+    const el = document.getElementById(facetId);
+    if (el) {
+      el.focus();
+      try { el.setSelectionRange(facetSelStart, facetSelEnd); } catch (e) {}
+    }
+  }
+}
+
+function render() {
+  const root = document.getElementById("app");
+  const filtered = sortMods(applyFilters(ALL_MODS));
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  PARAMS.p = Math.min(PARAMS.p, totalPages);
+  const page = filtered.slice((PARAMS.p - 1) * PAGE_SIZE, PARAMS.p * PAGE_SIZE);
+
+  const hasFilters = !!(PARAMS.q || PARAMS.c.length || PARAMS.l.length || PARAMS.v.length);
+  const allCounts = allFacetCounts();
+
   resetCardIndex();
   const selLoader = PARAMS.l[0] || "";
   const selVer = PARAMS.v[0] || "";
@@ -283,11 +341,12 @@ function render() {
     '<button class="sort-btn' + (PARAMS.s === s ? " sort-btn--active" : "") + '" onclick="setSort(\'' + s + '\')">' + escapeHtml(s.charAt(0).toUpperCase() + s.slice(1)) + '</button>'
   ).join("");
 
+  const searchVal = DRAFT_Q;
+  const showClear = !!searchVal;
+
   root.innerHTML = '<div class="search-layout">' +
     '<aside class="search-sidebar">' +
-      '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()">' + ICONS.filter + ' Clear filters</button>' +
-      catHtml + loaderHtml + versionHtml +
-      renderSidebarAd() +
+      buildSidebarHtml(hasFilters, allCounts) +
     '</aside>' +
     '<div class="search-main">' +
       '<div class="sort-bar">' +
@@ -296,8 +355,8 @@ function render() {
       '</div>' +
       '<div class="main-search-bar">' +
         '<span class="main-search-bar__icon">' + ICONS.search + '</span>' +
-        '<input type="text" id="main-search" class="main-search-bar__input" placeholder="Search mods…" value="' + escapeHtml(PARAMS.q) + '" oninput="onMainSearchInput(event)">' +
-        (PARAMS.q ? '<button class="main-search-bar__clear" onclick="clearMainSearch()">&times;</button>' : '') +
+        '<input type="text" id="main-search" class="main-search-bar__input" placeholder="Search mods…" value="' + escapeHtml(searchVal) + '" oninput="onMainSearchInput(event)" onkeydown="onMainSearchKeydown(event)">' +
+        (showClear ? '<button class="main-search-bar__clear" onclick="clearMainSearch()">&times;</button>' : '') +
       '</div>' +
       gridHtml +
       (totalPages > 1 ? renderPagination(totalPages) : "") +
@@ -308,13 +367,13 @@ function render() {
 }
 
 function clearFacetSearch(type) {
-  saveState();
   FACET_SEARCH[type] = "";
-  render();
+  renderSidebarFacets();
 }
 
 function clearMainSearch() {
   saveState();
+  DRAFT_Q = "";
   PARAMS.q = "";
   PARAMS.p = 1;
   writeUrl();
