@@ -291,15 +291,13 @@ function render() {
     '</aside>' +
     '<div class="search-main">' +
       '<div class="sort-bar">' +
-        '<div class="sort-bar__left">' +
-          '<div class="main-search-box">' +
-            '<span class="main-search-box__icon">' + ICONS.search + '</span>' +
-            '<input type="text" id="main-search" class="main-search-box__input" placeholder="Search mods…" value="' + escapeHtml(PARAMS.q) + '" oninput="onMainSearchInput(event)">' +
-            (PARAMS.q ? '<button class="main-search-box__clear" onclick="clearMainSearch()">&times;</button>' : '') +
-          '</div>' +
-          '<div class="sort-bar__count">' + filtered.length + ' result' + (filtered.length === 1 ? "" : "s") + '</div>' +
-        '</div>' +
+        '<div class="sort-bar__count">' + filtered.length + ' result' + (filtered.length === 1 ? "" : "s") + '</div>' +
         '<div class="sort-bar__options">' + sortButtons + '</div>' +
+      '</div>' +
+      '<div class="main-search-bar">' +
+        '<span class="main-search-bar__icon">' + ICONS.search + '</span>' +
+        '<input type="text" id="main-search" class="main-search-bar__input" placeholder="Search mods…" value="' + escapeHtml(PARAMS.q) + '" oninput="onMainSearchInput(event)">' +
+        (PARAMS.q ? '<button class="main-search-bar__clear" onclick="clearMainSearch()">&times;</button>' : '') +
       '</div>' +
       gridHtml +
       (totalPages > 1 ? renderPagination(totalPages) : "") +

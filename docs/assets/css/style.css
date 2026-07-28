@@ -849,55 +849,45 @@ body.has-hero .page { padding-top: 0; }
 .clear-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .clear-btn svg { width: 14px; height: 14px; }
 
-/* ========== MAIN SEARCH BOX (in sort bar) ========== */
-.sort-bar__left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex: 1;
-  min-width: 0;
-  flex-wrap: wrap;
-}
-.main-search-box {
+/* ========== MAIN SEARCH BAR (full-width above mod list) ========== */
+.main-search-bar {
   position: relative;
   display: flex;
   align-items: center;
-  flex: 1;
-  min-width: 220px;
-  max-width: 420px;
+  margin-bottom: 20px;
 }
-.main-search-box__icon {
+.main-search-bar__icon {
   position: absolute;
-  left: 14px;
+  left: 16px;
   color: var(--faint);
   pointer-events: none;
   z-index: 1;
 }
-.main-search-box__icon svg { width: 16px; height: 16px; }
-.main-search-box__input {
+.main-search-bar__icon svg { width: 18px; height: 18px; }
+.main-search-bar__input {
   width: 100%;
-  height: 40px;
-  padding: 0 36px 0 42px;
+  height: 48px;
+  padding: 0 48px 0 48px;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   background: var(--surface);
   color: var(--ink);
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
   font-family: inherit;
 }
-.main-search-box__input:focus { border-color: var(--leaf); box-shadow: 0 0 0 3px oklch(60% .1 145 / .15); }
-.main-search-box__clear {
+.main-search-bar__input:focus { border-color: var(--leaf); box-shadow: 0 0 0 3px oklch(60% .1 145 / .15); }
+.main-search-bar__clear {
   position: absolute;
-  right: 8px;
-  width: 24px;
-  height: 24px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: none;
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -906,7 +896,7 @@ body.has-hero .page { padding-top: 0; }
   transition: background .15s, color .15s;
   padding: 0;
 }
-.main-search-box__clear:hover { background: var(--clay-soft); color: var(--clay); }
+.main-search-bar__clear:hover { background: var(--clay-soft); color: var(--clay); }
 
 /* ========== FACET SEARCH (within sidebar filter groups) ========== */
 .facet-search {
@@ -2054,8 +2044,6 @@ textarea.form-input { resize: vertical; min-height: 100px; border-radius: var(--
   .ad-slot { margin: 32px 0; }
   .site-footer { padding: 24px 18px; }
   .site-footer__inner { flex-direction: column; text-align: center; }
-  .main-search-box { max-width: none; min-width: 100%; }
-  .sort-bar { flex-direction: column; align-items: stretch; }
   .sort-bar__options { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
 }
 
