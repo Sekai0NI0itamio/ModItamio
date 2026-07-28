@@ -649,7 +649,7 @@ body.has-hero .page { padding-top: 0; }
   align-items: center;
   padding: 14px 18px;
   border-radius: var(--radius-md);
-  gap: 0;
+  gap: 16px;
   background: var(--surface);
 }
 .mod-list .mod-card:hover {
@@ -674,22 +674,19 @@ body.has-hero .page { padding-top: 0; }
   border-radius: var(--radius-sm);
 }
 .mod-list .mod-card__header {
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
 }
 .mod-list .mod-card__title {
   font-size: 15px;
-  white-space: nowrap;
 }
 .mod-list .mod-card__summary {
   -webkit-line-clamp: 1;
   font-size: 13px;
-  flex: 1;
-  min-width: 0;
 }
 .mod-list .mod-card__tags {
-  margin-top: 0;
   flex-shrink: 0;
 }
 .mod-list .mod-card__footer {
@@ -697,8 +694,6 @@ body.has-hero .page { padding-top: 0; }
   padding-top: 0;
   border-top: none;
   flex-shrink: 0;
-  margin-left: auto;
-  padding-left: 16px;
   gap: 12px;
 }
 
