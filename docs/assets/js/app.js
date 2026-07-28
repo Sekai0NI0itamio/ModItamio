@@ -37,33 +37,6 @@ const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 function $(sel, root) { return (root || document).querySelector(sel); }
 function $$(sel, root) { return [...(root || document).querySelectorAll(sel)]; }
 
-function showAdPopup() {
-  if (document.getElementById("ad-popup-overlay")) return;
-  var overlay = document.createElement("div");
-  overlay.id = "ad-popup-overlay";
-  overlay.innerHTML =
-    '<div class="ad-popup">' +
-      '<button class="ad-popup__close" onclick="closeAdPopup()" title="Close">&times;</button>' +
-      '<div class="ad-popup__badge">Sponsored</div>' +
-      '<div class="ad-popup__content">' +
-        '<div class="ad-popup__placeholder">' +
-          '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>' +
-          '<p>Your download is starting. Thanks for supporting us!</p>' +
-          '<p style="font-size:0.8rem;color:var(--color-text-dim)">Ad space &mdash; your ad could be here</p>' +
-        '</div>' +
-      '</div>' +
-    '</div>';
-  document.body.appendChild(overlay);
-  overlay.addEventListener("click", function(e) {
-    if (e.target === overlay) closeAdPopup();
-  });
-}
-
-function closeAdPopup() {
-  var overlay = document.getElementById("ad-popup-overlay");
-  if (overlay) overlay.remove();
-}
-
 function formatNumber(n) {
   if (n == null) return "0";
   if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
@@ -247,20 +220,18 @@ function modCard(m) {
   const idx = cardIndex++;
   const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__top">' +
-      '<div class="mod-card__icon-wrap">' +
-        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-      '</div>' +
-      '<div class="mod-card__header">' +
-        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '</div>' +
+    '<div class="mod-card__icon-wrap">' +
+      '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+      '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
     '</div>' +
-    '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
-    '<div class="mod-card__footer">' +
-      '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-      '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__body">' +
+      '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
+      '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
+      '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
+      '<div class="mod-card__footer">' +
+        '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+        '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+      '</div>' +
     '</div>' +
   '</a>';
 }
