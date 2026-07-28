@@ -1,36 +1,49 @@
 {
+  "mod_id": "reset-villager-trades",
+  "name": "Reset Villager Trades",
+  "summary": "Reset a villager trade if it sells items you don't want, makes getting good librarians much easier for 1.12.2",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\nTired of trying to get a good librarian villager? Just can't find that mending villager? \n\nWell this mod changes all of that. It adds a reset button \"R\" onto the vilager trade screen, which allows you to manually regenerate the villagers trade items!\n\n![Villager R](https://cdn.modrinth.com/data/cached_images/c35679ab714eb242576418d8b46d9363645d344a.png)",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/T5tMcUtb/072720660ca2ea07751baec9a2138198dab64272_96.webp",
+  "color": "#221523",
   "categories": [
     "game-mechanics",
-    "utility",
-    "mobs"
+    "utility"
   ],
-  "color": "#221523",
-  "date_published": "2025-09-20T05:16:19.166494Z",
-  "description": "Tired of trying to get a good librarian villager? Just can't find that mending villager? \n\nWell this mod changes all of that. It adds a reset button \"R\" onto the vilager trade screen, which allows you to manually regenerate the villagers trade items!\n\n![Villager R](https://cdn.modrinth.com/data/cached_images/c35679ab714eb242576418d8b46d9363645d344a.png)",
-  "discord_url": "",
-  "downloads": 2418,
+  "client_side": "required",
+  "server_side": "required",
+  "downloads": 2424,
   "followers": 3,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/T5tMcUtb/072720660ca2ea07751baec9a2138198dab64272_96.webp",
+  "date_published": "2025-09-20T05:16:19.166494Z",
+  "updated": "2025-09-20T05:17:31.394034Z",
   "license": "LicenseRef-All-Rights-Reserved",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/reset-villager-trades",
+  "site_url": "mod/?id=reset-villager-trades",
   "loaders": [
     "forge"
   ],
-  "mod_id": "reset-villager-trades",
-  "modrinth_url": "https://modrinth.com/mod/reset-villager-trades",
-  "name": "Reset Villager Trades",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "Reset a villager trade if it sells items you don't want, makes getting good librarians much easier for 1.12.2",
-  "updated": "2025-09-20T05:17:31.394034Z",
-  "client_side": "required",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "GIVEMEMYITEMS",
+      "version_number": "1.0",
+      "changelog": "Makes villagers less annoying and more useful in 1.12.2",
       "date_published": "2025-09-20T05:17:31.394034Z",
-      "downloads": 2418,
+      "downloads": 2424,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "givememybooks-1.0.jar",
@@ -38,20 +51,7 @@
           "size": 10601,
           "url": "https://cdn.modrinth.com/data/T5tMcUtb/versions/m8h1wCVo/givememybooks-1.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "GIVEMEMYITEMS",
-      "version_number": "1.0",
-      "version_type": "release",
-      "changelog": "Makes villagers less annoying and more useful in 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

@@ -1,1818 +1,33 @@
 {
+  "mod_id": "auto-fast-xp",
+  "name": "Auto Fast XP",
+  "summary": "Automatically throws XP bottles rapidly when you hold right-click. Perfect for quickly gaining XP!",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Auto Fast XP\n\nGain XP levels lightning fast! This mod automatically throws XP bottles rapidly when you hold right-click, making leveling up quick and effortless.\n\n![a](https://cdn.modrinth.com/data/cached_images/7017f55f603461ba9f235992559134654c3e1a15.png)\n\n![2](https://cdn.modrinth.com/data/cached_images/7f7956d42223dc4e7f0f0ac5ac19089beb871178.png)\n\n## Features\n\n- ✅ **Rapid Throwing** - Throws up to 20 XP bottles per second (default)\n- ✅ **Hold to Throw** - Just hold right-click, no need to spam click\n- ✅ **Both Hands** - Works with main hand and offhand\n- ✅ **Creative Mode** - Doesn't consume bottles in creative\n- ✅ **Lightweight** - Minimal performance impact\n\n## How It Works\n\nHold XP bottles in your hand (main or offhand).\nHold down right-click.\nWatch as bottles are thrown rapidly!\nRelease right-click to stop.\n\n## Use Cases\n\n- **Quick Leveling** - Gain levels fast for enchanting\n- **XP Storage** - Quickly convert bottled XP back to levels\n- **Enchanting Prep** - Get to level 30 in seconds\n- **PVP** - Save time when using XP bottles",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/9Y8gbcjo/c0f78883fa9f51d7ae5930b9961cc44a1e5abe22_96.webp",
+  "color": "#abcb73",
   "categories": [
     "utility"
   ],
-  "color": "#abcb73",
-  "date_published": "2026-04-10T13:55:19.802330Z",
-  "description": "# Auto Fast XP\n\nGain XP levels lightning fast! This mod automatically throws XP bottles rapidly when you hold right-click, making leveling up quick and effortless.\n\n![a](https://cdn.modrinth.com/data/cached_images/7017f55f603461ba9f235992559134654c3e1a15.png)\n\n![2](https://cdn.modrinth.com/data/cached_images/7f7956d42223dc4e7f0f0ac5ac19089beb871178.png)\n\n## Features\n\n- ✅ **Rapid Throwing** - Throws up to 20 XP bottles per second (default)\n- ✅ **Hold to Throw** - Just hold right-click, no need to spam click\n- ✅ **Both Hands** - Works with main hand and offhand\n- ✅ **Creative Mode** - Doesn't consume bottles in creative\n- ✅ **Lightweight** - Minimal performance impact\n\n## How It Works\n\nHold XP bottles in your hand (main or offhand).\nHold down right-click.\nWatch as bottles are thrown rapidly!\nRelease right-click to stop.\n\n## Use Cases\n\n- **Quick Leveling** - Gain levels fast for enchanting\n- **XP Storage** - Quickly convert bottled XP back to levels\n- **Enchanting Prep** - Get to level 30 in seconds\n- **PVP** - Save time when using XP bottles",
-  "discord_url": "",
-  "downloads": 23578,
+  "client_side": "required",
+  "server_side": "unsupported",
+  "downloads": 23742,
   "followers": 6,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/9Y8gbcjo/c0f78883fa9f51d7ae5930b9961cc44a1e5abe22_96.webp",
+  "date_published": "2026-04-10T13:55:19.802330Z",
+  "updated": "2026-05-12T11:17:46.010286Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/auto-fast-xp",
+  "site_url": "mod/?id=auto-fast-xp",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
   ],
-  "mod_id": "auto-fast-xp",
-  "modrinth_url": "https://modrinth.com/mod/auto-fast-xp",
-  "name": "Auto Fast XP",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp",
-  "issues_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-fast-xp/blob/main/docs/Home.md",
-  "summary": "Automatically throws XP bottles rapidly when you hold right-click. Perfect for quickly gaining XP!",
-  "updated": "2026-05-12T11:17:46.010286Z",
-  "client_side": "required",
-  "server_side": "unsupported",
-  "versions": [
-    {
-      "date_published": "2026-05-12T11:17:46.010286Z",
-      "downloads": 101,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 2067,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/ZT9YJ9yI/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.12)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:35:05.799362Z",
-      "downloads": 174,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3784,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/N35tVO82/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:35:05.039759Z",
-      "downloads": 40,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3783,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/l9lw4rCW/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:35:04.326942Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3784,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/riK4I5U6/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:25.831126Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3805,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/ythUBEa1/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:25.050941Z",
-      "downloads": 208,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3804,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/SPIrNeWV/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:24.387744Z",
-      "downloads": 21,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3805,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zdSqNGlf/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:23.487496Z",
-      "downloads": 8062,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6270,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/HcZdWKaw/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:22.764892Z",
-      "downloads": 560,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6268,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/2nc86G07/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:22.138616Z",
-      "downloads": 1193,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6266,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/i42651oB/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:21.565075Z",
-      "downloads": 76,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6313,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oOAws61M/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:20.957291Z",
-      "downloads": 206,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6314,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/siaJUfuN/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:20.340916Z",
-      "downloads": 64,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6314,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QPErhDqu/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:19.724762Z",
-      "downloads": 73,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6314,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/FWwEeQoq/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:19.108066Z",
-      "downloads": 356,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6314,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/9Z4XAV8w/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:18.459848Z",
-      "downloads": 423,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6314,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/FiNcklQw/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:17.890174Z",
-      "downloads": 91,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6311,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/7tMOhJ44/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:17.223339Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6312,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/RiunvGSm/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:16.561064Z",
-      "downloads": 7114,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6312,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Qhp1QQ3o/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:15.983155Z",
-      "downloads": 204,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6313,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/M9tzz3IK/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:15.363774Z",
-      "downloads": 436,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6311,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/cOz6QkAx/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:27:14.765671Z",
-      "downloads": 1099,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6308,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/vioWB7n8/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:49.771273Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3755,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/5srfsab4/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:48.856965Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3719,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/YTWjAfBv/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:47.920110Z",
-      "downloads": 28,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3716,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/RECHeJhr/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:46.988498Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3716,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/5J6YXAT5/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:46.260669Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3716,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Qxz9M3SF/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:45.362929Z",
-      "downloads": 287,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3718,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QMww63L5/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:44.355704Z",
-      "downloads": 26,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3718,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/HQyAQzTg/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:43.493741Z",
-      "downloads": 20,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 4160,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/K8c9jAN3/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:42.694526Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 4160,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/V5xbgh6O/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:41.961612Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 4158,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4PHkqqBp/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:41.137106Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 4078,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/azKYIO7B/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:40.352224Z",
-      "downloads": 42,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6310,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/CMIUrpEV/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:39.617692Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6307,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/WFueRrRW/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:38.653825Z",
-      "downloads": 113,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6308,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/fo3AIKMu/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:37.853846Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6310,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/R1fbGh36/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:37.063363Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6307,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/s3H9LTZc/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:36.284068Z",
-      "downloads": 539,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 6308,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/WjIqn7n5/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:35.492199Z",
-      "downloads": 45,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5936,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JqYz4se3/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:34.743381Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5937,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/LgeRhuLT/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:34.001601Z",
-      "downloads": 37,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5936,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zZJz9lSo/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:33.197764Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5935,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/wfHuY6Yr/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:32.430152Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5933,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/iMNKdBTi/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:31.726271Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5942,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Dz8P9VNc/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:30.999202Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5943,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oEriruNN/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T09:11:30.122269Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5940,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/q0GA68VJ/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T04:23:55.958624Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3805,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/xbcBRZMq/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T04:23:54.612945Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3804,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/9icvG9wj/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T04:23:53.404278Z",
-      "downloads": 241,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3484,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JDWySjGE/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.8.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T04:23:52.130201Z",
-      "downloads": 112,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 4169,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/KvOGCTkj/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:27.130640Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3327,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/CCZIbBxr/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:25.931478Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3327,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/cKjjcqUG/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:24.733442Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3327,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/OYGFlATd/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:21.165112Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3327,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/SDqGRgeu/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:18.105884Z",
-      "downloads": 30,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3327,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/sJ2qsRWw/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:15.561272Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3326,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/uF7Bju6W/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:14.327152Z",
-      "downloads": 259,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3325,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4meLlb29/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:13.149164Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3326,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/J2KQ6jr7/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:11.892410Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3309,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/frg7mFlS/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:10.659390Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3309,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/pcaRzsU4/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:09.306194Z",
-      "downloads": 124,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3335,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/TUQ9TBJq/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:08.146885Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3323,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QeY72vES/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:06.972350Z",
-      "downloads": 37,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3323,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4wWxVjgL/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:05.802593Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3323,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oMUaWhjZ/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:04.595863Z",
-      "downloads": 33,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3322,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/N4muV2vW/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:03.366698Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3321,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/wx7gbeka/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:02.137739Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3380,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/vCEPwnla/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:01.271136Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3390,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/lf4rvSuw/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:37:00.367352Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3390,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/txEDUS0F/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:59.492582Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3389,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/dQFawcfR/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:58.688449Z",
-      "downloads": 291,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3389,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/YsOXIkob/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:57.922861Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3639,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/svg0G6HU/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:57.109543Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3638,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/LngZIgLD/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:56.310608Z",
-      "downloads": 28,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3637,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JFAucW11/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:55.516941Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3638,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/dyk0PEhG/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:54.742627Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 3636,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/7FBmXUKf/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0 (forge 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:53.824771Z",
-      "downloads": 21,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5709,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/2qO7Sye1/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:53.041407Z",
-      "downloads": 22,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5707,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/PXSHqTH2/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.17)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-29T01:36:51.680230Z",
-      "downloads": 189,
-      "files": [
-        {
-          "filename": "autofastxp-1.0.0.jar",
-          "primary": true,
-          "size": 5709,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/bD7Ct8D8/autofastxp-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Auto Fast XP 1.0.0 (fabric 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: autofastxp-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-10T13:55:20.962827Z",
-      "downloads": 157,
-      "files": [
-        {
-          "filename": "Auto-Fast-XP-1.0.0.jar",
-          "primary": true,
-          "size": 6019,
-          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zvwmJgo0/Auto-Fast-XP-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Fast XP 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Fast XP\nJar: Auto-Fast-XP-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
-    }
-  ],
   "game_versions": [
-    "1.8.9",
     "1.12",
     "1.12.2",
     "1.16.5",
@@ -1834,6 +49,8 @@
     "1.20.6",
     "1.21",
     "1.21.1",
+    "1.21.10",
+    "1.21.11",
     "1.21.2",
     "1.21.3",
     "1.21.4",
@@ -1842,10 +59,1794 @@
     "1.21.7",
     "1.21.8",
     "1.21.9",
-    "1.21.10",
-    "1.21.11",
+    "1.8.9",
     "26.1",
     "26.1.1",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-05-12T11:17:46.010286Z",
+      "downloads": 101,
+      "version_type": "release",
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 2067,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/ZT9YJ9yI/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:35:05.799362Z",
+      "downloads": 174,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3784,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/N35tVO82/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:35:05.039759Z",
+      "downloads": 43,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3783,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/l9lw4rCW/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:35:04.326942Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3784,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/riK4I5U6/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:25.831126Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3805,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/ythUBEa1/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:25.050941Z",
+      "downloads": 210,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3804,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/SPIrNeWV/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:24.387744Z",
+      "downloads": 21,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3805,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zdSqNGlf/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:23.487496Z",
+      "downloads": 8094,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6270,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/HcZdWKaw/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:22.764892Z",
+      "downloads": 564,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6268,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/2nc86G07/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:22.138616Z",
+      "downloads": 1208,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6266,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/i42651oB/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:21.565075Z",
+      "downloads": 77,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6313,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oOAws61M/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:20.957291Z",
+      "downloads": 207,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6314,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/siaJUfuN/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:20.340916Z",
+      "downloads": 64,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6314,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QPErhDqu/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:19.724762Z",
+      "downloads": 73,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6314,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/FWwEeQoq/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:19.108066Z",
+      "downloads": 356,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6314,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/9Z4XAV8w/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:18.459848Z",
+      "downloads": 424,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6314,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/FiNcklQw/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:17.890174Z",
+      "downloads": 93,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6311,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/7tMOhJ44/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:17.223339Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6312,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/RiunvGSm/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:16.561064Z",
+      "downloads": 7175,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6312,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Qhp1QQ3o/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:15.983155Z",
+      "downloads": 204,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6313,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/M9tzz3IK/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:15.363774Z",
+      "downloads": 443,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6311,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/cOz6QkAx/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:27:14.765671Z",
+      "downloads": 1102,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6308,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/vioWB7n8/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:49.771273Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3755,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/5srfsab4/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:48.856965Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3719,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/YTWjAfBv/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:47.920110Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3716,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/RECHeJhr/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:46.988498Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3716,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/5J6YXAT5/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:46.260669Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3716,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Qxz9M3SF/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:45.362929Z",
+      "downloads": 287,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3718,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QMww63L5/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:44.355704Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3718,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/HQyAQzTg/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:43.493741Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 4160,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/K8c9jAN3/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:42.694526Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 4160,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/V5xbgh6O/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:41.961612Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 4158,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4PHkqqBp/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:41.137106Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 4078,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/azKYIO7B/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:40.352224Z",
+      "downloads": 42,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6310,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/CMIUrpEV/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:39.617692Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6307,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/WFueRrRW/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:38.653825Z",
+      "downloads": 114,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6308,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/fo3AIKMu/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:37.853846Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6310,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/R1fbGh36/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:37.063363Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6307,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/s3H9LTZc/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:36.284068Z",
+      "downloads": 542,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 6308,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/WjIqn7n5/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:35.492199Z",
+      "downloads": 45,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5936,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JqYz4se3/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:34.743381Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5937,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/LgeRhuLT/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:34.001601Z",
+      "downloads": 38,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5936,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zZJz9lSo/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:33.197764Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5935,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/wfHuY6Yr/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:32.430152Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5933,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/iMNKdBTi/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:31.726271Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5942,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/Dz8P9VNc/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:30.999202Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5943,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oEriruNN/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T09:11:30.122269Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5940,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/q0GA68VJ/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T04:23:55.958624Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3805,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/xbcBRZMq/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T04:23:54.612945Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3804,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/9icvG9wj/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T04:23:53.404278Z",
+      "downloads": 244,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3484,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JDWySjGE/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T04:23:52.130201Z",
+      "downloads": 113,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 4169,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/KvOGCTkj/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:27.130640Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3327,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/CCZIbBxr/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:25.931478Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3327,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/cKjjcqUG/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:24.733442Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3327,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/OYGFlATd/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:21.165112Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3327,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/SDqGRgeu/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:18.105884Z",
+      "downloads": 30,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3327,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/sJ2qsRWw/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:15.561272Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3326,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/uF7Bju6W/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:14.327152Z",
+      "downloads": 261,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3325,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4meLlb29/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:13.149164Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3326,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/J2KQ6jr7/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:11.892410Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3309,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/frg7mFlS/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:10.659390Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3309,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/pcaRzsU4/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:09.306194Z",
+      "downloads": 124,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3335,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/TUQ9TBJq/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:08.146885Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3323,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/QeY72vES/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:06.972350Z",
+      "downloads": 38,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3323,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/4wWxVjgL/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:05.802593Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3323,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/oMUaWhjZ/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:04.595863Z",
+      "downloads": 35,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3322,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/N4muV2vW/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:03.366698Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3321,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/wx7gbeka/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:02.137739Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3380,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/vCEPwnla/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:01.271136Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3390,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/lf4rvSuw/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:37:00.367352Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3390,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/txEDUS0F/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:59.492582Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3389,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/dQFawcfR/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:58.688449Z",
+      "downloads": 293,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3389,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/YsOXIkob/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:57.922861Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3639,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/svg0G6HU/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:57.109543Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3638,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/LngZIgLD/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:56.310608Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3637,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/JFAucW11/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:55.516941Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3638,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/dyk0PEhG/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:54.742627Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 3636,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/7FBmXUKf/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:53.824771Z",
+      "downloads": 21,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5709,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/2qO7Sye1/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:53.041407Z",
+      "downloads": 22,
+      "version_type": "release",
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5707,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/PXSHqTH2/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Auto Fast XP\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: autofastxp-1.0.0.jar",
+      "date_published": "2026-04-29T01:36:51.680230Z",
+      "downloads": 195,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "autofastxp-1.0.0.jar",
+          "primary": true,
+          "size": 5709,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/bD7Ct8D8/autofastxp-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Auto Fast XP 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Fast XP\nJar: Auto-Fast-XP-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
+      "date_published": "2026-04-10T13:55:20.962827Z",
+      "downloads": 159,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "Auto-Fast-XP-1.0.0.jar",
+          "primary": true,
+          "size": 6019,
+          "url": "https://cdn.modrinth.com/data/9Y8gbcjo/versions/zvwmJgo0/Auto-Fast-XP-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

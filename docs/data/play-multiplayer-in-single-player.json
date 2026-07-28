@@ -1,42 +1,44 @@
 {
+  "mod_id": "play-multiplayer-in-single-player",
+  "name": "Play Multiplayer in Single Player",
+  "summary": "A utility mod that makes singleplayer worlds behave more like lightweight multiplayer sessions by letting you switch identities before entering a world or before joining a server.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# MultiplayerLikeSingleplayer\n\n## Description\n\n**MultiplayerLikeSingleplayer** is a powerful utility mod for Minecraft Forge 1.12.2 that transforms your singleplayer world into a lightweight multiplayer-like experience. Switch between multiple player identities in the same world, each with their own inventory, position, health, and progression—all without leaving your game or editing files manually.\n\n### How It Works (for the user)\n\n- **Before loading a world**, you're presented with an identity selection screen showing all available player profiles for that world.\n- **Choose an existing identity** or **add a new offline username** to create a fresh profile.\n- The world loads with that player's saved data—inventory, location, XP, health, etc.\n- **Switch identities** by simply leaving the world and choosing a different one when you re-enter.\n- Each identity's progress is saved separately and automatically.\n\n### Additional Features\n\n**Multiplayer & LAN Enhancements**\n- Before joining any multiplayer server, you're prompted to choose an offline identity—perfect for testing on offline-mode servers.\n- LAN worlds are forced to a fixed port (56567) and offline-mode for consistent local testing.\n- A quick-join option detects localhost LAN servers and adds them to your server list temporarily.\n\n**Multi-Window Support (Multi-Process)**\n- Launch additional **SUB windows** as separate Minecraft processes from the main game.\n- Window titles clearly indicate \"Main Minecraft\" and \"SUB #N\" for easy identification.\n- Each SUB window runs independently and can be closed separately.\n- Closing the MAIN window gracefully shuts down all SUB processes.\n\n**Permission Management**\n- Built-in permission editor lets you toggle operator (OP) status for any identity.\n- Changes apply immediately to the running world.\n- Use `/mlsp_reloadperms` to apply manual edits made to config files.\n\n**Identity Discovery & Management**\n- The mod automatically detects existing player data in your world and attempts to resolve real usernames from game files (`usercache.json`, `ops.json`, etc.).\n- Unresolved names are given stable placeholders like `unknownplayer1`.\n- All identities are stored in easy-to-edit config files (`mlsp_users.txt` per world, `mlsp_identities.txt` globally).\n\n### Who This Mod Is For\n\n- **Singleplayer players** who want to maintain multiple characters in one world (e.g., a builder and a survival player).\n- **Server admins** importing old server worlds for local analysis or migration.\n- **Modpack developers and map makers** needing to test multiplayer scenarios alone.\n- **LAN party hosts** wanting quick, repeatable local testing with multiple identities.\n- **Anyone** who wants to simulate multiplayer interactions without setting up a full server.\n\n### Core Benefits\n\n- **No file editing** – Switch identities through a simple GUI.\n- **Fully automatic** – Player data is saved and loaded per identity without any extra steps.\n- **Lightweight** – Runs alongside other mods without conflicts.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/NFaNkUJh/d2e176578d84b8da445d61ac6505b516fddc24d2_96.webp",
+  "color": "#75623e",
   "categories": [
     "utility"
   ],
-  "color": "#75623e",
-  "date_published": "2026-03-01T05:04:49.377512Z",
-  "description": "# MultiplayerLikeSingleplayer\n\n## Description\n\n**MultiplayerLikeSingleplayer** is a powerful utility mod for Minecraft Forge 1.12.2 that transforms your singleplayer world into a lightweight multiplayer-like experience. Switch between multiple player identities in the same world, each with their own inventory, position, health, and progression—all without leaving your game or editing files manually.\n\n### How It Works (for the user)\n\n- **Before loading a world**, you're presented with an identity selection screen showing all available player profiles for that world.\n- **Choose an existing identity** or **add a new offline username** to create a fresh profile.\n- The world loads with that player's saved data—inventory, location, XP, health, etc.\n- **Switch identities** by simply leaving the world and choosing a different one when you re-enter.\n- Each identity's progress is saved separately and automatically.\n\n### Additional Features\n\n**Multiplayer & LAN Enhancements**\n- Before joining any multiplayer server, you're prompted to choose an offline identity—perfect for testing on offline-mode servers.\n- LAN worlds are forced to a fixed port (56567) and offline-mode for consistent local testing.\n- A quick-join option detects localhost LAN servers and adds them to your server list temporarily.\n\n**Multi-Window Support (Multi-Process)**\n- Launch additional **SUB windows** as separate Minecraft processes from the main game.\n- Window titles clearly indicate \"Main Minecraft\" and \"SUB #N\" for easy identification.\n- Each SUB window runs independently and can be closed separately.\n- Closing the MAIN window gracefully shuts down all SUB processes.\n\n**Permission Management**\n- Built-in permission editor lets you toggle operator (OP) status for any identity.\n- Changes apply immediately to the running world.\n- Use `/mlsp_reloadperms` to apply manual edits made to config files.\n\n**Identity Discovery & Management**\n- The mod automatically detects existing player data in your world and attempts to resolve real usernames from game files (`usercache.json`, `ops.json`, etc.).\n- Unresolved names are given stable placeholders like `unknownplayer1`.\n- All identities are stored in easy-to-edit config files (`mlsp_users.txt` per world, `mlsp_identities.txt` globally).\n\n### Who This Mod Is For\n\n- **Singleplayer players** who want to maintain multiple characters in one world (e.g., a builder and a survival player).\n- **Server admins** importing old server worlds for local analysis or migration.\n- **Modpack developers and map makers** needing to test multiplayer scenarios alone.\n- **LAN party hosts** wanting quick, repeatable local testing with multiple identities.\n- **Anyone** who wants to simulate multiplayer interactions without setting up a full server.\n\n### Core Benefits\n\n- **No file editing** – Switch identities through a simple GUI.\n- **Fully automatic** – Player data is saved and loaded per identity without any extra steps.\n- **Lightweight** – Runs alongside other mods without conflicts.",
-  "discord_url": "",
+  "client_side": "optional",
+  "server_side": "optional",
   "downloads": 300,
   "followers": 2,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/NFaNkUJh/d2e176578d84b8da445d61ac6505b516fddc24d2_96.webp",
+  "date_published": "2026-03-01T05:04:49.377512Z",
+  "updated": "2026-03-01T07:26:22.691994Z",
   "license": "CC0-1.0",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/play-multiplayer-in-single-player",
+  "site_url": "mod/?id=play-multiplayer-in-single-player",
   "loaders": [
     "forge"
   ],
-  "mod_id": "play-multiplayer-in-single-player",
-  "modrinth_url": "https://modrinth.com/mod/play-multiplayer-in-single-player",
-  "name": "Play Multiplayer in Single Player",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "A utility mod that makes singleplayer worlds behave more like lightweight multiplayer sessions by letting you switch identities before entering a world or before joining a server.",
-  "updated": "2026-03-01T07:26:22.691994Z",
-  "client_side": "optional",
-  "server_side": "optional",
+  "game_versions": [
+    "1.12",
+    "1.12.1",
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Play Multiplayer in Single Player 2.0.0",
+      "version_number": "2.0.0",
+      "changelog": "Modified for it to work with server core and fixed a command permission bug.",
       "date_published": "2026-03-01T07:26:22.691994Z",
       "downloads": 262,
-      "files": [
-        {
-          "filename": "MultiplayerInSingleplayer-1.0.0.jar",
-          "primary": true,
-          "size": 71092,
-          "url": "https://cdn.modrinth.com/data/NFaNkUJh/versions/eosbfa7y/MultiplayerInSingleplayer-1.0.0.jar"
-        }
-      ],
+      "version_type": "release",
       "game_versions": [
         "1.12",
         "1.12.1",
@@ -45,14 +47,28 @@
       "loaders": [
         "forge"
       ],
-      "name": "Play Multiplayer in Single Player 2.0.0",
-      "version_number": "2.0.0",
-      "version_type": "release",
-      "changelog": "Modified for it to work with server core and fixed a command permission bug."
+      "files": [
+        {
+          "filename": "MultiplayerInSingleplayer-1.0.0.jar",
+          "primary": true,
+          "size": 71092,
+          "url": "https://cdn.modrinth.com/data/NFaNkUJh/versions/eosbfa7y/MultiplayerInSingleplayer-1.0.0.jar"
+        }
+      ]
     },
     {
+      "name": "Play Multiplayer in Single Player 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "",
       "date_published": "2026-03-01T05:08:40.512356Z",
       "downloads": 38,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "MultiplayerLikeSingleplayer-1.0.0.jar",
@@ -60,22 +76,7 @@
           "size": 68672,
           "url": "https://cdn.modrinth.com/data/NFaNkUJh/versions/pxHFoATN/MultiplayerLikeSingleplayer-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Play Multiplayer in Single Player 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": ""
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12",
-    "1.12.1",
-    "1.12.2"
   ]
 }

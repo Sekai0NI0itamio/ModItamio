@@ -134,13 +134,36 @@ function deriveLinkLabel(url) {
 
 function renderMarkdown(md) {
   if (!md) return "";
-  const lines = md.replace(/\r\n/g, "\n").split("\n");
+  md = md.replace(/\r\n/g, "\n");
+  md = md.replace(/<!--[\s\S]*?-->/g, "");
+  const safeBlocks = [];
+  md = md.replace(/<a\s[^>]*href\s*=\s*"[^"]*"[^>]*>\s*<img\s[^>]*src\s*=\s*"[^"]*"[^>]*>\s*<\/a>/gi, function(m) {
+    const idx = safeBlocks.length;
+    safeBlocks.push(m);
+    return "\u0000HTML" + idx + "\u0000";
+  });
+  md = md.replace(/<img\s[^>]*src\s*=\s*"[^"]*"[^>]*\/?>/gi, function(m) {
+    const idx = safeBlocks.length;
+    safeBlocks.push(m);
+    return "\u0000HTML" + idx + "\u0000";
+  });
+  md = md.replace(/<br\s*\/?>/gi, function(m) {
+    const idx = safeBlocks.length;
+    safeBlocks.push(m);
+    return "\u0000HTML" + idx + "\u0000";
+  });
+  function restoreSafe(text) {
+    return text.replace(/\u0000HTML(\d+)\u0000/g, function(_, i) {
+      return safeBlocks[parseInt(i, 10)] || "";
+    });
+  }
+  const lines = md.split("\n");
   const out = [];
   let i = 0, inList = false, listType = "ul", inPara = false;
   function closeList() { if (inList) { out.push("</" + listType + ">"); inList = false; } }
   function closePara() { if (inPara) { out.push("</p>"); inPara = false; } }
   function inline(text) {
-    return escapeHtml(text)
+    return restoreSafe(escapeHtml(text)
       .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">')
       .replace(/\[([^\]]*)\]\(([^)]+)\)/g, function(match, label, url) {
         const trimmedLabel = (label || "").trim();
@@ -158,7 +181,7 @@ function renderMarkdown(md) {
       .replace(/`([^`]+)`/g, "<code>$1</code>")
       .replace(/:white_check_mark:|✅/g, '<span class="md-check">✓</span>')
       .replace(/:x:|:negative_squared_cross_mark:|❌/g, '<span class="md-cross">✗</span>')
-      .replace(/:warning:|⚠️/g, '<span class="md-warn">⚠</span>');
+      .replace(/:warning:|⚠️/g, '<span class="md-warn">⚠</span>'));
   }
   function parseTableRow(row, isHeader) {
     const cells = row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => c.trim());

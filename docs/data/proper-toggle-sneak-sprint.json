@@ -1,35 +1,49 @@
 {
+  "mod_id": "proper-toggle-sneak-sprint",
+  "name": "Proper Toggle Sneak Sprint",
+  "summary": "Hate holding sprint and sneak keys? Hate double‑tap sprint? This mod makes it so you can toggle them with one press!",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# World Better Sprinting\n\n![World Better Sprinting cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/better-sprinting/main/.modcompiler-art/description-image.webp)\n\n**Stop holding keys! Toggle sprint and sneak with one press.**\n\nBetter Sprinting is the ultimate movement enhancement mod that lets you toggle sprint and sneak instead of holding keys. Sprint in all directions, boost your flying speed, and see your status on the HUD. Simple, lightweight, and essential for every player.\n\n## ✨ Key Features\n\n### Toggle Sprint\n- ✅ **One Press Toggle** - Press sprint key once, start sprinting\n- ✅ **All Directions** - Sprint forward, backward, sideways\n- ✅ **Disable Double-Tap** - No more accidental sprinting\n- ✅ **Vanilla Key** - Uses your normal sprint key\n\n### Toggle Sneak\n- ✅ **One Press Toggle** - Press sneak key once, start sneaking\n- ✅ **No Holding** - Free up your pinky finger\n- ✅ **Vanilla Key** - Uses your normal sneak key\n\n### Flying Boost\n- ✅ **Sprint to Boost** - Sprint key boosts flying speed\n- ✅ **Creative Mode** - Perfect for building\n\n### HUD Indicators\n- ✅ **Sprint Status** - Shows \"[Sprint: ON]\" in green\n- ✅ **Sneak Status** - Shows \"[Sneak: ON]\" in yellow\n- ✅ **Toggle Display** - Can be disabled",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/thtQ6u3W/8d70ca4bd87bf4db940194957665796d88027a8d_96.webp",
+  "color": "#262524",
   "categories": [
     "equipment",
     "utility"
   ],
-  "color": "#262524",
-  "date_published": "2026-04-09T10:42:43.270030Z",
-  "description": "# World Better Sprinting\n\n![World Better Sprinting cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/better-sprinting/main/.modcompiler-art/description-image.webp)\n\n**Stop holding keys! Toggle sprint and sneak with one press.**\n\nBetter Sprinting is the ultimate movement enhancement mod that lets you toggle sprint and sneak instead of holding keys. Sprint in all directions, boost your flying speed, and see your status on the HUD. Simple, lightweight, and essential for every player.\n\n## ✨ Key Features\n\n### Toggle Sprint\n- ✅ **One Press Toggle** - Press sprint key once, start sprinting\n- ✅ **All Directions** - Sprint forward, backward, sideways\n- ✅ **Disable Double-Tap** - No more accidental sprinting\n- ✅ **Vanilla Key** - Uses your normal sprint key\n\n### Toggle Sneak\n- ✅ **One Press Toggle** - Press sneak key once, start sneaking\n- ✅ **No Holding** - Free up your pinky finger\n- ✅ **Vanilla Key** - Uses your normal sneak key\n\n### Flying Boost\n- ✅ **Sprint to Boost** - Sprint key boosts flying speed\n- ✅ **Creative Mode** - Perfect for building\n\n### HUD Indicators\n- ✅ **Sprint Status** - Shows \"[Sprint: ON]\" in green\n- ✅ **Sneak Status** - Shows \"[Sneak: ON]\" in yellow\n- ✅ **Toggle Display** - Can be disabled",
-  "discord_url": "",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 71,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/thtQ6u3W/8d70ca4bd87bf4db940194957665796d88027a8d_96.webp",
+  "date_published": "2026-04-09T10:42:43.270030Z",
+  "updated": "2026-04-09T10:42:44.289320Z",
   "license": "LicenseRef-All-Rights-Reserved",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/better-sprinting/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/better-sprinting",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/better-sprinting/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/proper-toggle-sneak-sprint",
+  "site_url": "mod/?id=proper-toggle-sneak-sprint",
   "loaders": [
     "forge"
   ],
-  "mod_id": "proper-toggle-sneak-sprint",
-  "modrinth_url": "https://modrinth.com/mod/proper-toggle-sneak-sprint",
-  "name": "Proper Toggle Sneak Sprint",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/better-sprinting",
-  "issues_url": "https://github.com/Sekai0NI0itamio/better-sprinting/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/better-sprinting/blob/main/docs/Home.md",
-  "summary": "Hate holding sprint and sneak keys? Hate double‑tap sprint? This mod makes it so you can toggle them with one press!",
-  "updated": "2026-04-09T10:42:44.289320Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Better Sprinting 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Better Sprinting\nJar: Better-Sprinting-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
       "date_published": "2026-04-09T10:42:44.289320Z",
       "downloads": 71,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "Better-Sprinting-1.0.0.jar",
@@ -37,20 +51,7 @@
           "size": 8582,
           "url": "https://cdn.modrinth.com/data/thtQ6u3W/versions/yBcxXTKQ/Better-Sprinting-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Better Sprinting 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Better Sprinting\nJar: Better-Sprinting-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

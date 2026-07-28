@@ -1,35 +1,49 @@
 {
+  "mod_id": "infinite-buckets",
+  "name": "Infinite Water Bucket",
+  "summary": "This mod makes it so that you can place water source blocks infinitely as long as you have 1 water bucket.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Infinite Water Bucket\n\n![Infinite Water Bucket cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/infinite-water-bucket/main/.modcompiler-art/description-image.webp)\n\nNever run out of water again! This simple yet powerful mod makes water buckets infinite - they never empty when you place water.\n\n## Features\n\n### Infinite Water (Enabled by Default)\n- Water buckets never empty when placing water\n- Works in survival and creative mode\n- Perfect for building, farming, and redstone contraptions\n- No more tedious bucket refilling\n\n### Optional Infinite Lava\n- Lava buckets never empty when placing lava\n- WARNING: Very overpowered - use with caution!\n\n### Optional Infinite Milk\n- Milk buckets never empty when drinking\n- Unlimited potion effect removal\n\n## How It Works\n\nWhen you use a water bucket to place water, it normally turns into an empty bucket. This mod detects the bucket use and automatically refills it after 1 tick, keeping the filled bucket in your inventory.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/t0U1znYT/496f10a7a6088ca92d605a73e9f6117d8e7f670e_96.webp",
+  "color": "#2c2d2e",
   "categories": [
     "game-mechanics",
     "utility"
   ],
-  "color": "#2c2d2e",
-  "date_published": "2026-04-03T10:09:19.643997Z",
-  "description": "# Infinite Water Bucket\n\n![Infinite Water Bucket cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/infinite-water-bucket/main/.modcompiler-art/description-image.webp)\n\nNever run out of water again! This simple yet powerful mod makes water buckets infinite - they never empty when you place water.\n\n## Features\n\n### Infinite Water (Enabled by Default)\n- Water buckets never empty when placing water\n- Works in survival and creative mode\n- Perfect for building, farming, and redstone contraptions\n- No more tedious bucket refilling\n\n### Optional Infinite Lava\n- Lava buckets never empty when placing lava\n- WARNING: Very overpowered - use with caution!\n\n### Optional Infinite Milk\n- Milk buckets never empty when drinking\n- Unlimited potion effect removal\n\n## How It Works\n\nWhen you use a water bucket to place water, it normally turns into an empty bucket. This mod detects the bucket use and automatically refills it after 1 tick, keeping the filled bucket in your inventory.",
-  "discord_url": "",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 41,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/t0U1znYT/496f10a7a6088ca92d605a73e9f6117d8e7f670e_96.webp",
+  "date_published": "2026-04-03T10:09:19.643997Z",
+  "updated": "2026-04-03T10:09:20.456912Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/infinite-buckets",
+  "site_url": "mod/?id=infinite-buckets",
   "loaders": [
     "forge"
   ],
-  "mod_id": "infinite-buckets",
-  "modrinth_url": "https://modrinth.com/mod/infinite-buckets",
-  "name": "Infinite Water Bucket",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket",
-  "issues_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/infinite-water-bucket/blob/main/docs/Home.md",
-  "summary": "This mod makes it so that you can place water source blocks infinitely as long as you have 1 water bucket.",
-  "updated": "2026-04-03T10:09:20.456912Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Infinite Water Bucket 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Infinite Water Bucket\nJar: Infinite-Water-Bucket-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
       "date_published": "2026-04-03T10:09:20.456912Z",
       "downloads": 41,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "Infinite-Water-Bucket-1.0.0.jar",
@@ -37,20 +51,7 @@
           "size": 6999,
           "url": "https://cdn.modrinth.com/data/t0U1znYT/versions/tmVEb6uW/Infinite-Water-Bucket-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Infinite Water Bucket 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Infinite Water Bucket\nJar: Infinite-Water-Bucket-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

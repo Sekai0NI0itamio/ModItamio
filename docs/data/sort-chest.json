@@ -1,606 +1,34 @@
 {
+  "mod_id": "sort-chest",
+  "name": "Sort Chest",
+  "summary": "This mod allows you to organize and stack your items automatically in chests, grouping same item types into stacks when they were scattered around",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Sort Chest\n\n## Description\n\n**Sort Chest** is a lightweight client-side mod for Minecraft Forge 1.20.1 that adds a handy \"Sort\" button to every chest interface. With one click, it organizes your chest's contents by automatically combining partial stacks of the same item and grouping them together.\n\n![Unsorted](https://cdn.modrinth.com/data/cached_images/ce26b2a2a2af0b8e296c78828a66ce2bd67116bc.png)\n![When sorted](https://cdn.modrinth.com/data/cached_images/c07036c2389f54040ffc40aa6136f2ce7ceb1d26.png)\n\n### How It Works (for the user)\n\n- Open any chest (single, double, barrel, etc.).\n- Look for the new **Sort** button in the chest GUI (usually near the top or bottom of the window).\n- Click the button, and instantly:\n  - All partial stacks of the same item are merged into full stacks (up to their maximum stack size, e.g., 64 for most items, 16 for snowballs/eggs, 1 for tools).\n  - Items are moved so that identical items are grouped together in contiguous slots.\n- Your chest becomes neatly organized without any manual dragging or rearranging.\n\n### Features\n\n- Works with all chest types: vanilla chests, trapped chests, barrels, and even modded chests that use the standard container GUI.\n- Fully client-side: no server installation needed; works on any multiplayer server.\n- One-click simplicity—no configuration required.\n- Preserves stack size limits and respects item NBT data (so enchanted tools or named items won't merge incorrectly).\n- Compatible with other inventory mods.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/ZwNe62Wg/c42492752fa6e22d4917f026db4c3d6cb43567db_96.webp",
+  "color": "#ffffff",
   "categories": [
     "management",
-    "utility",
-    "game-mechanics"
+    "utility"
   ],
-  "color": "#ffffff",
-  "date_published": "2026-02-22T02:55:56.205226Z",
-  "description": "# Sort Chest\n\n## Description\n\n**Sort Chest** is a lightweight client-side mod for Minecraft Forge 1.20.1 that adds a handy \"Sort\" button to every chest interface. With one click, it organizes your chest's contents by automatically combining partial stacks of the same item and grouping them together.\n\n![Unsorted](https://cdn.modrinth.com/data/cached_images/ce26b2a2a2af0b8e296c78828a66ce2bd67116bc.png)\n![When sorted](https://cdn.modrinth.com/data/cached_images/c07036c2389f54040ffc40aa6136f2ce7ceb1d26.png)\n\n### How It Works (for the user)\n\n- Open any chest (single, double, barrel, etc.).\n- Look for the new **Sort** button in the chest GUI (usually near the top or bottom of the window).\n- Click the button, and instantly:\n  - All partial stacks of the same item are merged into full stacks (up to their maximum stack size, e.g., 64 for most items, 16 for snowballs/eggs, 1 for tools).\n  - Items are moved so that identical items are grouped together in contiguous slots.\n- Your chest becomes neatly organized without any manual dragging or rearranging.\n\n### Features\n\n- Works with all chest types: vanilla chests, trapped chests, barrels, and even modded chests that use the standard container GUI.\n- Fully client-side: no server installation needed; works on any multiplayer server.\n- One-click simplicity—no configuration required.\n- Preserves stack size limits and respects item NBT data (so enchanted tools or named items won't merge incorrectly).\n- Compatible with other inventory mods.",
-  "discord_url": "",
-  "downloads": 4555,
+  "client_side": "required",
+  "server_side": "unsupported",
+  "downloads": 4592,
   "followers": 1,
-  "gallery": [
-    {
-      "url": "https://cdn.modrinth.com/data/ZwNe62Wg/images/c07036c2389f54040ffc40aa6136f2ce7ceb1d26_350.webp",
-      "title": "Sorted Chest after pressing sort",
-      "description": null,
-      "featured": false
-    },
-    {
-      "url": "https://cdn.modrinth.com/data/ZwNe62Wg/images/ce26b2a2a2af0b8e296c78828a66ce2bd67116bc_350.webp",
-      "title": "Un-sorted Chest",
-      "description": null,
-      "featured": false
-    }
-  ],
-  "icon_url": "https://cdn.modrinth.com/data/ZwNe62Wg/c42492752fa6e22d4917f026db4c3d6cb43567db_96.webp",
+  "date_published": "2026-02-22T02:55:56.205226Z",
+  "updated": "2026-04-18T10:07:05.471093Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/sort-chest",
+  "site_url": "mod/?id=sort-chest",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
   ],
-  "mod_id": "sort-chest",
-  "modrinth_url": "https://modrinth.com/mod/sort-chest",
-  "name": "Sort Chest",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "This mod allows you to organize and stack your items automatically in chests, grouping same item types into stacks when they were scattered around",
-  "updated": "2026-04-18T10:07:05.471093Z",
-  "client_side": "required",
-  "server_side": "unsupported",
-  "versions": [
-    {
-      "date_published": "2026-04-18T10:07:05.471093Z",
-      "downloads": 140,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7176,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7Hpf8Vbe/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:22:55.110462Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6984,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/kdhy064z/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:22:54.369314Z",
-      "downloads": 93,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10535,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/kQhXjjxF/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:22:53.673596Z",
-      "downloads": 884,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10535,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/RFN1BwHG/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:04:51.112894Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10186,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/S1Iebg4Y/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:04:50.373978Z",
-      "downloads": 25,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10101,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/EHWSkrb1/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:04:49.685413Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10100,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/gL5h1kE8/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T09:04:48.925447Z",
-      "downloads": 118,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10112,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/hQpogRkl/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:23:45.211265Z",
-      "downloads": 83,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6693,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/atKBkyOL/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.8.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:23:44.005133Z",
-      "downloads": 64,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7112,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/aN7iAV0I/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:23:43.025757Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10511,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/RhcJYc5V/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:23:41.922107Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10556,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/akBQ32Nl/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:23:40.900348Z",
-      "downloads": 218,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 10555,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/JqfRHmbr/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Sort Chest 1.0.0 (fabric 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:07:21.371488Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6723,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/CJ998ZkB/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T07:07:16.849119Z",
-      "downloads": 45,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6710,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/s1f78wHi/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:52:14.485325Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6826,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/896TSqr3/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:52:13.413582Z",
-      "downloads": 73,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6824,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7lpx1s8s/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:52:12.312666Z",
-      "downloads": 1109,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6823,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/ZCHccIz6/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:52:10.905053Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6797,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/isRlIpTg/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:52:09.560872Z",
-      "downloads": 453,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7687,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/d7R8K17F/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.12.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:16:08.867640Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6923,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/Zru7VLpN/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:16:07.828892Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 6922,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/stHOamql/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Sort Chest 1.0.0 (neoforge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:16:06.247680Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7394,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7WLMUmGI/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-18T06:16:04.957603Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7393,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/NTe3WfYi/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0 (forge 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: sortchest-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-02-22T03:07:52.764956Z",
-      "downloads": 1051,
-      "files": [
-        {
-          "filename": "sortchest-1.0.0.jar",
-          "primary": true,
-          "size": 7993,
-          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/VDRsjnJ4/sortchest-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1",
-        "1.20.2",
-        "1.20.3",
-        "1.20.4",
-        "1.20.5",
-        "1.20.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Sort Chest 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Working Version"
-    }
-  ],
   "game_versions": [
-    "1.8.9",
     "1.12.2",
     "1.16.5",
     "1.17.1",
@@ -614,7 +42,579 @@
     "1.20.5",
     "1.20.6",
     "1.21.1",
+    "1.21.11",
     "1.21.4",
-    "1.21.11"
+    "1.8.9"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/ZwNe62Wg/images/c07036c2389f54040ffc40aa6136f2ce7ceb1d26_350.webp",
+      "title": "Sorted Chest after pressing sort",
+      "description": null,
+      "created": "2026-02-22T03:10:30.774937Z"
+    },
+    {
+      "url": "https://cdn.modrinth.com/data/ZwNe62Wg/images/ce26b2a2a2af0b8e296c78828a66ce2bd67116bc_350.webp",
+      "title": "Un-sorted Chest",
+      "description": null,
+      "created": "2026-02-22T03:10:06.681077Z"
+    }
+  ],
+  "versions": [
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T10:07:05.471093Z",
+      "downloads": 141,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7176,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7Hpf8Vbe/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:22:55.110462Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6984,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/kdhy064z/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:22:54.369314Z",
+      "downloads": 94,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10535,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/kQhXjjxF/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:22:53.673596Z",
+      "downloads": 888,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10535,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/RFN1BwHG/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:04:51.112894Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10186,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/S1Iebg4Y/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:04:50.373978Z",
+      "downloads": 25,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10101,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/EHWSkrb1/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:04:49.685413Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10100,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/gL5h1kE8/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T09:04:48.925447Z",
+      "downloads": 120,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10112,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/hQpogRkl/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:23:45.211265Z",
+      "downloads": 83,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6693,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/atKBkyOL/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:23:44.005133Z",
+      "downloads": 64,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7112,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/aN7iAV0I/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:23:43.025757Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10511,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/RhcJYc5V/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:23:41.922107Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10556,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/akBQ32Nl/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:23:40.900348Z",
+      "downloads": 219,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 10555,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/JqfRHmbr/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:07:21.371488Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6723,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/CJ998ZkB/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T07:07:16.849119Z",
+      "downloads": 45,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6710,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/s1f78wHi/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:52:14.485325Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6826,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/896TSqr3/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:52:13.413582Z",
+      "downloads": 73,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6824,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7lpx1s8s/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:52:12.312666Z",
+      "downloads": 1124,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6823,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/ZCHccIz6/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:52:10.905053Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6797,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/isRlIpTg/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.12.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:52:09.560872Z",
+      "downloads": 454,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7687,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/d7R8K17F/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:16:08.867640Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6923,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/Zru7VLpN/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:16:07.828892Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 6922,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/stHOamql/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:16:06.247680Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7394,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/7WLMUmGI/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Sort Chest\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: sortchest-1.0.0.jar",
+      "date_published": "2026-04-18T06:16:04.957603Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7393,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/NTe3WfYi/sortchest-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Sort Chest 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Working Version",
+      "date_published": "2026-02-22T03:07:52.764956Z",
+      "downloads": 1063,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1",
+        "1.20.2",
+        "1.20.3",
+        "1.20.4",
+        "1.20.5",
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "sortchest-1.0.0.jar",
+          "primary": true,
+          "size": 7993,
+          "url": "https://cdn.modrinth.com/data/ZwNe62Wg/versions/VDRsjnJ4/sortchest-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

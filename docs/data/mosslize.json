@@ -1,36 +1,50 @@
 {
+  "mod_id": "mosslize",
+  "name": "Mosslize",
+  "summary": "Makes it so that stone, cobblestone, stone bricks near water will turn into its mossy form as time passes",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n![Banner](https://cdn.modrinth.com/data/cached_images/2ed39c9d53e5a271172facd18925a4295b64f9e9.png)\n---\n\n```\nMakes it so that as time passes, cobblestone, stone bricks will turn into its mossy version over time.\n```\n\n---\n![Moss](https://cdn.modrinth.com/data/cached_images/d6a1cf33554e3f17ebc5c31adf4ba34f1d973c2d.png)\n\n**In 1.12.2** (these are the only mossy variants, i want to keep it vanilla friendly):\n   - cobblestone -> mossy_cobblestone\n   - stonebrick -> mossy_stonebrick\n   - cobblestone_wall -> mossy_cobblestone_wall\n---\n**In 1.20.1** (these are the only mossy variants, i want to keep it vanilla friendly):\n   - cobblestone (stair, slab, wall variants) -> mossy_cobblestone (stair, slab, wall variants)\n   - stonebrick (stair, slab) -> mossy_stonebrick (stair, slab)",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/l2yXymEx/c2898ad133618ad7c14af3974d27c3591d235686_96.webp",
+  "color": "#23331e",
   "categories": [
     "decoration",
-    "worldgen",
-    "game-mechanics"
+    "worldgen"
   ],
-  "color": "#23331e",
-  "date_published": "2025-07-17T05:27:43.006156Z",
-  "description": "![Banner](https://cdn.modrinth.com/data/cached_images/2ed39c9d53e5a271172facd18925a4295b64f9e9.png)\n---\n\n```\nMakes it so that as time passes, cobblestone, stone bricks will turn into its mossy version over time.\n```\n\n---\n![Moss](https://cdn.modrinth.com/data/cached_images/d6a1cf33554e3f17ebc5c31adf4ba34f1d973c2d.png)\n\n**In 1.12.2** (these are the only mossy variants, i want to keep it vanilla friendly):\n   - cobblestone -> mossy_cobblestone\n   - stonebrick -> mossy_stonebrick\n   - cobblestone_wall -> mossy_cobblestone_wall\n---\n**In 1.20.1** (these are the only mossy variants, i want to keep it vanilla friendly):\n   - cobblestone (stair, slab, wall variants) -> mossy_cobblestone (stair, slab, wall variants)\n   - stonebrick (stair, slab) -> mossy_stonebrick (stair, slab)",
-  "discord_url": "https://discord.gg/2J776dWKXd",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 324,
   "followers": 2,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/l2yXymEx/c2898ad133618ad7c14af3974d27c3591d235686_96.webp",
+  "date_published": "2025-07-17T05:27:43.006156Z",
+  "updated": "2025-07-17T09:34:28.889055Z",
   "license": "LicenseRef-All-Rights-Reserved",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/mosslize",
+  "site_url": "mod/?id=mosslize",
   "loaders": [
     "forge"
   ],
-  "mod_id": "mosslize",
-  "modrinth_url": "https://modrinth.com/mod/mosslize",
-  "name": "Mosslize",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "Makes it so that stone, cobblestone, stone bricks near water will turn into its mossy form as time passes",
-  "updated": "2025-07-17T09:34:28.889055Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2",
+    "1.20.1"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "updated to forge 1.20.1",
+      "version_number": "1.0.0",
+      "changelog": "A bit wonky, but works (it will take a while for moss to start spawning)",
       "date_published": "2025-07-17T09:34:28.889055Z",
       "downloads": 158,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "mosslize-1.0.0-1.20.1.jar",
@@ -38,21 +52,21 @@
           "size": 10064,
           "url": "https://cdn.modrinth.com/data/l2yXymEx/versions/Hdad4y8g/mosslize-1.0.0-1.20.1.jar"
         }
-      ],
+      ]
+    },
+    {
+      "name": "First working version",
+      "version_number": "1.0.0",
+      "changelog": "Working version for 1.12.2",
+      "date_published": "2025-07-17T05:28:47.200600Z",
+      "downloads": 166,
+      "version_type": "release",
       "game_versions": [
-        "1.20.1"
+        "1.12.2"
       ],
       "loaders": [
         "forge"
       ],
-      "name": "updated to forge 1.20.1",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "A bit wonky, but works (it will take a while for moss to start spawning)"
-    },
-    {
-      "date_published": "2025-07-17T05:28:47.200600Z",
-      "downloads": 166,
       "files": [
         {
           "filename": "Mosslize-1.0.0.jar",
@@ -60,21 +74,7 @@
           "size": 10935,
           "url": "https://cdn.modrinth.com/data/l2yXymEx/versions/BoKJko1X/Mosslize-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "First working version",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Working version for 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2",
-    "1.20.1"
   ]
 }

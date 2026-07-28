@@ -1,1788 +1,33 @@
 {
-  "categories": [
-    "utility",
-    "game-mechanics"
-  ],
-  "color": "#acb4bf",
-  "date_published": "2026-03-31T02:00:14.697265Z",
-  "description": "# Optimized Day Counter\n\n**Optimized Day Counter** is a lightweight, client-side HUD mod that shows the current in-game day and optional 12‑hour clock, letting you track your world's progress at a glance.\n\n[](https://modrinth.com/mod/optimizeddaycounter/versions?l=fabric)\n[](https://modrinth.com/mod/optimizeddaycounter/versions?l=forge)\n[](https://modrinth.com/mod/optimizeddaycounter/versions?l=neoforge)\n[](https://ko-fi.com/U2P522M1IW)\n\n## 🎬 How It Works\n\nThe mod adds a small, unobtrusive HUD element that displays the current world day and, optionally, the time of day in a 12‑hour format. It updates automatically as the world progresses and can be fully customized through a config file.\n\n![Optimized Day Counter Demo](https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/optimizeddaycounter/showing-the-day-counter.gif)\n\n![Time Counter cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/day-counter/main/.modcompiler-art/description-image.webp)\n\n![Day 25](https://cdn.modrinth.com/data/cached_images/614e76cb1562de86b5b50def0eb73363ddec4cac.png)\n\n## ✨ Features\n\n- **Day Number Display** — Shows “Day X” where X is the current day number based on world time.\n- **Optional 12‑Hour Clock** — Displays the current time of day with AM/PM (e.g., “Day 3 | 2 PM” or “Day 3 | 2:30 PM”).\n- **Configurable Anchor Position** — Choose from 6 positions: `top_left`, `top_right`, `bottom_left`, `bottom_right`, `center_top`, `center_bottom`.\n- **Pixel‑Perfect Offsets** — Fine‑tune the HUD placement with `offset_x` and `offset_y` from the selected anchor.\n- **Three Display Modes** — Choose between days only, days + hour, or days + hour + minute.\n- **Hot‑Reload Config** — Edit the config file while the game is running; changes appear after a short delay (config checks every 500ms).\n- **Info Card** — Prints a stylish author and contributor info card on launch.\n\n## 📦 Installation\n\n1. Install the mod loader of your choice ([Fabric](https://fabricmc.net/use/), [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/), or [NeoForge](https://neoforged.net/)).\n2. Download `optimizeddaycounter-<version>.jar` and place it into your `.minecraft/mods` folder.\n3. Launch the game — the mod will create the config file on first run.\n\nThis mod is **client‑side only** and does not need to be installed on the server.\n\n## 🧩 Compatibility\n\n| Minecraft | Loader         | Status        | Version |\n|-----------|----------------|---------------|---------|\n| 1.21.1    | NeoForge       | ✅ Supported  | Latest  |\n| 1.21.1    | Fabric         | ✅ Supported  | Latest  |\n| 1.21.11   | Fabric         | ✅ Supported  | Latest  |\n| 26.1.2    | Fabric         | ✅ Supported  | Latest  |\n| 1.20.1    | Forge          | ✅ Supported  | Latest  |\n| 1.20.1    | Fabric         | ✅ Supported  | Latest  |\n| 1.12.2    | Forge          | ✅ Supported  | Latest  |\n\n**Required dependencies:** None.  \n**Known incompatibilities:** None known.  \n**Works alongside:** Any other client‑side mods, including Sodium, Iris, and OptiFine.\n\n## ❓ FAQ\n\n**Does this need to be installed on the server?**  \nNo. The mod is purely client‑side and reads directly from the local world state. You can safely use it on any server.\n\n**How do I configure the HUD?**  \nOpen `./config/optimizeddaycounter.txt` (created automatically on first launch). Edit the settings, save the file, and the mod will reload the config within a few seconds.\n\n**Can I move the HUD to a different corner?**  \nYes! Set `anchor` to one of: `top_left`, `top_right`, `bottom_left`, `bottom_right`, `center_top`, or `center_bottom`. Adjust `offset_x` and `offset_y` to fine‑tune the position.\n\n**Does this mod add any commands, items, or blocks?**  \nNo. It’s a simple HUD overlay with no extra mechanics to learn.\n\n**I found a bug, where do I report it?**  \nPlease report issues on the [GitHub issue tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Aoptimizeddaycounter). Include your Minecraft version, mod loader, and a log file.\n\n## 💖 Support the Project\n\nIf you find this mod useful, consider supporting development!\n\n[](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to include this mod in any Modrinth or CurseForge‑hosted modpack with attribution. Do not redistribute the jar file elsewhere.\n\n### Credits\n- **Author:** Itamio\n- **Contributor:** Asd1281yss",
-  "discord_url": "",
-  "downloads": 4705,
-  "followers": 5,
-  "gallery": [
-    {
-      "url": "https://cdn.modrinth.com/data/LtB4QBvY/images/0aea0515c439b9792b069af5bd707038934469c7_350.webp",
-      "title": "showing the day counter",
-      "description": "Demonstrates the mod in action",
-      "featured": false
-    },
-    {
-      "url": "https://cdn.modrinth.com/data/LtB4QBvY/images/614e76cb1562de86b5b50def0eb73363ddec4cac_350.webp",
-      "title": "Day 25 of my survival world",
-      "description": "I installed the mod to my survival world and the day auto sets to the correct day of the world based on the world's playtime.",
-      "featured": true
-    }
-  ],
+  "mod_id": "optimizeddaycounter",
+  "name": "Optimized Day Counter",
+  "summary": "Want to know what day it is and what hour it is in your minecraft world? Well this mod does exactly that.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Optimized Day Counter\n\n**Optimized Day Counter** is a lightweight, client-side HUD mod that shows the current in-game day and optional 12‑hour clock, letting you track your world's progress at a glance.\n\n[![Available for Fabric](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg)](https://modrinth.com/mod/optimizeddaycounter/versions?l=fabric)\n[![Available for Forge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg)](https://modrinth.com/mod/optimizeddaycounter/versions?l=forge)\n[![Available for NeoForge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/neoforge_vector.svg)](https://modrinth.com/mod/optimizeddaycounter/versions?l=neoforge)\n[![Donate](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/U2P522M1IW)\n\n## 🎬 How It Works\n\nThe mod adds a small, unobtrusive HUD element that displays the current world day and, optionally, the time of day in a 12‑hour format. It updates automatically as the world progresses and can be fully customized through a config file.\n\n![Optimized Day Counter Demo](https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/optimizeddaycounter/showing-the-day-counter.gif)\n\n![Time Counter cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/day-counter/main/.modcompiler-art/description-image.webp)\n\n![Day 25](https://cdn.modrinth.com/data/cached_images/614e76cb1562de86b5b50def0eb73363ddec4cac.png)\n\n## ✨ Features\n\n- **Day Number Display** — Shows “Day X” where X is the current day number based on world time.\n- **Optional 12‑Hour Clock** — Displays the current time of day with AM/PM (e.g., “Day 3 | 2 PM” or “Day 3 | 2:30 PM”).\n- **Configurable Anchor Position** — Choose from 6 positions: `top_left`, `top_right`, `bottom_left`, `bottom_right`, `center_top`, `center_bottom`.\n- **Pixel‑Perfect Offsets** — Fine‑tune the HUD placement with `offset_x` and `offset_y` from the selected anchor.\n- **Three Display Modes** — Choose between days only, days + hour, or days + hour + minute.\n- **Hot‑Reload Config** — Edit the config file while the game is running; changes appear after a short delay (config checks every 500ms).\n- **Info Card** — Prints a stylish author and contributor info card on launch.\n\n## 📦 Installation\n\n1. Install the mod loader of your choice ([Fabric](https://fabricmc.net/use/), [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/), or [NeoForge](https://neoforged.net/)).\n2. Download `optimizeddaycounter-<version>.jar` and place it into your `.minecraft/mods` folder.\n3. Launch the game — the mod will create the config file on first run.\n\nThis mod is **client‑side only** and does not need to be installed on the server.\n\n## 🧩 Compatibility\n\n| Minecraft | Loader         | Status        | Version |\n|-----------|----------------|---------------|---------|\n| 1.21.1    | NeoForge       | ✅ Supported  | Latest  |\n| 1.21.1    | Fabric         | ✅ Supported  | Latest  |\n| 1.21.11   | Fabric         | ✅ Supported  | Latest  |\n| 26.1.2    | Fabric         | ✅ Supported  | Latest  |\n| 1.20.1    | Forge          | ✅ Supported  | Latest  |\n| 1.20.1    | Fabric         | ✅ Supported  | Latest  |\n| 1.12.2    | Forge          | ✅ Supported  | Latest  |\n\n**Required dependencies:** None.  \n**Known incompatibilities:** None known.  \n**Works alongside:** Any other client‑side mods, including Sodium, Iris, and OptiFine.\n\n## ❓ FAQ\n\n**Does this need to be installed on the server?**  \nNo. The mod is purely client‑side and reads directly from the local world state. You can safely use it on any server.\n\n**How do I configure the HUD?**  \nOpen `./config/optimizeddaycounter.txt` (created automatically on first launch). Edit the settings, save the file, and the mod will reload the config within a few seconds.\n\n**Can I move the HUD to a different corner?**  \nYes! Set `anchor` to one of: `top_left`, `top_right`, `bottom_left`, `bottom_right`, `center_top`, or `center_bottom`. Adjust `offset_x` and `offset_y` to fine‑tune the position.\n\n**Does this mod add any commands, items, or blocks?**  \nNo. It’s a simple HUD overlay with no extra mechanics to learn.\n\n**I found a bug, where do I report it?**  \nPlease report issues on the [GitHub issue tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Aoptimizeddaycounter). Include your Minecraft version, mod loader, and a log file.\n\n## 💖 Support the Project\n\nIf you find this mod useful, consider supporting development!\n\n[![Donate](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to include this mod in any Modrinth or CurseForge‑hosted modpack with attribution. Do not redistribute the jar file elsewhere.\n\n### Credits\n- **Author:** Itamio\n- **Contributor:** Asd1281yss\n\n<details>\n<summary>Port Notes</summary>\n\nThis mod is a modern port of the original \"Day Counter\" mod, expanded to support multiple Minecraft versions and loaders. The port retains the original core logic while adapting to each platform’s rendering and configuration APIs.\n</details>",
+  "author": "Sekai0ni0Itamio",
   "icon_url": "https://cdn.modrinth.com/data/LtB4QBvY/99499ff69820f76161751cb16e3f62c34d4f668d_96.webp",
+  "color": "#acb4bf",
+  "categories": [
+    "utility"
+  ],
+  "client_side": "required",
+  "server_side": "unsupported",
+  "downloads": 4737,
+  "followers": 5,
+  "date_published": "2026-03-31T02:00:14.697265Z",
+  "updated": "2026-07-08T08:20:38.081289Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Aoptimizeddaycounter",
+  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/optimizeddaycounter",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/day-counter/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/optimizeddaycounter",
+  "site_url": "mod/?id=optimizeddaycounter",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
   ],
-  "mod_id": "optimizeddaycounter",
-  "modrinth_url": "https://modrinth.com/mod/optimizeddaycounter",
-  "name": "Optimized Day Counter",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/optimizeddaycounter",
-  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Aoptimizeddaycounter",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/day-counter/blob/main/docs/Home.md",
-  "summary": "Want to know what day it is and what hour it is in your minecraft world? Well this mod does exactly that.",
-  "updated": "2026-07-08T08:20:38.081289Z",
-  "client_side": "required",
-  "server_side": "unsupported",
-  "versions": [
-    {
-      "date_published": "2026-07-08T08:20:38.081289Z",
-      "downloads": 113,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-26.1.2-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 27136,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/rm8v1oFv/optimizeddaycounter-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-26.1.2",
-      "version_type": "release",
-      "changelog": "- Initial port to Fabric for Minecraft 26.1.2."
-    },
-    {
-      "date_published": "2026-07-08T08:20:36.957994Z",
-      "downloads": 175,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.21.11-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 71809,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/QJE8jFyZ/optimizeddaycounter-1.21.11-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.11",
-      "version_type": "release",
-      "changelog": "- Initial port to Fabric for Minecraft 1.21.11."
-    },
-    {
-      "date_published": "2026-07-08T08:20:36.018858Z",
-      "downloads": 92,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.21.1-neoforge-1.0.0.jar",
-          "primary": true,
-          "size": 34125,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fjO14rK0/optimizeddaycounter-1.21.1-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+neoforge-1.21.1",
-      "version_type": "release",
-      "changelog": "- Initial port to NeoForge for Minecraft 1.21.1."
-    },
-    {
-      "date_published": "2026-07-08T08:20:33.519206Z",
-      "downloads": 46,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.21.1-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 35669,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/uh7D1A9p/optimizeddaycounter-1.21.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.1",
-      "version_type": "release",
-      "changelog": "- Initial port to Fabric for Minecraft 1.21.1."
-    },
-    {
-      "date_published": "2026-07-08T08:20:32.637840Z",
-      "downloads": 89,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.20.1-forge-1.0.0.jar",
-          "primary": true,
-          "size": 25966,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/359eV9zD/optimizeddaycounter-1.20.1-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.20.1",
-      "version_type": "release",
-      "changelog": "- Initial port to Forge for Minecraft 1.20.1.\n- Uses RegisterGuiOverlaysEvent for HUD rendering."
-    },
-    {
-      "date_published": "2026-07-08T08:20:31.748424Z",
-      "downloads": 48,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.20.1-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 26489,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/EJMKw168/optimizeddaycounter-1.20.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.20.1",
-      "version_type": "release",
-      "changelog": "- Initial port to Fabric for Minecraft 1.20.1.\n- Uses Fabric API and HudRenderCallback."
-    },
-    {
-      "date_published": "2026-07-08T08:20:30.866779Z",
-      "downloads": 114,
-      "files": [
-        {
-          "filename": "optimizeddaycounter-1.12.2-forge-1.0.0.jar",
-          "primary": true,
-          "size": 23774,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Uonr5HMg/optimizeddaycounter-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.12.2",
-      "version_type": "release",
-      "changelog": "- Initial port from original mod.\n- Supports Forge 1.12.2."
-    },
-    {
-      "date_published": "2026-04-26T02:33:33.975520Z",
-      "downloads": 122,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12798,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZPI7uf7e/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:33.401511Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12797,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SojfNswE/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:32.777753Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12798,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/MtjK3oJg/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:30.910465Z",
-      "downloads": 283,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12957,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/HKmn7nCh/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:30.145919Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12944,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/d22Qatk9/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:29.207635Z",
-      "downloads": 144,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12943,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/y5IzNFzC/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-26T02:33:28.607129Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12944,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/q0TBy4OJ/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-24T00:45:22.009307Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12882,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Tzp4AU57/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-24T00:45:21.230963Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12881,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/PkNpZceA/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-24T00:45:20.487021Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12881,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/J3VGBq2Y/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-24T00:45:19.682696Z",
-      "downloads": 49,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12881,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/NYHnPxZk/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-24T00:45:18.942146Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12930,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/J5n8Qe3l/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:39.888750Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13707,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/yFEgWrkC/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:38.617885Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13706,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lOHT9Tif/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:37.272670Z",
-      "downloads": 86,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13706,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/9InW0Z8d/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:35.934712Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13706,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/2uGAZ8J5/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:34.713187Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13704,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/3egbPM7n/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:32.125696Z",
-      "downloads": 24,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15789,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/4tLdvn5e/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T12:31:30.944625Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15790,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/sAdeNghx/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:39.016697Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12329,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/C7WjPs4a/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:35.564996Z",
-      "downloads": 67,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12328,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lDPFDLI9/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:33.790585Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12328,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/DEpL1gVc/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:31.724459Z",
-      "downloads": 108,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 11802,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZG76VX2f/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.8.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:28.548433Z",
-      "downloads": 681,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15810,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/3fsDmfo3/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:27.614111Z",
-      "downloads": 34,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16611,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/HQCrwxR1/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:26.931244Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16610,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/evsvsb3L/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T11:08:26.260211Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16609,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/1BwNpp15/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:37.556355Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12427,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/x9FkFKpU/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:36.696510Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12427,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/GDw1XCYT/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:35.655152Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12427,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/MLse4GQ0/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:34.956757Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12427,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/qlWEv3dn/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:34.240973Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12426,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZZYSo9gq/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:33.504273Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12426,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/REtMGbCa/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:32.666729Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12424,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/AeIWMp4r/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:31.920223Z",
-      "downloads": 385,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12425,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fASoGyCy/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:31.266049Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12426,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ulSYNu9s/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:30.568453Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12409,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SA7XJXXd/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:29.868485Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 12409,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/CbgM0mRh/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:29.144856Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13198,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/anUjeqni/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:28.485172Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13197,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/2K4s3mpZ/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Day Counter 1.0.0 (neoforge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:27.758917Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13322,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/YlAAcGJC/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:27.046677Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13322,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SWntsx0D/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:26.310998Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13321,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/vKLv1pcc/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:25.360900Z",
-      "downloads": 34,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13582,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/nMtviD1k/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:24.657695Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13582,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/NlbDpnvT/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:23.844289Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13580,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wQX6DtQ4/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:22.984573Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13446,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/a57ApiVe/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:22.023121Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15808,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/R6ylfvLk/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:21.310695Z",
-      "downloads": 40,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15809,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/jGHhiqxG/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:20.467051Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15809,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wH1udI6Z/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:19.718952Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15809,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fUDIYa6K/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:18.877211Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15807,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/nWrK1WNw/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:18.168961Z",
-      "downloads": 75,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15807,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Jj708G9m/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:17.374265Z",
-      "downloads": 24,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15805,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/XRCbdVly/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:16.653863Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15806,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/M88YMIpm/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:15.923996Z",
-      "downloads": 90,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15808,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/jkpe7oFl/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:15.064197Z",
-      "downloads": 150,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15802,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/9ueTeVIm/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:14.240089Z",
-      "downloads": 71,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 15799,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/DCGo1PCq/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T10:02:13.331372Z",
-      "downloads": 140,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16610,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/86N51OC8/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:46.711975Z",
-      "downloads": 337,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13325,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/x2d3FQTS/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:45.981553Z",
-      "downloads": 69,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 13292,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/BSLxwxur/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0 (forge 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:45.126975Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16316,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wa3pgOaH/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:44.257358Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16317,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/A1AK8k1S/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:43.522027Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16315,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/W4x7jqx0/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:42.828465Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16314,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/bFmlfycp/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:42.125921Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16312,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lej6BZfy/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:41.367246Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16314,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/TNKsvRbk/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:40.628148Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16315,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/vSP2sxmD/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:39.940085Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16312,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/zcVrBOmm/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:39.200445Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16318,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ig2t9R7K/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-23T08:35:38.451938Z",
-      "downloads": 72,
-      "files": [
-        {
-          "filename": "daycounter-1.0.0.jar",
-          "primary": true,
-          "size": 16318,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/XMjwlvvc/daycounter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Day Counter 1.0.0 (fabric 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: daycounter-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-03-31T02:00:15.581378Z",
-      "downloads": 533,
-      "files": [
-        {
-          "filename": "Day-Counter-1.0.0.jar",
-          "primary": true,
-          "size": 13604,
-          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/LEKr6B2D/Day-Counter-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Day Counter 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Day Counter\nJar: Day-Counter-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
-    }
-  ],
   "game_versions": [
-    "1.8.9",
     "1.12.2",
     "1.16.5",
     "1.17.1",
@@ -1802,6 +47,8 @@
     "1.20.6",
     "1.21",
     "1.21.1",
+    "1.21.10",
+    "1.21.11",
     "1.21.2",
     "1.21.3",
     "1.21.4",
@@ -1810,10 +57,1763 @@
     "1.21.7",
     "1.21.8",
     "1.21.9",
-    "1.21.10",
-    "1.21.11",
+    "1.8.9",
     "26.1",
     "26.1.1",
     "26.1.2"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/LtB4QBvY/images/0aea0515c439b9792b069af5bd707038934469c7_350.webp",
+      "title": "showing the day counter",
+      "description": "Demonstrates the mod in action",
+      "created": "2026-07-08T08:20:40.122531Z"
+    },
+    {
+      "url": "https://cdn.modrinth.com/data/LtB4QBvY/images/614e76cb1562de86b5b50def0eb73363ddec4cac_350.webp",
+      "title": "Day 25 of my survival world",
+      "description": "I installed the mod to my survival world and the day auto sets to the correct day of the world based on the world's playtime.",
+      "created": "2026-03-31T02:02:05.766248Z"
+    }
+  ],
+  "versions": [
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-26.1.2",
+      "changelog": "- Initial port to Fabric for Minecraft 26.1.2.",
+      "date_published": "2026-07-08T08:20:38.081289Z",
+      "downloads": 116,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-26.1.2-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 27136,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/rm8v1oFv/optimizeddaycounter-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.11",
+      "changelog": "- Initial port to Fabric for Minecraft 1.21.11.",
+      "date_published": "2026-07-08T08:20:36.957994Z",
+      "downloads": 179,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.21.11-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 71809,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/QJE8jFyZ/optimizeddaycounter-1.21.11-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+neoforge-1.21.1",
+      "changelog": "- Initial port to NeoForge for Minecraft 1.21.1.",
+      "date_published": "2026-07-08T08:20:36.018858Z",
+      "downloads": 95,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.21.1-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 34125,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fjO14rK0/optimizeddaycounter-1.21.1-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.1",
+      "changelog": "- Initial port to Fabric for Minecraft 1.21.1.",
+      "date_published": "2026-07-08T08:20:33.519206Z",
+      "downloads": 47,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.21.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 35669,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/uh7D1A9p/optimizeddaycounter-1.21.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.20.1",
+      "changelog": "- Initial port to Forge for Minecraft 1.20.1.\n- Uses RegisterGuiOverlaysEvent for HUD rendering.",
+      "date_published": "2026-07-08T08:20:32.637840Z",
+      "downloads": 92,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.20.1-forge-1.0.0.jar",
+          "primary": true,
+          "size": 25966,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/359eV9zD/optimizeddaycounter-1.20.1-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.20.1",
+      "changelog": "- Initial port to Fabric for Minecraft 1.20.1.\n- Uses Fabric API and HudRenderCallback.",
+      "date_published": "2026-07-08T08:20:31.748424Z",
+      "downloads": 49,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.20.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 26489,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/EJMKw168/optimizeddaycounter-1.20.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.12.2",
+      "changelog": "- Initial port from original mod.\n- Supports Forge 1.12.2.",
+      "date_published": "2026-07-08T08:20:30.866779Z",
+      "downloads": 117,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "optimizeddaycounter-1.12.2-forge-1.0.0.jar",
+          "primary": true,
+          "size": 23774,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Uonr5HMg/optimizeddaycounter-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:33.975520Z",
+      "downloads": 122,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12798,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZPI7uf7e/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:33.401511Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12797,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SojfNswE/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:32.777753Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12798,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/MtjK3oJg/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:30.910465Z",
+      "downloads": 283,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12957,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/HKmn7nCh/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:30.145919Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12944,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/d22Qatk9/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:29.207635Z",
+      "downloads": 145,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12943,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/y5IzNFzC/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-26T02:33:28.607129Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12944,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/q0TBy4OJ/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-24T00:45:22.009307Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12882,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Tzp4AU57/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-24T00:45:21.230963Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12881,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/PkNpZceA/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-24T00:45:20.487021Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12881,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/J3VGBq2Y/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-24T00:45:19.682696Z",
+      "downloads": 49,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12881,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/NYHnPxZk/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-24T00:45:18.942146Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12930,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/J5n8Qe3l/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:39.888750Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13707,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/yFEgWrkC/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:38.617885Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13706,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lOHT9Tif/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:37.272670Z",
+      "downloads": 86,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13706,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/9InW0Z8d/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:35.934712Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13706,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/2uGAZ8J5/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:34.713187Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13704,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/3egbPM7n/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:32.125696Z",
+      "downloads": 24,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15789,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/4tLdvn5e/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T12:31:30.944625Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15790,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/sAdeNghx/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:39.016697Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12329,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/C7WjPs4a/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:35.564996Z",
+      "downloads": 69,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12328,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lDPFDLI9/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:33.790585Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12328,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/DEpL1gVc/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:31.724459Z",
+      "downloads": 110,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 11802,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZG76VX2f/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:28.548433Z",
+      "downloads": 681,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15810,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/3fsDmfo3/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:27.614111Z",
+      "downloads": 34,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16611,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/HQCrwxR1/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:26.931244Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16610,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/evsvsb3L/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T11:08:26.260211Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16609,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/1BwNpp15/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:37.556355Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12427,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/x9FkFKpU/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:36.696510Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12427,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/GDw1XCYT/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:35.655152Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12427,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/MLse4GQ0/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:34.956757Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12427,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/qlWEv3dn/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:34.240973Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12426,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ZZYSo9gq/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:33.504273Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12426,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/REtMGbCa/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:32.666729Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12424,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/AeIWMp4r/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:31.920223Z",
+      "downloads": 385,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12425,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fASoGyCy/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:31.266049Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12426,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ulSYNu9s/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:30.568453Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12409,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SA7XJXXd/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:29.868485Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 12409,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/CbgM0mRh/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:29.144856Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13198,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/anUjeqni/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:28.485172Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13197,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/2K4s3mpZ/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:27.758917Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13322,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/YlAAcGJC/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:27.046677Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13322,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/SWntsx0D/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:26.310998Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13321,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/vKLv1pcc/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:25.360900Z",
+      "downloads": 34,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13582,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/nMtviD1k/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:24.657695Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13582,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/NlbDpnvT/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:23.844289Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13580,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wQX6DtQ4/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:22.984573Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13446,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/a57ApiVe/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:22.023121Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15808,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/R6ylfvLk/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:21.310695Z",
+      "downloads": 40,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15809,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/jGHhiqxG/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:20.467051Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15809,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wH1udI6Z/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:19.718952Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15809,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/fUDIYa6K/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:18.877211Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15807,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/nWrK1WNw/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:18.168961Z",
+      "downloads": 75,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15807,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/Jj708G9m/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:17.374265Z",
+      "downloads": 24,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15805,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/XRCbdVly/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:16.653863Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15806,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/M88YMIpm/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:15.923996Z",
+      "downloads": 90,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15808,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/jkpe7oFl/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:15.064197Z",
+      "downloads": 150,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15802,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/9ueTeVIm/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:14.240089Z",
+      "downloads": 72,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 15799,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/DCGo1PCq/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T10:02:13.331372Z",
+      "downloads": 140,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16610,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/86N51OC8/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:46.711975Z",
+      "downloads": 337,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13325,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/x2d3FQTS/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:45.981553Z",
+      "downloads": 69,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 13292,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/BSLxwxur/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:45.126975Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16316,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/wa3pgOaH/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:44.257358Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16317,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/A1AK8k1S/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:43.522027Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16315,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/W4x7jqx0/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:42.828465Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16314,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/bFmlfycp/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:42.125921Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16312,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/lej6BZfy/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:41.367246Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16314,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/TNKsvRbk/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:40.628148Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16315,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/vSP2sxmD/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:39.940085Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16312,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/zcVrBOmm/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:39.200445Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16318,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/ig2t9R7K/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Day Counter\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: daycounter-1.0.0.jar",
+      "date_published": "2026-04-23T08:35:38.451938Z",
+      "downloads": 73,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "daycounter-1.0.0.jar",
+          "primary": true,
+          "size": 16318,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/XMjwlvvc/daycounter-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Day Counter 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Day Counter\nJar: Day-Counter-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
+      "date_published": "2026-03-31T02:00:15.581378Z",
+      "downloads": 534,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "Day-Counter-1.0.0.jar",
+          "primary": true,
+          "size": 13604,
+          "url": "https://cdn.modrinth.com/data/LtB4QBvY/versions/LEKr6B2D/Day-Counter-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

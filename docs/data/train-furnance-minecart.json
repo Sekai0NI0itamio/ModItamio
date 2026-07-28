@@ -1,51 +1,53 @@
 {
+  "mod_id": "train-furnance-minecart",
+  "name": "Train - Furnance Minecart",
+  "summary": "makes furnance minecarts useful again so you dont need to use powered rails",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Furnance Minecart Train\n### I personnaly really like using furnance minecarts in minecraft, and thats why i made this mod so it will remove some of the downsides of furnance minecarts.\n\n![Train](https://cdn.modrinth.com/data/cached_images/1957f02d1cffea6c1e08feccd56010ee7ab3dd1e.png)\n\n**What this mod does:**\n- Removes the gravity motion decrease, so if your climbing up a hill, the furnance minecart won't loose speed at all\n- Removes the speed loss during turns (in vanilla when furnance minecart encounters a turn it looses alot of its momentum, which is very annoying)\n\n**What inspired me to make this mod:**\n\nEver since i watched the unstable SMP videos from parrotx2, this video specifically, really inspired me the idea of having furnance minecarts as trains. However in reality when tested in minecraft, they dont really work properly when dealing with turns and slopes (they loose all momentum), and when i play in my own worlds, this was always a problem and it makes furnance minecarts useless as you just use powered rails. I personally think that powered rails are less fun then furnance minecarts, and thats why i made this mod so i could enjoy minecraft railling again.\n\nScreenshot taken from: https://www.youtube.com/watch?v=kkd96ca-U2Q&ab_channel=Parrot\n![Parrot minecart train](https://cdn.modrinth.com/data/cached_images/b29354c5b53c9829ff13dd39302cf74f788855d3_0.webp)",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/W3tgxq9f/c1a3554c3bf04a00ba287bd3704a3bc82312f7c7_96.webp",
+  "color": "#323332",
   "categories": [
     "game-mechanics",
     "transportation",
     "utility"
   ],
-  "color": "#323332",
-  "date_published": "2025-09-10T12:43:37.581638Z",
-  "description": "# Furnance Minecart Train\n### I personnaly really like using furnance minecarts in minecraft, and thats why i made this mod so it will remove some of the downsides of furnance minecarts.\n\n![Train](https://cdn.modrinth.com/data/cached_images/1957f02d1cffea6c1e08feccd56010ee7ab3dd1e.png)\n\n**What this mod does:**\n- Removes the gravity motion decrease, so if your climbing up a hill, the furnance minecart won't loose speed at all\n- Removes the speed loss during turns (in vanilla when furnance minecart encounters a turn it looses alot of its momentum, which is very annoying)\n\n**What inspired me to make this mod:**\n\nEver since i watched the unstable SMP videos from parrotx2, this video specifically, really inspired me the idea of having furnance minecarts as trains. However in reality when tested in minecraft, they dont really work properly when dealing with turns and slopes (they loose all momentum), and when i play in my own worlds, this was always a problem and it makes furnance minecarts useless as you just use powered rails. I personally think that powered rails are less fun then furnance minecarts, and thats why i made this mod so i could enjoy minecraft railling again.\n\nScreenshot taken from: https://www.youtube.com/watch?v=kkd96ca-U2Q&ab_channel=Parrot\n![Parrot minecart train](https://cdn.modrinth.com/data/cached_images/b29354c5b53c9829ff13dd39302cf74f788855d3_0.webp)",
-  "discord_url": "",
-  "downloads": 351,
+  "client_side": "unsupported",
+  "server_side": "required",
+  "downloads": 355,
   "followers": 2,
+  "date_published": "2025-09-10T12:43:37.581638Z",
+  "updated": "2026-06-01T00:54:21.428666Z",
+  "license": "MIT",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/train-furnance-minecart",
+  "site_url": "mod/?id=train-furnance-minecart",
+  "loaders": [
+    "forge"
+  ],
+  "game_versions": [
+    "1.12",
+    "1.12.1",
+    "1.12.2"
+  ],
   "gallery": [
     {
       "url": "https://cdn.modrinth.com/data/W3tgxq9f/images/1957f02d1cffea6c1e08feccd56010ee7ab3dd1e_350.webp",
       "title": "Working Train",
       "description": null,
-      "featured": false
+      "created": "2025-09-10T22:46:55.085087Z"
     }
   ],
-  "icon_url": "https://cdn.modrinth.com/data/W3tgxq9f/c1a3554c3bf04a00ba287bd3704a3bc82312f7c7_96.webp",
-  "license": "MIT",
-  "loaders": [
-    "forge"
-  ],
-  "mod_id": "train-furnance-minecart",
-  "modrinth_url": "https://modrinth.com/mod/train-furnance-minecart",
-  "name": "Train - Furnance Minecart",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "makes furnance minecarts useful again so you dont need to use powered rails",
-  "updated": "2026-06-01T00:54:21.428666Z",
-  "client_side": "unsupported",
-  "server_side": "required",
   "versions": [
     {
+      "name": "Train - Furnance Minecart 3.0.0",
+      "version_number": "3.0.0",
+      "changelog": "",
       "date_published": "2026-06-01T00:54:21.428666Z",
-      "downloads": 48,
-      "files": [
-        {
-          "filename": "Trainlize Furnance Minecart-2.0.0.jar",
-          "primary": true,
-          "size": 19317,
-          "url": "https://cdn.modrinth.com/data/W3tgxq9f/versions/bzBP9Avw/Trainlize%20Furnance%20Minecart-2.0.0.jar"
-        }
-      ],
+      "downloads": 52,
+      "version_type": "release",
       "game_versions": [
         "1.12",
         "1.12.1",
@@ -54,14 +56,28 @@
       "loaders": [
         "forge"
       ],
-      "name": "Train - Furnance Minecart 3.0.0",
-      "version_number": "3.0.0",
-      "version_type": "release",
-      "changelog": ""
+      "files": [
+        {
+          "filename": "Trainlize Furnance Minecart-2.0.0.jar",
+          "primary": true,
+          "size": 19317,
+          "url": "https://cdn.modrinth.com/data/W3tgxq9f/versions/bzBP9Avw/Trainlize%20Furnance%20Minecart-2.0.0.jar"
+        }
+      ]
     },
     {
+      "name": "Push everything",
+      "version_number": "2.0.0",
+      "changelog": "Gives furnance minecarts infinite push strengths so you can pile up minecarts in front of it for example passenger minecarts or chest based.",
       "date_published": "2025-09-11T06:27:48.935701Z",
       "downloads": 258,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "trainlize_furnance_minecart-2.0.0.jar",
@@ -69,21 +85,21 @@
           "size": 7748,
           "url": "https://cdn.modrinth.com/data/W3tgxq9f/versions/BPNNNwwF/trainlize_furnance_minecart-2.0.0.jar"
         }
-      ],
+      ]
+    },
+    {
+      "name": "Working Version 1.0",
+      "version_number": "1.0",
+      "changelog": "working version that i use",
+      "date_published": "2025-09-10T12:44:48.322897Z",
+      "downloads": 45,
+      "version_type": "release",
       "game_versions": [
         "1.12.2"
       ],
       "loaders": [
         "forge"
       ],
-      "name": "Push everything",
-      "version_number": "2.0.0",
-      "version_type": "release",
-      "changelog": "Gives furnance minecarts infinite push strengths so you can pile up minecarts in front of it for example passenger minecarts or chest based."
-    },
-    {
-      "date_published": "2025-09-10T12:44:48.322897Z",
-      "downloads": 45,
       "files": [
         {
           "filename": "trainlize_furnance_minecart-1.0.0.jar",
@@ -91,22 +107,7 @@
           "size": 6593,
           "url": "https://cdn.modrinth.com/data/W3tgxq9f/versions/t1wwmWNm/trainlize_furnance_minecart-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Working Version 1.0",
-      "version_number": "1.0",
-      "version_type": "release",
-      "changelog": "working version that i use"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12",
-    "1.12.1",
-    "1.12.2"
   ]
 }

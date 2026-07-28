@@ -1,36 +1,49 @@
 {
+  "mod_id": "instant-hoppers",
+  "name": "Instant-Hoppers",
+  "summary": "Hate that hoppers move items one by one? Well this mod makes hoppers move full stacks in one go.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Instant-Hoppers\n\n![Instant-Hoppers cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/instant-hoppers/main/.modcompiler-art/description-image.webp)\n\n## What It Does\n\n- Hoppers pull items from the block they face and push them into the block they’re attached to, moving whole stacks in a single burst.\n- They also instantly suck up items that are dropped on top of them, so you don’t have to wait for them to pick up one by one.\n- Hoppers can move full stacks in one go instead of only one item at a time.\n- Hoppers also pull dropped items on top into themselves right away.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/3IfolNun/85e78b22ab7c78c8127628ad62e60e30309ce758_96.webp",
+  "color": "#1a161c",
   "categories": [
     "storage",
-    "technology",
-    "utility"
+    "technology"
   ],
-  "color": "#1a161c",
-  "date_published": "2026-03-30T13:46:15.764745Z",
-  "description": "# Instant-Hoppers\n\n![Instant-Hoppers cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/instant-hoppers/main/.modcompiler-art/description-image.webp)\n\n## What It Does\n\n- Hoppers pull items from the block they face and push them into the block they’re attached to, moving whole stacks in a single burst.\n- They also instantly suck up items that are dropped on top of them, so you don’t have to wait for them to pick up one by one.\n- Hoppers can move full stacks in one go instead of only one item at a time.\n- Hoppers also pull dropped items on top into themselves right away.",
-  "discord_url": "",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 79,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/3IfolNun/85e78b22ab7c78c8127628ad62e60e30309ce758_96.webp",
+  "date_published": "2026-03-30T13:46:15.764745Z",
+  "updated": "2026-03-30T13:46:16.968940Z",
   "license": "LicenseRef-All-Rights-Reserved",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/instant-hoppers",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/instant-hoppers",
+  "site_url": "mod/?id=instant-hoppers",
   "loaders": [
     "forge"
   ],
-  "mod_id": "instant-hoppers",
-  "modrinth_url": "https://modrinth.com/mod/instant-hoppers",
-  "name": "Instant-Hoppers",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/instant-hoppers",
-  "issues_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/blob/main/docs/Home.md",
-  "summary": "Hate that hoppers move items one by one? Well this mod makes hoppers move full stacks in one go.",
-  "updated": "2026-03-30T13:46:16.968940Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Instant-Hoppers 1.0",
+      "version_number": "1.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Instant-Hoppers\nJar: Instant-Hoppers-1.0.jar\nLoader: forge\nDetected versions: 1.12.2",
       "date_published": "2026-03-30T13:46:16.968940Z",
       "downloads": 79,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "Instant-Hoppers-1.0.jar",
@@ -38,20 +51,7 @@
           "size": 5513,
           "url": "https://cdn.modrinth.com/data/3IfolNun/versions/MbJqjOTA/Instant-Hoppers-1.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Instant-Hoppers 1.0",
-      "version_number": "1.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Instant-Hoppers\nJar: Instant-Hoppers-1.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

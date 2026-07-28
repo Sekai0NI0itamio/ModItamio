@@ -1,35 +1,49 @@
 {
+  "mod_id": "world-auto-eat",
+  "name": "World Auto Eat",
+  "summary": "Hate having to stop mining to eat? This mod makes it so that you automatically eat when you're hungry without the animation nor the slow down nor taking up your hotbar or even breaking your action.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# World Auto Eat\n\n![World Auto Eat cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-eat/main/.modcompiler-art/description-image.webp)\n\nNever worry about manually eating food again!\n\n## Features\n\n### Smart Food Selection\n- Automatically selects the best food based on saturation values\n- Prioritizes more efficient foods (e.g., cooked beef over bread)\n- Checks your entire inventory for available food\n\n- Set when the mod should start eating (default: 14/20 hunger)\n- Prevents wasting food by eating too early\n\n### Food Blacklist\n- Default blacklist includes:\n- Spider Eyes\n- Rotten Flesh\n- Poisonous Potatoes\n- Golden Apples (both normal and enchanted)\n- Chorus Fruit\n- Add or remove any food items from the blacklist\n\n### Performance Optimized\n- Checks hunger only once per second\n- Minimal impact on game performance\n- Works seamlessly in the background\n\n```.\ngeneral {.\n# Hunger level at which to auto-eat (0-20, where 20 is full)\nI:hungerThreshold=14.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/9P8Bc6UP/5efde6d8d0095f024b764d21ebd317ea7b18dd89_96.webp",
+  "color": "#2c2a29",
   "categories": [
     "food",
     "utility"
   ],
-  "color": "#2c2a29",
-  "date_published": "2026-04-03T09:27:18.794972Z",
-  "description": "# World Auto Eat\n\n![World Auto Eat cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-eat/main/.modcompiler-art/description-image.webp)\n\nNever worry about manually eating food again!\n\n## Features\n\n### Smart Food Selection\n- Automatically selects the best food based on saturation values\n- Prioritizes more efficient foods (e.g., cooked beef over bread)\n- Checks your entire inventory for available food\n\n- Set when the mod should start eating (default: 14/20 hunger)\n- Prevents wasting food by eating too early\n\n### Food Blacklist\n- Default blacklist includes:\n- Spider Eyes\n- Rotten Flesh\n- Poisonous Potatoes\n- Golden Apples (both normal and enchanted)\n- Chorus Fruit\n- Add or remove any food items from the blacklist\n\n### Performance Optimized\n- Checks hunger only once per second\n- Minimal impact on game performance\n- Works seamlessly in the background\n\n```.\ngeneral {.\n# Hunger level at which to auto-eat (0-20, where 20 is full)\nI:hungerThreshold=14.",
-  "discord_url": "",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 72,
   "followers": 1,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/9P8Bc6UP/5efde6d8d0095f024b764d21ebd317ea7b18dd89_96.webp",
+  "date_published": "2026-04-03T09:27:18.794972Z",
+  "updated": "2026-04-03T09:27:19.836296Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/auto-eat/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-eat",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-eat/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/world-auto-eat",
+  "site_url": "mod/?id=world-auto-eat",
   "loaders": [
     "forge"
   ],
-  "mod_id": "world-auto-eat",
-  "modrinth_url": "https://modrinth.com/mod/world-auto-eat",
-  "name": "World Auto Eat",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/auto-eat",
-  "issues_url": "https://github.com/Sekai0NI0itamio/auto-eat/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-eat/blob/main/docs/Home.md",
-  "summary": "Hate having to stop mining to eat? This mod makes it so that you automatically eat when you're hungry without the animation nor the slow down nor taking up your hotbar or even breaking your action.",
-  "updated": "2026-04-03T09:27:19.836296Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Auto Eat 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Eat\nJar: Auto-Eat-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
       "date_published": "2026-04-03T09:27:19.836296Z",
       "downloads": 72,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "Auto-Eat-1.0.0.jar",
@@ -37,20 +51,7 @@
           "size": 7165,
           "url": "https://cdn.modrinth.com/data/9P8Bc6UP/versions/8PyO03Vr/Auto-Eat-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Eat 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Eat\nJar: Auto-Eat-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

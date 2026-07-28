@@ -1,42 +1,44 @@
 {
+  "mod_id": "elytra-chestplate-swap",
+  "name": "Elytra Chestplate Swap",
+  "summary": "Backports the feature from modern minecraft where you can easily swap elytra with chestplate back to 1.12.2",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Elytra Chestplate Swap\n\n## Description\n\n**Elytra Chestplate Swap** is a simple quality-of-life mod for Minecraft Forge 1.12.2 that brings a modern convenience feature to older versions. With a single right-click, you can instantly swap your equipped chestplate with an elytra you're holding—and vice versa—without opening your inventory.\n\n### How It Works (for the user)\n\n- **Hold an elytra** in your hand.\n- **Right-click** while holding it.\n- If you're wearing a chestplate, the elytra equips immediately, and the chestplate is placed directly into your hotbar (in the slot you were holding the elytra).\n- If you're already wearing an elytra and holding a chestplate, right-clicking swaps the chestplate onto your body and moves the elytra to your hotbar.\n\nNo inventory opening, no dragging—just a quick right-click to switch between flight mode and protection mode.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "",
+  "color": "#5b8c5a",
   "categories": [
     "utility"
   ],
-  "color": "#5b8c5a",
-  "date_published": "2026-03-01T07:44:39.119678Z",
-  "description": "# Elytra Chestplate Swap\n\n## Description\n\n**Elytra Chestplate Swap** is a simple quality-of-life mod for Minecraft Forge 1.12.2 that brings a modern convenience feature to older versions. With a single right-click, you can instantly swap your equipped chestplate with an elytra you're holding—and vice versa—without opening your inventory.\n\n### How It Works (for the user)\n\n- **Hold an elytra** in your hand.\n- **Right-click** while holding it.\n- If you're wearing a chestplate, the elytra equips immediately, and the chestplate is placed directly into your hotbar (in the slot you were holding the elytra).\n- If you're already wearing an elytra and holding a chestplate, right-clicking swaps the chestplate onto your body and moves the elytra to your hotbar.\n\nNo inventory opening, no dragging—just a quick right-click to switch between flight mode and protection mode.",
-  "discord_url": "",
-  "downloads": 383,
+  "client_side": "unsupported",
+  "server_side": "required",
+  "downloads": 386,
   "followers": 0,
-  "gallery": [],
-  "icon_url": null,
+  "date_published": "2026-03-01T07:44:39.119678Z",
+  "updated": "2026-03-01T07:48:05.650832Z",
   "license": "CC0-1.0",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/elytra-chestplate-swap",
+  "site_url": "mod/?id=elytra-chestplate-swap",
   "loaders": [
     "forge"
   ],
-  "mod_id": "elytra-chestplate-swap",
-  "modrinth_url": "https://modrinth.com/mod/elytra-chestplate-swap",
-  "name": "Elytra Chestplate Swap",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "Backports the feature from modern minecraft where you can easily swap elytra with chestplate back to 1.12.2",
-  "updated": "2026-03-01T07:48:05.650832Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12",
+    "1.12.1",
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Elytra Chestplate Swap 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "",
       "date_published": "2026-03-01T07:48:05.650832Z",
-      "downloads": 383,
-      "files": [
-        {
-          "filename": "ChestElytraSwap-1.0.0.jar",
-          "primary": true,
-          "size": 4663,
-          "url": "https://cdn.modrinth.com/data/vzLHc6IP/versions/co95J4Zv/ChestElytraSwap-1.0.0.jar"
-        }
-      ],
+      "downloads": 386,
+      "version_type": "release",
       "game_versions": [
         "1.12",
         "1.12.1",
@@ -45,15 +47,14 @@
       "loaders": [
         "forge"
       ],
-      "name": "Elytra Chestplate Swap 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": ""
+      "files": [
+        {
+          "filename": "ChestElytraSwap-1.0.0.jar",
+          "primary": true,
+          "size": 4663,
+          "url": "https://cdn.modrinth.com/data/vzLHc6IP/versions/co95J4Zv/ChestElytraSwap-1.0.0.jar"
+        }
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12",
-    "1.12.1",
-    "1.12.2"
   ]
 }

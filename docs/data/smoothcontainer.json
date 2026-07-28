@@ -1,210 +1,32 @@
 {
+  "mod_id": "smoothcontainer",
+  "name": "Smooth Container",
+  "summary": "Eliminates container open lag by instantly rendering GUIs.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n**Smooth Container** is a lightweight mod that eliminates the frustrating lag spike when opening chests, hoppers, shulker boxes, and other containers. Instead of stuttering on open, the GUI renders instantly — making inventory management feel smooth and responsive.\n\n[![Available for Fabric](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg)](https://modrinth.com/mod/smoothcontainer/versions?l=fabric)\n[![Available for Forge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg)](https://modrinth.com/mod/smoothcontainer/versions?l=forge)\n[![Available for NeoForge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/neoforge_vector.svg)](https://modrinth.com/mod/smoothcontainer/versions?l=neoforge)\n\n## 📦 Installation\n\n1. Install the correct mod loader for your Minecraft version (Fabric, Forge, or NeoForge).\n2. Place `smoothcontainer.jar` into your `.minecraft/mods` folder.\n3. Launch the game — no configuration or dependencies are required.\n\n**This mod is client-side only.** It works perfectly on multiplayer servers even if the server does not have the mod installed.\n\n## ✨ Features\n\n- **Instant container rendering** — eliminates the 100–300ms freeze that normally occurs when opening inventories.\n- **Works with all vanilla containers** — chests, hoppers, barrels, furnaces, shulker boxes, crafting tables, anvils, and more.\n- **Mod container support** — compatible with most modded storage blocks that use standard GUI rendering.\n- **Lightweight** — no config files, no performance overhead beyond the fix.\n- **Client-side only** — works on any server without requiring server-side installation.\n\n## 🧩 Compatibility\n\n| Minecraft Version | Loaders Supported | Status |\n|-------------------|-------------------|--------|\n| 1.21.11 | Fabric | ✅ Supported |\n| 1.21.1 | Fabric, NeoForge | ✅ Supported |\n| 1.20.1 | Fabric, Forge | ✅ Supported |\n| 26.1.2 | Fabric | ✅ Supported |\n\n**Required dependencies:** None.\n\n**Known incompatibilities:** None known. This mod is designed to work alongside all major optimization mods (Sodium, Lithium, etc.) and content mods.\n\n## ❓ FAQ\n\n**Does this need to be installed on the server?**  \nNo — this is a client-side only mod. It will work on any server regardless of server-side mods.\n\n**Is this compatible with Sodium / OptiFine / Iris?**  \nYes. Smooth Container only modifies the GUI opening process and does not touch rendering pipelines or shaders.\n\n**Does this affect gameplay or container mechanics?**  \nNo — it only changes how the GUI renders when opening a container. All item interactions and mechanics remain unchanged.\n\n**I found a bug or crash, where do I report it?**  \nPlease report issues on the [GitHub issue tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Asmoothcontainer). Include your Minecraft version, mod loader, and a log file if possible.\n\n## 💖 Support the Project\n\nIf you find Smooth Container useful, consider supporting development:\n\n[![Donate](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under **MIT**. You are free to include this mod in any modpack, on any platform, with or without attribution. Do not redistribute modified versions of the jar file without permission.\n\n<details>\n<summary>Credits</summary>\n\n- **Author:** Itamio\n- **Contributor:** Asd1281yss\n- Based on research into container rendering performance bottlenecks.\n</details>",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/Z9091xot/d64454d9e2929963f205b3af783e09b407d800cc_96.webp",
+  "color": "#4a3614",
   "categories": [
     "optimization",
     "utility"
   ],
-  "color": "#4a3614",
-  "date_published": "2026-07-05T04:13:48.610740Z",
-  "description": "**Smooth Container** is a lightweight mod that eliminates the frustrating lag spike when opening chests, hoppers, shulker boxes, and other containers. Instead of stuttering on open, the GUI renders instantly — making inventory management feel smooth and responsive.\n\n[](https://modrinth.com/mod/smoothcontainer/versions?l=fabric)\n[](https://modrinth.com/mod/smoothcontainer/versions?l=forge)\n[](https://modrinth.com/mod/smoothcontainer/versions?l=neoforge)\n\n## 📦 Installation\n\n1. Install the correct mod loader for your Minecraft version (Fabric, Forge, or NeoForge).\n2. Place `smoothcontainer.jar` into your `.minecraft/mods` folder.\n3. Launch the game — no configuration or dependencies are required.\n\n**This mod is client-side only.** It works perfectly on multiplayer servers even if the server does not have the mod installed.\n\n## ✨ Features\n\n- **Instant container rendering** — eliminates the 100–300ms freeze that normally occurs when opening inventories.\n- **Works with all vanilla containers** — chests, hoppers, barrels, furnaces, shulker boxes, crafting tables, anvils, and more.\n- **Mod container support** — compatible with most modded storage blocks that use standard GUI rendering.\n- **Lightweight** — no config files, no performance overhead beyond the fix.\n- **Client-side only** — works on any server without requiring server-side installation.\n\n## 🧩 Compatibility\n\n| Minecraft Version | Loaders Supported | Status |\n|-------------------|-------------------|--------|\n| 1.21.11 | Fabric | ✅ Supported |\n| 1.21.1 | Fabric, NeoForge | ✅ Supported |\n| 1.20.1 | Fabric, Forge | ✅ Supported |\n| 26.1.2 | Fabric | ✅ Supported |\n\n**Required dependencies:** None.\n\n**Known incompatibilities:** None known. This mod is designed to work alongside all major optimization mods (Sodium, Lithium, etc.) and content mods.\n\n## ❓ FAQ\n\n**Does this need to be installed on the server?**  \nNo — this is a client-side only mod. It will work on any server regardless of server-side mods.\n\n**Is this compatible with Sodium / OptiFine / Iris?**  \nYes. Smooth Container only modifies the GUI opening process and does not touch rendering pipelines or shaders.\n\n**Does this affect gameplay or container mechanics?**  \nNo — it only changes how the GUI renders when opening a container. All item interactions and mechanics remain unchanged.\n\n**I found a bug or crash, where do I report it?**  \nPlease report issues on the [GitHub issue tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Asmoothcontainer). Include your Minecraft version, mod loader, and a log file if possible.\n\n## 💖 Support the Project\n\nIf you find Smooth Container useful, consider supporting development:\n\n[](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under **MIT**. You are free to include this mod in any modpack, on any platform, with or without attribution. Do not redistribute modified versions of the jar file without permission.",
-  "discord_url": "",
-  "downloads": 246,
+  "client_side": "required",
+  "server_side": "optional",
+  "downloads": 268,
   "followers": 2,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/Z9091xot/d64454d9e2929963f205b3af783e09b407d800cc_96.webp",
+  "date_published": "2026-07-05T04:13:48.610740Z",
+  "updated": "2026-07-10T12:14:04.571965Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Asmoothcontainer",
+  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/smoothcontainer",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/smoothcontainer",
+  "site_url": "mod/?id=smoothcontainer",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
-  ],
-  "mod_id": "smoothcontainer",
-  "modrinth_url": "https://modrinth.com/mod/smoothcontainer",
-  "name": "Smooth Container",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/smoothcontainer",
-  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Asmoothcontainer",
-  "wiki_url": "",
-  "summary": "Eliminates container open lag by instantly rendering GUIs.",
-  "updated": "2026-07-10T12:14:04.571965Z",
-  "client_side": "required",
-  "server_side": "optional",
-  "versions": [
-    {
-      "date_published": "2026-07-10T12:14:04.571965Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "smoothcontainer-26.1.2-neoforge-1.0.0.jar",
-          "primary": true,
-          "size": 32337,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/IohjrduD/smoothcontainer-26.1.2-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Ported to 26.1.2 neoforge"
-    },
-    {
-      "date_published": "2026-07-10T12:14:03.299331Z",
-      "downloads": 37,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.12.2-forge-1.0.0.jar",
-          "primary": true,
-          "size": 33246,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/tk4F4Z5f/smoothcontainer-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Ported to 1.12.2 forge"
-    },
-    {
-      "date_published": "2026-07-05T04:13:55.632328Z",
-      "downloads": 22,
-      "files": [
-        {
-          "filename": "smoothcontainer-26.1.2-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 37440,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/X6C7tSas/smoothcontainer-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-26.1.2",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 26.1.2 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    },
-    {
-      "date_published": "2026-07-05T04:13:54.136481Z",
-      "downloads": 43,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.21.11-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 37462,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/hJDg6t7h/smoothcontainer-1.21.11-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.11",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 1.21.11 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    },
-    {
-      "date_published": "2026-07-05T04:13:53.208524Z",
-      "downloads": 52,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.21.1-neoforge-1.0.0.jar",
-          "primary": false,
-          "size": 33920,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/2qP4HgNx/smoothcontainer-1.21.1-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+neoforge-1.21.1",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 1.21.1 NeoForge. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    },
-    {
-      "date_published": "2026-07-05T04:13:52.230676Z",
-      "downloads": 22,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.21.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 34474,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/SOnGCdMR/smoothcontainer-1.21.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.1",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 1.21.1 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    },
-    {
-      "date_published": "2026-07-05T04:13:50.841681Z",
-      "downloads": 36,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.20.1-forge-1.0.0.jar",
-          "primary": false,
-          "size": 32537,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/aEm54h0n/smoothcontainer-1.20.1-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.20.1",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 1.20.1 Forge. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    },
-    {
-      "date_published": "2026-07-05T04:13:49.765302Z",
-      "downloads": 20,
-      "files": [
-        {
-          "filename": "smoothcontainer-1.20.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 34475,
-          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/TbwN6FKR/smoothcontainer-1.20.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.20.1",
-      "version_type": "release",
-      "changelog": "Initial release of Smooth Container for Minecraft 1.20.1 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
-    }
   ],
   "game_versions": [
     "1.12.2",
@@ -212,5 +34,184 @@
     "1.21.1",
     "1.21.11",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Ported to 26.1.2 neoforge",
+      "date_published": "2026-07-10T12:14:04.571965Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-26.1.2-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 32337,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/IohjrduD/smoothcontainer-26.1.2-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Ported to 1.12.2 forge",
+      "date_published": "2026-07-10T12:14:03.299331Z",
+      "downloads": 37,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.12.2-forge-1.0.0.jar",
+          "primary": true,
+          "size": 33246,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/tk4F4Z5f/smoothcontainer-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-26.1.2",
+      "changelog": "Initial release of Smooth Container for Minecraft 26.1.2 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:55.632328Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-26.1.2-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 37440,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/X6C7tSas/smoothcontainer-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.11",
+      "changelog": "Initial release of Smooth Container for Minecraft 1.21.11 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:54.136481Z",
+      "downloads": 45,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.21.11-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 37462,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/hJDg6t7h/smoothcontainer-1.21.11-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+neoforge-1.21.1",
+      "changelog": "Initial release of Smooth Container for Minecraft 1.21.1 NeoForge. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:53.208524Z",
+      "downloads": 55,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.21.1-neoforge-1.0.0.jar",
+          "primary": false,
+          "size": 33920,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/2qP4HgNx/smoothcontainer-1.21.1-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.1",
+      "changelog": "Initial release of Smooth Container for Minecraft 1.21.1 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:52.230676Z",
+      "downloads": 22,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.21.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 34474,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/SOnGCdMR/smoothcontainer-1.21.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.20.1",
+      "changelog": "Initial release of Smooth Container for Minecraft 1.20.1 Forge. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:50.841681Z",
+      "downloads": 46,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.20.1-forge-1.0.0.jar",
+          "primary": false,
+          "size": 32537,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/aEm54h0n/smoothcontainer-1.20.1-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.20.1",
+      "changelog": "Initial release of Smooth Container for Minecraft 1.20.1 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer.",
+      "date_published": "2026-07-05T04:13:49.765302Z",
+      "downloads": 22,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "smoothcontainer-1.20.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 34475,
+          "url": "https://cdn.modrinth.com/data/Z9091xot/versions/TbwN6FKR/smoothcontainer-1.20.1-fabric-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

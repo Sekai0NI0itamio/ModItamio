@@ -1,1797 +1,34 @@
 {
+  "mod_id": "world-no-particles",
+  "name": "I DONT WANT PARTICLES!!!",
+  "summary": "Hate the lag when particles clog your screen? This mod kills every particle effect, so you get buttery‑smooth FPS without any visual noise.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# No Particles\n\n![World No Particles cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/no-particles/main/.modcompiler-art/description-image.webp)\n\nGet massive FPS improvements by completely disabling all particle effects! This core mod uses ASM bytecode transformation to prevent particles from spawning at the lowest level.\n\n## Features\n\n- ✅ **Complete Particle Removal** - No particles spawn at all\n- ✅ **Core Mod Technology** - Uses ASM bytecode transformation for maximum effectiveness\n- ✅ **Massive Performance Boost** - Huge FPS gains in particle-heavy situations\n- ✅ **Zero Overhead** - No performance cost, only benefits\n\n## How It Works\n\nThis mod uses ASM (bytecode manipulation) to patch Minecraft's core particle system:.\n\n**Patches World.spawnParticle** - Intercepts all particle spawn calls and returns immediately.\n\nThis approach is far more effective than event-based cancellation because it happens at the bytecode level before particles are even created.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/CAkZtTfk/141bb48b4de3c70421923760910db9a68c686b9b_96.webp",
+  "color": "#1b171d",
   "categories": [
     "optimization",
     "utility"
   ],
-  "color": "#1b171d",
-  "date_published": "2026-04-10T10:50:03.128081Z",
-  "description": "# No Particles\n\n![World No Particles cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/no-particles/main/.modcompiler-art/description-image.webp)\n\nGet massive FPS improvements by completely disabling all particle effects! This core mod uses ASM bytecode transformation to prevent particles from spawning at the lowest level.\n\n## Features\n\n- ✅ **Complete Particle Removal** - No particles spawn at all\n- ✅ **Core Mod Technology** - Uses ASM bytecode transformation for maximum effectiveness\n- ✅ **Massive Performance Boost** - Huge FPS gains in particle-heavy situations\n- ✅ **Zero Overhead** - No performance cost, only benefits\n\n## How It Works\n\nThis mod uses ASM (bytecode manipulation) to patch Minecraft's core particle system:.\n\n**Patches World.spawnParticle** - Intercepts all particle spawn calls and returns immediately.\n\nThis approach is far more effective than event-based cancellation because it happens at the bytecode level before particles are even created.",
-  "discord_url": "",
-  "downloads": 7938,
+  "client_side": "required",
+  "server_side": "unsupported",
+  "downloads": 7997,
   "followers": 6,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/CAkZtTfk/141bb48b4de3c70421923760910db9a68c686b9b_96.webp",
+  "date_published": "2026-04-10T10:50:03.128081Z",
+  "updated": "2026-05-04T13:07:39.012253Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/no-particles/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/no-particles",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/no-particles/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/world-no-particles",
+  "site_url": "mod/?id=world-no-particles",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
   ],
-  "mod_id": "world-no-particles",
-  "modrinth_url": "https://modrinth.com/mod/world-no-particles",
-  "name": "I DONT WANT PARTICLES!!!",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/no-particles",
-  "issues_url": "https://github.com/Sekai0NI0itamio/no-particles/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/no-particles/blob/main/docs/Home.md",
-  "summary": "Hate the lag when particles clog your screen? This mod kills every particle effect, so you get buttery‑smooth FPS without any visual noise.",
-  "updated": "2026-05-04T13:07:39.012253Z",
-  "client_side": "required",
-  "server_side": "unsupported",
-  "versions": [
-    {
-      "date_published": "2026-05-04T13:07:39.012253Z",
-      "downloads": 25,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3276,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/tVesvj0M/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:37.769111Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3275,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5ypylGOv/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:36.723996Z",
-      "downloads": 107,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5926,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/7aLr5XMK/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:35.697218Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5927,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/vygIDg1R/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:34.560168Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5926,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/XsyW2Azt/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:33.482431Z",
-      "downloads": 77,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5926,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/aXcbbFQF/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:32.362475Z",
-      "downloads": 266,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5927,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UFj424Jw/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:31.304666Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5924,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/cDWLw6bo/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:30.197480Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5925,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/pbdhX7BU/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:29.090915Z",
-      "downloads": 281,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5923,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/FRDV7IfH/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T13:07:28.105759Z",
-      "downloads": 94,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5919,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/6gDyoq9V/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:48.253542Z",
-      "downloads": 95,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3343,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/QcuYRv9E/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:47.378307Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3342,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/avkh5YFZ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:46.441923Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3344,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/iLnAWqSe/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:45.531804Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3367,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/IZ1pQc7h/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:44.623998Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3317,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ypktL5tu/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:43.576215Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3317,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Sb9HGP0D/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:42.621190Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3317,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/MTEARlBz/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:41.735211Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3316,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/f99X3wBZ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:40.794415Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3316,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/nmspQysC/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:39.775528Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3316,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/DzrEAs1I/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:38.841812Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3316,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/gAEVpe77/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:37.945582Z",
-      "downloads": 48,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3365,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5bUULyXW/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:37.070180Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3366,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zOMhHF4v/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:36.155225Z",
-      "downloads": 233,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3314,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ucpSdRuo/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:35.251795Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3316,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/q4sCw4OU/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:34.320429Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3309,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mO4DF6vm/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:33.423965Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3308,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ebfMMv5x/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "World No Particles 1.0.0 (neoforge 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:32.549927Z",
-      "downloads": 277,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3256,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5ZgBU14f/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:31.643282Z",
-      "downloads": 522,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 4532,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UC9OYFfV/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.8.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:30.769093Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3275,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/556NUzcK/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:29.889624Z",
-      "downloads": 25,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3274,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Kaa02H6o/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:29.025894Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3274,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/o9TVfQyn/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:28.045456Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3274,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/BGWZKTOo/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:27.121785Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3415,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/CiwQAqSq/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:26.184149Z",
-      "downloads": 33,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3415,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/EYBp78h7/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:25.234860Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3414,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/A6R1monk/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:24.242745Z",
-      "downloads": 195,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3274,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/7NEiBHx2/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:23.301741Z",
-      "downloads": 37,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3275,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mf2xQvUb/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:22.316206Z",
-      "downloads": 36,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3414,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/eTXBPrQv/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:21.329680Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3413,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/rXl0xZKR/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:20.427765Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3472,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kSBaDT7r/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:19.508324Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3482,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8NnpYZ5L/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:18.486340Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3481,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/D7VxzzGU/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:17.020993Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3481,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/gMibU73V/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:16.119683Z",
-      "downloads": 376,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3481,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/SlkPTn4y/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:15.219717Z",
-      "downloads": 24,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3744,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/CAUKQ37H/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:14.308669Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3744,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/wrFc62JS/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:13.442096Z",
-      "downloads": 94,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3742,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5l8F6ALt/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:11.835513Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3743,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/o8ySrTxt/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:10.814503Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3741,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/KBV5kRQb/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:09.661600Z",
-      "downloads": 47,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3730,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5e1fey0W/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:08.545970Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3730,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mCQL0b98/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:07.653857Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3729,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Avx88olk/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:06.756454Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3652,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/nw8Psdfo/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:05.907912Z",
-      "downloads": 145,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 3727,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/1uPZ0q62/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:05.013998Z",
-      "downloads": 56,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 4476,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/2bvoqOfx/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "World No Particles 1.0.0 (forge 1.12)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:04.131404Z",
-      "downloads": 1205,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5584,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/s3YUvEMf/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:03.181661Z",
-      "downloads": 63,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5582,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zzSKBTtp/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:01.979144Z",
-      "downloads": 161,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5580,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kVAT8uoQ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:00.966930Z",
-      "downloads": 21,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5662,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/DCxfYp7A/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:52:00.092263Z",
-      "downloads": 1893,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5661,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/M4vBs0Uf/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:59.233796Z",
-      "downloads": 131,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5662,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UyYavEsT/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:58.347616Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5921,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zkpDV4XJ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:57.432428Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5922,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/py2RNJWQ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:56.568980Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5922,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/QlJDEfPl/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:55.659174Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5921,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ZQj2RyRR/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:54.779229Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5921,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/lNKaGLNN/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:53.924514Z",
-      "downloads": 210,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5922,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/W8WmDdU8/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:53.018165Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5622,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/qDuJjPix/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:51.984360Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5623,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/9G4jkeZJ/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:50.964022Z",
-      "downloads": 21,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5622,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8PigZUrD/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:50.088085Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5621,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/LvtXjiP7/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:49.172578Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5619,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/OnanOXe0/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:48.201402Z",
-      "downloads": 22,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5621,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/qnxkqgwI/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:47.276560Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5622,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/lpTJrAXg/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:46.347525Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5619,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/spphUj4o/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:45.462258Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5618,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8hmg6UIT/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.17)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-04T12:51:44.485872Z",
-      "downloads": 194,
-      "files": [
-        {
-          "filename": "noparticles-1.0.0.jar",
-          "primary": true,
-          "size": 5621,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/HBLYotWA/noparticles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "World No Particles 1.0.0 (fabric 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: noparticles-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-04-10T10:50:03.752792Z",
-      "downloads": 447,
-      "files": [
-        {
-          "filename": "No-Particles-1.0.0.jar",
-          "primary": true,
-          "size": 6725,
-          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kEWZQ7Q0/No-Particles-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "No Particles 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: No Particles\nJar: No-Particles-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
-    }
-  ],
   "game_versions": [
-    "1.8.9",
     "1.12",
     "1.12.2",
     "1.16.5",
@@ -1813,6 +50,8 @@
     "1.20.6",
     "1.21",
     "1.21.1",
+    "1.21.10",
+    "1.21.11",
     "1.21.2",
     "1.21.3",
     "1.21.4",
@@ -1821,10 +60,1772 @@
     "1.21.7",
     "1.21.8",
     "1.21.9",
-    "1.21.10",
-    "1.21.11",
+    "1.8.9",
     "26.1",
     "26.1.1",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:39.012253Z",
+      "downloads": 25,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3276,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/tVesvj0M/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:37.769111Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3275,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5ypylGOv/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:36.723996Z",
+      "downloads": 108,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5926,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/7aLr5XMK/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:35.697218Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5927,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/vygIDg1R/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:34.560168Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5926,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/XsyW2Azt/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:33.482431Z",
+      "downloads": 77,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5926,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/aXcbbFQF/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:32.362475Z",
+      "downloads": 267,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5927,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UFj424Jw/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:31.304666Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5924,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/cDWLw6bo/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:30.197480Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5925,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/pbdhX7BU/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:29.090915Z",
+      "downloads": 281,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5923,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/FRDV7IfH/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T13:07:28.105759Z",
+      "downloads": 98,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5919,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/6gDyoq9V/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:48.253542Z",
+      "downloads": 95,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3343,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/QcuYRv9E/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:47.378307Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3342,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/avkh5YFZ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:46.441923Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3344,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/iLnAWqSe/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:45.531804Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3367,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/IZ1pQc7h/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:44.623998Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3317,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ypktL5tu/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:43.576215Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3317,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Sb9HGP0D/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:42.621190Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3317,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/MTEARlBz/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:41.735211Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3316,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/f99X3wBZ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:40.794415Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3316,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/nmspQysC/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:39.775528Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3316,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/DzrEAs1I/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:38.841812Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3316,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/gAEVpe77/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:37.945582Z",
+      "downloads": 48,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3365,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5bUULyXW/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:37.070180Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3366,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zOMhHF4v/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:36.155225Z",
+      "downloads": 235,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3314,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ucpSdRuo/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:35.251795Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3316,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/q4sCw4OU/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:34.320429Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3309,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mO4DF6vm/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:33.423965Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3308,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ebfMMv5x/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:32.549927Z",
+      "downloads": 279,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3256,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5ZgBU14f/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:31.643282Z",
+      "downloads": 527,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 4532,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UC9OYFfV/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:30.769093Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3275,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/556NUzcK/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:29.889624Z",
+      "downloads": 25,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3274,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Kaa02H6o/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:29.025894Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3274,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/o9TVfQyn/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:28.045456Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3274,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/BGWZKTOo/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:27.121785Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3415,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/CiwQAqSq/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:26.184149Z",
+      "downloads": 33,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3415,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/EYBp78h7/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:25.234860Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3414,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/A6R1monk/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:24.242745Z",
+      "downloads": 198,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3274,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/7NEiBHx2/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:23.301741Z",
+      "downloads": 37,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3275,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mf2xQvUb/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:22.316206Z",
+      "downloads": 37,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3414,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/eTXBPrQv/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:21.329680Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3413,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/rXl0xZKR/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:20.427765Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3472,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kSBaDT7r/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:19.508324Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3482,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8NnpYZ5L/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:18.486340Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3481,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/D7VxzzGU/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:17.020993Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3481,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/gMibU73V/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:16.119683Z",
+      "downloads": 384,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3481,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/SlkPTn4y/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:15.219717Z",
+      "downloads": 24,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3744,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/CAUKQ37H/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:14.308669Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3744,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/wrFc62JS/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:13.442096Z",
+      "downloads": 95,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3742,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5l8F6ALt/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:11.835513Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3743,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/o8ySrTxt/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:10.814503Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3741,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/KBV5kRQb/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:09.661600Z",
+      "downloads": 47,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3730,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/5e1fey0W/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:08.545970Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3730,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/mCQL0b98/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:07.653857Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3729,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/Avx88olk/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:06.756454Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3652,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/nw8Psdfo/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:05.907912Z",
+      "downloads": 145,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 3727,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/1uPZ0q62/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:05.013998Z",
+      "downloads": 57,
+      "version_type": "release",
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 4476,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/2bvoqOfx/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:04.131404Z",
+      "downloads": 1210,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5584,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/s3YUvEMf/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:03.181661Z",
+      "downloads": 63,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5582,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zzSKBTtp/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:01.979144Z",
+      "downloads": 161,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5580,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kVAT8uoQ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:00.966930Z",
+      "downloads": 21,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5662,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/DCxfYp7A/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:52:00.092263Z",
+      "downloads": 1906,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/M4vBs0Uf/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:59.233796Z",
+      "downloads": 131,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5662,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/UyYavEsT/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:58.347616Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5921,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/zkpDV4XJ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:57.432428Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5922,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/py2RNJWQ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:56.568980Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5922,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/QlJDEfPl/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:55.659174Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5921,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/ZQj2RyRR/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:54.779229Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5921,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/lNKaGLNN/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:53.924514Z",
+      "downloads": 212,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5922,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/W8WmDdU8/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:53.018165Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5622,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/qDuJjPix/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:51.984360Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5623,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/9G4jkeZJ/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:50.964022Z",
+      "downloads": 21,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5622,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8PigZUrD/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:50.088085Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5621,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/LvtXjiP7/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:49.172578Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5619,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/OnanOXe0/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:48.201402Z",
+      "downloads": 22,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5621,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/qnxkqgwI/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:47.276560Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5622,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/lpTJrAXg/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:46.347525Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5619,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/spphUj4o/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:45.462258Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5618,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/8hmg6UIT/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "World No Particles 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: World No Particles\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: noparticles-1.0.0.jar",
+      "date_published": "2026-05-04T12:51:44.485872Z",
+      "downloads": 196,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "noparticles-1.0.0.jar",
+          "primary": true,
+          "size": 5621,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/HBLYotWA/noparticles-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "No Particles 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: No Particles\nJar: No-Particles-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
+      "date_published": "2026-04-10T10:50:03.752792Z",
+      "downloads": 452,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "No-Particles-1.0.0.jar",
+          "primary": true,
+          "size": 6725,
+          "url": "https://cdn.modrinth.com/data/CAkZtTfk/versions/kEWZQ7Q0/No-Particles-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

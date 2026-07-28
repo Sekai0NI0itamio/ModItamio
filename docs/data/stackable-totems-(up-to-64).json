@@ -1,0 +1,1723 @@
+{
+  "mod_id": "stackable-totems-(up-to-64)",
+  "name": "Stackable Totems (up to 64)",
+  "summary": "Allows you to stack totems up to 64",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Stackable Totems of Undying\n\n## Description\n\n**Stackable Totems of Undying** is a simple tweak mod for Minecraft Forge 1.20.1 that allows Totems of Undying to stack up to 64. No more wasting inventory space on single totems—now you can carry a full stack and use them one by one.\n\n### How It Works (for the user)\n\n- Totems of Undying now stack up to 64, just like most other items.\n- When you are holding a stack of totems and would die, one totem is consumed from the stack (decreasing the count by 1), and you are saved as usual.\n- The totem's functionality remains unchanged; only the stack size is increased.\n\n### Features\n\n- Totems stack to 64.\n- Works exactly as expected: using a totem reduces the stack count.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/f79mRG0L/5829fc18223fb16cde93dfd7ed1dfe2e762c982c_96.webp",
+  "color": "#79756d",
+  "categories": [
+    "game-mechanics"
+  ],
+  "client_side": "unsupported",
+  "server_side": "required",
+  "downloads": 4462,
+  "followers": 3,
+  "date_published": "2026-02-22T03:23:15.853481Z",
+  "updated": "2026-04-29T14:08:26.862672Z",
+  "license": "MIT",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/stackable-totems-(up-to-64)",
+  "site_url": "mod/?id=stackable-totems-(up-to-64)",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "game_versions": [
+    "1.12.2",
+    "1.16.5",
+    "1.17",
+    "1.17.1",
+    "1.18",
+    "1.18.1",
+    "1.18.2",
+    "1.19",
+    "1.19.1",
+    "1.19.2",
+    "1.19.3",
+    "1.19.4",
+    "1.20.1",
+    "1.20.2",
+    "1.20.3",
+    "1.20.4",
+    "1.20.5",
+    "1.20.6",
+    "1.21",
+    "1.21.1",
+    "1.21.10",
+    "1.21.11",
+    "1.21.2",
+    "1.21.3",
+    "1.21.4",
+    "1.21.5",
+    "1.21.6",
+    "1.21.7",
+    "1.21.8",
+    "1.21.9",
+    "26.1",
+    "26.1.1",
+    "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.12.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:26.862672Z",
+      "downloads": 131,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2262,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/Yg1IUGHk/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:25.569511Z",
+      "downloads": 699,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5641,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/hNgbldp3/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:24.379415Z",
+      "downloads": 58,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5639,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/jJzl9da9/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:23.239744Z",
+      "downloads": 117,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5637,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/UeA5ntdd/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:21.834914Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5673,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/qw9F0Wwo/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:20.704667Z",
+      "downloads": 25,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5673,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/amR52Ujo/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:19.596362Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5673,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/wWI9jDQz/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:18.370362Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/qaNMv3pc/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:17.157618Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5673,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/puyUiObi/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:15.865152Z",
+      "downloads": 61,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/HJ28U0iu/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:14.802672Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/rbUbCExW/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:13.544332Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/vWo2XztC/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:12.351930Z",
+      "downloads": 549,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/LkAud4wh/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:11.235751Z",
+      "downloads": 33,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5672,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/6rMx5lgh/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:10.068385Z",
+      "downloads": 244,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5670,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/ek08msiR/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:08.931058Z",
+      "downloads": 75,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5667,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/OKEvgB1O/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:07.799383Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5414,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/3RLACsLq/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:06.669302Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5415,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/Z7tWnJ5u/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:05.492290Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5415,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/fCjCe5mU/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:04.287024Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5415,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/dWsU8aCa/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:03.077775Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5415,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/A2CP6uFp/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:01.860535Z",
+      "downloads": 191,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5416,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/D9mqTYh8/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:08:00.705510Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5140,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/gVDNoBoG/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:59.483594Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5141,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/UBVeIXcB/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:58.272100Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5140,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/UQt4hbUK/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:56.989618Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5140,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/XNJ2miIt/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:55.867287Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5138,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/Swa0Kk3f/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:54.538657Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5139,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/mBBiJxG5/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:53.340616Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5141,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/qw1peb4a/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:52.184879Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5138,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/tImIuXNM/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:50.970720Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5140,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/aIjBNtjI/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:49.666668Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5137,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/u98FzXNz/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T14:07:48.424729Z",
+      "downloads": 42,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 5140,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/op0x1GH1/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:42:44.095052Z",
+      "downloads": 43,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2891,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/n6dnsune/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:54.550655Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2919,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/w54md7MS/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:52.172769Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2918,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/nubgUI7V/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:50.716648Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2908,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/MnOeJrNY/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:45.036875Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2908,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/RHR1N2X9/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:43.564725Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2907,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/fMXV7HHz/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T13:33:41.692760Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2831,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/ZafBEpQb/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:23.593214Z",
+      "downloads": 111,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3142,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/RIQ7fAtV/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:22.078540Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3162,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/8znJ1d6q/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:20.921623Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3162,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/W9bi8DLD/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:19.735688Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3162,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/mO7mzMf3/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:18.633895Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3161,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/JWYf7Hd4/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:17.462209Z",
+      "downloads": 50,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3162,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/dadQc1sp/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T12:06:16.268615Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3162,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/S3WiiJrW/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:34.651024Z",
+      "downloads": 104,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3100,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/cPNRcDgp/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:33.578164Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3099,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/nij44Ahs/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:32.491371Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3101,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/bCYoMJc4/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:31.363135Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3119,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/2CpbETEe/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:30.325827Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3098,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/kINydUeX/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:29.211096Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3098,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/2E8EGsqH/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:28.096958Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/iDvXnQGD/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:26.948109Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/zqsYkn4L/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:25.725635Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/RGH9BP4a/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:24.584597Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/WWQWQCDS/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:23.406596Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/ncYiWe8A/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:22.227151Z",
+      "downloads": 49,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3118,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/BQYoqG91/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:20.962549Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3119,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/Wdzx9A6j/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:19.785458Z",
+      "downloads": 237,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3096,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/DqdedeAb/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:18.685699Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3097,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/g6U0wf2x/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:17.564529Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3079,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/fA8n4RdB/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:16.328346Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3079,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/wh8X9lQR/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:15.175803Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2883,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/KoKwukma/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:13.935345Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 2883,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/TyjZorY7/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:12.656539Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3117,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/nzu625LX/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:11.327873Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3116,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/fYXHCtyY/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:10.222187Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3117,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/nZ4fS6me/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:09.122518Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3116,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/AaG1Qkbd/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:07.922246Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3115,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/p21p0ZIL/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:06.714274Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3277,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/GSvKOfTY/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:05.608229Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3278,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/kmumkHx2/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems of Undying 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Stackable Totems of Undying\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: stackabletotems-1.0.0.jar",
+      "date_published": "2026-04-29T11:43:04.523442Z",
+      "downloads": 64,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3277,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/Ob88b8jt/stackabletotems-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Stackable Totems (up to 64) 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "",
+      "date_published": "2026-02-22T03:28:38.418968Z",
+      "downloads": 1132,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1",
+        "1.20.2",
+        "1.20.3",
+        "1.20.4",
+        "1.20.5",
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "stackabletotems-1.0.0.jar",
+          "primary": true,
+          "size": 3144,
+          "url": "https://cdn.modrinth.com/data/f79mRG0L/versions/AYQH7cJD/stackabletotems-1.0.0.jar"
+        }
+      ]
+    }
+  ]
+}

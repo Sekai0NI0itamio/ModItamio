@@ -1,209 +1,31 @@
 {
+  "mod_id": "cropguard",
+  "name": "Dont Break crops that are not grown yet",
+  "summary": "Prevents accidental breaks on unripe crops, so you dont have to worry again breaking weets that are not fully grown. Sneak to still remove misplaced seeds.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n[![Available for Fabric](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg)](https://modrinth.com/mod/cropguard/versions?l=fabric)\n[![Available for Forge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg)](https://modrinth.com/mod/cropguard/versions?l=forge)\n[![Available for NeoForge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/neoforge_vector.svg)](https://modrinth.com/mod/cropguard/versions?l=neoforge)\n[![Donate](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/U2P522M1IW)\n\n**CropGuard** stops you from accidentally destroying crops that haven't finished growing. All vanilla crops are protected — only fully grown plants can be broken. Need to remove a misplaced seed? Just sneak while breaking, and the seed will drop as usual.\n\n## 📦 Installation\n\n1. Install the correct mod loader (Fabric, Forge, or NeoForge) for your Minecraft version.\n2. Place `CropGuard-<version>.jar` into your `.minecraft/mods` folder.\n3. **(Server owners)** The mod must be installed on the server; clients may install it to remove the brief ghost-break animation, but it's not required.\n\nThis mod is **server‑side required, client‑side optional**.\n\n## ✨ Features\n\n- **Full‑growth only** – Cancels player block breaks on any crop that isn't at its maximum growth stage (wheat, carrots, potatoes, beetroot, torchflower, pitcher plant, nether wart, sweet berry bushes).\n- **Sneak‑to‑bypass** – Holding the sneak key (Shift) lets you break unripe crops normally — perfect for removing misplanted seeds or reorganising your farm.\n- **No configuration needed** – Works out of the box. The sneak behaviour is hard‑coded and always available.\n- **Lightweight and transparent** – Handled entirely in the block‑break event; zero tick overhead when you're not breaking crops.\n- **Broad version support** – Runs on Fabric, Forge, and NeoForge across 7 Minecraft version/loader combinations (1.12.2 through 1.21.1, plus 1.21.11 and 26.1.2 Fabric).\n\n## 🧩 Compatibility\n\n| Minecraft | Loader               | Status       | Notes |\n|-----------|----------------------|--------------|-------|\n| 1.21.1    | Fabric, NeoForge     | ✅ Supported  | Protects all vanilla crops including torchflower & pitcher plant |\n| 1.20.1    | Fabric, Forge        | ✅ Supported  | Full crop coverage |\n| 1.21.11   | Fabric               | ✅ Supported  | Newer Fabric port, same behaviour |\n| 26.1.2    | Fabric               | ✅ Supported  | Fabric on version 26.1.2 |\n| 1.12.2    | Forge                | ✅ Supported  | Uses BlockCrops/BlockNetherWart; sweet berries, torchflower, pitcher omitted (don't exist) |\n\n**Required dependencies:** None — the mod is self‑contained.  \n**Known incompatibilities:** None. Works alongside all popular performance and content mods.  \n**Modded crops:** Any crop extending `CropBlock` (or `BlockCrops` on 1.12.2) is automatically protected.\n\n## ❓ FAQ\n\n**Do I need this on the client?**  \nNo — the server enforces the protection. Installing it on the client is optional and only removes the brief ghost-break visual when you try to break an unripe crop.\n\n**How do I remove a crop I planted by accident?**  \nCrouch (sneak) and then break it. The mod respects the sneak key and lets you break any crop regardless of growth.\n\n**Does this change vanilla mechanics?**  \nNo. Fully grown crops break and drop exactly as they do in vanilla. The only change is that unripe crops cannot be broken *unless* you're sneaking.\n\n**Is there a config or toggle?**  \nNo configuration file. The behaviour is simple and deliberate — sneak to override, otherwise only fully grown crops break.\n\n**Will it work with custom crops from other mods?**  \nIf a modded crop extends the vanilla `CropBlock` class, it will be protected automatically. Non‑standard crops may not be covered, but the majority of farming mods use the standard class.\n\n**I found a bug — where do I report it?**  \nPlease open an issue on our [tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet). Include your Minecraft version, mod loader, and the game log.\n\n## 🐛 Report Issues\n\nBugs and suggestions are tracked on GitHub.  \nUse the dedicated label to find or create issues for this mod:  \n[`dontbreakcropsthatarenotgrownyet` issues](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet)  \nSource code: [ModItamio repository](https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/dontbreakcropsthatarenotgrownyet)\n\n## 💖 Support the Project\n\nIf CropGuard saves your farm (and your sanity), consider buying me a coffee:\n\n[![Donate](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under **MIT**. You are free to include this mod in any modpack hosted on Modrinth, CurseForge, or elsewhere. Just don't re‑host the JAR file directly — link back here instead.\n\n<details>\n<summary>Credits</summary>\n\n- **Author:** Itamio\n- **Contributor:** Asd1281yss\n- Build system: AsdUnionModEngineering\n</details>",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/MuZnCxv2/43039e9d2090eb31a1b0383835339ea242c468d4_96.webp",
+  "color": "#7f3a0c",
   "categories": [
     "utility"
   ],
-  "color": "#7f3a0c",
-  "date_published": "2026-07-06T02:25:01.176885Z",
-  "description": "[](https://modrinth.com/mod/cropguard/versions?l=fabric)\n[](https://modrinth.com/mod/cropguard/versions?l=forge)\n[](https://modrinth.com/mod/cropguard/versions?l=neoforge)\n[](https://ko-fi.com/U2P522M1IW)\n\n**CropGuard** stops you from accidentally destroying crops that haven't finished growing. All vanilla crops are protected — only fully grown plants can be broken. Need to remove a misplaced seed? Just sneak while breaking, and the seed will drop as usual.\n\n## 📦 Installation\n\n1. Install the correct mod loader (Fabric, Forge, or NeoForge) for your Minecraft version.\n2. Place `CropGuard-<version>.jar` into your `.minecraft/mods` folder.\n3. **(Server owners)** The mod must be installed on the server; clients may install it to remove the brief ghost-break animation, but it's not required.\n\nThis mod is **server‑side required, client‑side optional**.\n\n## ✨ Features\n\n- **Full‑growth only** – Cancels player block breaks on any crop that isn't at its maximum growth stage (wheat, carrots, potatoes, beetroot, torchflower, pitcher plant, nether wart, sweet berry bushes).\n- **Sneak‑to‑bypass** – Holding the sneak key (Shift) lets you break unripe crops normally — perfect for removing misplanted seeds or reorganising your farm.\n- **No configuration needed** – Works out of the box. The sneak behaviour is hard‑coded and always available.\n- **Lightweight and transparent** – Handled entirely in the block‑break event; zero tick overhead when you're not breaking crops.\n- **Broad version support** – Runs on Fabric, Forge, and NeoForge across 7 Minecraft version/loader combinations (1.12.2 through 1.21.1, plus 1.21.11 and 26.1.2 Fabric).\n\n## 🧩 Compatibility\n\n| Minecraft | Loader               | Status       | Notes |\n|-----------|----------------------|--------------|-------|\n| 1.21.1    | Fabric, NeoForge     | ✅ Supported  | Protects all vanilla crops including torchflower & pitcher plant |\n| 1.20.1    | Fabric, Forge        | ✅ Supported  | Full crop coverage |\n| 1.21.11   | Fabric               | ✅ Supported  | Newer Fabric port, same behaviour |\n| 26.1.2    | Fabric               | ✅ Supported  | Fabric on version 26.1.2 |\n| 1.12.2    | Forge                | ✅ Supported  | Uses BlockCrops/BlockNetherWart; sweet berries, torchflower, pitcher omitted (don't exist) |\n\n**Required dependencies:** None — the mod is self‑contained.  \n**Known incompatibilities:** None. Works alongside all popular performance and content mods.  \n**Modded crops:** Any crop extending `CropBlock` (or `BlockCrops` on 1.12.2) is automatically protected.\n\n## ❓ FAQ\n\n**Do I need this on the client?**  \nNo — the server enforces the protection. Installing it on the client is optional and only removes the brief ghost-break visual when you try to break an unripe crop.\n\n**How do I remove a crop I planted by accident?**  \nCrouch (sneak) and then break it. The mod respects the sneak key and lets you break any crop regardless of growth.\n\n**Does this change vanilla mechanics?**  \nNo. Fully grown crops break and drop exactly as they do in vanilla. The only change is that unripe crops cannot be broken *unless* you're sneaking.\n\n**Is there a config or toggle?**  \nNo configuration file. The behaviour is simple and deliberate — sneak to override, otherwise only fully grown crops break.\n\n**Will it work with custom crops from other mods?**  \nIf a modded crop extends the vanilla `CropBlock` class, it will be protected automatically. Non‑standard crops may not be covered, but the majority of farming mods use the standard class.\n\n**I found a bug — where do I report it?**  \nPlease open an issue on our [tracker](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet). Include your Minecraft version, mod loader, and the game log.\n\n## 🐛 Report Issues\n\nBugs and suggestions are tracked on GitHub.  \nUse the dedicated label to find or create issues for this mod:  \n[`dontbreakcropsthatarenotgrownyet` issues](https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet)  \nSource code: [ModItamio repository](https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/dontbreakcropsthatarenotgrownyet)\n\n## 💖 Support the Project\n\nIf CropGuard saves your farm (and your sanity), consider buying me a coffee:\n\n[](https://ko-fi.com/U2P522M1IW)\n\n## 📝 Modpacks & License\n\nLicensed under **MIT**. You are free to include this mod in any modpack hosted on Modrinth, CurseForge, or elsewhere. Just don't re‑host the JAR file directly — link back here instead.",
-  "discord_url": "",
-  "downloads": 99,
+  "client_side": "optional",
+  "server_side": "required",
+  "downloads": 104,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/MuZnCxv2/43039e9d2090eb31a1b0383835339ea242c468d4_96.webp",
+  "date_published": "2026-07-06T02:25:01.176885Z",
+  "updated": "2026-07-11T01:15:17.308396Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet",
+  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/dontbreakcropsthatarenotgrownyet",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/cropguard",
+  "site_url": "mod/?id=cropguard",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
-  ],
-  "mod_id": "cropguard",
-  "modrinth_url": "https://modrinth.com/mod/cropguard",
-  "name": "Dont Break crops that are not grown yet",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/dontbreakcropsthatarenotgrownyet",
-  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Adontbreakcropsthatarenotgrownyet",
-  "wiki_url": "",
-  "summary": "Prevents accidental breaks on unripe crops, so you dont have to worry again breaking weets that are not fully grown. Sneak to still remove misplaced seeds.",
-  "updated": "2026-07-11T01:15:17.308396Z",
-  "client_side": "optional",
-  "server_side": "required",
-  "versions": [
-    {
-      "date_published": "2026-07-11T01:15:17.308396Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-26.1.2-neoforge-1.0.0.jar",
-          "primary": true,
-          "size": 16153,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/rcX7VuVv/dontbreakcropsthatarenotgrownyet-26.1.2-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Ported to 26.1.2 neoforge"
-    },
-    {
-      "date_published": "2026-07-06T02:25:09.671163Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.12.2-forge-1.0.0.jar",
-          "primary": false,
-          "size": 39793,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/WVDYSGf4/dontbreakcropsthatarenotgrownyet-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.12.2",
-      "version_type": "release",
-      "changelog": "Initial release for Forge 1.12.2. Protects BlockCrops (wheat, carrots, potatoes, beetroot) and BlockNetherWart. Sweet berries, torchflower, and pitcher plant are not present in 1.12.2. Sneak-to-bypass works."
-    },
-    {
-      "date_published": "2026-07-06T02:25:08.672065Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-26.1.2-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 44586,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/hUZfVk4W/dontbreakcropsthatarenotgrownyet-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-26.1.2",
-      "version_type": "release",
-      "changelog": "Initial release for Fabric 26.1.2. This version is built against a non‑standard Minecraft mapping; functionality is identical. Use at your own risk; consider the 1.21.1 or 1.21.11 ports for stable play."
-    },
-    {
-      "date_published": "2026-07-06T02:25:07.691695Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.21.11-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 44639,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/5aqVOZtZ/dontbreakcropsthatarenotgrownyet-1.21.11-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.11",
-      "version_type": "release",
-      "changelog": "Initial release for Fabric 1.21.11. Same feature set — protects all vanilla crops, sneak-to-bypass."
-    },
-    {
-      "date_published": "2026-07-06T02:25:06.239333Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.21.1-neoforge-1.0.0.jar",
-          "primary": false,
-          "size": 41785,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/qgpGMWDN/dontbreakcropsthatarenotgrownyet-1.21.1-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+neoforge-1.21.1",
-      "version_type": "release",
-      "changelog": "Initial release for NeoForge 1.21.1. Uses the NeoForge event bus, protection identical to the Fabric port."
-    },
-    {
-      "date_published": "2026-07-06T02:25:04.356088Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.21.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 41344,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/MJGPUSOh/dontbreakcropsthatarenotgrownyet-1.21.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.1",
-      "version_type": "release",
-      "changelog": "Initial release for Fabric 1.21.1. Full crop protection (wheat, carrots, potatoes, beetroot, torchflower, pitcher, nether wart, sweet berries). Sneak to break unripe crops. This is the recommended version for most users."
-    },
-    {
-      "date_published": "2026-07-06T02:25:03.275557Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.20.1-forge-1.0.0.jar",
-          "primary": false,
-          "size": 40639,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/iDWbxp4g/dontbreakcropsthatarenotgrownyet-1.20.1-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.20.1",
-      "version_type": "release",
-      "changelog": "Initial release for Forge 1.20.1. Uses BlockEvent.BreakEvent. Same crop protection and sneak bypass as the Fabric version."
-    },
-    {
-      "date_published": "2026-07-06T02:25:02.267652Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "dontbreakcropsthatarenotgrownyet-1.20.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 41345,
-          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/sW9HoOgm/dontbreakcropsthatarenotgrownyet-1.20.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.20.1",
-      "version_type": "release",
-      "changelog": "Initial release for Fabric 1.20.1. Prevents breaking of unripe vanilla crops (wheat, carrots, potatoes, beetroot, torchflower, pitcher plant, nether wart, sweet berries). Sneak-to-bypass enabled."
-    }
   ],
   "game_versions": [
     "1.12.2",
@@ -211,5 +33,184 @@
     "1.21.1",
     "1.21.11",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Ported to 26.1.2 neoforge",
+      "date_published": "2026-07-11T01:15:17.308396Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-26.1.2-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 16153,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/rcX7VuVv/dontbreakcropsthatarenotgrownyet-26.1.2-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.12.2",
+      "changelog": "Initial release for Forge 1.12.2. Protects BlockCrops (wheat, carrots, potatoes, beetroot) and BlockNetherWart. Sweet berries, torchflower, and pitcher plant are not present in 1.12.2. Sneak-to-bypass works.",
+      "date_published": "2026-07-06T02:25:09.671163Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.12.2-forge-1.0.0.jar",
+          "primary": false,
+          "size": 39793,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/WVDYSGf4/dontbreakcropsthatarenotgrownyet-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-26.1.2",
+      "changelog": "Initial release for Fabric 26.1.2. This version is built against a non‑standard Minecraft mapping; functionality is identical. Use at your own risk; consider the 1.21.1 or 1.21.11 ports for stable play.",
+      "date_published": "2026-07-06T02:25:08.672065Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-26.1.2-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 44586,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/hUZfVk4W/dontbreakcropsthatarenotgrownyet-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.11",
+      "changelog": "Initial release for Fabric 1.21.11. Same feature set — protects all vanilla crops, sneak-to-bypass.",
+      "date_published": "2026-07-06T02:25:07.691695Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.21.11-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 44639,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/5aqVOZtZ/dontbreakcropsthatarenotgrownyet-1.21.11-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+neoforge-1.21.1",
+      "changelog": "Initial release for NeoForge 1.21.1. Uses the NeoForge event bus, protection identical to the Fabric port.",
+      "date_published": "2026-07-06T02:25:06.239333Z",
+      "downloads": 8,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.21.1-neoforge-1.0.0.jar",
+          "primary": false,
+          "size": 41785,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/qgpGMWDN/dontbreakcropsthatarenotgrownyet-1.21.1-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.1",
+      "changelog": "Initial release for Fabric 1.21.1. Full crop protection (wheat, carrots, potatoes, beetroot, torchflower, pitcher, nether wart, sweet berries). Sneak to break unripe crops. This is the recommended version for most users.",
+      "date_published": "2026-07-06T02:25:04.356088Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.21.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 41344,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/MJGPUSOh/dontbreakcropsthatarenotgrownyet-1.21.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.20.1",
+      "changelog": "Initial release for Forge 1.20.1. Uses BlockEvent.BreakEvent. Same crop protection and sneak bypass as the Fabric version.",
+      "date_published": "2026-07-06T02:25:03.275557Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.20.1-forge-1.0.0.jar",
+          "primary": false,
+          "size": 40639,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/iDWbxp4g/dontbreakcropsthatarenotgrownyet-1.20.1-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.20.1",
+      "changelog": "Initial release for Fabric 1.20.1. Prevents breaking of unripe vanilla crops (wheat, carrots, potatoes, beetroot, torchflower, pitcher plant, nether wart, sweet berries). Sneak-to-bypass enabled.",
+      "date_published": "2026-07-06T02:25:02.267652Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "dontbreakcropsthatarenotgrownyet-1.20.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 41345,
+          "url": "https://cdn.modrinth.com/data/MuZnCxv2/versions/sW9HoOgm/dontbreakcropsthatarenotgrownyet-1.20.1-fabric-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }

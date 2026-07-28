@@ -1,54 +1,68 @@
 {
+  "mod_id": "factorized-ores",
+  "name": "Factorized Ores",
+  "summary": "Tired of looking for ores in mines? well this mod adds a block that you can factorize to generate infinite minerals",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Renewable Resources - RR\n\n![Block](https://cdn.modrinth.com/data/cached_images/d6167e1a208769714b8ad7dd9c75a3719d91c3f9.png)\n\nThis mod introduces a block called Infinity Stone that regenerates after being harvested or exploded, and will drop minerals and cobblestone.\n\n![recipe](https://cdn.modrinth.com/data/cached_images/f7027b9b7f20d91d95043f020157776608bc6a4f.png)\n\n- The block can only be mined with a pickaxe.\n- When mined, the block drops a single item selected by weighted probabilities:\n  - 80% Cobblestone\n  - 20% Minerals: coal, iron ingot, gold ingot, redstone, lapis, or diamond\n- Fortune enchantment affects only mineral drops, not cobblestone.\n- Experience (XP) is granted for certain drops: coal, redstone, lapis, and diamond, typically 2–4 XP.\n  - If a hopper is located within 3 blocks below the block, XP can be bottled into XP bottles in that hopper.\n  - Without a suitable hopper, XP spawns as XP orbs.\n- The block can be permanently obtained only by right-clicking with an empty hand (both hands must be empty).",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/k8rINPIJ/4634a73ffff1c03d3e40b64dbcb0e0e1ea05bf16_96.webp",
+  "color": "#818181",
   "categories": [
     "game-mechanics",
     "utility"
   ],
-  "color": "#818181",
-  "date_published": "2025-09-11T22:22:45.524309Z",
-  "description": "# Renewable Resources - RR\n\n![Block](https://cdn.modrinth.com/data/cached_images/d6167e1a208769714b8ad7dd9c75a3719d91c3f9.png)\n\nThis mod introduces a block called Infinity Stone that regenerates after being harvested or exploded, and will drop minerals and cobblestone.\n\n![recipe](https://cdn.modrinth.com/data/cached_images/f7027b9b7f20d91d95043f020157776608bc6a4f.png)\n\n- The block can only be mined with a pickaxe.\n- When mined, the block drops a single item selected by weighted probabilities:\n  - 80% Cobblestone\n  - 20% Minerals: coal, iron ingot, gold ingot, redstone, lapis, or diamond\n- Fortune enchantment affects only mineral drops, not cobblestone.\n- Experience (XP) is granted for certain drops: coal, redstone, lapis, and diamond, typically 2–4 XP.\n  - If a hopper is located within 3 blocks below the block, XP can be bottled into XP bottles in that hopper.\n  - Without a suitable hopper, XP spawns as XP orbs.\n- The block can be permanently obtained only by right-clicking with an empty hand (both hands must be empty).",
-  "discord_url": "",
-  "downloads": 189,
+  "client_side": "required",
+  "server_side": "required",
+  "downloads": 190,
   "followers": 1,
+  "date_published": "2025-09-11T22:22:45.524309Z",
+  "updated": "2025-09-12T09:46:19.548050Z",
+  "license": "MIT",
+  "discord_url": "",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/factorized-ores",
+  "site_url": "mod/?id=factorized-ores",
+  "loaders": [
+    "forge"
+  ],
+  "game_versions": [
+    "1.12.2"
+  ],
   "gallery": [
     {
       "url": "https://cdn.modrinth.com/data/k8rINPIJ/images/7b400e089f26241df7e703ec84d2b75348254ce9_350.webp",
       "title": "when mined normally with pickaxe",
       "description": null,
-      "featured": false
+      "created": "2025-09-12T09:59:44.615950Z"
     },
     {
       "url": "https://cdn.modrinth.com/data/k8rINPIJ/images/ad8b45e9129ce8de535439e224b7606081003442_350.webp",
       "title": "When block is mined above a hopper",
       "description": "The minerals will auto go into the hopper, without spitting out so its easier and more efficient",
-      "featured": false
+      "created": "2025-09-12T09:59:25.825144Z"
     },
     {
       "url": "https://cdn.modrinth.com/data/k8rINPIJ/images/c2d2b873afcad2a462bf0d50274b8d9e0d1ca451_350.webp",
       "title": "Infinity Stone",
       "description": null,
-      "featured": false
+      "created": "2025-09-12T10:00:07.671314Z"
     }
   ],
-  "icon_url": "https://cdn.modrinth.com/data/k8rINPIJ/4634a73ffff1c03d3e40b64dbcb0e0e1ea05bf16_96.webp",
-  "license": "MIT",
-  "loaders": [
-    "forge"
-  ],
-  "mod_id": "factorized-ores",
-  "modrinth_url": "https://modrinth.com/mod/factorized-ores",
-  "name": "Factorized Ores",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "Tired of looking for ores in mines? well this mod adds a block that you can factorize to generate infinite minerals",
-  "updated": "2025-09-12T09:46:19.548050Z",
-  "client_side": "required",
-  "server_side": "required",
   "versions": [
     {
+      "name": "Added recipe to craft this block",
+      "version_number": "1.0.1",
+      "changelog": "Infinity Stone",
       "date_published": "2025-09-12T09:46:19.548050Z",
-      "downloads": 146,
+      "downloads": 147,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "regeneratingresources-1.0.jar",
@@ -56,21 +70,21 @@
           "size": 15479,
           "url": "https://cdn.modrinth.com/data/k8rINPIJ/versions/sKwRHzbK/regeneratingresources-1.0.jar"
         }
-      ],
+      ]
+    },
+    {
+      "name": "working version",
+      "version_number": "1.0.0",
+      "changelog": "Adds a block called Infinity stone, when mined or destroyed will not disappear, but always drop items where cobblestone is the most abundant. and minerals like iron, redstone, coal, diamonds, etc.",
+      "date_published": "2025-09-11T22:24:23.532221Z",
+      "downloads": 43,
+      "version_type": "release",
       "game_versions": [
         "1.12.2"
       ],
       "loaders": [
         "forge"
       ],
-      "name": "Added recipe to craft this block",
-      "version_number": "1.0.1",
-      "version_type": "release",
-      "changelog": "Infinity Stone"
-    },
-    {
-      "date_published": "2025-09-11T22:24:23.532221Z",
-      "downloads": 43,
       "files": [
         {
           "filename": "regeneratingresources-1.0.jar",
@@ -78,20 +92,7 @@
           "size": 14952,
           "url": "https://cdn.modrinth.com/data/k8rINPIJ/versions/UprVdcJB/regeneratingresources-1.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "working version",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Adds a block called Infinity stone, when mined or destroyed will not disappear, but always drop items where cobblestone is the most abundant. and minerals like iron, redstone, coal, diamonds, etc."
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

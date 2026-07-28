@@ -1,35 +1,49 @@
 {
+  "mod_id": "world-auto-feeder",
+  "name": "World Auto Feeder",
+  "summary": "Hate manually feeding animals to breed them? This mod automatically feeds them from nearby chests, so you can breed them without lifting a finger.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# World Auto Feeder\n\n![World Auto Feeder cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-feeder/main/.modcompiler-art/description-image.webp)\n\nTired of manually feeding animals for breeding? Auto Feeder does it for you!\n\n## Features\n\n - Animals are fed automatically from nearby chests.\n - Only feeds animals in pairs to ensure breeding partners.\n - Checks chests when you interact with them and periodically.\n\n## How It Works\n\nPlace a chest near your animals (within 8 blocks).\nFill it with appropriate food (wheat for cows, carrots for pigs, etc.).\nThe mod automatically feeds animals in pairs when they're ready to breed.\nWatch your farm grow!\n\n## Supported Animals\n\n- **Cows** - Wheat\n- **Sheep** - Wheat\n- **Pigs** - Carrot, Potato, Beetroot\n- **Chickens** - Seeds (wheat, melon, pumpkin, beetroot)\n- **Horses** - Golden Apple, Golden Carrot\n- **Rabbits** - Carrot, Golden Carrot",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/DnmHNaei/d3ea115130effcddc8e24caa9b697d0965567de8_96.webp",
+  "color": "#252524",
   "categories": [
     "technology",
     "utility"
   ],
-  "color": "#252524",
-  "date_published": "2026-04-04T01:36:38.152743Z",
-  "description": "# World Auto Feeder\n\n![World Auto Feeder cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-feeder/main/.modcompiler-art/description-image.webp)\n\nTired of manually feeding animals for breeding? Auto Feeder does it for you!\n\n## Features\n\n - Animals are fed automatically from nearby chests.\n - Only feeds animals in pairs to ensure breeding partners.\n - Checks chests when you interact with them and periodically.\n\n## How It Works\n\nPlace a chest near your animals (within 8 blocks).\nFill it with appropriate food (wheat for cows, carrots for pigs, etc.).\nThe mod automatically feeds animals in pairs when they're ready to breed.\nWatch your farm grow!\n\n## Supported Animals\n\n- **Cows** - Wheat\n- **Sheep** - Wheat\n- **Pigs** - Carrot, Potato, Beetroot\n- **Chickens** - Seeds (wheat, melon, pumpkin, beetroot)\n- **Horses** - Golden Apple, Golden Carrot\n- **Rabbits** - Carrot, Golden Carrot",
-  "discord_url": "",
+  "client_side": "unsupported",
+  "server_side": "required",
   "downloads": 57,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/DnmHNaei/d3ea115130effcddc8e24caa9b697d0965567de8_96.webp",
+  "date_published": "2026-04-04T01:36:38.152743Z",
+  "updated": "2026-04-04T01:36:39.023721Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/auto-feeder/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-feeder",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-feeder/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/world-auto-feeder",
+  "site_url": "mod/?id=world-auto-feeder",
   "loaders": [
     "forge"
   ],
-  "mod_id": "world-auto-feeder",
-  "modrinth_url": "https://modrinth.com/mod/world-auto-feeder",
-  "name": "World Auto Feeder",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/auto-feeder",
-  "issues_url": "https://github.com/Sekai0NI0itamio/auto-feeder/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-feeder/blob/main/docs/Home.md",
-  "summary": "Hate manually feeding animals to breed them? This mod automatically feeds them from nearby chests, so you can breed them without lifting a finger.",
-  "updated": "2026-04-04T01:36:39.023721Z",
-  "client_side": "unsupported",
-  "server_side": "required",
+  "game_versions": [
+    "1.12.2"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "Auto Feeder 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Feeder\nJar: Auto-Feeder-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2",
       "date_published": "2026-04-04T01:36:39.023721Z",
       "downloads": 57,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "Auto-Feeder-1.0.0.jar",
@@ -37,20 +51,7 @@
           "size": 9154,
           "url": "https://cdn.modrinth.com/data/DnmHNaei/versions/SpIlsGmL/Auto-Feeder-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Auto Feeder 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Feeder\nJar: Auto-Feeder-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+      ]
     }
-  ],
-  "game_versions": [
-    "1.12.2"
   ]
 }

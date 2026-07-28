@@ -1,35 +1,49 @@
 {
+  "mod_id": "modconfigeditor",
+  "name": "ModConfigEditor",
+  "summary": "Edit mod configs from minecraft directly, better gui, more efficient",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n![Itamio Mod Stamp](https://cdn.modrinth.com/data/cached_images/88d017da6c7bc2334797c55c8097522780b9d86e.png)\n---\n\n## (Mod Config Visualizer - old name)\n\n### What it does:\n - Makes it so that you can **edit mod configs in the minecraft game**, no need to edit in notepad or some other things.\n- Has **auto config detectors**, meaning you dont need to manually specify what mods have which config files (most of the time, sometimes you might need to manually add)\n- User **friendly add button**, when adding config files, shows a file pick that is already in the config folder, so no annoying process of finding the correct minecraft instance's minecraft/config folder.\n\n### Preview\n![Rewritten Mods Display Screen](https://cdn.modrinth.com/data/cached_images/cd7e96c2ad674094f8862e642d8c81bfc10a176f.png)\n\n![Auto detect config files](https://cdn.modrinth.com/data/cached_images/088bac8a2a9d5bcd8f7880bb3bcb041297d03ad1.png)\n\n![Edit config in game](https://cdn.modrinth.com/data/cached_images/fa22de7961a83d4571fcd4749217ce5c2a49ea1e.png)",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/lmcXw3Vm/fec1730899f537d4389106ff6955ad882fd3ad0e_96.webp",
+  "color": "#042454",
   "categories": [
     "management",
     "utility"
   ],
-  "color": "#042454",
-  "date_published": "2025-07-14T06:52:40.470544Z",
-  "description": "![Itamio Mod Stamp](https://cdn.modrinth.com/data/cached_images/88d017da6c7bc2334797c55c8097522780b9d86e.png)\n---\n\n## (Mod Config Visualizer - old name)\n\n### What it does:\n - Makes it so that you can **edit mod configs in the minecraft game**, no need to edit in notepad or some other things.\n- Has **auto config detectors**, meaning you dont need to manually specify what mods have which config files (most of the time, sometimes you might need to manually add)\n- User **friendly add button**, when adding config files, shows a file pick that is already in the config folder, so no annoying process of finding the correct minecraft instance's minecraft/config folder.\n\n### Preview\n![Rewritten Mods Display Screen](https://cdn.modrinth.com/data/cached_images/cd7e96c2ad674094f8862e642d8c81bfc10a176f.png)\n\n![Auto detect config files](https://cdn.modrinth.com/data/cached_images/088bac8a2a9d5bcd8f7880bb3bcb041297d03ad1.png)\n\n![Edit config in game](https://cdn.modrinth.com/data/cached_images/fa22de7961a83d4571fcd4749217ce5c2a49ea1e.png)",
-  "discord_url": "https://discord.gg/2J776dWKXd",
+  "client_side": "required",
+  "server_side": "unsupported",
   "downloads": 1156,
   "followers": 1,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/lmcXw3Vm/fec1730899f537d4389106ff6955ad882fd3ad0e_96.webp",
+  "date_published": "2025-07-14T06:52:40.470544Z",
+  "updated": "2025-07-14T06:53:46.485645Z",
   "license": "LicenseRef-All-Rights-Reserved",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "issues_url": "",
+  "source_url": "",
+  "wiki_url": "",
+  "modrinth_url": "https://modrinth.com/mod/modconfigeditor",
+  "site_url": "mod/?id=modconfigeditor",
   "loaders": [
     "forge"
   ],
-  "mod_id": "modconfigeditor",
-  "modrinth_url": "https://modrinth.com/mod/modconfigeditor",
-  "name": "ModConfigEditor",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "",
-  "issues_url": "",
-  "wiki_url": "",
-  "summary": "Edit mod configs from minecraft directly, better gui, more efficient",
-  "updated": "2025-07-14T06:53:46.485645Z",
-  "client_side": "required",
-  "server_side": "unsupported",
+  "game_versions": [
+    "1.8.9"
+  ],
+  "gallery": [],
   "versions": [
     {
+      "name": "First Working Version",
+      "version_number": "1.0.0",
+      "changelog": "All major functions working as expected, first version to work properly.",
       "date_published": "2025-07-14T06:53:46.485645Z",
       "downloads": 1156,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
       "files": [
         {
           "filename": "modconfigvisualizer-1.0.0.jar",
@@ -37,20 +51,7 @@
           "size": 37149,
           "url": "https://cdn.modrinth.com/data/lmcXw3Vm/versions/b9CKV9Ea/modconfigvisualizer-1.0.0.jar"
         }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "First Working Version",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "All major functions working as expected, first version to work properly."
+      ]
     }
-  ],
-  "game_versions": [
-    "1.8.9"
   ]
 }

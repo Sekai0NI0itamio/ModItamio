@@ -1,431 +1,32 @@
 {
+  "mod_id": "tntduper",
+  "name": "TNT Duper",
+  "summary": "Why look for TNT dupers when you could just build one with one dispenser and one tnt?",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# TNT Duper\n\n![TNT Duper cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/tnt-duper/main/.modcompiler-art/description-image.webp)\n\nAllows dispensers to duplicate TNT without using up the TNT item.\n\n### What It Does\n\n- Power a dispenser that contains TNT and it will spawn a TNT that is lighted.\n- The TNT item used to trigger the dispenser remains in the dispenser, so you can keep using it without it running out.\n\n### Features\n\n- Infinite TNT dispensing from a single TNT item.\n- Works with any dispenser that holds TNT.\n- Compatible with vanilla TNT mechanics (same explosion behavior).\n- Works on both single‑player and multiplayer worlds.\n\n### Why Use This Mod?\n\n- Build automatic TNT farms without constantly refilling dispensers.\n- Simplify redstone contraptions that need repeated TNT bursts.\n- Save time and resources when testing explosions.\n- Easy to use – just place a dispenser and watch it duplicate TNT.\n\n## What You'll Notice\n\n- Dispensers can fire TNT without using up the TNT item.\n- The spawned TNT behaves like normal TNT and can be picked up or detonated.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/ORO2BYnH/2fb7b1df73753a1d6f5abf0444087b49b024edec_96.webp",
+  "color": "#1e1918",
   "categories": [
     "technology",
-    "utility",
-    "storage"
+    "utility"
   ],
-  "color": "#1e1918",
-  "date_published": "2026-03-30T13:46:56.305635Z",
-  "description": "# TNT Duper\n\n![TNT Duper cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/tnt-duper/main/.modcompiler-art/description-image.webp)\n\nAllows dispensers to duplicate TNT without using up the TNT item.\n\n### What It Does\n\n- Power a dispenser that contains TNT and it will spawn a TNT that is lighted.\n- The TNT item used to trigger the dispenser remains in the dispenser, so you can keep using it without it running out.\n\n### Features\n\n- Infinite TNT dispensing from a single TNT item.\n- Works with any dispenser that holds TNT.\n- Compatible with vanilla TNT mechanics (same explosion behavior).\n- Works on both single‑player and multiplayer worlds.\n\n### Why Use This Mod?\n\n- Build automatic TNT farms without constantly refilling dispensers.\n- Simplify redstone contraptions that need repeated TNT bursts.\n- Save time and resources when testing explosions.\n- Easy to use – just place a dispenser and watch it duplicate TNT.\n\n## What You'll Notice\n\n- Dispensers can fire TNT without using up the TNT item.\n- The spawned TNT behaves like normal TNT and can be picked up or detonated.",
-  "discord_url": "",
-  "downloads": 180,
+  "client_side": "unsupported",
+  "server_side": "required",
+  "downloads": 184,
   "followers": 0,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/ORO2BYnH/2fb7b1df73753a1d6f5abf0444087b49b024edec_96.webp",
+  "date_published": "2026-03-30T13:46:56.305635Z",
+  "updated": "2026-07-11T01:42:54.068574Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Atntduper",
+  "source_url": "https://github.com/Sekai0NI0itamio/tnt-duper",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/tnt-duper/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/tntduper",
+  "site_url": "mod/?id=tntduper",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
-  ],
-  "mod_id": "tntduper",
-  "modrinth_url": "https://modrinth.com/mod/tntduper",
-  "name": "TNT Duper",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/tnt-duper",
-  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Atntduper",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/tnt-duper/blob/main/docs/Home.md",
-  "summary": "Why look for TNT dupers when you could just build one with one dispenser and one tnt?",
-  "updated": "2026-07-11T01:42:54.068574Z",
-  "client_side": "unsupported",
-  "server_side": "required",
-  "versions": [
-    {
-      "date_published": "2026-07-11T01:42:54.068574Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "tntduper-26.1.2-neoforge-1.0.0.jar",
-          "primary": true,
-          "size": 42819,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/B5n5vGi1/tntduper-26.1.2-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Ported to 26.1.2 neoforge"
-    },
-    {
-      "date_published": "2026-07-06T12:02:22.072224Z",
-      "downloads": 21,
-      "files": [
-        {
-          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 22832,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/YMVlFPZy/tntduper-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-26.1.2",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 26.1.2 Fabric."
-    },
-    {
-      "date_published": "2026-07-06T12:02:21.134700Z",
-      "downloads": 23,
-      "files": [
-        {
-          "filename": "tntduper-1.21.11-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 22801,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/QXpbjnpk/tntduper-1.21.11-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.11",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.11 Fabric."
-    },
-    {
-      "date_published": "2026-07-06T12:02:20.345673Z",
-      "downloads": 6,
-      "files": [
-        {
-          "filename": "tntduper-1.21.1-neoforge-1.0.0.jar",
-          "primary": true,
-          "size": 20204,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/U2LaTaJg/tntduper-1.21.1-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+neoforge-1.21.1",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.1 NeoForge."
-    },
-    {
-      "date_published": "2026-07-06T12:02:19.019119Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "tntduper-1.21.1-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 20267,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/IkTd9WBz/tntduper-1.21.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.21.1",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.1 Fabric."
-    },
-    {
-      "date_published": "2026-07-06T12:02:18.193333Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "tntduper-1.20.1-forge-1.0.0.jar",
-          "primary": true,
-          "size": 26617,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/nraiE6pC/tntduper-1.20.1-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.20.1",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.20.1 Forge."
-    },
-    {
-      "date_published": "2026-07-06T12:02:17.370219Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "tntduper-1.20.1-fabric-1.0.0.jar",
-          "primary": true,
-          "size": 27292,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/2qZ4RNdw/tntduper-1.20.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+fabric-1.20.1",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.20.1 Fabric."
-    },
-    {
-      "date_published": "2026-07-06T12:02:16.512565Z",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
-          "primary": true,
-          "size": 19446,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/zeOApNZm/tntduper-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+forge-1.12.2",
-      "version_type": "release",
-      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.12.2 Forge."
-    },
-    {
-      "date_published": "2026-07-06T08:47:37.872551Z",
-      "downloads": 5,
-      "files": [
-        {
-          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 22654,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/JCFqUd9N/tntduper-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+26.1.2-fabric",
-      "version_type": "release",
-      "changelog": "Fabric 26.1.2 build. Java 25, DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. Verified clean build."
-    },
-    {
-      "date_published": "2026-07-06T08:47:37.033268Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "tntduper-1.21.11-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 22629,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/8bPCywBk/tntduper-1.21.11-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.21.11-fabric",
-      "version_type": "release",
-      "changelog": "Fabric 1.21.11 build. Same ModInitializer pattern, verified clean build with vanilla PrimedTnt spawning."
-    },
-    {
-      "date_published": "2026-07-06T08:47:36.162629Z",
-      "downloads": 1,
-      "files": [
-        {
-          "filename": "tntduper-1.21.1-neoforge-1.0.0.jar",
-          "primary": false,
-          "size": 20212,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/mkGOeVR5/tntduper-1.21.1-neoforge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.21.1-neoforge",
-      "version_type": "release",
-      "changelog": "NeoForge 1.21.1 release. Uses @Mod with IEventBus constructor injection and FMLCommonSetupEvent#enqueueWork for thread‑safe registration."
-    },
-    {
-      "date_published": "2026-07-06T08:47:35.377806Z",
-      "downloads": 1,
-      "files": [
-        {
-          "filename": "tntduper-1.21.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 20082,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/EWhfCwsJ/tntduper-1.21.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.21.1-fabric",
-      "version_type": "release",
-      "changelog": "Fabric 1.21.1 release. ModInitializer entry point, Java 21, uses DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. No mixins required."
-    },
-    {
-      "date_published": "2026-07-06T08:47:33.987577Z",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "tntduper-1.20.1-forge-1.0.0.jar",
-          "primary": false,
-          "size": 26220,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/wfhc06Yv/tntduper-1.20.1-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.20.1-forge",
-      "version_type": "release",
-      "changelog": "Updated to 1.20.1 Forge with @Mod IEventBus constructor injection. Dispenser registration moved to FMLCommonSetupEvent#enqueueWork. Official mappings applied."
-    },
-    {
-      "date_published": "2026-07-06T08:47:33.221163Z",
-      "downloads": 4,
-      "files": [
-        {
-          "filename": "tntduper-1.20.1-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 26990,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/YjlyBven/tntduper-1.20.1-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.20.1-fabric",
-      "version_type": "release",
-      "changelog": "Adapted to Fabric’s ModInitializer API. Uses vanilla DispenserBlock.registerBehavior() and Mojmap names. Built with fabric-loom."
-    },
-    {
-      "date_published": "2026-07-06T08:47:32.464014Z",
-      "downloads": 1,
-      "files": [
-        {
-          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
-          "primary": false,
-          "size": 19466,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/oUqtSrUE/tntduper-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.12.2-forge",
-      "version_type": "release",
-      "changelog": "Ported from the original 1.12.2 Forge release. Includes the core dispense logic, error logging, and ModInfoPrinter startup card."
-    },
-    {
-      "date_published": "2026-07-06T08:05:27.596539Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
-          "primary": false,
-          "size": 22654,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/gGMGaftk/tntduper-26.1.2-fabric-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+26.1.2-fabric",
-      "version_type": "release",
-      "changelog": "Fabric 26.1.2 build. Java 25, DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. Verified clean build."
-    },
-    {
-      "date_published": "2026-07-06T08:05:26.654757Z",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
-          "primary": false,
-          "size": 19466,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/xVdm0Teb/tntduper-1.12.2-forge-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "1.0.0",
-      "version_number": "1.0.0+1.12.2-forge",
-      "version_type": "release",
-      "changelog": "Ported from the original 1.12.2 Forge release. Includes the core dispense logic, error logging, and ModInfoPrinter startup card."
-    },
-    {
-      "date_published": "2026-03-30T13:46:57.136469Z",
-      "downloads": 63,
-      "files": [
-        {
-          "filename": "tntduper-1.12.2-forge-1.0.jar",
-          "primary": false,
-          "size": 22254,
-          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/wy3vT7RT/tntduper-1.12.2-forge-1.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "TNT Duper 1.0",
-      "version_number": "1.0",
-      "version_type": "release",
-      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: TNT Duper\nJar: TNT-Duper.jar\nLoader: forge\nDetected versions: 1.12.2"
-    }
   ],
   "game_versions": [
     "1.12.2",
@@ -433,5 +34,404 @@
     "1.21.1",
     "1.21.11",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "Ported to 26.1.2 neoforge",
+      "date_published": "2026-07-11T01:42:54.068574Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-26.1.2-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 42819,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/B5n5vGi1/tntduper-26.1.2-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-26.1.2",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 26.1.2 Fabric.",
+      "date_published": "2026-07-06T12:02:22.072224Z",
+      "downloads": 23,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 22832,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/YMVlFPZy/tntduper-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.11",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.11 Fabric.",
+      "date_published": "2026-07-06T12:02:21.134700Z",
+      "downloads": 24,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.11-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 22801,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/QXpbjnpk/tntduper-1.21.11-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+neoforge-1.21.1",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.1 NeoForge.",
+      "date_published": "2026-07-06T12:02:20.345673Z",
+      "downloads": 6,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.1-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 20204,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/U2LaTaJg/tntduper-1.21.1-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.1",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.21.1 Fabric.",
+      "date_published": "2026-07-06T12:02:19.019119Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 20267,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/IkTd9WBz/tntduper-1.21.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.20.1",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.20.1 Forge.",
+      "date_published": "2026-07-06T12:02:18.193333Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.20.1-forge-1.0.0.jar",
+          "primary": true,
+          "size": 26617,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/nraiE6pC/tntduper-1.20.1-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.20.1",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.20.1 Fabric.",
+      "date_published": "2026-07-06T12:02:17.370219Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.20.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 27292,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/2qZ4RNdw/tntduper-1.20.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.12.2",
+      "changelog": "|\n  Initial port of TNT Duper to Minecraft 1.12.2 Forge.",
+      "date_published": "2026-07-06T12:02:16.512565Z",
+      "downloads": 7,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
+          "primary": true,
+          "size": 19446,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/zeOApNZm/tntduper-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+26.1.2-fabric",
+      "changelog": "Fabric 26.1.2 build. Java 25, DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. Verified clean build.",
+      "date_published": "2026-07-06T08:47:37.872551Z",
+      "downloads": 5,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 22654,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/JCFqUd9N/tntduper-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.21.11-fabric",
+      "changelog": "Fabric 1.21.11 build. Same ModInitializer pattern, verified clean build with vanilla PrimedTnt spawning.",
+      "date_published": "2026-07-06T08:47:37.033268Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.11-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 22629,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/8bPCywBk/tntduper-1.21.11-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.21.1-neoforge",
+      "changelog": "NeoForge 1.21.1 release. Uses @Mod with IEventBus constructor injection and FMLCommonSetupEvent#enqueueWork for thread‑safe registration.",
+      "date_published": "2026-07-06T08:47:36.162629Z",
+      "downloads": 1,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.1-neoforge-1.0.0.jar",
+          "primary": false,
+          "size": 20212,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/mkGOeVR5/tntduper-1.21.1-neoforge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.21.1-fabric",
+      "changelog": "Fabric 1.21.1 release. ModInitializer entry point, Java 21, uses DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. No mixins required.",
+      "date_published": "2026-07-06T08:47:35.377806Z",
+      "downloads": 1,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.21.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 20082,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/EWhfCwsJ/tntduper-1.21.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.20.1-forge",
+      "changelog": "Updated to 1.20.1 Forge with @Mod IEventBus constructor injection. Dispenser registration moved to FMLCommonSetupEvent#enqueueWork. Official mappings applied.",
+      "date_published": "2026-07-06T08:47:33.987577Z",
+      "downloads": 3,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.20.1-forge-1.0.0.jar",
+          "primary": false,
+          "size": 26220,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/wfhc06Yv/tntduper-1.20.1-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.20.1-fabric",
+      "changelog": "Adapted to Fabric’s ModInitializer API. Uses vanilla DispenserBlock.registerBehavior() and Mojmap names. Built with fabric-loom.",
+      "date_published": "2026-07-06T08:47:33.221163Z",
+      "downloads": 4,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.20.1-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 26990,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/YjlyBven/tntduper-1.20.1-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.12.2-forge",
+      "changelog": "Ported from the original 1.12.2 Forge release. Includes the core dispense logic, error logging, and ModInfoPrinter startup card.",
+      "date_published": "2026-07-06T08:47:32.464014Z",
+      "downloads": 1,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
+          "primary": false,
+          "size": 19466,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/oUqtSrUE/tntduper-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+26.1.2-fabric",
+      "changelog": "Fabric 26.1.2 build. Java 25, DispenserBlock.registerBehavior() with vanilla PrimedTnt spawning. Verified clean build.",
+      "date_published": "2026-07-06T08:05:27.596539Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-26.1.2-fabric-1.0.0.jar",
+          "primary": false,
+          "size": 22654,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/gGMGaftk/tntduper-26.1.2-fabric-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "1.0.0",
+      "version_number": "1.0.0+1.12.2-forge",
+      "changelog": "Ported from the original 1.12.2 Forge release. Includes the core dispense logic, error logging, and ModInfoPrinter startup card.",
+      "date_published": "2026-07-06T08:05:26.654757Z",
+      "downloads": 2,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.12.2-forge-1.0.0.jar",
+          "primary": false,
+          "size": 19466,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/xVdm0Teb/tntduper-1.12.2-forge-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "TNT Duper 1.0",
+      "version_number": "1.0",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: TNT Duper\nJar: TNT-Duper.jar\nLoader: forge\nDetected versions: 1.12.2",
+      "date_published": "2026-03-30T13:46:57.136469Z",
+      "downloads": 63,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "tntduper-1.12.2-forge-1.0.jar",
+          "primary": false,
+          "size": 22254,
+          "url": "https://cdn.modrinth.com/data/ORO2BYnH/versions/wy3vT7RT/tntduper-1.12.2-forge-1.0.jar"
+        }
+      ]
+    }
   ]
 }

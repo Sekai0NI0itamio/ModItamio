@@ -1,1731 +1,34 @@
 {
+  "mod_id": "lifesteal-parrot-mod",
+  "name": "Lifesteal Mod",
+  "summary": "lose a heart on death, gain a heart by killing a player. Hit 0 hearts and you're permanently banned.",
+  "description": "<!-- ASDUNION-AD:eyJpZCI6ImFkLTE3ODQ2MTExNzYyOTYtZjZkMnVhIiwibmFtZSI6IkFQSSBNb2RlbHMiLCJsaW5rIjoiaHR0cHM6Ly9hcGltb2RlbHMuYXBwL3poL2xvZ2luP2ludml0ZT1YOEZRN0EiLCJzdHlsZSI6ImZpeGVkLWJhbm5lciIsImNyZWF0ZWRBdCI6IjIwMjYtMDctMjFUMDk6MjQ6MjguMDYxWiJ9 -->\n<a href=\"https://apimodels.app/zh/login?invite=X8FQ7A\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/ad-ad-1784611176296-f6d2ua/final-banner-1784625724712.png\" alt=\"API Models sponsor banner\" width=\"1280\" style=\"max-width:100%;height:auto;display:block;border-radius:8px;\"></a>\n<!-- ASDUNION-AD-END -->\n\n# Lifesteal Mod\n\n![1](https://cdn.modrinth.com/data/cached_images/b10cbe3c7fa76d46a39dfafb67db91c3562d47e8.png)\n\nA lightweight, server-side permadeath mod for Minecraft 1.12.2 Forge. Every player has a heart count. Die and you lose one. Kill another player and you gain one. Reach zero hearts and you are permanently banned from the server.\n\n\n## How It Works\n\n- You die (any cause): −1 heart  \n- You kill another player: +1 heart\n\nHearts are the **only** way to gain max health. Mob kills, items, and regeneration do not grant hearts. The only path to more hearts is PvP.\n\n## Features\n\n- **Death penalty** — Every death costs exactly 1 heart, regardless of cause.\n- **Permadeath** — When a player's hearts reach the minimum (default 0), they are permanently banned with the reason \"Permadeath: ran out of hearts\".\n- **Live max health** — The player's max health bar reflects their current heart count in real time.\n- **Persistence** — Heart counts are saved per player UUID and survive server restarts.\n- **Server broadcast** — A message is sent to all online players when someone is permabanned.",
+  "author": "Sekai0ni0Itamio",
+  "icon_url": "https://cdn.modrinth.com/data/YGb7hoqK/6fb4308b66fbb1c33f559d80c6d42137c7b470ea.webp",
+  "color": "#c20f11",
   "categories": [
     "game-mechanics",
     "utility"
   ],
-  "color": "#c20f11",
-  "date_published": "2026-05-05T01:05:31.810041Z",
-  "description": "# Lifesteal Mod\n\n![1](https://cdn.modrinth.com/data/cached_images/b10cbe3c7fa76d46a39dfafb67db91c3562d47e8.png)\n\nA lightweight, server-side permadeath mod for Minecraft 1.12.2 Forge. Every player has a heart count. Die and you lose one. Kill another player and you gain one. Reach zero hearts and you are permanently banned from the server.\n\n## How It Works\n\n- You die (any cause): −1 heart  \n- You kill another player: +1 heart\n\nHearts are the **only** way to gain max health. Mob kills, items, and regeneration do not grant hearts. The only path to more hearts is PvP.\n\n## Features\n\n- **Death penalty** — Every death costs exactly 1 heart, regardless of cause.\n- **Permadeath** — When a player's hearts reach the minimum (default 0), they are permanently banned with the reason \"Permadeath: ran out of hearts\".\n- **Live max health** — The player's max health bar reflects their current heart count in real time.\n- **Persistence** — Heart counts are saved per player UUID and survive server restarts.\n- **Server broadcast** — A message is sent to all online players when someone is permabanned.",
-  "discord_url": "",
-  "downloads": 2320,
+  "client_side": "unsupported",
+  "server_side": "required",
+  "downloads": 2340,
   "followers": 1,
-  "gallery": [],
-  "icon_url": "https://cdn.modrinth.com/data/YGb7hoqK/6fb4308b66fbb1c33f559d80c6d42137c7b470ea.webp",
+  "date_published": "2026-05-05T01:05:31.810041Z",
+  "updated": "2026-05-16T08:44:59.046741Z",
   "license": "MIT",
+  "discord_url": "",
+  "issues_url": "https://github.com/Sekai0NI0itamio/heart-system/issues",
+  "source_url": "https://github.com/Sekai0NI0itamio/heart-system",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/heart-system/blob/main/docs/Home.md",
+  "modrinth_url": "https://modrinth.com/mod/lifesteal-parrot-mod",
+  "site_url": "mod/?id=lifesteal-parrot-mod",
   "loaders": [
     "fabric",
     "forge",
     "neoforge"
   ],
-  "mod_id": "lifesteal-parrot-mod",
-  "modrinth_url": "https://modrinth.com/mod/lifesteal-parrot-mod",
-  "name": "Lifesteal Mod",
-  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
-  "source_url": "https://github.com/Sekai0NI0itamio/heart-system",
-  "issues_url": "https://github.com/Sekai0NI0itamio/heart-system/issues",
-  "wiki_url": "https://github.com/Sekai0NI0itamio/heart-system/blob/main/docs/Home.md",
-  "summary": "lose a heart on death, gain a heart by killing a player. Hit 0 hearts and you're permanently banned.",
-  "updated": "2026-05-16T08:44:59.046741Z",
-  "client_side": "unsupported",
-  "server_side": "required",
-  "versions": [
-    {
-      "date_published": "2026-05-16T08:44:59.046741Z",
-      "downloads": 44,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 12759,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/7MFzquTL/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (fabric 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-14T12:48:56.033630Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 10441,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/RrqzZePd/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-14T02:10:54.721390Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 9068,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/cRNEbzlu/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T10:58:11.412845Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 9585,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/kKfqxzTK/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T09:32:23.792889Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 5067,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bWUDywhg/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (fabric 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T08:48:10.790925Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 1651,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/vAFL9gkZ/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T08:48:10.239196Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 1651,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/FxGx5ZwR/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T08:48:09.668340Z",
-      "downloads": 99,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 1648,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/l1W73OIf/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-13T08:48:09.106821Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "lifestealparrotmod-1.0.0.jar",
-          "primary": true,
-          "size": 1678,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6VZm0yDx/lifestealparrotmod-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: lifestealparrotmod-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-12T12:32:03.611097Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "unknown-1.0.0.jar",
-          "primary": true,
-          "size": 1586,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/pyddHqgx/unknown-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: unknown-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-12T12:32:02.988121Z",
-      "downloads": 18,
-      "files": [
-        {
-          "filename": "unknown-1.0.0.jar",
-          "primary": true,
-          "size": 9387,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/i5jQ7jtM/unknown-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: unknown-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T05:04:43.370624Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13351,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/lyUxw05K/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:58:01.012560Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9401,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NeiJs69e/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:58:00.444303Z",
-      "downloads": 32,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13559,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Wn2hzBC8/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:57:59.923702Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13560,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/HI3PhfVp/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:57:59.352372Z",
-      "downloads": 16,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13560,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/UVuQOdJE/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:57:58.806703Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13531,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/AZC9I64n/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:08:45.650507Z",
-      "downloads": 34,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13476,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Um9DhYuS/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:08:45.144868Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13475,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/rQxafrOv/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T03:08:44.572046Z",
-      "downloads": 64,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13473,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/PupJSMP6/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:49:34.793962Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13838,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZBCxXvHS/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:49:34.017485Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13836,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/5wGfXnkr/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:36:26.612054Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9297,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/z7R3BMAM/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:36:25.900186Z",
-      "downloads": 25,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9294,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/qcDD55NR/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:36:25.104687Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9297,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/VRlnvVc3/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:16.242165Z",
-      "downloads": 39,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9280,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NwVjliSi/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:15.678674Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9279,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZC8U2rSD/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:15.098805Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9280,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/12aIb8nc/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:13.340634Z",
-      "downloads": 497,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13534,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZSHjJrJy/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:12.824575Z",
-      "downloads": 28,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13532,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/uPagbQ1y/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 26.1.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:12.287422Z",
-      "downloads": 58,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13530,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/um7Z3bK2/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 26.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:11.665263Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13813,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Wqx8Spcm/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:11.117367Z",
-      "downloads": 35,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13813,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Em5fbEGO/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:10.521550Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13712,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Swm16G16/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:09.983625Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13713,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/k2pB5PDG/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:09.426640Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13712,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/n4OMgil5/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:08.829969Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13711,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/W5WWPLmX/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:08.327069Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13708,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/JC5GrzEQ/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:07.790423Z",
-      "downloads": 8,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13552,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/oVyorU32/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:07.274312Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13550,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6srBYr2L/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.17)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:22:06.732707Z",
-      "downloads": 26,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13553,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZIg42b3h/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.16.5"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.16.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:34.469226Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9361,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/araeVOgJ/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:33.262779Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9629,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/KAKV100H/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.8"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.8)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:32.649499Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9629,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/4Od7iS7D/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.7"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.7)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:31.924267Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9629,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/nedszGil/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:31.155284Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9737,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/MLkfyKb0/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.5"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:30.288831Z",
-      "downloads": 56,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9853,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bXp1eFxS/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.11"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.11)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-09T00:07:28.991231Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9827,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/htHcezMF/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:42.238355Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9360,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/DHqolytF/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.6"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.20.6)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:41.632766Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9360,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Gg9rkigy/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.5"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.20.5)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:41.023150Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9331,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/IOljiErv/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "name": "Heart System 1.0.0 (neoforge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:40.405124Z",
-      "downloads": 46,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9838,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Owwgh6H7/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "26.1.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 26.1.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:39.730974Z",
-      "downloads": 19,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9854,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NQenWtzC/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:39.079807Z",
-      "downloads": 9,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9699,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/lNPDZv7r/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:38.419723Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9698,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ddGxsZeD/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:37.814876Z",
-      "downloads": 12,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9855,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tAHgum1E/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.10"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.10)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:36.236916Z",
-      "downloads": 27,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9698,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bZAc7HK2/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:48:35.536689Z",
-      "downloads": 13,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9697,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/pjcnLPI3/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:44.637717Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10130,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/jXCjHJ9g/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.19)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:44.028837Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10153,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/25oeZGW6/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.18.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:43.389014Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10152,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/gSTY5qpJ/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.18.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:42.783336Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10151,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/LgWp055v/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.18"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.18)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:41.246120Z",
-      "downloads": 10,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10074,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Jl6yvKR0/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.17.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.17.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T23:47:40.538637Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13582,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/82v1PncL/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.9"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:36:00.375902Z",
-      "downloads": 20,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9105,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6OTDsXHA/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.8.9"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.8.9)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:59.920543Z",
-      "downloads": 14,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9614,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/JdQDvq7a/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.20.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:59.479429Z",
-      "downloads": 15,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9613,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tGgQ4foP/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.20.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:58.850239Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9910,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tpzdb9E9/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.4"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.19.4)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:58.353601Z",
-      "downloads": 11,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9910,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/p7QCIYHO/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.3"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.19.3)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:57.858208Z",
-      "downloads": 17,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9909,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/HNATO6is/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.19.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:57.414273Z",
-      "downloads": 20,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9909,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/IwOn7EXO/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.19.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.19.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:56.938597Z",
-      "downloads": 22,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13229,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/uHcPm2xa/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T09:35:56.451598Z",
-      "downloads": 36,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 13224,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/BMSDPdAQ/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.21"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "name": "Heart System 1.0.0 (fabric 1.21)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T00:27:19.543458Z",
-      "downloads": 35,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10125,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/1FbQpPes/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.20.2)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T00:27:19.031223Z",
-      "downloads": 104,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 10125,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Kx9iME0M/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.20.1"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.20.1)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-08T00:27:18.499906Z",
-      "downloads": 70,
-      "files": [
-        {
-          "filename": "heartsystem-1.0.0.jar",
-          "primary": true,
-          "size": 9548,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/gfa7emXF/heartsystem-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0 (forge 1.12)",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: heartsystem-1.0.0.jar"
-    },
-    {
-      "date_published": "2026-05-05T01:05:35.784856Z",
-      "downloads": 198,
-      "files": [
-        {
-          "filename": "Heart-System-1.0.0.jar",
-          "primary": true,
-          "size": 11244,
-          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6g9A48fu/Heart-System-1.0.0.jar"
-        }
-      ],
-      "game_versions": [
-        "1.12.2"
-      ],
-      "loaders": [
-        "forge"
-      ],
-      "name": "Heart System 1.0.0",
-      "version_number": "1.0.0",
-      "version_type": "release",
-      "changelog": "- Lose 1 heart on death\n- Gain 1 heart by killing another player\n- Reach 0 hearts (configurable minimum) to trigger permanent ban\n- Configurable starting hearts, max hearts, and min hearts via config file\n- Heart counts persist across server restarts (per-player NBT files)\n- Max health is updated in real-time to reflect current heart count\n- Broadcast message on permadeath ban"
-    }
-  ],
   "game_versions": [
-    "1.8.9",
     "1.12",
     "1.12.2",
     "1.16.5",
@@ -1747,6 +50,8 @@
     "1.20.6",
     "1.21",
     "1.21.1",
+    "1.21.10",
+    "1.21.11",
     "1.21.2",
     "1.21.3",
     "1.21.4",
@@ -1755,10 +60,1706 @@
     "1.21.7",
     "1.21.8",
     "1.21.9",
-    "1.21.10",
-    "1.21.11",
+    "1.8.9",
     "26.1",
     "26.1.1",
     "26.1.2"
+  ],
+  "gallery": [],
+  "versions": [
+    {
+      "name": "Lifesteal Mod 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-16T08:44:59.046741Z",
+      "downloads": 44,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 12759,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/7MFzquTL/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-14T12:48:56.033630Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 10441,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/RrqzZePd/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-14T02:10:54.721390Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 9068,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/cRNEbzlu/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-13T10:58:11.412845Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 9585,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/kKfqxzTK/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-13T09:32:23.792889Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 5067,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bWUDywhg/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-13T08:48:10.790925Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 1651,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/vAFL9gkZ/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-13T08:48:10.239196Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 1651,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/FxGx5ZwR/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-13T08:48:09.668340Z",
+      "downloads": 99,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 1648,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/l1W73OIf/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: lifestealparrotmod-1.0.0.jar",
+      "date_published": "2026-05-13T08:48:09.106821Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "lifestealparrotmod-1.0.0.jar",
+          "primary": true,
+          "size": 1678,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6VZm0yDx/lifestealparrotmod-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: unknown-1.0.0.jar",
+      "date_published": "2026-05-12T12:32:03.611097Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "unknown-1.0.0.jar",
+          "primary": true,
+          "size": 1586,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/pyddHqgx/unknown-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Lifesteal Mod 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Lifesteal Mod\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: unknown-1.0.0.jar",
+      "date_published": "2026-05-12T12:32:02.988121Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "unknown-1.0.0.jar",
+          "primary": true,
+          "size": 9387,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/i5jQ7jtM/unknown-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T05:04:43.370624Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13351,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/lyUxw05K/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:58:01.012560Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9401,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NeiJs69e/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:58:00.444303Z",
+      "downloads": 32,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13559,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Wn2hzBC8/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:57:59.923702Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13560,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/HI3PhfVp/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:57:59.352372Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13560,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/UVuQOdJE/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:57:58.806703Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13531,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/AZC9I64n/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:08:45.650507Z",
+      "downloads": 34,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13476,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Um9DhYuS/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:08:45.144868Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13475,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/rQxafrOv/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T03:08:44.572046Z",
+      "downloads": 66,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13473,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/PupJSMP6/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:49:34.793962Z",
+      "downloads": 18,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13838,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZBCxXvHS/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:49:34.017485Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13836,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/5wGfXnkr/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:36:26.612054Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9297,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/z7R3BMAM/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:36:25.900186Z",
+      "downloads": 25,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9294,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/qcDD55NR/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:36:25.104687Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9297,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/VRlnvVc3/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:16.242165Z",
+      "downloads": 39,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9280,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NwVjliSi/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:15.678674Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9279,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZC8U2rSD/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:15.098805Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9280,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/12aIb8nc/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:13.340634Z",
+      "downloads": 497,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13534,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZSHjJrJy/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:12.824575Z",
+      "downloads": 28,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13532,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/uPagbQ1y/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:12.287422Z",
+      "downloads": 58,
+      "version_type": "release",
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13530,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/um7Z3bK2/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:11.665263Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13813,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Wqx8Spcm/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:11.117367Z",
+      "downloads": 35,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13813,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Em5fbEGO/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:10.521550Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13712,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Swm16G16/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:09.983625Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13713,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/k2pB5PDG/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:09.426640Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13712,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/n4OMgil5/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:08.829969Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13711,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/W5WWPLmX/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:08.327069Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13708,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/JC5GrzEQ/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:07.790423Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13552,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/oVyorU32/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:07.274312Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13550,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6srBYr2L/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:22:06.732707Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13553,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ZIg42b3h/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:34.469226Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9361,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/araeVOgJ/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:33.262779Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9629,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/KAKV100H/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:32.649499Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9629,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/4Od7iS7D/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:31.924267Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9629,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/nedszGil/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:31.155284Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9737,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/MLkfyKb0/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:30.288831Z",
+      "downloads": 57,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9853,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bXp1eFxS/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-09T00:07:28.991231Z",
+      "downloads": 9,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9827,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/htHcezMF/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:42.238355Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9360,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/DHqolytF/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:41.632766Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9360,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Gg9rkigy/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:41.023150Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9331,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/IOljiErv/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:40.405124Z",
+      "downloads": 46,
+      "version_type": "release",
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9838,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Owwgh6H7/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:39.730974Z",
+      "downloads": 19,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9854,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/NQenWtzC/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:39.079807Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9699,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/lNPDZv7r/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:38.419723Z",
+      "downloads": 12,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9698,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/ddGxsZeD/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:37.814876Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9855,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tAHgum1E/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:36.236916Z",
+      "downloads": 27,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9698,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/bZAc7HK2/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:48:35.536689Z",
+      "downloads": 13,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9697,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/pjcnLPI3/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:44.637717Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10130,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/jXCjHJ9g/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:44.028837Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10153,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/25oeZGW6/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:43.389014Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10152,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/gSTY5qpJ/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:42.783336Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10151,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/LgWp055v/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:41.246120Z",
+      "downloads": 10,
+      "version_type": "release",
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10074,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Jl6yvKR0/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T23:47:40.538637Z",
+      "downloads": 16,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13582,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/82v1PncL/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:36:00.375902Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9105,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6OTDsXHA/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:59.920543Z",
+      "downloads": 14,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9614,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/JdQDvq7a/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:59.479429Z",
+      "downloads": 15,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9613,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tGgQ4foP/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:58.850239Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9910,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/tpzdb9E9/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:58.353601Z",
+      "downloads": 11,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9910,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/p7QCIYHO/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:57.858208Z",
+      "downloads": 17,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9909,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/HNATO6is/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:57.414273Z",
+      "downloads": 20,
+      "version_type": "release",
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9909,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/IwOn7EXO/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:56.938597Z",
+      "downloads": 22,
+      "version_type": "release",
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13229,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/uHcPm2xa/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T09:35:56.451598Z",
+      "downloads": 37,
+      "version_type": "release",
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 13224,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/BMSDPdAQ/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T00:27:19.543458Z",
+      "downloads": 35,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10125,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/1FbQpPes/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T00:27:19.031223Z",
+      "downloads": 104,
+      "version_type": "release",
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 10125,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/Kx9iME0M/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Heart System\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: heartsystem-1.0.0.jar",
+      "date_published": "2026-05-08T00:27:18.499906Z",
+      "downloads": 70,
+      "version_type": "release",
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "heartsystem-1.0.0.jar",
+          "primary": true,
+          "size": 9548,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/gfa7emXF/heartsystem-1.0.0.jar"
+        }
+      ]
+    },
+    {
+      "name": "Heart System 1.0.0",
+      "version_number": "1.0.0",
+      "changelog": "- Lose 1 heart on death\n- Gain 1 heart by killing another player\n- Reach 0 hearts (configurable minimum) to trigger permanent ban\n- Configurable starting hearts, max hearts, and min hearts via config file\n- Heart counts persist across server restarts (per-player NBT files)\n- Max health is updated in real-time to reflect current heart count\n- Broadcast message on permadeath ban",
+      "date_published": "2026-05-05T01:05:35.784856Z",
+      "downloads": 198,
+      "version_type": "release",
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "files": [
+        {
+          "filename": "Heart-System-1.0.0.jar",
+          "primary": true,
+          "size": 11244,
+          "url": "https://cdn.modrinth.com/data/YGb7hoqK/versions/6g9A48fu/Heart-System-1.0.0.jar"
+        }
+      ]
+    }
   ]
 }
