@@ -34,7 +34,7 @@ function renderSidebarAd() {
 }
 
 function renderSearchInlineAd() {
-  return '<div class="ad-slot ad-slot--grid" style="grid-column:1/-1">' +
+  return '<div class="ad-slot ad-slot--list">' +
     '<div class="ad-label">Sponsored</div>' +
     '<div class="inline-ad">' +
       '<div class="inline-ad__content">' +
@@ -185,7 +185,7 @@ function render() {
     const cards = page.map(modCard);
     const adInsertIndex = Math.min(6, cards.length);
     const cardsWithAd = [...cards.slice(0, adInsertIndex), renderSearchInlineAd(), ...cards.slice(adInsertIndex)];
-    gridHtml = '<div class="mod-grid mod-grid--search">' + cardsWithAd.join("") + '</div>';
+    gridHtml = '<div class="mod-list">' + cardsWithAd.join("") + '</div>';
   } else {
     gridHtml = '<div class="empty"><p>No mods match your filters.</p></div>';
   }
