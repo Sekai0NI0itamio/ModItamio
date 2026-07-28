@@ -77,6 +77,11 @@ function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
+function sanitizeUrl(u) {
+  if (!u) return "";
+  return String(u).trim().replace(/^[`'"]+|[`'"]+$/g, "");
+}
+
 function renderMarkdown(md) {
   if (!md) return "";
   const lines = md.replace(/\r\n/g, "\n").split("\n");
@@ -228,7 +233,7 @@ function versionBadge(type) {
 let cardIndex = 0;
 let CARD_LINK_EXTRA = "";
 function modCard(m) {
-  const iconUrl = m.icon_url || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
+  const iconUrl = sanitizeUrl(m.icon_url) || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
   const letter = (m.name || "M")[0].toUpperCase();
   const idx = cardIndex++;
   const href = PATHS.mod + "?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");

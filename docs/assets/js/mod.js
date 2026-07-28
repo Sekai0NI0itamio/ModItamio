@@ -106,7 +106,7 @@ async function init() {
     syncUrl();
     render();
   } catch (e) {
-    root.innerHTML = '<div class="empty"><p>Mod not found: ' + escapeHtml(e.message) + '</p><a class="btn" href="mods.html">' + ICONS.chevron_left + ' Back to mods</a></div>';
+    root.innerHTML = '<div class="empty"><p>Mod not found: ' + escapeHtml(e.message) + '</p><a class="btn" href="' + PATHS.browse + '">' + ICONS.chevron_left + ' Back to mods</a></div>';
   }
 }
 
@@ -160,7 +160,7 @@ function getAvailableGameVers(loader) {
 
 function render() {
   const root = document.getElementById("app");
-  const iconUrl = currentMod.icon_url || CONFIG.modsAssetBase + "/" + currentMod.mod_id + "/icon.png";
+  const iconUrl = sanitizeUrl(currentMod.icon_url) || CONFIG.modsAssetBase + "/" + currentMod.mod_id + "/icon.png";
   const letter = (currentMod.name || "M")[0].toUpperCase();
   const gallery = currentMod.gallery || [];
   const selected = getSelectedFile();
@@ -411,7 +411,7 @@ function renderDescription() {
         (recentVersions.length ? '<div class="sidebar-card__section sidebar-card__section--bordered">' +
           '<div class="sidebar-card__label">Recent versions</div>' +
           '<div class="sidebar-card__vlist">' + recentVersions.map(v =>
-            '<a class="sidebar-card__vrow" href="version.html?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' +
+            '<a class="sidebar-card__vrow" href="' + PATHS.version + '?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' +
               '<span class="sidebar-card__vname">' + versionBadge(v.version_type) + ' ' + escapeHtml(v.name || v.version_number) + '</span>' +
               '<span class="sidebar-card__vdate">' + formatDate(v.date_published) + '</span>' +
             '</a>'
@@ -478,7 +478,7 @@ function renderVersionRow(v) {
   return '<div class="vrow">' +
     versionBadge(v.version_type) +
     '<div class="vrow__info">' +
-      '<div class="vrow__name"><a href="version.html?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' + escapeHtml(v.name || v.version_number) + '</a></div>' +
+      '<div class="vrow__name"><a href="' + PATHS.version + '?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' + escapeHtml(v.name || v.version_number) + '</a></div>' +
       '<div class="vrow__tags">' + renderVersionTags(v.game_versions) + renderLoaderTags(v.loaders) + '</div>' +
     '</div>' +
     '<div class="vrow__meta">' +

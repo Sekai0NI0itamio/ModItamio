@@ -15,7 +15,7 @@ async function init() {
   const root = document.getElementById("app");
 
   if (!modId || !vNumber) {
-    root.innerHTML = '<div class="empty"><p>Missing parameters.</p><a class="btn" href="mods.html">' + ICONS.chevron_left + ' Back to mods</a></div>';
+    root.innerHTML = '<div class="empty"><p>Missing parameters.</p><a class="btn" href="' + PATHS.browse + '">' + ICONS.chevron_left + ' Back to mods</a></div>';
     return;
   }
 
@@ -31,14 +31,14 @@ async function init() {
     document.title = escapeHtml(versionInfo.name || versionInfo.version_number) + " — " + escapeHtml(currentMod.name);
     root.innerHTML = renderVersionHtml();
   } catch (e) {
-    root.innerHTML = '<div class="empty"><p>' + escapeHtml(e.message) + '</p><a class="btn" href="mod.html?id=' + encodeURIComponent(modId) + '">' + ICONS.chevron_left + ' Back to mod</a></div>';
+    root.innerHTML = '<div class="empty"><p>' + escapeHtml(e.message) + '</p><a class="btn" href="' + PATHS.mod + '?id=' + encodeURIComponent(modId) + '">' + ICONS.chevron_left + ' Back to mod</a></div>';
   }
 }
 
 function renderVersionHtml() {
   if (!versionInfo || !currentMod) return '<div class="empty"><p>Version not found.</p></div>';
   const v = versionInfo;
-  const iconUrl = currentMod.icon_url || CONFIG.modsAssetBase + "/" + currentMod.mod_id + "/icon.png";
+  const iconUrl = sanitizeUrl(currentMod.icon_url) || CONFIG.modsAssetBase + "/" + currentMod.mod_id + "/icon.png";
   const letter = (currentMod.name || "M")[0].toUpperCase();
   const files = v.files || [];
   const primaryFile = files.find(f => f.primary) || files[0];
@@ -51,7 +51,7 @@ function renderVersionHtml() {
       '</div>' +
       '<div class="proj-header__info">' +
         '<div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-1)">' +
-          '<a href="mod.html?id=' + encodeURIComponent(currentMod.mod_id) + '" style="color:var(--color-text-dim);font-size:var(--fs-sm);text-decoration:none;display:flex;align-items:center;gap:var(--space-1)">' + ICONS.chevron_left + ' ' + escapeHtml(currentMod.name) + '</a>' +
+          '<a href="' + PATHS.mod + '?id=' + encodeURIComponent(currentMod.mod_id) + '" style="color:var(--color-text-dim);font-size:var(--fs-sm);text-decoration:none;display:flex;align-items:center;gap:var(--space-1)">' + ICONS.chevron_left + ' ' + escapeHtml(currentMod.name) + '</a>' +
         '</div>' +
         '<h1 class="proj-header__title">' + escapeHtml(v.name || v.version_number) + '</h1>' +
         '<div class="proj-header__tags">' + versionBadge(v.version_type) + renderLoaderTags(v.loaders) + renderVersionTags(v.game_versions) + '</div>' +

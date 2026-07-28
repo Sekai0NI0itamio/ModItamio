@@ -24,7 +24,7 @@ async function initDiscover() {
 
     const hs = document.getElementById("hero-search");
     if (hs) hs.addEventListener("keydown", e => {
-      if (e.key === "Enter" && hs.value.trim()) location.href = "mods.html?q=" + encodeURIComponent(hs.value.trim());
+      if (e.key === "Enter" && hs.value.trim()) location.href = PATHS.browse + "?q=" + encodeURIComponent(hs.value.trim());
     });
   } catch (err) {
     mainWrap.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
@@ -69,7 +69,7 @@ function renderFeatured(mods) {
   return '<section style="margin-top:48px">' +
     '<div class="section-head">' +
       '<div><div class="section-head__kicker">Most popular</div><h2>' + ICONS.star + ' Featured mods</h2></div>' +
-      '<a href="mods.html" class="btn">Browse all ' + ICONS.chevron_right + '</a>' +
+      '<a href="' + PATHS.browse + '" class="btn">Browse all ' + ICONS.chevron_right + '</a>' +
     '</div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +
   '</section>';
@@ -80,7 +80,7 @@ function renderRecent(mods) {
   return '<section style="margin-top:var(--space-8,48px)">' +
     '<div class="section-head">' +
       '<div><div class="section-head__kicker">Fresh from the garden</div><h2>' + ICONS.clock + ' Recently updated</h2></div>' +
-      '<a href="mods.html?s=updated" class="btn">View all ' + ICONS.chevron_right + '</a>' +
+      '<a href="' + PATHS.browse + '?s=updated" class="btn">View all ' + ICONS.chevron_right + '</a>' +
     '</div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +
   '</section>';
