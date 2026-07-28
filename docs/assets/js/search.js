@@ -339,3 +339,46 @@ function renderPagination(total) {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+(function() {
+  let idleTimer = null;
+  const IDLE_DELAY = 1800;
+
+  function activateSidebar() {
+    document.body.classList.remove("sidebar-dormant");
+    document.body.classList.add("sidebar-active");
+    clearTimeout(idleTimer);
+  }
+
+  function scheduleDormant() {
+    if (window.innerWidth < 901) return;
+    const sb = document.querySelector(".search-sidebar");
+    if (sb && (sb.matches(":hover") || sb.matches(":focus-within"))) return;
+    idleTimer = setTimeout(() => {
+      document.body.classList.remove("sidebar-active");
+      document.body.classList.add("sidebar-dormant");
+    }, IDLE_DELAY);
+  }
+
+  window.addEventListener("scroll", () => {
+    activateSidebar();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(scheduleDormant, IDLE_DELAY);
+  }, { passive: true });
+
+  document.addEventListener("mousemove", (e) => {
+    const sb = document.querySelector(".search-sidebar");
+    if (sb) {
+      const rect = sb.getBoundingClientRect();
+      const nearSidebar = e.clientX < rect.right + 60;
+      if (nearSidebar) {
+        activateSidebar();
+        clearTimeout(idleTimer);
+      }
+    }
+  });
+
+  window.addEventListener("load", () => {
+    idleTimer = setTimeout(scheduleDormant, 2500);
+  });
+})();
