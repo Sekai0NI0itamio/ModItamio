@@ -247,10 +247,6 @@ function renderNavbar(active) {
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
     '<a href="index.html" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
-    '<div class="nav__search">' +
-      ICONS.search +
-      '<input type="text" id="nav-search" placeholder="Search mods..." autocomplete="off">' +
-    '</div>' +
     '<nav class="nav__links">' +
       '<a href="index.html" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
       '<a href="mods.html" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
@@ -259,14 +255,6 @@ function renderNavbar(active) {
       '<button id="theme-btn" class="nav__theme-btn" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +
     '</nav>' +
   '</div>';
-  const si = document.getElementById("nav-search");
-  if (si) {
-    si.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && si.value.trim()) {
-        location.href = "mods.html?q=" + encodeURIComponent(si.value.trim());
-      }
-    });
-  }
 }
 
 async function fetchJSON(url) {
