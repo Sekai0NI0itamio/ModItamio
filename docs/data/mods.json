@@ -1,0 +1,26 @@
+[
+  {
+    "categories": [
+      "utility",
+      "game-mechanics"
+    ],
+    "color": "#1bd96a",
+    "date_published": "2026-07-05T11:01:35.331115Z",
+    "downloads": 1568,
+    "followers": 2,
+    "icon_url": "mods/seedprotect/icon.png",
+    "license": "MIT",
+    "loaders": [
+      "fabric",
+      "forge",
+      "neoforge"
+    ],
+    "mod_id": "seedprotect",
+    "modrinth_url": "https://modrinth.com/mod/seed-protect",
+    "name": "Seed Protect",
+    "source_url": "https://github.com/Sekai0NI0itamio/ModItamio/tree/main/mods/seedprotect",
+    "summary": "Hate that when you jump or even just walk on crops they instantly break and you have to replant them again? This mod fixes this issue and also makes sure that mobs cant break ur crops either.",
+    "updated": "2026-04-21T00:55:24.808117Z",
+    "version_count": 21
+  }
+]
