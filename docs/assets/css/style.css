@@ -621,26 +621,52 @@ body.has-hero .page { padding-top: 0; }
 .mod-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  align-items: center;
+  gap: 2px;
   margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.mod-card__tags .tag {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+.mod-card__tags .tag--loader {
+  color: var(--loader-color);
+}
+.mod-card__tags .tag--cat {
+  color: var(--muted);
+}
+.mod-card__tags .tag-sep {
+  color: var(--line);
+  margin: 0 4px;
+  font-weight: 400;
+  user-select: none;
 }
 
 /* Footer: full width stats below tags */
 .mod-card__footer {
   display: flex;
   gap: 16px;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
 }
 .mod-card__stat {
   display: flex;
   align-items: center;
   gap: 5px;
   font-size: 12px;
-  color: var(--faint);
+  color: var(--muted);
   font-weight: 600;
 }
+.mod-card__stat--downloads { color: var(--moss); }
+.mod-card__stat--followers { color: var(--clay); }
 .mod-card__stat svg { width: 13px; height: 13px; }
 
 /* ========== MOD CARD (list variant - compact vertical list like Modrinth) ========== */

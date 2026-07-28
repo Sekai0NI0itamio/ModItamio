@@ -203,6 +203,19 @@ function renderLoaderTags(loaders) {
 function renderCategoryTags(cats) {
   return (cats || []).slice(0, 3).map(c => `<span class="tag tag--cat">${escapeHtml(c)}</span>`).join("");
 }
+function renderCardTags(loaders, cats) {
+  var parts = [];
+  (loaders || []).slice(0, 3).forEach(function(l) {
+    var k = normLoader(l);
+    var name = LOADER_NAMES[k] || l;
+    var color = LOADER_COLORS[k] || "var(--color-text-dim)";
+    parts.push('<span class="tag tag--loader" style="--loader-color:' + color + '">' + escapeHtml(name) + '</span>');
+  });
+  (cats || []).slice(0, 3).forEach(function(c) {
+    parts.push('<span class="tag tag--cat">' + escapeHtml(c) + '</span>');
+  });
+  return parts.join('<span class="tag-sep">\u00B7</span>');
+}
 function renderVersionTags(versions) {
   return (versions || []).slice(0, 5).map(v => `<span class="tag tag--version">${escapeHtml(v)}</span>`).join("") +
     ((versions || []).length > 5 ? `<span class="tag tag--version">+${versions.length - 5}</span>` : "");
@@ -230,10 +243,10 @@ function modCard(m) {
         '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
       '</div>' +
     '</div>' +
-    '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
+    '<div class="mod-card__tags">' + renderCardTags(m.loaders, m.categories) + '</div>' +
     '<div class="mod-card__footer">' +
-      '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-      '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+      '<span class="mod-card__stat mod-card__stat--downloads">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+      '<span class="mod-card__stat mod-card__stat--followers">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
     '</div>' +
   '</a>';
 }
