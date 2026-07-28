@@ -66,7 +66,7 @@ function renderVersionHtml() {
   '<div class="vtabs"><div class="vtabs__item vtabs__item--active">Details</div></div>' +
 
   '<div class="version-detail-grid">' +
-    '<div>' +
+    '<div class="version-main">' +
       '<div class="panel"><div class="panel__body prose">' +
         '<div class="changelog-text">' + renderMarkdown(v.changelog || "_No changelog provided._") + '</div>' +
       '</div></div>' +
