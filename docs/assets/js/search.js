@@ -77,7 +77,7 @@ function syncSearchBox() {
 function applyFilters(mods) {
   return mods.filter(m => {
     if (PARAMS.q && !modMatchesQuery(m, PARAMS.q)) return false;
-    if (PARAMS.l.length && !(m.loaders || []).some(l => PARAMS.l.includes(l))) return false;
+    if (PARAMS.l.length && !(m.loaders || []).some(l => PARAMS.l.includes(normLoader(l)))) return false;
     if (PARAMS.v.length) {
       const mvs = m.game_versions || [];
       if (!PARAMS.v.some(v => mvs.includes(v))) return false;
@@ -106,7 +106,7 @@ function facetCounts(mods) {
   const cats = {}, loaders = {}, versions = {};
   mods.forEach(m => {
     (m.categories || []).forEach(c => { const a = getCategoryAlias(c); cats[a] = (cats[a] || 0) + 1; });
-    (m.loaders || []).forEach(l => { loaders[l] = (loaders[l] || 0) + 1; });
+    (m.loaders || []).forEach(l => { const k = normLoader(l); loaders[k] = (loaders[k] || 0) + 1; });
     (m.game_versions || []).forEach(v => { versions[v] = (versions[v] || 0) + 1; });
   });
   return { cats, loaders, versions };

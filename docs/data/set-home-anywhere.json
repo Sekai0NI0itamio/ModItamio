@@ -1,0 +1,2633 @@
+{
+  "categories": [
+    "utility",
+    "game-mechanics"
+  ],
+  "color": "#98572b",
+  "date_published": "2026-02-22T03:41:25.792954Z",
+  "description": "# Set Home Anywhere\n\n**Set Home** is a simple and lightweight mod for Minecraft Forge 1.20.1 that adds personal home teleportation commands. Mark your favorite locations, return to them instantly, and manage your homes—all without needing operator permissions. Perfect for survival worlds, multiplayer servers, or just keeping your builds organized.\n\n### How It Works (for the user)\n\n- **Set a home:** Type `/sethome <name>` while standing at a location. The mod saves your current position (coordinates and facing direction) under that name, tied to your player.\n- **List your homes:** Type `/home list` to see all homes you have set.\n- **Teleport to a home:** Type `/home <name>` to instantly return to that saved spot.\n- **Delete a home:** Type `/delhome <name>` to remove a home you no longer need.\n\nAll homes are private, no player can access or delete another player's homes.\n\n### Features\n\n- **No permissions needed:** Works for any player in single player or on a server—no operator rights required.\n- **Unlimited homes by default:** Set as many homes as you like. A config file is automatically generated, allowing you to set a per-player limit if desired.\n- **Full direction saving:** When you teleport, you'll face the exact direction you were looking when you set the home.\n- **Persistent storage:** Home data is saved to disk when the world/server closes and reloaded on startup so you will never lose your homes.\n- **Simple and intuitive commands:** No complex syntax—just straightforward commands that do exactly what you expect.\n- **Works everywhere:** Compatible with single player worlds, LAN games, and dedicated servers.\n\n### Why Use This Mod?\n\n- Mark your base, mining outposts, villages, farms, or any important location.\n- Quickly return home after exploring or gathering resources.\n- Keep your multiplayer server organized without needing admin intervention.\n- Avoid the hassle of writing down coordinates and instead let the mod remember it for you.",
+  "discord_url": "",
+  "downloads": 5153,
+  "followers": 1,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/TvVDvfA5/be65b272c06ebd25218dae13570c4edf9b0c5ea0_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "set-home-anywhere",
+  "modrinth_url": "https://modrinth.com/mod/set-home-anywhere",
+  "name": "Set Home Anywhere",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Allows you to set home in singleplayer! As well as for servers.",
+  "updated": "2026-04-19T13:09:36.946179Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-19T13:09:36.946179Z",
+      "downloads": 50,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/p8H2zQO0/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.9) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:35.195667Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/n66PVYxM/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.8) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:33.947955Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/cyZUZeE6/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.6) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:32.914571Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/lNil3jqQ/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.3 (neoforge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:31.904999Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7913,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/1jx1cwwv/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.3 (neoforge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:30.818510Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7913,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/HQVOKviG/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:28.659221Z",
+      "downloads": 69,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8074,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/pHpXcy9v/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.11) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:26.891141Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/aZky5fp4/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.10) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:25.204811Z",
+      "downloads": 498,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7911,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/ZMQSO5sB/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:23.913024Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7912,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/VjrKKKgG/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.3 (neoforge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:21.890514Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7895,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/j6zF0cC4/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.3 (neoforge 1.20.6) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:20.493255Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7863,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/QcqsQk7B/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.20.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:19.137198Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7862,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/PnFiTfZA/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.20.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:17.365850Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 9936,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/FyUMsrR6/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.4 (forge 1.8.9) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:14.966835Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/8GJSLuzD/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.9) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:12.921835Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/x9gX4Bmb/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.8) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:09.990860Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/4a1DurzU/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.7) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:07.933283Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8031,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/n0Bt1SIf/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:06.870961Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8031,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/9ncWBgW3/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:05.382933Z",
+      "downloads": 134,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8174,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/UCJe9gop/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.11) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:03.799184Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8174,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/abRpYRIp/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.10) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:02.715952Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8031,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/LNWtIoVL/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:01.634790Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8029,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/kwl03OIH/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:09:00.547182Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7782,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/1GbAc4Up/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:59.318902Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7782,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/2VExLwLi/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:58.054958Z",
+      "downloads": 78,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7781,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/kFS0GKPn/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:56.907672Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7781,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/GTkdxBlE/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.3 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:55.324343Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7779,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/SuiZ4fS8/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.3 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:54.052737Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7763,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/A62GbJaI/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:52.838930Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7761,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/LVPqxl72/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:51.623908Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7681,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/QPikCOQI/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.17.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:49.649862Z",
+      "downloads": 56,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7882,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/TAFfueDX/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.3 (forge 1.16.5) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:08:48.719342Z",
+      "downloads": 183,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 9770,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/V3lIdCSb/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.12.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:53.963401Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/gU0UzLlT/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.9)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:53.112099Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/4fbAp35Y/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.8)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:52.147864Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/r2Zu45Zk/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.7)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:51.459657Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8175,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/AtggOWKI/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.6)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:50.667013Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8174,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/6ghntw2F/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.11)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T08:17:49.953347Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8174,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/Au6KNbAS/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.10)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T07:58:22.169659Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8075,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/xIJhhYmi/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.8)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T07:58:20.312931Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8074,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/qRpmFrrC/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.11)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T07:58:18.070574Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8239,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/y5sJaq3V/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.5)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-19T06:25:44.998027Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8027,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/45yI9nRn/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-18T13:55:59.628543Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 8029,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/FzlLQOuB/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.4)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-04-18T12:17:25.827215Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7781,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/8WIIAxNq/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.19.4)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-16T01:25:00.861917Z",
+      "downloads": 326,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11313,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/XRkybFqe/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.16.5) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:24:51.729029Z",
+      "downloads": 85,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11184,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/trfUwXPD/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.19) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:12:52.665112Z",
+      "downloads": 84,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11136,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/3EKVL7e3/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.19.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:08:32.739607Z",
+      "downloads": 84,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 22928,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/9LTwaWVa/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.20.6) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:07:48.297189Z",
+      "downloads": 87,
+      "files": [
+        {
+          "filename": "sethome-1.0.3.jar",
+          "primary": true,
+          "size": 22285,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/vogsLTif/sethome-1.0.3.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.3 (neoforge 1.21.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.2\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: sethome-1.0.3.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:07:08.271449Z",
+      "downloads": 88,
+      "files": [
+        {
+          "filename": "sethome-1.0.3.jar",
+          "primary": true,
+          "size": 13804,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/34FEd8WT/sethome-1.0.3.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.3 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.2\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sethome-1.0.3.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:05:07.151059Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11793,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/PufF8sKJ/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.7) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:04:48.097429Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11793,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/uMnf44tY/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.6) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:01:17.393931Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11822,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/8urLBLKZ/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T14:01:05.204287Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11847,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/AySRmjWa/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.4) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:43:48.867547Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11205,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/Mdx4zRY9/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.17.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:41:03.800657Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 12010,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/V7ULrZwk/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:40:51.627239Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11781,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/mrel6XMx/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.20.4) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:39:01.543044Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 13746,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/YqKIePju/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:36:57.119167Z",
+      "downloads": 80,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11270,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/8P8gsJH2/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.2 (forge 1.18.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:36:14.957530Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 13660,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/8iqZ1VD0/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:34:52.239357Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.2.jar",
+          "primary": true,
+          "size": 11795,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/pCOZ7dWS/sethome-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.2 (neoforge 1.21.5) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: sethome-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:30:16.031329Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11257,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/fOIQKnhq/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.16.5) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:08:38.738419Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11255,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/M7d3Xu77/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.19.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:08:38.527239Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 10140,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/EuyC4I7x/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:07:15.585132Z",
+      "downloads": 67,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11392,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/jNBbbHFO/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.19.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:06:35.384982Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11080,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/alwuLYM3/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.3) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:06:07.343750Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 17148,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/lrYuW3aZ/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.3) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:05:47.860802Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 17002,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/T3gLgxNR/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.20.6) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:05:45.607611Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 13218,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/KRmqkiVC/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:04:15.786209Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 12383,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/NNegcbin/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.20.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:03:36.874191Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11084,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/oe6z8MaF/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.19.3) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:03:08.818998Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11173,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/yzpPoo4T/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.18.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:01:37.486418Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 7406,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/W9J3IStB/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.10) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:01:10.150633Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 10832,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/XxMLzClQ/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.21.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:00:42.144568Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 12028,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/kHUmAgej/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.4) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T13:00:39.543668Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11189,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/3fpUKsbj/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.18.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:58:59.921044Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 9685,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/WgvdLIBD/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.20.5) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:58:48.336086Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 9253,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/iNqrlQTj/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.5) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:57:43.471551Z",
+      "downloads": 44,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 12608,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/WpQnkHPS/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.12.2) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:57:07.273471Z",
+      "downloads": 53,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 14299,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/cLvIXImL/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21.1) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:56:07.815362Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11242,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/i4oVfk1Z/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.18) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:55:43.159683Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 10769,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/t8MpqgY3/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.1 (neoforge 1.21) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:54:42.478002Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.1.jar",
+          "primary": true,
+          "size": 11073,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/uQgYiDp7/sethome-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.1 (forge 1.19) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: sethome-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:38.385774Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1161,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/nTcyvM1A/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:38.300181Z",
+      "downloads": 44,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 837,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/qFVp56au/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:31.729762Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 828,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/POpkx4yE/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:30.429574Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 838,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/zdW6IELv/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:17.543443Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 821,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/KLXzEQJu/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:13.653616Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 2564,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/Xt755025/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:48:11.303109Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1406,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/VFxwAf91/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:55.929700Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 819,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/yIOMk3iu/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:48.826352Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 816,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/3pMB9N63/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:45.406798Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 814,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/U0iJSUCv/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:45.173925Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1252,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/kO12rN1s/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:41.680686Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1130,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/BGhZnC9g/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:39.604323Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 838,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/cW2EbfCB/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:35.273114Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 839,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/CUivt8mM/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:29.159350Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 820,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/QIV9n83r/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:26.000813Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1250,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/osFYQuGY/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:25.092753Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 838,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/2pe6UGGm/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:24.779578Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 816,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/7vQFp7r9/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:23.274718Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1590,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/oBW67r36/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:14.589564Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1214,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/SKzTj1XR/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Set Home 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:47:14.516220Z",
+      "downloads": 96,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 815,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/bXItwZrg/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:46:43.329593Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1024,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/Hzq5mxXp/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:46:34.781560Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 815,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/UhTHnrI7/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:46:11.378391Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1423,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/vvdhJBbe/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:59.498473Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1011,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/zqmGoQ6S/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:59.115462Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1023,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/b0qkePyy/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:55.459774Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1025,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/k6iiIikp/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:25.019064Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1024,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/N2CzJAKq/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:24.378980Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 979,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/4iemR75z/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:45:19.917142Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 1010,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/oy8oL9V8/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:44:50.045779Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 988,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/N7QDf4T0/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:44:17.577623Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 658,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/mefkGyq6/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T04:43:52.520015Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 900,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/QjvNRKCX/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home 1.0.0 (forge 1.12.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Set Home\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: sethome-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-02-22T04:56:48.146660Z",
+      "downloads": 1954,
+      "files": [
+        {
+          "filename": "sethome-1.0.0.jar",
+          "primary": true,
+          "size": 11059,
+          "url": "https://cdn.modrinth.com/data/TvVDvfA5/versions/Tq1ofYmY/sethome-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1",
+        "1.20.2",
+        "1.20.3",
+        "1.20.4",
+        "1.20.5",
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Set Home Anywhere 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    }
+  ]
+}

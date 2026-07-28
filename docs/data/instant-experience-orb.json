@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "optimization",
+    "utility"
+  ],
+  "color": "#222120",
+  "date_published": "2026-04-10T14:15:03.634169Z",
+  "description": "# Instant Experience Orb\n\n![Instant Experience Orb cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/instant-experience-orb/main/.modcompiler-art/description-image.webp)\n\nLevel up instantly! This mod revolutionizes XP collection with instant absorption, automatic orb clumping, and a simplified 1 orb = 1 level system.\n\n## Features\n\n- ✅ **Instant Absorption** - XP orbs absorbed immediately, no delay\n- ✅ **Orb Clumping** - Nearby orbs merge together to reduce lag\n- ✅ **Simplified Leveling** - 1 XP orb = 1 level (no complex XP curves)\n- ✅ **Lag Reduction** - Fewer entities = better performance\n\n## How It Works\n\n### Instant Absorption\nWhen you pick up an XP orb, it's instantly added to your level - no waiting for the slow vanilla animation!\n\n### Orb Clumping\nEvery second, the mod scans for XP orbs within 3 blocks of each other and merges them into a single orb. This dramatically reduces entity count and improves performance.\n\n**Example:**\n- 10 separate 1-XP orbs → 1 merged 10-XP orb\n- Fewer entities = less lag\n- Still get the same total XP",
+  "discord_url": "",
+  "downloads": 132,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/cMYMtMX7/a31812f2dfd4140adc13bf81751fd29cb8150410_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "instant-experience-orb",
+  "modrinth_url": "https://modrinth.com/mod/instant-experience-orb",
+  "name": "Instant Experience Orb",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/instant-experience-orb",
+  "issues_url": "https://github.com/Sekai0NI0itamio/instant-experience-orb/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/instant-experience-orb/blob/main/docs/Home.md",
+  "summary": "Instantly absorb XP orbs, clump them together to reduce lag, and use simplified 1 orb = 1 level system!",
+  "updated": "2026-04-10T14:15:13.639650Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-10T14:15:13.639650Z",
+      "downloads": 132,
+      "files": [
+        {
+          "filename": "Instant-Experience-Orb-1.0.0.jar",
+          "primary": true,
+          "size": 6726,
+          "url": "https://cdn.modrinth.com/data/cMYMtMX7/versions/KJT1kR0q/Instant-Experience-Orb-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Instant Experience Orb 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Instant Experience Orb\nJar: Instant-Experience-Orb-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

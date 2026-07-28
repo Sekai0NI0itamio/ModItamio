@@ -1,0 +1,238 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#232322",
+  "date_published": "2026-04-09T09:36:27.611487Z",
+  "description": "# World Auto Totem\n\n![World Auto Totem cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-totem/main/.modcompiler-art/description-image.webp)\n\n**Simple, fast, reliable auto-totem with 0-tick replacement.**\n\nAuto Totem is a lightweight mod that automatically keeps Totem of Undying in your offhand at all times. When a totem is consumed, it's instantly replaced within 1 tick (0.05 seconds). Perfect for hardcore survival, PvP, and dangerous adventures.\n\n## Key Features\n\n### Simple & Effective\n- ✅ **0-Tick Replacement** - Instant totem replacement (1 tick = 0.05 seconds)\n- ✅ **Always Protected** - Keeps totem in offhand at all times when enabled\n- ✅ **Toggle Keybind** - Press 'O' to enable/disable anytime\n- ✅ **Smart Swapping** - Swaps old offhand item back to inventory\n\n### Quality of Life\n- **No Complexity** - No health thresholds, no delays, just works\n - **Lightweight** - Minimal performance impact\n\n## How to Use\n\n### Basic Usage\nInstall the mod.\nHave Totem of Undying in your inventory.\nPress 'O' to enable (enabled by default).\nTotem automatically stays in your offhand!",
+  "discord_url": "",
+  "downloads": 754,
+  "followers": 0,
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/K8Ts1P4a/images/7beb3ab0ae4a7b5a1b11a70ea620d8ce880d6a61_350.webp",
+      "title": "Demonstration of how it works",
+      "description": "Shows how the auto totem activates.",
+      "featured": true
+    }
+  ],
+  "icon_url": "https://cdn.modrinth.com/data/K8Ts1P4a/dc5b84456c82774ade2a342a1a24932fbb9a4c70_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "instant-auto-totem",
+  "modrinth_url": "https://modrinth.com/mod/instant-auto-totem",
+  "name": "Instant Auto Totem",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-totem",
+  "issues_url": "https://github.com/Sekai0NI0itamio/ModItamio/issues?q=is%3Aissue+label%3Ainstantautototem",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-totem/blob/main/docs/Home.md",
+  "summary": "Hate dying because you forget to keep a Totem of Undying in your offhand? This mod fixes that.",
+  "updated": "2026-07-11T02:07:40.351032Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-07-11T02:07:40.351032Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "instantautototem-26.1.2-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 64295,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/MuxG0koU/instantautototem-26.1.2-neoforge-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Ported to 26.1.2 neoforge"
+    },
+    {
+      "date_published": "2026-07-07T02:47:57.717067Z",
+      "downloads": 99,
+      "files": [
+        {
+          "filename": "instantautototem-26.1.2-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 68208,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/x9NHB7ef/instantautototem-26.1.2-fabric-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-26.1.2",
+      "version_type": "release",
+      "changelog": "Initial release for Minecraft 26.1.2 (Fabric)."
+    },
+    {
+      "date_published": "2026-07-07T02:47:56.843043Z",
+      "downloads": 202,
+      "files": [
+        {
+          "filename": "instantautototem-1.21.11-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 68143,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/6fDcv88G/instantautototem-1.21.11-fabric-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.11",
+      "version_type": "release",
+      "changelog": "|-\n  Initial release for Minecraft 1.21.11 (Fabric).\n  Features:\n  - 0-Tick Totem Replacement\n  - Toggle Keybind (O key)\n  - Smart Swapping\n  - Configurable Chat Feedback\n  - JSON Config File"
+    },
+    {
+      "date_published": "2026-07-07T02:47:56.058358Z",
+      "downloads": 66,
+      "files": [
+        {
+          "filename": "instantautototem-1.21.1-neoforge-1.0.0.jar",
+          "primary": true,
+          "size": 64438,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/t0xKd8Rm/instantautototem-1.21.1-neoforge-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+neoforge-1.21.1",
+      "version_type": "release",
+      "changelog": "|-\n  Initial release for Minecraft 1.21.1 (NeoForge).\n  Features:\n  - 0-Tick Totem Replacement\n  - Toggle Keybind (O key)\n  - Smart Swapping\n  - Configurable Chat Feedback\n  - ModConfigSpec Configuration"
+    },
+    {
+      "date_published": "2026-07-07T02:47:55.240874Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "instantautototem-1.21.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 65529,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/ZmN0bHsM/instantautototem-1.21.1-fabric-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.21.1",
+      "version_type": "release",
+      "changelog": "|-\n  Initial release for Minecraft 1.21.1 (Fabric).\n  Features:\n  - 0-Tick Totem Replacement\n  - Toggle Keybind (O key)\n  - Smart Swapping\n  - Configurable Chat Feedback\n  - JSON Config File"
+    },
+    {
+      "date_published": "2026-07-07T02:47:54.301251Z",
+      "downloads": 60,
+      "files": [
+        {
+          "filename": "instantautototem-1.20.1-forge-1.0.0.jar",
+          "primary": true,
+          "size": 77200,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/V968IN3Z/instantautototem-1.20.1-forge-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.20.1",
+      "version_type": "release",
+      "changelog": "|-\n  Initial release for Minecraft 1.20.1 (Forge).\n  Features:\n  - 0-Tick Totem Replacement\n  - Toggle Keybind (O key)\n  - Smart Swapping\n  - Configurable Chat Feedback\n  - JSON Config File"
+    },
+    {
+      "date_published": "2026-07-07T02:47:53.428292Z",
+      "downloads": 39,
+      "files": [
+        {
+          "filename": "instantautototem-1.20.1-fabric-1.0.0.jar",
+          "primary": true,
+          "size": 77411,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/eXF31ezw/instantautototem-1.20.1-fabric-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+fabric-1.20.1",
+      "version_type": "release",
+      "changelog": "|-\n  Initial release for Minecraft 1.20.1 (Fabric).\n  Features:\n  - 0-Tick Totem Replacement\n  - Toggle Keybind (O key)\n  - Smart Swapping\n  - Configurable Chat Feedback\n  - JSON Config File"
+    },
+    {
+      "date_published": "2026-07-07T02:47:52.210851Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "instantautototem-1.12.2-forge-1.0.0.jar",
+          "primary": true,
+          "size": 62667,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/ygRZGd2J/instantautototem-1.12.2-forge-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "1.0.0",
+      "version_number": "1.0.0+forge-1.12.2",
+      "version_type": "release",
+      "changelog": "Initial release for Minecraft 1.12.2 (Forge). This is the reference build from which all ports were derived."
+    },
+    {
+      "date_published": "2026-04-09T09:36:28.625209Z",
+      "downloads": 201,
+      "files": [
+        {
+          "filename": "Auto-Totem-1.0.0.jar",
+          "primary": true,
+          "size": 6962,
+          "url": "https://cdn.modrinth.com/data/K8Ts1P4a/versions/x7d8E5Xk/Auto-Totem-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Auto Totem 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Totem\nJar: Auto-Totem-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

@@ -1,0 +1,1969 @@
+{
+  "categories": [
+    "utility",
+    "management"
+  ],
+  "color": "#090909",
+  "date_published": "2025-07-15T09:38:13.061688Z",
+  "description": "![BAnner](https://cdn.modrinth.com/data/cached_images/af9b8aba0d84f89bcff843e0184ddf5f9939bf2d_0.webp)\n\n### Features\n - Allows you to display your fps (on/off in config file) with colors.\n\n###  Image\n![Image](https://cdn.modrinth.com/data/cached_images/935bc8199eec417d41d7d20f2135b6de6c75fa52.png)",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "downloads": 11047,
+  "followers": 4,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/cUHhuzIF/2119c286da72def1a1a87e11b07803ca8a115716_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "fpsdisplaymod",
+  "modrinth_url": "https://modrinth.com/mod/fpsdisplaymod",
+  "name": "fpsdisplaymod",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "A colorful display of your current fps\nred = bad, yellow = ok, green = playable, purple = fantastic",
+  "updated": "2026-03-15T12:17:55.058960Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-03-15T12:17:55.058960Z",
+      "downloads": 39,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.2.jar",
+          "primary": true,
+          "size": 5350,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/cHhZRfQ3/fpsdisplay-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.2 (forge 1.21.6) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: fpsdisplay-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:14:34.782711Z",
+      "downloads": 106,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 5481,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/C2Lxwa4Q/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.8) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:14:15.088815Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.2.jar",
+          "primary": true,
+          "size": 5471,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/H0WHh4Bj/fpsdisplay-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.2 (forge 1.21.7) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T12:11:11.875574Z",
+      "downloads": 302,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.2.jar",
+          "primary": true,
+          "size": 5627,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/70DH4GWU/fpsdisplay-1.0.2.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.2 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.1\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: fpsdisplay-1.0.2.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:43:07.524884Z",
+      "downloads": 107,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 6039,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/aRv7e22u/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.10) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:41:06.527871Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 5888,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/LQEegTKl/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:39:29.525743Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 10131,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/rlpiBvlF/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.6) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:34:22.986026Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 5796,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/9o9SPctl/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.7) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:29:01.930746Z",
+      "downloads": 768,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 7600,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/DMehfES0/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.21.11) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T10:18:47.574571Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.1.jar",
+          "primary": true,
+          "size": 5717,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/j5q2eI1P/fpsdisplay-1.0.1.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.1 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: fpsdisplay-1.0.1.jar"
+    },
+    {
+      "date_published": "2026-03-15T09:53:49.596541Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.8.jar",
+          "primary": true,
+          "size": 5922,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/ZQu5lPAB/fpsdisplay-1.0.8.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.8 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.8",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.8\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: fpsdisplay-1.0.8.jar"
+    },
+    {
+      "date_published": "2026-03-15T09:22:18.536752Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.7.jar",
+          "primary": true,
+          "size": 5928,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/Z4uIsSSh/fpsdisplay-1.0.7.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.7 (forge 1.8.9) (Fixed Corrupted Version)",
+      "version_number": "1.0.7",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.7\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: fpsdisplay-1.0.7.jar"
+    },
+    {
+      "date_published": "2026-03-15T08:15:03.223056Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.8.jar",
+          "primary": true,
+          "size": 5624,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/r8LzHOBd/fpsdisplay-1.0.8.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.8 (neoforge 1.21.7) (Fixed Corrupted Version)",
+      "version_number": "1.0.8",
+      "version_type": "release",
+      "changelog": "Fixed Corrupted Version\nOriginal version: 1.0.0\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.8\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.8.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:06.896760Z",
+      "downloads": 44,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/RVrfaeHx/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:06.273050Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 1079,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/UnE4Eznt/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:05.632791Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 1077,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/k2zkYZov/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:05.045879Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/P4ChOAok/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:04.447754Z",
+      "downloads": 74,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/nnsBasDO/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:34:03.851368Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 1114,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/uq3L0XJb/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:09.504697Z",
+      "downloads": 77,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5889,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/6d9pYHOP/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:08.606667Z",
+      "downloads": 148,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5888,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/VujOYXn9/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:07.702461Z",
+      "downloads": 41,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5888,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/g8z5Cx5d/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:06.705166Z",
+      "downloads": 133,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5888,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/p1PdYJQX/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:05.793979Z",
+      "downloads": 141,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5886,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/brbRFnR5/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T08:09:04.891298Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5908,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/qmfPWmRp/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:19.566626Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/ZWC9MOaY/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:18.831842Z",
+      "downloads": 154,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/xzY3mJIs/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:18.030851Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/DSzvXc1u/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:17.257545Z",
+      "downloads": 37,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/Sl3GNwxR/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:16.476288Z",
+      "downloads": 46,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5721,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/hnGSQFRr/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:15.749793Z",
+      "downloads": 109,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5721,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/5BK9GoPs/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:14.856559Z",
+      "downloads": 42,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5720,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/CAil1PVb/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:14.107988Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5721,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/ghDOjxtW/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:13.294220Z",
+      "downloads": 414,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5718,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/muQD4MxB/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:12.395853Z",
+      "downloads": 83,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/IxvZRoZK/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:11.635007Z",
+      "downloads": 2026,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5719,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/qRNZnsaY/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:10.862555Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5720,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/DKx2fBey/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:10.079481Z",
+      "downloads": 32,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5703,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/o22FyF1U/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:09.318263Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5703,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/TOu9AFwU/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:08.561462Z",
+      "downloads": 47,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/AtdglIjT/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:07.806819Z",
+      "downloads": 131,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/UQErYNKH/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:07.006335Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/AMiL1ZMV/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:06.220520Z",
+      "downloads": 47,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9006,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/7iX7bEuP/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:05.452214Z",
+      "downloads": 80,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9007,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/FZEB4hDG/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:04.542415Z",
+      "downloads": 216,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9007,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/mR4qmHyX/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:03.788723Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9008,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/hE6io59k/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:03.016760Z",
+      "downloads": 32,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/wqWDonby/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:02.260324Z",
+      "downloads": 930,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/wYXviH77/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:01.476460Z",
+      "downloads": 132,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9004,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/B4FzYKHU/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:28:00.706069Z",
+      "downloads": 222,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9005,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/cSh1oySs/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T06:27:59.955823Z",
+      "downloads": 90,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 9001,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/TwSggIiD/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:31.946527Z",
+      "downloads": 39,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5706,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/e1XyEfyP/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:31.183151Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5706,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/3tDk4cN1/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "FPS Display 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:30.584313Z",
+      "downloads": 53,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5487,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/63VsNtxq/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:30.031322Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5487,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/qZq26dOf/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:29.437907Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5486,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/35pGa8mA/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:28.904054Z",
+      "downloads": 568,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5486,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/PYsUH6i3/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:28.271550Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5804,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/sl6m2Jmq/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:27.665064Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5803,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/zxkLPgF7/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:27.093418Z",
+      "downloads": 150,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5803,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/qw3BmzJd/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:26.408300Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5803,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/gBdOLvif/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:25.869214Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5800,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/ZXscMnfJ/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:25.228812Z",
+      "downloads": 179,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5790,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/bZsUKhT7/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:24.624566Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8984,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/lcDaMh81/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:24.029777Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8983,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/luemPEQH/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:23.451731Z",
+      "downloads": 46,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8984,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/ielPvaQB/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:22.804769Z",
+      "downloads": 24,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8982,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/mnpwSclq/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:22.266718Z",
+      "downloads": 29,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8980,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/llG1pCjt/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:27:21.690882Z",
+      "downloads": 170,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8982,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/piSvn26i/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:12.313708Z",
+      "downloads": 112,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5882,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/TAVSHCkg/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:11.508619Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5882,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/YiSIQiWm/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:10.696854Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5880,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/eElRekK7/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:09.863113Z",
+      "downloads": 32,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 5784,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/MAmVFw94/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:09.161718Z",
+      "downloads": 362,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 6057,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/PVZ5cnXJ/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.12.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:08.355700Z",
+      "downloads": 50,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 6060,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/8ufOoOKE/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.12.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:07.442302Z",
+      "downloads": 76,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 6056,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/kn5MyPvg/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "FPS Display 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:06.687541Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/sq0vRcuJ/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:05.981586Z",
+      "downloads": 27,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8811,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/qLaV9VCc/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:05.180975Z",
+      "downloads": 43,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/JzoUEP2u/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:04.424915Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/Co06x8m8/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:03.636505Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8807,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/yYCIa8Ed/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:02.879988Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8808,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/YsaPoyPw/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:02.047252Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8809,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/Lr35FFKW/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:01.230415Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8807,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/czThnrOS/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:07:00.357158Z",
+      "downloads": 38,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8810,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/RnPpUL9m/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:06:59.555613Z",
+      "downloads": 37,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8808,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/JmuctNCl/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-13T05:06:58.796698Z",
+      "downloads": 128,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 8811,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/7aTapbeM/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "FPS Display 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: FPS Display\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: fpsdisplay-1.0.0.jar"
+    },
+    {
+      "date_published": "2025-07-15T09:39:06.785529Z",
+      "downloads": 893,
+      "files": [
+        {
+          "filename": "fpsdisplay-1.0.0.jar",
+          "primary": true,
+          "size": 11990,
+          "url": "https://cdn.modrinth.com/data/cUHhuzIF/versions/rVm7wQgI/fpsdisplay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Fps Displayer",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Working version"
+    }
+  ]
+}

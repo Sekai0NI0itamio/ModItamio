@@ -1,0 +1,1287 @@
+{
+  "categories": [
+    "utility"
+  ],
+  "color": "#080d11",
+  "date_published": "2026-03-01T07:28:54.731873Z",
+  "description": "# ServerCore\n\n## Description\n\n**ServerCore** is a lightweight utility mod for Minecraft Forge 1.12.2 that adds a complete, player-friendly teleport toolkit to both singleplayer and multiplayer—without requiring cheats or operator status. Whether you're exploring, building, or just getting started, ServerCore gives you the tools to move around your world with ease.\n\n### What It Does (for the user)\n\n**Teleport Requests**\n- Send a teleport request to another player:  \n  `/tpa <player>` – Request to teleport to them.  \n  `/tpahere <player>` – Request them to teleport to you.\n- Incoming requests last 60 seconds before expiring.\n- Accept or deny requests individually or all at once:  \n  `/tpaccept [player]` – Accept a specific request.  \n  `/tpacceptall` – Accept all pending requests.  \n  `/tpadeny [player]` – Deny a specific request.  \n  `/tpadenyall` – Deny all pending requests.\n- Cancel requests you've sent:  \n  `/tpacancel <player>` – Cancel a specific outgoing request.  \n  `/tpacancel all` – Cancel all outgoing requests.\n\n**Personal Homes**\n- Set your own named homes that remember your exact location, dimension, and even which way you're facing:  \n  `/sethome <name>` – Save your current position as a home.\n- Teleport to any of your homes anytime:  \n  `/home <name>` – Go to that home.  \n  `/home list` – See all your saved homes.  \n  `/delhome <name>` – Remove a home.\n- Homes are private to you and persist across sessions in the world data.\n\n**Safe Random Teleport**\n- Instantly teleport to a random, safe location without leaving your dimension:  \n  `/rtp overworld` – Random location in the Overworld.  \n  `/rtp nether` – Random location in the Nether.  \n  `/rtp end` – Random location in the End.\n- The search area is a 10,000-block square centered at 0,0 (respecting your world border).\n- The mod ensures you land on a safe spot—no mid-air or suffocation spawns.\n\n**First-Join Auto-Teleport**\n- When a player joins a world for the very first time, they are automatically teleported to a safe random overworld location (using the same RTP system).\n- Perfect for survival servers: new players start somewhere fresh and unexplored, not at world spawn.",
+  "discord_url": "",
+  "downloads": 2440,
+  "followers": 4,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/o5Mz9FJy/85ef3840d3d5ba97f19f3ba9eab130fda4520e9d_96.webp",
+  "license": "CC0-1.0",
+  "loaders": [
+    "fabric",
+    "forge"
+  ],
+  "mod_id": "common-server-core",
+  "modrinth_url": "https://modrinth.com/mod/common-server-core",
+  "name": "Common Server Core",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "/tpa, /home, /rtp, random spawn all included in one mod. Compatible for single player worlds!",
+  "updated": "2026-04-19T11:14:03.127345Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-19T11:14:03.127345Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33980,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/cKXGOZkQ/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T01:27:22.837449Z",
+      "downloads": 84,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 35936,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/fwcQmXLS/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:58:01.191009Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/anM6enrG/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:38.519805Z",
+      "downloads": 95,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 34327,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/CqurFhjF/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:37.166337Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32744,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/jAT1kE4t/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:36.124352Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32745,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/Z1gwfWzg/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:35.137471Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32744,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/s0jBqTcE/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:33.690984Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32743,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/n10KaVaa/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:32.646385Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32740,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/nO9z3Ups/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T00:40:31.656947Z",
+      "downloads": 50,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33526,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/NH7zywcl/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:31.010375Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/hsUBNvfV/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:30.283314Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/hq9wnJIZ/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:29.472017Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/y1YjcAyb/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:28.717724Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/QPUD7gqL/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:27.902190Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 31539,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/UQrHjVMA/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:27.156207Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29791,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/XjmRUUuK/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:26.232004Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29790,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/lK7OEg1u/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:25.575466Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29790,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/JEfQZXRt/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:24.795596Z",
+      "downloads": 194,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29790,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/HVPtsILc/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:24.045205Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29368,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/VtlCqnae/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:23.301091Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29367,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/dfvB3jPO/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:22.528905Z",
+      "downloads": 72,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29367,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/Qmd91R58/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:21.693624Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29366,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/w4y7fiBu/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:20.995839Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29365,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/SahI4RcB/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:18.991957Z",
+      "downloads": 737,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 38220,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/xyHAR2WW/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:17.997634Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33305,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/WRuOzUG5/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:17.200951Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33305,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/LUnZ4Y8r/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:16.409140Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33164,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/LWFeIlrv/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:15.550921Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33162,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/8DTzGaJp/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:14.762337Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33162,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/ggGELWan/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:13.970990Z",
+      "downloads": 103,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33162,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/byRUAkdt/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:13.170078Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32261,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/z2ST5IfW/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:11.997668Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32261,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/MwBQN4AQ/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T14:28:11.212927Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 32258,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/jDZYwa3I/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:14.788688Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33481,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/on4r1MJ0/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:13.748285Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33481,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/CumKxfhj/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:12.669755Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33480,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/zZwSbodr/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:11.622442Z",
+      "downloads": 38,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33480,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/vV4r8jmb/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:10.439149Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 33479,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/jUgSQFCi/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:09.356713Z",
+      "downloads": 74,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29319,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/VJ47WzKo/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:08.257318Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29318,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/Ha1f82Dk/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:07.213643Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 29317,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/dTzvws1Q/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:06.185926Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "modid-1.0.0.jar",
+          "primary": true,
+          "size": 29213,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/D4zAnFX7/modid-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "ServerCore 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: modid-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:05.136922Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37294,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/aP3bh6bW/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:04.147879Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37294,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/sFwG5InH/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:03.043444Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37295,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/chypEGvk/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:01.853532Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37295,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/g5nCrPdK/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:28:00.828046Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37295,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/NKQTKiFC/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:59.761068Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37304,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/frRQkMi4/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:58.462523Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37304,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/YAcjTnXt/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:57.449434Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37302,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/RWUb5mgx/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:56.250482Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37293,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/qHNYyGLa/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:55.232314Z",
+      "downloads": 278,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37301,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/s3yogR88/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:54.172565Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 37298,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/b4HIDtey/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:53.185393Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 31926,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/yiQSTnK0/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-11T12:27:52.173289Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "servercore-1.0.0.jar",
+          "primary": true,
+          "size": 31924,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/U0LosKAl/servercore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: ServerCore\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: servercore-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-01T07:29:46.628225Z",
+      "downloads": 167,
+      "files": [
+        {
+          "filename": "ServerCore-1.0.0.jar",
+          "primary": true,
+          "size": 48487,
+          "url": "https://cdn.modrinth.com/data/o5Mz9FJy/versions/SBNCQth7/ServerCore-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12",
+        "1.12.1",
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "1.12.2 Server Core 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    }
+  ]
+}

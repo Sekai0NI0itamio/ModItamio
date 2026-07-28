@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "storage",
+    "utility"
+  ],
+  "color": "#232324",
+  "date_published": "2026-04-03T13:01:06.971626Z",
+  "description": "# Quick Stack\n\n![Quick Stack cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/quick-stack/main/.modcompiler-art/description-image.webp)\n\nTired of manually moving items from your inventory to chests? This mod brings Terraria's beloved Quick Stack feature to Minecraft! Press a single key to instantly stack all matching items to nearby containers.\n\n## Features\n\n- ✅ **One-Key Stacking** - Press V to quick stack items to nearby containers\n- ✅ **Smart Matching** - Only stacks items that already exist in containers (prevents clutter)\n- ✅ **Audio Feedback** - Plays a satisfying sound when items are stacked\n- ✅ **Visual Feedback** - Shows on-screen message with what was stacked\n- ✅ **Multiple Container Types** - Works with chests, trapped chests, barrels, and shulker boxes\n\n## How It Works\n\nStand near your storage containers (within 8 blocks by default).\nAll items in your inventory that match items already in nearby containers are automatically stacked.\nGet instant feedback with sound and on-screen message.\n\n## Example Use Cases\n\n**After Mining Trip:**\n- You have cobblestone, iron ore, and coal in your inventory\n- Your storage room has chests with these items already\n- Press V and everything stacks to the right chests instantly",
+  "discord_url": "",
+  "downloads": 152,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/8iKcTAde/41d7fbadf43f3ab8914b09bb0c94eaff118a59a5_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "quick-stack",
+  "modrinth_url": "https://modrinth.com/mod/quick-stack",
+  "name": "Quick Stack",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/quick-stack",
+  "issues_url": "https://github.com/Sekai0NI0itamio/quick-stack/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/quick-stack/blob/main/docs/Home.md",
+  "summary": "Hate manually moving items from your inventory to chests? This mod makes it so that you can transfer items into nearby containers with a single press.",
+  "updated": "2026-04-03T13:01:07.851562Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-03T13:01:07.851562Z",
+      "downloads": 152,
+      "files": [
+        {
+          "filename": "Quick-Stack-1.0.0.jar",
+          "primary": true,
+          "size": 12507,
+          "url": "https://cdn.modrinth.com/data/8iKcTAde/versions/SJT8o62F/Quick-Stack-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Quick Stack 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Quick Stack\nJar: Quick-Stack-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

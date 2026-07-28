@@ -1,0 +1,60 @@
+{
+  "categories": [
+    "utility",
+    "game-mechanics"
+  ],
+  "color": "#2d2e2e",
+  "date_published": "2026-03-31T03:10:12.009002Z",
+  "description": "# Always Rain\n\n![Always Rain cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/always-rain/main/.modcompiler-art/description-image.webp)\n\nAlways Rain is a simple mod that makes it rain all the time in a Minecraft world. It also keeps thunderstorms on if you want them, and the weather setting can be changed while the game is running.\n\n### How It Works (for the user)\n- The rain never stops unless you change the config.\n- Thunder can stay on continuously if you set the config to “thunderstorm”.\n- You can edit the config file while the game is running; the changes take effect immediately.\n- No new items, blocks, mobs, or commands are added.\n\n### Features\n- Full‑time rain across the world.\n- Optional constant thunder when the config is set to thunderstorm.\n- Config file hot‑reloads without restarting the game.\n- Works on any Forge server that loads the mod.\n- No extra inventory or UI changes.\n\n### Why Use This Mod?\n- Keeps your builds wet without manually using commands.\n- Great for adventure maps or builds that need constant rain.\n- Easy to toggle thunderstorms on or off via a tiny text file.\n- Light‑weight and does not interfere with other mods.\n\n## What You'll Notice\n\n- Rain stays on all the time.\n- Thunder can stay on if the config is set to thunderstorm.",
+  "discord_url": "",
+  "downloads": 151,
+  "followers": 2,
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/nBrpBghv/images/508bf7852268127358c75f6e62f4074a0f6f0661_350.webp",
+      "title": "Thunder storm when i loaded into my world",
+      "description": null,
+      "featured": true
+    }
+  ],
+  "icon_url": "https://cdn.modrinth.com/data/nBrpBghv/c95e4ed7d32ca4ec72f6e127baa49f0888db2532_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "always-rain",
+  "modrinth_url": "https://modrinth.com/mod/always-rain",
+  "name": "Always Rain",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/always-rain",
+  "issues_url": "https://github.com/Sekai0NI0itamio/always-rain/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/always-rain/blob/main/docs/Home.md",
+  "summary": "Sometimes rain makes minecraft feel more sad but peaceful, this mod makes it always rain so you could always have this feeling.",
+  "updated": "2026-03-31T03:10:12.789129Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-03-31T03:10:12.789129Z",
+      "downloads": 151,
+      "files": [
+        {
+          "filename": "Always-Rain-1.0.0.jar",
+          "primary": true,
+          "size": 7707,
+          "url": "https://cdn.modrinth.com/data/nBrpBghv/versions/YF8Vk6YU/Always-Rain-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Always Rain 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Always Rain\nJar: Always-Rain-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

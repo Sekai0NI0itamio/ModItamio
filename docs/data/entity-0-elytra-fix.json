@@ -1,0 +1,54 @@
+{
+  "categories": [
+    "utility",
+    "game-mechanics",
+    "transportation"
+  ],
+  "color": "#f2e6f5",
+  "date_published": "2025-10-25T12:51:33.887748Z",
+  "description": "Fixes an issue where when your player id is 0, you can't boost your elytra with fireworks and the fireworks just fly up.",
+  "discord_url": "",
+  "downloads": 132,
+  "followers": 1,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/6b4oaIPP/512d13a4169d1d2ad55ed13deb96ccdd4a7f140b_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "entity-0-elytra-fix",
+  "modrinth_url": "https://modrinth.com/mod/entity-0-elytra-fix",
+  "name": "Entity 0 Elytra Fix",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "This fixes a 1.12.2 issue where when your player entity id is 0 you can't use fireworks to boost your elytra",
+  "updated": "2025-10-25T12:54:35.327092Z",
+  "client_side": "required",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2025-10-25T12:54:35.327092Z",
+      "downloads": 132,
+      "files": [
+        {
+          "filename": "elytrafix-1.0.jar",
+          "primary": true,
+          "size": 8712,
+          "url": "https://cdn.modrinth.com/data/6b4oaIPP/versions/pAnmc7UU/elytrafix-1.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "working version",
+      "version_number": "1.0",
+      "version_type": "release",
+      "changelog": "I had an elytra in my single player game, but i havent used it for 2 months, because the fireworks just never worked. I tried searching for a solution, nothing worked for me. Because of that, i created this mod, which FIXES THIS ST*PID ISSUE."
+    }
+  ]
+}

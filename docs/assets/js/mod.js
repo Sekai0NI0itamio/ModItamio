@@ -8,6 +8,10 @@ let vFilter = { loader: "", version: "" };
 let sbLoader = "";
 let sbGameVer = "";
 
+function loaderName(l) { return LOADER_NAMES[normLoader(l)] || l; }
+function loaderColor(l) { return LOADER_COLORS[normLoader(l)] || "var(--color-text-dim)"; }
+function loadersInclude(arr, l) { return (arr || []).some(x => normLoader(x) === normLoader(l)); }
+
 async function init() {
   const params = new URLSearchParams(location.search);
   const modId = params.get("id");
@@ -39,7 +43,7 @@ async function init() {
 }
 
 function pickDefaultLoader() {
-  const all = [...new Set(versions.flatMap(v => v.loaders || []))];
+  const all = [...new Set(versions.flatMap(v => v.loaders || []).map(normLoader))];
   if (all.length === 0) return "";
   const priority = ["forge", "neoforge", "fabric", "quilt"];
   for (const p of priority) {
@@ -50,14 +54,14 @@ function pickDefaultLoader() {
 
 function pickDefaultGameVer(loader) {
   let pool = versions;
-  if (loader) pool = pool.filter(v => (v.loaders || []).includes(loader));
+  if (loader) pool = pool.filter(v => loadersInclude(v.loaders, loader));
   const all = [...new Set(pool.flatMap(v => v.game_versions || []))].sort().reverse();
   return all[0] || "";
 }
 
 function getFilteredVersionsForSidebar() {
   let list = [...versions];
-  if (sbLoader) list = list.filter(v => (v.loaders || []).includes(sbLoader));
+  if (sbLoader) list = list.filter(v => loadersInclude(v.loaders, sbLoader));
   if (sbGameVer) list = list.filter(v => (v.game_versions || []).includes(sbGameVer));
   list.sort((a, b) => (b.date_published || "").localeCompare(a.date_published || ""));
   return list;
@@ -77,12 +81,12 @@ function getSelectedFile() {
 function getAvailableLoaders(gameVer) {
   let pool = versions;
   if (gameVer) pool = pool.filter(v => (v.game_versions || []).includes(gameVer));
-  return [...new Set(pool.flatMap(v => v.loaders || []))];
+  return [...new Set(pool.flatMap(v => v.loaders || []).map(normLoader))];
 }
 
 function getAvailableGameVers(loader) {
   let pool = versions;
-  if (loader) pool = pool.filter(v => (v.loaders || []).includes(loader));
+  if (loader) pool = pool.filter(v => loadersInclude(v.loaders, loader));
   return [...new Set(pool.flatMap(v => v.game_versions || []))].sort().reverse();
 }
 
@@ -117,7 +121,7 @@ function render() {
       '</div>' +
     '</div>' +
     '<div class="proj-header__actions">' +
-      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label" id="header-download-label">' + ((sbLoader || sbGameVer) ? "Download" + (sbLoader ? " for " + (LOADER_NAMES[sbLoader] || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "") : "Download") + '</span></a>' : "") +
+      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label" id="header-download-label">' + ((sbLoader || sbGameVer) ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "") : "Download") + '</span></a>' : "") +
       '<a class="btn btn--lg" href="' + ISSUES_NEW_URL + '?labels=mod:' + escapeHtml(currentMod.mod_id) + '&title=' + encodeURIComponent("[" + currentMod.name + "] ") + '" target="_blank" rel="noopener"><span class="btn__icon">' + ICONS.alert + '</span><span class="btn__label">Report issue</span></a>' +
     '</div>' +
   '</div>' +
@@ -205,7 +209,7 @@ function updateSidebarDownload() {
     const currentVal = loaderSel.value;
     const availLoaders = getAvailableLoaders(sbGameVer);
     loaderSel.innerHTML = '<option value="">Any loader</option>' + availLoaders.map(l =>
-      '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(LOADER_NAMES[l] || l) + '</option>'
+      '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(loaderName(l) || l) + '</option>'
     ).join("");
   }
   if (verSel) {
@@ -221,10 +225,10 @@ function updateSidebarDownload() {
     downloadBtn.style.display = "";
     const sizeStr = sel.file.size ? formatBytes(sel.file.size) : "";
     const verName = sel.version.name || sel.version.version_number;
-    const loaderList = (sel.version.loaders || []).map(l => LOADER_NAMES[l] || l).join(", ");
+    const loaderList = (sel.version.loaders || []).map(l => loaderName(l) || l).join(", ");
     const gameList = (sel.version.game_versions || []).join(", ");
     const btnLabel = (sbLoader || sbGameVer)
-      ? "Download" + (sbLoader ? " for " + (LOADER_NAMES[sbLoader] || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
+      ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
       : "Download latest";
     const labelEl = document.getElementById("sb-download-label");
     if (labelEl) labelEl.textContent = btnLabel;
@@ -250,7 +254,7 @@ function updateHeaderDownload() {
     const label = document.getElementById("header-download-label");
     if (label) {
       if (sbLoader || sbGameVer) {
-        label.textContent = "Download" + (sbLoader ? " for " + (LOADER_NAMES[sbLoader] || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "");
+        label.textContent = "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "");
       } else {
         label.textContent = "Download";
       }
@@ -269,7 +273,7 @@ function renderDescription() {
   const sel = getSelectedFile();
 
   const loaderOptions = '<option value="">Any loader</option>' + availLoaders.map(l =>
-    '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(LOADER_NAMES[l] || l) + '</option>'
+    '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(loaderName(l) || l) + '</option>'
   ).join("");
 
   const verOptions = '<option value="">Any version</option>' + availVers.map(v =>
@@ -280,10 +284,10 @@ function renderDescription() {
   if (sel) {
     const sizeStr = sel.file.size ? formatBytes(sel.file.size) : "";
     const verName = sel.version.name || sel.version.version_number;
-    const loaderList = (sel.version.loaders || []).map(l => LOADER_NAMES[l] || l).join(", ");
+    const loaderList = (sel.version.loaders || []).map(l => loaderName(l) || l).join(", ");
     const gameList = (sel.version.game_versions || []).join(", ");
     const btnLabel = (sbLoader || sbGameVer)
-      ? "Download" + (sbLoader ? " for " + (LOADER_NAMES[sbLoader] || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
+      ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
       : "Download latest";
     downloadSection =
       '<a class="btn btn--lg btn--primary btn--block" id="sb-download-btn" href="' + escapeHtml(sel.file.url) + '" download>' +
@@ -368,20 +372,20 @@ function getPrimaryFile() {
 
 function getFilteredVersions() {
   let list = [...versions];
-  if (vFilter.loader) list = list.filter(v => (v.loaders || []).includes(vFilter.loader));
+  if (vFilter.loader) list = list.filter(v => loadersInclude(v.loaders, vFilter.loader));
   if (vFilter.version) list = list.filter(v => (v.game_versions || []).includes(vFilter.version));
   list.sort((a, b) => (b.date_published || "").localeCompare(a.date_published || ""));
   return list;
 }
 
 function renderVersions() {
-  const allLoaders = [...new Set(versions.flatMap(v => v.loaders || []))];
+  const allLoaders = [...new Set(versions.flatMap(v => v.loaders || []).map(normLoader))];
   const allVersions = [...new Set(versions.flatMap(v => v.game_versions || []))].sort().reverse();
   const filtered = getFilteredVersions();
 
   return '<div class="version-filters">' +
     '<select class="form-select" onchange="vFilter.loader=this.value;renderTabContent()"><option value="">All loaders</option>' +
-      allLoaders.map(l => '<option value="' + l + '"' + (vFilter.loader === l ? " selected" : "") + '>' + escapeHtml(LOADER_NAMES[l] || l) + '</option>').join("") +
+      allLoaders.map(l => '<option value="' + l + '"' + (vFilter.loader === l ? " selected" : "") + '>' + escapeHtml(loaderName(l) || l) + '</option>').join("") +
     '</select>' +
     '<select class="form-select" onchange="vFilter.version=this.value;renderTabContent()"><option value="">All versions</option>' +
       allVersions.map(v => '<option value="' + escapeHtml(v) + '"' + (vFilter.version === v ? " selected" : "") + '>' + escapeHtml(v) + '</option>').join("") +

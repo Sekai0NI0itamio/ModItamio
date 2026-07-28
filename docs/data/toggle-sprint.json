@@ -1,0 +1,3860 @@
+{
+  "categories": [
+    "utility"
+  ],
+  "color": "#5b8c5a",
+  "date_published": "2025-09-18T01:41:24.849390Z",
+  "description": "Similarly to the \"Keep Sprint\" some pvp clients have, which allows you to keep sprinting when you toggle sprint, so when you walk onto a block it will still be sprinting afterwards.",
+  "discord_url": "",
+  "downloads": 35184,
+  "followers": 4,
+  "gallery": [],
+  "icon_url": null,
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "toggle-sprint",
+  "modrinth_url": "https://modrinth.com/mod/toggle-sprint",
+  "name": "Toggle Sprint",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Allows you to keep sprinting when sprint is toggled.",
+  "updated": "2026-04-19T13:31:13.216179Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-04-19T13:31:13.216179Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4239,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/gu9VkxJ8/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.9) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:31:10.366458Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Bf4EJgHn/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.8) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:31:09.062820Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/xakQavhr/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.7) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:31:07.223526Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/nYHGBwBR/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.6) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:31:04.673704Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ieQnsP0k/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:30:45.810051Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/n2ljdssc/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:30:24.330554Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/dzLZhfTM/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:30:00.606446Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4351,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/g4dX8Azu/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.2) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:59.111730Z",
+      "downloads": 117,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4237,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/kD7LoTn9/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.11) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:36.274367Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4238,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/UbLk9GBX/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.10) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:24.030250Z",
+      "downloads": 507,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4350,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/zzjCftJK/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:20.107721Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/vOJxhFhT/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (neoforge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:12.402233Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/W3pKH6H0/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.20.6) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:10.117874Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/I7eF2Dor/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.20.5) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:07.878015Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4434,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/VbLR3MRo/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.20.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:03.724693Z",
+      "downloads": 3357,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 2607,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/iKtSn3my/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.8.9) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:29:00.448398Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/mDj6yi1C/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:58.195701Z",
+      "downloads": 41,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/5c9uF4I2/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:53.032833Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4370,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/F1yuoaAF/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:51.335627Z",
+      "downloads": 72,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/YTw3BUUG/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:48.671120Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/xy6PZajT/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:46.637790Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/FQMmyIzo/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:40.759787Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/h74FuPP6/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:39.030833Z",
+      "downloads": 96,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/j30EvOzF/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:35.186736Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/XJBKkpnP/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:32.158086Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4694,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/zCdeyB0d/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.4 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "1.0.4",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.4\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:30.196313Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4679,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/HsCv6WAd/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.18.2) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:24.029297Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4679,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/BU3ildCx/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:17.861785Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4677,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/O2xF0GLL/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:16.073730Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4609,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/8FA0E3UA/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.17.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:28:14.326290Z",
+      "downloads": 258,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4623,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/mPrCJc7X/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.16.5) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:23.368179Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4239,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Peif7PSg/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:22.355832Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/RtxO47Bp/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.8) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:21.399470Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/crH0d09n/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.7) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:18.954338Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/RE6vMo90/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.6) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:09.501810Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/9TI8iP9u/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:17:02.069853Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/hrQxKxst/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:54.364018Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/qLDzsGpA/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:53.345738Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4351,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/YPN26ped/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.2) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:51.344872Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4237,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/weylNPKT/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:48.838405Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4238,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/PmVA2JFg/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:47.684182Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4350,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ho6A5xfg/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:45.857198Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/e2g1ntMB/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (neoforge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:44.222183Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4434,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/50Gdd1oz/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.20.4) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:42.796458Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 2607,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/YCtd6Wn6/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.8.9) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:41.849639Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/XLbWYjRY/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:40.793287Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/6LJZVzxi/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:39.341471Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4370,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/HcFnudRc/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:36.977994Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/YQRe2Zja/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:36.067519Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/hXBLxeXq/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:35.064867Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ajidbK93/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:32.934506Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ZPWuFXtk/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:30.758975Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/fh7sggSv/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:29.553517Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/wVDopvLh/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:28.453147Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4695,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Pum67DOS/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.3 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "1.0.3",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.3\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:26.041574Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4679,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/hFi5KVoX/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.18.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:23.765006Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4678,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Lwfs5d6E/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:22.421449Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4678,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/e1MbOYDs/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:21.544055Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4609,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/U6bUKJnR/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.17.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:16:20.522812Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4623,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/NHWEyeSa/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.16.5) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:46.728337Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/pirpd9Ji/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.8) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:43.679712Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/rxJ2cfoW/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.7) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:39.606370Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/TvB51lHt/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.6) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:37.048310Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/dyU80yFL/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:26.481206Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/IXEC7vXl/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:25.107211Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/gQR7L7T6/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:23.341337Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4351,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/b9XBPlFW/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:21.137746Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4350,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LvAgI3YQ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:18.461794Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/UHUbJZk9/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (neoforge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:17.188840Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/WeyZEkIW/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.20.6) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:13.897377Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/vjbYuHQn/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.20.5) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:09.255470Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 2607,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/OeM35bb6/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.8.9) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:06.107959Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Y3QUfsrQ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:04.416692Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/pIHKRNcZ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:04:02.227672Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4370,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/JMXlLPum/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:59.294346Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/q52hxI4a/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:58.298843Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/5Sy1RGbD/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:57.527584Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/SpGR60Fi/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:50.568650Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/I7ctxd8l/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:49.244837Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ZtfSu47i/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:47.869109Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ZcQqURQI/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:43.458079Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4694,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/nhAIlmSk/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.2 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "1.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.2\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:37.367199Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4679,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/y61sMu4m/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.18.2) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:35.706427Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4678,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/2g4RbBrO/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:30.528388Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4677,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Ijp2LLq0/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:21.226085Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4609,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/9fZw4Qnd/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.17.1) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:19.842874Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4623,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/c9BtjLxw/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.16.5) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:18.705174Z",
+      "downloads": 66,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6852,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/cazUA7xp/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T13:03:17.898524Z",
+      "downloads": 392,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6851,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/O98xeiZt/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:47.196187Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/8XHBq9mP/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:46.225751Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LwdoL6fr/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.7) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:44.184332Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/SZpPMwkA/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.6) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:43.175721Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/5vUU0fwM/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:42.354357Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/apjcXa4O/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:41.623965Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/MxtDYTCf/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:40.519154Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4351,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LhlCZNCX/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.2) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:39.657655Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4350,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/T5P8rXKm/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:38.573102Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/zw7swVKI/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (neoforge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:37.636459Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4434,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LRjKBERV/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:36.959112Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 2607,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/jnYH8SmE/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.8.9) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:36.156274Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Zbfk0JZF/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:35.148258Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ztYIkZwi/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:34.157361Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4370,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/CwKFluaH/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:33.349243Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/yrwlnfoW/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:32.369729Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/qQQAu2GI/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:31.574585Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/1yHtDLUD/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:30.320774Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4695,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/g8RWz7oG/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:29.388850Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/cUex3Xmf/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:28.593998Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/fN0CY0rx/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:27.712614Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4694,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/nEHr9nx4/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.1 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "1.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.1\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:26.384136Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4679,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/tUfjm5XR/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:25.818368Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4677,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/PoYjG7O3/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:24.929947Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4676,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/tMeMGMfI/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:24.308734Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4609,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/OYTB2fSz/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:23.566216Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4622,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/EBgb2d8M/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:22.839619Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6855,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/9f1HCVin/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:22.184400Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6856,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/zK55yGEl/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:21.368615Z",
+      "downloads": 54,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6855,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/phlR5s99/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:20.658061Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6854,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/UgsmnCqZ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:19.868001Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6852,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/i1b8VK0Q/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:19.159871Z",
+      "downloads": 47,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6854,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/xQ32MuGk/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:18.466711Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6855,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/nH7nEVi7/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:51:17.759038Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 6852,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/z4q0ZaVL/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:57.334885Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/dV7o5YGz/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:53.947433Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4353,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/pB3ho6Bv/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:49.796848Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/l110J7DC/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:43.428045Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/KNE41A4e/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:32.231800Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/6j6If0yG/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:21.524623Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4351,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/jSvDnRA5/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:18.987328Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4350,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ZdVKF2E2/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:16.156552Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4352,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/hntdHDoM/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:12.774155Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/CiAZIbzM/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:10.457882Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4334,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/mKd5Nl31/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:08.090474Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 2607,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/RpRgUrOJ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:06.118432Z",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/lKArVGjO/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:03.198882Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4371,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/fcWitnpJ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:30:01.082214Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4370,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/lgWLGABT/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:58.131239Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/SsHB0P3F/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:54.733608Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4369,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/pNLBKdz2/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:52.574012Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4697,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/mdiskEcy/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:50.253331Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/e970rgLj/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:48.456259Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4695,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/dDhq98Xz/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:46.151335Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/yaQrNBeu/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T12:29:42.252568Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4693,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/hXjDCozC/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:55.221253Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4188,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/yDJpF714/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:54.489700Z",
+      "downloads": 52,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4186,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/pE4mgHfm/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:53.731475Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4186,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/TIIojaoM/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:52.707746Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4184,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Rdi8pU32/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:51.919993Z",
+      "downloads": 398,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4186,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/qvJ91wy8/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:50.940125Z",
+      "downloads": 59,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4187,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/plC9HOKN/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:50.255060Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4638,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/FmSggICl/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:49.599973Z",
+      "downloads": 37,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4652,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/GEjHZ8hA/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:48.787371Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4653,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/vidES16T/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:47.815277Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4653,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/yycaLj1o/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:47.054598Z",
+      "downloads": 1039,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 4652,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ybgotRr3/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Toggle Sprint 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:46.298211Z",
+      "downloads": 32,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/rgHbv0eO/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:45.477159Z",
+      "downloads": 179,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/gYICWzzs/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:44.759306Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/QbVeX75L/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:43.997591Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/h89NgO6J/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:43.206968Z",
+      "downloads": 62,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/VEnKhe7j/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:42.522625Z",
+      "downloads": 494,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ywyWTYBi/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:41.580138Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7015,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LMKFVyjZ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:40.671888Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7014,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/Nftf3JhS/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:39.973479Z",
+      "downloads": 3154,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7012,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/ouaMvzDW/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:39.273925Z",
+      "downloads": 193,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7012,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/lK8wjaxx/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:38.538780Z",
+      "downloads": 233,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7011,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/4LjD3cpr/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:37.742589Z",
+      "downloads": 161,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7010,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/kszTqZHJ/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:36.549701Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7008,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/LbAO47Db/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:35.808239Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7010,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/TEsGKaxi/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:34:35.030271Z",
+      "downloads": 44,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7010,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/c0xWDLhf/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Toggle Sprint\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: togglesprint-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T09:10:32.758704Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7009,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/4F8sxXgs/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    },
+    {
+      "date_published": "2026-03-08T09:10:19.933659Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7008,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/DCeFNj2V/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    },
+    {
+      "date_published": "2026-03-08T09:10:03.960903Z",
+      "downloads": 453,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.0.jar",
+          "primary": true,
+          "size": 7008,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/CLGUgWZ6/togglesprint-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Toggle Sprint 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    },
+    {
+      "date_published": "2025-09-18T01:42:27.977846Z",
+      "downloads": 22564,
+      "files": [
+        {
+          "filename": "togglesprint-1.0.jar",
+          "primary": true,
+          "size": 3258,
+          "url": "https://cdn.modrinth.com/data/gQ6IIk5e/versions/juiaO0w4/togglesprint-1.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Sprint",
+      "version_number": "1.0",
+      "version_type": "release",
+      "changelog": "press control(the default sprint key) to toggle sprint"
+    }
+  ]
+}

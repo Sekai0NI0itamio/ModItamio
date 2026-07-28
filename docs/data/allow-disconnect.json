@@ -1,0 +1,1006 @@
+{
+  "categories": [
+    "utility"
+  ],
+  "color": "#090909",
+  "date_published": "2025-07-15T05:52:24.349061Z",
+  "description": "![Banner](https://cdn.modrinth.com/data/cached_images/6231055c2e8036a16adcd8baffa2750087e90c72_0.webp)\n\nStuck in a loading terrain screen again? Fear no more, allow disconnect will allow you to exit that screen!\n\n### Features:\n - Adds a button called disconnect to every server pause screen (like downloading terrain)\n- Allows you to disconnect from server while downloading terrain or getting stuck on one of those pause pages.\n\n### Image:\n![Gallyer](https://cdn.modrinth.com/data/cached_images/56071a958314f801bd2337dc32079bf65da7f8f5.png)\n\n![Modernpic1](https://cdn.modrinth.com/data/cached_images/ad43a857cf7cf960889c3c9d0e90bef7ad187d88_0.webp)\n\n![pic2modern](https://cdn.modrinth.com/data/cached_images/03239e884bba49c203b937345bbdf7672aec5f82_0.webp)",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "downloads": 4603,
+  "followers": 7,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/Sy20SHoj/6d6207170d59e06880383dfbab6b4a5fc86b2a33_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "fabric",
+    "forge"
+  ],
+  "mod_id": "allow-disconnect",
+  "modrinth_url": "https://modrinth.com/mod/allow-disconnect",
+  "name": "Allow Disconnect",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Adds a disconnect button to server loading screens so when u r stuck on a loading screen you can use the button to disconnect from the server",
+  "updated": "2026-03-08T11:35:32.426417Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-03-08T11:35:32.426417Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4710,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/kNx42cSP/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:35:27.747118Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4710,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/f7IyApAX/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:35:26.762667Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4709,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/IK75Y3uT/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:46.167507Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5231,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/JqzqrCmN/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:44.815554Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5230,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/JXN3pRfg/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:42.470551Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5230,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/8qnCEWPy/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:39.823115Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5229,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/J6WYDsEG/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:22.470437Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5229,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/XmQIs57t/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:17:19.340652Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 5230,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/WlnjYsCf/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:16:38.698077Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4800,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/nB3aGlXD/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:16:16.876192Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4696,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/7qOfCnOp/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:15:46.960854Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4695,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/ocOZarj8/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:15:17.888423Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "modid-1.0.0.jar",
+          "primary": true,
+          "size": 5436,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/LppmHkPY/modid-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: modid-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:15:08.230316Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6720,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/UB42TtCA/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:14:32.063376Z",
+      "downloads": 288,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6717,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/QS5U38Qb/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:14:21.333896Z",
+      "downloads": 2110,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6717,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/Pmn0iO4F/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:14:19.971765Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6332,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/tz5Oo0NQ/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:14:04.495472Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6331,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/Gh6yXFAM/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T11:13:55.870560Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6329,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/1Hjye8oJ/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:23.777104Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4468,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/KHBYr9UO/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:23.014700Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4481,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/zcsdK2vz/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:22.088468Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4481,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/THE64I0w/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:21.516359Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4481,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/psBLAqVJ/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:20.946986Z",
+      "downloads": 39,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4481,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/5HlLLlmX/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:20.307785Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4799,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/BsXXlECs/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:19.660146Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4695,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/HEs7RqYj/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:18.699405Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 4721,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/SteMoZ9i/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:17.089997Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 3555,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/6c3ZsNOr/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Disconnect 1.0.0 (forge 1.12.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:14.102926Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6449,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/ww2Ls4R2/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:12.919998Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6450,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/c61jT1Tg/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:11.474389Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6453,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/qrwA8hyq/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:48:01.615290Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6456,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/Rrr5nI7X/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:48.924054Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6455,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/p2RTKX2I/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:40.599654Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6456,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/1iDPYc46/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:26.587975Z",
+      "downloads": 74,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6455,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/czQqzvLm/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:22.065919Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6413,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/2NVowt5r/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:15.462351Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6415,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/WaBq6oix/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:13.602899Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6320,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/hSvx2ToM/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:47:03.756773Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6321,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/DYIkLoy8/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:46:49.023152Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6319,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/a9W3XNII/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:46:26.938253Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6321,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/xMHBuglS/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-08T10:46:09.372250Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 6320,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/AvpYV3KG/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Disconnect\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: allowdisconnect-1.0.0.jar"
+    },
+    {
+      "date_published": "2025-07-22T08:48:41.322393Z",
+      "downloads": 1379,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 12171,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/aEnDgG3L/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Disconnect 1.0.0 - updated to modern versions",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "added disconnect button to loading terrain"
+    },
+    {
+      "date_published": "2025-07-15T05:53:48.231790Z",
+      "downloads": 317,
+      "files": [
+        {
+          "filename": "allowdisconnect-1.0.0.jar",
+          "primary": true,
+          "size": 11750,
+          "url": "https://cdn.modrinth.com/data/Sy20SHoj/versions/Dswc67g6/allowdisconnect-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "First working version",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "adds a disconnect button to loading terrain, downloading terrain. (since those screens dont have a built in cancel button)"
+    }
+  ]
+}

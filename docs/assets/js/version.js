@@ -9,7 +9,7 @@ async function init() {
   const params = new URLSearchParams(location.search);
   const modId = params.get("id");
   vNumber = params.get("v") || "";
-  vLoader = params.get("l") || "";
+  vLoader = normLoader(params.get("l") || "");
 
   renderNavbar("mods");
   const root = document.getElementById("app");

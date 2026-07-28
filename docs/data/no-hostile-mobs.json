@@ -1,0 +1,1531 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#242527",
+  "date_published": "2026-04-03T05:19:33.330574Z",
+  "description": "# No Hostile Mobs\n\n![No Hostile Mobs cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/no-hostile-mobs/main/.modcompiler-art/description-image.webp)\n\n## Description\n\nThis mod stops hostile mobs from appearing in your world, no matter the difficulty setting. You can also edit a simple config file to choose exactly which mobs are blocked, and the game will pick up any changes without needing a restart.\n\n### What It Does (for the user)\n\n- Hostile mobs such as zombies, skeletons, creepers, spiders, and many others simply do not spawn.\n- You can open the config file and add or remove mob IDs to change which creatures are blocked.\n- The game checks the config file every few seconds and reloads it automatically when you save changes.\n- No commands or special items are needed – the effect is always active.\n\n### Features\n\n- Blocks a built‑in list of hostile mobs that can be customized.\n- Real‑time reload of the config file when it is edited.\n- No extra items, blocks, or crafting required.\n\n## What You'll Notice\n\n- Allows editing the config file to add or remove mob IDs from the blocked list.\n- Reloads the config automatically when the file is changed.",
+  "discord_url": "",
+  "downloads": 3008,
+  "followers": 3,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/jp6thYOc/46c51b9671cc0b74ab5516aaa2f3b47095d355ae_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "no-hostile-mobs",
+  "modrinth_url": "https://modrinth.com/mod/no-hostile-mobs",
+  "name": "No Hostile Mobs",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/no-hostile-mobs",
+  "issues_url": "https://github.com/Sekai0NI0itamio/no-hostile-mobs/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/no-hostile-mobs/blob/main/docs/Home.md",
+  "summary": "Want no hostile mobs but hate peaceful mode? This mod makes it so that no hostile mobs can spawn no matter the difficulty, meaning you could have difficulty set to hard while no hostile mobs spawn.",
+  "updated": "2026-05-04T11:07:37.867462Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-05-04T11:07:37.867462Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2107,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/6Lcdiqa2/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:37.366100Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2088,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/v9oTMPlh/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:36.864967Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2097,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/8sucphnb/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:36.295655Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2096,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/L7oiiFxO/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:35.619895Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2270,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/3D8cRL5d/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:35.060990Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2388,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/DOzXwHGZ/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:34.237630Z",
+      "downloads": 62,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2387,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/FVnhav84/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:33.707780Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2387,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/vreNE3xx/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:33.196853Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2385,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/o8KqXwiO/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:32.693042Z",
+      "downloads": 306,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6160,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/UphLW4lP/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:32.125904Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6158,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/Fxi9HZfU/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:31.514904Z",
+      "downloads": 38,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6155,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/ZYgs62yy/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:30.977026Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6237,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/DBLELto2/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:30.447013Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6237,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/bZG7SPwd/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T11:07:29.921113Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6403,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/JtTqwJOG/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:16.817649Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2127,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/khFXiozE/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:16.292869Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2126,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/CMU55Bis/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:15.654118Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2127,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/CQIre5dS/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:15.195053Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2150,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/gspgaYG1/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:14.572638Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2121,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/hd6OsGV5/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:14.067608Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2121,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/Sk2SV8PR/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:13.541953Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2120,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/NcAtrLa8/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:13.032087Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2120,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/ZunQjYoE/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:12.451551Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2120,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/FSqbnE0Q/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:11.901842Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2119,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/bUTplCs6/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:11.344207Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2148,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/9mgZHmSR/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:10.846111Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2149,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/iIUzMQc0/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:10.319105Z",
+      "downloads": 484,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2118,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/g2BeqDkv/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:09.782944Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2119,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/9K5j3CcW/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:09.270730Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2103,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/tfHJERWC/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:08.779775Z",
+      "downloads": 45,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2327,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/tkwfW2bW/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:08.166427Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/z9PJvNv0/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:07.665600Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/88i29i78/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:07.117509Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/ehjeUp30/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:06.620615Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/gQSGc1m0/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:06.143374Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2115,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/AUB2Hx5V/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:05.631594Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2114,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/SFqeIYlB/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:05.042017Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2114,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/jWSjF0vy/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:04.522739Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/BDXgiLKY/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:04.025540Z",
+      "downloads": 53,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2346,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/S0HdrSWx/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:03.519989Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2113,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/DoFipZPd/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:02.985057Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2112,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/8DOglkEk/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:02.308518Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2172,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/MOlruPcL/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:01.262509Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2183,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/jPeOXwAk/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:00.685554Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2182,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/XVsZa4XG/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:26:00.191708Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2182,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/LYwyiWG4/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:59.577563Z",
+      "downloads": 1021,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2182,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/IuxsvulF/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:59.054852Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2445,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/PMueev8n/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:58.552033Z",
+      "downloads": 52,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2394,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/M6MWc7uL/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:58.054859Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2392,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/PEtgA5YG/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:57.506638Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2391,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/Hsyrf1Pi/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:56.984454Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2314,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/4CtIK26O/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:56.493288Z",
+      "downloads": 27,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 2367,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/YFEUtr7V/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:56.012714Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6229,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/JMQouYTc/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:55.499148Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6612,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/fUk0XqiX/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:54.968667Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6613,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/FSteJBkk/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:54.489777Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6615,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/LdQ2aEjy/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:53.901168Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6614,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/uuPwMCmv/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:53.398722Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6613,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/KGXg0RYV/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:52.907823Z",
+      "downloads": 282,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6614,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/yL0Tj6H1/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:52.358593Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6403,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/o3VqZTsc/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:51.870432Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6404,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/VslYPgsi/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:51.279867Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6403,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/LZ3HVkQ8/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:50.729024Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6402,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/UuUTjgVm/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:50.038102Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6400,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/X3et6DKZ/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:49.529766Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6400,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/fierO9d2/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-04T10:25:48.702654Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "nohostilemobs-1.0.0.jar",
+          "primary": true,
+          "size": 6400,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/Df5wdAQW/nohostilemobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "No Hostile Mobs 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: No Hostile Mobs\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: nohostilemobs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-03T05:44:15.758910Z",
+      "downloads": 81,
+      "files": [
+        {
+          "filename": "No-Hostile-Mobs-1.0.0.jar",
+          "primary": true,
+          "size": 6589,
+          "url": "https://cdn.modrinth.com/data/jp6thYOc/versions/QdtpzRry/No-Hostile-Mobs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12",
+        "1.12.1",
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "No Hostile Mobs 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    }
+  ]
+}

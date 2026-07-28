@@ -1,0 +1,54 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility",
+    "food"
+  ],
+  "color": "#252628",
+  "date_published": "2026-04-03T07:38:51.147033Z",
+  "description": "# World Auto Replant\n\nThis mod automatically replants certain crops and trees when you break them, using a seed or sapling from your inventory. No extra steps or items are required.\n\n![crop broken and replaced](https://cdn.modrinth.com/data/cached_images/c6c6f82de8049bc2aafdc1486b123832e047b9e1_0.webp)\n\n## How It Works (for the user)\n- Breaking a fully grown wheat, carrot, potato, or beetroot block can cause the same crop to appear again after a short delay, using one seed from your inventory.\n- Breaking a fully grown cocoa bean block (age 2 or more) can plant a new cocoa bean in the same spot.\n- Breaking a log or log2 (tree trunk) can trigger a replant, though the exact behavior is limited.\n- The replanting only happens on the server side and only if the block space is empty when the delay finishes.\n- A tiny delay (about one tick, ~50 ms) is used before the new block is placed.\n\n### Features\n- Auto‑replants wheat, carrots, potatoes, beetroot, and cocoa beans.\n- Handles cocoa beans and logs (trees) as well.\n- Consumes the needed seed or sapling automatically; no manual planting required.\n- Works on the server, so it affects all players on that server.\n- No configuration or extra items needed.\n\n### Why Use This Mod?\n- Saves time by automatically replanting crops after you harvest them.\n- Keeps your farm running without extra effort.\n- Works with the same seeds you would normally use, so no extra items.\n- Simple and straightforward—just break the block and let the mod do the rest.\n\n## What You'll Notice\n\n- Breaking a fully grown wheat, carrot, potato, or beetroot block can cause the mod to place the same crop block back after a short delay, using one seed from the player's inventory.\n- Breaking a fully grown cocoa bean block can cause the mod to plant a new cocoa bean block in the same spot.",
+  "discord_url": "",
+  "downloads": 68,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/F2e6yChD/b098591881afa47ee43e9a968510263fdb33b45a_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "world-auto-replant",
+  "modrinth_url": "https://modrinth.com/mod/world-auto-replant",
+  "name": "World Auto Replant",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-replant",
+  "issues_url": "https://github.com/Sekai0NI0itamio/auto-replant/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-replant/blob/main/docs/Home.md",
+  "summary": "Hate manually replanting crops after you harvest them? This mod does it for you automatically.",
+  "updated": "2026-04-03T07:38:51.812322Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-03T07:38:51.812322Z",
+      "downloads": 68,
+      "files": [
+        {
+          "filename": "Auto-Replant-1.0.0.jar",
+          "primary": true,
+          "size": 8026,
+          "url": "https://cdn.modrinth.com/data/F2e6yChD/versions/arHZqGZ6/Auto-Replant-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Auto Replant 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Replant\nJar: Auto-Replant-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

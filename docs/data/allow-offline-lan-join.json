@@ -1,0 +1,1838 @@
+{
+  "categories": [
+    "social",
+    "utility",
+    "game-mechanics"
+  ],
+  "color": "#eaeaea",
+  "date_published": "2025-10-24T09:25:31.064237Z",
+  "description": "**This mod needs to be installed on both you and your friend**\n\nThis mod allows offline players to connect to a lan world hosted on the same network WITHOUT mojang login verification errors or any weird disconnection reasons.\n\nTo use this mod, just give it to the person who is hosting the world, and then tell them to install this mod, and your set!",
+  "discord_url": "",
+  "downloads": 19404,
+  "followers": 9,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/tNe7M4Fa/3c13d2ca2d55697e5230275049020cdfe7e46e0b_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "allow-offline-lan-join",
+  "modrinth_url": "https://modrinth.com/mod/allow-offline-lan-join",
+  "name": "Allow Offline Lan Join",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Fixes a bug where offline players are not able to join someone's lan world in same network",
+  "updated": "2026-05-03T09:07:05.519519Z",
+  "client_side": "required",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-05-03T09:07:05.519519Z",
+      "downloads": 310,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7181,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/EHAqxOUs/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:05.001736Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7180,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/fL3Gv53y/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:04.403712Z",
+      "downloads": 45,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7181,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/THPdfeIB/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:03.804763Z",
+      "downloads": 471,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7154,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Tcxs5pRc/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:03.163139Z",
+      "downloads": 1018,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10417,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/hLUQNu6H/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:02.600201Z",
+      "downloads": 47,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10415,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/T14ZArOo/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T09:07:02.005225Z",
+      "downloads": 139,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10413,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/tgdbn1fS/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:18.844805Z",
+      "downloads": 24,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7201,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/lfRuphyN/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:17.544235Z",
+      "downloads": 49,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7202,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/zubgQknb/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:16.532163Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7202,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/5bHFv05g/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:15.211453Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7202,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/naTKWvpC/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:13.995425Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7202,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/gv7uSdlS/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:12.959001Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7201,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/ciSKeK8q/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:11.817178Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7201,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/UMxj7PBO/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:10.692285Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7199,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/GQl7Z7Ry/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:09.501235Z",
+      "downloads": 294,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7200,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/s0OhqeTi/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:08.362383Z",
+      "downloads": 59,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7201,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/NUIkfmL4/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:07.103784Z",
+      "downloads": 2773,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7200,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/CbaUUqoN/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:05.959988Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7201,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/IizMRlC5/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:04.839207Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7183,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/arAdAW7W/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:03.490440Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7183,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/77opamCQ/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:02.366729Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7189,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/UyKu4ioB/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:01.160154Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7188,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/AL3RwtFA/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:49:00.002873Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7636,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/FzbVJLAT/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:58.779660Z",
+      "downloads": 89,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7636,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/3abI5Cq4/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:57.442042Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7636,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Jgn8eetD/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:56.201783Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7636,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/vpnyOivT/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:55.061007Z",
+      "downloads": 1152,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7635,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/ILQWCLim/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:53.683040Z",
+      "downloads": 91,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7635,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/rFc9nzdl/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:52.361709Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7241,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/vITwUZ33/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:51.239468Z",
+      "downloads": 242,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7315,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/tbYNtoWG/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:48:50.229250Z",
+      "downloads": 146,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10457,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/YmTOfrLp/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:10.898631Z",
+      "downloads": 187,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7054,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/FwcOzUpk/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:09.792835Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7183,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Ve1OGWh7/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:08.291567Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7183,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/w8PmOiEh/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:06.942402Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7182,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/HbbXq0i2/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:05.754889Z",
+      "downloads": 74,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7181,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/ZvYYWL87/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:04.648393Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7180,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/8Ppg57Fb/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:03.103576Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7248,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/uNqG2G9s/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:02.081401Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7260,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/84HdYDin/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:05:00.417249Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7260,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/huaq2bbG/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:59.118632Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7259,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/AQQKHWKq/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:57.992215Z",
+      "downloads": 6880,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7260,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Ne29gBoe/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:56.680563Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7539,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/RB55M9gZ/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:55.654154Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7539,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/TsgkVZP7/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:54.570530Z",
+      "downloads": 401,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7538,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/X9CxX2L0/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:53.217958Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7539,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/yaLFTVPj/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:51.873230Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7536,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/cpaSmlK6/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:50.705367Z",
+      "downloads": 152,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7526,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/8KNQzsh0/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:49.623714Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7525,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/hk5tc05i/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:48.528864Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7524,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/XNTrlOd6/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:47.223235Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7331,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/GSSYS6lD/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.12.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:46.012855Z",
+      "downloads": 24,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 7328,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/tAzQzrF1/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:44.979769Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/G5H3LGbe/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:43.776585Z",
+      "downloads": 85,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/TYJqoPF5/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:42.555220Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/9y6BFLbw/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:41.454655Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10306,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/HG1dxCpg/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:40.336467Z",
+      "downloads": 50,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/LiYc0Ig1/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:39.153934Z",
+      "downloads": 72,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/80sOzseS/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:38.024767Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10305,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/vxn1drLR/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:36.664075Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10304,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/jhNqrzW0/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:35.524833Z",
+      "downloads": 1557,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10304,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Te0qlG22/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:34.419718Z",
+      "downloads": 120,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10304,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/vzUIZSWA/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:33.067784Z",
+      "downloads": 414,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10303,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Jwo0Js1e/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:31.821573Z",
+      "downloads": 60,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10300,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/Gnt6JuJP/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:30.542116Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10302,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/KA3B4PUh/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:29.473278Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10302,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/tT36mI2W/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:28.394793Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10300,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/8ajb5jNO/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:27.140840Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10299,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/8MN2vCR7/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:25.941855Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10299,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/AYDsTeoY/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:24.865819Z",
+      "downloads": 487,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10299,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/GgI9sgJ5/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:23.407455Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10418,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/3JPMgSyZ/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:22.041385Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10420,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/1f6UZvHS/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:20.667429Z",
+      "downloads": 27,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10418,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/BO64PtB7/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:19.663909Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10417,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/wHxPwteh/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:18.507704Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10416,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/aVEOG6fS/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:17.506852Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10417,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/UsLQomeu/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:16.311340Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10417,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/O2C2A0uG/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:15.237928Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10416,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/9d55lpTQ/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:13.994769Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10418,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/hTkizhLK/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-12T11:04:12.628934Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 10416,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/4mUvfT5o/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Allow Offline Players (LAN) 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Allow Offline Players (LAN)\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: allowofflinetojoinlan-1.0.0.jar"
+    },
+    {
+      "date_published": "2025-10-24T09:27:35.798718Z",
+      "downloads": 1016,
+      "files": [
+        {
+          "filename": "allowofflinetojoinlan-1.0.0.jar",
+          "primary": true,
+          "size": 4972,
+          "url": "https://cdn.modrinth.com/data/tNe7M4Fa/versions/1CPyjs7j/allowofflinetojoinlan-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Working Version",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "- Tested on mutiplayer between me and my friend on the same network, we are both using unofficial mc launchers, we dont have official minecraft account, but we were able to join each others world through lan successfully."
+    }
+  ]
+}

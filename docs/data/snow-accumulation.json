@@ -1,0 +1,1197 @@
+{
+  "categories": [
+    "decoration",
+    "worldgen",
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#56585a",
+  "date_published": "2025-06-15T03:32:15.857611Z",
+  "description": "![Banner](https://cdn.modrinth.com/data/cached_images/f84918bc2c49eec42d0cf35af86659e2e46c2fa7.png)\n\nMakes snowing in 1.12.2 more enjoyable, let snow accumulate, and cover the past.\n##\n\n![Snowy Winter](https://cdn.modrinth.com/data/cached_images/7092e41f13e2d6a7e2d247713ec600933bb8c262.png)\n\n## Features\n- **Snow** accumulates on existing **snow layers** during **snow/rain weather** in **cold biomes**\n- Configurable **maximum snow height** (default: **16 layers**)\n- Adjustable **chunk radius** around **players** (default: **8 chunks**)\n- Customizable **accumulation speed** (default: **20 ticks**, ~**1 second**)\n- Configurable **blocks per chunk** and **chunks per tick** for **performance tuning**\n- **Real-time configuration reloading** (no **client/server restart** required, update the **file**, in **game** the **settings** also update)\n- Natural **snow block integration** (follows **Minecraft's snow mechanics**)\n- Accurate **height limit enforcement** with proper **layer counting**\n\n## Configuration\nLocated at `config/snowaccumulation/config.txt`:\n- **maxSnowHeight**: Maximum snow layers (1-256, default: 16)\n- **chunkRadius**: Chunks around players to check (1-32, default: 8)\n- **accumulationSpeed**: Ticks between checks (1-1200, lower is faster, default: 20)\n- **blocksPerChunk**: Number of blocks to process per chunk (1-256, default: 1)\n- **chunksPerTick**: Number of chunks to process per tick (1-16, default: 1)\n\n## Requirements\n- Minecraft 1.12.2\n- Forge (e.g., 14.23.5.2859)\n\n## Installation\n1. Install Forge 1.12.2.\n2. Place the .jar file in the `mods` folder.\n3. Launch Minecraft with the Forge profile.",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "downloads": 2427,
+  "followers": 11,
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/ntdDfWqY/images/0bd6bc5cdf896bec66a13dc29af1fbdeb0671044_350.webp",
+      "title": "Fire place",
+      "description": "The world is getting colder, warmth is important...",
+      "featured": false
+    },
+    {
+      "url": "https://cdn.modrinth.com/data/ntdDfWqY/images/8b425d88780ee46f2b0dadb33c37d70dd5282fee_350.webp",
+      "title": "Lonely Tree",
+      "description": "Time can heal everything, snow will cover it for you...",
+      "featured": false
+    },
+    {
+      "url": "https://cdn.modrinth.com/data/ntdDfWqY/images/ec06a913469c9f9317fc6f218833f19c366bb0a4_350.webp",
+      "title": "Natural Spawning Snow Golems?",
+      "description": "Not really...",
+      "featured": false
+    }
+  ],
+  "icon_url": "https://cdn.modrinth.com/data/ntdDfWqY/90091e886ba5b334b4e39970659f47d5d2272cac_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "fabric",
+    "forge"
+  ],
+  "mod_id": "snow-accumulation",
+  "modrinth_url": "https://modrinth.com/mod/snow-accumulation",
+  "name": "Snow Accumulation",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Tired of only 1 layer of snow? This mod fixes that, allowing snow to accumulate to world height (configurable)",
+  "updated": "2026-03-10T00:57:55.060999Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-03-10T00:57:55.060999Z",
+      "downloads": 34,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10752,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/SBj74tdf/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.9)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-10T00:57:54.364966Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10826,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/AX6HcOL6/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.8)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-10T00:57:53.616718Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10826,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/hEUZHxZM/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.7)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-10T00:57:52.701641Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10826,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/EYmKEHx8/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.6)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-10T00:57:51.996080Z",
+      "downloads": 61,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10751,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/vMgno7eg/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.11)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-10T00:57:51.294763Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10751,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/nQExmaW0/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.10)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:13.202795Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10990,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/mNR5pUEH/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.5)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:12.324846Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10989,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/OYfy9Th4/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.4)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:11.422805Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10988,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/D1bF3TKU/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:10.360182Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10989,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/UCmL4E3r/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:09.427850Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 10988,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/xKNdIt7f/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.21)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:08.522679Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11052,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/fekCdK4c/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.20.6)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:07.565211Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11047,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/zTRVJCWH/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.20.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:06.674771Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11047,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/tTWHfOMq/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.20.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:05.788866Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11356,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/nu3Gg9qN/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.19.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:04.722724Z",
+      "downloads": 64,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11357,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/T7btnA1T/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.19.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:03.655438Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11355,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/zcDx8YZT/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.19)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:02.488918Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11348,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/BxEwg3rw/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.18.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:01.625712Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11343,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/ZLVbD899/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.18.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:03:00.646964Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 11343,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/TJRSdoiX/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.18)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:59.553736Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "modid-3.0.0.jar",
+          "primary": true,
+          "size": 11229,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/h1V22PkL/modid-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation 3.0.0 (forge 1.17.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: modid-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:58.551255Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/pakYEe1o/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.9)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:57.210057Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/V6XQ8Bt8/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.8)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:56.314111Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/xrrzuh0A/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.7)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:55.026716Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/Dd0VSY4T/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.6)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:53.964760Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/nu9wJjUp/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.5)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:52.961841Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13209,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/2edpEcbf/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.4)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:51.918773Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13208,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/l9s8NNQg/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:50.755851Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13208,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/bp4sptCf/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:49.815245Z",
+      "downloads": 695,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13208,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/4DkfsqPd/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.11)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:48.882213Z",
+      "downloads": 56,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13208,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/45I7pUyD/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.10)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:47.545317Z",
+      "downloads": 164,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13206,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/KWvItHRz/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:46.663624Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13203,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/iiK02Egh/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.21)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:45.599107Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13619,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/t2SQJYWJ/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.18.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T14:02:44.294724Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13617,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/HUQiuZ7i/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.18)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:33.497027Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13210,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/OLhUk6TX/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.6)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:32.754876Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13211,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/Ofbggocg/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.5)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:31.979813Z",
+      "downloads": 24,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13213,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/SxbLbv2b/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.4)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:31.346118Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13211,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/vTKn3se2/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:30.696254Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13212,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/NPZLFJeT/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:29.900986Z",
+      "downloads": 188,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13212,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/396qv57u/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.20.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:29.064026Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13331,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/M1oIVAyK/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.19.4)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:28.333409Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13332,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/tvdkjBwp/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.19.3)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:27.620284Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13331,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/8ZYMj0N4/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.19.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:26.798160Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13331,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/oBqociAM/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.19.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:25.959699Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13329,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/SuBUYJsw/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.19)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:25.292964Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13330,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/AxIuqjA3/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.18.2)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:24.489048Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13316,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/kyHAhjkX/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.17.1)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:23.756275Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13314,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/7hfptv4A/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.17)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-09T13:38:23.180008Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "snowaccumulation-3.0.0.jar",
+          "primary": true,
+          "size": 13316,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/13g3ns7l/snowaccumulation-3.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Snow Accumulation 3.0.0 (fabric 1.16.5)",
+      "version_number": "3.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Snow Accumulation\nMod version: 3.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: snowaccumulation-3.0.0.jar"
+    },
+    {
+      "date_published": "2025-06-28T08:12:37.392230Z",
+      "downloads": 625,
+      "files": [
+        {
+          "filename": "Accumulate My SNOW-2.0.0.jar",
+          "primary": true,
+          "size": 10628,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/xMSUhdaf/Accumulate%20My%20SNOW-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Fixed all bugs - Snow Accumulation",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Fixed the floating snow layers\nFixed snow layering limit\nFixed weird snow spawning\nMake it look more natural when snow spawns\nPerformance fix"
+    },
+    {
+      "date_published": "2025-06-15T04:34:12.894639Z",
+      "downloads": 58,
+      "files": [
+        {
+          "filename": "Accumulate My SNOW-1.0.0.jar",
+          "primary": true,
+          "size": 9297,
+          "url": "https://cdn.modrinth.com/data/ntdDfWqY/versions/mFKk939Y/Accumulate%20My%20SNOW-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Snow Accumulation",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#201b21",
+  "date_published": "2026-04-03T09:50:48.811520Z",
+  "description": "# Crop Growth Accelerator\n\n![Crop Growth Accelerator cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/crop-growth-accelerator/main/.modcompiler-art/description-image.webp)\n\nTransform your farming experience with intelligent crop growth acceleration! This mod speeds up crop growth based on player proximity, sleep cycles, and weather conditions.\n\n## Features\n\n### Player Proximity Growth\n- Checks 10 random blocks per second for minimal performance impact\n- Works automatically in the background\n\n### Sleep Bonus\n- Wake up to a thriving farm! Crops get 50 bonus growth ticks when you sleep\n- Rewards you for sleeping through the night\n\n### Weather-Based Growth\n- **Rain**: Crops grow faster with +2 extra growth ticks per check\n- **Thunder**: Even faster growth with +4 extra growth ticks per check\n- **Snow**: Crops grow slower at 0.5x speed in cold biomes\n- Realistic farming mechanics that reward good weather\n\n### Universal Crop Support\nWorks with all vanilla crops and plants:.\n- **Food Crops**: Wheat, Carrots, Potatoes, Beetroot\n- **Fruit Stems**: Pumpkins, Melons\n- **Plants**: Saplings (all types), Mushrooms, Cactus, Sugar Cane",
+  "discord_url": "",
+  "downloads": 94,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/Yg6KANpQ/c9dd012db52ae23e76ac2b3b73948d31eb3257e1_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "crop-growth-accelerator",
+  "modrinth_url": "https://modrinth.com/mod/crop-growth-accelerator",
+  "name": "Crop Growth Accelerator",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/crop-growth-accelerator",
+  "issues_url": "https://github.com/Sekai0NI0itamio/crop-growth-accelerator/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/crop-growth-accelerator/blob/main/docs/Home.md",
+  "summary": "This mod makes them grow faster when you're nearby or sleeping or during rain and thunder storms, it also hinders crop growth when its snowing.",
+  "updated": "2026-04-03T09:50:49.710279Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-03T09:50:49.710279Z",
+      "downloads": 94,
+      "files": [
+        {
+          "filename": "Crop-Growth-Accelerator-1.0.0.jar",
+          "primary": true,
+          "size": 7966,
+          "url": "https://cdn.modrinth.com/data/Yg6KANpQ/versions/eRg1Z123/Crop-Growth-Accelerator-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Crop Growth Accelerator 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Crop Growth Accelerator\nJar: Crop-Growth-Accelerator-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "categories": [
+    "game-mechanics",
+    "management",
+    "utility"
+  ],
+  "color": "#040404",
+  "date_published": "2026-02-22T01:55:44.511428Z",
+  "description": "# Full Stack Throw (Shift + Q)\n\n## Description\n\n**Full Stack Throw** is a simple client-side mod for Minecraft Forge 1.20.1 that enhances your inventory management. It allows you to drop an entire item stack at once, rather than just a single item, with a convenient key combination.\n\n### How It Works (for the user)\n\n- Hold the **Shift** key.\n- Hover your mouse over any item stack in your inventory (including the hotbar).\n- Press **Q** (the default drop key).\n\nThe entire stack will be thrown out of your inventory onto the ground in one go. No more spamming Q or dragging stacks out—just one quick action to clear a slot.\n\n### Features\n\n- Works in all inventory screens (player inventory, chests, etc.) as long as you are hovering over a stack.\n- Fully client-side: no server installation required, and it works on any multiplayer server.\n- No configuration needed—just install and play.\n- Compatible with other mods that use the inventory or key bindings.",
+  "discord_url": "",
+  "downloads": 88,
+  "followers": 1,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/mJ3D188T/52adbca26c513d300a4fa8d57f542a960e5f51f4_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "throw-full-stack",
+  "modrinth_url": "https://modrinth.com/mod/throw-full-stack",
+  "name": "Throw Full Stack",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "Allows you to hover on a item and press shift and press q once on the item to throw the entire stack out of your inventory",
+  "updated": "2026-02-22T02:35:17.296415Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-02-22T02:35:17.296415Z",
+      "downloads": 88,
+      "files": [
+        {
+          "filename": "shiftqthrow-1.0.0.jar",
+          "primary": true,
+          "size": 4194,
+          "url": "https://cdn.modrinth.com/data/mJ3D188T/versions/j8XnR9iY/shiftqthrow-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1",
+        "1.20.2",
+        "1.20.3",
+        "1.20.4",
+        "1.20.5",
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Throw Full Stack 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Working Version"
+    }
+  ]
+}

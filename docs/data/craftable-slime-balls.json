@@ -1,0 +1,1352 @@
+{
+  "categories": [
+    "utility"
+  ],
+  "color": "#c4c4c4",
+  "date_published": "2025-09-13T03:27:50.901021Z",
+  "description": "![Recipe](https://cdn.modrinth.com/data/cached_images/214853ffc4de80b144862a0d42923491501baec3.png)",
+  "discord_url": "",
+  "downloads": 2520,
+  "followers": 4,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/HvHkzF5V/2a9a3101b81cb40c99002940c2e5ea0312b61837_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "craftable-slime-balls",
+  "modrinth_url": "https://modrinth.com/mod/craftable-slime-balls",
+  "name": "Craftable Slime Balls",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "allows you to craft 9 slime balls with 8 sugarcane + water bucket",
+  "updated": "2026-04-19T11:47:11.642194Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-19T11:47:11.642194Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/5Z8KYDlh/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:10.934580Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/IkMw1VAN/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:10.298508Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/YTthN1wl/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:09.632107Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/oOxiYjUD/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:08.929876Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/aSaapmmS/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:08.217324Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/Q3Sz2PA4/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:07.344947Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2394,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/vHwScwr9/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:06.587564Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/nNghIAHT/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:05.801329Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2392,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/qWnO5XP7/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:04.551140Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2394,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/i7Z4Vu3L/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:03.590793Z",
+      "downloads": 634,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2394,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/v1gW50Oq/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:02.867773Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2395,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/kXuj21qw/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:02.174781Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2378,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/6gxZzFzb/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:01.487910Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2388,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/1vBu5wtr/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:00.772351Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2175,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/sPUzzfAX/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:47:00.032019Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2373,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/EetjEgoa/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:59.363980Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2373,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/LM9ULOnW/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:58.412443Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2373,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/tCzSQo6d/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:57.734022Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2373,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/20N8QGN1/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:57.098693Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2372,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/tON94Hs3/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:56.434659Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2371,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/N70TyjU8/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:55.581592Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2440,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/zESxUrxd/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:54.846500Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2450,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/FFulsWNo/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:54.207390Z",
+      "downloads": 397,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2449,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/be8vvM67/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:53.420814Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2814,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/kXSkcYsZ/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:52.657553Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2812,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/VGFSv4mQ/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:51.947889Z",
+      "downloads": 31,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2813,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/YlW6qLyk/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:51.148045Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2813,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/nglgmxG0/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:50.440033Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2811,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/ITYo9XSm/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:49.243817Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2802,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/sWsEKhzE/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:48.500116Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2800,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/YhEIb6bG/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:47.899757Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2799,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/sHZ6UffS/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:47.275480Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2669,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/w2WrURK9/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:46.593750Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 2781,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/xmEEP4cS/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:45.708512Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5889,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/M1lpKAgQ/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:45.073996Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5889,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/GSu152Mh/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:44.367454Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5890,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/xODRxn9E/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:43.521082Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5890,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/kMQ6Z6BZ/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:42.795643Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5890,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/6V9YVwnt/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:42.076062Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5890,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/7M2TOqla/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:41.299761Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5888,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/zO6FvW7L/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:40.332776Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5890,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/pYjsJNR7/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:39.711797Z",
+      "downloads": 202,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5889,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/4AmPPD87/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:39.027035Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5889,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/tEwAF84A/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:38.339608Z",
+      "downloads": 90,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5887,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/R46lNde4/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:37.696796Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5884,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/vww3C6WI/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:37.094207Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5884,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/ciZs0Oyz/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:36.370808Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5885,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/5SX8Jujh/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:35.702510Z",
+      "downloads": 97,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5885,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/DEo5N7cc/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:34.995502Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/nHtMG5F6/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:34.225376Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/otdceTXp/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:33.367236Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5660,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/3yi7m1zF/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:32.704787Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5660,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/4v1ri6UB/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:32.057247Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5658,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/El2CJRZ4/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:31.283968Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5659,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/dptstzkQ/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:30.279977Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/wlLWalwP/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:29.590398Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5658,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/gycdR9dB/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:28.904406Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/3nAqT3dD/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T11:46:28.289448Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 5661,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/rDW9J7Sr/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Craftable Slime Balls 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Craftable Slime Balls\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: craftableslimeballs-1.0.0.jar"
+    },
+    {
+      "date_published": "2025-09-13T03:29:01.352622Z",
+      "downloads": 646,
+      "files": [
+        {
+          "filename": "craftableslimeballs-1.0.0.jar",
+          "primary": true,
+          "size": 3724,
+          "url": "https://cdn.modrinth.com/data/HvHkzF5V/versions/y9o6k90Q/craftableslimeballs-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Craftable Slime Ball",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "working version"
+    }
+  ]
+}

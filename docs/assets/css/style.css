@@ -1188,6 +1188,17 @@ body.has-hero .page { padding-top: 0; }
 .prose img { border-radius: var(--radius-md); margin: 16px 0; max-width: 100%; border: 1px solid var(--line); }
 .prose hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
 .prose strong { color: var(--ink); font-weight: 700; }
+.prose .md-table-wrap { overflow-x: auto; margin: 16px 0; border-radius: var(--radius-md); border: 1px solid var(--line); }
+.prose table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.prose th, .prose td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+.prose th { background: var(--surface-2); font-weight: 700; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
+.prose tr:last-child td { border-bottom: none; }
+.prose tr:hover td { background: color-mix(in srgb, var(--sage) 8%, transparent); }
+.prose td:first-child, .prose th:first-child { font-weight: 600; color: var(--ink); }
+.md-check { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--leaf) 15%, transparent); color: var(--moss); font-weight: 700; font-size: 12px; }
+.md-cross { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--clay) 15%, transparent); color: oklch(55% .15 25); font-weight: 700; font-size: 12px; }
+.md-warn { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--clay) 20%, transparent); color: var(--clay); font-weight: 700; font-size: 13px; }
+.prose del { color: var(--faint); }
 
 .changelog-text { font-size: 14px; }
 .changelog-text h2 { font-size: 18px; }

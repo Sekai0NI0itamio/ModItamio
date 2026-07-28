@@ -1,0 +1,54 @@
+{
+  "categories": [
+    "storage",
+    "technology",
+    "utility"
+  ],
+  "color": "#1a161c",
+  "date_published": "2026-03-30T13:46:15.764745Z",
+  "description": "# Instant-Hoppers\n\n![Instant-Hoppers cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/instant-hoppers/main/.modcompiler-art/description-image.webp)\n\n## What It Does\n\n- Hoppers pull items from the block they face and push them into the block they’re attached to, moving whole stacks in a single burst.\n- They also instantly suck up items that are dropped on top of them, so you don’t have to wait for them to pick up one by one.\n- Hoppers can move full stacks in one go instead of only one item at a time.\n- Hoppers also pull dropped items on top into themselves right away.",
+  "discord_url": "",
+  "downloads": 79,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/3IfolNun/85e78b22ab7c78c8127628ad62e60e30309ce758_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "instant-hoppers",
+  "modrinth_url": "https://modrinth.com/mod/instant-hoppers",
+  "name": "Instant-Hoppers",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/instant-hoppers",
+  "issues_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/instant-hoppers/blob/main/docs/Home.md",
+  "summary": "Hate that hoppers move items one by one? Well this mod makes hoppers move full stacks in one go.",
+  "updated": "2026-03-30T13:46:16.968940Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-03-30T13:46:16.968940Z",
+      "downloads": 79,
+      "files": [
+        {
+          "filename": "Instant-Hoppers-1.0.jar",
+          "primary": true,
+          "size": 5513,
+          "url": "https://cdn.modrinth.com/data/3IfolNun/versions/MbJqjOTA/Instant-Hoppers-1.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Instant-Hoppers 1.0",
+      "version_number": "1.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Instant-Hoppers\nJar: Instant-Hoppers-1.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

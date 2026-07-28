@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#202325",
+  "date_published": "2026-04-03T12:27:08.570379Z",
+  "description": "# World Auto Tool Swap\n\n![World Auto Tool Swap cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/auto-tool-swap/main/.modcompiler-art/description-image.webp)\n\nNever waste time manually switching tools while mining! This mod automatically selects the best tool from your inventory when you start breaking a block.\n\n## Features\n\n- ✅ **Smart Tool Detection** - Automatically uses the right tool type for each block\n- Shovels for dirt, grass, sand, gravel, clay, farmland, soul sand, snow\n- Axes for logs, planks, fences, doors, chests, crafting tables\n- Pickaxes for stone, ores, and everything else\n- ✅ **Enchantment Preferences** - Prioritizes tools with better enchantments\n- Efficiency (higher levels preferred)\n- Unbreaking (higher levels preferred)\n- ✅ **Switch Back Feature** - Returns to your previous item after mining (2 second delay)\n- ✅ **Flexible Search** - Choose between hotbar-only or full inventory search\n\n## How It Works\n\nLeft-click on any block to start mining.\nThe mod detects the block type and finds the best matching tool.\nYour hotbar automatically switches to that tool.\nAfter you finish mining (2 seconds of inactivity), it switches back to your original item.\n\n```.\nenableAutoSwap (default: true).\nEnable or disable automatic tool swapping.\n\nhotbarOnly (default: true).\nOnly search hotbar slots (0-8) for tools.\nSet to false to search entire inventory.",
+  "discord_url": "",
+  "downloads": 51,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/VnNsElsw/75e52cd236c3aa416f29cb2b077d5ca25fdc386d_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "world-auto-tool-swap",
+  "modrinth_url": "https://modrinth.com/mod/world-auto-tool-swap",
+  "name": "World Auto Tool Swap",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/auto-tool-swap",
+  "issues_url": "https://github.com/Sekai0NI0itamio/auto-tool-swap/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/auto-tool-swap/blob/main/docs/Home.md",
+  "summary": "Hate having to switch tools while mining? This mod makes it so that you just keep mining with the right tool.",
+  "updated": "2026-04-03T12:27:09.901816Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-04-03T12:27:09.901816Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "Auto-Tool-Swap-1.0.0.jar",
+          "primary": true,
+          "size": 10285,
+          "url": "https://cdn.modrinth.com/data/VnNsElsw/versions/vTGBjgtg/Auto-Tool-Swap-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Auto Tool Swap 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Tool Swap\nJar: Auto-Tool-Swap-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

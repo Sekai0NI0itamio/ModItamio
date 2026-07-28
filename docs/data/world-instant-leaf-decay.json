@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#202120",
+  "date_published": "2026-04-03T08:50:13.837751Z",
+  "description": "# World Instant Leaf Decay\n\n![World Instant Leaf Decay cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/instant-leaf-decay/main/.modcompiler-art/description-image.webp)\n\nTired of waiting for leaves to slowly decay after cutting down a tree? This mod makes leaves decay instantly!\n\n## Features\n\n- ✅ **Instant Decay** - All leaves disappear immediately when you break a log\n- ✅ **No Particles** - Massive performance boost by removing leaf particle effects\n- ✅ **Stacked Drops** - All items (saplings, apples, sticks) stack and drop at the center\n- ✅ **Vanilla Loot Rates** - Respects proper drop chances for each tree type\n- ✅ **All Tree Types** - Works with oak, birch, spruce, jungle, acacia, and dark oak\n- ✅ **Smart Detection** - Only decays natural leaves, not player-placed ones\n\n## How It Works\n\nBreak a log from any tree.\nAll connected leaves instantly disappear (no particles!).\nDrops are calculated using vanilla loot tables.\nItems spawn stacked at the center of the leaf cluster.\n\n## Drop Rates\n\nThe mod respects vanilla Minecraft drop rates:.\n- **Oak/Dark Oak**: 5% sapling, 0.5% apple, 2% sticks\n- **Jungle**: 2.5% sapling, 2% sticks\n- **Spruce/Birch/Acacia**: 5% sapling, 2% sticks",
+  "discord_url": "",
+  "downloads": 172,
+  "followers": 0,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/GmT3d3TW/f3e13e5ba09ffff356843f707bbbee9bfcbd5d3f_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "world-instant-leaf-decay",
+  "modrinth_url": "https://modrinth.com/mod/world-instant-leaf-decay",
+  "name": "World Instant Leaf Decay",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/instant-leaf-decay",
+  "issues_url": "https://github.com/Sekai0NI0itamio/instant-leaf-decay/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/instant-leaf-decay/blob/main/docs/Home.md",
+  "summary": "Hate waiting for leaves to slowly disappear after cutting a tree? Hate the lag from other leaf decay mods? This mod makes it so that leaves instantly disappear, no particles, no scattered drops, the drops all focus to one point.",
+  "updated": "2026-04-03T08:50:14.856249Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-03T08:50:14.856249Z",
+      "downloads": 172,
+      "files": [
+        {
+          "filename": "Instant-Leaf-Decay-1.0.0.jar",
+          "primary": true,
+          "size": 8036,
+          "url": "https://cdn.modrinth.com/data/GmT3d3TW/versions/EXt8WOfJ/Instant-Leaf-Decay-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Instant Leaf Decay 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Instant Leaf Decay\nJar: Instant-Leaf-Decay-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

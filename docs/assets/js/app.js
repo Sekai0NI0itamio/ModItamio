@@ -24,11 +24,13 @@ const CATEGORY_ALIASES = {
   "cursed": "cursed", "library": "library", "management": "management", "minigame": "minigame",
   "game-mechanics": "game-mechanics",
 };
-const LOADERS = ["fabric", "forge", "neoforge", "quilt"];
-const LOADER_NAMES = { fabric: "Fabric", forge: "Forge", neoforge: "NeoForge", quilt: "Quilt" };
+const LOADERS = ["fabric", "forge", "neoforge", "quilt", "liteloader", "rift", "modloader"];
+const LOADER_NAMES = { fabric: "Fabric", forge: "Forge", neoforge: "NeoForge", quilt: "Quilt", liteloader: "LiteLoader", rift: "Rift", modloader: "ModLoader" };
 const LOADER_COLORS = {
-  fabric: "#dbd6b7", forge: "#957bff", neoforge: "#f16437", quilt: "#986dbf",
+  fabric: "#5b8c5a", forge: "#6b5ce7", neoforge: "#d4723a", quilt: "#8b6fb5",
+  liteloader: "#5b8c5a", rift: "#7a9e7e", modloader: "#9e8b6f",
 };
+function normLoader(l) { return String(l || "").toLowerCase().replace(/[^a-z]/g, ""); }
 const VERSION_COLORS = { release: "#4a7c59", beta: "#c49a3c", alpha: "#c45c5c" };
 const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 
@@ -77,9 +79,24 @@ function renderMarkdown(md) {
     return escapeHtml(text)
       .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">')
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>")
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/__([^_]+)__/g, "<strong>$1</strong>")
-      .replace(/`([^`]+)`/g, "<code>$1</code>");
+      .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<em>$1</em>")
+      .replace(/(^|[^_])_([^_]+)_/g, "$1<em>$2</em>")
+      .replace(/~~([^~]+)~~/g, "<del>$1</del>")
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/:white_check_mark:|✅/g, '<span class="md-check">✓</span>')
+      .replace(/:x:|:negative_squared_cross_mark:|❌/g, '<span class="md-cross">✗</span>')
+      .replace(/:warning:|⚠️/g, '<span class="md-warn">⚠</span>');
+  }
+  function parseTableRow(row, isHeader) {
+    const cells = row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => c.trim());
+    const tag = isHeader ? "th" : "td";
+    return "<tr>" + cells.map(c => "<" + tag + ">" + inline(c) + "</" + tag + ">").join("") + "</tr>";
+  }
+  function isSeparatorRow(line) {
+    return /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line);
   }
   while (i < lines.length) {
     const line = lines[i];
@@ -88,6 +105,26 @@ function renderMarkdown(md) {
       const code = []; i++;
       while (i < lines.length && !lines[i].trimStart().startsWith("```")) code.push(lines[i++]);
       i++; out.push("<pre><code>" + escapeHtml(code.join("\n")) + "</code></pre>"); continue;
+    }
+    if (line.trim().startsWith("|") && i + 1 < lines.length && isSeparatorRow(lines[i + 1].trim())) {
+      closePara(); closeList();
+      const headerRow = line;
+      const sepRow = lines[i + 1];
+      i += 2;
+      const aligns = sepRow.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => {
+        const t = c.trim();
+        if (t.startsWith(":") && t.endsWith(":")) return "center";
+        if (t.endsWith(":")) return "right";
+        if (t.startsWith(":")) return "left";
+        return null;
+      });
+      const rows = [parseTableRow(headerRow, true)];
+      while (i < lines.length && lines[i].trim().startsWith("|")) {
+        rows.push(parseTableRow(lines[i], false));
+        i++;
+      }
+      out.push('<div class="md-table-wrap"><table><thead>' + rows[0] + '</thead><tbody>' + rows.slice(1).join("") + '</tbody></table></div>');
+      continue;
     }
     const h = line.match(/^(#{1,4})\s+(.*)$/);
     if (h) { closePara(); closeList(); out.push("<h" + h[1].length + ">" + inline(h[2]) + "</h" + h[1].length + ">"); i++; continue; }
@@ -157,8 +194,9 @@ applyTheme();
 
 function renderLoaderTags(loaders) {
   return (loaders || []).map(l => {
-    const name = LOADER_NAMES[l] || l;
-    const color = LOADER_COLORS[l] || "var(--color-text-dim)";
+    const k = normLoader(l);
+    const name = LOADER_NAMES[k] || l;
+    const color = LOADER_COLORS[k] || "var(--color-text-dim)";
     return `<span class="tag tag--loader" style="--loader-color:${color}">${escapeHtml(name)}</span>`;
   }).join("");
 }

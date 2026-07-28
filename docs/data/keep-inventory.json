@@ -1,0 +1,1551 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#27292b",
+  "date_published": "2026-04-10T14:05:31.358672Z",
+  "description": "# Keep Inventory\n\n![Keep Inventory cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/keep-inventory/main/.modcompiler-art/description-image.webp)\n\nNever lose your items on death again! This mod automatically enforces the `keepInventory` gamerule to always be `true`, preventing any manual changes.\n\n## Features\n\n- ✅ **Auto-Enable** - Sets `keepInventory=true` when any world loads\n- ✅ **Constant Enforcement** - Checks every second to ensure it stays enabled\n- ✅ **Auto-Correction** - If changed to false, automatically sets it back to true\n\n## How It Works\n\nThe mod uses two mechanisms to ensure `keepInventory` is always enabled:.\n\n**Periodic Check**: Every second (20 ticks), verifies the gamerule is still `true`.\n**Auto-Fix**: If it detects the gamerule was changed to `false`, it automatically corrects it back to `true`.\n\nThis means even if a player or admin tries to run `/gamerule keepInventory false`, the mod will change it back within 1 second!",
+  "discord_url": "",
+  "downloads": 3366,
+  "followers": 4,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/KhzJrsXJ/5ae67dcb6f46f949ecd2846c61de570fddbe990a_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "keep-inventory",
+  "modrinth_url": "https://modrinth.com/mod/keep-inventory",
+  "name": "Keep Inventory",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/keep-inventory",
+  "issues_url": "https://github.com/Sekai0NI0itamio/keep-inventory/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/keep-inventory/blob/main/docs/Home.md",
+  "summary": "Enforces keepInventory gamerule to always be true. Never lose your items on death!",
+  "updated": "2026-05-03T11:33:38.711215Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-05-03T11:33:38.711215Z",
+      "downloads": 63,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2636,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/ooLAZzjq/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:33:37.971485Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2372,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/pOMsTqNY/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:33:37.421876Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2371,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/Pl9l6J8j/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:33:36.837649Z",
+      "downloads": 95,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2754,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/hLimSVby/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:33:36.261159Z",
+      "downloads": 62,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2772,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/19dWLO6m/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:22:01.514616Z",
+      "downloads": 54,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2617,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/65mpnXkW/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:22:00.705147Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2616,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/q9eiwmho/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:22:00.102861Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2617,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/yiiq1tek/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:59.474787Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2662,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/VAF2WVwA/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:58.844436Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/co9IekBv/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:58.244369Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/mb3N4C6n/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:57.601756Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/Hn1tDxDc/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:56.970332Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/LWiMMBvu/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:56.352600Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/P86RRNg0/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:55.581608Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2637,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/ebTojKZd/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:54.897371Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2635,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/pJ1FSaxj/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:54.301956Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2662,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/wBL1ngeL/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:53.664713Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2799,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/CbnG5Oix/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:52.946537Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2797,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/wPOZeOcb/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:52.212559Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2797,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/vMnSU1G6/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:51.576086Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2797,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/lNyogJxM/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:50.926298Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2589,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/mAWOb8wK/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:50.267747Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2589,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/exj9NvNa/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:49.614775Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2588,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/yzdb1n4m/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:48.923860Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2799,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/7RMXu7ey/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:48.239924Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2880,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/KxojJ213/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:47.649949Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2878,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/hegoTCsf/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:46.904414Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2878,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/cgjaygfk/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:46.290643Z",
+      "downloads": 363,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6051,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/IWDRBM1v/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 26.1.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:45.641793Z",
+      "downloads": 25,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6049,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/tCgewa8m/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 26.1.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T11:21:44.988749Z",
+      "downloads": 41,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6046,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/7ywOYvYZ/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 26.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:56.475039Z",
+      "downloads": 273,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2560,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/LGUzXel4/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:55.888175Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2561,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/RyLOyNOC/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:55.394903Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2544,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/lffF77jX/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:54.899586Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2544,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/SNCUcEpS/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Keep Inventory 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:54.301316Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2573,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/9QcDGMp6/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:53.777650Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2572,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/NMuCOMBQ/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:53.192385Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2632,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/guth1HYH/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:52.672096Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2642,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/NQF9oEyj/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:52.162373Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2641,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/XwtF0bKV/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:51.543454Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2641,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/5Bf48ZOX/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:50.965242Z",
+      "downloads": 320,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2641,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/DsvsijSa/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:50.320578Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2885,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/twzePg90/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:49.794405Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2885,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/hU7j9T7B/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:49.251861Z",
+      "downloads": 42,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2885,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/JDjL6Cs6/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:48.720093Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2884,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/oy07soMY/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:48.202754Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2883,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/rYgFDRKx/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:47.648335Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2800,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/TWFbdn70/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:47.120066Z",
+      "downloads": 66,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2865,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/Ua50TRrl/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:44:46.576518Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2591,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/ilyrRgu9/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.12)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:29.192412Z",
+      "downloads": 52,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 2572,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/vYgSoR58/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:28.481546Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6148,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/WdUbeih8/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:27.813665Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6148,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/hZI4tRV6/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:27.155761Z",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6141,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/DdiucQt1/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:26.514517Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6143,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/ZIEMHGFU/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:25.597816Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6144,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/vNZCxgU6/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:24.919331Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6145,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/PrXw7a23/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:24.202359Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6144,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/L2Ve774X/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:23.545964Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6144,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/wdgm6Ij4/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:22.873916Z",
+      "downloads": 126,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 6144,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/luDHGQZi/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:22.247168Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5873,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/iPWyplWO/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:21.491215Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5874,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/cMtC6Oxb/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:20.817579Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5872,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/TrLvjxKA/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:20.167291Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5872,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/nVsc9mID/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:19.483238Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5869,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/Lbj3Sgwp/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:18.863897Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5869,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/H3Dh9ZPI/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:18.216412Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5870,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/Qy0Ivfhj/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.17)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-05-03T10:26:17.552423Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "keepinventory-1.0.0.jar",
+          "primary": true,
+          "size": 5872,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/tXF8Y6nF/keepinventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Keep Inventory 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Keep Inventory\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: keepinventory-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-10T14:05:33.860246Z",
+      "downloads": 1297,
+      "files": [
+        {
+          "filename": "Keep-Inventory-1.0.0.jar",
+          "primary": true,
+          "size": 5666,
+          "url": "https://cdn.modrinth.com/data/KhzJrsXJ/versions/1G4vGqYx/Keep-Inventory-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Keep Inventory 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Keep Inventory\nJar: Keep-Inventory-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

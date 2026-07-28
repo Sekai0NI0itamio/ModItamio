@@ -1,0 +1,2747 @@
+{
+  "categories": [
+    "management",
+    "utility",
+    "game-mechanics"
+  ],
+  "color": "#040404",
+  "date_published": "2025-07-12T11:32:54.007690Z",
+  "description": "![Banner](https://cdn.modrinth.com/data/cached_images/31cf2c6dd46cac38bf3446c1f5e994fe489aa4d4.png)\n---\n# Account Switcher Mod\n\nA Minecraft mod that allows you to switch accounts without needing to restart or close minecraft.\n\n![Account Mod](https://cdn.modrinth.com/data/cached_images/ea3c3d7f392ec3c589a2e152380fbcabceaf06b2.png)\n\n## Features\n- **Auto Account Change Detection**: checks `config/account.txt` for changes, if account changed will auto set account to changed account, so you don't need to restart minecraft to change account.\n- **Real-time Display**: Shows current account on main menu\n- **Offline Account Only**: Currently only supporting for offline account switching\n\n## How to Change Account\n\n1. **Locate the config file**: `minecraft/config/account.txt`\n2. **Edit the file**: Change the `account=` value\n   ```\n   account=YourNewAccountName\n   ```\n3. **Save the file**: The mod automatically detects changes and switches accounts\n4. **Verify**: Check the main menu - account name displays in top left corner",
+  "discord_url": "https://discord.gg/2J776dWKXd",
+  "downloads": 27830,
+  "followers": 7,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/5SHW9JoR/e7aa57de3a556c2bd71e8cf41557790b15429b5a_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "account-switcher",
+  "modrinth_url": "https://modrinth.com/mod/account-switcher",
+  "name": "Account Switcher",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "",
+  "issues_url": "",
+  "wiki_url": "",
+  "summary": "This mod makes it so that you can switch account without closing minecraft!",
+  "updated": "2026-04-30T02:49:48.662845Z",
+  "client_side": "required",
+  "server_side": "unsupported",
+  "versions": [
+    {
+      "date_published": "2026-04-30T02:49:48.662845Z",
+      "downloads": 150,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12604,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/b83sGJqm/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.21)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:49:47.969200Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12442,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/UhZFW5Zo/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.17)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.17\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:40:59.611483Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9571,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/IuOMC2C3/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.6)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:40:58.817444Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9570,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/pjpmTUua/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.20.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:40:58.017908Z",
+      "downloads": 37,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9693,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/EkDMUwNb/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 26.1.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 26.1.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:04.486450Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9582,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/bdDz3mHd/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 26.1.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 26.1.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:03.712768Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9581,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/oN2Zjpwt/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 26.1.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 26.1.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:02.965427Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9583,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/hQFQU1Rs/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 26.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 26.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:02.153321Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9598,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/cky8XzbW/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.9)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:01.361904Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9571,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/KstZbhR7/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.8)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:07:00.581057Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9571,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/8CtDILJq/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.7)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:59.818174Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9575,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/FLJr4czV/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:58.967960Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9575,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/qa1wUHqY/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:58.282215Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9575,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/6u0rH84G/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:57.505092Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9574,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/VwTKlFRg/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:56.753094Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9597,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/5kk4qWAM/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.11)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:55.997837Z",
+      "downloads": 17,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9598,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/B4MQnFjg/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.10)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:55.246662Z",
+      "downloads": 66,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9573,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/rTWuJL4O/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:54.336551Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9575,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/VQCZxil1/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.21)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:53.493208Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9557,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/w2gicC8Z/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.20.6)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:52.594072Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9557,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/9C4NxjRY/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.20.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:51.843499Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9571,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/Noc0Dpo2/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Account Switcher 2.0.0 (neoforge 1.20.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:51.070859Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9472,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/BTBM8LIW/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.12)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.12\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:50.349881Z",
+      "downloads": 642,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12470,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/GjnB6Qn5/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 26.1.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 26.1.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:49.590648Z",
+      "downloads": 353,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12468,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/vbiknmnW/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 26.1.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 26.1.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:48.900020Z",
+      "downloads": 956,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12466,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/1RpoGSnP/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 26.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 26.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:48.162791Z",
+      "downloads": 121,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12609,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/sJkNSc5p/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.21.9)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:47.436601Z",
+      "downloads": 1954,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12609,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/5ByD8cxh/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.21.11)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:46.605826Z",
+      "downloads": 103,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12609,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/mD02CnGn/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.21.10)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:45.923555Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12605,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/YI5Wp64d/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.6)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:45.163330Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12606,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/Tt7GVYcd/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:44.418877Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12606,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/yHEd1M2T/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:43.673208Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12605,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/DQdDxDdg/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:42.851345Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12605,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/LjydNfO9/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:42.074219Z",
+      "downloads": 122,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12605,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/TdFicdKB/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.20.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:41.062750Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12445,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/xe158vzV/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.19.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:40.064198Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12445,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/q9lJBDsf/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.19.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:39.332089Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12444,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/ZdduNPpD/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.19.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:38.458565Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12444,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/VXwg3Dw1/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.19.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:37.592244Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12441,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/j1QH9Wgh/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.19)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:36.849934Z",
+      "downloads": 19,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12441,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/8505GejN/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.18)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:36.138918Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12444,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/WKDNQHQx/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.17.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-30T02:06:35.339588Z",
+      "downloads": 172,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 12444,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/FcUj6TzX/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 (fabric 1.16.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-20T00:29:12.576861Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9861,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/yoILwHNs/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.17.1) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-20T00:29:11.406628Z",
+      "downloads": 68,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 10197,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/b1OU9AlK/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.16.5) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:34:17.520189Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/BsoiGECd/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.9) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:34:15.416873Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/ypaI1FMM/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.8) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:40.682907Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/ZEwbH6Lr/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.7) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:37.461007Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/XlKyAK6G/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.6) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:36.125139Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9547,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/KlJHH21Y/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:33.860591Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9568,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/UYy7IvvJ/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:31.500791Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9568,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/9GL0M6yq/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:23.883908Z",
+      "downloads": 32,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9559,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/CCW9ZprK/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.11) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:18.374429Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9559,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/OArYH7b2/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.10) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:14.073753Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9567,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/8cRtGkAG/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:10.052589Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9566,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/9tLm9o3f/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:09.067645Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9633,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/Jl5GKWyU/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.20.6) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:08.040997Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9648,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/UTi4HSRd/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.20.4) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:33:01.355124Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9648,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/hOMTGGFG/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.20.3) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:58.044837Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9647,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/4Yj8aihS/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.20.2) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:56.756298Z",
+      "downloads": 85,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9647,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/gqSA6xiZ/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.20.1) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:51.986535Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9941,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/pe4KjepS/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:49.006223Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9941,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/UCoWsTrG/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:43.542657Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9940,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/2r1wwmtb/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:41.613770Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9940,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/VBLXTNPD/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:40.497684Z",
+      "downloads": 21,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9938,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/1ft2O7Q0/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:39.347601Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9931,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/WWxx1eH2/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.18.2) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:37.971407Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9931,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/wveXUdmk/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:32:32.203248Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9930,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/BgL2K3K0/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.2 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "2.0.2",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.2\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:58.024217Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/8s02RbHS/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.9) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:57.281740Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/j1WLCiCI/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.8) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:56.290791Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/ngpGdXmL/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.7) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:55.025862Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9560,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/2mj1ElIZ/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.6) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:53.289215Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9547,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/JVLWXv10/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.5) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:52.401806Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9568,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/kLvZK8fj/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.4) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:51.380776Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9568,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/fNAiKHg7/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.3) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:50.490226Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9559,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/LEC98zJH/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.11) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:49.503260Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9559,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/5UORQfEe/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.10) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:48.582550Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9567,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/gIoyXu4s/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21.1) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:47.549563Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9566,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/xnLBEzJ9/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.21) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:46.274978Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9633,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/XsBVbg4E/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.20.6) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:44.857640Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9648,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/npW9IHJ4/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.20.4) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:43.633891Z",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9648,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/tLCE8NlA/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.20.3) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:42.527743Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9647,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/4y9GyRE2/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.20.2) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:41.779413Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9647,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/lQk1QeBR/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.20.1) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:40.926035Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9941,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/Tztt9BS3/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.19.4) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:40.097532Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9941,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/mTo10CRI/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.19.3) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:39.421571Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9940,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/4uyOgRoy/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.19.2) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:38.672763Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9940,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/GdrR7cmd/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.19.1) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:37.993462Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9938,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/rH9zHxfl/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.19) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:36.759196Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9931,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/ElXOclQo/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.18.2) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:35.788351Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9930,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/FSz0cQrz/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.18.1) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-19T14:21:34.913971Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 9930,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/6Y9FZnQD/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.1 (forge 1.18) (Fixed Empty Version)",
+      "version_number": "2.0.1",
+      "version_type": "release",
+      "changelog": "Fixed Empty/Shell Version\nThe previous version for this Minecraft version was an empty jar with no classes.\nThis version replaces it with a fully working build.\n\nAutomated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.1\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:27.379519Z",
+      "downloads": 40,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/oveRGJpP/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.9)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:26.801339Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/jlxW0uAN/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.8)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:26.227066Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1187,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/TllcX6mS/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.7)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:25.607706Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/YLWIEQFj/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.6)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:24.984397Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/7zncoKmU/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:24.343902Z",
+      "downloads": 47,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/aspmmpuM/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:23.811493Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 851,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/zRBxOfit/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:23.222745Z",
+      "downloads": 73,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1476,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/5ZNPnBW1/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.11)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:22.652111Z",
+      "downloads": 24,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 852,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/4fNbG9XT/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.10)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:22.075929Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1157,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/8kYQi9QB/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:21.530760Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 849,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/nTMStVLV/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.21)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:20.960108Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 924,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/88NyuGw8/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.20.6)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:20.366847Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 934,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/fwbuU9NS/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.20.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:19.847770Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 933,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/BeM237AU/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.20.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:19.301263Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 933,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/GpVo4hoD/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.20.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:18.732475Z",
+      "downloads": 36,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 933,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/MPr7OtOl/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.20.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:18.166615Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1066,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/I2wEka7B/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.19.4)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:17.564330Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1067,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/oLZmuri1/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.19.3)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:16.887090Z",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1066,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/pEohcdau/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.19.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:16.302725Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1067,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/Ff5PGEqo/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.19.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:15.706953Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1065,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/etwntDBC/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.19)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:15.119275Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1055,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/X4W7HCzQ/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.18.2)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:14.621961Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1513,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/OBniAQef/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.18.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:14.058788Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1053,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/c1znj23J/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.18)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:13.427787Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1674,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/yXEE6L7h/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.17.1)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-03-15T03:43:10.842561Z",
+      "downloads": 33,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 1035,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/B4LTRrQD/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 2.0.0 (forge 1.16.5)",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Account Switcher\nMod version: 2.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: accountswitcher-2.0.0.jar"
+    },
+    {
+      "date_published": "2026-01-15T11:15:52.666580Z",
+      "downloads": 165,
+      "files": [
+        {
+          "filename": "accountswitcher-1.0.0.jar",
+          "primary": true,
+          "size": 6793,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/cAfxb139/accountswitcher-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": ""
+    },
+    {
+      "date_published": "2025-07-22T06:34:12.157640Z",
+      "downloads": 19421,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 17490,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/UeiCtbGY/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Account Switcher 2.0.0 - updated to newer versions",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "all functions should work exactly the same as the 1.8.9 forge versions"
+    },
+    {
+      "date_published": "2025-07-13T10:15:25.126118Z",
+      "downloads": 1980,
+      "files": [
+        {
+          "filename": "accountswitcher-2.0.0.jar",
+          "primary": true,
+          "size": 16094,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/w16LaP5n/accountswitcher-2.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Fixed bug - Bugless version",
+      "version_number": "2.0.0",
+      "version_type": "release",
+      "changelog": "I noticed that previously the game when launched will not auto change the account to the account specified in the .txt file, so i fixed the bug."
+    },
+    {
+      "date_published": "2025-07-12T11:34:28.646576Z",
+      "downloads": 145,
+      "files": [
+        {
+          "filename": "accountswitcher-1.0.0.jar",
+          "primary": true,
+          "size": 10220,
+          "url": "https://cdn.modrinth.com/data/5SHW9JoR/versions/YgHxQu6p/accountswitcher-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Account Switcher",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "- Working version for offline accounts ONLY.\n  (if you want to switch to another online account, this version doesnt support that)"
+    }
+  ]
+}

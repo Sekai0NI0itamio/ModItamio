@@ -1,0 +1,61 @@
+{
+  "categories": [
+    "utility",
+    "equipment",
+    "game-mechanics"
+  ],
+  "color": "#252527",
+  "date_published": "2026-04-03T06:31:29.252865Z",
+  "description": "# Optimized Mining\n\n![Area Dig cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/area-dig/main/.modcompiler-art/description-image.webp)\n\nAdds an enchantment that lets a pickaxe, axe, or shovel break a whole area of blocks when you mine one.\n\n### What It Does (for the user)\n- When you break a block with an enchanted tool, the mod automatically breaks all blocks in a cube around it.\n- The cube size grows with the enchantment level (radius = level + 1).\n- Broken blocks disappear instantly, without particles or sound.\n- All drops from the broken blocks appear at the block you originally broke.\n- Each block broken reduces the tool's durability by 1.\n- The enchantment only works on tools that can normally harvest the block (pickaxes, axes, shovels) and does not affect bedrock or air.\n- It can be applied up to level 5.\n\n### Features\n- Area breaking triggered by normal block breaking.\n- Silent removal of blocks, no visual or sound effects.\n- Collected drops are placed at the original break position.\n- Durability is still consumed for each block broken.\n- Supports enchantment levels 1 through 5.\n\n### Why Use This Mod?\n- Saves time by clearing out large sections with a single swing.\n- Keeps your inventory tidy because drops appear in one spot.\n- Compatible with vanilla Minecraft 1.12.2 and Forge.\n\n## What You'll Notice\n\n- When you break a block with a pickaxe, axe, or shovel that has the area_dig enchantment, the mod breaks all blocks in a cube around that block.\n- The broken blocks disappear instantly without particles or sound.",
+  "discord_url": "",
+  "downloads": 91,
+  "followers": 0,
+  "gallery": [
+    {
+      "url": "https://cdn.modrinth.com/data/Eh5bVIuM/images/42921172f37e121c34b99b31a4689e03eb3e1d75_350.webp",
+      "title": "Enchantment on a shovel",
+      "description": "The enchantment can be received from an enchanting table.",
+      "featured": true
+    }
+  ],
+  "icon_url": "https://cdn.modrinth.com/data/Eh5bVIuM/d3e5adf234ec4d00d3b9bc8c44c46df2fcc485ad_96.webp",
+  "license": "LicenseRef-All-Rights-Reserved",
+  "loaders": [
+    "forge"
+  ],
+  "mod_id": "optimized-mining",
+  "modrinth_url": "https://modrinth.com/mod/optimized-mining",
+  "name": "Optimized Mining",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/area-dig",
+  "issues_url": "https://github.com/Sekai0NI0itamio/area-dig/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/area-dig/blob/main/docs/Home.md",
+  "summary": "I always hated strip mining, there are some good mods that make your pickaxe break more blocks, but its either not for 1.12.2 or doesn't work, so here's a mod that works.",
+  "updated": "2026-04-03T06:31:30.067493Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-03T06:31:30.067493Z",
+      "downloads": 91,
+      "files": [
+        {
+          "filename": "Area-Dig-1.0.0.jar",
+          "primary": true,
+          "size": 8869,
+          "url": "https://cdn.modrinth.com/data/Eh5bVIuM/versions/XELTPyf8/Area-Dig-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Area Dig 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Area Dig\nJar: Area-Dig-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}

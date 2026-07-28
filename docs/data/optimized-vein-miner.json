@@ -1,0 +1,1617 @@
+{
+  "categories": [
+    "game-mechanics",
+    "utility"
+  ],
+  "color": "#242523",
+  "date_published": "2026-04-04T02:26:35.005795Z",
+  "description": "# Optimized Vein Miner\n\n![World Vein Miner cover image](https://raw.githubusercontent.com/Sekai0NI0itamio/vein-miner/main/.modcompiler-art/description-image.webp)\n\nMine entire ore veins and connected blocks at once with this highly optimized vein mining mod! Built from the ground up to address common complaints and implement the most requested features from the community.\n\n## Key Features\n\n### Performance Optimizations\n- **Single Sound** - Only one break sound instead of hundreds\n- **Smart Item Drops** - All items drop at one location with automatic stacking\n- **Minimal Entities** - Combines identical items before spawning\n\n### Balanced Gameplay\n- **Durability Consumption** - Each block properly costs tool durability\n- **Correct Tool Check** - Pickaxe for ores, axe for logs, shovel for dirt\n- **Tool Break Protection** - Automatically stops before your tool breaks\n- **Optional Cooldown** - Add cooldown between uses for extra balance\n\n### Quality of Life\n- **Toggle Keybind** - Press 'V' to enable/disable vein mining anytime\n- **Chat Feedback** - Shows current state when toggled\n- **26-Direction Search** - Includes diagonals for better vein detection\n- **Metadata Respect** - Won't mix different wood types\n\n## Supported Blocks\n\n### Enabled by Default\n- **All Ores**: Coal, Iron, Gold, Diamond, Emerald, Lapis, Redstone, Quartz\n- **All Logs**: Oak, Birch, Spruce, Jungle, Acacia, Dark Oak (respects wood type)",
+  "discord_url": "",
+  "downloads": 8480,
+  "followers": 3,
+  "gallery": [],
+  "icon_url": "https://cdn.modrinth.com/data/Tb2zUuPP/2cdbb2dda9cef232e44968005cd7c1e4f269e07f_96.webp",
+  "license": "MIT",
+  "loaders": [
+    "fabric",
+    "forge",
+    "neoforge"
+  ],
+  "mod_id": "optimized-vein-miner",
+  "modrinth_url": "https://modrinth.com/mod/optimized-vein-miner",
+  "name": "Optimized Vein Miner",
+  "site_url": "https://sekai0ni0itamio.github.io/ModItamio/",
+  "source_url": "https://github.com/Sekai0NI0itamio/vein-miner",
+  "issues_url": "https://github.com/Sekai0NI0itamio/vein-miner/issues",
+  "wiki_url": "https://github.com/Sekai0NI0itamio/vein-miner/blob/main/docs/Home.md",
+  "summary": "Hate digging out each ore block one by one? This mod makes it so that you can mine whole veins instantly.",
+  "updated": "2026-04-28T02:50:57.053173Z",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "versions": [
+    {
+      "date_published": "2026-04-28T02:50:57.053173Z",
+      "downloads": 64,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12744,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/3krGkRdX/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-28T02:50:55.495729Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12743,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/JrP1aWY1/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-28T02:20:21.199421Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12741,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/yAy6rVH6/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:31.396363Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9603,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/HKRjOs5t/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.9\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:30.394105Z",
+      "downloads": 84,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9599,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/YTux9N08/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.11\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:29.415109Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9602,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/DNxVFAWw/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.10\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:28.208896Z",
+      "downloads": 30,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9042,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/7k1WRBiX/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.9\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:27.106967Z",
+      "downloads": 295,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9038,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/YI5H80o5/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.11\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:26.095244Z",
+      "downloads": 91,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9041,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/tF7AVplY/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.10\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:25.033649Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12681,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/lqPBeuEX/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.9"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.9\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:23.910650Z",
+      "downloads": 391,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12679,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/94r6FuG2/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.11"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.11)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.11\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T12:09:22.888676Z",
+      "downloads": 52,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12682,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/Vt4awn82/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.10"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.10)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.10\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T10:48:36.198003Z",
+      "downloads": 51,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10023,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/E0B145Iu/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.17.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T06:53:55.687045Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9008,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/dpJV6wvr/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.8\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T06:53:55.023517Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9008,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/HjxHtdf7/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.7\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T06:53:54.299106Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9008,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/5D22bDyS/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T06:53:52.915810Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10030,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/Xv18BmIo/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-27T06:53:52.118380Z",
+      "downloads": 14,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10029,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/rjaMZddg/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:24.513864Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12861,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/iSohKBLa/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:23.812984Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12862,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/vMYG9NMf/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:23.189630Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 13001,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/VL5ur4uq/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:22.473104Z",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12999,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/s9tIPUGF/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:21.805206Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12999,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/kYmGs66W/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:35:21.095866Z",
+      "downloads": 391,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12999,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/LyGsMRBI/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.20.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T14:15:53.584665Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9618,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/MYjSE1pZ/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:52.458758Z",
+      "downloads": 16,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10000,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/zNFwnXuS/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:51.181610Z",
+      "downloads": 620,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9999,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/V4LPu7mV/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.20.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:49.361232Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10197,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/WkFxmnC3/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:48.179229Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10196,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/ilgSqFp0/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:46.902307Z",
+      "downloads": 107,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10196,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/59NBTEJb/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.19.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:45.759695Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10196,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/akWUZFuA/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.19.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T13:17:44.445227Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10194,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/f90xumg9/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.19)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.19\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:49:28.373825Z",
+      "downloads": 318,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9239,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/4FJvAgll/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.8.9"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.8.9)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.8.9\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:49:27.646152Z",
+      "downloads": 120,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10083,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/k8YzEMn5/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:49:26.896711Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10083,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/5IZzVlBr/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:49:26.178384Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 10081,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/x8zP5drm/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.18\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:49:25.501360Z",
+      "downloads": 576,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9955,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/mwB8za3I/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.16.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:49.101319Z",
+      "downloads": 22,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9594,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/IwAkg99D/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.8\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:46.839942Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9594,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/VVfaZlTN/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.7\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:46.209461Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9594,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/AUg5hZko/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:45.544854Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9593,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/bkP0Nz4J/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:44.482722Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9730,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/dN5e2C0X/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:43.654234Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9730,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/iX4RRgoX/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:43.056127Z",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9729,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/iZR8SfG8/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:42.407044Z",
+      "downloads": 1027,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9728,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/TGKYyewu/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:41.605489Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9728,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/LDoVSvu7/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.21\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:40.708262Z",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9713,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/O2fPCsAs/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:40.075799Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9712,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/a4qfYd6P/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.5"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.20.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:39.405757Z",
+      "downloads": 18,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9823,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/jo8CWxil/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:38.327214Z",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9823,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/6kYQTh6s/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:37.152821Z",
+      "downloads": 53,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9822,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/i7aZgat2/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:36.376611Z",
+      "downloads": 23,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9821,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/afAlHk3E/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.21\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:35.319213Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9879,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/sPFTA3qK/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.6"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0 (forge 1.20.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: forge\nMinecraft version: 1.20.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:34.448605Z",
+      "downloads": 27,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12657,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/Bi5vhycb/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.8"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.8)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.8\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:33.672014Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12658,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/GbJ0Gmm2/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.7"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.7)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.7\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:33.008014Z",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12658,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/1ZFGSXSr/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.6"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.6)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.6\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:32.399239Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12658,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/aCmm45eq/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:31.821436Z",
+      "downloads": 48,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12779,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/xGIiyeMF/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:31.213642Z",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12778,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/c4nCqkcx/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:30.352922Z",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12778,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/KPEJpPty/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:29.759144Z",
+      "downloads": 189,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12774,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/CmOwDVmm/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:28.999499Z",
+      "downloads": 26,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12771,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/Rc002h96/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.21"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.21)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.21\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:28.374928Z",
+      "downloads": 28,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12754,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/czDghSN4/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.4"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.19.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:27.521540Z",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12755,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/MMxgLuWe/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.19.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.19.3)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.19.3\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T11:13:25.869390Z",
+      "downloads": 327,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12726,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/EVlriq61/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.16.5"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.16.5)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.16.5\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:40.763910Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9969,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/Ka21ZC4V/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.4"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.20.4)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.4\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:39.941643Z",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 9968,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/60CEY3uq/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.20.2"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "name": "Vein Miner 1.0.0 (neoforge 1.20.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: neoforge\nMinecraft version: 1.20.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:39.104571Z",
+      "downloads": 46,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12870,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/HdhJccCe/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.2"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.18.2)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.2\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:38.411562Z",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12871,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/4UMT4IQh/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.18.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:37.732674Z",
+      "downloads": 13,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12868,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/dQv9F6YV/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.18"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.18)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.18\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-23T08:24:37.060130Z",
+      "downloads": 35,
+      "files": [
+        {
+          "filename": "veinminer-1.0.0.jar",
+          "primary": true,
+          "size": 12867,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/O3SjMlXp/veinminer-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.17.1"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Vein Miner 1.0.0 (fabric 1.17.1)",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Automated upload from ModCompiler GitHub Actions.\n\nMod: Vein Miner\nMod version: 1.0.0\nLoader: fabric\nMinecraft version: 1.17.1\nBuilt artifact: veinminer-1.0.0.jar"
+    },
+    {
+      "date_published": "2026-04-04T02:26:35.831376Z",
+      "downloads": 2859,
+      "files": [
+        {
+          "filename": "Vein-Miner-1.0.0.jar",
+          "primary": true,
+          "size": 12008,
+          "url": "https://cdn.modrinth.com/data/Tb2zUuPP/versions/2xjR1lyz/Vein-Miner-1.0.0.jar"
+        }
+      ],
+      "game_versions": [
+        "1.12.2"
+      ],
+      "loaders": [
+        "forge"
+      ],
+      "name": "Vein Miner 1.0.0",
+      "version_number": "1.0.0",
+      "version_type": "release",
+      "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Vein Miner\nJar: Vein-Miner-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
+    }
+  ]
+}
