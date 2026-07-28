@@ -671,11 +671,10 @@ body.has-hero .page { padding-top: 0; }
 
 /* ========== MOD CARD (list variant - compact vertical list like Modrinth) ========== */
 .mod-list .mod-card {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   padding: 14px 18px;
   border-radius: var(--radius-md);
-  gap: 16px;
+  gap: 0;
   background: var(--surface);
 }
 .mod-list .mod-card:hover {
@@ -685,14 +684,12 @@ body.has-hero .page { padding-top: 0; }
 }
 .mod-list .mod-card__top {
   flex-direction: row;
-  align-items: center;
-  flex: 1;
-  min-width: 0;
+  align-items: flex-start;
 }
 .mod-list .mod-card__icon-wrap {
-  width: 56px;
-  height: 56px;
-  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  margin-right: 14px;
   border-radius: var(--radius-sm);
 }
 .mod-list .mod-card__fallback {
@@ -713,14 +710,13 @@ body.has-hero .page { padding-top: 0; }
   font-size: 13px;
 }
 .mod-list .mod-card__tags {
-  flex-shrink: 0;
+  margin-top: 10px;
 }
 .mod-list .mod-card__footer {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-  flex-shrink: 0;
-  gap: 12px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  gap: 14px;
 }
 
 /* ========== TAGS ========== */
