@@ -175,6 +175,10 @@ const ICONS = {
   arrow_up_right: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   arrow_down_right: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"/><polyline points="17 7 17 17 7 17"/></svg>',
   discord: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>',
+  message: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+  loader: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin-icon"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>',
+  tag: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+  send: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>',
 };
 
 const BOTANICAL_SVG = '<svg viewBox="0 0 160 210" fill="none"><path d="M82 206C81 150 84 104 105 55" stroke="currentColor" stroke-width="2"/><path d="M91 111C61 95 46 71 51 42C79 48 95 69 91 111Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/><path d="M92 96C115 77 130 54 127 27C102 36 90 59 92 96Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/><path d="M83 154C53 145 35 125 35 100C62 105 80 123 83 154Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/></svg>';
@@ -203,19 +207,6 @@ function renderLoaderTags(loaders) {
 function renderCategoryTags(cats) {
   return (cats || []).slice(0, 3).map(c => `<span class="tag tag--cat">${escapeHtml(c)}</span>`).join("");
 }
-function renderCardTags(loaders, cats) {
-  var parts = [];
-  (loaders || []).slice(0, 3).forEach(function(l) {
-    var k = normLoader(l);
-    var name = LOADER_NAMES[k] || l;
-    var color = LOADER_COLORS[k] || "var(--color-text-dim)";
-    parts.push('<span class="tag tag--loader" style="--loader-color:' + color + '">' + escapeHtml(name) + '</span>');
-  });
-  (cats || []).slice(0, 3).forEach(function(c) {
-    parts.push('<span class="tag tag--cat">' + escapeHtml(c) + '</span>');
-  });
-  return parts.join('<span class="tag-sep">\u00B7</span>');
-}
 function renderVersionTags(versions) {
   return (versions || []).slice(0, 5).map(v => `<span class="tag tag--version">${escapeHtml(v)}</span>`).join("") +
     ((versions || []).length > 5 ? `<span class="tag tag--version">+${versions.length - 5}</span>` : "");
@@ -233,20 +224,18 @@ function modCard(m) {
   const idx = cardIndex++;
   const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__top">' +
-      '<div class="mod-card__icon-wrap">' +
-        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-      '</div>' +
-      '<div class="mod-card__header">' +
-        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '</div>' +
+    '<div class="mod-card__icon-wrap">' +
+      '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+      '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
     '</div>' +
-    '<div class="mod-card__tags">' + renderCardTags(m.loaders, m.categories) + '</div>' +
-    '<div class="mod-card__footer">' +
-      '<span class="mod-card__stat mod-card__stat--downloads">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-      '<span class="mod-card__stat mod-card__stat--followers">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__body">' +
+      '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
+      '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
+      '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
+      '<div class="mod-card__footer">' +
+        '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+        '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+      '</div>' +
     '</div>' +
   '</a>';
 }

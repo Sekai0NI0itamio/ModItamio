@@ -4,10 +4,37 @@ let currentMod = null;
 let versions = [];
 let issues = [];
 let activeTab = "description";
+let issueFilter = "all";
+let expandedIssue = null;
+let issueComments = {};
 let vFilter = { loader: "", version: "" };
 let sbLoader = "";
 let sbGameVer = "";
 let modId = "";
+
+const ISSUE_STATUS = {
+  queued: { label: "Queued", color: "var(--clay)", bg: "var(--clay-soft)", icon: "clock" },
+  "in-progress": { label: "In Progress", color: "var(--moss)", bg: "var(--moss-soft)", icon: "loader" },
+  complete: { label: "Complete", color: "var(--leaf)", bg: "var(--sage-soft)", icon: "check" },
+  wontfix: { label: "Won't Fix", color: "var(--faint)", bg: "var(--surface-2)", icon: "x" },
+};
+
+function getIssueStatus(issue) {
+  const labels = (issue.labels || []).map(l => (typeof l === "string" ? l : l.name).toLowerCase());
+  if (labels.some(l => l.includes("wontfix") || l.includes("unfixable") || l === "invalid" || l === "duplicate")) return "wontfix";
+  if (labels.some(l => l.includes("status:complete") || l.includes("status:done") || l.includes("status:fixed") || l.includes("status:resolved"))) return "complete";
+  if (issue.state === "closed") return "complete";
+  if (labels.some(l => l.includes("in-progress") || l.includes("inprogress") || l.includes("status:progress") || l.includes("status:working"))) return "in-progress";
+  return "queued";
+}
+
+function getIssueType(issue) {
+  const labels = (issue.labels || []).map(l => (typeof l === "string" ? l : l.name).toLowerCase());
+  if (labels.some(l => l.includes("bug") || l.includes("crash"))) return "bug";
+  if (labels.some(l => l.includes("enhancement") || l.includes("feature"))) return "feature";
+  if (labels.some(l => l.includes("question") || l.includes("help"))) return "question";
+  return "issue";
+}
 
 function loaderName(l) { return LOADER_NAMES[normLoader(l)] || l; }
 function loaderColor(l) { return LOADER_COLORS[normLoader(l)] || "var(--color-text-dim)"; }
@@ -21,6 +48,7 @@ function syncUrl() {
   if (sbGameVer) p.set("g", sbGameVer);
   if (vFilter.loader) p.set("vfl", vFilter.loader);
   if (vFilter.version) p.set("vfv", vFilter.version);
+  if (activeTab === "issues" && issueFilter !== "all") p.set("if", issueFilter);
   const qs = p.toString();
   const newUrl = location.pathname + (qs ? "?" + qs : "");
   history.replaceState(null, "", newUrl);
@@ -36,9 +64,12 @@ async function init() {
   activeTab = params.get("tab") || "description";
   vFilter.loader = normLoader(params.get("vfl") || "");
   vFilter.version = params.get("vfv") || "";
+  issueFilter = params.get("if") || "all";
 
   const validTabs = ["description", "gallery", "versions", "changelog", "issues"];
   if (!validTabs.includes(activeTab)) activeTab = "description";
+  const validFilters = ["all", "queued", "in-progress", "complete", "wontfix"];
+  if (!validFilters.includes(issueFilter)) issueFilter = "all";
 
   renderNavbar("mods");
   const root = document.getElementById("app");
@@ -48,8 +79,16 @@ async function init() {
     currentMod = await fetchJSON(CONFIG.dataUrl + "/" + modId + ".json");
     versions = currentMod.versions || [];
     try {
-      const r = await fetch(ISSUES_API + "?state=open&labels=mod:" + encodeURIComponent(modId) + "&per_page=30&sort=updated");
-      if (r.ok) issues = await r.json(); else issues = [];
+      const allIssues = [];
+      for (let page = 1; page <= 3; page++) {
+        const r = await fetch(ISSUES_API + "?state=all&labels=mod:" + encodeURIComponent(modId) + "&per_page=100&page=" + page + "&sort=updated&direction=desc");
+        if (!r.ok) break;
+        const pageIssues = await r.json();
+        if (!pageIssues.length) break;
+        allIssues.push(...pageIssues);
+        if (pageIssues.length < 100) break;
+      }
+      issues = allIssues;
     } catch(e) { issues = []; }
 
     if (!sbLoader) sbLoader = pickDefaultLoader();
@@ -129,9 +168,12 @@ function render() {
 
   const links = [];
   if (currentMod.source_url) links.push({ icon: ICONS.github, label: "Source", url: currentMod.source_url });
-  if (currentMod.issues_url) links.push({ icon: ICONS.alert, label: "Issues", url: currentMod.issues_url });
+  links.push({ icon: ICONS.alert, label: "Issues", url: ISSUES_API.replace("api.github.com/repos", "github.com") });
   if (currentMod.wiki_url) links.push({ icon: ICONS.book, label: "Wiki", url: currentMod.wiki_url });
   if (currentMod.discord_url) links.push({ icon: ICONS.discord, label: "Discord", url: currentMod.discord_url });
+
+  const issueCount = issues.length;
+  const openCount = issues.filter(i => getIssueStatus(i) !== "complete" && getIssueStatus(i) !== "wontfix").length;
 
   root.innerHTML =
   '<div class="proj-header">' +
@@ -159,6 +201,7 @@ function render() {
     '<span class="proj-meta__item">' + ICONS.download + ' ' + formatNumber(currentMod.downloads) + ' downloads</span>' +
     '<span class="proj-meta__item">' + ICONS.heart + ' ' + formatNumber(currentMod.followers) + ' followers</span>' +
     '<span class="proj-meta__item">' + ICONS.clock + ' Updated ' + timeAgo(currentMod.updated || currentMod.date_published) + '</span>' +
+    '<span class="proj-meta__item">' + ICONS.alert + ' ' + openCount + ' open / ' + issueCount + ' total issues</span>' +
     (currentMod.author ? '<span class="proj-meta__item">by <strong>' + escapeHtml(currentMod.author) + '</strong></span>' : "") +
     links.map(l => '<a class="proj-meta__link" href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + l.icon + ' ' + escapeHtml(l.label) + ' ' + ICONS.external + '</a>').join("") +
   '</div>' +
@@ -168,7 +211,7 @@ function render() {
     (gallery.length ? renderTab("gallery", "Gallery (" + gallery.length + ")") : "") +
     renderTab("versions", "Versions (" + versions.length + ")") +
     (versions.some(v => v.changelog) ? renderTab("changelog", "Changelog") : "") +
-    renderTab("issues", "Issues" + (issues.length ? " (" + issues.length + ")" : "")) +
+    renderTab("issues", "Issues" + (issueCount ? " (" + openCount + ")" : "")) +
   '</div>' +
 
   '<div class="proj-body" id="proj-body"></div>';
@@ -195,7 +238,7 @@ function renderTabContent() {
     case "gallery": body.innerHTML = renderGallery(); break;
     case "versions": body.innerHTML = renderVersions(); break;
     case "changelog": body.innerHTML = renderChangelog(); break;
-    case "issues": body.innerHTML = renderIssues(); break;
+    case "issues": body.innerHTML = renderIssues(); bindIssueEvents(); break;
   }
 }
 
@@ -238,7 +281,6 @@ function updateSidebarDownload() {
   if (!downloadBtn) return;
 
   if (loaderSel) {
-    const currentVal = loaderSel.value;
     const availLoaders = getAvailableLoaders(sbGameVer);
     loaderSel.innerHTML = '<option value="">Any loader</option>' + availLoaders.map(l =>
       '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(loaderName(l) || l) + '</option>'
@@ -464,66 +506,232 @@ function renderChangelog() {
   ).join("") + '</div></div>';
 }
 
-function renderIssues() {
+function getFilteredIssues() {
   const modIssues = issues.filter(issue => {
     const labels = (issue.labels || []).map(l => typeof l === "string" ? l : l.name);
     return labels.some(l => l === "mod:" + currentMod.mod_id);
   });
-  const newIssueUrl = ISSUES_NEW_URL + "?labels=mod:" + encodeURIComponent(currentMod.mod_id) + "&title=" + encodeURIComponent("[" + currentMod.name + "] ");
+  if (issueFilter === "all") return modIssues;
+  return modIssues.filter(i => getIssueStatus(i) === issueFilter);
+}
+
+function renderStatusBadge(status) {
+  const s = ISSUE_STATUS[status];
+  if (!s) return "";
+  return '<span class="issue-status issue-status--' + status + '" style="--status-color:' + s.color + ';--status-bg:' + s.bg + '">' +
+    ICONS[s.icon] + ' ' + s.label +
+  '</span>';
+}
+
+function setIssueFilter(filter) {
+  issueFilter = filter;
+  syncUrl();
+  renderTabContent();
+}
+
+function toggleIssueExpand(issueNumber) {
+  if (expandedIssue === issueNumber) {
+    expandedIssue = null;
+  } else {
+    expandedIssue = issueNumber;
+    if (!issueComments[issueNumber]) {
+      loadIssueComments(issueNumber);
+    }
+  }
+  renderTabContent();
+}
+
+async function loadIssueComments(issueNumber) {
+  try {
+    const issue = issues.find(i => i.number === issueNumber);
+    if (!issue || !issue.comments_url) return;
+    const r = await fetch(issue.comments_url);
+    if (r.ok) {
+      issueComments[issueNumber] = await r.json();
+      const el = document.getElementById("issue-comments-" + issueNumber);
+      if (el) el.innerHTML = renderIssueComments(issueComments[issueNumber]);
+    }
+  } catch(e) {
+    issueComments[issueNumber] = [];
+  }
+}
+
+function renderIssueComments(comments) {
+  if (!comments || !comments.length) {
+    return '<div class="issue-comments__empty"><em>No comments yet.</em></div>';
+  }
+  return comments.map(c =>
+    '<div class="issue-comment">' +
+      '<div class="issue-comment__header">' +
+        '<img class="issue-comment__avatar" src="' + escapeHtml(c.user?.avatar_url || "") + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' +
+        '<span class="issue-comment__author">' + escapeHtml(c.user?.login || "unknown") + '</span>' +
+        '<span class="issue-comment__date">' + timeAgo(c.created_at) + '</span>' +
+      '</div>' +
+      '<div class="prose issue-comment__body">' + renderMarkdown(c.body || "") + '</div>' +
+    '</div>'
+  ).join("");
+}
+
+function renderIssues() {
+  const filtered = getFilteredIssues();
+  const allModIssues = issues.filter(i => {
+    const labels = (i.labels||[]).map(l=>typeof l==='string'?l:l.name);
+    return labels.some(l=>l==='mod:'+currentMod.mod_id);
+  });
+  const counts = { all: allModIssues.length, queued: 0, "in-progress": 0, complete: 0, wontfix: 0 };
+  allModIssues.forEach(i => { const s = getIssueStatus(i); counts[s] = (counts[s]||0) + 1; });
+
+  const allLoaders = [...new Set(versions.flatMap(v => v.loaders || []).map(normLoader))];
+  const allVersions = [...new Set(versions.flatMap(v => v.game_versions || []))].sort().reverse();
+
+  const filterTabs = [
+    { key: "all", label: "All", count: counts.all },
+    { key: "queued", label: "Queued", count: counts.queued },
+    { key: "in-progress", label: "In Progress", count: counts["in-progress"] },
+    { key: "complete", label: "Complete", count: counts.complete },
+    { key: "wontfix", label: "Won't Fix", count: counts.wontfix },
+  ];
 
   return '<div class="issues-layout">' +
     '<div>' +
+      '<div class="issue-filters">' +
+        filterTabs.map(t =>
+          '<button class="issue-filter' + (issueFilter === t.key ? ' issue-filter--active' : '') + '" onclick="setIssueFilter(\'' + t.key + '\')">' +
+            escapeHtml(t.label) + ' <span class="issue-filter__count">' + t.count + '</span>' +
+          '</button>'
+        ).join("") +
+      '</div>' +
       '<div class="panel"><div class="panel__body">' +
-        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-4)">' +
-          '<h3 style="font-size:var(--fs-lg);font-weight:700;margin:0;color:var(--color-text-bright)">Open issues</h3>' +
-          '<a class="btn btn--primary" href="' + newIssueUrl + '" target="_blank" rel="noopener"><span class="btn__icon">' + ICONS.alert + '</span><span class="btn__label">New issue</span></a>' +
-        '</div>' +
-        (modIssues.length === 0 ? '<div class="empty" style="padding:var(--space-8)"><p style="margin-bottom:var(--space-2)">No open issues for this mod.</p><a class="btn" href="' + newIssueUrl + '" target="_blank" rel="noopener">Report one</a></div>' :
-        '<div class="issue-list">' + modIssues.map(renderIssueRow).join("") + '</div>') +
+        (filtered.length === 0 ? '<div class="empty" style="padding:var(--space-8)"><p style="margin-bottom:var(--space-2)">No ' + (issueFilter !== "all" ? issueFilter + " " : "") + 'issues for this mod.</p></div>' :
+        '<div class="issue-list">' + filtered.map(renderIssueRow).join("") + '</div>') +
       '</div></div>' +
     '</div>' +
     '<div class="issues-sidebar">' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
-        '<h3 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-3);color:var(--color-text-bright)">Quick report</h3>' +
+        '<h3 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-3);color:var(--color-text-bright)">Report an issue</h3>' +
         '<form id="quick-issue-form" onsubmit="submitQuickIssue(event)">' +
+          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Issue type</label>' +
+          '<select class="form-select" id="qi-type" style="width:100%;margin-bottom:var(--space-3)">' +
+            '<option value="bug">Bug / Crash</option>' +
+            '<option value="enhancement">Feature Request</option>' +
+            '<option value="question">Question / Help</option>' +
+            '<option value="">Other</option>' +
+          '</select>' +
+          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Loader</label>' +
+          '<select class="form-select" id="qi-loader" style="width:100%;margin-bottom:var(--space-3)">' +
+            '<option value="">Any / Not applicable</option>' +
+            allLoaders.map(l => '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(loaderName(l) || l) + '</option>').join("") +
+          '</select>' +
+          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Minecraft version</label>' +
+          '<select class="form-select" id="qi-version" style="width:100%;margin-bottom:var(--space-3)">' +
+            '<option value="">Any / Not applicable</option>' +
+            allVersions.map(v => '<option value="' + escapeHtml(v) + '"' + (v === sbGameVer ? ' selected' : '') + '>' + escapeHtml(v) + '</option>').join("") +
+          '</select>' +
           '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Title</label>' +
           '<input class="form-input" type="text" id="qi-title" placeholder="Brief summary of the issue..." required style="width:100%;margin-bottom:var(--space-3)">' +
           '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Description</label>' +
-          '<textarea class="form-input" id="qi-body" rows="4" placeholder="Steps to reproduce, expected behavior, etc..." style="width:100%;margin-bottom:var(--space-3);resize:vertical"></textarea>' +
-          '<button type="submit" class="btn btn--primary" style="width:100%">Submit on GitHub</button>' +
+          '<textarea class="form-input" id="qi-body" rows="5" placeholder="Steps to reproduce, expected behavior, crash reports, screenshots, etc..." style="width:100%;margin-bottom:var(--space-3);resize:vertical"></textarea>' +
+          '<button type="submit" class="btn btn--primary" style="width:100%"><span class="btn__icon">' + ICONS.send + '</span><span class="btn__label">Create on GitHub</span></button>' +
         '</form>' +
         '<div id="qi-result" style="margin-top:var(--space-2);font-size:var(--fs-sm)"></div>' +
+        '<p style="margin:var(--space-3) 0 0;font-size:var(--fs-xs);color:var(--faint);line-height:1.5">' + ICONS.github + " You'll be taken to GitHub to submit. Issues are tracked with the <code>mod:" + escapeHtml(currentMod.mod_id) + '</code> label.</p>' +
+      '</div></div>' +
+      '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
+        '<h3 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-2);color:var(--color-text-bright)">Status guide</h3>' +
+        '<div class="status-legend">' +
+          Object.entries(ISSUE_STATUS).map(([key, s]) =>
+            '<div class="status-legend__row">' +
+              renderStatusBadge(key) +
+              '<span class="status-legend__desc">' +
+                (key === "queued" ? "Reported, waiting to be reviewed" :
+                 key === "in-progress" ? "Actively being worked on" :
+                 key === "complete" ? "Fixed and resolved" :
+                 "Cannot be fixed or won't be addressed") +
+              '</span>' +
+            '</div>'
+          ).join("") +
+        '</div>' +
       '</div></div>' +
     '</div>' +
   '</div>';
 }
 
 function renderIssueRow(issue) {
-  const labels = (issue.labels || []).map(l => {
+  const status = getIssueStatus(issue);
+  const statusInfo = ISSUE_STATUS[status];
+  const labels = (issue.labels || []).filter(l => {
     const name = typeof l === "string" ? l : l.name;
-    const color = typeof l === "string" ? "#555" : "#" + (l.color || "555");
-    if (name.startsWith("mod:")) return "";
-    return '<span class="issue-label" style="--label:#' + (typeof l === "string" ? "555" : l.color || "555") + '">' + escapeHtml(name) + '</span>';
-  }).filter(Boolean).join("");
-  return '<a class="issue-row" href="' + escapeHtml(issue.html_url) + '" target="_blank" rel="noopener">' +
-    '<span class="issue-row__icon" style="color:var(--color-brand)">' + ICONS.alert + '</span>' +
-    '<div style="min-width:0;flex:1">' +
-      '<div class="issue-row__title">' + escapeHtml(issue.title) + '</div>' +
-      '<div class="issue-row__meta">#' + issue.number + ' opened ' + timeAgo(issue.created_at) + ' by ' + escapeHtml(issue.user?.login || "unknown") + '</div>' +
-      (labels ? '<div class="issue-row__labels">' + labels + '</div>' : "") +
+    return !name.startsWith("mod:") && !name.startsWith("status:") && !["wontfix","unfixable","invalid","duplicate"].includes(name.toLowerCase());
+  }).map(l => {
+    const name = typeof l === "string" ? l : l.name;
+    return '<span class="issue-label" style="--label:#' + (typeof l === "string" ? "8b949e" : l.color || "8b949e") + '">' + escapeHtml(name) + '</span>';
+  }).join("");
+
+  const isOpen = status === "queued" || status === "in-progress";
+  const isExpanded = expandedIssue === issue.number;
+  const hasComments = (issue.comments || 0) > 0;
+
+  return '<div class="issue-row' + (isExpanded ? ' issue-row--expanded' : '') + '" data-issue="' + issue.number + '">' +
+    '<div class="issue-row__header" onclick="toggleIssueExpand(' + issue.number + ')">' +
+      '<span class="issue-row__icon issue-row__icon--' + status + '" style="color:' + statusInfo.color + '">' + ICONS[statusInfo.icon] + '</span>' +
+      '<div style="min-width:0;flex:1">' +
+        '<div class="issue-row__title-row">' +
+          '<span class="issue-row__title">' + escapeHtml(issue.title) + '</span>' +
+          renderStatusBadge(status) +
+        '</div>' +
+        '<div class="issue-row__meta">#' + issue.number + ' ' + (isOpen ? 'opened' : 'closed') + ' ' + timeAgo(issue.created_at) + ' by ' + escapeHtml(issue.user?.login || "unknown") +
+          (hasComments ? ' &bull; ' + ICONS.message + ' ' + issue.comments : '') +
+        '</div>' +
+        (labels ? '<div class="issue-row__labels">' + labels + '</div>' : "") +
+      '</div>' +
+      '<span class="issue-row__cmt issue-row__cmt--' + (isExpanded ? 'expanded' : 'collapsed') + '">' + (isExpanded ? ICONS.chevron_down : ICONS.chevron_right) + '</span>' +
     '</div>' +
-    '<span class="issue-row__cmt">' + ICONS.chevron_right + '</span>' +
-  '</a>';
+    (isExpanded ? '<div class="issue-detail">' +
+      '<div class="issue-detail__body prose">' + renderMarkdown(issue.body || "_No description provided._") + '</div>' +
+      '<div class="issue-detail__actions">' +
+        '<a class="btn btn--sm" href="' + escapeHtml(issue.html_url) + '" target="_blank" rel="noopener">' + ICONS.external + ' View on GitHub</a>' +
+        '<a class="btn btn--sm" href="' + escapeHtml(issue.html_url) + '#issuecomment-new" target="_blank" rel="noopener">' + ICONS.message + ' Reply</a>' +
+      '</div>' +
+      '<div class="issue-comments" id="issue-comments-' + issue.number + '">' +
+        '<div class="issue-comments__loading">' + ICONS.loader + ' Loading comments...</div>' +
+      '</div>' +
+    '</div>' : "") +
+  '</div>';
+}
+
+function bindIssueEvents() {
 }
 
 function submitQuickIssue(e) {
   e.preventDefault();
   const title = document.getElementById("qi-title").value.trim();
   const body = document.getElementById("qi-body").value.trim();
+  const type = document.getElementById("qi-type").value;
+  const qiLoader = document.getElementById("qi-loader").value;
+  const qiVersion = document.getElementById("qi-version").value;
   if (!title) return;
-  const url = ISSUES_NEW_URL + "?labels=" + encodeURIComponent("mod:" + currentMod.mod_id) + "&title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body || "");
+
+  const labels = ["mod:" + currentMod.mod_id];
+  if (type === "bug") labels.push("bug");
+  if (type === "enhancement") labels.push("enhancement");
+  if (type === "question") labels.push("question");
+
+  const fullTitle = "[" + currentMod.name + "] " + title;
+
+  const fullBody = "## Mod Info\n" +
+    "- **Mod**: " + currentMod.name + " (`" + currentMod.mod_id + "`)\n" +
+    (qiLoader ? "- **Loader**: " + loaderName(qiLoader) + "\n" : "") +
+    (qiVersion ? "- **Minecraft Version**: " + qiVersion + "\n" : "") +
+    "- **Mod Version**: " + (versions[0]?.version_number || "unknown") + "\n\n" +
+    "## Description\n" + (body || "_No description provided._") + "\n\n---\n*Submitted via ModItamio*";
+
+  const url = ISSUES_NEW_URL +
+    "?labels=" + encodeURIComponent(labels.join(",")) +
+    "&title=" + encodeURIComponent(fullTitle) +
+    "&body=" + encodeURIComponent(fullBody);
+
   window.open(url, "_blank");
-  document.getElementById("qi-result").innerHTML = '<span style="color:var(--color-brand)">' + ICONS.check + ' Opened GitHub in new tab</span>';
+  document.getElementById("qi-result").innerHTML = '<span style="color:var(--leaf)">' + ICONS.check + ' Opened GitHub in a new tab to complete your submission</span>';
 }
 
 document.addEventListener("DOMContentLoaded", init);
