@@ -1,8 +1,9 @@
+var BASE_PATH = (typeof BASE_PATH !== "undefined") ? BASE_PATH : ".";
 const CONFIG = {
   repoOwner: "Sekai0NI0itamio",
   repoName: "ModItamio",
-  dataUrl: "./data",
-  modsAssetBase: "./mods",
+  dataUrl: BASE_PATH + "/data",
+  modsAssetBase: BASE_PATH + "/mods",
 };
 
 const REPO_URL = `https://github.com/${CONFIG.repoOwner}/${CONFIG.repoName}`;
@@ -207,6 +208,19 @@ function renderLoaderTags(loaders) {
 function renderCategoryTags(cats) {
   return (cats || []).slice(0, 3).map(c => `<span class="tag tag--cat">${escapeHtml(c)}</span>`).join("");
 }
+function renderCardTags(loaders, cats) {
+  var parts = [];
+  (loaders || []).slice(0, 3).forEach(function(l) {
+    var k = normLoader(l);
+    var name = LOADER_NAMES[k] || l;
+    var color = LOADER_COLORS[k] || "var(--color-text-dim)";
+    parts.push('<span class="tag tag--loader" style="--loader-color:' + color + '">' + escapeHtml(name) + '</span>');
+  });
+  (cats || []).slice(0, 3).forEach(function(c) {
+    parts.push('<span class="tag tag--cat">' + escapeHtml(c) + '</span>');
+  });
+  return parts.join('<span class="tag-sep">\u00B7</span>');
+}
 function renderVersionTags(versions) {
   return (versions || []).slice(0, 5).map(v => `<span class="tag tag--version">${escapeHtml(v)}</span>`).join("") +
     ((versions || []).length > 5 ? `<span class="tag tag--version">+${versions.length - 5}</span>` : "");
@@ -222,20 +236,22 @@ function modCard(m) {
   const iconUrl = m.icon_url || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
   const letter = (m.name || "M")[0].toUpperCase();
   const idx = cardIndex++;
-  const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
+  const href = BASE_PATH + "/mod/index.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__icon-wrap">' +
-      '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-      '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-    '</div>' +
-    '<div class="mod-card__body">' +
-      '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-      '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
-      '<div class="mod-card__footer">' +
-        '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-        '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__top">' +
+      '<div class="mod-card__icon-wrap">' +
+        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
       '</div>' +
+      '<div class="mod-card__header">' +
+        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
+        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="mod-card__tags">' + renderCardTags(m.loaders, m.categories) + '</div>' +
+    '<div class="mod-card__footer">' +
+      '<span class="mod-card__stat mod-card__stat--downloads">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+      '<span class="mod-card__stat mod-card__stat--followers">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
     '</div>' +
   '</a>';
 }
@@ -244,16 +260,18 @@ function resetCardIndex() { cardIndex = 0; }
 function renderNavbar(active) {
   const el = document.getElementById("navbar");
   if (!el) return;
+  const homeUrl = BASE_PATH + "/index.html";
+  const browseUrl = BASE_PATH + "/browse/index.html";
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
-    '<a href="index.html" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
+    '<a href="' + homeUrl + '" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
     '<div class="nav__search">' +
       ICONS.search +
       '<input type="text" id="nav-search" placeholder="Search mods..." autocomplete="off">' +
     '</div>' +
     '<nav class="nav__links">' +
-      '<a href="index.html" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
-      '<a href="mods.html" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
+      '<a href="' + homeUrl + '" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
+      '<a href="' + browseUrl + '" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
       '<a href="' + REPO_URL + '/issues" target="_blank" rel="noopener" class="nav__link">Issues' + ICONS.external + '</a>' +
       '<a href="' + REPO_URL + '" target="_blank" rel="noopener" class="nav__link nav__link--icon" title="GitHub">' + ICONS.github + '</a>' +
       '<button id="theme-btn" class="nav__theme-btn" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +
@@ -263,7 +281,7 @@ function renderNavbar(active) {
   if (si) {
     si.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && si.value.trim()) {
-        location.href = "mods.html?q=" + encodeURIComponent(si.value.trim());
+        location.href = browseUrl + "?q=" + encodeURIComponent(si.value.trim());
       }
     });
   }

@@ -478,7 +478,7 @@ function renderVersionRow(v) {
   return '<div class="vrow">' +
     versionBadge(v.version_type) +
     '<div class="vrow__info">' +
-      '<div class="vrow__name"><a href="version.html?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' + escapeHtml(v.name || v.version_number) + '</a></div>' +
+      '<div class="vrow__name"><a href="' + BASE_PATH + '/version/index.html?id=' + encodeURIComponent(currentMod.mod_id) + '&v=' + encodeURIComponent(v.version_number) + '&l=' + encodeURIComponent((v.loaders||[])[0]||"") + '">' + escapeHtml(v.name || v.version_number) + '</a></div>' +
       '<div class="vrow__tags">' + renderVersionTags(v.game_versions) + renderLoaderTags(v.loaders) + '</div>' +
     '</div>' +
     '<div class="vrow__meta">' +

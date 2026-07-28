@@ -24,7 +24,7 @@ async function initDiscover() {
 
     const hs = document.getElementById("hero-search");
     if (hs) hs.addEventListener("keydown", e => {
-      if (e.key === "Enter" && hs.value.trim()) location.href = "mods.html?q=" + encodeURIComponent(hs.value.trim());
+      if (e.key === "Enter" && hs.value.trim()) location.href = BASE_PATH + "/browse/index.html?q=" + encodeURIComponent(hs.value.trim());
     });
   } catch (err) {
     mainWrap.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
