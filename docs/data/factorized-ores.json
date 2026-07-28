@@ -90,5 +90,8 @@
       "version_type": "release",
       "changelog": "Adds a block called Infinity stone, when mined or destroyed will not disappear, but always drop items where cobblestone is the most abundant. and minerals like iron, redstone, coal, diamonds, etc."
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }

@@ -103,5 +103,10 @@
       "version_type": "release",
       "changelog": "working version that i use"
     }
+  ],
+  "game_versions": [
+    "1.12",
+    "1.12.1",
+    "1.12.2"
   ]
 }

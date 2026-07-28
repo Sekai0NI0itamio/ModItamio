@@ -205,5 +205,12 @@
       "version_type": "release",
       "changelog": "Initial release of Smooth Container for Minecraft 1.20.1 Fabric. Eliminates the lag spike when opening all vanilla containers. Fully functional on both singleplayer and multiplayer."
     }
+  ],
+  "game_versions": [
+    "1.12.2",
+    "1.20.1",
+    "1.21.1",
+    "1.21.11",
+    "26.1.2"
   ]
 }

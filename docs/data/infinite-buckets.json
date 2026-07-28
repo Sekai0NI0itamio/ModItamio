@@ -49,5 +49,8 @@
       "version_type": "release",
       "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Infinite Water Bucket\nJar: Infinite-Water-Bucket-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }

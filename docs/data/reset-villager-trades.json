@@ -50,5 +50,8 @@
       "version_type": "release",
       "changelog": "Makes villagers less annoying and more useful in 1.12.2"
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }

@@ -50,5 +50,8 @@
       "version_type": "release",
       "changelog": "I had an elytra in my single player game, but i havent used it for 2 months, because the fireworks just never worked. I tried searching for a solution, nothing worked for me. Because of that, i created this mod, which FIXES THIS ST*PID ISSUE."
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }

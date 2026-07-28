@@ -50,5 +50,10 @@
       "version_type": "release",
       "changelog": ""
     }
+  ],
+  "game_versions": [
+    "1.12",
+    "1.12.1",
+    "1.12.2"
   ]
 }

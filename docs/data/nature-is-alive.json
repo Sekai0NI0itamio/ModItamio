@@ -58,5 +58,8 @@
       "version_type": "release",
       "changelog": "First working version of this mod, everything major is working, configs tweaked to a natural feel (not to fast growth, just casual)"
     }
+  ],
+  "game_versions": [
+    "1.20.1"
   ]
 }

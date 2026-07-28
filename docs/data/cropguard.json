@@ -204,5 +204,12 @@
       "version_type": "release",
       "changelog": "Initial release for Fabric 1.20.1. Prevents breaking of unripe vanilla crops (wheat, carrots, potatoes, beetroot, torchflower, pitcher plant, nether wart, sweet berries). Sneak-to-bypass enabled."
     }
+  ],
+  "game_versions": [
+    "1.12.2",
+    "1.20.1",
+    "1.21.1",
+    "1.21.11",
+    "26.1.2"
   ]
 }

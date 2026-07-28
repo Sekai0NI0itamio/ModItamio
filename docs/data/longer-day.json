@@ -56,5 +56,8 @@
       "version_type": "release",
       "changelog": "- Initial release\n- Configurable day and night lengths (default: 60 minutes each)\n- Smooth client-side sun/moon rendering\n- Sync night length with day length option\n- Handles /time set and sleeping properly"
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }

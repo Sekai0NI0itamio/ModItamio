@@ -71,5 +71,8 @@
       "version_type": "release",
       "changelog": "All feature working, at least from how i use it right now everything is working fine."
     }
+  ],
+  "game_versions": [
+    "1.8.9"
   ]
 }

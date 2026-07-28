@@ -49,5 +49,8 @@
       "version_type": "release",
       "changelog": "Auto-created from a verified local jar bundle.\n\nProject: Auto Torch Placer\nJar: Auto-Torch-Placer-1.0.0.jar\nLoader: forge\nDetected versions: 1.12.2"
     }
+  ],
+  "game_versions": [
+    "1.12.2"
   ]
 }
