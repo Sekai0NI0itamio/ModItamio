@@ -780,7 +780,16 @@ body.has-hero .page { padding-top: 0; }
   display: flex;
   flex-direction: column;
   gap: 18px;
+  max-height: calc(100vh - var(--nav-h) - 40px);
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sage) transparent;
 }
+.search-sidebar::-webkit-scrollbar { width: 6px; }
+.search-sidebar::-webkit-scrollbar-track { background: transparent; }
+.search-sidebar::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 3px; }
+.search-sidebar::-webkit-scrollbar-thumb:hover { background: var(--leaf); }
 .clear-btn {
   display: flex;
   align-items: center;

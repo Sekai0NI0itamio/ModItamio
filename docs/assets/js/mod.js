@@ -7,18 +7,38 @@ let activeTab = "description";
 let vFilter = { loader: "", version: "" };
 let sbLoader = "";
 let sbGameVer = "";
+let modId = "";
 
 function loaderName(l) { return LOADER_NAMES[normLoader(l)] || l; }
 function loaderColor(l) { return LOADER_COLORS[normLoader(l)] || "var(--color-text-dim)"; }
 function loadersInclude(arr, l) { return (arr || []).some(x => normLoader(x) === normLoader(l)); }
 
+function syncUrl() {
+  const p = new URLSearchParams();
+  if (modId) p.set("id", modId);
+  if (activeTab && activeTab !== "description") p.set("tab", activeTab);
+  if (sbLoader) p.set("l", sbLoader);
+  if (sbGameVer) p.set("g", sbGameVer);
+  if (vFilter.loader) p.set("vfl", vFilter.loader);
+  if (vFilter.version) p.set("vfv", vFilter.version);
+  const qs = p.toString();
+  const newUrl = location.pathname + (qs ? "?" + qs : "");
+  history.replaceState(null, "", newUrl);
+}
+
 async function init() {
   const params = new URLSearchParams(location.search);
-  const modId = params.get("id");
+  modId = params.get("id");
   if (!modId) { document.getElementById("app").innerHTML = '<div class="empty"><p>Missing mod ID.</p></div>'; return; }
 
-  sbLoader = params.get("l") || "";
+  sbLoader = normLoader(params.get("l") || "");
   sbGameVer = params.get("g") || "";
+  activeTab = params.get("tab") || "description";
+  vFilter.loader = normLoader(params.get("vfl") || "");
+  vFilter.version = params.get("vfv") || "";
+
+  const validTabs = ["description", "gallery", "versions", "changelog", "issues"];
+  if (!validTabs.includes(activeTab)) activeTab = "description";
 
   renderNavbar("mods");
   const root = document.getElementById("app");
@@ -35,7 +55,16 @@ async function init() {
     if (!sbLoader) sbLoader = pickDefaultLoader();
     if (!sbGameVer) sbGameVer = pickDefaultGameVer(sbLoader);
 
+    const availLoaders = getAvailableLoaders();
+    const availVers = getAvailableGameVers(sbLoader);
+    if (sbLoader && !availLoaders.includes(sbLoader)) sbLoader = availLoaders[0] || "";
+    if (sbGameVer && !availVers.includes(sbGameVer)) sbGameVer = availVers[0] || "";
+
+    if (activeTab === "changelog" && !versions.some(v => v.changelog)) activeTab = "description";
+    if (activeTab === "gallery" && !(currentMod.gallery || []).length) activeTab = "description";
+
     document.title = escapeHtml(currentMod.name) + " — ModItamio";
+    syncUrl();
     render();
   } catch (e) {
     root.innerHTML = '<div class="empty"><p>Mod not found: ' + escapeHtml(e.message) + '</p><a class="btn" href="mods.html">' + ICONS.chevron_left + ' Back to mods</a></div>';
@@ -154,6 +183,7 @@ function renderTab(id, label) {
 function switchTab(tab) {
   activeTab = tab;
   document.querySelectorAll(".proj-tab").forEach(t => t.classList.toggle("proj-tab--active", t.dataset.tab === tab));
+  syncUrl();
   renderTabContent();
 }
 
@@ -170,11 +200,12 @@ function renderTabContent() {
 }
 
 function onSidebarLoaderChange(val) {
-  sbLoader = val;
+  sbLoader = normLoader(val);
   const availVers = getAvailableGameVers(sbLoader);
   if (sbGameVer && !availVers.includes(sbGameVer)) {
     sbGameVer = availVers[0] || "";
   }
+  syncUrl();
   updateSidebarDownload();
   updateHeaderDownload();
 }
@@ -185,6 +216,7 @@ function onSidebarVerChange(val) {
   if (sbLoader && !availLoaders.includes(sbLoader)) {
     sbLoader = availLoaders[0] || "";
   }
+  syncUrl();
   updateSidebarDownload();
   updateHeaderDownload();
 }
@@ -378,16 +410,19 @@ function getFilteredVersions() {
   return list;
 }
 
+function onVerFilterLoader(val) { vFilter.loader = normLoader(val); syncUrl(); renderTabContent(); }
+function onVerFilterVersion(val) { vFilter.version = val; syncUrl(); renderTabContent(); }
+
 function renderVersions() {
   const allLoaders = [...new Set(versions.flatMap(v => v.loaders || []).map(normLoader))];
   const allVersions = [...new Set(versions.flatMap(v => v.game_versions || []))].sort().reverse();
   const filtered = getFilteredVersions();
 
   return '<div class="version-filters">' +
-    '<select class="form-select" onchange="vFilter.loader=this.value;renderTabContent()"><option value="">All loaders</option>' +
+    '<select class="form-select" onchange="onVerFilterLoader(this.value)"><option value="">All loaders</option>' +
       allLoaders.map(l => '<option value="' + l + '"' + (vFilter.loader === l ? " selected" : "") + '>' + escapeHtml(loaderName(l) || l) + '</option>').join("") +
     '</select>' +
-    '<select class="form-select" onchange="vFilter.version=this.value;renderTabContent()"><option value="">All versions</option>' +
+    '<select class="form-select" onchange="onVerFilterVersion(this.value)"><option value="">All versions</option>' +
       allVersions.map(v => '<option value="' + escapeHtml(v) + '"' + (vFilter.version === v ? " selected" : "") + '>' + escapeHtml(v) + '</option>').join("") +
     '</select>' +
   '</div>' +
