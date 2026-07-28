@@ -262,6 +262,8 @@ body.has-hero .page { padding-top: 0; }
 .btn--sm { padding: 6px 12px; font-size: 12px; gap: 5px; }
 .btn--icon { padding: 8px; width: 32px; height: 32px; }
 .btn--icon svg { width: 14px; height: 14px; }
+.btn--lg.btn--icon { padding: 13px; width: 48px; height: 48px; }
+.btn--lg.btn--icon svg { width: 20px; height: 20px; }
 .btn__icon { display: flex; align-items: center; }
 .btn__icon svg { width: 15px; height: 15px; }
 
@@ -1104,8 +1106,8 @@ body.has-hero .page { padding-top: 0; }
 }
 .proj-icon-wrap {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   flex-shrink: 0;
   border-radius: var(--radius);
   overflow: hidden;
@@ -1128,7 +1130,7 @@ body.has-hero .page { padding-top: 0; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   display: flex;
 }
@@ -2019,10 +2021,11 @@ textarea.form-input { resize: vertical; min-height: 100px; border-radius: var(--
   .gallery-grid { grid-template-columns: 1fr; }
   .proj-header { flex-direction: column; }
   .proj-header__main { width: 100%; }
-  .proj-icon-wrap { width: 72px; height: 72px; }
+  .proj-icon-wrap { width: 80px; height: 80px; }
   .proj-header__title { font-size: 28px; }
   .proj-header__actions { width: 100%; }
   .proj-header__actions .btn { flex: 1; }
+  .proj-header__actions .btn--icon { flex: 0 0 auto; }
   .vrow { flex-wrap: wrap; gap: 10px; }
   .vrow__meta { flex-direction: row; align-items: center; gap: 12px; }
   .inline-ad { flex-direction: column; align-items: flex-start; text-align: left; }

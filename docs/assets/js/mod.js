@@ -192,8 +192,8 @@ function render() {
       '</div>' +
     '</div>' +
     '<div class="proj-header__actions">' +
-      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label" id="header-download-label">' + ((sbLoader || sbGameVer) ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "") : "Download") + '</span></a>' : "") +
-      '<a class="btn btn--lg" href="' + ISSUES_NEW_URL + '?labels=mod:' + escapeHtml(currentMod.mod_id) + '&title=' + encodeURIComponent("[" + currentMod.name + "] ") + '" target="_blank" rel="noopener"><span class="btn__icon">' + ICONS.alert + '</span><span class="btn__label">Report issue</span></a>' +
+      (primaryFile ? '<a class="btn btn--lg btn--primary btn--icon" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download title="Download">' + ICONS.download + '</a>' : "") +
+      '<a class="btn btn--lg btn--icon" href="' + ISSUES_NEW_URL + '?labels=mod:' + escapeHtml(currentMod.mod_id) + '&title=' + encodeURIComponent("[" + currentMod.name + "] ") + '" target="_blank" rel="noopener" title="Report issue">' + ICONS.alert + '</a>' +
     '</div>' +
   '</div>' +
 
@@ -325,15 +325,10 @@ function updateHeaderDownload() {
   if (sel) {
     btn.href = sel.file.url;
     btn.style.display = "";
-    const label = document.getElementById("header-download-label");
-    if (label) {
-      if (sbLoader || sbGameVer) {
-        label.textContent = "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "");
-      } else {
-        label.textContent = "Download";
-      }
-    }
-    btn.title = (sel.version.name || sel.version.version_number) + " - " + (sel.file.filename || "");
+    const btnLabel = (sbLoader || sbGameVer)
+      ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
+      : "Download";
+    btn.title = btnLabel + " - " + (sel.version.name || sel.version.version_number) + " - " + (sel.file.filename || "");
   } else {
     btn.style.display = "none";
   }
