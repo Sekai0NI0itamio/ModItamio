@@ -22,9 +22,8 @@ async function init() {
   root.innerHTML = '<div class="loading">Loading…</div>';
 
   try {
-    currentMod = await fetchJSON(CONFIG.dataUrl + "/mods/" + modId + ".json");
-    let versions = [];
-    try { versions = await fetchJSON(CONFIG.dataUrl + "/mods/" + modId + "/versions.json"); } catch(e) {}
+    currentMod = await fetchJSON(CONFIG.dataUrl + "/" + modId + ".json");
+    let versions = currentMod.versions || [];
     versionInfo = versions.find(v => v.version_number === vNumber && (!vLoader || (v.loaders||[]).includes(vLoader)));
     if (!versionInfo) versionInfo = versions.find(v => v.version_number === vNumber);
     if (!versionInfo) throw new Error("Version not found");

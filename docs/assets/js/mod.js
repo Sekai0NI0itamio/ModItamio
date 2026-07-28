@@ -16,8 +16,8 @@ async function init() {
   root.innerHTML = '<div class="loading">Loading…</div>';
 
   try {
-    currentMod = await fetchJSON(CONFIG.dataUrl + "/mods/" + modId + ".json");
-    try { versions = await fetchJSON(CONFIG.dataUrl + "/mods/" + modId + "/versions.json"); } catch(e) { versions = []; }
+    currentMod = await fetchJSON(CONFIG.dataUrl + "/" + modId + ".json");
+    versions = currentMod.versions || [];
     try {
       const r = await fetch(ISSUES_API + "?state=open&labels=mod:" + encodeURIComponent(modId) + "&per_page=30&sort=updated");
       if (r.ok) issues = await r.json(); else issues = [];
@@ -77,7 +77,7 @@ function render() {
     renderTab("description", "Description") +
     (gallery.length ? renderTab("gallery", "Gallery (" + gallery.length + ")") : "") +
     renderTab("versions", "Versions (" + versions.length + ")") +
-    (currentMod.changelog ? renderTab("changelog", "Changelog") : "") +
+    (versions.some(v => v.changelog) ? renderTab("changelog", "Changelog") : "") +
     renderTab("issues", "Issues" + (issues.length ? " (" + issues.length + ")" : "")) +
   '</div>' +
 
@@ -180,7 +180,17 @@ function renderVersionRow(v) {
 }
 
 function renderChangelog() {
-  return '<div class="panel"><div class="panel__body prose changelog-text">' + renderMarkdown(currentMod.changelog || "_No changelog provided._") + '</div></div>';
+  const versionsWithChangelog = versions.filter(v => v.changelog).sort((a, b) => (b.date_published || "").localeCompare(a.date_published || ""));
+  if (!versionsWithChangelog.length) return '<div class="panel"><div class="panel__body prose"><p><em>No changelog entries available.</em></p></div></div>';
+  return '<div class="panel"><div class="panel__body">' + versionsWithChangelog.map(v =>
+    '<div class="changelog-entry">' +
+      '<div class="changelog-entry__header">' +
+        '<h4 style="margin:0;font-size:var(--fs-base);font-weight:700;color:var(--color-text-bright)">' + escapeHtml(v.name || v.version_number) + '</h4>' +
+        '<span style="font-size:var(--fs-xs);color:var(--color-text-dim)">' + formatDate(v.date_published) + '</span>' +
+      '</div>' +
+      '<div class="prose changelog-text">' + renderMarkdown(v.changelog) + '</div>' +
+    '</div>'
+  ).join("") + '</div></div>';
 }
 
 function renderIssues() {
