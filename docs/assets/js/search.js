@@ -19,6 +19,33 @@ async function init() {
   }
 }
 
+function renderSidebarAd() {
+  return '<div class="ad-slot ad-slot--sidebar">' +
+    '<div class="ad-label">Sponsored</div>' +
+    '<div class="ad-unit">' +
+      '<div class="ad-unit__art"></div>' +
+      '<div class="ad-unit__copy">' +
+        '<strong>Your ad here</strong>' +
+        'Reach eco-conscious Minecraft players and developers. Premium placement with natural brand alignment.' +
+      '</div>' +
+      '<a href="#" class="btn btn--sm" style="width:100%">Learn about advertising</a>' +
+    '</div>' +
+  '</div>';
+}
+
+function renderSearchInlineAd() {
+  return '<div class="ad-slot ad-slot--grid" style="grid-column:1/-1">' +
+    '<div class="ad-label">Sponsored</div>' +
+    '<div class="inline-ad">' +
+      '<div class="inline-ad__content">' +
+        '<strong>Support open-source modding</strong>' +
+        '<span>Consider sponsoring the developers behind your favorite mods to keep updates flowing.</span>' +
+      '</div>' +
+      '<a href="#" class="btn btn--sm btn--primary">Learn more</a>' +
+    '</div>' +
+  '</div>';
+}
+
 function readUrl() {
   const p = new URLSearchParams(location.search);
   PARAMS.q = p.get("q") || "";
@@ -146,11 +173,29 @@ function render() {
   }
   versionHtml += '</div>';
 
+  resetCardIndex();
+  const selLoader = PARAMS.l[0] || "";
+  const selVer = PARAMS.v[0] || "";
+  const extraParts = [];
+  if (selLoader) extraParts.push("l=" + encodeURIComponent(selLoader));
+  if (selVer) extraParts.push("g=" + encodeURIComponent(selVer));
+  CARD_LINK_EXTRA = extraParts.join("&");
+  let gridHtml = "";
+  if (page.length) {
+    const cards = page.map(modCard);
+    const adInsertIndex = Math.min(6, cards.length);
+    const cardsWithAd = [...cards.slice(0, adInsertIndex), renderSearchInlineAd(), ...cards.slice(adInsertIndex)];
+    gridHtml = '<div class="mod-grid mod-grid--search">' + cardsWithAd.join("") + '</div>';
+  } else {
+    gridHtml = '<div class="empty"><p>No mods match your filters.</p></div>';
+  }
+
   root.innerHTML = '<div class="search-layout">' +
     '<aside class="search-sidebar">' +
       '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()">' + ICONS.filter + ' Clear filters</button>' +
       '<div class="search-box-side"><span class="search-box__icon">' + ICONS.search + '</span><input type="text" id="side-search" placeholder="Search…" value="' + escapeHtml(PARAMS.q) + '"></div>' +
       catHtml + loaderHtml + versionHtml +
+      renderSidebarAd() +
     '</aside>' +
     '<div class="search-main">' +
       '<div class="sort-bar">' +
@@ -161,10 +206,7 @@ function render() {
           ).join("") +
         '</div>' +
       '</div>' +
-      (page.length
-        ? '<div class="mod-grid mod-grid--search">' + page.map(modCard).join("") + '</div>'
-        : '<div class="empty"><p>No mods match your filters.</p></div>'
-      ) +
+      gridHtml +
       (totalPages > 1 ? renderPagination(totalPages) : "") +
     '</div>' +
   '</div>';

@@ -29,7 +29,7 @@ const LOADER_NAMES = { fabric: "Fabric", forge: "Forge", neoforge: "NeoForge", q
 const LOADER_COLORS = {
   fabric: "#dbd6b7", forge: "#957bff", neoforge: "#f16437", quilt: "#986dbf",
 };
-const VERSION_COLORS = { release: "#1bd96a", beta: "#f1b942", alpha: "#f54f4f" };
+const VERSION_COLORS = { release: "#4a7c59", beta: "#c49a3c", alpha: "#c45c5c" };
 const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 
 function $(sel, root) { return (root || document).querySelector(sel); }
@@ -79,12 +79,7 @@ function renderMarkdown(md) {
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/__([^_]+)__/g, "<strong>$1</strong>")
-      .replace(/`([^`]+)`/g, "<code>$1</code>")
-      .replace(/✅/g, '<span style="color:var(--color-brand)">✅</span>')
-      .replace(/❌/g, '<span style="color:#f04a4a">❌</span>');
-  }
-  function parseRow(line) {
-    return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => c.trim());
+      .replace(/`([^`]+)`/g, "<code>$1</code>");
   }
   while (i < lines.length) {
     const line = lines[i];
@@ -93,31 +88,6 @@ function renderMarkdown(md) {
       const code = []; i++;
       while (i < lines.length && !lines[i].trimStart().startsWith("```")) code.push(lines[i++]);
       i++; out.push("<pre><code>" + escapeHtml(code.join("\n")) + "</code></pre>"); continue;
-    }
-    if (line.trimStart().startsWith("<details") || line.trimStart().startsWith("</details>") || line.trimStart().startsWith("<summary") || line.trimStart().startsWith("</summary>")) {
-      closePara(); closeList();
-      out.push(line); i++; continue;
-    }
-    if (line.includes("|") && i + 1 < lines.length) {
-      const nextLine = lines[i+1];
-      const isSep = /^\s*\|?[\s:|-]+\|?\s*$/.test(nextLine) && nextLine.includes("-");
-      if (isSep) {
-        closePara(); closeList();
-        const headers = parseRow(line);
-        i += 2;
-        const rows = [];
-        while (i < lines.length && lines[i].includes("|") && lines[i].trim() !== "") {
-          rows.push(parseRow(lines[i]));
-          i++;
-        }
-        let html = "<table><thead><tr>" + headers.map(h => "<th>" + inline(h) + "</th>").join("") + "</tr></thead><tbody>";
-        for (const row of rows) {
-          html += "<tr>" + row.map(c => "<td>" + inline(c) + "</td>").join("") + "</tr>";
-        }
-        html += "</tbody></table>";
-        out.push(html);
-        continue;
-      }
     }
     const h = line.match(/^(#{1,4})\s+(.*)$/);
     if (h) { closePara(); closeList(); out.push("<h" + h[1].length + ">" + inline(h[2]) + "</h" + h[1].length + ">"); i++; continue; }
@@ -143,12 +113,13 @@ function renderMarkdown(md) {
 }
 
 const ICONS = {
+  sprout: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>',
   download: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
   heart: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
   star: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
   search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
-  sun: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
-  moon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+  sun: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+  moon: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
   menu: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
   external: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>',
   chevron_down: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
@@ -164,12 +135,14 @@ const ICONS = {
   filter: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>',
   x: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
   check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
-  info: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>',
-  refresh: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
+  arrow_up_right: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+  arrow_down_right: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"/><polyline points="17 7 17 17 7 17"/></svg>',
   discord: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>',
 };
 
-let _theme = localStorage.getItem("mi-theme") || "dark";
+const BOTANICAL_SVG = '<svg viewBox="0 0 160 210" fill="none"><path d="M82 206C81 150 84 104 105 55" stroke="currentColor" stroke-width="2"/><path d="M91 111C61 95 46 71 51 42C79 48 95 69 91 111Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/><path d="M92 96C115 77 130 54 127 27C102 36 90 59 92 96Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/><path d="M83 154C53 145 35 125 35 100C62 105 80 123 83 154Z" fill="currentColor" fill-opacity=".14" stroke="currentColor"/></svg>';
+
+let _theme = localStorage.getItem("mi-theme") || "light";
 function applyTheme() {
   document.documentElement.setAttribute("data-theme", _theme);
 }
@@ -201,10 +174,14 @@ function versionBadge(type) {
   return `<span class="tag tag--vtype" style="--vtype-color:${VERSION_COLORS[t] || VERSION_COLORS.release}">${escapeHtml(VERSION_NAMES[t] || t)}</span>`;
 }
 
+let cardIndex = 0;
+let CARD_LINK_EXTRA = "";
 function modCard(m) {
   const iconUrl = m.icon_url || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
   const letter = (m.name || "M")[0].toUpperCase();
-  return '<a class="mod-card" href="mod.html?id=' + encodeURIComponent(m.mod_id) + '">' +
+  const idx = cardIndex++;
+  const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
+  return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
     '<div class="mod-card__icon-wrap">' +
       '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
       '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
@@ -220,23 +197,24 @@ function modCard(m) {
     '</div>' +
   '</a>';
 }
+function resetCardIndex() { cardIndex = 0; }
 
 function renderNavbar(active) {
   const el = document.getElementById("navbar");
   if (!el) return;
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
-    '<a href="index.html" class="nav__brand"><span class="nav__logo">M</span><span class="nav__brand-name">ModItamio</span></a>' +
+    '<a href="index.html" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
     '<div class="nav__search">' +
       ICONS.search +
       '<input type="text" id="nav-search" placeholder="Search mods..." autocomplete="off">' +
     '</div>' +
     '<nav class="nav__links">' +
       '<a href="index.html" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
-      '<a href="mods.html" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Mods</a>' +
+      '<a href="mods.html" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
       '<a href="' + REPO_URL + '/issues" target="_blank" rel="noopener" class="nav__link">Issues' + ICONS.external + '</a>' +
       '<a href="' + REPO_URL + '" target="_blank" rel="noopener" class="nav__link nav__link--icon" title="GitHub">' + ICONS.github + '</a>' +
-      '<button id="theme-btn" class="nav__link nav__link--icon" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +
+      '<button id="theme-btn" class="nav__theme-btn" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +
     '</nav>' +
   '</div>';
   const si = document.getElementById("nav-search");
