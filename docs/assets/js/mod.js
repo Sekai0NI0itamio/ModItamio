@@ -150,7 +150,7 @@ function render() {
       '</div>' +
     '</div>' +
     '<div class="proj-header__actions">' +
-      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(getDownloadUrl(primaryFile)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + '><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label" id="header-download-label">' + ((sbLoader || sbGameVer) ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "") : "Download") + '</span></a>' : "") +
+      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download onclick="showAdPopup()"><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label" id="header-download-label">' + ((sbLoader || sbGameVer) ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "") : "Download") + '</span></a>' : "") +
       '<a class="btn btn--lg" href="' + ISSUES_NEW_URL + '?labels=mod:' + escapeHtml(currentMod.mod_id) + '&title=' + encodeURIComponent("[" + currentMod.name + "] ") + '" target="_blank" rel="noopener"><span class="btn__icon">' + ICONS.alert + '</span><span class="btn__label">Report issue</span></a>' +
     '</div>' +
   '</div>' +
@@ -253,7 +253,7 @@ function updateSidebarDownload() {
 
   const sel = getSelectedFile();
   if (sel && downloadBtn) {
-    downloadBtn.href = getDownloadUrl(sel.file);
+    downloadBtn.href = sel.file.url;
     downloadBtn.style.display = "";
     const sizeStr = sel.file.size ? formatBytes(sel.file.size) : "";
     const verName = sel.version.name || sel.version.version_number;
@@ -281,7 +281,7 @@ function updateHeaderDownload() {
   if (!btn) return;
   const sel = getSelectedFile();
   if (sel) {
-    btn.href = getDownloadUrl(sel.file);
+    btn.href = sel.file.url;
     btn.style.display = "";
     const label = document.getElementById("header-download-label");
     if (label) {
@@ -322,7 +322,7 @@ function renderDescription() {
       ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
       : "Download latest";
     downloadSection =
-      '<a class="btn btn--lg btn--primary btn--block" id="sb-download-btn" href="' + escapeHtml(getDownloadUrl(sel.file)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + '>' +
+      '<a class="btn btn--lg btn--primary btn--block" id="sb-download-btn" href="' + escapeHtml(sel.file.url) + '" download onclick="showAdPopup()">' +
         '<span class="btn__icon">' + ICONS.download + '</span>' +
         '<span class="btn__label" id="sb-download-label">' + btnLabel + '</span>' +
       '</a>' +
@@ -336,7 +336,7 @@ function renderDescription() {
       '</div>';
   } else {
     downloadSection =
-      '<a class="btn btn--lg btn--primary btn--block" id="sb-download-btn" href="#" style="display:none" download></a>' +
+      '<a class="btn btn--lg btn--primary btn--block" id="sb-download-btn" href="#" style="display:none" download onclick="showAdPopup()"></a>' +
       '<div id="sb-file-info"></div>' +
       '<div id="sb-no-match" class="sidebar-card__nomatch">' +
         ICONS.alert + ' No file matches your selection. Try different options.' +
@@ -444,8 +444,8 @@ function renderVersionRow(v) {
       '<span class="vrow__dl">' + ICONS.download + ' ' + formatNumber(v.downloads) + '</span>' +
     '</div>' +
     '<div class="vrow__actions">' +
-      (primary ? '<a class="btn btn--sm btn--primary" href="' + escapeHtml(getDownloadUrl(primary)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + ' title="Download">' + ICONS.download + '</a>' : "") +
-      (files.length > 1 ? '<div class="btn-group"><button class="btn btn--sm" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' + ICONS.chevron_down + '</button><div class="menu" style="display:none;right:0;top:110%">' + files.map(f => '<a class="menu__item" href="' + escapeHtml(getDownloadUrl(f)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + '>' + escapeHtml(f.filename || "file") + ' (' + formatBytes(f.size) + ')</a>').join("") + '</div></div>' : "") +
+      (primary ? '<a class="btn btn--sm btn--primary" href="' + escapeHtml(primary.url) + '" download onclick="showAdPopup()" title="Download">' + ICONS.download + '</a>' : "") +
+      (files.length > 1 ? '<div class="btn-group"><button class="btn btn--sm" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' + ICONS.chevron_down + '</button><div class="menu" style="display:none;right:0;top:110%">' + files.map(f => '<a class="menu__item" href="' + escapeHtml(f.url) + '" download onclick="showAdPopup()">' + escapeHtml(f.filename || "file") + ' (' + formatBytes(f.size) + ')</a>').join("") + '</div></div>' : "") +
     '</div>' +
   '</div>';
 }

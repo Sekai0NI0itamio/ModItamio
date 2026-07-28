@@ -58,8 +58,8 @@ function renderVersionHtml() {
       '</div>' +
     '</div>' +
     '<div class="proj-header__actions">' +
-      (primaryFile ? '<a class="btn btn--lg btn--primary" href="' + escapeHtml(getDownloadUrl(primaryFile)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + '><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label">Download</span></a>' : "") +
-      (files.length > 1 ? '<div class="btn-group" style="position:relative"><button class="btn btn--lg" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' + ICONS.chevron_down + '</button><div class="menu" style="display:none;right:0;top:110%">' + files.map(f => '<a class="menu__item" href="' + escapeHtml(getDownloadUrl(f)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + '>' + escapeHtml(f.filename || "Download") + ' (' + formatBytes(f.size) + ')</a>').join("") + '</div></div>' : "") +
+      (primaryFile ? '<a class="btn btn--lg btn--primary" href="' + escapeHtml(primaryFile.url) + '" download onclick="showAdPopup()"><span class="btn__icon">' + ICONS.download + '</span><span class="btn__label">Download</span></a>' : "") +
+      (files.length > 1 ? '<div class="btn-group" style="position:relative"><button class="btn btn--lg" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' + ICONS.chevron_down + '</button><div class="menu" style="display:none;right:0;top:110%">' + files.map(f => '<a class="menu__item" href="' + escapeHtml(f.url) + '" download onclick="showAdPopup()">' + escapeHtml(f.filename || "Download") + ' (' + formatBytes(f.size) + ')</a>').join("") + '</div></div>' : "") +
     '</div>' +
   '</div>' +
 
@@ -75,7 +75,7 @@ function renderVersionHtml() {
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
         '<h3 class="panel__title" style="margin-bottom:var(--space-3);font-size:var(--fs-base)">Files</h3>' +
         '<div style="display:flex;flex-direction:column;gap:var(--space-2)">' +
-          (files.length ? files.map(f => '<div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-2)"><div style="min-width:0;flex:1"><div style="font-size:var(--fs-sm);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escapeHtml(f.filename || "file") + '</div><div style="font-size:var(--fs-xs);color:var(--color-text-dim)">' + formatBytes(f.size) + '</div></div><a class="btn btn--sm btn--icon" href="' + escapeHtml(getDownloadUrl(f)) + '" ' + (isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download') + ' title="Download">' + ICONS.download + '</a></div>').join("") : '<div style="font-size:var(--fs-sm);color:var(--color-text-dim)">No files available</div>') +
+          (files.length ? files.map(f => '<div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-2)"><div style="min-width:0;flex:1"><div style="font-size:var(--fs-sm);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escapeHtml(f.filename || "file") + '</div><div style="font-size:var(--fs-xs);color:var(--color-text-dim)">' + formatBytes(f.size) + '</div></div><a class="btn btn--sm btn--icon" href="' + escapeHtml(f.url) + '" download onclick="showAdPopup()" title="Download">' + ICONS.download + '</a></div>').join("") : '<div style="font-size:var(--fs-sm);color:var(--color-text-dim)">No files available</div>') +
         '</div>' +
       '</div></div>' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +

@@ -3,7 +3,6 @@ const CONFIG = {
   repoName: "ModItamio",
   dataUrl: "./data",
   modsAssetBase: "./mods",
-  linksterrSlug: "i1bhp5",
 };
 
 const REPO_URL = `https://github.com/${CONFIG.repoOwner}/${CONFIG.repoName}`;
@@ -38,18 +37,31 @@ const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 function $(sel, root) { return (root || document).querySelector(sel); }
 function $$(sel, root) { return [...(root || document).querySelectorAll(sel)]; }
 
-function isLinksterrEnabled() {
-  return !!CONFIG.linksterrSlug;
+function showAdPopup() {
+  if (document.getElementById("ad-popup-overlay")) return;
+  var overlay = document.createElement("div");
+  overlay.id = "ad-popup-overlay";
+  overlay.innerHTML =
+    '<div class="ad-popup">' +
+      '<button class="ad-popup__close" onclick="closeAdPopup()" title="Close">&times;</button>' +
+      '<div class="ad-popup__badge">Sponsored</div>' +
+      '<div class="ad-popup__content">' +
+        '<div class="ad-popup__placeholder">' +
+          '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>' +
+          '<p>Your download is starting. Thanks for supporting us!</p>' +
+          '<p style="font-size:0.8rem;color:var(--color-text-dim)">Ad space &mdash; your ad could be here</p>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(overlay);
+  overlay.addEventListener("click", function(e) {
+    if (e.target === overlay) closeAdPopup();
+  });
 }
 
-function getDownloadUrl(file) {
-  if (!file) return null;
-  var fileUrl = typeof file === 'string' ? file : (file.url || '');
-  if (!fileUrl) return null;
-  if (CONFIG.linksterrSlug) {
-    return 'https://linksterr.com/r/' + CONFIG.linksterrSlug + '/#file=' + encodeURIComponent(fileUrl);
-  }
-  return fileUrl;
+function closeAdPopup() {
+  var overlay = document.getElementById("ad-popup-overlay");
+  if (overlay) overlay.remove();
 }
 
 function formatNumber(n) {
