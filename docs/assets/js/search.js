@@ -3,6 +3,10 @@
 const PAGE_SIZE = 20;
 let ALL_MODS = [];
 let PARAMS = { q: "", c: [], l: [], v: [], s: "downloads", p: 1 };
+let FACET_SEARCH = { cat: "", loader: "", version: "" };
+let _activeElement = null;
+let _activeSelection = { start: 0, end: 0 };
+let _savedScroll = 0;
 
 async function init() {
   renderNavbar("mods");
@@ -74,6 +78,37 @@ function syncSearchBox() {
   if (ns) ns.value = PARAMS.q;
 }
 
+function saveState() {
+  const ae = document.activeElement;
+  if (ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA" || ae.tagName === "SELECT")) {
+    _activeElement = ae.id || ae.name || null;
+    if (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA") {
+      _activeSelection = { start: ae.selectionStart || 0, end: ae.selectionEnd || 0 };
+    }
+  } else {
+    _activeElement = null;
+  }
+  _savedScroll = window.scrollY;
+}
+
+function restoreState() {
+  window.scrollTo(0, _savedScroll);
+  if (_activeElement) {
+    const el = document.getElementById(_activeElement);
+    if (el) {
+      el.focus();
+      try {
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+          const len = el.value.length;
+          const start = Math.min(_activeSelection.start, len);
+          const end = Math.min(_activeSelection.end, len);
+          el.setSelectionRange(start, end);
+        }
+      } catch (e) {}
+    }
+  }
+}
+
 function applyFilters(mods) {
   return mods.filter(m => {
     if (PARAMS.q && !modMatchesQuery(m, PARAMS.q)) return false;
@@ -115,6 +150,7 @@ function facetCounts(mods) {
 function allFacetCounts() { return facetCounts(ALL_MODS); }
 
 function toggleFacet(type, val) {
+  saveState();
   const arr = PARAMS[type];
   const i = arr.indexOf(val);
   if (i >= 0) arr.splice(i, 1); else arr.push(val);
@@ -122,16 +158,31 @@ function toggleFacet(type, val) {
   writeUrl(); render();
 }
 
-function setSort(s) { PARAMS.s = s; PARAMS.p = 1; writeUrl(); render(); }
+function setSort(s) {
+  saveState();
+  PARAMS.s = s; PARAMS.p = 1; writeUrl(); render();
+}
 
-function clearFilters() { PARAMS.q = ""; PARAMS.c = []; PARAMS.l = []; PARAMS.v = []; PARAMS.p = 1; writeUrl(); render(); }
+function clearFilters() {
+  saveState();
+  PARAMS.q = ""; PARAMS.c = []; PARAMS.l = []; PARAMS.v = []; PARAMS.p = 1;
+  FACET_SEARCH = { cat: "", loader: "", version: "" };
+  writeUrl(); render();
+}
 
 function goPage(p) { PARAMS.p = p; writeUrl(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
 
-function onSearchInput(e) {
+function onMainSearchInput(e) {
+  saveState();
   PARAMS.q = e.target.value;
   PARAMS.p = 1;
   writeUrl(); render();
+}
+
+function onFacetSearchInput(type, e) {
+  saveState();
+  FACET_SEARCH[type] = e.target.value;
+  render();
 }
 
 function render() {
@@ -144,32 +195,70 @@ function render() {
   const hasFilters = !!(PARAMS.q || PARAMS.c.length || PARAMS.l.length || PARAMS.v.length);
   const allCounts = allFacetCounts();
 
+  function facetMatches(facetVal, searchTerm) {
+    if (!searchTerm) return true;
+    return facetVal.toLowerCase().includes(searchTerm.toLowerCase());
+  }
+
+  function renderFacetSearch(type, placeholder) {
+    const val = FACET_SEARCH[type] || "";
+    return '<div class="facet-search">' +
+      '<span class="facet-search__icon">' + ICONS.search + '</span>' +
+      '<input type="text" class="facet-search__input" id="facet-search-' + type + '" placeholder="' + escapeHtml(placeholder) + '" value="' + escapeHtml(val) + '" oninput="onFacetSearchInput(\'' + type + '\', event)">' +
+      (val ? '<button class="facet-search__clear" onclick="clearFacetSearch(\'' + type + '\')">&times;</button>' : '') +
+    '</div>';
+  }
+
   let catHtml = "";
   for (const [group, catNames] of Object.entries(CATEGORY_GROUPS)) {
     const groupCats = catNames.filter(c => (allCounts.cats[c] || 0) > 0);
     if (!groupCats.length) continue;
+    const searchTerm = FACET_SEARCH.cat;
+    const filteredCats = groupCats.filter(c => facetMatches(c, searchTerm));
     catHtml += '<div class="facet-group"><div class="facet-group__title">' + escapeHtml(CATEGORY_GROUP_NAMES[group] || group) + '</div>';
-    for (const c of groupCats) {
+    if (groupCats.length > 6) {
+      catHtml += renderFacetSearch("cat", "Filter categories…");
+    }
+    for (const c of filteredCats) {
       const checked = PARAMS.c.includes(c);
       catHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'c\',\'' + escapeHtml(c) + '\')"><span class="facet-item__label">' + escapeHtml(c) + '</span><span class="facet-item__count">' + (allCounts.cats[c] || 0) + '</span></label>';
+    }
+    if (searchTerm && !filteredCats.length) {
+      catHtml += '<div class="facet-empty">No matching categories</div>';
     }
     catHtml += '</div>';
   }
 
+  const allLoaderKeys = LOADERS.filter(l => (allCounts.loaders[l] > 0));
   let loaderHtml = '<div class="facet-group"><div class="facet-group__title">Loaders</div>';
-  for (const l of LOADERS) {
-    if (!(allCounts.loaders[l] > 0)) continue;
+  if (allLoaderKeys.length > 4) {
+    loaderHtml += renderFacetSearch("loader", "Filter loaders…");
+  }
+  const loaderSearch = FACET_SEARCH.loader;
+  const filteredLoaders = allLoaderKeys.filter(l => {
+    const name = (LOADER_NAMES[l] || l);
+    return facetMatches(name, loaderSearch) || facetMatches(l, loaderSearch);
+  });
+  for (const l of filteredLoaders) {
     const checked = PARAMS.l.includes(l);
-    loaderHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : '') + ' onchange="toggleFacet(\'l\',\'' + l + '\')"><span class="facet-item__label">' + escapeHtml(LOADER_NAMES[l]) + '</span><span class="facet-item__count">' + (allCounts.loaders[l] || 0) + '</span></label>';
+    loaderHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'l\',\'' + l + '\')"><span class="facet-item__label">' + escapeHtml(LOADER_NAMES[l] || l) + '</span><span class="facet-item__count">' + (allCounts.loaders[l] || 0) + '</span></label>';
+  }
+  if (loaderSearch && !filteredLoaders.length) {
+    loaderHtml += '<div class="facet-empty">No matching loaders</div>';
   }
   loaderHtml += '</div>';
 
   const allVersions = [...new Set(ALL_MODS.flatMap(m => m.game_versions || []))].sort().reverse();
   let versionHtml = '<div class="facet-group"><div class="facet-group__title">Game versions</div>';
-  for (const v of allVersions) {
-    if (!(allCounts.versions[v] > 0)) continue;
+  versionHtml += renderFacetSearch("version", "Filter versions…");
+  const versionSearch = FACET_SEARCH.version;
+  const filteredVersions = allVersions.filter(v => (allCounts.versions[v] > 0) && facetMatches(v, versionSearch));
+  for (const v of filteredVersions) {
     const checked = PARAMS.v.includes(v);
     versionHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'v\',\'' + escapeHtml(v) + '\')"><span class="facet-item__label">' + escapeHtml(v) + '</span><span class="facet-item__count">' + (allCounts.versions[v] || 0) + '</span></label>';
+  }
+  if (versionSearch && !filteredVersions.length) {
+    versionHtml += '<div class="facet-empty">No matching versions</div>';
   }
   versionHtml += '</div>';
 
@@ -190,33 +279,48 @@ function render() {
     gridHtml = '<div class="empty"><p>No mods match your filters.</p></div>';
   }
 
+  const sortButtons = ['downloads', 'followers', 'updated', 'newest', 'name'].map(s =>
+    '<button class="sort-btn' + (PARAMS.s === s ? " sort-btn--active" : "") + '" onclick="setSort(\'' + s + '\')">' + escapeHtml(s.charAt(0).toUpperCase() + s.slice(1)) + '</button>'
+  ).join("");
+
   root.innerHTML = '<div class="search-layout">' +
     '<aside class="search-sidebar">' +
       '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()">' + ICONS.filter + ' Clear filters</button>' +
-      '<div class="search-box-side"><span class="search-box__icon">' + ICONS.search + '</span><input type="text" id="side-search" placeholder="Search…" value="' + escapeHtml(PARAMS.q) + '"></div>' +
       catHtml + loaderHtml + versionHtml +
       renderSidebarAd() +
     '</aside>' +
     '<div class="search-main">' +
       '<div class="sort-bar">' +
-        '<div class="sort-bar__count">' + filtered.length + ' result' + (filtered.length === 1 ? "" : "s") + '</div>' +
-        '<div class="sort-bar__options">' +
-          ['downloads', 'followers', 'updated', 'newest', 'name'].map(s =>
-            '<button class="sort-btn' + (PARAMS.s === s ? " sort-btn--active" : "") + '" onclick="setSort(\'' + s + '\')">' + escapeHtml(s.charAt(0).toUpperCase() + s.slice(1)) + '</button>'
-          ).join("") +
+        '<div class="sort-bar__left">' +
+          '<div class="main-search-box">' +
+            '<span class="main-search-box__icon">' + ICONS.search + '</span>' +
+            '<input type="text" id="main-search" class="main-search-box__input" placeholder="Search mods…" value="' + escapeHtml(PARAMS.q) + '" oninput="onMainSearchInput(event)">' +
+            (PARAMS.q ? '<button class="main-search-box__clear" onclick="clearMainSearch()">&times;</button>' : '') +
+          '</div>' +
+          '<div class="sort-bar__count">' + filtered.length + ' result' + (filtered.length === 1 ? "" : "s") + '</div>' +
         '</div>' +
+        '<div class="sort-bar__options">' + sortButtons + '</div>' +
       '</div>' +
       gridHtml +
       (totalPages > 1 ? renderPagination(totalPages) : "") +
     '</div>' +
   '</div>';
 
-  const ss = document.getElementById("side-search");
-  if (ss) {
-    ss.addEventListener("input", onSearchInput);
-    ss.focus();
-    ss.setSelectionRange(ss.value.length, ss.value.length);
-  }
+  restoreState();
+}
+
+function clearFacetSearch(type) {
+  saveState();
+  FACET_SEARCH[type] = "";
+  render();
+}
+
+function clearMainSearch() {
+  saveState();
+  PARAMS.q = "";
+  PARAMS.p = 1;
+  writeUrl();
+  render();
 }
 
 function renderPagination(total) {
