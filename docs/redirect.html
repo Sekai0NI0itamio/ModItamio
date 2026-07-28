@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download — ModItamio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 2.5rem;
+      max-width: 420px;
+      width: 90%;
+    }
+    .icon { margin-bottom: 1.25rem; }
+    h1 { font-size: 1.1rem; color: #f0f6fc; margin-bottom: 0.5rem; }
+    p { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+    .filename {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.8rem;
+      color: #3fb950;
+      word-break: break-all;
+      margin-bottom: 1.25rem;
+    }
+    .spinner {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 3px solid #30363d;
+      border-top-color: #3fb950;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .btn {
+      display: inline-block;
+      background: #3fb950;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover { background: #2ea043; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </div>
+    <div id="loading">
+      <h1>Preparing your download...</h1>
+      <p>Your download will start automatically.</p>
+      <div class="spinner"></div>
+    </div>
+    <div id="ready" class="hidden">
+      <h1>Your download is ready</h1>
+      <div class="filename" id="filename"></div>
+      <a class="btn" id="download-link" href="#" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download now
+      </a>
+    </div>
+    <div id="error" class="hidden">
+      <h1 style="color:#f85149">Download error</h1>
+      <p id="error-msg">No file specified.</p>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Read from hash (e.g. #file=mods/smoothcontainer/jars/file.jar)
+      // Hash is used because URL shorteners preserve it across redirects,
+      // whereas query params are often stripped.
+      var hash = location.hash.replace(/^#/, '');
+      var file = null;
+
+      // Support both #file=path and #key=value&file=path formats
+      if (hash) {
+        var params = new URLSearchParams(hash);
+        file = params.get('file');
+      }
+
+      // Fallback: also check query params for backward compatibility
+      if (!file) {
+        file = new URLSearchParams(location.search).get('file');
+      }
+
+      if (!file) {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('error').classList.remove('hidden');
+        document.getElementById('error-msg').textContent = 'No file specified in the download link.';
+        return;
+      }
+
+      // Build the full JAR URL
+      var baseUrl = 'https://sekai0ni0itamio.github.io/ModItamio/';
+      var jarUrl = file.indexOf('http') === 0 ? file : baseUrl + file.replace(/^\//, '');
+      var filename = file.split('/').pop();
+
+      // Show the ready state briefly, then auto-redirect
+      document.getElementById('filename').textContent = filename;
+      document.getElementById('download-link').href = jarUrl;
+      document.getElementById('download-link').setAttribute('download', filename);
+
+      // Auto-start download after a short delay (user sees the page briefly)
+      setTimeout(function() {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('ready').classList.remove('hidden');
+
+        // Auto-trigger download after 1 second
+        setTimeout(function() {
+          window.location.href = jarUrl;
+        }, 1000);
+      }, 800);
+    })();
+  </script>
+</body>
+</html>

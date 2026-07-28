@@ -1,8 +1,12 @@
 const CONFIG = {
   repoOwner: "Sekai0NI0itamio",
   repoName: "ModItamio",
-  dataUrl: "./data",
-  modsAssetBase: "./mods",
+// When running locally, data is in ./data/. When on GitHub Pages,
+  // it's at the same relative path.
+  dataBase: "./data",
+  assetsBase: "./assets",
+  modsAssetBase: "./mods", // per-mod icons, jars, gallery live under mods/<modId>/
+  linksterrSlug: "i1bhp5", // Link$terr slug for ad-redirect downloads
 };
 
 const REPO_URL = `https://github.com/${CONFIG.repoOwner}/${CONFIG.repoName}`;
@@ -34,8 +38,37 @@ function normLoader(l) { return String(l || "").toLowerCase().replace(/[^a-z]/g,
 const VERSION_COLORS = { release: "#4a7c59", beta: "#c49a3c", alpha: "#c45c5c" };
 const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 
-function $(sel, root) { return (root || document).querySelector(sel); }
-function $$(sel, root) { return [...(root || document).querySelectorAll(sel)]; }
+function isLinksterrEnabled() {
+  return !!CONFIG.linksterrSlug;
+}
+
+function getDownloadUrl(file) {
+  if (!file) return null;
+  var fileUrl = typeof file === 'string' ? file : (file.url || '');
+  if (!fileUrl) return null;
+  if (CONFIG.linksterrSlug) {
+    return 'https://linksterr.com/r/' + CONFIG.linksterrSlug + '/#file=' + encodeURIComponent(fileUrl);
+  }
+  return fileUrl;
+}
+
+function $(sel, root = document) { return root.querySelector(sel); }
+function $$(sel, root = document) { return [...root.querySelectorAll(sel)]; }
+function el(tag, props = {}, ...children) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (k === "class") e.className = v;
+    else if (k === "html") e.innerHTML = v;
+    else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2).toLowerCase(), v);
+    else if (k === "style" && typeof v === "object") Object.assign(e.style, v);
+    else if (v !== null && v !== undefined) e.setAttribute(k, v);
+  }
+  for (const c of children.flat()) {
+    if (c == null || c === false) continue;
+    e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+  }
+  return e;
+}
 
 function formatNumber(n) {
   if (n == null) return "0";
@@ -300,6 +333,219 @@ function closeMenuOnClick() {
   document.addEventListener("click", (e) => {
     document.querySelectorAll(".menu").forEach(menu => {
       if (!menu.contains(e.target) && !e.target.closest(".btn-group")) menu.style.display = "none";
+    });
+  });
+}
+
+function renderModDetail(mod) {
+  const root = $("#app");
+  const iconUrl = mod.icon_url || `${CONFIG.modsAssetBase}/${mod.mod_id}/icon.png`;
+  const projectColor = mod.color || "#1bd96a";
+
+  root.innerHTML = renderNavbar() + `
+    <div class="bg-tint" style="--_project-color: ${projectColor}"></div>
+    <div class="mod-page">
+      <a href="index.html" class="btn" style="margin-bottom: 1rem;">${ICONS.arrowLeft} All Mods</a>
+
+      <!-- Project Header -->
+      <div class="mod-page__header">
+        <div class="project-header">
+          <img class="project-header__icon" src="${escapeHtml(iconUrl)}" alt="${escapeHtml(mod.name)}" onerror="this.style.display='none'">
+          <div class="project-header__info">
+            <h1 class="project-header__title">${escapeHtml(mod.name)}</h1>
+            <p class="project-header__summary">${escapeHtml(mod.summary || "")}</p>
+            <div class="project-header__meta">
+              <span class="project-header__meta-item">${ICONS.download} <strong>${formatNumber(mod.downloads)}</strong> downloads</span>
+              <span class="project-header__meta-item">${ICONS.heart} <strong>${formatNumber(mod.followers)}</strong> followers</span>
+              <span class="project-header__meta-item">${ICONS.package} <strong>${mod.versions?.length || 0}</strong> versions</span>
+              ${mod.date_published ? `<span class="project-header__meta-item">${ICONS.calendar} Published ${formatDate(mod.date_published)}</span>` : ""}
+            </div>
+            <div class="project-header__tags">
+              ${(mod.loaders || []).map(l => `<span class="tag tag--platform" style="--_color:${loaderColor(l)}">${escapeHtml(l)}</span>`).join("")}
+              ${(mod.categories || []).map(c => `<span class="tag">${escapeHtml(c)}</span>`).join("")}
+              ${mod.license ? `<span class="tag">${ICONS.book} ${escapeHtml(mod.license)}</span>` : ""}
+            </div>
+            <div class="project-header__actions">
+              ${mod.versions?.length ? `<a class="btn btn--primary" href="#versions">${ICONS.download} Download</a>` : ""}
+              ${mod.source_url ? `<a class="btn" href="${escapeHtml(mod.source_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.code} Source</a>` : ""}
+              <a class="btn" href="#issues">${ICONS.issues} Report Issue</a>
+              ${mod.modrinth_url ? `<a class="btn" href="${escapeHtml(mod.modrinth_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.external} Modrinth</a>` : ""}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs" id="tabs">
+        <button class="tab tab--active" data-tab="description">Description</button>
+        <button class="tab" data-tab="gallery" ${!mod.gallery?.length ? "disabled" : ""}>Gallery${mod.gallery?.length ? ` (${mod.gallery.length})` : ""}</button>
+        <button class="tab" data-tab="versions">Versions${mod.versions?.length ? ` (${mod.versions.length})` : ""}</button>
+        <button class="tab" data-tab="issues">Issues</button>
+      </div>
+
+      <!-- Layout -->
+      <div class="mod-page__layout">
+        <div class="mod-page__content">
+          <!-- Description tab -->
+          <div class="tab-panel" id="panel-description">
+            <div class="card">
+              <div class="description-body">${renderMarkdown(mod.description || mod.body || "")}</div>
+            </div>
+          </div>
+          <!-- Gallery tab -->
+          <div class="tab-panel hidden" id="panel-gallery">
+            ${mod.gallery?.length ? `<div class="gallery-grid">${mod.gallery.map((g, i) => `
+              <div class="gallery-item" onclick="openLightbox(${i})">
+                <img class="gallery-item__img" src="${escapeHtml(g.url)}" alt="${escapeHtml(g.title || "")}" loading="lazy">
+                <div class="gallery-item__body">
+                  <div class="gallery-item__title">${escapeHtml(g.title || "")}</div>
+                  ${g.description ? `<div class="gallery-item__desc">${escapeHtml(g.description)}</div>` : ""}
+                </div>
+              </div>`).join("")}</div>` : `<div class="empty"><p>No gallery images.</p></div>`}
+          </div>
+          <!-- Versions tab -->
+          <div class="tab-panel hidden" id="panel-versions">
+            <div class="card" style="padding: 0; overflow: hidden;">
+              ${mod.versions?.length ? `<table class="versions-table">
+                <thead><tr>
+                  <th>Name</th><th>Game Versions</th><th>Loaders</th><th>Published</th><th>Downloads</th><th></th>
+                </tr></thead>
+                <tbody>
+                  ${mod.versions.map(v => `
+                    <tr>
+                      <td class="row-name">
+                        ${v.version_type ? `<span class="tag tag--${v.version_type}" style="margin-right:0.5rem">${v.version_type}</span>` : ""}
+                        ${escapeHtml(v.name || v.version_number || "")}
+                      </td>
+                      <td><div class="tags-cell">${(v.game_versions || []).map(gv => `<span class="tag tag--version">${escapeHtml(gv)}</span>`).join("")}</div></td>
+                      <td><div class="tags-cell">${(v.loaders || []).map(l => `<span class="tag tag--platform" style="--_color:${loaderColor(l)}">${escapeHtml(l)}</span>`).join("")}</div></td>
+                      <td class="row-date">${formatDate(v.date_published)}</td>
+                      <td class="row-downloads">${formatNumber(v.downloads)}</td>
+                      <td>${v.files?.length ? `<a class="btn btn--primary" href="${escapeHtml(getDownloadUrl(v.files[0]))}" ${isLinksterrEnabled() ? 'target="_blank" rel="noopener"' : 'download'} onclick="event.stopPropagation()">${ICONS.download}</a>` : ""}</td>
+                    </tr>`).join("")}
+                </tbody>
+              </table>` : `<div class="empty"><p>No versions published.</p></div>`}
+            </div>
+          </div>
+          <!-- Issues tab -->
+          <div class="tab-panel hidden" id="panel-issues">
+            <div class="card">
+              <h2 id="issues">Report an Issue</h2>
+              <p class="text-secondary" style="margin-bottom: 1rem;">Found a bug or have a feature request? Fill out the form below — it will open a pre-filled issue on GitHub.</p>
+              <form class="issue-form" id="issue-form">
+                <div class="issue-form__field">
+                  <label for="issue-title">Issue Title</label>
+                  <input type="text" id="issue-title" placeholder="Brief summary of the issue" required>
+                </div>
+                <div class="issue-form__row">
+                  <div class="issue-form__field">
+                    <label for="issue-type">Issue Type</label>
+                    <select id="issue-type">
+                      <option value="bug">🐛 Bug Report</option>
+                      <option value="crash">💥 Crash Report</option>
+                      <option value="feature">✨ Feature Request</option>
+                    </select>
+                  </div>
+                  <div class="issue-form__field">
+                    <label for="issue-version">Minecraft Version</label>
+                    <input type="text" id="issue-version" placeholder="e.g. 1.20.1">
+                  </div>
+                </div>
+                <div class="issue-form__row">
+                  <div class="issue-form__field">
+                    <label for="issue-loader">Mod Loader</label>
+                    <select id="issue-loader">
+                      <option value="">— Select —</option>
+                      ${(mod.loaders || []).map(l => `<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`).join("")}
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="issue-form__field">
+                    <label for="issue-mod-version">Mod Version</label>
+                    <input type="text" id="issue-mod-version" placeholder="e.g. 1.0.0" value="${escapeHtml(mod.versions?.[0]?.version_number || "")}">
+                  </div>
+                </div>
+                <div class="issue-form__field">
+                  <label for="issue-body">Description</label>
+                  <textarea id="issue-body" placeholder="Describe the issue in detail. What happened? What did you expect? Steps to reproduce?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg">${ICONS.issues} Create Issue on GitHub</button>
+              </form>
+            </div>
+            <div class="card">
+              <h2>Existing Issues</h2>
+              <div id="issues-list"><div class="loading"><div class="spinner"></div> Loading issues...</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="mod-page__sidebar">
+          <!-- Links -->
+          <div class="sidebar-card">
+            <h2>Links</h2>
+            <div class="sidebar-links mt-md">
+              <a href="${REPO_URL}/issues/new?labels=${encodeURIComponent(mod.mod_id)}" target="_blank" rel="noopener nofollow ugc">${ICONS.issues} Report issues</a>
+              ${mod.source_url ? `<a href="${escapeHtml(mod.source_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.code} View source</a>` : ""}
+              ${mod.wiki_url ? `<a href="${escapeHtml(mod.wiki_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.wiki} Visit wiki</a>` : ""}
+              ${mod.discord_url ? `<a href="${escapeHtml(mod.discord_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.discord} Join Discord</a>` : ""}
+              ${mod.modrinth_url ? `<a href="${escapeHtml(mod.modrinth_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.external} View on Modrinth</a>` : ""}
+              ${mod.site_url ? `<a href="${escapeHtml(mod.site_url)}" target="_blank" rel="noopener nofollow ugc">${ICONS.globe} Visit website</a>` : ""}
+            </div>
+          </div>
+          <!-- Details -->
+          <div class="sidebar-card">
+            <h2>Details</h2>
+            <div class="mt-md">
+              ${mod.license ? `<div class="sidebar-detail">${ICONS.book} Licensed ${escapeHtml(mod.license)}</div>` : ""}
+              ${mod.followers != null ? `<div class="sidebar-detail">${ICONS.heart} ${formatNumber(mod.followers)} followers</div>` : ""}
+              ${mod.date_published ? `<div class="sidebar-detail">${ICONS.calendar} Published ${timeAgo(mod.date_published)}</div>` : ""}
+              ${mod.updated ? `<div class="sidebar-detail">${ICONS.package} Updated ${timeAgo(mod.updated)}</div>` : ""}
+              <div class="sidebar-detail">${ICONS.tag} Mod ID: <code>${escapeHtml(mod.mod_id)}</code></div>
+            </div>
+          </div>
+          <!-- Authors -->
+          <div class="sidebar-card">
+            <h2>Authors</h2>
+            <div class="mt-md">
+              <div class="sidebar-detail"><strong style="color:var(--color-text-primary)">Itamio</strong> — Author</div>
+              <div class="sidebar-detail"><strong style="color:var(--color-text-primary)">Asd1281yss</strong> — Contributor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+      <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox__nav lightbox__prev" onclick="event.stopPropagation();navLightbox(-1)">‹</button>
+      <img class="lightbox__img" id="lightbox-img">
+      <button class="lightbox__nav lightbox__next" onclick="event.stopPropagation();navLightbox(1)">›</button>
+      <div class="lightbox__caption" id="lightbox-caption"></div>
+    </div>
+
+    <footer class="footer">
+      <p>ModItamio — by Itamio. Contributor: Asd1281yss.</p>
+      <p class="mt-md"><a href="${REPO_URL}" target="_blank" rel="noopener">View source on GitHub</a> · <a href="index.html">All Mods</a></p>
+    </footer>`;
+
+  updateThemeIcon();
+  setupTabs();
+  setupIssueForm(mod);
+  loadIssues(mod.mod_id);
+}
+
+/* ==================== Tabs ==================== */
+function setupTabs() {
+  $$(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      if (tab.disabled) return;
+      $$(".tab").forEach(t => t.classList.remove("tab--active"));
+      tab.classList.add("tab--active");
+      $$(".tab-panel").forEach(p => p.classList.add("hidden"));
+      const panel = $(`#panel-${tab.dataset.tab}`);
+      if (panel) panel.classList.remove("hidden");
     });
   });
 }
