@@ -130,18 +130,16 @@ svg { flex-shrink: 0; display: inline-block; vertical-align: middle; }
 }
 .nav__brand:hover { color: var(--ink); }
 .nav__logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 50% 50% 50% 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   background: var(--moss);
   display: grid;
   place-items: center;
   color: var(--paper);
-  transform: rotate(-20deg);
-  font-weight: 700;
-  font-size: 14px;
+  flex-shrink: 0;
 }
-.nav__logo svg { transform: rotate(20deg); width: 17px; height: 17px; }
+.nav__logo svg { width: 18px; height: 18px; }
 .nav__brand-name { white-space: nowrap; }
 .nav__search {
   flex: 1;
