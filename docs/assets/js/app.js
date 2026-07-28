@@ -3,6 +3,7 @@ const CONFIG = {
   repoName: "ModItamio",
   dataUrl: "./data",
   modsAssetBase: "./mods",
+  linksterrSlug: "i1bhp5",
 };
 
 const REPO_URL = `https://github.com/${CONFIG.repoOwner}/${CONFIG.repoName}`;
@@ -36,6 +37,20 @@ const VERSION_NAMES = { release: "Release", beta: "Beta", alpha: "Alpha" };
 
 function $(sel, root) { return (root || document).querySelector(sel); }
 function $$(sel, root) { return [...(root || document).querySelectorAll(sel)]; }
+
+function isLinksterrEnabled() {
+  return !!CONFIG.linksterrSlug;
+}
+
+function getDownloadUrl(file) {
+  if (!file) return null;
+  var fileUrl = typeof file === 'string' ? file : (file.url || '');
+  if (!fileUrl) return null;
+  if (CONFIG.linksterrSlug) {
+    return 'https://linksterr.com/r/' + CONFIG.linksterrSlug + '/#file=' + encodeURIComponent(fileUrl);
+  }
+  return fileUrl;
+}
 
 function formatNumber(n) {
   if (n == null) return "0";
