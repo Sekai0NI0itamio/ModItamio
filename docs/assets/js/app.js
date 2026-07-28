@@ -247,18 +247,20 @@ function modCard(m) {
   const idx = cardIndex++;
   const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__icon-wrap">' +
-      '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-      '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-    '</div>' +
-    '<div class="mod-card__body">' +
-      '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-      '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
-      '<div class="mod-card__footer">' +
-        '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-        '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__top">' +
+      '<div class="mod-card__icon-wrap">' +
+        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
       '</div>' +
+      '<div class="mod-card__header">' +
+        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
+        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
+    '<div class="mod-card__footer">' +
+      '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+      '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
     '</div>' +
   '</a>';
 }
