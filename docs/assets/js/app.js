@@ -82,6 +82,56 @@ function sanitizeUrl(u) {
   return String(u).trim().replace(/^[`'"]+|[`'"]+$/g, "");
 }
 
+function deriveLinkLabel(url) {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.toLowerCase();
+    const path = u.pathname;
+    const params = u.searchParams;
+    if (host === "ko-fi.com") {
+      return '<span class="md-inline-badge md-badge--kofi">☕ Ko-fi</span>';
+    }
+    if (host === "modrinth.com" || host.endsWith(".modrinth.com")) {
+      const verMatch = path.match(/\/mod\/[^/]+\/versions/);
+      const loader = params.get("l");
+      if (verMatch && loader) {
+        const k = normLoader(loader);
+        const name = LOADER_NAMES[k] || loader;
+        return '<span class="md-inline-badge md-badge--loader md-badge--' + escapeHtml(k) + '">' + escapeHtml(name) + '</span>';
+      }
+      if (path.startsWith("/mod/")) {
+        const parts = path.split("/").filter(Boolean);
+        if (parts.length >= 2) return escapeHtml(parts[1]);
+      }
+      return "Modrinth";
+    }
+    if (host === "github.com") {
+      const parts = path.split("/").filter(Boolean);
+      if (parts.length >= 2) return escapeHtml(parts[0] + "/" + parts[1]);
+      return "GitHub";
+    }
+    if (host === "curseforge.com" || host.endsWith(".curseforge.com")) {
+      return "CurseForge";
+    }
+    if (host === "youtube.com" || host === "youtu.be" || host.endsWith(".youtube.com")) {
+      return "YouTube";
+    }
+    if (host === "discord.gg" || host === "discord.com" || host.endsWith(".discord.com")) {
+      return "Discord";
+    }
+    if (host === "twitter.com" || host === "x.com") {
+      return "Twitter/X";
+    }
+    if (host === "reddit.com" || host.endsWith(".reddit.com")) {
+      return "Reddit";
+    }
+    const dispHost = host.replace(/^www\./, "");
+    return escapeHtml(dispHost);
+  } catch(e) {
+    return escapeHtml(url.slice(0, 60));
+  }
+}
+
 function renderMarkdown(md) {
   if (!md) return "";
   const lines = md.replace(/\r\n/g, "\n").split("\n");
@@ -92,7 +142,13 @@ function renderMarkdown(md) {
   function inline(text) {
     return escapeHtml(text)
       .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\[([^\]]*)\]\(([^)]+)\)/g, function(match, label, url) {
+        const trimmedLabel = (label || "").trim();
+        if (trimmedLabel) {
+          return '<a href="' + url + '" target="_blank" rel="noopener">' + trimmedLabel + '</a>';
+        }
+        return '<a href="' + url + '" target="_blank" rel="noopener" class="md-badge-link">' + deriveLinkLabel(url) + '</a>';
+      })
       .replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>")
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/__([^_]+)__/g, "<strong>$1</strong>")

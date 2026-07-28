@@ -1312,6 +1312,54 @@ body.has-hero .page { padding-top: 0; }
 .md-check { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--leaf) 15%, transparent); color: var(--moss); font-weight: 700; font-size: 12px; }
 .md-cross { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--clay) 15%, transparent); color: oklch(55% .15 25); font-weight: 700; font-size: 12px; }
 .md-warn { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: color-mix(in srgb, var(--clay) 20%, transparent); color: var(--clay); font-weight: 700; font-size: 13px; }
+.md-badge-link { text-decoration: none !important; }
+.md-badge-link:hover { text-decoration: none !important; }
+.md-inline-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: nowrap;
+  letter-spacing: .01em;
+  vertical-align: middle;
+  margin: 0 2px;
+  transition: transform 0.15s ease;
+}
+.md-badge-link:hover .md-inline-badge { transform: translateY(-1px); }
+.md-badge--kofi {
+  background: color-mix(in srgb, #FF5E5B 15%, transparent);
+  color: #FF5E5B;
+  border: 1px solid color-mix(in srgb, #FF5E5B 30%, transparent);
+}
+.md-badge--fabric {
+  background: color-mix(in srgb, #5b8c5a 15%, transparent);
+  color: #5b8c5a;
+  border: 1px solid color-mix(in srgb, #5b8c5a 30%, transparent);
+}
+.md-badge--forge {
+  background: color-mix(in srgb, #6b5ce7 15%, transparent);
+  color: #6b5ce7;
+  border: 1px solid color-mix(in srgb, #6b5ce7 30%, transparent);
+}
+.md-badge--neoforge {
+  background: color-mix(in srgb, #d4723a 15%, transparent);
+  color: #d4723a;
+  border: 1px solid color-mix(in srgb, #d4723a 30%, transparent);
+}
+.md-badge--quilt {
+  background: color-mix(in srgb, #8b6fb5 15%, transparent);
+  color: #8b6fb5;
+  border: 1px solid color-mix(in srgb, #8b6fb5 30%, transparent);
+}
+.md-badge--loader {
+  background: color-mix(in srgb, var(--moss) 15%, transparent);
+  color: var(--moss);
+  border: 1px solid color-mix(in srgb, var(--moss) 30%, transparent);
+}
+.prose a.md-badge-link { color: inherit; font-weight: inherit; text-decoration: none; }
 .prose del { color: var(--faint); }
 
 .changelog-text { font-size: 14px; }
