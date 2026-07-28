@@ -1,8 +1,17 @@
+const BASE = (typeof BASE_PATH !== "undefined") ? BASE_PATH.replace(/\/$/, "") : ".";
+
+const PATHS = {
+  root: BASE + "/",
+  browse: BASE + "/browse/",
+  mod: BASE + "/mod/",
+  version: BASE + "/version/",
+};
+
 const CONFIG = {
   repoOwner: "Sekai0NI0itamio",
   repoName: "ModItamio",
-  dataUrl: "./data",
-  modsAssetBase: "./mods",
+  dataUrl: BASE + "/data",
+  modsAssetBase: BASE + "/mods",
 };
 
 const REPO_URL = `https://github.com/${CONFIG.repoOwner}/${CONFIG.repoName}`;
@@ -222,20 +231,25 @@ function modCard(m) {
   const iconUrl = m.icon_url || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
   const letter = (m.name || "M")[0].toUpperCase();
   const idx = cardIndex++;
-  const href = "mod.html?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
+  const href = PATHS.mod + "?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
+  const loadersTags = renderLoaderTags((m.loaders || []).slice(0, 3));
+  const catsTags = renderCategoryTags(m.categories);
+  const tagsInner = loadersTags + catsTags;
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__icon-wrap">' +
-      '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-      '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-    '</div>' +
-    '<div class="mod-card__body">' +
-      '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-      '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '<div class="mod-card__tags">' + renderLoaderTags((m.loaders || []).slice(0, 3)) + renderCategoryTags(m.categories) + '</div>' +
-      '<div class="mod-card__footer">' +
-        '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-        '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__top">' +
+      '<div class="mod-card__icon-wrap">' +
+        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
       '</div>' +
+      '<div class="mod-card__header">' +
+        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
+        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="mod-card__tags">' + tagsInner + '</div>' +
+    '<div class="mod-card__footer">' +
+      '<span class="mod-card__stat mod-card__stat--downloads">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+      '<span class="mod-card__stat mod-card__stat--followers">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
     '</div>' +
   '</a>';
 }
@@ -246,10 +260,10 @@ function renderNavbar(active) {
   if (!el) return;
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
-    '<a href="index.html" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
+    '<a href="' + PATHS.root + '" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
     '<nav class="nav__links">' +
-      '<a href="index.html" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
-      '<a href="mods.html" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
+      '<a href="' + PATHS.root + '" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
+      '<a href="' + PATHS.browse + '" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
       '<a href="' + REPO_URL + '/issues" target="_blank" rel="noopener" class="nav__link">Issues' + ICONS.external + '</a>' +
       '<a href="' + REPO_URL + '" target="_blank" rel="noopener" class="nav__link nav__link--icon" title="GitHub">' + ICONS.github + '</a>' +
       '<button id="theme-btn" class="nav__theme-btn" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +

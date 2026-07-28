@@ -502,15 +502,14 @@ body.has-hero .page { padding-top: 0; }
   gap: 10px;
 }
 
-/* ========== MOD CARD (discover/grid variant - horizontal card with icon left) ========== */
+/* ========== MOD CARD ========== */
 .mod-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   gap: 0;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
   animation: rise .5s var(--ease) both;
@@ -528,6 +527,14 @@ body.has-hero .page { padding-top: 0; }
 }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
+.mod-card__top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+}
+
 .mod-card__icon-wrap {
   position: relative;
   width: 72px;
@@ -538,9 +545,7 @@ body.has-hero .page { padding-top: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 22px;
   background: transparent;
-  align-self: center;
 }
 .mod-card__icon {
   width: 100%;
@@ -561,10 +566,10 @@ body.has-hero .page { padding-top: 0; }
   font-weight: 700;
   display: flex;
 }
-.mod-card__body {
+.mod-card__header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
   min-width: 0;
 }
@@ -583,15 +588,16 @@ body.has-hero .page { padding-top: 0; }
 .mod-card__tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 5px;
-  margin-top: 2px;
+  margin-top: 12px;
 }
 .mod-card__footer {
   display: flex;
   gap: 16px;
-  margin-top: 4px;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
 }
 .mod-card__stat {
   display: flex;
@@ -603,56 +609,54 @@ body.has-hero .page { padding-top: 0; }
 }
 .mod-card__stat svg { width: 13px; height: 13px; }
 
-/* ========== MOD CARD (list variant - compact vertical list like Modrinth) ========== */
+/* ========== MOD CARD (list variant - compact) ========== */
 .mod-list .mod-card {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   padding: 14px 18px;
   border-radius: var(--radius-md);
   gap: 0;
-  background: var(--surface);
 }
 .mod-list .mod-card:hover {
   transform: translateX(2px);
   box-shadow: 0 2px 12px rgba(60, 90, 60, 0.08);
   border-color: var(--sage);
 }
+.mod-list .mod-card__top {
+  gap: 14px;
+  align-items: center;
+}
 .mod-list .mod-card__icon-wrap {
   width: 56px;
   height: 56px;
-  margin-right: 16px;
   border-radius: var(--radius-sm);
 }
 .mod-list .mod-card__fallback {
   font-size: 1.4rem;
   border-radius: var(--radius-sm);
 }
-.mod-list .mod-card__body {
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
+.mod-list .mod-card__header {
+  flex-direction: column;
+  gap: 3px;
 }
 .mod-list .mod-card__title {
   font-size: 15px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mod-list .mod-card__summary {
-  -webkit-line-clamp: 1;
   font-size: 13px;
-  flex: 1;
-  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .mod-list .mod-card__tags {
-  margin-top: 0;
-  flex-shrink: 0;
+  margin-top: 8px;
+  gap: 4px;
 }
 .mod-list .mod-card__footer {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-  flex-shrink: 0;
-  margin-left: auto;
-  padding-left: 16px;
+  margin-top: 8px;
   gap: 12px;
 }
 
