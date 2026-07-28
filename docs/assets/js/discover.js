@@ -3,10 +3,7 @@ async function initDiscover() {
   const root = document.getElementById("app");
   renderNavbar("discover");
 
-  const mainWrap = document.createElement("main");
-  mainWrap.className = "page";
-  root.appendChild(mainWrap);
-  mainWrap.innerHTML = '<div class="loading">Loading…</div>';
+  root.innerHTML = '<div class="loading">Loading…</div>';
 
   try {
     const mods = await loadAllMods();
@@ -15,15 +12,20 @@ async function initDiscover() {
     const featured = [...mods].sort((a, b) => (b.downloads || 0) - (a.downloads || 0)).slice(0, 6);
     const recent = [...mods].sort((a, b) => (b.updated || b.date_published || "").localeCompare(a.updated || a.date_published || "")).slice(0, 8);
 
-    mainWrap.innerHTML = renderHero() + renderStats(mods.length, totalDownloads, totalFollowers) +
-      renderFeatured(featured) + renderRecent(recent);
+    root.innerHTML =
+      renderHero() +
+      '<main class="page" style="padding-top:var(--space-8)">' +
+        renderStats(mods.length, totalDownloads, totalFollowers) +
+        renderFeatured(featured) +
+        renderRecent(recent) +
+      '</main>';
 
     const hs = document.getElementById("hero-search");
     if (hs) hs.addEventListener("keydown", e => {
       if (e.key === "Enter" && hs.value.trim()) location.href = "mods.html?q=" + encodeURIComponent(hs.value.trim());
     });
   } catch (err) {
-    mainWrap.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
+    root.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
   }
 }
 
@@ -49,7 +51,7 @@ function renderStats(count, downloads, followers) {
 
 function renderFeatured(mods) {
   if (!mods.length) return "";
-  return '<section>' +
+  return '<section style="margin-top:var(--space-10)">' +
     '<div class="section-head"><h2>' + ICONS.star + ' Featured</h2><a href="mods.html" class="btn">Browse all</a></div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +
   '</section>';
@@ -57,7 +59,7 @@ function renderFeatured(mods) {
 
 function renderRecent(mods) {
   if (!mods.length) return "";
-  return '<section style="margin-top:var(--space-8)">' +
+  return '<section style="margin-top:var(--space-10)">' +
     '<div class="section-head"><h2>' + ICONS.clock + ' Recently updated</h2><a href="mods.html?s=updated" class="btn">View all</a></div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +
   '</section>';
