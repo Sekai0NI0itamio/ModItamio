@@ -9,6 +9,23 @@ let _activeElement = null;
 let _activeSelection = { start: 0, end: 0 };
 let _savedScroll = 0;
 
+function compareVersions(a, b) {
+  const pa = a.split(".").map(p => { const n = parseInt(p, 10); return isNaN(n) ? p : n; });
+  const pb = b.split(".").map(p => { const n = parseInt(p, 10); return isNaN(n) ? p : n; });
+  const len = Math.max(pa.length, pb.length);
+  for (let i = 0; i < len; i++) {
+    const ai = i < pa.length ? pa[i] : 0;
+    const bi = i < pb.length ? pb[i] : 0;
+    if (typeof ai === "number" && typeof bi === "number") {
+      if (ai !== bi) return ai - bi;
+    } else {
+      const as = String(ai), bs = String(bi);
+      if (as !== bs) return as < bs ? -1 : 1;
+    }
+  }
+  return 0;
+}
+
 async function init() {
   renderNavbar("mods");
   const root = document.getElementById("app");
@@ -267,7 +284,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
   }
   loaderHtml += '</div>';
 
-  const allVersions = [...new Set(ALL_MODS.flatMap(m => m.game_versions || []))].sort().reverse();
+  const allVersions = [...new Set(ALL_MODS.flatMap(m => m.game_versions || []))].sort(compareVersions).reverse();
   let versionHtml = '<div class="facet-group"><div class="facet-group__title">Game versions</div>';
   versionHtml += renderFacetSearch("version", "Filter versions…");
   const versionSearch = FACET_SEARCH.version;
