@@ -137,6 +137,11 @@ function renderMarkdown(md) {
   md = md.replace(/\r\n/g, "\n");
   md = md.replace(/<!--[\s\S]*?-->/g, "");
   const safeBlocks = [];
+  md = md.replace(/<center\b[^>]*>[\s\S]*?<\/center>/gi, function(m) {
+    const idx = safeBlocks.length;
+    safeBlocks.push(m);
+    return "\u0000HTML" + idx + "\u0000";
+  });
   md = md.replace(/<a\s[^>]*href\s*=\s*"[^"]*"[^>]*>\s*<img\s[^>]*src\s*=\s*"[^"]*"[^>]*>\s*<\/a>/gi, function(m) {
     const idx = safeBlocks.length;
     safeBlocks.push(m);
@@ -153,9 +158,15 @@ function renderMarkdown(md) {
     return "\u0000HTML" + idx + "\u0000";
   });
   function restoreSafe(text) {
-    return text.replace(/\u0000HTML(\d+)\u0000/g, function(_, i) {
-      return safeBlocks[parseInt(i, 10)] || "";
-    });
+    let result = text;
+    for (let pass = 0; pass < 5; pass++) {
+      const before = result;
+      result = result.replace(/\u0000HTML(\d+)\u0000/g, function(_, i) {
+        return safeBlocks[parseInt(i, 10)] || "";
+      });
+      if (result === before) break;
+    }
+    return result;
   }
   const lines = md.split("\n");
   const out = [];
@@ -163,25 +174,44 @@ function renderMarkdown(md) {
   function closeList() { if (inList) { out.push("</" + listType + ">"); inList = false; } }
   function closePara() { if (inPara) { out.push("</p>"); inPara = false; } }
   function inline(text) {
-    return restoreSafe(escapeHtml(text)
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">')
-      .replace(/\[([^\]]*)\]\(([^)]+)\)/g, function(match, label, url) {
-        const trimmedLabel = (label || "").trim();
-        if (trimmedLabel) {
-          return '<a href="' + url + '" target="_blank" rel="noopener">' + trimmedLabel + '</a>';
-        }
-        return '<a href="' + url + '" target="_blank" rel="noopener" class="md-badge-link">' + deriveLinkLabel(url) + '</a>';
-      })
+    let html = escapeHtml(text);
+    const placeholders = [];
+    function protect(s) {
+      const i = placeholders.length;
+      placeholders.push(s);
+      return "\u0001PL" + i + "\u0001";
+    }
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, function(m, alt, src) {
+      return protect('<img alt="' + alt + '" src="' + src + '" loading="lazy">');
+    });
+    html = html.replace(/\[([^\]]*)\]\(([^)]+)\)/g, function(match, label, url) {
+      const trimmedLabel = (label || "").trim();
+      if (trimmedLabel) {
+        return protect('<a href="' + url + '" target="_blank" rel="noopener">' + trimmedLabel + '</a>');
+      }
+      return protect('<a href="' + url + '" target="_blank" rel="noopener" class="md-badge-link">' + deriveLinkLabel(url) + '</a>');
+    });
+    html = html.replace(/`([^`]+)`/g, function(m, code) {
+      return protect("<code>" + code + "</code>");
+    });
+    html = html
       .replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>")
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/__([^_]+)__/g, "<strong>$1</strong>")
       .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<em>$1</em>")
       .replace(/(^|[^_])_([^_]+)_/g, "$1<em>$2</em>")
       .replace(/~~([^~]+)~~/g, "<del>$1</del>")
-      .replace(/`([^`]+)`/g, "<code>$1</code>")
       .replace(/:white_check_mark:|✅/g, '<span class="md-check">✓</span>')
       .replace(/:x:|:negative_squared_cross_mark:|❌/g, '<span class="md-cross">✗</span>')
-      .replace(/:warning:|⚠️/g, '<span class="md-warn">⚠</span>'));
+      .replace(/:warning:|⚠️/g, '<span class="md-warn">⚠</span>');
+    for (let pass = 0; pass < 5; pass++) {
+      const before = html;
+      html = html.replace(/\u0001PL(\d+)\u0001/g, function(_, i) {
+        return placeholders[parseInt(i, 10)] || "";
+      });
+      if (html === before) break;
+    }
+    return restoreSafe(html);
   }
   function parseTableRow(row, isHeader) {
     const cells = row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => c.trim());
@@ -232,6 +262,9 @@ function renderMarkdown(md) {
       closePara();
       if (!inList || listType !== "ol") { closeList(); inList = true; listType = "ol"; out.push("<ol>"); }
       out.push("<li>" + inline(line.replace(/^\s*\d+\.\s+/, "")) + "</li>"); i++; continue;
+    }
+    if (/^\s*\u0000HTML\d+\u0000\s*$/.test(line)) {
+      closePara(); closeList(); out.push(restoreSafe(line.trim())); i++; continue;
     }
     if (line.trim() === "") { closePara(); closeList(); i++; continue; }
     closeList();
