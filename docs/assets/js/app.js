@@ -157,6 +157,26 @@ function renderMarkdown(md) {
     safeBlocks.push(m);
     return "\u0000HTML" + idx + "\u0000";
   });
+  md = md.replace(/<details\b[^>]*>([\s\S]*?)<\/details>/gi, function(m, inner) {
+    const idx = safeBlocks.length;
+    const summaryMatch = inner.match(/<summary\b[^>]*>([\s\S]*?)<\/summary>/i);
+    let summaryHtml = "Details";
+    let bodyHtml = "";
+    function hardBreaks(text) {
+      return text.replace(/\n{2,}/g, "\u0000PARA\u0000").replace(/\n/g, "  \n").replace(/\u0000PARA\u0000/g, "\n\n");
+    }
+    if (summaryMatch) {
+      summaryHtml = inline(summaryMatch[1].trim());
+      const bodyRaw = inner.replace(summaryMatch[0], "").trim();
+      bodyHtml = bodyRaw ? renderMarkdown(hardBreaks(bodyRaw)) : "";
+    } else {
+      bodyHtml = renderMarkdown(hardBreaks(inner.trim()));
+    }
+    const openAttr = /<details\b[^>]*\bopen\b/i.test(m) ? " open" : "";
+    const safe = '<details class="md-details"' + openAttr + '><summary>' + summaryHtml + '</summary><div class="md-details__body">' + bodyHtml + '</div></details>';
+    safeBlocks.push(safe);
+    return "\u0000HTML" + idx + "\u0000";
+  });
   md = md.replace(/<iframe\b[^>]*src\s*=\s*"([^"]+)"[^>]*><\/iframe>/gi, function(m, src) {
     const idx = safeBlocks.length;
     let safe = "";
@@ -279,20 +299,27 @@ function renderMarkdown(md) {
     if (/^\s*[-*+]\s+/.test(line)) {
       closePara();
       if (!inList || listType !== "ul") { closeList(); inList = true; listType = "ul"; out.push("<ul>"); }
-      out.push("<li>" + inline(line.replace(/^\s*[-*+]\s+/, "")) + "</li>"); i++; continue;
+      out.push("<li>" + inline(line.replace(/^\s*[-*+]\s+/, "").replace(/  $/, "")) + "</li>"); i++; continue;
     }
     if (/^\s*\d+\.\s+/.test(line)) {
       closePara();
       if (!inList || listType !== "ol") { closeList(); inList = true; listType = "ol"; out.push("<ol>"); }
-      out.push("<li>" + inline(line.replace(/^\s*\d+\.\s+/, "")) + "</li>"); i++; continue;
+      out.push("<li>" + inline(line.replace(/^\s*\d+\.\s+/, "").replace(/  $/, "")) + "</li>"); i++; continue;
     }
     if (/^\s*\u0000HTML\d+\u0000\s*$/.test(line)) {
       closePara(); closeList(); out.push(restoreSafe(line.trim())); i++; continue;
     }
     if (line.trim() === "") { closePara(); closeList(); i++; continue; }
     closeList();
-    if (!inPara) { out.push("<p>"); inPara = true; } else out.push(" ");
-    out.push(inline(line)); i++;
+    const strippedLine = line.replace(/  $/, "");
+    if (!inPara) { out.push("<p>"); inPara = true; }
+    else {
+      const prevRaw = lines[i - 1] || "";
+      if (/  $/.test(prevRaw)) out.push("<br>");
+      else out.push(" ");
+    }
+    out.push(inline(strippedLine));
+    i++;
   }
   closePara(); closeList();
   return out.join("\n");
