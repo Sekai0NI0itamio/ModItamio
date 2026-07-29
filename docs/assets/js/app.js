@@ -157,6 +157,29 @@ function renderMarkdown(md) {
     safeBlocks.push(m);
     return "\u0000HTML" + idx + "\u0000";
   });
+  md = md.replace(/<iframe\b[^>]*src\s*=\s*"([^"]+)"[^>]*><\/iframe>/gi, function(m, src) {
+    const idx = safeBlocks.length;
+    let safe = "";
+    try {
+      const url = new URL(src);
+      const host = url.hostname.toLowerCase();
+      if (host === "www.youtube.com" || host === "youtube.com" || host === "www.youtube-nocookie.com" || host === "youtube-nocookie.com" || host === "player.twitch.tv" || host === "clips.twitch.tv") {
+        const width = m.match(/width\s*=\s*"(\d+)"/i);
+        const height = m.match(/height\s*=\s*"(\d+)"/i);
+        const title = m.match(/title\s*=\s*"([^"]*)"/i);
+        const allow = m.match(/allow\s*=\s*"([^"]*)"/i);
+        safe = '<div class="md-video-wrap"><iframe src="' + src + '"' +
+          (width ? ' width="' + width[1] + '"' : '') +
+          (height ? ' height="' + height[1] + '"' : '') +
+          (title ? ' title="' + title[1].replace(/"/g, '&quot;') + '"' : ' title="Video player"') +
+          ' frameborder="0"' +
+          (allow ? ' allow="' + allow[1].replace(/"/g, '&quot;') + '"' : ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"') +
+          ' allowfullscreen loading="lazy"></iframe></div>';
+      }
+    } catch(e) {}
+    safeBlocks.push(safe);
+    return "\u0000HTML" + idx + "\u0000";
+  });
   function restoreSafe(text) {
     let result = text;
     for (let pass = 0; pass < 5; pass++) {

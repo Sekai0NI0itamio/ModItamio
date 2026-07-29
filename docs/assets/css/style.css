@@ -1304,6 +1304,9 @@ body.has-hero .page { padding-top: 0; }
 .prose p > a:only-child > img:only-child { margin: 16px 0; border: 1px solid var(--line); display: block; width: 100%; }
 .prose center { display: block; text-align: center; margin: 16px 0; }
 .prose center img { margin: 0 auto 8px; border-radius: var(--radius-md); display: block; width: 100%; }
+.prose .md-video-wrap { position: relative; width: 100%; margin: 16px 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 16/9; }
+.prose .md-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.prose p > .md-video-wrap:only-child { margin: 16px 0; }
 .prose hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
 .prose strong { color: var(--ink); font-weight: 700; }
 .prose .md-table-wrap { overflow-x: auto; margin: 16px 0; border-radius: var(--radius-md); border: 1px solid var(--line); }
