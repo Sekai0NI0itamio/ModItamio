@@ -3,22 +3,27 @@ async function initDiscover() {
   const root = document.getElementById("app");
   renderNavbar("discover");
 
+  const heroWrap = document.createElement("div");
+  heroWrap.className = "hero-wrap";
+  root.appendChild(heroWrap);
+  heroWrap.innerHTML = '<div class="loading">Loading…</div>';
+
   const mainWrap = document.createElement("main");
   mainWrap.className = "page";
   root.appendChild(mainWrap);
-  mainWrap.innerHTML = '<div class="loading">Loading…</div>';
+  mainWrap.innerHTML = "";
 
   try {
     const mods = await loadAllMods();
     const totalDownloads = mods.reduce((s, m) => s + (m.downloads || 0), 0);
     const totalFollowers = mods.reduce((s, m) => s + (m.followers || 0), 0);
     const featured = [...mods].sort((a, b) => (b.downloads || 0) - (a.downloads || 0)).slice(0, 6);
-    const recent = [...mods].sort((a, b) => (b.updated || b.date_published || "").localeCompare(a.updated || a.date_published || "")).slice(0, 8);
+    const recent = [...mods].sort((a, b) => (b.updated || b.date_published || "").localeCompare(a.updated || b.date_published || "")).slice(0, 8);
 
     resetCardIndex();
     CARD_LINK_EXTRA = "";
-    mainWrap.innerHTML = renderHero(mods.length, totalDownloads, totalFollowers) +
-      renderFeatured(featured) +
+    heroWrap.innerHTML = renderHero(mods.length, totalDownloads, totalFollowers);
+    mainWrap.innerHTML = renderFeatured(featured) +
       renderInlineAd("Support independent modding", "Your support helps us keep Minecraft mods running smoothly for everyone.") +
       renderRecent(recent);
 
@@ -27,6 +32,7 @@ async function initDiscover() {
       if (e.key === "Enter" && hs.value.trim()) location.href = PATHS.browse + "?q=" + encodeURIComponent(hs.value.trim());
     });
   } catch (err) {
+    heroWrap.innerHTML = "";
     mainWrap.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
   }
 }
