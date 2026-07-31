@@ -6,7 +6,7 @@ async function initDiscover() {
   const heroWrap = document.createElement("div");
   heroWrap.className = "hero-wrap";
   root.appendChild(heroWrap);
-  heroWrap.innerHTML = '<div class="loading">Loading…</div>';
+  heroWrap.innerHTML = renderDiscoverLoading();
 
   const mainWrap = document.createElement("main");
   mainWrap.className = "page";
@@ -23,18 +23,39 @@ async function initDiscover() {
     resetCardIndex();
     CARD_LINK_EXTRA = "";
     heroWrap.innerHTML = renderHero(mods.length, totalDownloads, totalFollowers);
-    mainWrap.innerHTML = renderFeatured(featured) +
+    mainWrap.innerHTML = mods.length ? renderFeatured(featured) +
       renderInlineAd("Support independent modding", "Your support helps us keep Minecraft mods running smoothly for everyone.") +
-      renderRecent(recent);
+      renderRecent(recent) : renderDiscoverEmpty();
 
-    const hs = document.getElementById("hero-search");
-    if (hs) hs.addEventListener("keydown", e => {
-      if (e.key === "Enter" && hs.value.trim()) location.href = PATHS.browse + "?q=" + encodeURIComponent(hs.value.trim());
-    });
   } catch (err) {
     heroWrap.innerHTML = "";
-    mainWrap.innerHTML = '<div class="empty"><p>Could not load mods: ' + escapeHtml(err.message) + '</p></div>';
+    mainWrap.innerHTML = '<div class="empty discover-error" role="alert">' +
+      '<span class="discover-error__mark" aria-hidden="true">' + ICONS.sprout + '</span>' +
+      '<h1>We couldn’t open the mod garden.</h1>' +
+      '<p>' + escapeHtml(err.message || "The mod catalogue did not load.") + '</p>' +
+      '<button class="btn btn--primary" type="button" onclick="location.reload()">Try again</button>' +
+    '</div>';
   }
+}
+
+function renderDiscoverLoading() {
+  return '<section class="hero hero--loading" aria-busy="true" aria-label="Loading ModItamio">' +
+    '<div class="hero__content">' +
+      '<div class="discover-skeleton discover-skeleton--eyebrow"></div>' +
+      '<div class="discover-skeleton discover-skeleton--title"></div>' +
+      '<div class="discover-skeleton discover-skeleton--copy"></div>' +
+      '<div class="discover-skeleton discover-skeleton--search"></div>' +
+      '<span class="loading">Tending the mod garden…</span>' +
+    '</div>' +
+  '</section>';
+}
+
+function renderDiscoverEmpty() {
+  return '<div class="empty discover-error" role="status">' +
+    '<span class="discover-error__mark" aria-hidden="true">' + ICONS.sprout + '</span>' +
+    '<h1>The garden is quiet for now.</h1>' +
+    '<p>There are no mods in the catalogue yet. Please check back soon.</p>' +
+  '</div>';
 }
 
 function renderHero(count, downloads, followers) {
@@ -42,15 +63,17 @@ function renderHero(count, downloads, followers) {
     '<div class="hero__content">' +
       '<div class="hero__eyebrow">Sustainably crafted Minecraft mods</div>' +
       '<h1 class="hero__title">Mods made with <em>care</em>, built to last.</h1>' +
-      '<p class="hero__subtitle">Thoughtfully engineered Minecraft modifications that respect your time, your performance, and your world. Discover smooth, reliable, purpose-driven tools.</p>' +
-      '<div class="hero__search">' +
+      '<p class="hero__subtitle">Thoughtfully engineered Minecraft mods that respect your time, performance, and world.</p>' +
+      '<form class="hero__search" action="' + PATHS.browse + '" method="get" role="search">' +
+        '<label class="sr-only" for="hero-search">Search the mod catalogue</label>' +
         '<span class="hero__search-icon">' + ICONS.search + '</span>' +
-        '<input type="text" id="hero-search" placeholder="Search for mods…">' +
-      '</div>' +
+        '<input type="search" name="q" id="hero-search" placeholder="Search the mod catalogue" autocomplete="off">' +
+        '<button type="submit" aria-label="Search mods">Search</button>' +
+      '</form>' +
       '<div class="hero__stats">' +
         '<div class="hero__stat"><strong>' + count + '</strong><span>Curated mods</span></div>' +
         '<div class="hero__stat"><strong>' + formatNumber(downloads) + '</strong><span>Total downloads</span></div>' +
-        '<div class="hero__stat"><strong>' + formatNumber(followers) + '</strong><span>Happy players</span></div>' +
+        '<div class="hero__stat"><strong>' + formatNumber(followers) + '</strong><span>Total followers</span></div>' +
       '</div>' +
     '</div>' +
     '<div class="hero__botanical">' + BOTANICAL_SVG + '</div>' +
@@ -72,9 +95,9 @@ function renderInlineAd(title, copy) {
 
 function renderFeatured(mods) {
   if (!mods.length) return "";
-  return '<section style="margin-top:48px">' +
+  return '<section class="home-section home-section--featured" aria-labelledby="featured-title">' +
     '<div class="section-head">' +
-      '<div><div class="section-head__kicker">Most popular</div><h2>' + ICONS.star + ' Featured mods</h2></div>' +
+      '<div><div class="section-head__kicker">Most popular</div><h2 id="featured-title">' + ICONS.star + ' Featured mods</h2><p>Trusted picks from across the catalogue.</p></div>' +
       '<a href="' + PATHS.browse + '" class="btn">Browse all ' + ICONS.chevron_right + '</a>' +
     '</div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +
@@ -83,9 +106,9 @@ function renderFeatured(mods) {
 
 function renderRecent(mods) {
   if (!mods.length) return "";
-  return '<section style="margin-top:var(--space-8,48px)">' +
+  return '<section class="home-section home-section--recent" aria-labelledby="recent-title">' +
     '<div class="section-head">' +
-      '<div><div class="section-head__kicker">Fresh from the garden</div><h2>' + ICONS.clock + ' Recently updated</h2></div>' +
+      '<div><div class="section-head__kicker">Fresh from the garden</div><h2 id="recent-title">' + ICONS.clock + ' Recently updated</h2><p>The latest maintained releases and improvements.</p></div>' +
       '<a href="' + PATHS.browse + '?s=updated" class="btn">View all ' + ICONS.chevron_right + '</a>' +
     '</div>' +
     '<div class="mod-grid">' + mods.map(modCard).join("") + '</div>' +

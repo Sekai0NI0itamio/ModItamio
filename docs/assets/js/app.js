@@ -369,6 +369,9 @@ function toggleTheme() {
   applyTheme();
   const btn = document.getElementById("theme-btn");
   if (btn) btn.innerHTML = ICONS[_theme === "dark" ? "sun" : "moon"];
+  document.querySelectorAll(".nav__dropdown-theme").forEach(function(b) {
+    b.innerHTML = ICONS[_theme === "dark" ? "sun" : "moon"] + " Theme";
+  });
 }
 applyTheme();
 
@@ -467,14 +470,74 @@ function renderNavbar(active) {
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
     '<a href="' + PATHS.root + '" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
-    '<nav class="nav__links">' +
+    '<nav class="nav__links" id="nav-links">' +
       '<a href="' + PATHS.root + '" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
       '<a href="' + PATHS.browse + '" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +
       '<a href="' + REPO_URL + '/issues" target="_blank" rel="noopener" class="nav__link">Issues' + ICONS.external + '</a>' +
       '<a href="' + REPO_URL + '" target="_blank" rel="noopener" class="nav__link nav__link--icon" title="GitHub">' + ICONS.github + '</a>' +
       '<button id="theme-btn" class="nav__theme-btn" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + '</button>' +
     '</nav>' +
+    '<button class="nav__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Toggle navigation">' +
+      '<span class="nav__hamburger-line"></span>' +
+      '<span class="nav__hamburger-line"></span>' +
+      '<span class="nav__hamburger-line"></span>' +
+    '</button>' +
+    '<div class="nav__dropdown" id="nav-dropdown" role="menu">' +
+      '<a href="' + PATHS.root + '" class="nav__dropdown-link' + (active === "discover" ? " nav__dropdown-link--active" : "") + '" role="menuitem">Discover</a>' +
+      '<a href="' + PATHS.browse + '" class="nav__dropdown-link' + (active === "mods" ? " nav__dropdown-link--active" : "") + '" role="menuitem">Browse</a>' +
+      '<div class="nav__dropdown-divider"></div>' +
+      '<a href="' + REPO_URL + '/issues" target="_blank" rel="noopener" class="nav__dropdown-link" role="menuitem">Issues' + ICONS.external + '</a>' +
+      '<a href="' + REPO_URL + '" target="_blank" rel="noopener" class="nav__dropdown-link" role="menuitem">' + ICONS.github + ' GitHub</a>' +
+      '<button class="nav__dropdown-theme" onclick="toggleTheme()" title="Toggle theme">' + ICONS[_theme === "dark" ? "sun" : "moon"] + ' Theme</button>' +
+    '</div>' +
   '</div>';
+
+  // Hamburger toggle
+  const hamburger = document.getElementById("nav-hamburger");
+  const dropdown = document.getElementById("nav-dropdown");
+  const nav = document.getElementById("navbar");
+
+  if (hamburger && dropdown && nav) {
+    const toggleMenu = function() {
+      const isOpen = nav.classList.toggle("nav--open");
+      hamburger.setAttribute("aria-expanded", String(isOpen));
+    };
+    const closeMenu = function() {
+      nav.classList.remove("nav--open");
+      hamburger.setAttribute("aria-expanded", "false");
+    };
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    // Keyboard: Escape closes menu
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && nav.classList.contains("nav--open")) {
+        closeMenu();
+        hamburger.focus();
+      }
+    });
+
+    // Click outside to close
+    document.addEventListener("click", function(e) {
+      if (!nav.contains(e.target) && nav.classList.contains("nav--open")) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on resize to desktop
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 620 && nav.classList.contains("nav--open")) {
+        closeMenu();
+      }
+    });
+    dropdown.addEventListener("click", function(e) {
+      if (e.target.closest("a") || e.target.closest("button")) {
+        if (window.innerWidth <= 620) {
+          closeMenu();
+        }
+      }
+    });
+  }
 }
 
 async function fetchJSON(url) {

@@ -74,9 +74,12 @@ function renderSkeleton() {
     '</div>' +
     '<div class="search-page__layout">' +
       '<aside class="search-page__sidebar">' +
-        '<div class="skel skel-group"></div>' +
-        '<div class="skel skel-group"></div>' +
-        '<div class="skel skel-group"></div>' +
+        '<div class="sidebar-panel">' +
+          '<div class="skel skel-panel-head"></div>' +
+          '<div class="skel skel-group"></div>' +
+          '<div class="skel skel-group"></div>' +
+          '<div class="skel skel-group"></div>' +
+        '</div>' +
       '</aside>' +
       '<div class="search-page__main"><div class="mod-grid">' + cards + '</div></div>' +
     '</div>' +
@@ -297,7 +300,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
     return '<div class="facet-search">' +
       '<span class="facet-search__icon">' + ICONS.search + '</span>' +
       '<input type="text" class="facet-search__input" id="facet-search-' + type + '" placeholder="' + escapeHtml(placeholder) + '" value="' + escapeHtml(val) + '" oninput="onFacetSearchInput(\'' + type + '\', event)">' +
-      (val ? '<button class="facet-search__clear" onclick="clearFacetSearch(\'' + type + '\')">' + ICONS.x + '</button>' : '') +
+      (val ? '<button class="facet-search__clear" aria-label="Clear search" onclick="clearFacetSearch(\'' + type + '\')">' + ICONS.x + '</button>' : '') +
     '</div>';
   }
 
@@ -313,7 +316,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
     }
     for (const c of filteredCats) {
       const checked = PARAMS.c.includes(c);
-      catHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'c\',\'' + escapeHtml(c) + '\')"><span class="facet-item__label">' + escapeHtml(c) + '</span><span class="facet-item__count">' + (allCounts.cats[c] || 0) + '</span></label>';
+      catHtml += '<label class="facet-item"><input type="checkbox" name="c" value="' + escapeHtml(c) + '" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'c\',\'' + escapeHtml(c) + '\')"><span class="facet-item__label">' + escapeHtml(c) + '</span><span class="facet-item__count">' + (allCounts.cats[c] || 0) + '</span></label>';
     }
     if (searchTerm && !filteredCats.length) {
       catHtml += '<div class="facet-empty">No matching categories</div>';
@@ -333,7 +336,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
   });
   for (const l of filteredLoaders) {
     const checked = PARAMS.l.includes(l);
-    loaderHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'l\',\'' + l + '\')"><span class="facet-item__label">' + escapeHtml(LOADER_NAMES[l] || l) + '</span><span class="facet-item__count">' + (allCounts.loaders[l] || 0) + '</span></label>';
+    loaderHtml += '<label class="facet-item"><input type="checkbox" name="l" value="' + l + '" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'l\',\'' + l + '\')"><span class="facet-item__label">' + escapeHtml(LOADER_NAMES[l] || l) + '</span><span class="facet-item__count">' + (allCounts.loaders[l] || 0) + '</span></label>';
   }
   if (loaderSearch && !filteredLoaders.length) {
     loaderHtml += '<div class="facet-empty">No matching loaders</div>';
@@ -347,16 +350,23 @@ function buildSidebarHtml(hasFilters, allCounts) {
   const filteredVersions = allVersions.filter(v => (allCounts.versions[v] > 0) && facetMatches(v, versionSearch));
   for (const v of filteredVersions) {
     const checked = PARAMS.v.includes(v);
-    versionHtml += '<label class="facet-item"><input type="checkbox" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'v\',\'' + escapeHtml(v) + '\')"><span class="facet-item__label">' + escapeHtml(v) + '</span><span class="facet-item__count">' + (allCounts.versions[v] || 0) + '</span></label>';
+    versionHtml += '<label class="facet-item"><input type="checkbox" name="v" value="' + escapeHtml(v) + '" ' + (checked ? "checked" : "") + ' onchange="toggleFacet(\'v\',\'' + escapeHtml(v) + '\')"><span class="facet-item__label">' + escapeHtml(v) + '</span><span class="facet-item__count">' + (allCounts.versions[v] || 0) + '</span></label>';
   }
   if (versionSearch && !filteredVersions.length) {
     versionHtml += '<div class="facet-empty">No matching versions</div>';
   }
   versionHtml += '</div>';
 
-  return '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()">' + ICONS.filter + ' Clear filters</button>' +
+  const activeCount = (PARAMS.q ? 1 : 0) + PARAMS.c.length + PARAMS.l.length + PARAMS.v.length;
+  return '<div class="sidebar-panel">' +
+    '<div class="sidebar-panel__head">' +
+      '<span class="sidebar-panel__title">Filters</span>' +
+      (activeCount ? '<span class="sidebar-panel__badge">' + activeCount + '</span>' : '') +
+      '<button class="clear-btn" ' + (hasFilters ? "" : "disabled") + ' onclick="clearFilters()" aria-label="Clear all filters">' + ICONS.filter + ' Clear</button>' +
+    '</div>' +
     catHtml + loaderHtml + versionHtml +
-    renderSidebarAd();
+    renderSidebarAd() +
+  '</div>';
 }
 
 function renderSidebarFacets() {
@@ -398,7 +408,7 @@ function renderFilterPills() {
     pills.push('<button class="filter-pill" onclick="removePill(\'v\',\'' + escapeHtml(v) + '\')"><span class="filter-pill__label">' + escapeHtml(v) + '</span><span class="filter-pill__remove">' + ICONS.x + '</span></button>');
   });
   return '<div class="filter-pills">' + pills.join("") +
-    '<button class="filter-pills__clear" onclick="clearFilters()">Clear all</button>' +
+    '<button class="filter-pills__clear" aria-label="Clear all filters" onclick="clearFilters()">Clear all</button>' +
   '</div>';
 }
 
@@ -450,6 +460,15 @@ function render() {
   const searchVal = DRAFT_Q;
   const showClear = !!searchVal;
 
+  // Save focused facet checkbox before innerHTML replace destroys focus
+  const prevFocus = document.activeElement;
+  let prevFacetName = null;
+  let prevFacetValue = null;
+  if (prevFocus && prevFocus.tagName === "INPUT" && prevFocus.type === "checkbox" && prevFocus.name) {
+    prevFacetName = prevFocus.name;
+    prevFacetValue = prevFocus.value;
+  }
+
   root.innerHTML = '<section class="search-page">' +
     '<header class="search-page__header">' +
       '<p class="search-page__overline">Browse</p>' +
@@ -468,7 +487,7 @@ function render() {
       '<div class="search-page__main">' +
         (hasFilters ? renderFilterPills() : "") +
         '<div class="search-page__controls">' +
-          '<span class="search-page__result-count">Showing <strong>' + filtered.length + '</strong> mod' + (filtered.length === 1 ? "" : "s") + '</span>' +
+          '<span class="search-page__result-count" role="status" aria-live="polite">Showing <strong>' + filtered.length + '</strong> mod' + (filtered.length === 1 ? "" : "s") + '</span>' +
           renderSortSelect() +
         '</div>' +
         gridHtml +
@@ -476,6 +495,14 @@ function render() {
       '</div>' +
     '</div>' +
   '</section>';
+
+  // Restore focus to previously focused facet checkbox
+  if (prevFacetName && prevFacetValue) {
+    const checkboxes = root.querySelectorAll('input[type="checkbox"][name="' + prevFacetName + '"]');
+    for (const cb of checkboxes) {
+      if (cb.value === prevFacetValue) { cb.focus(); break; }
+    }
+  }
 
   restoreState();
 }
@@ -495,7 +522,7 @@ function clearMainSearch() {
 }
 
 function renderPagination(total) {
-  let html = '<div class="pagination" aria-label="Pagination">';
+  let html = '<nav class="pagination" aria-label="Results pages">';
   html += '<button class="pg-btn" ' + (PARAMS.p <= 1 ? "disabled" : 'onclick="goPage(' + (PARAMS.p - 1) + ')"') + ' aria-label="Previous page">' + ICONS.chevron_left + '</button>';
   const pages = [];
   for (let i = 1; i <= total; i++) {
@@ -504,10 +531,10 @@ function renderPagination(total) {
   }
   for (const pg of pages) {
     if (pg === "…") html += '<span class="pg-ellipsis">…</span>';
-    else html += '<button class="pg-btn' + (pg === PARAMS.p ? " pg-btn--active" : "") + '" onclick="goPage(' + pg + ')">' + pg + '</button>';
+    else html += '<button class="pg-btn' + (pg === PARAMS.p ? " pg-btn--active" : "") + '" onclick="goPage(' + pg + ')"' + (pg === PARAMS.p ? ' aria-current="page"' : '') + ' aria-label="Page ' + pg + '">' + pg + '</button>';
   }
   html += '<button class="pg-btn" ' + (PARAMS.p >= total ? "disabled" : 'onclick="goPage(' + (PARAMS.p + 1) + ')"') + ' aria-label="Next page">' + ICONS.chevron_right + '</button>';
-  html += '</div>';
+  html += '</nav>';
   return html;
 }
 
