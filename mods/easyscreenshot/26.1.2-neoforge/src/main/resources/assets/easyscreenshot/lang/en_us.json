@@ -1,0 +1,11 @@
+{
+    "category.easyscreenshot": "Easy Screenshot",
+    "key.easyscreenshot.gallery": "Screenshot Gallery",
+    "screen.easyscreenshot.gallery": "Screenshot Gallery",
+    "screen.easyscreenshot.gallery.batch_delete": "Delete Selected",
+    "screen.easyscreenshot.gallery.open_folder": "Open Folder",
+    "screen.easyscreenshot.gallery.close": "Close",
+    "screen.easyscreenshot.rename": "Rename Screenshot",
+    "screen.easyscreenshot.rename.confirm": "Rename",
+    "screen.easyscreenshot.rename.cancel": "Cancel"
+}
