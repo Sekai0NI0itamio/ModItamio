@@ -92,11 +92,15 @@ def transform_project(proj, versions_data):
         })
 
     slug = proj.get("slug", "")
+    desc = proj.get("body", "") or ""
+    import re
+    gif_match = re.search(r'https?://[^\s"\'()<>]+\.gif(?:\?[^\s"\'()<>]*)?', desc, re.IGNORECASE)
+    gif_url = gif_match.group(0) if gif_match else ""
     return {
         "mod_id": slug,
         "name": proj.get("title", ""),
         "summary": proj.get("description", ""),
-        "description": proj.get("body", "") or "",
+        "description": desc,
         "author": "Sekai0ni0Itamio",
         "icon_url": proj.get("icon_url", "") or "",
         "color": hex_color(proj.get("color")),
@@ -114,6 +118,7 @@ def transform_project(proj, versions_data):
         "wiki_url": proj.get("wiki_url") or "",
         "modrinth_url": f"https://modrinth.com/mod/{slug}",
         "site_url": f"mod/?id={slug}",
+        "gif_url": gif_url,
         "loaders": sorted(all_loaders),
         "game_versions": sorted(all_game_versions),
         "gallery": gallery,
@@ -235,6 +240,7 @@ def main():
                 "discord_url": mod_data["discord_url"],
                 "modrinth_url": mod_data["modrinth_url"],
                 "site_url": mod_data["site_url"],
+                "gif_url": mod_data.get("gif_url", ""),
             })
 
             total_downloads += mod_data["downloads"]

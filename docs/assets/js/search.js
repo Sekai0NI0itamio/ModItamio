@@ -1,6 +1,13 @@
 "use strict";
 
 const PAGE_SIZE = 20;
+const SORT_OPTIONS = [
+  { value: "downloads", label: "Most Downloads" },
+  { value: "followers", label: "Most Followers" },
+  { value: "updated", label: "Recently Updated" },
+  { value: "newest", label: "Newest" },
+  { value: "name", label: "Name A-Z" },
+];
 let ALL_MODS = [];
 let PARAMS = { q: "", c: [], l: [], v: [], s: "downloads", p: 1 };
 let DRAFT_Q = "";
@@ -29,7 +36,7 @@ function compareVersions(a, b) {
 async function init() {
   renderNavbar("mods");
   const root = document.getElementById("app");
-  root.innerHTML = '<div class="loading">Loading…</div>';
+  root.innerHTML = renderSkeleton();
 
   try {
     ALL_MODS = await loadAllMods();
@@ -37,8 +44,43 @@ async function init() {
     render();
     syncSearchBox();
   } catch (e) {
-    root.innerHTML = '<div class="empty"><p>Failed to load mods: ' + escapeHtml(e.message) + '</p></div>';
+    root.innerHTML = '<section class="search-page"><div class="search-page__empty">' +
+      '<div class="search-page__empty-icon">' + ICONS.alert + '</div>' +
+      '<h2 class="search-page__empty-title">Could not load mods</h2>' +
+      '<p class="search-page__empty-text">' + escapeHtml(e.message) + '</p>' +
+    '</div></section>';
   }
+}
+
+function renderSkeleton() {
+  let cards = "";
+  for (let i = 0; i < 6; i++) {
+    cards += '<div class="skel-card">' +
+      '<div class="skel skel-card__show"></div>' +
+      '<div class="skel-card__body">' +
+        '<div class="skel skel-line skel-line--title"></div>' +
+        '<div class="skel skel-line"></div>' +
+        '<div class="skel skel-line skel-line--short"></div>' +
+        '<div class="skel skel-line skel-line--meta"></div>' +
+      '</div>' +
+    '</div>';
+  }
+  return '<section class="search-page">' +
+    '<div class="search-page__header">' +
+      '<div class="skel skel-kicker"></div>' +
+      '<div class="skel skel-title"></div>' +
+      '<div class="skel skel-sub"></div>' +
+      '<div class="skel skel-search"></div>' +
+    '</div>' +
+    '<div class="search-page__layout">' +
+      '<aside class="search-page__sidebar">' +
+        '<div class="skel skel-group"></div>' +
+        '<div class="skel skel-group"></div>' +
+        '<div class="skel skel-group"></div>' +
+      '</aside>' +
+      '<div class="search-page__main"><div class="mod-grid">' + cards + '</div></div>' +
+    '</div>' +
+  '</section>';
 }
 
 function renderSidebarAd() {
@@ -56,12 +98,12 @@ function renderSidebarAd() {
 }
 
 function renderSearchInlineAd() {
-  return '<div class="ad-slot ad-slot--list">' +
-    '<div class="ad-label">Sponsored</div>' +
+  return '<div class="ad-slot ad-slot--card" aria-label="Advertisement">' +
+    '<span class="ad-label">Sponsored</span>' +
     '<div class="inline-ad">' +
       '<div class="inline-ad__content">' +
-        '<strong>Support open-source modding</strong>' +
-        '<span>Consider sponsoring the developers behind your favorite mods to keep updates flowing.</span>' +
+        '<strong>Support independent modding</strong>' +
+        '<span>Your support helps us keep Minecraft mods running smoothly for everyone.</span>' +
       '</div>' +
       '<a href="#" class="btn btn--sm btn--primary">Learn more</a>' +
     '</div>' +
@@ -191,6 +233,20 @@ function clearFilters() {
   writeUrl(); render();
 }
 
+function removePill(type, val) {
+  saveState();
+  if (type === "q") {
+    PARAMS.q = "";
+    DRAFT_Q = "";
+  } else {
+    const arr = PARAMS[type];
+    const i = arr.indexOf(val);
+    if (i >= 0) arr.splice(i, 1);
+  }
+  PARAMS.p = 1;
+  writeUrl(); render();
+}
+
 function goPage(p) { PARAMS.p = p; writeUrl(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
 
 function onMainSearchInput(e) {
@@ -203,7 +259,7 @@ function onMainSearchInput(e) {
     if (bar) {
       const btn = document.createElement("button");
       btn.className = "main-search-bar__clear";
-      btn.innerHTML = "&times;";
+      btn.innerHTML = ICONS.x;
       btn.onclick = clearMainSearch;
       bar.appendChild(btn);
     }
@@ -241,7 +297,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
     return '<div class="facet-search">' +
       '<span class="facet-search__icon">' + ICONS.search + '</span>' +
       '<input type="text" class="facet-search__input" id="facet-search-' + type + '" placeholder="' + escapeHtml(placeholder) + '" value="' + escapeHtml(val) + '" oninput="onFacetSearchInput(\'' + type + '\', event)">' +
-      (val ? '<button class="facet-search__clear" onclick="clearFacetSearch(\'' + type + '\')">&times;</button>' : '') +
+      (val ? '<button class="facet-search__clear" onclick="clearFacetSearch(\'' + type + '\')">' + ICONS.x + '</button>' : '') +
     '</div>';
   }
 
@@ -304,7 +360,7 @@ function buildSidebarHtml(hasFilters, allCounts) {
 }
 
 function renderSidebarFacets() {
-  const sidebar = document.querySelector(".search-sidebar");
+  const sidebar = document.querySelector(".search-page__sidebar");
   if (!sidebar) return;
   const facetInput = document.activeElement;
   let facetId = null;
@@ -325,6 +381,43 @@ function renderSidebarFacets() {
       try { el.setSelectionRange(facetSelStart, facetSelEnd); } catch (e) {}
     }
   }
+}
+
+function renderFilterPills() {
+  const pills = [];
+  if (PARAMS.q) {
+    pills.push('<button class="filter-pill" onclick="removePill(\'q\',\'\')"><span class="filter-pill__label">' + escapeHtml(PARAMS.q) + '</span><span class="filter-pill__remove">' + ICONS.x + '</span></button>');
+  }
+  PARAMS.c.forEach(c => {
+    pills.push('<button class="filter-pill" onclick="removePill(\'c\',\'' + escapeHtml(c) + '\')"><span class="filter-pill__label">' + escapeHtml(c) + '</span><span class="filter-pill__remove">' + ICONS.x + '</span></button>');
+  });
+  PARAMS.l.forEach(l => {
+    pills.push('<button class="filter-pill" onclick="removePill(\'l\',\'' + l + '\')"><span class="filter-pill__label">' + escapeHtml(LOADER_NAMES[l] || l) + '</span><span class="filter-pill__remove">' + ICONS.x + '</span></button>');
+  });
+  PARAMS.v.forEach(v => {
+    pills.push('<button class="filter-pill" onclick="removePill(\'v\',\'' + escapeHtml(v) + '\')"><span class="filter-pill__label">' + escapeHtml(v) + '</span><span class="filter-pill__remove">' + ICONS.x + '</span></button>');
+  });
+  return '<div class="filter-pills">' + pills.join("") +
+    '<button class="filter-pills__clear" onclick="clearFilters()">Clear all</button>' +
+  '</div>';
+}
+
+function renderSortSelect() {
+  const current = SORT_OPTIONS.find(o => o.value === PARAMS.s) || SORT_OPTIONS[0];
+  return '<div class="sort-select">' +
+    '<div class="sort-select__trigger" aria-hidden="true"><span>' + escapeHtml(current.label) + '</span>' + ICONS.chevron_down + '</div>' +
+    '<select aria-label="Sort results" onchange="setSort(this.value)">' +
+      SORT_OPTIONS.map(o => '<option value="' + o.value + '"' + (o.value === PARAMS.s ? " selected" : "") + '>' + escapeHtml(o.label) + '</option>').join("") +
+    '</select>' +
+  '</div>';
+}
+
+function renderEmptyState() {
+  return '<div class="search-page__empty">' +
+    '<div class="search-page__empty-icon">' + ICONS.search + '</div>' +
+    '<h2 class="search-page__empty-title">No mods match your filters.</h2>' +
+    '<p class="search-page__empty-text">Try adjusting your search terms or clearing some filters.</p>' +
+  '</div>';
 }
 
 function render() {
@@ -349,36 +442,40 @@ function render() {
     const cards = page.map(modCard);
     const adInsertIndex = Math.min(6, cards.length);
     const cardsWithAd = [...cards.slice(0, adInsertIndex), renderSearchInlineAd(), ...cards.slice(adInsertIndex)];
-    gridHtml = '<div class="mod-list">' + cardsWithAd.join("") + '</div>';
+    gridHtml = '<div class="mod-grid">' + cardsWithAd.join("") + '</div>';
   } else {
-    gridHtml = '<div class="empty"><p>No mods match your filters.</p></div>';
+    gridHtml = renderEmptyState();
   }
-
-  const sortButtons = ['downloads', 'followers', 'updated', 'newest', 'name'].map(s =>
-    '<button class="sort-btn' + (PARAMS.s === s ? " sort-btn--active" : "") + '" onclick="setSort(\'' + s + '\')">' + escapeHtml(s.charAt(0).toUpperCase() + s.slice(1)) + '</button>'
-  ).join("");
 
   const searchVal = DRAFT_Q;
   const showClear = !!searchVal;
 
-  root.innerHTML = '<div class="search-layout">' +
-    '<aside class="search-sidebar">' +
-      buildSidebarHtml(hasFilters, allCounts) +
-    '</aside>' +
-    '<div class="search-main">' +
-      '<div class="sort-bar">' +
-        '<div class="sort-bar__count">' + filtered.length + ' result' + (filtered.length === 1 ? "" : "s") + '</div>' +
-        '<div class="sort-bar__options">' + sortButtons + '</div>' +
-      '</div>' +
+  root.innerHTML = '<section class="search-page">' +
+    '<header class="search-page__header">' +
+      '<p class="search-page__overline">Browse</p>' +
+      '<h1 class="search-page__title">Explore Mods</h1>' +
+      '<p class="search-page__subtitle">Find the right mod for your version and loader.</p>' +
       '<div class="main-search-bar">' +
         '<span class="main-search-bar__icon">' + ICONS.search + '</span>' +
-        '<input type="text" id="main-search" class="main-search-bar__input" placeholder="Search mods…" value="' + escapeHtml(searchVal) + '" oninput="onMainSearchInput(event)" onkeydown="onMainSearchKeydown(event)">' +
-        (showClear ? '<button class="main-search-bar__clear" onclick="clearMainSearch()">&times;</button>' : '') +
+        '<input type="text" id="main-search" class="main-search-bar__input" placeholder="Search mods…" value="' + escapeHtml(searchVal) + '" oninput="onMainSearchInput(event)" onkeydown="onMainSearchKeydown(event)" autocomplete="off" aria-label="Search mods">' +
+        (showClear ? '<button class="main-search-bar__clear" onclick="clearMainSearch()" aria-label="Clear search">' + ICONS.x + '</button>' : '') +
       '</div>' +
-      gridHtml +
-      (totalPages > 1 ? renderPagination(totalPages) : "") +
+    '</header>' +
+    '<div class="search-page__layout">' +
+      '<aside class="search-page__sidebar">' +
+        buildSidebarHtml(hasFilters, allCounts) +
+      '</aside>' +
+      '<div class="search-page__main">' +
+        (hasFilters ? renderFilterPills() : "") +
+        '<div class="search-page__controls">' +
+          '<span class="search-page__result-count">Showing <strong>' + filtered.length + '</strong> mod' + (filtered.length === 1 ? "" : "s") + '</span>' +
+          renderSortSelect() +
+        '</div>' +
+        gridHtml +
+        (totalPages > 1 ? renderPagination(totalPages) : "") +
+      '</div>' +
     '</div>' +
-  '</div>';
+  '</section>';
 
   restoreState();
 }
@@ -398,8 +495,8 @@ function clearMainSearch() {
 }
 
 function renderPagination(total) {
-  let html = '<div class="pagination">';
-  html += '<button class="pg-btn" ' + (PARAMS.p <= 1 ? "disabled" : 'onclick="goPage(' + (PARAMS.p - 1) + ')"') + '>' + ICONS.chevron_left + '</button>';
+  let html = '<div class="pagination" aria-label="Pagination">';
+  html += '<button class="pg-btn" ' + (PARAMS.p <= 1 ? "disabled" : 'onclick="goPage(' + (PARAMS.p - 1) + ')"') + ' aria-label="Previous page">' + ICONS.chevron_left + '</button>';
   const pages = [];
   for (let i = 1; i <= total; i++) {
     if (i === 1 || i === total || (i >= PARAMS.p - 2 && i <= PARAMS.p + 2)) pages.push(i);
@@ -409,7 +506,7 @@ function renderPagination(total) {
     if (pg === "…") html += '<span class="pg-ellipsis">…</span>';
     else html += '<button class="pg-btn' + (pg === PARAMS.p ? " pg-btn--active" : "") + '" onclick="goPage(' + pg + ')">' + pg + '</button>';
   }
-  html += '<button class="pg-btn" ' + (PARAMS.p >= total ? "disabled" : 'onclick="goPage(' + (PARAMS.p + 1) + ')"') + '>' + ICONS.chevron_right + '</button>';
+  html += '<button class="pg-btn" ' + (PARAMS.p >= total ? "disabled" : 'onclick="goPage(' + (PARAMS.p + 1) + ')"') + ' aria-label="Next page">' + ICONS.chevron_right + '</button>';
   html += '</div>';
   return html;
 }

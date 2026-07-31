@@ -394,29 +394,68 @@ function versionBadge(type) {
 
 let cardIndex = 0;
 let CARD_LINK_EXTRA = "";
+
+function firstGifUrl(m) {
+  const direct = sanitizeUrl(m.gif_url);
+  if (/^https?:\/\//i.test(direct)) return direct;
+  const desc = m.description || "";
+  const hit = desc.match(/https?:\/\/[^\s"'()<>]+\.gif(?:\?[^\s"'()<>]*)?/i);
+  return hit ? hit[0] : "";
+}
+
+function modCardGifError(img) {
+  const show = img.closest(".mod-card__media");
+  if (!show) return;
+  const color = img.getAttribute("data-color") || "";
+  const icon = img.getAttribute("data-icon") || "";
+  const placeholder = document.createElement("div");
+  placeholder.className = "mod-card__placeholder";
+  if (color) placeholder.style.background = color;
+  if (icon) placeholder.innerHTML = '<img class="mod-card__placeholder-icon" src="' + escapeHtml(icon) + '" alt="" loading="lazy">';
+  show.insertBefore(placeholder, show.firstChild);
+  img.remove();
+}
+
 function modCard(m) {
   const iconUrl = sanitizeUrl(m.icon_url) || CONFIG.modsAssetBase + "/" + m.mod_id + "/icon.png";
-  const letter = (m.name || "M")[0].toUpperCase();
+  const gifUrl = firstGifUrl(m);
   const idx = cardIndex++;
   const href = PATHS.mod + "?id=" + encodeURIComponent(m.mod_id) + (CARD_LINK_EXTRA ? "&" + CARD_LINK_EXTRA : "");
-  const loadersTags = renderLoaderTags((m.loaders || []).slice(0, 3));
-  const catsTags = renderCategoryTags(m.categories);
-  const tagsInner = loadersTags + catsTags;
+  const color = /^#[0-9a-f]{3,8}$/i.test(m.color || "") ? m.color : "";
+  const iconHtml = escapeHtml(iconUrl);
+  const firstLetter = (m.name || "M")[0].toUpperCase();
+  const stats =
+    '<span class="mod-card__stat">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
+    '<span class="mod-card__stat">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<span class="mod-card__stat">' + ICONS.clock + ' ' + timeAgo(m.updated || m.date_published) + '</span>';
+  const loaders = renderLoaderTags((m.loaders || []).slice(0, 3));
+
+  /* media area: GIF/screenshot or colored placeholder */
+  var media;
+  if (gifUrl) {
+    media = '<img class="mod-card__gif" src="' + escapeHtml(gifUrl) + '" alt="" loading="lazy"' +
+      ' data-icon="' + iconHtml + '"' +
+      (color ? ' data-color="' + color + '"' : "") +
+      ' onerror="modCardGifError(this)">';
+  } else {
+    media = '<div class="mod-card__placeholder"' + (color ? ' style="background:' + color + '"' : "") + '>' +
+      '<span class="mod-card__letter">' + firstLetter + '</span>' +
+    '</div>';
+  }
+
   return '<a class="mod-card" href="' + href + '" style="--i:' + idx + '">' +
-    '<div class="mod-card__top">' +
-      '<div class="mod-card__icon-wrap">' +
-        '<img class="mod-card__icon" src="' + escapeHtml(iconUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-        '<div class="mod-card__fallback" style="display:none">' + escapeHtml(letter) + '</div>' +
-      '</div>' +
-      '<div class="mod-card__header">' +
-        '<div class="mod-card__title">' + escapeHtml(m.name) + '</div>' +
-        '<div class="mod-card__summary">' + escapeHtml(m.summary || "") + '</div>' +
-      '</div>' +
+    '<div class="mod-card__media">' + media +
+      '<img class="mod-card__icon" src="' + iconHtml + '" alt="" loading="lazy"' +
+        ' onerror="this.onerror=null;this.style.display=\'none\'">' +
     '</div>' +
-    '<div class="mod-card__tags">' + tagsInner + '</div>' +
-    '<div class="mod-card__footer">' +
-      '<span class="mod-card__stat mod-card__stat--downloads">' + ICONS.download + ' ' + formatNumber(m.downloads) + '</span>' +
-      '<span class="mod-card__stat mod-card__stat--followers">' + ICONS.heart + ' ' + formatNumber(m.followers) + '</span>' +
+    '<div class="mod-card__body">' +
+      '<div class="mod-card__header">' +
+        '<h3 class="mod-card__title">' + escapeHtml(m.name) + '</h3>' +
+        '<span class="mod-card__author">by ' + escapeHtml(m.author || "Itamio") + '</span>' +
+      '</div>' +
+      '<p class="mod-card__summary">' + escapeHtml(m.summary || "") + '</p>' +
+      '<div class="mod-card__tags">' + loaders + '</div>' +
+      '<div class="mod-card__meta">' + stats + '</div>' +
     '</div>' +
   '</a>';
 }

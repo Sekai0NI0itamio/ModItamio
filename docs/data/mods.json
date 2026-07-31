@@ -1028,7 +1028,8 @@
     "wiki_url": "https://github.com/Sekai0NI0itamio/auto-totem/blob/main/docs/Home.md",
     "discord_url": "",
     "modrinth_url": "https://modrinth.com/mod/instant-auto-totem",
-    "site_url": "mod/?id=instant-auto-totem"
+    "site_url": "mod/?id=instant-auto-totem",
+    "gif_url": "https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/instantautototem/demonstration-of-how-it-works.gif"
   },
   {
     "mod_id": "instant-bridge",
@@ -1617,7 +1618,8 @@
     "wiki_url": "https://github.com/Sekai0NI0itamio/day-counter/blob/main/docs/Home.md",
     "discord_url": "",
     "modrinth_url": "https://modrinth.com/mod/optimizeddaycounter",
-    "site_url": "mod/?id=optimizeddaycounter"
+    "site_url": "mod/?id=optimizeddaycounter",
+    "gif_url": "https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/optimizeddaycounter/showing-the-day-counter.gif"
   },
   {
     "mod_id": "optimized-mining",
@@ -1906,7 +1908,8 @@
     "wiki_url": "https://github.com/Sekai0NI0itamio/seed-protect/blob/main/docs/Home.md",
     "discord_url": "",
     "modrinth_url": "https://modrinth.com/mod/seed-protect",
-    "site_url": "mod/?id=seed-protect"
+    "site_url": "mod/?id=seed-protect",
+    "gif_url": "https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/seedprotect/demonstration-of-what-happens-when-using-this-mod-and-jumping-on-crps.gif"
   },
   {
     "mod_id": "set-home-anywhere",
@@ -2257,7 +2260,8 @@
     "wiki_url": "https://github.com/Sekai0NI0itamio/tnt-duper/blob/main/docs/Home.md",
     "discord_url": "",
     "modrinth_url": "https://modrinth.com/mod/tntduper",
-    "site_url": "mod/?id=tntduper"
+    "site_url": "mod/?id=tntduper",
+    "gif_url": "https://raw.githubusercontent.com/Sekai0NI0itamio/ModItamio/main/assets/screenshots/tntduper/showing-how-everything-works.gif"
   },
   {
     "mod_id": "toggle-sprint",
