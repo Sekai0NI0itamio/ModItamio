@@ -1,0 +1,26 @@
+name: Deploy branch preview to fork Pages
+
+on:
+  push:
+    branches:
+      - feature/search-redesign
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy docs/ to fork gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.FORK_DEPLOY_KEY }}
+          external_repository: ${{ vars.FORK_TARGET_REPO }}
+          publish_branch: gh-pages
+          publish_dir: ./docs
+          force_orphan: true
