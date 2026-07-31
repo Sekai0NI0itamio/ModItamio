@@ -25,15 +25,15 @@
       width: 90%;
     }
     .icon { margin-bottom: 1.25rem; }
-    h1 { font-size: 1.1rem; color: #f0f6fc; margin-bottom: 0.5rem; }
-    p { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.5rem; color: #f0f6fc; margin-bottom: 0.5rem; }
+    p { font-size: 0.9rem; color: #8b949e; margin-bottom: 1.5rem; }
     .filename {
       background: #0d1117;
       border: 1px solid #30363d;
       border-radius: 6px;
       padding: 0.5rem 0.75rem;
       font-family: "SF Mono", "Fira Code", monospace;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #3fb950;
       word-break: break-all;
       margin-bottom: 1.25rem;
@@ -48,6 +48,9 @@
       animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation-duration: 2.5s; }
+    }
     .btn {
       display: inline-block;
       background: #3fb950;
@@ -55,7 +58,7 @@
       border: none;
       border-radius: 6px;
       padding: 0.6rem 1.5rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;

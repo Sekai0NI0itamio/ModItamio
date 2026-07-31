@@ -246,16 +246,20 @@ svg { flex-shrink: 0; display: inline-block; vertical-align: middle; }
   border-bottom: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
   padding: 0 16px;
-  max-height: 0;
-  overflow: hidden;
   opacity: 0;
-  transition: max-height .3s var(--ease), opacity .25s var(--ease), padding .3s var(--ease);
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .25s var(--ease), transform .3s var(--ease), visibility 0s linear .3s;
   z-index: 100;
 }
 .nav--open .nav__dropdown {
-  max-height: 500px;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   padding: 8px 16px 12px;
+  transform: translateY(0);
+  transition: opacity .25s var(--ease), transform .3s var(--ease), visibility 0s;
 }
 .nav__dropdown-link {
   display: flex;
@@ -1413,8 +1417,8 @@ body.has-hero .page { padding-top: 0; }
 }
 .prose pre code { background: none; padding: 0; color: var(--ink); font-size: 13px; border: none; }
 .prose blockquote {
-  border-left: 3px solid var(--moss);
-  padding-left: 18px;
+  border-left: 1px solid var(--sage);
+  padding-left: 16px;
   margin: 16px 0;
   color: var(--muted);
   font-style: italic;
