@@ -192,7 +192,10 @@ function render() {
       '</div>' +
     '</div>' +
     '<div class="proj-header__actions">' +
-      (primaryFile ? '<a class="btn btn--lg btn--primary btn--icon" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download title="Download">' + ICONS.download + '</a>' : "") +
+      (primaryFile ? '<a class="btn btn--lg btn--primary" id="header-download-btn" href="' + escapeHtml(primaryFile.url) + '" download title="Download the file for your chosen setup">' +
+        '<span class="btn__icon">' + ICONS.download + '</span>' +
+        '<span class="btn__label" id="header-download-label">Download</span>' +
+      '</a>' : "") +
       '<a class="btn btn--lg btn--icon" href="' + ISSUES_NEW_URL + '?labels=mod:' + escapeHtml(currentMod.mod_id) + '&title=' + encodeURIComponent("[" + currentMod.name + "] ") + '" target="_blank" rel="noopener" title="Report issue">' + ICONS.alert + '</a>' +
     '</div>' +
   '</div>' +
@@ -325,10 +328,13 @@ function updateHeaderDownload() {
   if (sel) {
     btn.href = sel.file.url;
     btn.style.display = "";
+    const sizeStr = sel.file.size ? " • " + formatBytes(sel.file.size) : "";
     const btnLabel = (sbLoader || sbGameVer)
-      ? "Download" + (sbLoader ? " for " + (loaderName(sbLoader) || sbLoader) : "") + (sbGameVer ? " " + sbGameVer : "")
-      : "Download";
-    btn.title = btnLabel + " - " + (sel.version.name || sel.version.version_number) + " - " + (sel.file.filename || "");
+      ? "Download for " + (loaderName(sbLoader) || sbLoader) + (sbGameVer ? " " + sbGameVer : "") + sizeStr
+      : "Download" + sizeStr;
+    const labelEl = document.getElementById("header-download-label");
+    if (labelEl) labelEl.textContent = btnLabel;
+    btn.title = btnLabel + " — " + (sel.file.filename || "");
   } else {
     btn.style.display = "none";
   }
@@ -368,6 +374,13 @@ function renderDescription() {
         '<div class="sidebar-card__file-meta">' + ICONS.download + ' ' + (sizeStr ? sizeStr + ' • ' : '') + escapeHtml(loaderList) + ' • ' + escapeHtml(gameList) + '</div>' +
         '<div class="sidebar-card__file-date">' + ICONS.clock + ' Released ' + formatDate(sel.version.date_published) + '</div>' +
       '</div>' +
+      '<div class="sidebar-card__install">' +
+        '<div class="sidebar-card__install-title">' + ICONS.book + ' What to do next</div>' +
+        '<ol class="sidebar-card__install-steps">' +
+          '<li>Save the file into your <code>.minecraft/mods</code> folder.</li>' +
+          '<li>Launch Minecraft with ' + (loaderList ? escapeHtml(loaderList) : "your loader") + ' and the matching game version.</li>' +
+        '</ol>' +
+      '</div>' +
       '<div id="sb-no-match" class="sidebar-card__nomatch" style="display:none">' +
         ICONS.alert + ' No file matches your selection. Try different options.' +
       '</div>';
@@ -390,11 +403,11 @@ function renderDescription() {
           '<div class="sidebar-card__label">Choose your setup</div>' +
           '<div class="sidebar-card__selectors">' +
             '<div class="sidebar-card__select-wrap">' +
-              '<label class="sidebar-card__select-label">Loader</label>' +
+              '<label class="sidebar-card__select-label" for="sb-loader">Loader</label>' +
               '<select class="form-select sidebar-card__select" id="sb-loader">' + loaderOptions + '</select>' +
             '</div>' +
             '<div class="sidebar-card__select-wrap">' +
-              '<label class="sidebar-card__select-label">Minecraft version</label>' +
+              '<label class="sidebar-card__select-label" for="sb-version">Minecraft version</label>' +
               '<select class="form-select sidebar-card__select" id="sb-version">' + verOptions + '</select>' +
             '</div>' +
           '</div>' +
@@ -455,7 +468,8 @@ function renderVersions() {
   const allVersions = [...new Set(versions.flatMap(v => v.game_versions || []))].sort().reverse();
   const filtered = getFilteredVersions();
 
-  return '<div class="version-filters">' +
+  return '<h2 class="sr-only">Versions</h2>' +
+  '<div class="version-filters">' +
     '<select class="form-select" onchange="onVerFilterLoader(this.value)"><option value="">All loaders</option>' +
       allLoaders.map(l => '<option value="' + l + '"' + (vFilter.loader === l ? " selected" : "") + '>' + escapeHtml(loaderName(l) || l) + '</option>').join("") +
     '</select>' +
@@ -490,10 +504,12 @@ function renderVersionRow(v) {
 function renderChangelog() {
   const versionsWithChangelog = versions.filter(v => v.changelog).sort((a, b) => (b.date_published || "").localeCompare(a.date_published || ""));
   if (!versionsWithChangelog.length) return '<div class="panel"><div class="panel__body prose"><p><em>No changelog entries available.</em></p></div></div>';
-  return '<div class="panel"><div class="panel__body">' + versionsWithChangelog.map(v =>
+  return '<div class="panel"><div class="panel__body">' +
+    '<h2 class="sr-only">Changelog</h2>' +
+    versionsWithChangelog.map(v =>
     '<div class="changelog-entry">' +
       '<div class="changelog-entry__header">' +
-        '<h4 style="margin:0;font-size:var(--fs-base);font-weight:700;color:var(--color-text-bright)">' + escapeHtml(v.name || v.version_number) + '</h4>' +
+        '<h3 style="margin:0;font-size:var(--fs-base);font-weight:700;color:var(--color-text-bright)">' + escapeHtml(v.name || v.version_number) + '</h3>' +
         '<span style="font-size:var(--fs-xs);color:var(--color-text-dim)">' + formatDate(v.date_published) + '</span>' +
       '</div>' +
       '<div class="prose changelog-text">' + renderMarkdown(v.changelog) + '</div>' +
@@ -589,6 +605,7 @@ function renderIssues() {
 
   return '<div class="issues-layout">' +
     '<div>' +
+      '<h2 class="sr-only">Issues</h2>' +
       '<div class="issue-filters">' +
         filterTabs.map(t =>
           '<button class="issue-filter' + (issueFilter === t.key ? ' issue-filter--active' : '') + '" onclick="setIssueFilter(\'' + t.key + '\')">' +
@@ -603,28 +620,28 @@ function renderIssues() {
     '</div>' +
     '<div class="issues-sidebar">' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
-        '<h3 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-3);color:var(--color-text-bright)">Report an issue</h3>' +
+        '<h2 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-3);color:var(--color-text-bright)">Report an issue</h2>' +
         '<form id="quick-issue-form" onsubmit="submitQuickIssue(event)">' +
-          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Issue type</label>' +
+          '<label for="qi-type" style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Issue type</label>' +
           '<select class="form-select" id="qi-type" style="width:100%;margin-bottom:var(--space-3)">' +
             '<option value="bug">Bug / Crash</option>' +
             '<option value="enhancement">Feature Request</option>' +
             '<option value="question">Question / Help</option>' +
             '<option value="">Other</option>' +
           '</select>' +
-          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Loader</label>' +
+          '<label for="qi-loader" style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Loader</label>' +
           '<select class="form-select" id="qi-loader" style="width:100%;margin-bottom:var(--space-3)">' +
             '<option value="">Any / Not applicable</option>' +
             allLoaders.map(l => '<option value="' + l + '"' + (l === sbLoader ? ' selected' : '') + '>' + escapeHtml(loaderName(l) || l) + '</option>').join("") +
           '</select>' +
-          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Minecraft version</label>' +
+          '<label for="qi-version" style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Minecraft version</label>' +
           '<select class="form-select" id="qi-version" style="width:100%;margin-bottom:var(--space-3)">' +
             '<option value="">Any / Not applicable</option>' +
             allVersions.map(v => '<option value="' + escapeHtml(v) + '"' + (v === sbGameVer ? ' selected' : '') + '>' + escapeHtml(v) + '</option>').join("") +
           '</select>' +
-          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Title</label>' +
+          '<label for="qi-title" style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Title</label>' +
           '<input class="form-input" type="text" id="qi-title" placeholder="Brief summary of the issue..." required style="width:100%;margin-bottom:var(--space-3)">' +
-          '<label style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Description</label>' +
+          '<label for="qi-body" style="display:block;font-size:var(--fs-sm);font-weight:600;color:var(--color-text-bright);margin-bottom:var(--space-1)">Description</label>' +
           '<textarea class="form-input" id="qi-body" rows="5" placeholder="Steps to reproduce, expected behavior, crash reports, screenshots, etc..." style="width:100%;margin-bottom:var(--space-3);resize:vertical"></textarea>' +
           '<button type="submit" class="btn btn--primary" style="width:100%"><span class="btn__icon">' + ICONS.send + '</span><span class="btn__label">Create on GitHub</span></button>' +
         '</form>' +
@@ -632,7 +649,7 @@ function renderIssues() {
         '<p style="margin:var(--space-3) 0 0;font-size:var(--fs-xs);color:var(--faint);line-height:1.5">' + ICONS.github + " You'll be taken to GitHub to submit. Issues are tracked with the <code>mod:" + escapeHtml(currentMod.mod_id) + '</code> label.</p>' +
       '</div></div>' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
-        '<h3 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-2);color:var(--color-text-bright)">Status guide</h3>' +
+        '<h2 style="font-size:var(--fs-base);font-weight:700;margin:0 0 var(--space-2);color:var(--color-text-bright)">Status guide</h2>' +
         '<div class="status-legend">' +
           Object.entries(ISSUE_STATUS).map(([key, s]) =>
             '<div class="status-legend__row">' +
@@ -667,7 +684,7 @@ function renderIssueRow(issue) {
   const hasComments = (issue.comments || 0) > 0;
 
   return '<div class="issue-row' + (isExpanded ? ' issue-row--expanded' : '') + '" data-issue="' + issue.number + '">' +
-    '<div class="issue-row__header" onclick="toggleIssueExpand(' + issue.number + ')">' +
+    '<div class="issue-row__header" role="button" tabindex="0" aria-expanded="' + isExpanded + '" aria-controls="issue-detail-' + issue.number + '" onclick="toggleIssueExpand(' + issue.number + ')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleIssueExpand(' + issue.number + ');}">' +
       '<span class="issue-row__icon issue-row__icon--' + status + '" style="color:' + statusInfo.color + '">' + ICONS[statusInfo.icon] + '</span>' +
       '<div style="min-width:0;flex:1">' +
         '<div class="issue-row__title-row">' +
@@ -679,9 +696,9 @@ function renderIssueRow(issue) {
         '</div>' +
         (labels ? '<div class="issue-row__labels">' + labels + '</div>' : "") +
       '</div>' +
-      '<span class="issue-row__cmt issue-row__cmt--' + (isExpanded ? 'expanded' : 'collapsed') + '">' + (isExpanded ? ICONS.chevron_down : ICONS.chevron_right) + '</span>' +
+      '<span class="issue-row__cmt issue-row__cmt--' + (isExpanded ? 'expanded' : 'collapsed') + '" aria-hidden="true">' + (isExpanded ? ICONS.chevron_down : ICONS.chevron_right) + '</span>' +
     '</div>' +
-    (isExpanded ? '<div class="issue-detail">' +
+    (isExpanded ? '<div class="issue-detail" id="issue-detail-' + issue.number + '">' +
       '<div class="issue-detail__body prose">' + renderMarkdown(issue.body || "_No description provided._") + '</div>' +
       '<div class="issue-detail__actions">' +
         '<a class="btn btn--sm" href="' + escapeHtml(issue.html_url) + '" target="_blank" rel="noopener">' + ICONS.external + ' View on GitHub</a>' +

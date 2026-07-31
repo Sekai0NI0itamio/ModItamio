@@ -4,46 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download — ModItamio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234a7c59'/><path d='M50 72 Q50 55 38 42 M50 72 Q50 50 62 38 M50 72 L50 30' stroke='%23e8f5e9' stroke-width='5' stroke-linecap='round' fill='none'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --moss: oklch(45% .09 145);
+      --leaf: oklch(55% .11 145);
+      --sage: oklch(72% .08 135);
+      --clay: oklch(58% .1 55);
+      --ink: oklch(24% .025 145);
+      --paper: oklch(99% .005 95);
+      --surface: oklch(97% .008 95);
+      --line: oklch(90% .012 95);
+      --muted: oklch(43% .035 145);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --ink: oklch(92% .01 120);
+      --paper: oklch(18% .012 145);
+      --surface: oklch(22% .012 145);
+      --line: oklch(30% .015 145);
+      --muted: oklch(74% .035 120);
+    }
     body {
-      background: #0d1117;
-      color: #c9d1d9;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      padding: 1rem;
     }
     .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 2.5rem;
-      max-width: 420px;
-      width: 90%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top-color: color-mix(in srgb, var(--sage) 45%, var(--line));
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 1px 2px oklch(28% .03 145 / .04), 0 4px 12px oklch(28% .03 145 / .05), 0 24px 60px oklch(28% .03 145 / .08);
     }
-    .icon { margin-bottom: 1.25rem; }
-    h1 { font-size: 1.5rem; color: #f0f6fc; margin-bottom: 0.5rem; }
-    p { font-size: 0.9rem; color: #8b949e; margin-bottom: 1.5rem; }
+    .icon { margin-bottom: 1.5rem; }
+    .icon svg { color: var(--moss); }
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      text-wrap: balance;
+    }
+    p { font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin-bottom: 1.75rem; }
     .filename {
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 0.5rem 0.75rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.65rem 0.9rem;
       font-family: "SF Mono", "Fira Code", monospace;
-      font-size: 0.75rem;
-      color: #3fb950;
+      font-size: 0.8rem;
+      color: var(--leaf);
       word-break: break-all;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
     .spinner {
       display: inline-block;
-      width: 24px;
-      height: 24px;
-      border: 3px solid #30363d;
-      border-top-color: #3fb950;
+      width: 26px;
+      height: 26px;
+      border: 3px solid var(--line);
+      border-top-color: var(--moss);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
@@ -52,40 +87,48 @@
       .spinner { animation-duration: 2.5s; }
     }
     .btn {
-      display: inline-block;
-      background: #3fb950;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--moss) 0%, var(--leaf) 100%);
       color: #fff;
       border: none;
-      border-radius: 6px;
-      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      padding: 0.8rem 1.75rem;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
+      font-family: 'DM Sans', system-ui, sans-serif;
       text-decoration: none;
       cursor: pointer;
+      box-shadow: 0 2px 4px oklch(28% .04 145 / .2), 0 8px 20px oklch(42% .12 145 / .25);
+      transition: transform .2s var(--ease), box-shadow .2s var(--ease);
     }
-    .btn:hover { background: #2ea043; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 8px oklch(28% .04 145 / .22), 0 12px 28px oklch(42% .12 145 / .3); }
+    .btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--sage) 60%, transparent); outline-offset: 2px; }
+    .error-msg { color: var(--clay); font-weight: 600; }
     .hidden { display: none; }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="icon">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 20h10"/>
+        <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+        <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+        <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
       </svg>
     </div>
     <div id="loading">
-      <h1>Preparing your download...</h1>
-      <p>Your download will start automatically.</p>
-      <div class="spinner"></div>
+      <h1>Preparing your download…</h1>
+      <p>Your download will start automatically in just a moment.</p>
+      <div class="spinner" aria-hidden="true"></div>
     </div>
     <div id="ready" class="hidden">
       <h1>Your download is ready</h1>
       <div class="filename" id="filename"></div>
       <a class="btn" id="download-link" href="#" download>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
           <line x1="12" y1="15" x2="12" y2="3"/>
@@ -94,8 +137,8 @@
       </a>
     </div>
     <div id="error" class="hidden">
-      <h1 style="color:#f85149">Download error</h1>
-      <p id="error-msg">No file specified.</p>
+      <h1>Download error</h1>
+      <p id="error-msg" class="error-msg">No file specified.</p>
     </div>
   </div>
 

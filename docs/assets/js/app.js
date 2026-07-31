@@ -293,7 +293,7 @@ function renderMarkdown(md) {
       continue;
     }
     const h = line.match(/^(#{1,4})\s+(.*)$/);
-    if (h) { closePara(); closeList(); out.push("<h" + h[1].length + ">" + inline(h[2]) + "</h" + h[1].length + ">"); i++; continue; }
+    if (h) { closePara(); closeList(); const level = Math.min(h[1].length + 1, 4); out.push("<h" + level + ">" + inline(h[2]) + "</h" + level + ">"); i++; continue; }
     if (/^(-{3,}|\*{3,})\s*$/.test(line)) { closePara(); closeList(); out.push("<hr>"); i++; continue; }
     if (line.startsWith("> ")) { closePara(); closeList(); const q = []; while (i < lines.length && lines[i].startsWith("> ")) q.push(lines[i++].slice(2)); out.push("<blockquote>" + inline(q.join(" ")) + "</blockquote>"); continue; }
     if (/^\s*[-*+]\s+/.test(line)) {
@@ -469,7 +469,7 @@ function renderNavbar(active) {
   if (!el) return;
   el.className = "nav";
   el.innerHTML = '<div class="nav__inner">' +
-    '<a href="' + PATHS.root + '" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">moditamio</span></a>' +
+    '<a href="' + PATHS.root + '" class="nav__brand"><span class="nav__logo">' + ICONS.sprout + '</span><span class="nav__brand-name">ModItamio</span></a>' +
     '<nav class="nav__links" id="nav-links">' +
       '<a href="' + PATHS.root + '" class="nav__link' + (active === "discover" ? " nav__link--active" : "") + '">Discover</a>' +
       '<a href="' + PATHS.browse + '" class="nav__link' + (active === "mods" ? " nav__link--active" : "") + '">Browse</a>' +

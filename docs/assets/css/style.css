@@ -1,13 +1,13 @@
 :root {
   --ink: oklch(25% .035 145);
   --muted: oklch(49% .035 145);
-  --faint: oklch(64% .025 145);
+  --faint: oklch(46% .03 145);
   --paper: oklch(98.5% .012 95);
   --surface: oklch(100% .008 95);
   --surface-2: oklch(94.5% .022 95);
   --line: oklch(87% .025 110);
   --moss: oklch(42% .09 145);
-  --leaf: oklch(54% .115 145);
+  --leaf: oklch(50% .115 145);
   --sage: oklch(76% .08 135);
   --clay: oklch(65% .105 55);
   --cream: oklch(91% .05 88);
@@ -101,6 +101,24 @@ img { max-width: 100%; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 input, textarea, select { font-family: inherit; font-size: inherit; color: inherit; }
 svg { flex-shrink: 0; display: inline-block; vertical-align: middle; }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 1000;
+  padding: var(--space-2) var(--space-4);
+  background: var(--moss);
+  color: var(--paper);
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: top .2s var(--ease);
+}
+.skip-link:focus {
+  top: 0;
+  color: var(--paper);
+}
 
 ::selection { background: oklch(76% .08 135 / .35); }
 
@@ -1824,6 +1842,44 @@ textarea.form-input { resize: vertical; min-height: 100px; border-radius: var(--
   gap: 8px;
 }
 .sidebar-card__nomatch svg { width: 16px; height: 16px; flex-shrink: 0; }
+.sidebar-card__install {
+  margin-top: 12px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--sage) 14%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--sage) 30%, var(--line));
+  border-radius: var(--radius-sm);
+}
+.sidebar-card__install-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--moss);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.sidebar-card__install-title svg { width: 13px; height: 13px; }
+.sidebar-card__install-steps {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.sidebar-card__install-steps code {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 5px;
+  color: var(--ink);
+}
 
 .btn--block {
   width: 100%;
@@ -1936,6 +1992,13 @@ textarea.form-input { resize: vertical; min-height: 100px; border-radius: var(--
   padding-left: 16px;
   padding-right: 16px;
 }
+.issue-row__header:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--sage) 55%, transparent);
+  outline-offset: -2px;
+  border-radius: var(--radius-md);
+}
+.issue-row__header:focus { outline: none; }
+.issue-row__header:focus-visible .issue-row__title { color: var(--moss); }
 .issue-row--expanded .issue-row__header {
   border-bottom: 1px solid var(--line);
   margin: 0;
@@ -2348,6 +2411,49 @@ button:focus-visible,
 input:focus-visible {
   outline: 3px solid var(--moss);
   outline-offset: 3px;
+}
+
+/* ========== DARK MODE OVERRIDES ========== */
+[data-theme="dark"] .issue-filter__count {
+  background: rgba(255,255,255,.09);
+}
+[data-theme="dark"] .issue-filter--active .issue-filter__count {
+  background: color-mix(in srgb, var(--moss) 28%, transparent);
+}
+[data-theme="dark"] .tag--loader {
+  color: color-mix(in srgb, var(--loader-color) 72%, white);
+  background: color-mix(in srgb, var(--loader-color) 20%, transparent);
+  border-color: color-mix(in srgb, var(--loader-color) 38%, transparent);
+}
+[data-theme="dark"] .tag--vtype {
+  color: color-mix(in srgb, var(--vtype-color) 78%, white);
+  background: color-mix(in srgb, var(--vtype-color) 20%, transparent);
+  border-color: color-mix(in srgb, var(--vtype-color) 38%, transparent);
+}
+[data-theme="dark"] .md-badge--fabric {
+  background: color-mix(in srgb, #8fd08f 16%, transparent);
+  color: #9be39b;
+  border: 1px solid color-mix(in srgb, #8fd08f 32%, transparent);
+}
+[data-theme="dark"] .md-badge--forge {
+  background: color-mix(in srgb, #a49cf0 16%, transparent);
+  color: #b4adf5;
+  border: 1px solid color-mix(in srgb, #a49cf0 32%, transparent);
+}
+[data-theme="dark"] .md-badge--neoforge {
+  background: color-mix(in srgb, #f0a068 16%, transparent);
+  color: #f5b98c;
+  border: 1px solid color-mix(in srgb, #f0a068 32%, transparent);
+}
+[data-theme="dark"] .md-badge--quilt {
+  background: color-mix(in srgb, #c9b0e8 16%, transparent);
+  color: #d6c3ef;
+  border: 1px solid color-mix(in srgb, #c9b0e8 32%, transparent);
+}
+[data-theme="dark"] .md-badge--kofi {
+  background: color-mix(in srgb, #ff8a85 16%, transparent);
+  color: #ffa5a1;
+  border: 1px solid color-mix(in srgb, #ff8a85 32%, transparent);
 }
 
 /* ========== RESPONSIVE ========== */

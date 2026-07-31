@@ -4,12 +4,13 @@
    discover page (which shares the mod cards).
 
    Palette: the existing oklch botanical greens (moss #4a7c59
-   family). Type: Inter for UI, Outfit for headings.
+   family). Type: DM Sans for UI, Fraunces for headings — the
+   same garden identity as the rest of the site.
    ============================================================ */
 
 :root {
-  --b-font-ui: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
-  --b-font-head: 'Outfit', 'DM Sans', system-ui, -apple-system, sans-serif;
+  --b-font-ui: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --b-font-head: 'Fraunces', Georgia, serif;
   --b-radius-card: 16px;
   --b-radius-input: 18px;
   --b-sidebar-w: 280px;
@@ -52,7 +53,48 @@
   font-size: 15px;
 }
 .search-page__header {
+  position: relative;
   margin-bottom: 40px;
+  padding: 28px 0 34px;
+}
+.search-page__header::before {
+  content: "";
+  position: absolute;
+  inset: 0 -24px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: var(--b-radius-card);
+  background:
+    radial-gradient(ellipse at 88% -20%, oklch(76% .08 135 / .22), transparent 55%),
+    radial-gradient(ellipse at 6% 120%, oklch(65% .1 55 / .1), transparent 50%);
+  mask-image: linear-gradient(to bottom, #000, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 92%);
+}
+.search-page__header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -24px;
+  width: 26px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .5;
+  background-image: radial-gradient(var(--sage) 1px, transparent 1px);
+  background-size: 14px 14px;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%);
+  mask-image: linear-gradient(to bottom, #000, transparent 70%);
+}
+[data-theme="dark"] .search-page__header::before {
+  background:
+    radial-gradient(ellipse at 88% -20%, oklch(52% .1 140 / .25), transparent 55%),
+    radial-gradient(ellipse at 6% 120%, oklch(45% .1 55 / .12), transparent 50%);
+}
+[data-theme="dark"] .search-page__header::after {
+  background-image: radial-gradient(oklch(62% .08 130 / .35) 1px, transparent 1px);
+}
+@media (max-width: 1024px) {
+  .search-page__header::before, .search-page__header::after { display: none; }
 }
 .search-page__overline {
   display: inline-flex;
@@ -71,14 +113,16 @@
   height: 1.5px;
   background: var(--moss);
 }
+.search-page__overline svg { width: 15px; height: 15px; color: var(--leaf); }
 .search-page__title {
   font-family: var(--b-font-head);
-  font-size: clamp(30px, 4vw, 42px);
+  font-size: clamp(32px, 4vw, 46px);
   font-weight: 700;
   letter-spacing: -.04em;
-  line-height: 1.08;
+  line-height: 1.06;
   color: var(--ink);
   margin-bottom: 10px;
+  text-wrap: balance;
 }
 .search-page__subtitle {
   font-size: 15.5px;
@@ -196,10 +240,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--b-font-head);
+  font-family: var(--b-font-ui);
   font-size: 13.5px;
-  font-weight: 600;
-  letter-spacing: -.01em;
+  font-weight: 700;
+  letter-spacing: .01em;
   color: var(--ink);
 }
 .sidebar-panel__title::before {

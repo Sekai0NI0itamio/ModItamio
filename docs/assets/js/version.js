@@ -73,13 +73,13 @@ function renderVersionHtml() {
     '</div>' +
     '<div class="version-side">' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
-        '<h3 class="panel__title" style="margin-bottom:var(--space-3);font-size:var(--fs-base)">Files</h3>' +
+        '<h2 class="panel__title" style="margin-bottom:var(--space-3);font-size:var(--fs-base)">Files</h2>' +
         '<div style="display:flex;flex-direction:column;gap:var(--space-2)">' +
           (files.length ? files.map(f => '<div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-2)"><div style="min-width:0;flex:1"><div style="font-size:var(--fs-sm);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escapeHtml(f.filename || "file") + '</div><div style="font-size:var(--fs-xs);color:var(--color-text-dim)">' + formatBytes(f.size) + '</div></div><a class="btn btn--sm btn--icon" href="' + escapeHtml(f.url) + '" download title="Download">' + ICONS.download + '</a></div>').join("") : '<div style="font-size:var(--fs-sm);color:var(--color-text-dim)">No files available</div>') +
         '</div>' +
       '</div></div>' +
       '<div class="panel"><div class="panel__body" style="padding:var(--space-4)">' +
-        '<h3 class="panel__title" style="margin-bottom:var(--space-3);font-size:var(--fs-base)">Metadata</h3>' +
+        '<h2 class="panel__title" style="margin-bottom:var(--space-3);font-size:var(--fs-base)">Metadata</h2>' +
         '<div style="display:flex;flex-direction:column;gap:var(--space-3);font-size:var(--fs-sm)">' +
           metaRow("Version number", '<div style="font-weight:600;font-family:var(--font-mono)">' + escapeHtml(v.version_number) + '</div>') +
           metaRow("Release type", versionBadge(v.version_type)) +

@@ -297,9 +297,10 @@ function buildSidebarHtml(hasFilters, allCounts) {
 
   function renderFacetSearch(type, placeholder) {
     const val = FACET_SEARCH[type] || "";
+    const label = type === "cat" ? "Filter categories" : type === "loader" ? "Filter loaders" : "Filter versions";
     return '<div class="facet-search">' +
       '<span class="facet-search__icon">' + ICONS.search + '</span>' +
-      '<input type="text" class="facet-search__input" id="facet-search-' + type + '" placeholder="' + escapeHtml(placeholder) + '" value="' + escapeHtml(val) + '" oninput="onFacetSearchInput(\'' + type + '\', event)">' +
+      '<input type="text" class="facet-search__input" id="facet-search-' + type + '" placeholder="' + escapeHtml(placeholder) + '" aria-label="' + label + '" value="' + escapeHtml(val) + '" oninput="onFacetSearchInput(\'' + type + '\', event)">' +
       (val ? '<button class="facet-search__clear" aria-label="Clear search" onclick="clearFacetSearch(\'' + type + '\')">' + ICONS.x + '</button>' : '') +
     '</div>';
   }
@@ -471,7 +472,7 @@ function render() {
 
   root.innerHTML = '<section class="search-page">' +
     '<header class="search-page__header">' +
-      '<p class="search-page__overline">Browse</p>' +
+      '<p class="search-page__overline">' + ICONS.sprout + ' Browse the garden</p>' +
       '<h1 class="search-page__title">Explore Mods</h1>' +
       '<p class="search-page__subtitle">Find the right mod for your version and loader.</p>' +
       '<div class="main-search-bar">' +
@@ -486,6 +487,7 @@ function render() {
       '</aside>' +
       '<div class="search-page__main">' +
         (hasFilters ? renderFilterPills() : "") +
+        '<h2 class="sr-only">Mod results</h2>' +
         '<div class="search-page__controls">' +
           '<span class="search-page__result-count" role="status" aria-live="polite">Showing <strong>' + filtered.length + '</strong> mod' + (filtered.length === 1 ? "" : "s") + '</span>' +
           renderSortSelect() +

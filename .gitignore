@@ -30,3 +30,6 @@ run/saves/
 run/logs/
 run/crash-reports/
 /graphify-out
+
+# Local impeccable skill artifacts
+/.impeccable
