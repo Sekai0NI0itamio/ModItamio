@@ -1,0 +1,34 @@
+{
+    "schemaVersion": 1,
+    "id": "easyscreenshot",
+    "version": "${version}",
+    "name": "Easy Screenshot",
+    "description": "Copy, open, rename, and delete screenshots directly from the chat interface. Includes a screenshot gallery GUI.",
+    "authors": [
+        "itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "preLaunch": [
+            "com.itamio.easyscreenshot.EasyScreenshotPreLaunch"
+        ],
+        "main": [
+            "com.itamio.easyscreenshot.EasyScreenshot"
+        ],
+        "client": [
+            "com.itamio.easyscreenshot.EasyScreenshotClient"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
