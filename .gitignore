@@ -29,3 +29,4 @@ run/.minecraft/
 run/saves/
 run/logs/
 run/crash-reports/
+/graphify-out

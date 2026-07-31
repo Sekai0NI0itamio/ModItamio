@@ -1,0 +1,12 @@
+{
+  "0": "app.js",
+  "1": "render",
+  "2": "escapeHtml",
+  "3": "search.js",
+  "4": "modCard",
+  "5": "renderSidebarFacets",
+  "6": "buildSidebarHtml",
+  "7": "init",
+  "8": "applyTheme",
+  "9": "fetchJSON"
+}
