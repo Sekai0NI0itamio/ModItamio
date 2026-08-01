@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All-Rights-Reserved"
+
+[[mods]]
+modId="autologinandregister"
+version="2.1.0"
+displayName="Auto Login & Auto Register"
+logoFile="mod_icon.png"
+credits="Asd1281yss"
+authors="Itamio, Asd1281yss"
+description='''Forgot your password again? Have to think of a password for /register again? This mod adds auto register and auto login.'''
+
+[[dependencies.autologinandregister]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.autologinandregister]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="CLIENT"

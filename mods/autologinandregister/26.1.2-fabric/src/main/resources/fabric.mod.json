@@ -1,0 +1,21 @@
+{
+    "schemaVersion": 1,
+    "id": "autologinandregister",
+    "version": "${version}",
+    "name": "Auto Login & Auto Register",
+    "description": "Forgot your password again? Have to think of a password for /register again? This mod adds auto register and auto login.",
+    "authors": ["Itamio", "Asd1281yss"],
+    "contact": { "homepage": "https://github.com/Sekai0NI0itamio/ModItamio" },
+    "license": "All-Rights-Reserved",
+    "icon": "mod_icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": ["asd.itamio.autologinandregister.AutoLoginAndRegister"]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~26.1.2",
+        "java": ">=25",
+        "fabric-api": "*"
+    }
+}
