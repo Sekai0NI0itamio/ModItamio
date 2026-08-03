@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "antichatlag",
+    "version": "${version}",
+    "name": "Anti Chat Lag",
+    "description": "Eliminates chat lag on offline-mode servers by skipping message signature generation.",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "MIT",
+    "icon": "mod_icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "asd.itamio.antichatlag.AntiChatLag"
+        ]
+    },
+    "mixins": [
+        "antichatlag.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
