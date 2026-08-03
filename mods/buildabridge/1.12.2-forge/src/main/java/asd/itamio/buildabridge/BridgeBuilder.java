@@ -18,8 +18,8 @@ import java.util.Random;
 public class BridgeBuilder {
 
     private static final Random RANDOM = new Random();
-    private static final int MIN_BEAM_INTERVAL = 15;
-    private static final int MAX_BEAM_INTERVAL = 20;
+    private static final int MIN_BEAM_INTERVAL = 25;
+    private static final int MAX_BEAM_INTERVAL = 30;
     private static final int BEAM_GROUND_PENETRATION = 5;
     private static final int MAX_BEAM_DEPTH = 256; // safety limit
     private static final int HEADROOM_BLOCKS = 2;  // blocks to clear above the top bridge block
