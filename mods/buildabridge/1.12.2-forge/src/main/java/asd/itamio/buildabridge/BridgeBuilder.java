@@ -1,6 +1,7 @@
 package asd.itamio.buildabridge;
 
 import net.minecraft.block.BlockRailBase;
+import net.minecraft.block.BlockTorch;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -11,7 +12,8 @@ import java.util.Random;
 
 /**
  * Core bridge building logic.
- * Builds a bridge with road, optional rail, and periodic support beams.
+ * Builds a bridge with road, optional rail, periodic support beams,
+ * headroom clearing, and optional torch platforms on pillars.
  */
 public class BridgeBuilder {
 
@@ -20,6 +22,7 @@ public class BridgeBuilder {
     private static final int MAX_BEAM_INTERVAL = 20;
     private static final int BEAM_GROUND_PENETRATION = 5;
     private static final int MAX_BEAM_DEPTH = 256; // safety limit
+    private static final int HEADROOM_BLOCKS = 2;  // blocks to clear above the top bridge block
 
     /**
      * Build a bridge in the given direction.
@@ -31,12 +34,32 @@ public class BridgeBuilder {
      * @param preset    the bridge preset to use
      */
     public static void buildBridge(World world, BlockPos startPos, EnumFacing direction, int length, BridgePresets preset) {
-        IBlockState roadState = preset.getRoadBlock();
-        IBlockState railState = preset.getRailBlock();
-        IBlockState beamState = preset.getBeamBlock();
+        buildBridge(world, startPos, direction, length,
+                preset.getRoadBlock(), preset.getRailBlock(), preset.getBeamBlock(),
+                preset.hasRail(), preset.hasTorchPlatform());
+    }
 
+    /**
+     * Build a bridge with custom block types.
+     *
+     * @param world          the world
+     * @param startPos       starting position (the first road block goes here)
+     * @param direction      the horizontal direction to extend
+     * @param length         total bridge length in blocks
+     * @param roadState      block for the road surface
+     * @param railState      block for the rail (may be null)
+     * @param beamState      block for support beams
+     * @param hasRail        whether to place rails
+     * @param torchPlatform  whether to place torch platforms on pillars
+     */
+    public static void buildBridge(World world, BlockPos startPos, EnumFacing direction, int length,
+                                   IBlockState roadState, IBlockState railState, IBlockState beamState,
+                                   boolean hasRail, boolean torchPlatform) {
         // Determine the rail direction property based on bridge direction
         BlockRailBase.EnumRailDirection railDirection = getRailDirection(direction);
+
+        // Perpendicular direction for torch platforms (right side of travel)
+        EnumFacing perpDirection = direction.rotateY();
 
         int nextBeamAt = 0; // first beam at block 0
 
@@ -47,7 +70,8 @@ public class BridgeBuilder {
             world.setBlockState(roadPos, roadState, 2);
 
             // Place rail block on top of road (if preset has one)
-            if (preset.hasRail() && railState != null) {
+            BlockPos topBridgePos = roadPos;
+            if (hasRail && railState != null) {
                 BlockPos railPos = roadPos.up();
                 IBlockState placedRail = railState;
                 // Set rail direction if the block is a BlockRail
@@ -58,14 +82,54 @@ public class BridgeBuilder {
                     );
                 }
                 world.setBlockState(railPos, placedRail, 2);
+                topBridgePos = railPos;
             }
+
+            // Clear headroom: ensure at least HEADROOM_BLOCKS air above the top bridge block
+            clearHeadroom(world, topBridgePos);
 
             // Support beam check
             if (i == nextBeamAt) {
                 buildSupportBeam(world, roadPos, beamState);
+
+                // Torch platform on pillar
+                if (torchPlatform) {
+                    buildTorchPlatform(world, roadPos, perpDirection, beamState);
+                }
+
                 nextBeamAt = i + MIN_BEAM_INTERVAL + RANDOM.nextInt(MAX_BEAM_INTERVAL - MIN_BEAM_INTERVAL + 1);
             }
         }
+    }
+
+    /**
+     * Clear blocks above the given position to ensure HEADROOM_BLOCKS of air.
+     * Replaces any non-air, non-rail block with air.
+     */
+    private static void clearHeadroom(World world, BlockPos topPos) {
+        for (int j = 1; j <= HEADROOM_BLOCKS; j++) {
+            BlockPos clearPos = topPos.up(j);
+            IBlockState state = world.getBlockState(clearPos);
+            if (state.getBlock() != Blocks.AIR) {
+                world.setBlockToAir(clearPos);
+            }
+        }
+    }
+
+    /**
+     * Build a torch platform adjacent to a support beam.
+     * Places a platform block next to the beam at road level, then a torch on top.
+     */
+    private static void buildTorchPlatform(World world, BlockPos roadPos, EnumFacing perpDirection, IBlockState beamState) {
+        // Platform block is adjacent to the road, at the same Y level
+        BlockPos platformPos = roadPos.offset(perpDirection);
+        world.setBlockState(platformPos, beamState, 2);
+
+        // Torch on top of the platform block
+        BlockPos torchPos = platformPos.up();
+        IBlockState torchState = Blocks.TORCH.getDefaultState()
+                .withProperty(BlockTorch.FACING, EnumFacing.UP);
+        world.setBlockState(torchPos, torchState, 2);
     }
 
     /**
