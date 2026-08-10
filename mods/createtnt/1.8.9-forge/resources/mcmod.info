@@ -1,0 +1,13 @@
+[
+  {
+    "modid": "createtnt",
+    "name": "Create TNT",
+    "description": "A mod that makes tnt explode like create big cannon explosive shells, and adds realistic explosion physics and block gravity physics to the structure being exploded.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "logoFile": "mod_icon.png",
+    "credits": "Particle system, smoke textures, blast-wave and screen-shake effects, and sound assets are from the mod Create Big Cannons by rbasamoyai. Structure collapse cascade scheduling is adapted from the mod Simple Block Physics by FerrinEmber.",
+    "authors": ["Itamio", "Asd1281yss"],
+    "dependencies": []
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "explosion_boom": {
+    "category": "block",
+    "sounds": [
+      { "name": "createtnt:explosion_boom", "stream": false },
+      { "name": "createtnt:explosion_boom1", "stream": false },
+      { "name": "createtnt:explosion_boom2", "stream": false }
+    ]
+  }
+}

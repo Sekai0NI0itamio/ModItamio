@@ -1,0 +1,83 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = mod_version
+// Override version for this mod (gradle.properties has stale values)
+version = "1.0.0"
+group = mod_group_id
+archivesBaseName = "${mod_id}-${minecraft_version}-forge"
+
+// Override archivesBaseName for this mod (gradle.properties has stale values)
+archivesBaseName = "createtnt-${minecraft_version}-forge"
+
+// Mod properties (override gradle.properties)
+ext.mod_id = "createtnt"
+ext.mod_name = "Create TNT"
+ext.mod_description = "A mod that makes tnt explode like create big cannon explosive shells, and adds realistic explosion physics and block gravity physics to the structure being exploded."
+ext.mod_license = "All-Rights-Reserved"
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2847"
+    runDir = "run"
+    mappings = "stable_39"
+    makeObfSourceJar = false
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+    inputs.property "mod_id", project.mod_id
+    inputs.property "mod_name", project.mod_name
+    inputs.property "mod_description", project.mod_description
+    inputs.property "mod_license", project.mod_license
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info', 'pack.mcmeta'
+        expand 'version': project.version,
+               'mcversion': project.minecraft.version,
+               'mod_id': project.mod_id,
+               'mod_name': project.mod_name,
+               'mod_description': project.mod_description,
+               'mod_license': project.mod_license
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info', 'pack.mcmeta'
+    }
+}
+
+jar {
+}
+
+// Skip asset download for 1.12.2 — old .lang language files are no longer
+// available on the Mojang asset CDN (HTTP 400). Assets are already cached
+// from previous runs, so the game works fine without re-downloading.
+// Without this, `runClient` hangs on repeated download retries.
+// See: https://github.com/MinecraftForge/ForgeGradle/issues/544
+// In ForgeGradle 2.3, the asset download task is named 'getAssets'.
+tasks.whenTaskAdded { task ->
+    if (task.name == 'getAssets') {
+        task.enabled = false
+    }
+}

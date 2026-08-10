@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "asd.itamio.createtnt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EntitySpawnMixin",
+    "ExplosionMixin"
+  ],
+  "client": [
+    "CameraShakeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "schemaVersion": 1,
+    "id": "createtnt",
+    "version": "1.0.0",
+    "name": "Create TNT",
+    "description": "A mod that makes TNT explode like artillery shells \u2014 huge smoke plumes, blast rays, delayed boom sound, screen shake, energy-transfer block destruction, and structural collapse. Particle system, smoke textures, blast-wave and screen-shake effects, and sound assets are from the mod Create Big Cannons by rbasamoyai \u2014 its explosion physics were referenced and adapted with our own tweaks. Structure collapse cascade scheduling is adapted from the mod Simple Block Physics by FerrinEmber. Full license texts are included in the jar (LICENSE-thirdparty.txt).",
+    "authors": [
+        "Itamio",
+        "Asd1281yss"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Itamio"
+    },
+    "license": "All-Rights-Reserved",
+    "icon": "mod_icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "asd.itamio.createtnt.BetterTNTs"
+        ],
+        "client": [
+            "asd.itamio.createtnt.CreateTNTClient"
+        ]
+    },
+    "mixins": [
+        "createtnt.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
