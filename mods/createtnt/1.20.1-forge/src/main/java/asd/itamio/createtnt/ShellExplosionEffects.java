@@ -30,11 +30,13 @@ public final class ShellExplosionEffects {
         }
         Vec3 knock = new Vec3(msg.knockbackX(), msg.knockbackY(), msg.knockbackZ());
         mc.player.setDeltaMovement(mc.player.getDeltaMovement().add(knock));
-        spawnShellExplosion(mc.level, msg.x(), msg.y(), msg.z(), msg.power(), msg.isPlume());
+        spawnShellExplosion(mc.level, msg.x(), msg.y(), msg.z(), msg.power(), msg.isPlume(),
+            msg.axisX(), msg.axisY(), msg.axisZ());
     }
 
     public static void spawnShellExplosion(ClientLevel level, double x, double y, double z,
-                                           float power, boolean isPlume) {
+                                           float power, boolean isPlume,
+                                           float axisX, float axisY, float axisZ) {
         // Scale the ENTIRE effect bundle (smoke cloud size/spread, blast-ray
         // size, blast-wave shake radius/strength, sound volume) with the
         // configured visual scale.
@@ -43,7 +45,8 @@ public final class ShellExplosionEffects {
         level.addParticle(new BlastWaveOption(power), true, x, y, z, 0.0D, 0.0D, 0.0D);
 
         if (ModConfig.showShellExplosionClouds) {
-            level.addParticle(new ShellCloudOption(power, isPlume), true, x, y, z, 0.0D, 0.0D, 0.0D);
+            level.addParticle(new ShellCloudOption(power, isPlume, axisX, axisY, axisZ), true,
+                x, y, z, 0.0D, 0.0D, 0.0D);
         }
     }
 }

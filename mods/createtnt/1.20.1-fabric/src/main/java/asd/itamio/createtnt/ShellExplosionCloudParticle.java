@@ -36,9 +36,14 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
     private final List<TrailSubparticle> trails = new LinkedList<>();
     private final boolean isPlume;
     private final SpriteSet sprites;
+    /** Plume axis (unit): the "up" the plume grows along. (0,1,0) = straight up. */
+    private final double ax, ay, az;
+    /** Orthonormal basis (u, axis, w): local plume space -> world space. */
+    private final double ux, uy, uz, wx, wy, wz;
 
     ShellExplosionCloudParticle(ClientLevel level, double x, double y, double z,
-                                float power, boolean isPlume, SpriteSet sprites) {
+                                float power, boolean isPlume,
+                                float axisX, float axisY, float axisZ, SpriteSet sprites) {
         super(level, x, y, z);
         // Zero velocity; the controller itself renders nothing.
         this.xd = 0.0D;
@@ -49,6 +54,31 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
         this.power = power;
         this.isPlume = isPlume;
         this.sprites = sprites;
+        double nax = axisX, nay = axisY, naz = axisZ;
+        double alen = Math.sqrt(nax * nax + nay * nay + naz * naz);
+        if (alen < 1.0E-4D) {
+            nax = 0.0D; nay = 1.0D; naz = 0.0D; alen = 1.0D;
+        }
+        nax /= alen; nay /= alen; naz /= alen;
+        this.ax = nax; this.ay = nay; this.az = naz;
+        double bux, buy, buz, bwx, bwy, bwz;
+        if (nax == 0.0D && naz == 0.0D && nay > 0.0D) {
+            bux = 1.0D; buy = 0.0D; buz = 0.0D;
+            bwx = 0.0D; bwy = 0.0D; bwz = 1.0D;
+        } else {
+            double hx = 0.0D, hy = 1.0D, hz = 0.0D;
+            if (Math.abs(nay) > 0.9D) { hx = 1.0D; hy = 0.0D; hz = 0.0D; }
+            bux = nay * hz - naz * hy;
+            buy = naz * hx - nax * hz;
+            buz = nax * hy - nay * hx;
+            double ulen = Math.sqrt(bux * bux + buy * buy + buz * buz);
+            bux /= ulen; buy /= ulen; buz /= ulen;
+            bwx = nay * buz - naz * buy;
+            bwy = naz * bux - nax * buz;
+            bwz = nax * buy - nay * bux;
+        }
+        this.ux = bux; this.uy = buy; this.uz = buz;
+        this.wx = bwx; this.wy = bwy; this.wz = bwz;
         // The controller expires after 10 ticks.
         this.lifetime = 10;
 
@@ -175,21 +205,26 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
             velScale *= 1.0D - (float) this.age / (float) PLUME_AGE;
             double displacementScale = this.power * 0.35D;
             for (int i = 0; i <= plumes; ++i) {
-                double rx = this.x + (this.random.nextDouble() - this.random.nextDouble()) * displacementScale;
-                double ry = this.random.nextDouble() - this.random.nextDouble();
+                double lox = (this.random.nextDouble() - this.random.nextDouble()) * displacementScale;
+                double loy = this.random.nextDouble() - this.random.nextDouble();
                 if (this.isPlume) {
-                    ry = Math.abs(ry);
+                    loy = Math.abs(loy);
                 }
-                ry *= displacementScale;
-                ry += this.y + 0.5D;
-                double rz = this.z + (this.random.nextDouble() - this.random.nextDouble()) * displacementScale;
-                double dx = (this.random.nextDouble() - this.random.nextDouble()) * velScale;
-                double dy = this.random.nextDouble() - this.random.nextDouble();
+                loy *= displacementScale;
+                double loz = (this.random.nextDouble() - this.random.nextDouble()) * displacementScale;
+                double ldx = (this.random.nextDouble() - this.random.nextDouble()) * velScale;
+                double ldy = this.random.nextDouble() - this.random.nextDouble();
                 if (this.isPlume) {
-                    dy += 1.2D;
+                    ldy += 1.2D;
                 }
-                dy *= velScale;
-                double dz = (this.random.nextDouble() - this.random.nextDouble()) * velScale;
+                ldy *= velScale;
+                double ldz = (this.random.nextDouble() - this.random.nextDouble()) * velScale;
+                double rx = this.x + (this.ux * lox + this.ax * loy + this.wx * loz) + this.ax * 0.5D;
+                double ry = this.y + (this.uy * lox + this.ay * loy + this.wy * loz) + this.ay * 0.5D;
+                double rz = this.z + (this.uz * lox + this.az * loy + this.wz * loz) + this.az * 0.5D;
+                double dx = this.ux * ldx + this.ax * ldy + this.wx * ldz;
+                double dy = this.uy * ldx + this.ay * ldy + this.wy * ldz;
+                double dz = this.uz * ldx + this.az * ldy + this.wz * ldz;
                 // Base smoke lifetime: 7 seconds (140 ticks) — the large
                 // puffs disappear around the same time as the ray puffs.
                 int lifetime = 140;
@@ -206,8 +241,10 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
                 iter.remove();
                 continue;
             }
-            Vec3 origin = trail.calculateDisplacement(this.age);
-            Vec3 next = trail.calculateDisplacement(this.age + 1);
+            Vec3 localOrigin = trail.calculateDisplacement(this.age);
+            Vec3 localNext = trail.calculateDisplacement(this.age + 1);
+            Vec3 origin = toWorld(localOrigin).add(0.0D, trail.gravity * this.age, 0.0D);
+            Vec3 next = toWorld(localNext).add(0.0D, trail.gravity * (this.age + 1), 0.0D);
             double velScale = 0.125D;
             // Wide spawn spread so ray puffs form soft wisps instead of sharp
             // radiate lines with gaps between them.
@@ -250,6 +287,13 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
         super.tick();
     }
 
+    private Vec3 toWorld(Vec3 local) {
+        return new Vec3(
+            this.ux * local.x + this.ax * local.y + this.wx * local.z,
+            this.uy * local.x + this.ay * local.y + this.wy * local.z,
+            this.uz * local.x + this.az * local.y + this.wz * local.z);
+    }
+
     /** The in-game particle setting: ALL, DECREASED, or MINIMAL. */
     private static ParticleStatus getParticleStatus() {
         return Minecraft.getInstance().options.particles().get();
@@ -267,7 +311,7 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
         public Particle createParticle(ShellCloudOption data, ClientLevel level, double x, double y,
                                        double z, double xSpeed, double ySpeed, double zSpeed) {
             return new ShellExplosionCloudParticle(level, x, y, z, data.scale(), data.isPlume(),
-                this.sprites);
+                data.axisX(), data.axisY(), data.axisZ(), this.sprites);
         }
     }
 
@@ -303,7 +347,7 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
                 return this.displacement.add(this.vel.scale((double) ticks));
             }
             double geo = (1.0D - Math.pow(this.drag, ticks)) / (1.0D - this.drag);
-            return this.displacement.add(this.vel.scale(geo)).add(0.0D, this.gravity * ticks, 0.0D);
+            return this.displacement.add(this.vel.scale(geo));
         }
     }
 }

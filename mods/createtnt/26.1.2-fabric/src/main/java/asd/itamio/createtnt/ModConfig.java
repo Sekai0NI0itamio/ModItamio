@@ -53,6 +53,10 @@ public class ModConfig {
     public static boolean screenShake = true;
     /** Whether the big smoke plume cloud spawns for explosions. */
     public static boolean showShellExplosionClouds = true;
+    /** Whether creeper explosions use the enhanced explosion behavior. */
+    public static boolean enhancedCreeperExplosions = true;
+    /** Whether crossbow/dispenser-shot fireworks use enhanced rocket blasts. */
+    public static boolean rocketShellExplosions = true;
     /** Whether the explosion cloud spawns trailing blast-ray smoke
      *  streaks. */
     public static boolean showExtraShellExplosionTrails = true;
@@ -239,6 +243,8 @@ public class ModConfig {
         spec("chainDetonationDelay", () -> chainDetonationDelay, v -> chainDetonationDelay = v, 2, 0, 200);
         spec("screenShake", () -> screenShake, v -> screenShake = v, true);
         spec("showShellExplosionClouds", () -> showShellExplosionClouds, v -> showShellExplosionClouds = v, true);
+        spec("enhancedCreeperExplosions", () -> enhancedCreeperExplosions, v -> enhancedCreeperExplosions = v, true);
+        spec("rocketShellExplosions", () -> rocketShellExplosions, v -> rocketShellExplosions = v, true);
         spec("showExtraShellExplosionTrails", () -> showExtraShellExplosionTrails, v -> showExtraShellExplosionTrails = v, true);
         spec("baseSmokeAmount", () -> baseSmokeAmount, v -> baseSmokeAmount = v, 0.45F, 0.1F, 3.0F);
         spec("explosionVisualScale", () -> explosionVisualScale, v -> explosionVisualScale = v, 0.5F, 0.05F, 4.0F);
@@ -480,6 +486,8 @@ public class ModConfig {
         section(sb, "chainDetonationDelay", "Ticks between each TNT when detonating one-by-one (20 ticks = 1 second)");
         section(sb, "screenShake", "Whether the camera wobbles when the blast wave arrives");
         section(sb, "showShellExplosionClouds", "Spawn the big smoke plume cloud");
+        section(sb, "enhancedCreeperExplosions", "Whether creeper explosions use enhanced TNT blast behavior instead of vanilla behavior (default on)");
+        section(sb, "rocketShellExplosions", "Whether crossbow/dispenser-shot fireworks use enhanced rocket blasts; hand-launched fireworks remain vanilla (default on)");
         section(sb, "showExtraShellExplosionTrails", "Spawn trailing smoke streaks in the cloud");
         section(sb, "baseSmokeAmount", "Main plume (base smoke) puff count multiplier (0.45 = half; does not affect the blast rays)");
         section(sb, "explosionVisualScale", "Visual size of the entire explosion effect (smoke, rays, shake, sound). 1.0 = full size, 0.5 = half. Block destruction = tntStrength");
@@ -623,6 +631,8 @@ public class ModConfig {
         CURRENT_VALUES.put("chainDetonationDelay", String.valueOf(chainDetonationDelay));
         CURRENT_VALUES.put("screenShake", String.valueOf(screenShake));
         CURRENT_VALUES.put("showShellExplosionClouds", String.valueOf(showShellExplosionClouds));
+        CURRENT_VALUES.put("enhancedCreeperExplosions", String.valueOf(enhancedCreeperExplosions));
+        CURRENT_VALUES.put("rocketShellExplosions", String.valueOf(rocketShellExplosions));
         CURRENT_VALUES.put("showExtraShellExplosionTrails", String.valueOf(showExtraShellExplosionTrails));
         CURRENT_VALUES.put("baseSmokeAmount", String.valueOf(baseSmokeAmount));
         CURRENT_VALUES.put("explosionVisualScale", String.valueOf(explosionVisualScale));

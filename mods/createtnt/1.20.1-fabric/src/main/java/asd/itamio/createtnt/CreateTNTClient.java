@@ -43,7 +43,11 @@ public class CreateTNTClient implements ClientModInitializer {
                 float kx = buf.readFloat();
                 float ky = buf.readFloat();
                 float kz = buf.readFloat();
-                client.execute(() -> ShellExplosionEffects.handlePacket(x, y, z, power, isPlume, kx, ky, kz));
+                float ax = buf.readFloat();
+                float ay = buf.readFloat();
+                float az = buf.readFloat();
+                client.execute(() -> ShellExplosionEffects.handlePacket(x, y, z, power, isPlume,
+                    kx, ky, kz, ax, ay, az));
             });
     }
 }

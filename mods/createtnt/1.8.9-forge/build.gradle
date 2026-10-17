@@ -10,6 +10,14 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+// This legacy module keeps its sources in src/java and src/resources.
+sourceSets {
+    main {
+        java.srcDirs = ['src/java']
+        resources.srcDirs = ['src/resources']
+    }
+}
+
 version = "1.0.0"
 group = "asd.itamio"
 archivesBaseName = "createtnt-1.8.9-forge"

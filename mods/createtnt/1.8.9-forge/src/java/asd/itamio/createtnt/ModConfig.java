@@ -21,6 +21,8 @@ public class ModConfig {
     /** Whether fluid SOURCE blocks are scattered by explosions (flowing water
      *  is never scattered — it drains naturally once sources are gone). */
     public static boolean scatterFluids = false;
+    /** Whether creeper explosions use the enhanced explosion physics. */
+    public static boolean enhancedCreeperExplosions = true;
     public static float tntStrength = 12.0F;
     /** Global explosive power scale applied to block destruction and entity
      *  damage power. 1.0 = full strength, 0.4 = reduced by 60%. */
@@ -199,6 +201,8 @@ public class ModConfig {
         // ── SIMPLE — general gameplay options ──
         scatterFluids = config.getBoolean("scatterFluids", "general", false,
             "Whether water/lava SOURCE blocks can be scattered by explosions (flowing water is never scattered)");
+        enhancedCreeperExplosions = config.getBoolean("enhancedCreeperExplosions", "general", true,
+            "Replace creeper explosions with EnhancedExplosion physics");
         tntStrength = config.getFloat("tntStrength", "general", 12.0F, 1.0F, 64.0F,
             "TNT strength (block destruction radius). Entity damage auto-scales to 1.5x");
         explosionPowerScale = config.getFloat("explosionPowerScale", "general", 0.4F, 0.05F, 4.0F,

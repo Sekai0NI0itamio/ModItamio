@@ -24,18 +24,20 @@ public final class ShellExplosionEffects {
 
     /** Packet handler: apply knockback to the local player, then spawn. */
     public static void handlePacket(double x, double y, double z, float power, boolean isPlume,
-                                    float knockbackX, float knockbackY, float knockbackZ) {
+                                    float knockbackX, float knockbackY, float knockbackZ,
+                                    float axisX, float axisY, float axisZ) {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null || mc.level == null) {
             return;
         }
         Vec3 knock = new Vec3(knockbackX, knockbackY, knockbackZ);
         mc.player.setDeltaMovement(mc.player.getDeltaMovement().add(knock));
-        spawnShellExplosion(mc.level, x, y, z, power, isPlume);
+        spawnShellExplosion(mc.level, x, y, z, power, isPlume, axisX, axisY, axisZ);
     }
 
     public static void spawnShellExplosion(ClientLevel level, double x, double y, double z,
-                                           float power, boolean isPlume) {
+                                           float power, boolean isPlume,
+                                           float axisX, float axisY, float axisZ) {
         // Scale the ENTIRE effect bundle (smoke cloud size/spread, blast-ray
         // size, blast-wave shake radius/strength, sound volume) with the
         // configured visual scale.
@@ -44,7 +46,8 @@ public final class ShellExplosionEffects {
         level.addParticle(new BlastWaveOption(power), true, x, y, z, 0.0D, 0.0D, 0.0D);
 
         if (ModConfig.showShellExplosionClouds) {
-            level.addParticle(new ShellCloudOption(power, isPlume), true, x, y, z, 0.0D, 0.0D, 0.0D);
+            level.addParticle(new ShellCloudOption(power, isPlume, axisX, axisY, axisZ), true,
+                x, y, z, 0.0D, 0.0D, 0.0D);
         }
     }
 }

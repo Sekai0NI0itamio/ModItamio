@@ -1,10 +1,13 @@
 package asd.itamio.createtnt;
 
 import java.util.List;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
+import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -32,6 +35,25 @@ public class ExplosionEventHandler {
         double x = explosion.getPosition().x;
         double y = explosion.getPosition().y;
         double z = explosion.getPosition().z;
+
+        EntityLivingBase explosivePlacedBy = explosion.getExplosivePlacedBy();
+        if (explosivePlacedBy instanceof EntityCreeper) {
+            if (!ModConfig.enhancedCreeperExplosions) {
+                return;
+            }
+
+            EntityCreeper creeper = (EntityCreeper) explosivePlacedBy;
+            // Match vanilla creeper power: 3 blocks normally, 6 when powered.
+            float creeperPower = creeper.getPowered() ? 6.0F : 3.0F;
+
+            event.setCanceled(true);
+            EnhancedExplosion enhancedExplosion = new EnhancedExplosion(world, creeper, x, y, z,
+                creeperPower, creeperPower, false,
+                ForgeEventFactory.getMobGriefingEvent(world, creeper), creeperPower);
+            enhancedExplosion.doExplosionA();
+            enhancedExplosion.doExplosionB(true);
+            return;
+        }
 
         // Find a primed TNT at the explosion point.
         List<EntityTNTPrimed> tnts = world.getEntitiesWithinAABB(EntityTNTPrimed.class,

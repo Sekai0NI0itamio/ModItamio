@@ -41,6 +41,8 @@ public class ModConfig {
     /** Whether fluid SOURCE blocks are scattered by explosions (flowing water
      *  is never scattered — it drains naturally once sources are gone). */
     public static boolean scatterFluids = false;
+    /** Whether creeper explosions use the enhanced explosion physics. */
+    public static boolean enhancedCreeperExplosions = true;
     public static float tntStrength = 12.0F;
     /** Global explosive power scale applied to block destruction and entity
      *  damage power. 1.0 = full strength, 0.4 = reduced by 60%. */
@@ -232,6 +234,7 @@ public class ModConfig {
     static {
         // SIMPLE
         spec("scatterFluids", () -> scatterFluids, v -> scatterFluids = v, false);
+        spec("enhancedCreeperExplosions", () -> enhancedCreeperExplosions, v -> enhancedCreeperExplosions = v, true);
         spec("tntStrength", () -> tntStrength, v -> tntStrength = v, 12.0F, 1.0F, 64.0F);
         spec("explosionPowerScale", () -> explosionPowerScale, v -> explosionPowerScale = v, 0.4F, 0.05F, 4.0F);
         spec("entityKnockbackScale", () -> entityKnockbackScale, v -> entityKnockbackScale = v, 0.35F, 0.0F, 4.0F);
@@ -473,6 +476,7 @@ public class ModConfig {
         sb.append("#  SIMPLE — General gameplay options\n");
         sb.append("# ────────────────────────────────────────────────────────────────\n\n");
         section(sb, "scatterFluids", "Whether water/lava SOURCE blocks can be scattered by explosions (flowing water is never scattered)");
+        section(sb, "enhancedCreeperExplosions", "Replace creeper explosions with EnhancedExplosion physics");
         section(sb, "tntStrength", "TNT strength (block destruction radius). Entity damage auto-scales to 1.5x");
         section(sb, "explosionPowerScale", "Global explosive power scale (0.4 = 60% weaker). Applies to block destruction and entity damage");
         section(sb, "entityKnockbackScale", "Knockback impulse on mobs/players/primed TNT/debris (0.35 = minimal nudge, 1.0 = full shove)");
@@ -616,6 +620,7 @@ public class ModConfig {
         // Reflective-free: re-read via the getter lambdas. But we don't store
         // them. Simplest: read the public static fields by name.
         CURRENT_VALUES.put("scatterFluids", String.valueOf(scatterFluids));
+        CURRENT_VALUES.put("enhancedCreeperExplosions", String.valueOf(enhancedCreeperExplosions));
         CURRENT_VALUES.put("tntStrength", String.valueOf(tntStrength));
         CURRENT_VALUES.put("explosionPowerScale", String.valueOf(explosionPowerScale));
         CURRENT_VALUES.put("entityKnockbackScale", String.valueOf(entityKnockbackScale));

@@ -1,11 +1,16 @@
 package asd.itamio.createtnt;
 
 import java.util.List;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.PrimedTnt;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.projectile.FireworkRocketEntity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.level.ExplosionEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 
@@ -39,7 +44,13 @@ public class ExplosionEventHandler {
         // Find a primed TNT at the explosion point.
         List<PrimedTnt> tnts = level.getEntitiesOfClass(PrimedTnt.class,
             new AABB(x - 1.0D, y - 1.0D, z - 1.0D, x + 1.0D, y + 1.0D, z + 1.0D));
-        if (tnts.isEmpty()) {
+        Entity boomSource;
+        if (!tnts.isEmpty()) {
+            boomSource = tnts.get(0);
+        } else if (ModConfig.enhancedCreeperExplosions
+                && explosion.getIndirectSourceEntity() instanceof Creeper) {
+            boomSource = (Entity) explosion.getIndirectSourceEntity();
+        } else {
             return;
         }
 
@@ -56,7 +67,7 @@ public class ExplosionEventHandler {
         float entityPower = ModConfig.entityPower * powerMult;
         float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
 
-        EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, tnts.get(0), x, y, z,
+        EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, boomSource, x, y, z,
             blockPower, entityPower, false, true, particlePower);
         enhancedExplosion.explode();
         enhancedExplosion.finalizeExplosion(true);
@@ -75,6 +86,19 @@ public class ExplosionEventHandler {
         }
     }
 
+    /** Suppresses vanilla damage while a tracked rocket is being redirected. */
+    @SubscribeEvent
+    public void onRocketDamage(LivingIncomingDamageEvent event) {
+        if (!ModConfig.rocketShellExplosions) {
+            return;
+        }
+        Entity direct = event.getSource().getDirectEntity();
+        if (direct instanceof FireworkRocketEntity
+                && RocketTracker.isTracked(direct.getUUID())) {
+            event.setCanceled(true);
+        }
+    }
+
     /**
      * Replaces vanilla {@link PrimedTnt} with {@link EntityEnhancedTNTPrimed}
      * when it joins the world. This ensures all TNT — whether ignited by flint
@@ -87,6 +111,10 @@ public class ExplosionEventHandler {
     @SubscribeEvent
     public void onEntityJoinLevel(EntityJoinLevelEvent event) {
         if (event.getLevel().isClientSide()) {
+            return;
+        }
+        if (event.getEntity() instanceof FireworkRocketEntity rocket && rocket.isShotAtAngle()) {
+            RocketTracker.track((ServerLevel) event.getLevel(), rocket);
             return;
         }
         // Use exact class match so we don't catch our own enhanced TNT subclass.

@@ -15,7 +15,10 @@ public class ShellCloudParticleType extends ParticleType<ShellCloudOption> {
     public Codec<ShellCloudOption> codec() {
         return RecordCodecBuilder.create(i -> i.group(
             Codec.FLOAT.fieldOf("scale").forGetter(ShellCloudOption::scale),
-            Codec.BOOL.fieldOf("isPlume").forGetter(ShellCloudOption::isPlume))
+            Codec.BOOL.fieldOf("isPlume").forGetter(ShellCloudOption::isPlume),
+            Codec.FLOAT.fieldOf("axisX").forGetter(ShellCloudOption::axisX),
+            Codec.FLOAT.fieldOf("axisY").forGetter(ShellCloudOption::axisY),
+            Codec.FLOAT.fieldOf("axisZ").forGetter(ShellCloudOption::axisZ))
             .apply(i, ShellCloudOption::new));
     }
 }

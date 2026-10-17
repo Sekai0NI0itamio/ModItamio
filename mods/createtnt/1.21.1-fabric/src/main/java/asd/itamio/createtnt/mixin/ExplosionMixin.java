@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.PrimedTnt;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
@@ -36,6 +37,25 @@ public class ExplosionMixin {
                                    Holder<SoundEvent> sound,
                                    CallbackInfoReturnable<Explosion> cir) {
         ServerLevel level = (ServerLevel) (Object) this;
+
+        if (ModConfig.enhancedCreeperExplosions && entity instanceof Creeper) {
+            float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
+            float blockPower = ModConfig.blockPower * powerMult;
+            float entityPower = ModConfig.entityPower * powerMult;
+            float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
+            EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, entity, x, y, z,
+                blockPower, entityPower, false, true, particlePower);
+            enhancedExplosion.explode();
+            enhancedExplosion.finalizeExplosion(true);
+            float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
+            List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
+                new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
+                    x + chainRadius, y + chainRadius, z + chainRadius));
+            for (PrimedTnt tnt : chained) tnt.setFuse(0);
+            cir.setReturnValue(enhancedExplosion);
+            cir.cancel();
+            return;
+        }
 
         // Find a primed TNT at the explosion point.
         List<PrimedTnt> tnts = level.getEntitiesOfClass(PrimedTnt.class,

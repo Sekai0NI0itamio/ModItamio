@@ -72,8 +72,10 @@ public class BetterTNTs implements ModInitializer {
 
         // Server-tick handler processing scheduled (one-by-one) chain
         // detonations.
-        net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(
-            server -> EntityEnhancedTNTPrimed.tickScheduled());
+        net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(server -> {
+            EntityEnhancedTNTPrimed.tickScheduled();
+            RocketTracker.tickAll();
+        });
 
         ModInfoPrinter.print(LOGGER::info, MOD_NAME, VERSION);
         LOGGER.info(CREDITS);

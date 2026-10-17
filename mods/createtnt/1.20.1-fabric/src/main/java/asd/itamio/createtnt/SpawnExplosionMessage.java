@@ -15,9 +15,16 @@ public class SpawnExplosionMessage {
     private final float power;
     private final boolean isPlume;
     private final float knockbackX, knockbackY, knockbackZ;
+    private final float axisX, axisY, axisZ;
 
     public SpawnExplosionMessage(double x, double y, double z, float power, boolean isPlume,
                                  float knockbackX, float knockbackY, float knockbackZ) {
+        this(x, y, z, power, isPlume, knockbackX, knockbackY, knockbackZ, 0.0F, 1.0F, 0.0F);
+    }
+
+    public SpawnExplosionMessage(double x, double y, double z, float power, boolean isPlume,
+                                 float knockbackX, float knockbackY, float knockbackZ,
+                                 float axisX, float axisY, float axisZ) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -26,6 +33,9 @@ public class SpawnExplosionMessage {
         this.knockbackX = knockbackX;
         this.knockbackY = knockbackY;
         this.knockbackZ = knockbackZ;
+        this.axisX = axisX;
+        this.axisY = axisY;
+        this.axisZ = axisZ;
     }
 
     public SpawnExplosionMessage(FriendlyByteBuf buf) {
@@ -37,6 +47,9 @@ public class SpawnExplosionMessage {
         this.knockbackX = buf.readFloat();
         this.knockbackY = buf.readFloat();
         this.knockbackZ = buf.readFloat();
+        this.axisX = buf.readFloat();
+        this.axisY = buf.readFloat();
+        this.axisZ = buf.readFloat();
     }
 
     public void toBytes(FriendlyByteBuf buf) {
@@ -48,6 +61,9 @@ public class SpawnExplosionMessage {
         buf.writeFloat(this.knockbackX);
         buf.writeFloat(this.knockbackY);
         buf.writeFloat(this.knockbackZ);
+        buf.writeFloat(this.axisX);
+        buf.writeFloat(this.axisY);
+        buf.writeFloat(this.axisZ);
     }
 
     public double x() { return this.x; }
@@ -58,4 +74,7 @@ public class SpawnExplosionMessage {
     public float knockbackX() { return this.knockbackX; }
     public float knockbackY() { return this.knockbackY; }
     public float knockbackZ() { return this.knockbackZ; }
+    public float axisX() { return this.axisX; }
+    public float axisY() { return this.axisY; }
+    public float axisZ() { return this.axisZ; }
 }

@@ -13,7 +13,8 @@ import net.minecraft.resources.ResourceLocation;
  * directly to its own player entity (player motion is client-authoritative).</p>
  */
 public record SpawnExplosionMessage(double x, double y, double z, float power, boolean isPlume,
-                                    float knockbackX, float knockbackY, float knockbackZ)
+                                    float knockbackX, float knockbackY, float knockbackZ,
+                                    float axisX, float axisY, float axisZ)
     implements CustomPacketPayload {
 
     public static final CustomPacketPayload.Type<SpawnExplosionMessage> TYPE =
@@ -26,6 +27,7 @@ public record SpawnExplosionMessage(double x, double y, double z, float power, b
                 return new SpawnExplosionMessage(
                     buf.readDouble(), buf.readDouble(), buf.readDouble(),
                     buf.readFloat(), buf.readBoolean(),
+                    buf.readFloat(), buf.readFloat(), buf.readFloat(),
                     buf.readFloat(), buf.readFloat(), buf.readFloat());
             }
 
@@ -36,9 +38,12 @@ public record SpawnExplosionMessage(double x, double y, double z, float power, b
                 buf.writeDouble(msg.z);
                 buf.writeFloat(msg.power);
                 buf.writeBoolean(msg.isPlume);
-                buf.writeFloat(msg.knockbackX);
-                buf.writeFloat(msg.knockbackY);
-                buf.writeFloat(msg.knockbackZ);
+        buf.writeFloat(msg.knockbackX);
+        buf.writeFloat(msg.knockbackY);
+        buf.writeFloat(msg.knockbackZ);
+        buf.writeFloat(msg.axisX);
+        buf.writeFloat(msg.axisY);
+        buf.writeFloat(msg.axisZ);
             }
         };
 

@@ -1,7 +1,9 @@
 package asd.itamio.createtnt;
 
 import java.util.List;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
+import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.Explosion;
@@ -34,6 +36,25 @@ public class ExplosionEventHandler {
         double x = pos.xCoord;
         double y = pos.yCoord;
         double z = pos.zCoord;
+
+        EntityLivingBase explosivePlacedBy = explosion.getExplosivePlacedBy();
+        if (explosivePlacedBy instanceof EntityCreeper) {
+            if (!ModConfig.enhancedCreeperExplosions) {
+                return;
+            }
+
+            EntityCreeper creeper = (EntityCreeper) explosivePlacedBy;
+            // Match vanilla creeper power: 3 blocks normally, 6 when powered.
+            float creeperPower = creeper.getPowered() ? 6.0F : 3.0F;
+
+            event.setCanceled(true);
+            EnhancedExplosion enhancedExplosion = new EnhancedExplosion(world, creeper, x, y, z,
+                creeperPower, creeperPower, false,
+                world.getGameRules().getBoolean("mobGriefing"), creeperPower);
+            enhancedExplosion.doExplosionA();
+            enhancedExplosion.doExplosionB(true);
+            return;
+        }
 
         // Find a primed TNT at the explosion point.
         List<EntityTNTPrimed> tnts = world.getEntitiesWithinAABB(EntityTNTPrimed.class,

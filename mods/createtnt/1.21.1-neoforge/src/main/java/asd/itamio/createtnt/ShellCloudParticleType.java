@@ -12,7 +12,10 @@ public class ShellCloudParticleType extends ParticleType<ShellCloudOption> {
 
     private static final MapCodec<ShellCloudOption> CODEC = RecordCodecBuilder.mapCodec(i -> i.group(
         Codec.FLOAT.fieldOf("scale").forGetter(ShellCloudOption::scale),
-        Codec.BOOL.fieldOf("isPlume").forGetter(ShellCloudOption::isPlume))
+        Codec.BOOL.fieldOf("isPlume").forGetter(ShellCloudOption::isPlume),
+        Codec.FLOAT.fieldOf("axisX").forGetter(ShellCloudOption::axisX),
+        Codec.FLOAT.fieldOf("axisY").forGetter(ShellCloudOption::axisY),
+        Codec.FLOAT.fieldOf("axisZ").forGetter(ShellCloudOption::axisZ))
         .apply(i, ShellCloudOption::new));
 
     private static final StreamCodec<RegistryFriendlyByteBuf, ShellCloudOption> STREAM_CODEC =
@@ -20,8 +23,12 @@ public class ShellCloudParticleType extends ParticleType<ShellCloudOption> {
             (buf, o) -> {
                 buf.writeFloat(o.scale());
                 buf.writeBoolean(o.isPlume());
+                buf.writeFloat(o.axisX());
+                buf.writeFloat(o.axisY());
+                buf.writeFloat(o.axisZ());
             },
-            buf -> new ShellCloudOption(buf.readFloat(), buf.readBoolean()));
+            buf -> new ShellCloudOption(buf.readFloat(), buf.readBoolean(),
+                buf.readFloat(), buf.readFloat(), buf.readFloat()));
 
     public ShellCloudParticleType() {
         super(false);

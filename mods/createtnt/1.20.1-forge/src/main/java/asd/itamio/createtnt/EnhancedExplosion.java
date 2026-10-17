@@ -66,6 +66,16 @@ public class EnhancedExplosion extends Explosion {
      *  random TNT strength multiplier doesn't make particles absurdly big.
      *  Scales gently: a 3x-strength blast is only ~1.5x bigger visually. */
     private final float particlePower;
+    /** Plume axis for the explosion visual packet; defaults to world up. */
+    private float plumeAxisX = 0.0F;
+    private float plumeAxisY = 1.0F;
+    private float plumeAxisZ = 0.0F;
+
+    public void setPlumeAxis(float x, float y, float z) {
+        this.plumeAxisX = x;
+        this.plumeAxisY = y;
+        this.plumeAxisZ = z;
+    }
 
     public EnhancedExplosion(Level level, @Nullable Entity entity, double x, double y, double z,
                              float blockRadius, float entityRadius, boolean causesFire, boolean damagesTerrain) {
@@ -525,7 +535,8 @@ public class EnhancedExplosion extends Explosion {
             Vec3 knockback = this.playerKnockbackMap.getOrDefault(player, Vec3.ZERO);
             SpawnExplosionMessage msg = new SpawnExplosionMessage(this.x, this.y, this.z,
                 this.particlePower, isPlume,
-                (float) knockback.x, (float) knockback.y, (float) knockback.z);
+                (float) knockback.x, (float) knockback.y, (float) knockback.z,
+                this.plumeAxisX, this.plumeAxisY, this.plumeAxisZ);
             ModNetwork.NETWORK.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) player), msg);
         }
     }

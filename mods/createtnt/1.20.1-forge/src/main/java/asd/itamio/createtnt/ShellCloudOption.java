@@ -6,8 +6,9 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.network.FriendlyByteBuf;
 
-/** Particle options for the explosion cloud controller: scale + plume flag. */
-public record ShellCloudOption(float scale, boolean isPlume) implements ParticleOptions {
+/** Particle options for the explosion cloud controller: scale, plume flag, plume axis. */
+public record ShellCloudOption(float scale, boolean isPlume, float axisX, float axisY, float axisZ)
+    implements ParticleOptions {
 
     public static final ParticleOptions.Deserializer<ShellCloudOption> DESERIALIZER =
         new ParticleOptions.Deserializer<>() {
@@ -18,12 +19,19 @@ public record ShellCloudOption(float scale, boolean isPlume) implements Particle
                 float scale = reader.readFloat();
                 reader.expect(' ');
                 boolean isPlume = reader.readBoolean();
-                return new ShellCloudOption(scale, isPlume);
+                reader.expect(' ');
+                float axisX = reader.readFloat();
+                reader.expect(' ');
+                float axisY = reader.readFloat();
+                reader.expect(' ');
+                float axisZ = reader.readFloat();
+                return new ShellCloudOption(scale, isPlume, axisX, axisY, axisZ);
             }
 
             @Override
             public ShellCloudOption fromNetwork(ParticleType<ShellCloudOption> type, FriendlyByteBuf buf) {
-                return new ShellCloudOption(buf.readFloat(), buf.readBoolean());
+                return new ShellCloudOption(buf.readFloat(), buf.readBoolean(),
+                    buf.readFloat(), buf.readFloat(), buf.readFloat());
             }
         };
 
@@ -31,11 +39,14 @@ public record ShellCloudOption(float scale, boolean isPlume) implements Particle
     public void writeToNetwork(FriendlyByteBuf buf) {
         buf.writeFloat(this.scale);
         buf.writeBoolean(this.isPlume);
+        buf.writeFloat(this.axisX);
+        buf.writeFloat(this.axisY);
+        buf.writeFloat(this.axisZ);
     }
 
     @Override
     public String writeToString() {
-        return this.scale + " " + this.isPlume;
+        return this.scale + " " + this.isPlume + " " + this.axisX + " " + this.axisY + " " + this.axisZ;
     }
 
     @Override

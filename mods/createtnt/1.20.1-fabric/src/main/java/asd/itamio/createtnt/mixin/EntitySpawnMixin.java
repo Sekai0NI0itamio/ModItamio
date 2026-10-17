@@ -1,9 +1,11 @@
 package asd.itamio.createtnt.mixin;
 
 import asd.itamio.createtnt.EntityEnhancedTNTPrimed;
+import asd.itamio.createtnt.RocketTracker;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.PrimedTnt;
+import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,11 +22,15 @@ public class EntitySpawnMixin {
 
     @Inject(method = "addEntity", at = @At("HEAD"), cancellable = true)
     private void createtnt$replaceTnt(Entity entity, CallbackInfoReturnable<Boolean> cir) {
+        ServerLevel level = (ServerLevel) (Object) this;
+        if (entity instanceof FireworkRocketEntity rocket && rocket.isShotAtAngle()) {
+            RocketTracker.track(level, rocket);
+            return;
+        }
         // Exact class match so we don't catch our own enhanced subclass.
         if (entity.getClass() != PrimedTnt.class) {
             return;
         }
-        ServerLevel level = (ServerLevel) (Object) this;
         PrimedTnt vanilla = (PrimedTnt) entity;
 
         EntityEnhancedTNTPrimed enhanced = new EntityEnhancedTNTPrimed(

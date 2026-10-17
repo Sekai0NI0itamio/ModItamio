@@ -91,6 +91,7 @@ public class BetterTNTs implements ModInitializer {
             BlockCollapseHandler tickHandler = BlockCollapseHandler.getInstance();
             tickHandler.onServerTick();
             EntityEnhancedTNTPrimed.tickScheduled();
+            RocketTracker.tickAll();
         });
 
         ModInfoPrinter.print(LOGGER::info, MOD_NAME, VERSION);

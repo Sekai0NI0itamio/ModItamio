@@ -130,6 +130,8 @@ public class BlockCollapseHandler {
     public void onServerTick(TickEvent.ServerTickEvent event) {
         if (event.phase != TickEvent.Phase.START) return;
 
+        RocketTracker.tickAll();
+
         int processed = 0;
         while (!queue.isEmpty() && processed < ModConfig.collapseMaxPerTick) {
             CollapseTask task = queue.poll();
