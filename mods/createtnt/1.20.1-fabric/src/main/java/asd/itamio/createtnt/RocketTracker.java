@@ -28,6 +28,10 @@ public final class RocketTracker {
     private static final double RANGE_SQR = 1.0E8D;
     private static final int MAX_DRILL = 3;        // break up to 3 blocks, then detonate
     private static final double DRILL_STEP = 0.2D; // march step along the flight vector
+    // Trail puffs are small, so ShellExplosionSmokeParticle keeps only 30% of the
+    // requested lifetime: 240 ticks resolve to ~72 ticks (3.6 s) on screen.
+    private static final int TRAIL_LIFETIME = 240;
+    private static final float TRAIL_SCALE = 1.5F;
 
     private static final class Tracked {
         final ServerLevel level;
@@ -129,8 +133,22 @@ public final class RocketTracker {
                 Vec3 dir = motion.normalize();
                 tr.rocket.setDeltaMovement(motion.add(dir.scale(Math.min(ACCEL, MAX_SPEED - speed))));
             }
-            tr.level.sendParticles(new ShellSmokeOption(60, 1.5F), tr.x, tr.y, tr.z,
-                2, 0.1D, 0.1D, 0.1D, 0.0D);
+            sendTrail(tr.level, tr.x, tr.y, tr.z);
+        }
+    }
+
+    /**
+     * Sends this tick's trail puffs to every player who could see them. The
+     * plain sendParticles call stops at 32 blocks, and clients drop unforced
+     * particles past 32 blocks of the camera; the per-player overload with
+     * force=true stretches that limit to the 512-block visible range and
+     * marks the packet so clients render each puff at any distance, matching
+     * the reach of the explosion visuals.
+     */
+    private static void sendTrail(ServerLevel level, double x, double y, double z) {
+        ShellSmokeOption trail = new ShellSmokeOption(TRAIL_LIFETIME, TRAIL_SCALE);
+        for (ServerPlayer player : level.players()) {
+            level.sendParticles(player, trail, true, x, y, z, 2, 0.1D, 0.1D, 0.1D, 0.0D);
         }
     }
 
