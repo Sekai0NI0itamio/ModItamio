@@ -228,7 +228,7 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
                 // Base smoke lifetime: 7 seconds (140 ticks) — the large
                 // puffs disappear around the same time as the ray puffs.
                 int lifetime = 140;
-                this.level.addParticle(new ShellSmokeOption(lifetime, primaryScale),
+                this.level.addParticle(new ShellSmokeOption(lifetime, primaryScale, false),
                     true, rx, ry, rz, dx, dy, dz);
             }
         }

@@ -121,7 +121,7 @@ public final class RocketTracker {
      * the reach of the explosion visuals.
      */
     private static void sendTrail(ServerLevel level, double x, double y, double z) {
-        ShellSmokeOption trail = new ShellSmokeOption(TRAIL_LIFETIME, TRAIL_SCALE);
+        ShellSmokeOption trail = new ShellSmokeOption(TRAIL_LIFETIME, TRAIL_SCALE, true);
         for (ServerPlayer player : level.players()) {
             level.sendParticles(player, trail, true, true, x, y, z, 2, 0.1D, 0.1D, 0.1D, 0.0D);
         }

@@ -12,8 +12,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Crossbow/dispenser rockets fly longer for each gunpowder in the firework:
- * every gunpowder adds {@code rocketFlightBonusPerGunpowder} extra ticks.
+ * Crossbow/dispenser rocket flight duration by gunpowder charge: 1-2 gunpowder
+ * rockets keep the vanilla duration for their charge; a 3-gunpowder rocket
+ * (the most a player can craft in survival) flies twice as long. Rockets with
+ * more gunpowder than vanilla allows follow the 3-gunpowder rule.
  */
 @Mixin(FireworkRocketEntity.class)
 public class RocketLifetimeMixin {
@@ -21,12 +23,11 @@ public class RocketLifetimeMixin {
 
     @Inject(method = "<init>(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;DDDZ)V",
             at = @At("TAIL"))
-    private void createtnt$bonusFlightTime(Level level, ItemStack stack, double x, double y, double z,
-                                           boolean shotAtAngle, CallbackInfo ci) {
+    private void createtnt$gunpowderFlightTime(Level level, ItemStack stack, double x, double y, double z,
+                                               boolean shotAtAngle, CallbackInfo ci) {
         if (!shotAtAngle || !ModConfig.rocketShellExplosions) return;
-        int gunpowder = RocketTracker.flightFrom(stack);
-        if (gunpowder > 0 && ModConfig.rocketFlightBonusPerGunpowder > 0) {
-            this.lifetime += gunpowder * ModConfig.rocketFlightBonusPerGunpowder;
+        if (RocketTracker.flightFrom(stack) >= 3) {
+            this.lifetime *= 2;
         }
     }
 }

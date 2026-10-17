@@ -4,7 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.particles.ParticleType;
 
-/** ParticleType carrying {@link ShellSmokeOption} (lifetime + scale). */
+/** ParticleType carrying {@link ShellSmokeOption} (lifetime + scale + trail flag). */
 public class ShellSmokeParticleType extends ParticleType<ShellSmokeOption> {
 
     public ShellSmokeParticleType() {
@@ -15,7 +15,8 @@ public class ShellSmokeParticleType extends ParticleType<ShellSmokeOption> {
     public Codec<ShellSmokeOption> codec() {
         return RecordCodecBuilder.create(i -> i.group(
             Codec.INT.fieldOf("lifetime").forGetter(ShellSmokeOption::lifetime),
-            Codec.FLOAT.fieldOf("scale").forGetter(ShellSmokeOption::scale))
+            Codec.FLOAT.fieldOf("scale").forGetter(ShellSmokeOption::scale),
+            Codec.BOOL.optionalFieldOf("trail", false).forGetter(ShellSmokeOption::trail))
             .apply(i, ShellSmokeOption::new));
     }
 }

@@ -17,7 +17,8 @@ import net.minecraft.util.RandomSource;
  * and rise by their own heat level — cooling off and sinking at the end.
  * Their speed cap ramps exponentially from a slow drift to the full cap at
  * the end of life. Ray puffs hold their streak position for 2 seconds, then
- * expand outward at a constant small speed while logarithmically fading.</p>
+ * expand outward at a constant small speed while logarithmically fading.
+ * Trail puffs (the rocket flight trail) hang almost in place.</p>
  *
  * <p>Rendering: translucent particle-atlas sprites; the engine renders these
  * after translucent blocks, so the smoke draws on top of water.</p>
@@ -67,6 +68,9 @@ public class ShellExplosionSmokeParticle extends SingleQuadParticle {
     /** True for puffs spawned by the blast rays: static for 2s, then they
      *  expand outward at a constant small speed. */
     private boolean isRayParticle = false;
+    /** True for the rocket flight trail puffs: they hang almost in place —
+     *  no gravity, buoyancy, repulsion, turbulence or speed cap. */
+    private boolean isTrailParticle = false;
     /** This puff's own repulsion radius in blocks (random 1-2 at spawn,
      *  fixed for life). Only base puffs repel. */
     private final float repelRadius;
@@ -181,7 +185,15 @@ public class ShellExplosionSmokeParticle extends SingleQuadParticle {
         // The effective speed cap in blocks/tick (base puffs only).
         double cappedMaxSpeed = -1.0D;
 
-        if (this.isRayParticle) {
+        if (this.isTrailParticle) {
+            // Trail puffs hang where they spawned: no gravity, no buoyancy,
+            // no repulsion, no turbulence and no speed cap — just a fast
+            // brake on any residual velocity, so the trail barely drifts.
+            this.xd *= 0.5D;
+            this.yd *= 0.5D;
+            this.zd *= 0.5D;
+            this.move(this.xd, this.yd, this.zd);
+        } else if (this.isRayParticle) {
             if (this.age < 40) {
                 // First 2 seconds: ray puffs hold their streak position —
                 // completely static, no movement at all.
@@ -384,8 +396,10 @@ public class ShellExplosionSmokeParticle extends SingleQuadParticle {
         @Override
         public Particle createParticle(ShellSmokeOption data, ClientLevel level, double x, double y,
                                        double z, double dx, double dy, double dz, RandomSource random) {
-            return new ShellExplosionSmokeParticle(level, x, y, z, dx, dy, dz, this.sprites,
-                data.lifetime(), data.scale());
+            ShellExplosionSmokeParticle puff = new ShellExplosionSmokeParticle(level, x, y, z,
+                dx, dy, dz, this.sprites, data.lifetime(), data.scale());
+            puff.isTrailParticle = data.trail();
+            return puff;
         }
     }
 }

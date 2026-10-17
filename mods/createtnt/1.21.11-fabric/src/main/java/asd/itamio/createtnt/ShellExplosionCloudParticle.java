@@ -232,7 +232,7 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
                 // 1.21.11: addParticle gained an overrideLimiter flag before
                 // the alwaysShow flag; we want always-show without bypassing
                 // the particle limiter.
-                this.level.addParticle(new ShellSmokeOption(lifetime, primaryScale),
+                this.level.addParticle(new ShellSmokeOption(lifetime, primaryScale, false),
                     true, true, rx, ry, rz, dx, dy, dz);
             }
         }
