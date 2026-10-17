@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "asd.itamio.createtnt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "createtnt.refmap.json",
+  "mixins": [
+    "RocketExplosionMixin",
+    "RocketLifetimeMixin"
+  ],
+  "client": [
+    "RocketTrailMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

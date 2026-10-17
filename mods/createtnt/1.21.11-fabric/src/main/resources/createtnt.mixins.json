@@ -5,10 +5,12 @@
     "mixins": [
         "EntitySpawnMixin",
         "ExplosionMixin",
-        "RocketExplosionMixin"
+        "RocketExplosionMixin",
+        "RocketLifetimeMixin"
     ],
     "client": [
-        "CameraShakeMixin"
+        "CameraShakeMixin",
+        "RocketTrailMixin"
     ],
     "injectors": {
         "defaultRequire": 1
