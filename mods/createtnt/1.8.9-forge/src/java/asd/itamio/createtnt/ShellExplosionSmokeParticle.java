@@ -54,7 +54,7 @@ public class ShellExplosionSmokeParticle extends EntityFX {
     /** Registers the 10 smoke frame icons on the blocks texture atlas. */
     public static void loadIcons(TextureMap map) {
         for (int i = 0; i < FRAME_COUNT; i++) {
-            icons[i] = map.registerSprite(new ResourceLocation("createtnt", "explosion_smoke" + i));
+            icons[i] = map.registerSprite(new ResourceLocation("createtnt", "particle/explosion_smoke" + i));
         }
     }
 
@@ -379,10 +379,10 @@ public class ShellExplosionSmokeParticle extends EntityFX {
         return j | k << 16;
     }
 
-    /** Uses the blocks texture atlas (layer 0). */
+    /** Uses the blocks texture atlas (layer 1). */
     @Override
     public int getFXLayer() {
-        return 0;
+        return 1;
     }
 
     @Override

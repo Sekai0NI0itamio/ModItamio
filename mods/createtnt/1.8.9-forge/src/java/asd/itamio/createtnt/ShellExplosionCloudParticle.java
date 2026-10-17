@@ -258,7 +258,9 @@ public class ShellExplosionCloudParticle extends EntityFX {
 
     @Override
     public int getFXLayer() {
-        return -1;
+        // EffectRenderer only accepts layers 0-3. This controller does not
+        // render anything, but layer 0 still gives it a valid update bucket.
+        return 0;
     }
 
     /**

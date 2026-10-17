@@ -76,6 +76,15 @@ jobs:
         working-directory: ${{ matrix.module }}
         run: gradle build --no-daemon --stacktrace
 
+      - name: Verify 1.8.9 smoke texture entries
+        if: matrix.module == 'mods/createtnt/1.8.9-forge'
+        working-directory: ${{ matrix.module }}
+        run: |
+          for frame in $(seq 0 9); do
+            entry="assets/createtnt/textures/particle/explosion_smoke${frame}.png"
+            jar tf build/libs/createtnt-1.8.9-forge-*.jar | grep -Fqx "$entry"
+          done
+
       - name: Upload complete JAR outputs
         uses: actions/upload-artifact@v4
         with:

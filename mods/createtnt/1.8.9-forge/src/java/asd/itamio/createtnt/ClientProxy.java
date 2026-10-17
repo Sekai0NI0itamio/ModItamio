@@ -1,6 +1,5 @@
 package asd.itamio.createtnt;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderTNTPrimed;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraftforge.client.event.TextureStitchEvent;
@@ -12,11 +11,14 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void preInit() {
-        // Register entity renderers using RenderingRegistry.
+        // Use factories so Forge supplies the initialized RenderManager after
+        // client rendering has been set up. Constructing these renderers with
+        // Minecraft.getMinecraft().getRenderManager() during preInit leaves
+        // their RenderManager null and crashes when TNT is rendered.
         RenderingRegistry.registerEntityRenderingHandler(EntityEnhancedTNTPrimed.class,
-            new RenderTNTPrimed(Minecraft.getMinecraft().getRenderManager()));
+            manager -> new RenderTNTPrimed(manager));
         RenderingRegistry.registerEntityRenderingHandler(EntityEnhancedFallingBlock.class,
-            new RenderEnhancedFallingBlock(Minecraft.getMinecraft().getRenderManager()));
+            manager -> new RenderEnhancedFallingBlock(manager));
 
         // Register camera shake handler on the event bus.
         MinecraftForge.EVENT_BUS.register(new CameraShakeHandler());
