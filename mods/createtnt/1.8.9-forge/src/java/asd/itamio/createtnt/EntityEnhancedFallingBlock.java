@@ -231,6 +231,18 @@ public class EntityEnhancedFallingBlock extends EntityFallingBlock implements IE
     }
 
     /**
+     * Prevents vanilla EntityFallingBlock from reading its private fallTile
+     * field during collision resolution. The client-side Forge spawn path only
+     * restores our syncedState field, so the inherited method can otherwise
+     * dereference a null fallTile when this entity lands. Impact damage is
+     * handled by dealImpactDamage() in the custom landing path below.
+     */
+    @Override
+    public void fall(float distance, float damageMultiplier) {
+        // Intentionally empty: use the custom speed-scaled impact handling.
+    }
+
+    /**
      * Converts this falling entity back into a placed block. Searches upward
      * from the entity's position for the first free spot (air, liquid, or a
      * replaceable block like grass/snow) with solid footing below it, and
