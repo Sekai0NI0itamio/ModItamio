@@ -110,7 +110,7 @@ public final class RocketTracker {
         }
 
         int stars = countStars(tr.rocket);
-        float particlePower = 3.0F * (ModConfig.tntStrength / 4.0F);
+        float directionalPower = 3.0F * (ModConfig.tntStrength / 4.0F);
         ServerLevel level = tr.level;
         if (stars <= 0) {
             for (ServerPlayer player : level.players()) {
@@ -118,7 +118,7 @@ public final class RocketTracker {
                     continue;
                 }
                 ModNetwork.NETWORK.send(PacketDistributor.PLAYER.with(() -> player),
-                    new SpawnExplosionMessage(tr.x, tr.y, tr.z, particlePower * 0.4F, true,
+                    new SpawnExplosionMessage(tr.x, tr.y, tr.z, directionalPower * 0.4F, true,
                         0.0F, 0.0F, 0.0F, axisX, axisY, axisZ));
             }
             return;
@@ -127,6 +127,7 @@ public final class RocketTracker {
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
         float blockPower = ModConfig.blockPower * powerMult;
         float entityPower = ModConfig.entityPower * powerMult * stars;
+        float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         EnhancedExplosion boom = new EnhancedExplosion(level, tr.rocket, tr.x, tr.y, tr.z,
             blockPower, entityPower, false, true, particlePower);
         boom.setPlumeAxis(axisX, axisY, axisZ);

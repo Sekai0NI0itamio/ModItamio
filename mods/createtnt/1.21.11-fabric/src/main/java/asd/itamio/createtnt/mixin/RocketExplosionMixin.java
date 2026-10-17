@@ -38,18 +38,19 @@ public class RocketExplosionMixin {
             axisX = (float) (-motion.x / len); axisY = (float) (-motion.y / len); axisZ = (float) (-motion.z / len);
         }
         int stars = countStars(self);
-        float particlePower = 3.0F * (ModConfig.tntStrength / 4.0F);
+        float directionalPower = 3.0F * (ModConfig.tntStrength / 4.0F);
         if (stars <= 0) {
             for (ServerPlayer player : level.players()) {
                 if (player.distanceToSqr(x, y, z) < 1.0E8D) {
                     ModNetwork.sendExplosion(player, new SpawnExplosionMessage(x, y, z,
-                        particlePower * 0.4F, true, 0.0F, 0.0F, 0.0F, axisX, axisY, axisZ));
+                        directionalPower * 0.4F, true, 0.0F, 0.0F, 0.0F, axisX, axisY, axisZ));
                 }
             }
         } else {
             float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
             float blockPower = ModConfig.blockPower * powerMult;
             float entityPower = ModConfig.entityPower * powerMult * stars;
+            float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
             EnhancedExplosion boom = new EnhancedExplosion(level, self, x, y, z,
                 blockPower, entityPower, false, true, particlePower);
             boom.setPlumeAxis(axisX, axisY, axisZ);

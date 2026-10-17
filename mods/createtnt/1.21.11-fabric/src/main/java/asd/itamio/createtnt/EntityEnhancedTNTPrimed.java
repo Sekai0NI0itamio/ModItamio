@@ -269,8 +269,10 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
      */
     private static void detonatePosition(Level level, BlockPos pos, EntityEnhancedTNTPrimed cause) {
         // Fluid resistance scaling for chain explosions.
-        float chainBlockPower = ModConfig.blockPower;
-        float chainEntityPower = ModConfig.entityPower;
+        float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
+        float chainBlockPower = ModConfig.blockPower * powerMult;
+        float chainEntityPower = ModConfig.entityPower * powerMult;
+        float chainParticlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         boolean inWater = level.getFluidState(pos).is(FluidTags.WATER);
         boolean inLava = level.getFluidState(pos).is(FluidTags.LAVA);
         if (inWater) {
@@ -288,7 +290,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         // explosions so chain detonations produce equally big smoke clouds.
         EnhancedExplosion chainExplosion = new EnhancedExplosion(
             level, cause, cx, cy, cz,
-            chainBlockPower, chainEntityPower, false, true, ModConfig.tntStrength);
+            chainBlockPower, chainEntityPower, false, true, chainParticlePower);
         chainExplosion.detonate();
         chainExplosion.finalizeExplosion(true);
 

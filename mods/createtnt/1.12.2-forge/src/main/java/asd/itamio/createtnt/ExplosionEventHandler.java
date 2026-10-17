@@ -43,13 +43,16 @@ public class ExplosionEventHandler {
             }
 
             EntityCreeper creeper = (EntityCreeper) explosivePlacedBy;
-            // Match vanilla creeper power: 3 blocks normally, 6 when powered.
-            float creeperPower = creeper.getPowered() ? 6.0F : 3.0F;
+            float powerMult = 1.0F + world.rand.nextFloat() * 2.0F;
+            float blockPower = ModConfig.blockPower * powerMult;
+            float entityPower = ModConfig.entityPower * powerMult;
+            float particlePower = ModConfig.tntStrength
+                * (1.0F + (powerMult - 1.0F) * 0.25F);
 
             event.setCanceled(true);
             EnhancedExplosion enhancedExplosion = new EnhancedExplosion(world, creeper, x, y, z,
-                creeperPower, creeperPower, false,
-                ForgeEventFactory.getMobGriefingEvent(world, creeper), creeperPower);
+                blockPower, entityPower, false,
+                ForgeEventFactory.getMobGriefingEvent(world, creeper), particlePower);
             enhancedExplosion.doExplosionA();
             enhancedExplosion.doExplosionB(true);
             return;

@@ -1,6 +1,7 @@
 package asd.itamio.createtnt;
 
 import java.util.List;
+import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
@@ -13,6 +14,7 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
 
 /**
  * Enhanced primed TNT with water-aware fuse behavior.
@@ -32,7 +34,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
  * <p>The explosion itself is handled by {@link EnhancedExplosion}, created
  * directly at fuse end (reliable in water).</p>
  */
-public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
+public class EntityEnhancedTNTPrimed extends EntityTNTPrimed implements IEntityAdditionalSpawnData {
 
     /** Ticks since the TNT was ignited. Used to determine water-unlit behavior. */
     private int ticksSinceLit;
@@ -168,6 +170,16 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
     }
 
     @Override
+    public void writeSpawnData(ByteBuf buffer) {
+        buffer.writeInt(this.fuse);
+    }
+
+    @Override
+    public void readSpawnData(ByteBuf buffer) {
+        this.fuse = buffer.readInt();
+    }
+
+    @Override
     public void writeEntityToNBT(NBTTagCompound tag) {
         super.writeEntityToNBT(tag);
         tag.setInteger("TicksSinceLit", this.ticksSinceLit);
@@ -269,8 +281,11 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
      */
     private static void detonatePosition(World world, BlockPos pos, EntityEnhancedTNTPrimed cause) {
         // Fluid resistance scaling for chain explosions.
-        float chainBlockPower = ModConfig.blockPower;
-        float chainEntityPower = ModConfig.entityPower;
+        float powerMult = 1.0F + world.rand.nextFloat() * 2.0F;
+        float chainBlockPower = ModConfig.blockPower * powerMult;
+        float chainEntityPower = ModConfig.entityPower * powerMult;
+        float chainParticlePower = ModConfig.tntStrength
+            * (1.0F + (powerMult - 1.0F) * 0.25F);
         boolean inWater = world.getBlockState(pos).getBlock().getMaterial() == Material.water;
         boolean inLava = world.getBlockState(pos).getBlock().getMaterial() == Material.lava;
         if (inWater) {
@@ -288,7 +303,7 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
         // explosions so chain detonations produce equally big smoke clouds.
         EnhancedExplosion chainExplosion = new EnhancedExplosion(
             world, cause, cx, cy, cz,
-            chainBlockPower, chainEntityPower, false, true, ModConfig.tntStrength);
+            chainBlockPower, chainEntityPower, false, true, chainParticlePower);
         chainExplosion.doExplosionA();
         chainExplosion.doExplosionB(true);
 

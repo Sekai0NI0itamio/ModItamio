@@ -277,8 +277,11 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
      */
     private static void detonatePosition(World world, BlockPos pos, EntityEnhancedTNTPrimed cause) {
         // Fluid resistance scaling for chain explosions.
-        float chainBlockPower = ModConfig.blockPower;
-        float chainEntityPower = ModConfig.entityPower;
+        float powerMult = 1.0F + world.rand.nextFloat() * 2.0F;
+        float chainBlockPower = ModConfig.blockPower * powerMult;
+        float chainEntityPower = ModConfig.entityPower * powerMult;
+        float chainParticlePower = ModConfig.tntStrength
+            * (1.0F + (powerMult - 1.0F) * 0.25F);
         net.minecraft.block.material.Material mat = world.getBlockState(pos).getMaterial();
         if (mat == net.minecraft.block.material.Material.WATER) {
             chainBlockPower *= ModConfig.waterResistanceScale;
@@ -295,7 +298,7 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
         // explosions so chain detonations produce equally big smoke clouds.
         EnhancedExplosion chainExplosion = new EnhancedExplosion(
             world, cause, cx, cy, cz,
-            chainBlockPower, chainEntityPower, false, true, ModConfig.tntStrength);
+            chainBlockPower, chainEntityPower, false, true, chainParticlePower);
         chainExplosion.doExplosionA();
         chainExplosion.doExplosionB(true);
 
