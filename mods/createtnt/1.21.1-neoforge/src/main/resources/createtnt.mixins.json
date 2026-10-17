@@ -3,6 +3,7 @@
     "package": "asd.itamio.createtnt.mixin",
     "compatibilityLevel": "JAVA_21",
     "mixins": [
+        "ExplosionMixin",
         "RocketExplosionMixin",
         "RocketLifetimeMixin"
     ],

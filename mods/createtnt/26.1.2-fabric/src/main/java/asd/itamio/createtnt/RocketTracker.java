@@ -128,8 +128,11 @@ public final class RocketTracker {
         }
     }
 
-    /** Detonates a shell rocket: a directional flash for starless flares, a full
-     *  blast scaled by star count otherwise. Does not touch the tracker map. */
+    /** Detonates a shell rocket: a directional flash for starless flares, a
+     *  full blast otherwise — block destruction scaled by star count, entity
+     *  damage matching a TNT blast times
+     *  {@link ModConfig#rocketExplosionDamageScale}. Does not touch the
+     *  tracker map. */
     public static void detonateShell(ServerLevel level, FireworkRocketEntity rocket) {
         double x = rocket.getX(), y = rocket.getY(), z = rocket.getZ();
         Vec3 motion = rocket.getDeltaMovement(); double len = motion.length();
@@ -152,7 +155,7 @@ public final class RocketTracker {
         float starScale = 1.0F + (clampedStars - 1) * 0.5F;   // 1 star = 1x ... 7 stars = 4x
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
         float blockPower = ModConfig.blockPower * powerMult * starScale;
-        float entityPower = ModConfig.entityPower * powerMult * stars;
+        float entityPower = ModConfig.entityPower * powerMult * ModConfig.rocketExplosionDamageScale;
         float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         EnhancedExplosion boom = new EnhancedExplosion(level, rocket, x, y, z,
             blockPower, entityPower, false, true, particlePower);

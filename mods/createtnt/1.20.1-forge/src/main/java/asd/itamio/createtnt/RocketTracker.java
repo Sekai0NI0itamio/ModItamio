@@ -170,8 +170,10 @@ public final class RocketTracker {
 
     /**
      * Detonates a shell rocket at its position: no stars → directional visual
-     * only; stars → enhanced blast scaled by star count, then chain-detonates
-     * nearby primed TNT. Does not touch the tracker map — callers untrack.
+     * only; stars → enhanced blast with star-scaled block destruction and
+     * TNT-level entity damage ({@link ModConfig#rocketExplosionDamageScale}),
+     * then chain-detonates nearby primed TNT. Does not touch the tracker map —
+     * callers untrack.
      */
     public static void detonateShell(ServerLevel level, FireworkRocketEntity rocket) {
         double x = rocket.getX();
@@ -207,7 +209,7 @@ public final class RocketTracker {
         float starScale = 1.0F + (clampedStars - 1) * 0.5F;   // 1 star = 1x ... 7 stars = 4x
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
         float blockPower = ModConfig.blockPower * powerMult * starScale;
-        float entityPower = ModConfig.entityPower * powerMult * stars;
+        float entityPower = ModConfig.entityPower * powerMult * ModConfig.rocketExplosionDamageScale;
         float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         EnhancedExplosion boom = new EnhancedExplosion(level, rocket, x, y, z,
             blockPower, entityPower, false, true, particlePower);
