@@ -47,6 +47,10 @@ jobs:
             java: '21'
             gradle: '8.14.3'
             artifact: createtnt-1.21.1-neoforge
+          - module: mods/createtnt/26.3-neoforge
+            java: '25'
+            gradle: '8.14.3'
+            artifact: createtnt-26.3-neoforge
           - module: mods/createtnt/1.21.11-fabric
             java: '21'
             gradle: '9.5.0'
