@@ -24,7 +24,7 @@ public class ModNetwork {
 
     /** Sends the explosion packet to a client. */
     public static void sendExplosion(ServerPlayer player, SpawnExplosionMessage msg) {
-        CHANNEL.send(msg, PacketDistributor.PLAYER.with(() -> player));
+        CHANNEL.send(msg, PacketDistributor.PLAYER.with(player));
     }
 
     /** Forge registration entry point (no-op; channel is static). */
