@@ -1,5 +1,7 @@
 package asd.itamio.createtnt;
 
+import net.minecraft.server.level.ServerPlayer;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
@@ -15,6 +17,11 @@ public class ModNetwork {
             SpawnExplosionMessage.TYPE,
             SpawnExplosionMessage.STREAM_CODEC,
             ModNetwork::handleClient);
+    }
+
+    /** Sends the explosion packet to a client. */
+    public static void sendExplosion(ServerPlayer player, SpawnExplosionMessage msg) {
+        PacketDistributor.sendToPlayer(player, msg);
     }
 
     /** Client-side payload handler: apply knockback, spawn the effects. */

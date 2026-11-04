@@ -88,7 +88,7 @@ public class BlastWaveEffectParticle extends NoRenderParticle {
                 // 1.21.11: the positional SimpleSoundInstance takes a BlockPos
                 // instead of raw coordinates.
                 Minecraft.getInstance().getSoundManager().play(new SimpleSoundInstance(
-                    BetterTNTs.EXPLOSION_BOOM, SoundSource.BLOCKS,
+                    BetterTNTs.EXPLOSION_BOOM.get(), SoundSource.BLOCKS,
                     this.volume, this.pitch,
                     RandomSource.create(this.level.getRandom().nextLong()),
                     net.minecraft.core.BlockPos.containing(this.x, this.y, this.z)));

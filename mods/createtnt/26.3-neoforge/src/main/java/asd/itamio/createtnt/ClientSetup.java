@@ -12,8 +12,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
  * Client-only registrations: particle providers, entity renderers, and the
  * camera-shake handler on the game event bus.
  */
-@EventBusSubscriber(modid = BetterTNTs.MOD_ID, bus = EventBusSubscriber.Bus.MOD,
-    value = Dist.CLIENT)
+@EventBusSubscriber(modid = BetterTNTs.MOD_ID, value = Dist.CLIENT)
 public class ClientSetup {
 
     @SubscribeEvent

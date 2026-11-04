@@ -7,6 +7,6 @@ import net.minecraft.core.particles.ParticleType;
 public record BlastWaveOption(float power) implements ParticleOptions {
     @Override
     public ParticleType<?> getType() {
-        return BetterTNTs.SHELL_BLAST_WAVE;
+        return BetterTNTs.SHELL_BLAST_WAVE.get();
     }
 }
