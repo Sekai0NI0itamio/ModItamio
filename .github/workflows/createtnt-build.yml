@@ -35,6 +35,10 @@ jobs:
             java: '17'
             gradle: '8.14.3'
             artifact: createtnt-1.20.1-forge
+          - module: mods/createtnt/26.3-forge
+            java: '25'
+            gradle: '9.7.1'
+            artifact: createtnt-26.3-forge
           - module: mods/createtnt/1.20.1-fabric
             java: '21'
             gradle: '9.5.0'

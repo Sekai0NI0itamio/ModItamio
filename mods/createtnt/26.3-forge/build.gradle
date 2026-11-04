@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[7.0.17,8)'
+}
+
+version = '2.1.0'
+group = 'asd.itamio'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+minecraft {
+    runs {
+        configureEach {
+            workingDir = layout.projectDirectory.dir('run')
+            systemProperty 'eventbus.api.strictRuntimeChecks', 'true'
+            systemProperty 'forge.enabledGameTestNamespaces', 'createtnt'
+        }
+        register('client')
+        register('server') { args '--nogui' }
+        register('gameTestServer')
+        register('data') {
+            workingDir = layout.projectDirectory.dir('run-data')
+            args '--mod', 'createtnt', '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+    }
+}
+
+// Include the mod's resources
+sourceSets.main.resources {
+    srcDir 'src/main/resources'
+}
+
+repositories { }
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:26.3-66.1.5'
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+        minecraft_version: '26.3',
+        mod_id: 'createtnt',
+        mod_name: 'Create TNT',
+        mod_license: 'All-Rights-Reserved',
+        mod_version: '2.1.0',
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
