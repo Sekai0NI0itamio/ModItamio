@@ -5,7 +5,7 @@ import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.living.LivingIncomingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 
 /**
@@ -25,7 +25,7 @@ public class ExplosionEventHandler {
 
     /** Suppresses vanilla damage while a tracked rocket is being redirected. */
     @SubscribeEvent
-    public void onRocketDamage(LivingIncomingDamageEvent event) {
+    public void onRocketDamage(LivingDamageEvent event) {
         if (!ModConfig.rocketShellExplosions) {
             return;
         }
