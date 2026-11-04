@@ -304,6 +304,6 @@ public class BlockCollapseHandler {
      * torches and similar non-solid blocks neither need support nor give it.
      */
     private static boolean isStructural(BlockState state) {
-        return !state.isAir() && state.blocksMotion() && state.getFluidState().isEmpty();
+        return !state.isAir() && state.isSolid() && state.getFluidState().isEmpty();
     }
 }

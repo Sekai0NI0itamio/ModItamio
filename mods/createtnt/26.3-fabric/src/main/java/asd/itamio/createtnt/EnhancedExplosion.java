@@ -327,7 +327,7 @@ public class EnhancedExplosion extends ServerExplosion {
                             // detonation); vanilla hurt immunity would let only
                             // the first one deal damage. Only reset for an
                             // explosion hit so sword/arrow immunity is intact.
-                            living.invulnerableTime = 0;
+                            living.setInvulnerableTime(0);
                         }
                         entity.hurt(this.level.damageSources().explosion(this),
                             (float) ((int) ((d10 * d10 + d10) / 2.0D * 7.0D * (double) f3 + 1.0D)));

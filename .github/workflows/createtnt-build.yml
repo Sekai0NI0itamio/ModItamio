@@ -57,7 +57,7 @@ jobs:
             artifact: createtnt-26.1.2-fabric
           - module: mods/createtnt/26.3-fabric
             java: '25'
-            gradle: '9.5.0'
+            gradle: '9.7.1'
             artifact: createtnt-26.3-fabric
 
     steps:
