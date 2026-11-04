@@ -140,8 +140,8 @@ public final class RocketTracker {
                         tr.drilled++;
                     }
                     if (tr.drilled >= MAX_DRILL) {
-                        detonateShell(tr.level, (FireworkRocketEntity) tr.rocket);
                         it.remove();
+                        detonateShell(tr.level, (FireworkRocketEntity) tr.rocket);
                         continue;
                     }
                 }
