@@ -25,22 +25,23 @@ public class ExplosionEventHandler {
 
     /** Suppresses vanilla damage while a tracked rocket is being redirected. */
     @SubscribeEvent
-    public void onRocketDamage(LivingDamageEvent event) {
+    public boolean onRocketDamage(LivingDamageEvent event) {
         if (!ModConfig.rocketShellExplosions) {
-            return;
+            return false;
         }
         // Only the vanilla firework hit is suppressed. The mod's own shell
         // blast uses an EXPLOSION damage source whose direct entity is also
         // the rocket, so cancelling every rocket-sourced hit would delete the
         // shell's entity damage entirely.
         if (!event.getSource().is(net.minecraft.world.damagesource.DamageTypes.FIREWORKS)) {
-            return;
+            return false;
         }
         Entity direct = event.getSource().getDirectEntity();
         if (direct instanceof FireworkRocketEntity
                 && RocketTracker.isTracked(direct.getUUID())) {
-            event.cancel();
+            return true;
         }
+        return false;
     }
 
     /**
@@ -53,17 +54,17 @@ public class ExplosionEventHandler {
      * to clients via the spawn packet.</p>
      */
     @SubscribeEvent
-    public void onEntityJoinLevel(EntityJoinLevelEvent event) {
+    public boolean onEntityJoinLevel(EntityJoinLevelEvent event) {
         if (event.getLevel().isClientSide()) {
-            return;
+            return false;
         }
         if (event.getEntity() instanceof FireworkRocketEntity rocket && rocket.isShotAtAngle()) {
             RocketTracker.track((ServerLevel) event.getLevel(), rocket);
-            return;
+            return false;
         }
         // Use exact class match so we don't catch our own enhanced TNT subclass.
         if (event.getEntity().getClass() != PrimedTnt.class) {
-            return;
+            return false;
         }
 
         PrimedTnt vanilla = (PrimedTnt) event.getEntity();
@@ -73,7 +74,7 @@ public class ExplosionEventHandler {
         enhanced.setFuse(vanilla.getFuse());
         enhanced.setDeltaMovement(vanilla.getDeltaMovement());
 
-        event.cancel();
         event.getLevel().addFreshEntity(enhanced);
+        return true;
     }
 }
