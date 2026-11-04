@@ -6,7 +6,7 @@ import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.living.LivingIncomingDamageEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 
 /**
  * Hooks entity join and rocket damage. Explosion replacement (TNT and
