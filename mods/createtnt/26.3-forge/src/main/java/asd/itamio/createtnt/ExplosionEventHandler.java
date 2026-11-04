@@ -39,7 +39,7 @@ public class ExplosionEventHandler {
         Entity direct = event.getSource().getDirectEntity();
         if (direct instanceof FireworkRocketEntity
                 && RocketTracker.isTracked(direct.getUUID())) {
-            event.setCanceled(true);
+            event.cancel();
         }
     }
 
@@ -73,7 +73,7 @@ public class ExplosionEventHandler {
         enhanced.setFuse(vanilla.getFuse());
         enhanced.setDeltaMovement(vanilla.getDeltaMovement());
 
-        event.setCanceled(true);
+        event.cancel();
         event.getLevel().addFreshEntity(enhanced);
     }
 }

@@ -3,7 +3,9 @@ package asd.itamio.createtnt;
 import asd.itamio.ModInfoPrinter;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -48,13 +50,13 @@ public class BetterTNTs {
         ENTITIES.register("enhanced_tnt_primed",
             () -> EntityType.Builder.<EntityEnhancedTNTPrimed>of(EntityEnhancedTNTPrimed::new, MobCategory.MISC)
                 .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(10)
-                .build(id("enhanced_tnt_primed").toString()));
+                .build(ResourceKey.create(Registries.ENTITY_TYPE, id("enhanced_tnt_primed"))));
 
     public static final RegistryObject<EntityType<EntityEnhancedFallingBlock>> ENHANCED_FALLING_BLOCK =
         ENTITIES.register("enhanced_falling_block",
             () -> EntityType.Builder.<EntityEnhancedFallingBlock>of(EntityEnhancedFallingBlock::new, MobCategory.MISC)
                 .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(20)
-                .build(id("enhanced_falling_block").toString()));
+                .build(ResourceKey.create(Registries.ENTITY_TYPE, id("enhanced_falling_block"))));
 
     public static final RegistryObject<ParticleType<ShellSmokeOption>> SHELL_EXPLOSION_SMOKE =
         PARTICLES.register("shell_explosion_smoke", ShellSmokeParticleType::new);
