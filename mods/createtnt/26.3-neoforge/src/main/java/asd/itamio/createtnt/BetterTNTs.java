@@ -2,9 +2,12 @@ package asd.itamio.createtnt;
 
 import asd.itamio.ModInfoPrinter;
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -15,11 +18,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import org.slf4j.Logger;
 
-/**
- * Create TNT — makes TNT explode like artillery shells: big smoke plumes,
- * blast rays, delayed boom sound, screen shake, energy-transfer block
- * destruction, and structural collapse.
- */
 @Mod(BetterTNTs.MOD_ID)
 public class BetterTNTs {
 
@@ -43,20 +41,30 @@ public class BetterTNTs {
     public static final DeferredRegister<ParticleType<?>> PARTICLES =
         DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, MOD_ID);
 
+    private static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
+
     public static final DeferredHolder<SoundEvent, SoundEvent> EXPLOSION_BOOM = SOUNDS.register("explosion_boom",
-        () -> SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath(MOD_ID, "explosion_boom")));
+        () -> SoundEvent.createVariableRangeEvent(id("explosion_boom")));
 
     public static final DeferredHolder<EntityType<?>, EntityType<EntityEnhancedTNTPrimed>> ENHANCED_TNT =
         ENTITIES.register("enhanced_tnt_primed",
-            () -> EntityType.Builder.<EntityEnhancedTNTPrimed>of(EntityEnhancedTNTPrimed::new, MobCategory.MISC)
-                .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(10)
-                .build(Identifier.fromNamespaceAndPath(MOD_ID, "enhanced_tnt_primed").toString()));
+            () -> {
+                ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, id("enhanced_tnt_primed"));
+                return EntityType.Builder.<EntityEnhancedTNTPrimed>of(EntityEnhancedTNTPrimed::new, MobCategory.MISC)
+                    .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(10)
+                    .build(key);
+            });
 
     public static final DeferredHolder<EntityType<?>, EntityType<EntityEnhancedFallingBlock>> ENHANCED_FALLING_BLOCK =
         ENTITIES.register("enhanced_falling_block",
-            () -> EntityType.Builder.<EntityEnhancedFallingBlock>of(EntityEnhancedFallingBlock::new, MobCategory.MISC)
-                .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(20)
-                .build(Identifier.fromNamespaceAndPath(MOD_ID, "enhanced_falling_block").toString()));
+            () -> {
+                ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, id("enhanced_falling_block"));
+                return EntityType.Builder.<EntityEnhancedFallingBlock>of(EntityEnhancedFallingBlock::new, MobCategory.MISC)
+                    .sized(0.98F, 0.98F).clientTrackingRange(10).updateInterval(20)
+                    .build(key);
+            });
 
     public static final DeferredHolder<ParticleType<?>, ParticleType<ShellSmokeOption>> SHELL_EXPLOSION_SMOKE =
         PARTICLES.register("shell_explosion_smoke", ShellSmokeParticleType::new);
@@ -71,15 +79,12 @@ public class BetterTNTs {
         PARTICLES.register(modEventBus);
         modEventBus.addListener(ModNetwork::register);
 
-        // Plain .txt config with live reload, in the config dir.
         java.io.File cfgFile = net.neoforged.fml.loading.FMLPaths.CONFIGDIR.get()
             .resolve("createtnt.txt").toFile();
         ModConfig.load(cfgFile);
 
         NeoForge.EVENT_BUS.register(new ExplosionEventHandler());
         NeoForge.EVENT_BUS.register(new BlockCollapseHandler());
-        // Static @SubscribeEvent server-tick handler that processes scheduled
-        // (one-by-one) chain detonations.
         NeoForge.EVENT_BUS.register(EntityEnhancedTNTPrimed.class);
 
         ModInfoPrinter.print(LOGGER::info, MOD_NAME, VERSION);

@@ -2,7 +2,6 @@ package asd.itamio.createtnt;
 
 import java.util.List;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
@@ -123,7 +122,7 @@ public class EntityEnhancedFallingBlock extends FallingBlockEntity {
 
         // --- Debris smoke trail ---
         // Spawn a small smoke puff every few ticks while the block is flying.
-        if (!this.level().isClientSide && this.time > 1 && this.time % 3 == 0) {
+        if (!this.level().isClientSide() && this.time > 1 && this.time % 3 == 0) {
             double speed = this.getDeltaMovement().length();
             if (speed > 0.1D && this.level() instanceof net.minecraft.server.level.ServerLevel serverLevel) {
                 serverLevel.sendParticles(net.minecraft.core.particles.ParticleTypes.LARGE_SMOKE,
@@ -131,12 +130,12 @@ public class EntityEnhancedFallingBlock extends FallingBlockEntity {
             }
         }
 
-        if (!this.level().isClientSide) {
+        if (!this.level().isClientSide()) {
             BlockPos blockpos1 = this.blockPosition();
 
             if (!this.onGround()) {
-                if (this.time > 100 && (blockpos1.getY() < this.level().getMinBuildHeight()
-                    || blockpos1.getY() > this.level().getMaxBuildHeight())) {
+                if (this.time > 100 && (blockpos1.getY() < this.level().getMinY()
+                    || blockpos1.getY() > this.level().getMaxY())) {
                     // Fell out of the world — lost to the void.
                     this.discard();
                     return;
@@ -250,7 +249,7 @@ public class EntityEnhancedFallingBlock extends FallingBlockEntity {
 
         for (int i = 0; i < 5; i++) {
             BlockPos tryPos = startPos.above(i);
-            if (tryPos.getY() > this.level().getMaxBuildHeight() - 1) {
+            if (tryPos.getY() > this.level().getMaxY() - 1) {
                 break;
             }
             BlockState at = this.level().getBlockState(tryPos);
@@ -285,7 +284,9 @@ public class EntityEnhancedFallingBlock extends FallingBlockEntity {
         if (!isFluid) {
             Item item = Item.byBlock(block);
             if (item != Items.AIR) {
-                this.spawnAtLocation(new ItemStack(item));
+                // 1.21.11: spawnAtLocation takes the ServerLevel explicitly.
+                this.spawnAtLocation((net.minecraft.server.level.ServerLevel) this.level(),
+                    new ItemStack(item));
             }
         }
     }
@@ -327,17 +328,19 @@ public class EntityEnhancedFallingBlock extends FallingBlockEntity {
         return new ClientboundAddEntityPacket(this, serverEntity, Block.getId(this.getBlockState()));
     }
 
+    // 1.21.11: entity NBT goes through the ValueOutput/ValueInput abstraction.
     @Override
-    protected void addAdditionalSaveData(CompoundTag tag) {
+    protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput tag) {
         super.addAdditionalSaveData(tag);
         tag.putInt("EnhancedState", Block.getId(this.getBlockState()));
     }
 
     @Override
-    protected void readAdditionalSaveData(CompoundTag tag) {
+    protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput tag) {
         super.readAdditionalSaveData(tag);
-        if (tag.contains("EnhancedState")) {
-            this.syncedState = Block.stateById(tag.getInt("EnhancedState"));
+        int stateId = tag.getIntOr("EnhancedState", -1);
+        if (stateId >= 0) {
+            this.syncedState = Block.stateById(stateId);
         }
     }
 }

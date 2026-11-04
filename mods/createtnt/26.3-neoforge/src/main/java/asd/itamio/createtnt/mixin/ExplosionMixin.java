@@ -5,32 +5,31 @@ import asd.itamio.createtnt.EnhancedExplosion;
 import asd.itamio.createtnt.ModConfig;
 import java.util.List;
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.ExplosionParticleInfo;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Replaces vanilla explosions that originate from a primed TNT or a creeper
- * with our {@link EnhancedExplosion}, hooking the server-side explode entry
- * point directly.
+ * Replaces vanilla explosions that originate from a primed TNT with our
+ * {@link EnhancedExplosion}. Fabric has no explosion event, so we hook the
+ * server-side explode entry point directly.
  *
- * <p>NeoForge's {@code ExplosionEvent.Start} is not used for this: cancelling
- * it stops the blast logic, but {@code ServerLevel.explode} still broadcasts
- * the vanilla explode packet to nearby players afterwards, so clients keep
- * rendering the vanilla explosion particles and boom. Cancelling this method
- * at HEAD skips the packet too, leaving only our own explosion effect.</p>
+ * <p>1.21.11: the explode entry point returns void and takes an extra
+ * {@code WeightedList<ExplosionParticleInfo>} (the vanilla explosion-particle
+ * pool) — we cancel the call, so that pool is never used.</p>
  */
 @Mixin(ServerLevel.class)
 public class ExplosionMixin {
@@ -41,8 +40,9 @@ public class ExplosionMixin {
                                    double x, double y, double z, float radius, boolean causesFire,
                                    Level.ExplosionInteraction interaction,
                                    ParticleOptions smallParticle, ParticleOptions bigParticle,
+                                   WeightedList<ExplosionParticleInfo> explosionParticles,
                                    Holder<SoundEvent> sound,
-                                   CallbackInfoReturnable<Explosion> cir) {
+                                   CallbackInfo ci) {
         ServerLevel level = (ServerLevel) (Object) this;
 
         if (ModConfig.enhancedCreeperExplosions && entity instanceof Creeper) {
@@ -52,15 +52,14 @@ public class ExplosionMixin {
             float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
             EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, entity, x, y, z,
                 blockPower, entityPower, false, true, particlePower);
-            enhancedExplosion.explode();
+            enhancedExplosion.detonate();
             enhancedExplosion.finalizeExplosion(true);
             float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
             List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
                 new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
                     x + chainRadius, y + chainRadius, z + chainRadius));
             ChainDetonation.detonate(chained, x, y, z);
-            cir.setReturnValue(enhancedExplosion);
-            cir.cancel();
+            ci.cancel();
             return;
         }
 
@@ -73,15 +72,14 @@ public class ExplosionMixin {
             float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
             EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, entity, x, y, z,
                 blockPower, entityPower, false, true, particlePower);
-            enhancedExplosion.explode();
+            enhancedExplosion.detonate();
             enhancedExplosion.finalizeExplosion(true);
             float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
             List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
                 new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
                     x + chainRadius, y + chainRadius, z + chainRadius));
             ChainDetonation.detonate(chained, x, y, z);
-            cir.setReturnValue(enhancedExplosion);
-            cir.cancel();
+            ci.cancel();
             return;
         }
 
@@ -100,7 +98,7 @@ public class ExplosionMixin {
 
         EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, tnts.get(0), x, y, z,
             blockPower, entityPower, false, true, particlePower);
-        enhancedExplosion.explode();
+        enhancedExplosion.detonate();
         enhancedExplosion.finalizeExplosion(true);
 
         // Chain reaction: instant or staggered according to the config.
@@ -110,9 +108,7 @@ public class ExplosionMixin {
                 x + chainRadius, y + chainRadius, z + chainRadius));
         ChainDetonation.detonate(chained, x, y, z);
 
-        // Return the already-run explosion so callers get a valid object;
-        // vanilla packets/particles are fully replaced by our own packet.
-        cir.setReturnValue(enhancedExplosion);
-        cir.cancel();
+        // Vanilla packets/particles are fully replaced by our own packet.
+        ci.cancel();
     }
 }

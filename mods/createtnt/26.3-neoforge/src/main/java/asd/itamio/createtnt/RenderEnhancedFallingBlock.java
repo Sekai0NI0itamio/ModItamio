@@ -2,10 +2,12 @@ package asd.itamio.createtnt;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.FallingBlockRenderer;
+import net.minecraft.client.renderer.entity.state.FallingBlockRenderState;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -20,22 +22,51 @@ import org.joml.Matrix4f;
  * be invisible. This renderer delegates solid blocks to the parent and draws
  * a semi-transparent colored cube for fluids so the player can see flying
  * water/lava blobs.</p>
+ *
+ * <p>1.21.11: entities render through the render-state pipeline — the entity
+ * is snapshotted into a render state ({@link #extractRenderState}) and drawn
+ * later ({@link #submit}), so the fluid flag and the wobble phase are
+ * captured in our own render-state subclass. The cube itself is submitted as
+ * custom geometry through the {@link SubmitNodeCollector}.</p>
  */
 public class RenderEnhancedFallingBlock extends FallingBlockRenderer {
+
+    /** Render state carrying the fluid block state + the wobble phase. */
+    private static final class EnhancedFallingBlockRenderState extends FallingBlockRenderState {
+        /** Non-null when the falling block is a fluid (draw the cube). */
+        BlockState fluidState;
+        /** Precomputed scale wobble so the blob looks alive. */
+        float wobble;
+    }
 
     public RenderEnhancedFallingBlock(EntityRendererProvider.Context context) {
         super(context);
     }
 
     @Override
-    public void render(FallingBlockEntity entity, float entityYaw, float partialTicks,
-                       PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        BlockState state = entity.getBlockState();
-        if (state != null && state.getBlock() instanceof LiquidBlock) {
-            renderFluidCube(entity, state, poseStack, buffer);
+    public FallingBlockRenderState createRenderState() {
+        return new EnhancedFallingBlockRenderState();
+    }
+
+    @Override
+    public void extractRenderState(FallingBlockEntity entity, FallingBlockRenderState state,
+                                   float partialTicks) {
+        super.extractRenderState(entity, state, partialTicks);
+        if (state instanceof EnhancedFallingBlockRenderState enhanced) {
+            BlockState bs = entity.getBlockState();
+            enhanced.fluidState = bs != null && bs.getBlock() instanceof LiquidBlock ? bs : null;
+            enhanced.wobble = (float) Math.sin(entity.tickCount * 0.3D) * 0.05F;
+        }
+    }
+
+    @Override
+    public void submit(FallingBlockRenderState state, PoseStack poseStack,
+                       SubmitNodeCollector collector, CameraRenderState cameraState) {
+        if (state instanceof EnhancedFallingBlockRenderState enhanced && enhanced.fluidState != null) {
+            renderFluidCube(enhanced, poseStack, collector);
             return;
         }
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+        super.submit(state, poseStack, collector, cameraState);
     }
 
     /**
@@ -43,10 +74,10 @@ public class RenderEnhancedFallingBlock extends FallingBlockRenderer {
      * Water = light blue, lava = bright orange, with a subtle wobble so the
      * blob reads as liquid rather than a static cube.
      */
-    private void renderFluidCube(FallingBlockEntity entity, BlockState state,
-                                 PoseStack poseStack, MultiBufferSource buffer) {
-        float r, g, b, alpha;
-        if (state.getFluidState().is(FluidTags.LAVA)) {
+    private void renderFluidCube(EnhancedFallingBlockRenderState state,
+                                 PoseStack poseStack, SubmitNodeCollector collector) {
+        final float r, g, b, alpha;
+        if (state.fluidState.getFluidState().is(FluidTags.LAVA)) {
             r = 0.95F; g = 0.40F; b = 0.05F; alpha = 0.85F;
         } else {
             // Water (and any other fluid defaults to water-blue).
@@ -57,29 +88,30 @@ public class RenderEnhancedFallingBlock extends FallingBlockRenderer {
         // Center the cube on the entity.
         poseStack.translate(-0.49F, 0.0F, -0.49F);
         // Subtle wobble so the blob looks alive.
-        float wobble = (float) Math.sin(entity.tickCount * 0.3D) * 0.05F;
+        float wobble = state.wobble;
         poseStack.translate(0.49F, 0.49F, 0.49F);
         poseStack.scale(1.0F + wobble, 1.0F - wobble, 1.0F + wobble);
         poseStack.translate(-0.49F, -0.49F, -0.49F);
 
-        VertexConsumer vc = buffer.getBuffer(RenderType.debugQuads());
-        Matrix4f mat = poseStack.last().pose();
+        collector.submitCustomGeometry(poseStack, RenderTypes.debugQuads(), (pose, vc) -> {
+            Matrix4f mat = pose.pose();
 
-        float x0 = 0.01F, y0 = 0.01F, z0 = 0.01F;
-        float x1 = 0.97F, y1 = 0.97F, z1 = 0.97F;
+            float x0 = 0.01F, y0 = 0.01F, z0 = 0.01F;
+            float x1 = 0.97F, y1 = 0.97F, z1 = 0.97F;
 
-        // -Z face
-        quad(vc, mat, x0, y0, z0, x1, y0, z0, x1, y1, z0, x0, y1, z0, r, g, b, alpha);
-        // +Z face
-        quad(vc, mat, x0, y0, z1, x0, y1, z1, x1, y1, z1, x1, y0, z1, r, g, b, alpha);
-        // -X face
-        quad(vc, mat, x0, y0, z0, x0, y1, z0, x0, y1, z1, x0, y0, z1, r, g, b, alpha);
-        // +X face
-        quad(vc, mat, x1, y0, z0, x1, y0, z1, x1, y1, z1, x1, y1, z0, r, g, b, alpha);
-        // -Y face
-        quad(vc, mat, x0, y0, z0, x0, y0, z1, x1, y0, z1, x1, y0, z0, r, g, b, alpha);
-        // +Y face
-        quad(vc, mat, x0, y1, z0, x1, y1, z0, x1, y1, z1, x0, y1, z1, r, g, b, alpha);
+            // -Z face
+            quad(vc, mat, x0, y0, z0, x1, y0, z0, x1, y1, z0, x0, y1, z0, r, g, b, alpha);
+            // +Z face
+            quad(vc, mat, x0, y0, z1, x0, y1, z1, x1, y1, z1, x1, y0, z1, r, g, b, alpha);
+            // -X face
+            quad(vc, mat, x0, y0, z0, x0, y1, z0, x0, y1, z1, x0, y0, z1, r, g, b, alpha);
+            // +X face
+            quad(vc, mat, x1, y0, z0, x1, y0, z1, x1, y1, z1, x1, y1, z0, r, g, b, alpha);
+            // -Y face
+            quad(vc, mat, x0, y0, z0, x0, y0, z1, x1, y0, z1, x1, y0, z0, r, g, b, alpha);
+            // +Y face
+            quad(vc, mat, x0, y1, z0, x1, y1, z0, x1, y1, z1, x0, y1, z1, r, g, b, alpha);
+        });
 
         poseStack.popPose();
     }

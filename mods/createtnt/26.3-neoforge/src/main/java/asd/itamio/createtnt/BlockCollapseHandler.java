@@ -10,8 +10,6 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 /**
@@ -52,6 +50,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
  */
 public class BlockCollapseHandler {
 
+    private static final BlockCollapseHandler INSTANCE = new BlockCollapseHandler();
+
+    /** Shared instance (the tick handler has per-instance state). */
+    public static BlockCollapseHandler getInstance() {
+        return INSTANCE;
+    }
+
     private static final Deque<CollapseTask> queue = new ArrayDeque<>();
     private static final int MAX_QUEUE_SIZE = 6000;
 
@@ -71,7 +76,7 @@ public class BlockCollapseHandler {
 
     /** Marks a freshly placed debris block as off-limits for collapse checks. */
     public static void markSettled(Level level, BlockPos pos) {
-        if (level.isClientSide) return;
+        if (level.isClientSide()) return;
         java.util.Map<BlockPos, Long> map = recentlySettled.computeIfAbsent(level, w -> new java.util.HashMap<>());
         if (map.size() > 4096) {
             // Purge expired entries so the map can't grow without bound.
@@ -119,17 +124,15 @@ public class BlockCollapseHandler {
      * queued.
      */
     public static void queueCollapseCheck(Level level, BlockPos pos) {
-        if (level.isClientSide) return;
+        if (level.isClientSide()) return;
         if (queue.size() >= MAX_QUEUE_SIZE) return;
         if (isRecentlySettled(level, pos)) return;
         if (!isStructural(level.getBlockState(pos))) return;
         queue.add(new CollapseTask(level, pos, 1));
     }
 
-    @SubscribeEvent
-    public void onServerTick(ServerTickEvent.Post event) {
-
-        RocketTracker.tickAll();
+    /** Called from the Fabric server-tick callback (end of tick). */
+    public void onServerTick() {
 
         int processed = 0;
         while (!queue.isEmpty() && processed < ModConfig.collapseMaxPerTick) {
@@ -285,11 +288,11 @@ public class BlockCollapseHandler {
     private boolean isAnchorBlock(Level level, BlockPos pos, BlockState state) {
         if (!isStructural(state)) return false;
         if (state.getBlock() == Blocks.BEDROCK) return true;
-        if (pos.getY() <= level.getMinBuildHeight() + 1) return true;
+        if (pos.getY() <= level.getMinY() + 1) return true;
         int depth = ModConfig.collapseGroundColumnDepth;
         for (int i = 1; i <= depth; i++) {
             BlockPos below = pos.below(i);
-            if (below.getY() <= level.getMinBuildHeight()) return true;
+            if (below.getY() <= level.getMinY()) return true;
             if (!isStructural(level.getBlockState(below))) return false;
         }
         return true;

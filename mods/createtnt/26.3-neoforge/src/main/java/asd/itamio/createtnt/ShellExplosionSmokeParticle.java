@@ -3,10 +3,10 @@ package asd.itamio.createtnt;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
-import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.SingleQuadParticle;
 import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 
 /**
  * A single large smoke puff of the explosion cloud.
@@ -22,8 +22,12 @@ import net.minecraft.util.Mth;
  *
  * <p>Rendering: translucent particle-atlas sprites; the engine renders these
  * after translucent blocks, so the smoke draws on top of water.</p>
+ *
+ * <p>1.21.11: the old {@code TextureSheetParticle} was merged into
+ * {@code SingleQuadParticle}, which requires the initial sprite at
+ * construction and reports translucency through {@code getLayer()}.</p>
  */
-public class ShellExplosionSmokeParticle extends TextureSheetParticle {
+public class ShellExplosionSmokeParticle extends SingleQuadParticle {
 
     /** The smoke animation has 10 frame sprites (explosion_smoke0..9). */
     private static final int FRAME_COUNT = 10;
@@ -84,7 +88,9 @@ public class ShellExplosionSmokeParticle extends TextureSheetParticle {
     ShellExplosionSmokeParticle(ClientLevel level, double x, double y, double z,
                                 double dx, double dy, double dz, SpriteSet sprites,
                                 int lifetime, float scale) {
-        super(level, x, y, z, 0.0D, 0.0D, 0.0D);
+        // SingleQuadParticle needs an initial sprite at construction; the
+        // age-driven frame picker below replaces it on the first tick anyway.
+        super(level, x, y, z, 0.0D, 0.0D, 0.0D, sprites.get(level.getRandom()));
         this.sprites = sprites;
         // Outward velocity from the blast, with a tiny upward jitter.
         this.xd = dx;
@@ -350,14 +356,15 @@ public class ShellExplosionSmokeParticle extends TextureSheetParticle {
 
     /**
      * Quartic full-bright flash near the blast core, decaying over the first
-     * quarter-lifetime window.
+     * quarter-lifetime window. (26.1.2: the packed-light hook on particles was
+     * renamed from getLightColor to getLightCoords.)
      */
     @Override
-    public int getLightColor(float partialTick) {
+    protected int getLightCoords(float partialTick) {
         float progress = 1.0F - Mth.clamp((this.age + partialTick) / (float) this.lifetime * 4.0F, 0.0F, 1.0F);
         float brightness = progress * progress * progress * progress;
 
-        int i = super.getLightColor(partialTick);
+        int i = super.getLightCoords(partialTick);
         int j = i & 0xFF;
         int k = i >> 16 & 0xFF;
         j += (int) (brightness * 240.0F);
@@ -368,8 +375,8 @@ public class ShellExplosionSmokeParticle extends TextureSheetParticle {
     }
 
     @Override
-    public ParticleRenderType getRenderType() {
-        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+    protected SingleQuadParticle.Layer getLayer() {
+        return SingleQuadParticle.Layer.TRANSLUCENT;
     }
 
     @Override
@@ -388,7 +395,7 @@ public class ShellExplosionSmokeParticle extends TextureSheetParticle {
 
         @Override
         public Particle createParticle(ShellSmokeOption data, ClientLevel level, double x, double y,
-                                       double z, double dx, double dy, double dz) {
+                                       double z, double dx, double dy, double dz, RandomSource random) {
             ShellExplosionSmokeParticle puff = new ShellExplosionSmokeParticle(level, x, y, z,
                 dx, dy, dz, this.sprites, data.lifetime(), data.scale());
             puff.isTrailParticle = data.trail();

@@ -2,7 +2,6 @@ package asd.itamio.createtnt;
 
 import java.util.List;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
@@ -13,8 +12,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 /**
  * Enhanced primed TNT with water-aware fuse behavior.
@@ -48,7 +45,8 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
     public EntityEnhancedTNTPrimed(Level level, double x, double y, double z, LivingEntity igniter) {
         this(BetterTNTs.ENHANCED_TNT.get(), level);
         this.setPos(x, y, z);
-        double d0 = level.random.nextDouble() * (Math.PI * 2.0D);
+        // 26.1.2: Level.random is protected now — use the getter.
+        double d0 = level.getRandom().nextDouble() * (Math.PI * 2.0D);
         this.setDeltaMovement(-Math.sin(d0) * 0.02D, 0.2D, -Math.cos(d0) * 0.02D);
         this.setFuse(80);
         this.xo = x;
@@ -85,7 +83,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         // Server-only: the server decides when to unlit; the client just
         // renders until the server kills the entity.
         int currentFuse = this.getFuse();
-        if (!this.level().isClientSide && inWater && this.ticksSinceLit >= ModConfig.waterUnlightMinTicks
+        if (!this.level().isClientSide() && inWater && this.ticksSinceLit >= ModConfig.waterUnlightMinTicks
             && this.ticksSinceLit < ModConfig.waterUnlightMaxTicks && currentFuse > 1) {
             this.unlit();
             return;
@@ -98,7 +96,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         if (newFuse <= 0) {
             // Explode BEFORE discard() so chain-reaction logic can still
             // find this TNT entity via getEntitiesOfClass.
-            if (!this.level().isClientSide) {
+            if (!this.level().isClientSide()) {
                 // Directly create an EnhancedExplosion — reliable in water.
                 // 1.0x to 3.0x random power multiplier — each TNT varies in strength.
                 float powerMult = 1.0F + this.level().getRandom().nextFloat() * 2.0F;
@@ -130,7 +128,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
                     this.level(), this,
                     this.getX(), this.getY() + (double) (this.getBbHeight() / 16.0F), this.getZ(),
                     blockPower, entityPower, false, true, particlePower);
-                explosion.explode();
+                explosion.detonate();
                 explosion.finalizeExplosion(true);
 
                 // --- Simultaneous chain detonation ---
@@ -141,7 +139,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
                 chainVisited.clear();
             }
             this.discard();
-        } else if (this.level().isClientSide) {
+        } else if (this.level().isClientSide()) {
             this.level().addParticle(net.minecraft.core.particles.ParticleTypes.SMOKE,
                 this.getX(), this.getY() + 0.5D, this.getZ(), 0.0D, 0.0D, 0.0D);
         }
@@ -154,28 +152,31 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
      */
     private void unlit() {
         this.discard();
-        if (!this.level().isClientSide) {
+        if (!this.level().isClientSide()) {
             BlockPos pos = this.blockPosition();
             if (this.level().getBlockState(pos).canBeReplaced()) {
                 this.level().setBlock(pos, Blocks.TNT.defaultBlockState(), 3);
             } else {
-                this.spawnAtLocation(new ItemStack(Blocks.TNT));
+                // 1.21.11: spawnAtLocation takes the ServerLevel explicitly.
+                this.spawnAtLocation((net.minecraft.server.level.ServerLevel) this.level(),
+                    new ItemStack(Blocks.TNT));
             }
             this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
                 SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.8F, 1.2F);
         }
     }
 
+    // 1.21.11: entity NBT goes through the ValueOutput/ValueInput abstraction.
     @Override
-    protected void addAdditionalSaveData(CompoundTag tag) {
+    protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput tag) {
         super.addAdditionalSaveData(tag);
         tag.putInt("TicksSinceLit", this.ticksSinceLit);
     }
 
     @Override
-    protected void readAdditionalSaveData(CompoundTag tag) {
+    protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput tag) {
         super.readAdditionalSaveData(tag);
-        this.ticksSinceLit = tag.getInt("TicksSinceLit");
+        this.ticksSinceLit = tag.getIntOr("TicksSinceLit", 0);
     }
 
     /**
@@ -291,7 +292,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         EnhancedExplosion chainExplosion = new EnhancedExplosion(
             level, cause, cx, cy, cz,
             chainBlockPower, chainEntityPower, false, true, chainParticlePower);
-        chainExplosion.explode();
+        chainExplosion.detonate();
         chainExplosion.finalizeExplosion(true);
 
         // Recursively process any TNTs caught in this chain explosion,
@@ -304,8 +305,9 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
      * Any entry whose fire time has passed is detonated now and removed.
      * Registered on the Forge event bus in {@link BetterTNTs}.
      */
-    @SubscribeEvent
-    public static void onServerTick(ServerTickEvent.Post event) {
+    /** Processes scheduled (one-by-one) chain detonations on the server
+     *  tick. Called from the Fabric server-tick callback. */
+    public static void tickScheduled() {
         if (scheduledDetonations.isEmpty()) return;
 
         // Snapshot the due entries while holding the lock briefly, then

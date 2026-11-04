@@ -85,11 +85,13 @@ public class BlastWaveEffectParticle extends NoRenderParticle {
             }
             double volumeDist = (double) this.volume * 16.0D;
             if (dist < volumeDist) {
+                // 1.21.11: the positional SimpleSoundInstance takes a BlockPos
+                // instead of raw coordinates.
                 Minecraft.getInstance().getSoundManager().play(new SimpleSoundInstance(
-                    BetterTNTs.EXPLOSION_BOOM.get(), SoundSource.BLOCKS,
+                    BetterTNTs.EXPLOSION_BOOM, SoundSource.BLOCKS,
                     this.volume, this.pitch,
-                    RandomSource.create(this.level.random.nextLong()),
-                    this.x, this.y, this.z));
+                    RandomSource.create(this.level.getRandom().nextLong()),
+                    net.minecraft.core.BlockPos.containing(this.x, this.y, this.z)));
             }
             this.remove();
             return;
@@ -109,7 +111,8 @@ public class BlastWaveEffectParticle extends NoRenderParticle {
     public static class Provider implements ParticleProvider<BlastWaveOption> {
         @Override
         public Particle createParticle(BlastWaveOption data, ClientLevel level, double x, double y,
-                                       double z, double xSpeed, double ySpeed, double zSpeed) {
+                                       double z, double xSpeed, double ySpeed, double zSpeed,
+                                       RandomSource random) {
             return new BlastWaveEffectParticle(level, x, y, z, data.power());
         }
     }

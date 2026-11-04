@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
@@ -20,6 +20,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerExplosion;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -27,7 +29,6 @@ import net.minecraft.world.level.block.TntBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.network.PacketDistributor;
 
 /**
  * Enhanced explosion with separate block destruction and entity damage radii.
@@ -36,10 +37,15 @@ import net.neoforged.neoforge.network.PacketDistributor;
  * damage reach are separate radii ({@code blockRadius} vs {@code entityRadius}),
  * exactly like a high-explosive blast. On completion it sends a
  * packet to clients so they render the big plume + blast wave particles.</p>
+ *
+ * <p>1.21.11: vanilla split explosions into the {@code Explosion} interface
+ * plus the {@code ServerExplosion} implementation. We extend the latter purely
+ * so this class satisfies the vanilla API surface (damage sources, block
+ * callbacks, knockback collection); the blast logic below is entirely ours.</p>
  */
-public class EnhancedExplosion extends Explosion {
+public class EnhancedExplosion extends ServerExplosion {
 
-    private final Level level;
+    private final ServerLevel level;
     private final double x;
     private final double y;
     private final double z;
@@ -84,12 +90,11 @@ public class EnhancedExplosion extends Explosion {
     public EnhancedExplosion(Level level, @Nullable Entity entity, double x, double y, double z,
                              float blockRadius, float entityRadius, boolean causesFire, boolean damagesTerrain,
                              float particlePower) {
-        super(level, entity, null, null, x, y, z, blockRadius, causesFire,
-            damagesTerrain ? Explosion.BlockInteraction.DESTROY_WITH_DECAY : Explosion.BlockInteraction.KEEP,
-            net.minecraft.core.particles.ParticleTypes.EXPLOSION,
-            net.minecraft.core.particles.ParticleTypes.EXPLOSION_EMITTER,
-            net.minecraft.sounds.SoundEvents.GENERIC_EXPLODE);
-        this.level = level;
+        // 1.21.11 ServerExplosion ctor: no particle/sound args anymore (the
+        // server picks those itself); the center is a Vec3.
+        super((ServerLevel) level, entity, null, null, new Vec3(x, y, z), blockRadius, causesFire,
+            damagesTerrain ? Explosion.BlockInteraction.DESTROY_WITH_DECAY : Explosion.BlockInteraction.KEEP);
+        this.level = (ServerLevel) level;
         this.exploder = entity;
         this.x = x;
         this.y = y;
@@ -105,9 +110,13 @@ public class EnhancedExplosion extends Explosion {
     /**
      * Part 1: compute destroyed blocks and deal entity damage/knockback.
      * Block reach uses {@link #blockRadius}, entity reach uses {@link #entityRadius}.
+     *
+     * <p>Named {@code detonate} rather than {@code explode} because the parent
+     * {@code ServerExplosion} already has an {@code explode()} with a different
+     * signature (returns the destroyed-block count); the vanilla one is never
+     * called — our two-phase pipeline replaces it.</p>
      */
-    @Override
-    public void explode() {
+    public void detonate() {
         Set<BlockPos> set = Sets.newHashSet();
 
         // Block destruction sampling (same ray-cast approach as vanilla,
@@ -240,7 +249,6 @@ public class EnhancedExplosion extends Explosion {
         int j1 = Mth.floor(this.z + (double) f3 + 1.0D);
         List<Entity> list = this.level.getEntities(this.exploder,
             new AABB(k1, i2, j2, l1, i1, j1));
-        net.neoforged.neoforge.event.EventHooks.onExplosionDetonate(this.level, this, list, (double) f3);
         Vec3 vec3 = new Vec3(this.x, this.y, this.z);
 
         for (int k2 = 0; k2 < list.size(); ++k2) {
@@ -264,7 +272,7 @@ public class EnhancedExplosion extends Explosion {
                             tdx = tdx / tdist;
                             tdy = tdy / tdist;
                             tdz = tdz / tdist;
-                            double tdensity = (double) Explosion.getSeenPercent(vec3, entity);
+                            double tdensity = (double) ServerExplosion.getSeenPercent(vec3, entity);
                             double tpush = (1.0D - d12) * tdensity * ModConfig.entityKnockbackScale;
                             entity.setDeltaMovement(entity.getDeltaMovement().add(
                                 tdx * tpush * 2.0D,
@@ -288,7 +296,7 @@ public class EnhancedExplosion extends Explosion {
                             d5 = d5 / d13;
                             d7 = d7 / d13;
                             d9 = d9 / d13;
-                            double d14 = (double) Explosion.getSeenPercent(vec3, entity);
+                            double d14 = (double) ServerExplosion.getSeenPercent(vec3, entity);
                             double d10 = (1.0D - d12) * d14 * ModConfig.entityKnockbackScale;
                             // Accumulate velocity — additive so energy builds up
                             // across multiple explosions. Reduced multiplier so
@@ -309,7 +317,7 @@ public class EnhancedExplosion extends Explosion {
                     double d13 = (double) Mth.sqrt((float) (d5 * d5 + d7 * d7 + d9 * d9));
 
                     if (d13 != 0.0D) {
-                        double d14 = (double) Explosion.getSeenPercent(vec3, entity);
+                        double d14 = (double) ServerExplosion.getSeenPercent(vec3, entity);
                         double d10 = (1.0D - d12) * d14;
                         // Entity damage formula: (d^2 + d)/2 * 7 * radius + 1
                         if (ModConfig.chainDamageStacking && entity instanceof LivingEntity living
@@ -388,7 +396,6 @@ public class EnhancedExplosion extends Explosion {
      * detonation; fluids are scattered as fluid entities / evaporated when
      * {@code scatterFluids} is enabled.
      */
-    @Override
     public void finalizeExplosion(boolean spawnParticles) {
         // The explosion sound is NOT played here. The
         // delayed blast wave particle plays the boom when the wave reaches each
@@ -571,11 +578,8 @@ public class EnhancedExplosion extends Explosion {
 
         // Only players within distSqr < 263000 (~512 blocks) receive the
         // explosion packet, and each packet carries that player's own
-        // knockback vector.
-        for (Player player : this.level.players()) {
-            if (!(player instanceof ServerPlayer)) {
-                continue;
-            }
+        // knockback vector. ServerLevel.players() is already ServerPlayer-typed.
+        for (ServerPlayer player : this.level.players()) {
             double distSqr = player.distanceToSqr(this.x, this.y, this.z);
             if (distSqr >= 263000.0D) {
                 continue;
@@ -585,7 +589,7 @@ public class EnhancedExplosion extends Explosion {
                 this.particlePower, isPlume,
                 (float) knockback.x, (float) knockback.y, (float) knockback.z,
                 this.plumeAxisX, this.plumeAxisY, this.plumeAxisZ);
-            PacketDistributor.sendToPlayer((ServerPlayer) player, msg);
+            ModNetwork.sendExplosion(player, msg);
         }
     }
 
@@ -594,7 +598,7 @@ public class EnhancedExplosion extends Explosion {
         return this.playerKnockbackMap;
     }
 
-    @Override
+    /** The destroyed block positions (vanilla's old getToBlow equivalent). */
     public List<BlockPos> getToBlow() {
         return this.affectedBlockPositions;
     }

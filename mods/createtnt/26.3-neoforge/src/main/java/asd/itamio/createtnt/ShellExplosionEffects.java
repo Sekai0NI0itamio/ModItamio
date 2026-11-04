@@ -42,10 +42,11 @@ public final class ShellExplosionEffects {
         // configured visual scale.
         power *= ModConfig.explosionVisualScale;
 
-        level.addParticle(new BlastWaveOption(power), true, x, y, z, 0.0D, 0.0D, 0.0D);
+        // 1.21.11: addParticle(options, overrideLimiter, alwaysShow, ...).
+        level.addParticle(new BlastWaveOption(power), true, true, x, y, z, 0.0D, 0.0D, 0.0D);
 
         if (ModConfig.showShellExplosionClouds) {
-            level.addParticle(new ShellCloudOption(power, isPlume, axisX, axisY, axisZ), true,
+            level.addParticle(new ShellCloudOption(power, isPlume, axisX, axisY, axisZ), true, true,
                 x, y, z, 0.0D, 0.0D, 0.0D);
         }
     }

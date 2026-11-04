@@ -5,11 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.ParticleStatus;
+import net.minecraft.server.level.ParticleStatus;
 import net.minecraft.client.particle.NoRenderParticle;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.client.particle.SpriteSet;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.Vec3;
 
 /**
@@ -228,8 +229,11 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
                 // Base smoke lifetime: 7 seconds (140 ticks) — the large
                 // puffs disappear around the same time as the ray puffs.
                 int lifetime = 140;
+                // 1.21.11: addParticle gained an overrideLimiter flag before
+                // the alwaysShow flag; we want always-show without bypassing
+                // the particle limiter.
                 this.level.addParticle(new ShellSmokeOption(lifetime, primaryScale, false),
-                    true, rx, ry, rz, dx, dy, dz);
+                    true, true, rx, ry, rz, dx, dy, dz);
             }
         }
 
@@ -309,7 +313,8 @@ public class ShellExplosionCloudParticle extends NoRenderParticle {
 
         @Override
         public Particle createParticle(ShellCloudOption data, ClientLevel level, double x, double y,
-                                       double z, double xSpeed, double ySpeed, double zSpeed) {
+                                       double z, double xSpeed, double ySpeed, double zSpeed,
+                                       RandomSource random) {
             return new ShellExplosionCloudParticle(level, x, y, z, data.scale(), data.isPlume(),
                 data.axisX(), data.axisY(), data.axisZ(), this.sprites);
         }

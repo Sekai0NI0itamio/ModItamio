@@ -6,15 +6,13 @@ import java.util.Random;
 import java.util.Set;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.client.event.ViewportEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 /**
  * Camera shake: a spring–damper oscillator per rotational axis
  * (yaw/pitch/roll). A blast kicks the velocity with a randomized impulse; the
  * spring oscillates and settles. The camera offset is sampled per frame in
- * {@link ViewportEvent.ComputeCameraAngles} with partial-tick interpolation.
+ * The camera offset is sampled per frame by the Camera mixin with
+ * partial-tick interpolation.
  *
  * <ul>
  *   <li>restitution = {@code shakeSpringiness} (0.08)</li>
@@ -106,9 +104,9 @@ public class CameraShakeHandler {
         velocity = velocity.add(dy, dp, dr);
     }
 
-    /** Releases delayed shakes, then integrates the spring. */
-    @SubscribeEvent
-    public void onClientTick(ClientTickEvent.Post event) {
+    /** Releases delayed shakes, then integrates the spring. Called from
+     *  the Fabric client-tick callback (end of tick). */
+    public void onClientTick() {
         for (Iterator<ScreenShakeEffect> iter = delayedShakes.iterator(); iter.hasNext(); ) {
             ScreenShakeEffect effect = iter.next();
             if (effect.tick()) {
@@ -165,15 +163,11 @@ public class CameraShakeHandler {
         }
     }
 
-    /** Samples the spring with partial-tick interpolation. */
-    @SubscribeEvent
-    public void onCameraAngles(ViewportEvent.ComputeCameraAngles event) {
-        float partialTicks = Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true);
-        Vec3 currentDisp = displacement
+    /** Samples the spring with partial-tick interpolation (for the camera
+     *  mixin in the Fabric build). */
+    public static Vec3 getDisplacementFor(float partialTicks) {
+        return displacement
             .add(velocity.scale(partialTicks))
             .add(acceleration.scale(partialTicks * partialTicks * 0.5D));
-        event.setYaw(event.getYaw() + (float) currentDisp.x);
-        event.setPitch(event.getPitch() + (float) currentDisp.y);
-        event.setRoll(event.getRoll() + (float) currentDisp.z);
     }
 }

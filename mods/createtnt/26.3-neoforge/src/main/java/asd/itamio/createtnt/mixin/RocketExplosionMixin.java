@@ -9,20 +9,18 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/** Redirects crossbow/dispenser fireworks into the enhanced shell blast. */
+/** Redirects enabled crossbow/dispenser fireworks into enhanced blasts. */
 @Mixin(FireworkRocketEntity.class)
 public class RocketExplosionMixin {
 
     @Inject(method = "explode", at = @At("HEAD"), cancellable = true)
-    private void createtnt$redirectBlast(CallbackInfo ci) {
+    private void createtnt$redirectBlast(ServerLevel level, CallbackInfo ci) {
         FireworkRocketEntity self = (FireworkRocketEntity) (Object) this;
-        if (self.level().isClientSide || !self.isShotAtAngle() || !ModConfig.rocketShellExplosions) {
-            return;
-        }
+        if (level.isClientSide() || !self.isShotAtAngle() || !ModConfig.rocketShellExplosions) return;
         if (!RocketTracker.isTracked(self.getUUID())) {
             return;
         }
-        RocketTracker.detonateShell((ServerLevel) self.level(), self);
+        RocketTracker.detonateShell(level, self);
         ci.cancel();
     }
 }

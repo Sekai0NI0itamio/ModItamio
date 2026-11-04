@@ -22,11 +22,9 @@ import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.network.PacketDistributor;
 
-/** Tracks crossbow/dispenser firework rockets until their vanilla discard. */
+/** Tracks crossbow/dispenser firework rockets for acceleration, smoke and shell blasts. */
 public final class RocketTracker {
-
     private static final double ACCEL = 0.025D;
     private static final double MAX_SPEED = 3.0D;
     private static final int MAX_TRACK_AGE = 1200;
@@ -38,37 +36,34 @@ public final class RocketTracker {
     // requested lifetime: 240 ticks resolve to ~72 ticks (3.6 s) on screen.
     private static final int TRAIL_LIFETIME = 240;
     private static final float TRAIL_SCALE = 1.5F;
+    private static final Map<UUID, Tracked> TRACKED = new LinkedHashMap<>();
 
     private static final class Tracked {
-        final ServerLevel level;
-        final Entity rocket;
-        final int stars;
-        double x, y, z;
-        double mx, my, mz;
-        int age;
-        int drilled;
-
-        Tracked(ServerLevel level, Entity rocket) {
-            this.level = level;
-            this.rocket = rocket;
-            this.stars = starsFrom(((FireworkRocketEntity) rocket).getItem());
+        final ServerLevel level; final Entity rocket; final int stars;
+        double x, y, z, mx, my, mz; int age; int drilled;
+        Tracked(ServerLevel level, FireworkRocketEntity rocket) {
+            this.level = level; this.rocket = rocket;
+            this.stars = starsFrom(rocket.getItem());
             snapshot();
         }
-
         void snapshot() {
-            x = rocket.getX();
-            y = rocket.getY();
-            z = rocket.getZ();
-            Vec3 motion = rocket.getDeltaMovement();
-            mx = motion.x;
-            my = motion.y;
-            mz = motion.z;
+            x = rocket.getX(); y = rocket.getY(); z = rocket.getZ();
+            Vec3 motion = rocket.getDeltaMovement(); mx = motion.x; my = motion.y; mz = motion.z;
         }
     }
 
-    private static final Map<UUID, Tracked> TRACKED = new LinkedHashMap<>();
+    private RocketTracker() { }
 
-    private RocketTracker() {
+    /** Number of stars (explosions) in the firework stack. */
+    public static int starsFrom(ItemStack stack) {
+        Fireworks fw = stack.get(DataComponents.FIREWORKS);
+        return fw != null ? fw.explosions().size() : 0;
+    }
+
+    /** Gunpowder count of the firework, clamped to vanilla's 0..7 range. */
+    public static int flightFrom(ItemStack stack) {
+        Fireworks fw = stack.get(DataComponents.FIREWORKS);
+        return fw != null ? Math.max(0, Math.min(7, fw.flightDuration())) : 0;
     }
 
     public static void track(ServerLevel level, FireworkRocketEntity rocket) {
@@ -107,56 +102,29 @@ public final class RocketTracker {
         return ModConfig.rocketShellExplosionsFromOtherMods;
     }
 
-
-
     public static boolean isTracked(UUID id) {
         return TRACKED.containsKey(id);
     }
 
-    public static void untrack(UUID id) {
-        TRACKED.remove(id);
-    }
-
-    /** Number of explosion stars in the firework's item stack. */
-    public static int starsFrom(ItemStack stack) {
-        Fireworks fw = stack.get(DataComponents.FIREWORKS);
-        return fw != null ? fw.explosions().size() : 0;
-    }
-
-    /** Gunpowder count (flight duration) of the firework, clamped to 0..7. */
-    public static int flightFrom(ItemStack stack) {
-        Fireworks fw = stack.get(DataComponents.FIREWORKS);
-        int v = fw != null ? fw.flightDuration() : 0;
-        return Math.max(0, Math.min(7, v));
-    }
+    public static void untrack(UUID id) { TRACKED.remove(id); }
 
     public static void tickAll() {
-        if (TRACKED.isEmpty()) {
-            return;
-        }
+        if (TRACKED.isEmpty()) return;
         boolean enabled = ModConfig.rocketShellExplosions;
         Iterator<Map.Entry<UUID, Tracked>> it = TRACKED.entrySet().iterator();
         while (it.hasNext()) {
             Tracked tr = it.next().getValue();
-            Entity rocket = tr.rocket;
-            if (rocket.isRemoved()) {
+            if (tr.rocket.isRemoved()) {
                 it.remove();
-                if (enabled) {
-                    detonateShell(tr.level, (FireworkRocketEntity) rocket);
-                }
+                if (enabled) detonateShell(tr.level, (FireworkRocketEntity) tr.rocket);
                 continue;
             }
-            if (tr.age > MAX_TRACK_AGE) {
-                it.remove();
-                continue;
-            }
-            tr.snapshot();
-            tr.age++;
-            if (!enabled) {
-                continue;
-            }
+            if (tr.age > MAX_TRACK_AGE) { it.remove(); continue; }
+            tr.snapshot(); tr.age++;
+            if (!enabled) continue;
+            // Drill: shells break through up to MAX_DRILL blocks, detonating on the third.
             if (tr.stars > 0 && tr.drilled < MAX_DRILL) {
-                Vec3 motion = rocket.getDeltaMovement();
+                Vec3 motion = tr.rocket.getDeltaMovement();
                 double speed = motion.length();
                 if (speed > 1.0E-4D) {
                     double reach = Math.min(speed, MAX_SPEED) + 0.5D;
@@ -168,21 +136,20 @@ public final class RocketTracker {
                         BlockState state = tr.level.getBlockState(pos);
                         if (state.isAir() || state.getCollisionShape(tr.level, pos).isEmpty()) continue;
                         if (state.getDestroySpeed(tr.level, pos) < 0.0F) break;   // unbreakable wall
-                        tr.level.destroyBlock(pos, false, tr.rocket, Block.UPDATE_LIMIT);             // no drops, with break effects
+                        tr.level.destroyBlock(pos, false, tr.rocket, Block.UPDATE_LIMIT); // no drops, with break effects
                         tr.drilled++;
                     }
                     if (tr.drilled >= MAX_DRILL) {
-                        detonateShell(tr.level, (FireworkRocketEntity) rocket);
+                        detonateShell(tr.level, (FireworkRocketEntity) tr.rocket);
                         it.remove();
                         continue;
                     }
                 }
             }
-            Vec3 motion = rocket.getDeltaMovement();
-            double speed = motion.length();
+            Vec3 motion = tr.rocket.getDeltaMovement(); double speed = motion.length();
             if (speed > 1.0E-4D && speed < MAX_SPEED) {
                 Vec3 dir = motion.normalize();
-                rocket.setDeltaMovement(motion.add(dir.scale(Math.min(ACCEL, MAX_SPEED - speed))));
+                tr.rocket.setDeltaMovement(motion.add(dir.scale(Math.min(ACCEL, MAX_SPEED - speed))));
             }
             sendTrail(tr.level, tr.x, tr.y, tr.z);
         }
@@ -199,50 +166,36 @@ public final class RocketTracker {
     private static void sendTrail(ServerLevel level, double x, double y, double z) {
         ShellSmokeOption trail = new ShellSmokeOption(TRAIL_LIFETIME, TRAIL_SCALE, true);
         for (ServerPlayer player : level.players()) {
-            level.sendParticles(player, trail, true, x, y, z, 2, 0.1D, 0.1D, 0.1D, 0.0D);
+            level.sendParticles(player, trail, true, true, x, y, z, 2, 0.1D, 0.1D, 0.1D, 0.0D);
         }
     }
 
-    /**
-     * Detonates a shell rocket at its position: no stars → directional visual
-     * only; stars → enhanced blast with star-scaled block destruction and
-     * TNT-level entity damage ({@link ModConfig#rocketExplosionDamageScale}),
-     * then chain-detonates nearby primed TNT. Does not touch the tracker map —
-     * callers untrack.
-     */
+    /** Detonates a shell rocket: a directional flash for starless flares, a
+     *  full blast otherwise — block destruction scaled by star count, entity
+     *  damage matching a TNT blast times
+     *  {@link ModConfig#rocketExplosionDamageScale}. Does not touch the
+     *  tracker map. */
     public static void detonateShell(ServerLevel level, FireworkRocketEntity rocket) {
         untrack(rocket.getUUID());
         Vec3 origin = clearBlastOrigin(level, rocket.getX(), rocket.getY(), rocket.getZ(),
             rocket.getDeltaMovement());
-        double x = origin.x;
-        double y = origin.y;
-        double z = origin.z;
-        Vec3 motion = rocket.getDeltaMovement();
-        double len = motion.length();
-        float axisX = 0.0F;
-        float axisY = 1.0F;
-        float axisZ = 0.0F;
+        double x = origin.x, y = origin.y, z = origin.z;
+        Vec3 motion = rocket.getDeltaMovement(); double len = motion.length();
+        float axisX = 0.0F, axisY = 1.0F, axisZ = 0.0F;
         if (len >= 1.0E-4D) {
-            axisX = (float) (-motion.x / len);
-            axisY = (float) (-motion.y / len);
-            axisZ = (float) (-motion.z / len);
+            axisX = (float) (-motion.x / len); axisY = (float) (-motion.y / len); axisZ = (float) (-motion.z / len);
         }
-
         int stars = starsFrom(rocket.getItem());
         float directionalPower = 3.0F * (ModConfig.tntStrength / 4.0F);
         if (stars <= 0) {
             for (ServerPlayer player : level.players()) {
-                if (player.distanceToSqr(x, y, z) >= RANGE_SQR) {
-                    continue;
-                }
-                PacketDistributor.sendToPlayer(player, new SpawnExplosionMessage(x, y, z,
-                    directionalPower * 0.4F, true, 0.0F, 0.0F, 0.0F,
-                    axisX, axisY, axisZ));
+                if (player.distanceToSqr(x, y, z) >= RANGE_SQR) continue;
+                ModNetwork.sendExplosion(player, new SpawnExplosionMessage(x, y, z,
+                    directionalPower * 0.4F, true, 0.0F, 0.0F, 0.0F, axisX, axisY, axisZ));
             }
             rocket.discard();
             return;
         }
-
         int clampedStars = Math.min(7, stars);
         float starScale = 1.0F + (clampedStars - 1) * 0.5F;   // 1 star = 1x ... 7 stars = 4x
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
@@ -254,14 +207,14 @@ public final class RocketTracker {
         EnhancedExplosion boom = new EnhancedExplosion(level, rocket, x, y, z,
             blockPower, entityPower, false, true, particlePower);
         boom.setPlumeAxis(axisX, axisY, axisZ);
-        boom.explode();
+        boom.detonate();
         boom.finalizeExplosion(true);
-
         float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
+        List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
+            new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
+                x + chainRadius, y + chainRadius, z + chainRadius));
         if (ModConfig.rocketShellBlockDamage) {
-            ChainDetonation.detonate(level.getEntitiesOfClass(PrimedTnt.class,
-                new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
-                    x + chainRadius, y + chainRadius, z + chainRadius)), x, y, z);
+            ChainDetonation.detonate(chained, x, y, z);
         }
         rocket.discard();
     }
