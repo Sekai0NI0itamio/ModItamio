@@ -11,6 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.bus.api.SubscribeEvent;
 
 /**
  * Post-explosion structural support check.
@@ -141,6 +142,11 @@ public class BlockCollapseHandler {
             checkAndCollapse(task);
             processed++;
         }
+    }
+
+    @SubscribeEvent
+    public void onServerTickEvent(net.neoforged.neoforge.event.tick.ServerTickEvent.Post event) {
+        onServerTick();
     }
 
     private void checkAndCollapse(CollapseTask task) {
