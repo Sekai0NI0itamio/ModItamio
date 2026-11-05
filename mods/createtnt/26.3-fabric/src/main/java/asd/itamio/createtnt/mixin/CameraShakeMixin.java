@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Camera.class)
 public class CameraShakeMixin {
 
-    @Inject(method = "extractRenderState(Lnet/minecraft/client/renderer/state/level/CameraRenderState;F)V", at = @At("TAIL"))
+    @Inject(method = "extractRenderState", at = @At("TAIL"))
     private void createtnt$shakeCamera(CameraRenderState cameraState, float cameraEntityPartialTicks, CallbackInfo ci) {
         Vec3 disp = CameraShakeHandler.getDisplacementFor(cameraEntityPartialTicks);
         if (disp.lengthSqr() < 1.0E-6D) {
