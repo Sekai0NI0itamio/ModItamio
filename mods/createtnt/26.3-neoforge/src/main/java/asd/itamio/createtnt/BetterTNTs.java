@@ -85,7 +85,6 @@ public class BetterTNTs {
 
         NeoForge.EVENT_BUS.register(new ExplosionEventHandler());
         NeoForge.EVENT_BUS.register(new BlockCollapseHandler());
-        NeoForge.EVENT_BUS.register(EntityEnhancedTNTPrimed.class);
 
         ModInfoPrinter.print(LOGGER::info, MOD_NAME, VERSION);
         LOGGER.info(CREDITS);

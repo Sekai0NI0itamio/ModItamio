@@ -147,6 +147,7 @@ public class BlockCollapseHandler {
     @SubscribeEvent
     public void onServerTickEvent(net.neoforged.neoforge.event.tick.ServerTickEvent.Post event) {
         onServerTick();
+        EntityEnhancedTNTPrimed.tickScheduled();
     }
 
     private void checkAndCollapse(CollapseTask task) {
