@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Set;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 
 /**
@@ -175,5 +176,15 @@ public class CameraShakeHandler {
         return displacement
             .add(velocity.scale(partialTicks))
             .add(acceleration.scale(partialTicks * partialTicks * 0.5D));
+    }
+
+    @SubscribeEvent
+    public void onComputeCameraAngles(ViewportEvent.ComputeCameraAngles event) {
+        float partialTicks = event.getPartialTick();
+        Vec3 disp = getDisplacementFor(partialTicks);
+        if (disp == null || disp.lengthSqr() < 1.0E-6D) return;
+        event.setYaw(event.getYaw() + (float) disp.x);
+        event.setPitch(event.getPitch() + (float) disp.y);
+        event.setRoll(event.getRoll() + (float) disp.z);
     }
 }

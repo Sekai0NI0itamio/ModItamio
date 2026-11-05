@@ -8,7 +8,6 @@
     "RocketLifetimeMixin"
   ],
   "client": [
-    "CameraShakeMixin",
     "RocketTrailMixin",
     "ClientExplosionVisualMixin"
   ],
