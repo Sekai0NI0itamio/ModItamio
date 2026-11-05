@@ -6,19 +6,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
-import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.Fireworks;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
@@ -67,45 +63,8 @@ public final class RocketTracker {
     }
 
     public static void track(ServerLevel level, FireworkRocketEntity rocket) {
-        if (!ModConfig.rocketShellExplosions || !isAllowedSource(level, rocket)) {
-            return;
-        }
-        if (TRACKED.size() >= MAX_TRACKED) {
-            return;
-        }
-        TRACKED.putIfAbsent(rocket.getUUID(), new Tracked(level, rocket));
+        if (TRACKED.size() < MAX_TRACKED) TRACKED.putIfAbsent(rocket.getUUID(), new Tracked(level, rocket));
     }
-
-    /** Whether a rocket came from a crossbow, a dispenser, or (opt-in) another mod. */
-    private static boolean isAllowedSource(ServerLevel level, FireworkRocketEntity rocket) {
-        Entity owner = rocket.getOwner();
-        if (owner == null) {
-            if (!ModConfig.rocketShellExplosionsFromDispensers) {
-                return false;
-            }
-            // Ownerless rockets are usually dispensers, but mod spells can
-            // spawn ownerless rockets too. Only treat it as a dispenser shot
-            // when a dispenser block is adjacent to the spawn position.
-            BlockPos pos = rocket.blockPosition();
-            for (Direction dir : Direction.values()) {
-                if (level.getBlockState(pos.relative(dir)).getBlock() instanceof DispenserBlock) {
-                    return true;
-                }
-            }
-            return ModConfig.rocketShellExplosionsFromOtherMods;
-        }
-        if (owner instanceof LivingEntity living) {
-            boolean crossbow = living.getMainHandItem().getItem() instanceof CrossbowItem
-                || living.getOffhandItem().getItem() instanceof CrossbowItem;
-            return crossbow || ModConfig.rocketShellExplosionsFromOtherMods;
-        }
-        return ModConfig.rocketShellExplosionsFromOtherMods;
-    }
-
-    public static boolean isTracked(UUID id) {
-        return TRACKED.containsKey(id);
-    }
-
     public static void untrack(UUID id) { TRACKED.remove(id); }
 
     public static void tickAll() {
@@ -117,7 +76,6 @@ public final class RocketTracker {
             if (tr.rocket.isRemoved()) {
                 it.remove();
                 if (enabled) detonateShell(tr.level, (FireworkRocketEntity) tr.rocket);
-                continue;
             }
             if (tr.age > MAX_TRACK_AGE) { it.remove(); continue; }
             tr.snapshot(); tr.age++;
@@ -175,10 +133,7 @@ public final class RocketTracker {
      *  visual packet otherwise. Does not touch the tracker map — callers
      *  handle untracking. */
     public static void detonateShell(ServerLevel level, FireworkRocketEntity rocket) {
-        untrack(rocket.getUUID());
-        Vec3 origin = clearBlastOrigin(level, rocket.getX(), rocket.getY(), rocket.getZ(),
-            rocket.getDeltaMovement());
-        double x = origin.x, y = origin.y, z = origin.z;
+        double x = rocket.getX(), y = rocket.getY(), z = rocket.getZ();
         Vec3 motion = rocket.getDeltaMovement(); double len = motion.length();
         float axisX = 0.0F, axisY = 1.0F, axisZ = 0.0F;
         if (len >= 1.0E-4D) {
@@ -198,9 +153,7 @@ public final class RocketTracker {
         int clampedStars = Math.min(7, stars);
         float starScale = 1.0F + (clampedStars - 1) * 0.5F;   // 1 star = 1x ... 7 stars = 4x
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
-        float blockPower = ModConfig.rocketShellBlockDamage
-            ? ModConfig.blockPower * powerMult * starScale
-            : 0.0F;
+        float blockPower = ModConfig.blockPower * powerMult * starScale;
         float entityPower = ModConfig.entityPower * powerMult * ModConfig.rocketExplosionDamageScale;
         float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         EnhancedExplosion boom = new EnhancedExplosion(level, rocket, x, y, z,
@@ -212,47 +165,7 @@ public final class RocketTracker {
         List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
             new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
                 x + chainRadius, y + chainRadius, z + chainRadius));
-        if (ModConfig.rocketShellBlockDamage) {
-            ChainDetonation.detonate(chained, x, y, z);
-        }
+        for (PrimedTnt tnt : chained) tnt.setFuse(0);
         rocket.discard();
     }
-    /**
-     * Returns a blast origin that is not buried inside a solid block, so
-     * vanilla {@code Explosion.getSeenPercent} does not reduce impact damage
-     * to 1 when a rocket detonates against a wall.
-     */
-    private static Vec3 clearBlastOrigin(ServerLevel level, double x, double y, double z, Vec3 motion) {
-        if (isClear(level, x, y, z)) {
-            return new Vec3(x, y, z);
-        }
-        double search = ModConfig.rocketBlastOriginSearch;
-        if (search <= 0.0D) {
-            return new Vec3(x, y, z);
-        }
-        Vec3 back = motion.lengthSqr() > 1.0E-6D
-            ? motion.normalize().scale(-1.0D)
-            : new Vec3(0.0D, 1.0D, 0.0D);
-        for (double d = 0.25D; d <= search; d += 0.25D) {
-            double px = x + back.x * d;
-            double py = y + back.y * d;
-            double pz = z + back.z * d;
-            if (isClear(level, px, py, pz)) {
-                return new Vec3(px, py, pz);
-            }
-        }
-        for (double d = 0.5D; d <= search + 0.5D; d += 0.5D) {
-            if (isClear(level, x, y + d, z)) {
-                return new Vec3(x, y + d, z);
-            }
-        }
-        return new Vec3(x, y, z);
-    }
-
-    private static boolean isClear(ServerLevel level, double x, double y, double z) {
-        BlockPos pos = BlockPos.containing(x, y, z);
-        BlockState state = level.getBlockState(pos);
-        return state.isAir() || state.getCollisionShape(level, pos).isEmpty();
-    }
-
 }
