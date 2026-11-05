@@ -2,25 +2,27 @@ package asd.itamio.createtnt.mixin;
 
 import asd.itamio.createtnt.CameraShakeHandler;
 import net.minecraft.client.Camera;
-import net.minecraft.client.renderer.state.level.CameraRenderState;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Quaternionf;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/**
- * Applies the camera shake to the camera's render state at the end of
- * extractRenderState. Fabric has no viewport event, so we hook the camera.
- */
 @Mixin(Camera.class)
 public class CameraShakeMixin {
 
-    @Inject(method = "extractRenderState", at = @At("TAIL"))
-    private void createtnt$shakeCamera(CameraRenderState cameraState, float cameraEntityPartialTicks, CallbackInfo ci) {
-        Vec3 disp = CameraShakeHandler.getDisplacementFor(cameraEntityPartialTicks);
+    @Shadow
+    private int matrixPropertiesDirty;
+
+    @Inject(method = "update(Lnet/minecraft/client/DeltaTracker;)V", at = @At("TAIL"))
+    private void createtnt$shakeCamera(DeltaTracker deltaTracker, CallbackInfo ci) {
+        Camera self = (Camera) (Object) this;
+        float partialTicks = deltaTracker.getGameTimeDeltaPartialTick(true);
+        Vec3 disp = CameraShakeHandler.getDisplacementFor(partialTicks);
         if (disp.lengthSqr() < 1.0E-6D) {
             return;
         }
@@ -28,7 +30,9 @@ public class CameraShakeMixin {
             (float) (disp.x * Mth.DEG_TO_RAD),
             (float) (disp.y * Mth.DEG_TO_RAD),
             (float) (disp.z * Mth.DEG_TO_RAD));
-        cameraState.orientation.mul(shake);
-        cameraState.viewRotationMatrix.rotate(shake);
+        self.rotation().mul(shake);
+        // Force viewRotationMatrix to be recomputed from the shaken rotation
+        // during extractRenderState (DIRTY_VIEW_ROT = 1).
+        this.matrixPropertiesDirty |= 1;
     }
 }
