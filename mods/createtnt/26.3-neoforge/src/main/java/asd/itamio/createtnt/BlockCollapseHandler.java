@@ -148,6 +148,7 @@ public class BlockCollapseHandler {
     public void onServerTickEvent(net.neoforged.neoforge.event.tick.ServerTickEvent.Post event) {
         onServerTick();
         EntityEnhancedTNTPrimed.tickScheduled();
+        RocketTracker.tickAll();
     }
 
     private void checkAndCollapse(CollapseTask task) {
