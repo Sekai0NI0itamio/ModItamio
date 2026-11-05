@@ -27,7 +27,10 @@ public class CameraShakeMixin {
         Camera self = (Camera) (Object) this;
         float partialTicks = deltaTracker.getGameTimeDeltaPartialTick(true);
         Vec3 disp = CameraShakeHandler.getDisplacementFor(partialTicks);
-        if (disp.lengthSqr() < 1.0E-6D) {
+        if (disp == null || disp.lengthSqr() < 1.0E-6D) {
+            return;
+        }
+        if (self.rotation() == null) {
             return;
         }
         // Add the shake as a camera-space delta rotation on the live
