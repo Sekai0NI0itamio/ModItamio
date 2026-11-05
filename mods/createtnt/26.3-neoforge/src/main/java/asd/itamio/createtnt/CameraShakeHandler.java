@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Set;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.bus.api.SubscribeEvent;
 
 /**
  * Camera shake: a spring–damper oscillator per rotational axis
@@ -137,6 +138,11 @@ public class CameraShakeHandler {
             && acceleration.lengthSqr() < 1e-4D) {
             clearEffects();
         }
+    }
+
+    @SubscribeEvent
+    public void onClientTickEvent(net.neoforged.neoforge.client.event.ClientTickEvent.Post event) {
+        onClientTick();
     }
 
     /** Resets the spring to rest. */
