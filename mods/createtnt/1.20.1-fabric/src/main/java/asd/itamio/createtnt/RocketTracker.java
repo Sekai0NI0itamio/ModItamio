@@ -182,8 +182,11 @@ public final class RocketTracker {
         int clampedStars = Math.min(7, stars);
         float starScale = 1.0F + (clampedStars - 1) * 0.5F;   // 1 star = 1x ... 7 stars = 4x
         float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
-        float blockPower = ModConfig.blockPower * powerMult * starScale;
-        float entityPower = ModConfig.entityPower * powerMult * ModConfig.rocketExplosionDamageScale;
+        float blockPower = ModConfig.rocketShellBlockDamage
+            ? ModConfig.blockPower * powerMult * starScale * ModConfig.rocketBlockDamageScale
+            : 0.0F;
+        float entityPower = ModConfig.entityPower * powerMult * ModConfig.rocketExplosionDamageScale
+            * ModConfig.rocketEntityDamageScale;
         float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         EnhancedExplosion boom = new EnhancedExplosion(level, rocket, x, y, z,
             blockPower, entityPower, false, true, particlePower);

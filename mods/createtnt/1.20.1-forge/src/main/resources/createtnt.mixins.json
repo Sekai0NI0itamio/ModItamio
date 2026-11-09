@@ -9,7 +9,8 @@
     "RocketLifetimeMixin"
   ],
   "client": [
-    "RocketTrailMixin"
+    "RocketTrailMixin",
+    "ClientExplosionVisualMixin"
   ],
   "injectors": {
     "defaultRequire": 1

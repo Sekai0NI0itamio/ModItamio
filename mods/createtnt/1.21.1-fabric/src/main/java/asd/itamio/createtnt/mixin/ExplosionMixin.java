@@ -1,5 +1,6 @@
 package asd.itamio.createtnt.mixin;
 
+import asd.itamio.createtnt.ChainDetonation;
 import asd.itamio.createtnt.EnhancedExplosion;
 import asd.itamio.createtnt.ModConfig;
 import java.util.List;
@@ -40,6 +41,27 @@ public class ExplosionMixin {
 
         if (ModConfig.enhancedCreeperExplosions && entity instanceof Creeper) {
             float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
+            float blockPower = ModConfig.blockPower * powerMult * ModConfig.creeperBlockDamageScale;
+            float entityPower = ModConfig.entityPower * powerMult * ModConfig.creeperEntityDamageScale;
+            float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
+            EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, entity, x, y, z,
+                blockPower, entityPower, false, true, particlePower);
+            enhancedExplosion.explode();
+            enhancedExplosion.finalizeExplosion(true);
+            float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
+            List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
+                new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
+                    x + chainRadius, y + chainRadius, z + chainRadius));
+            ChainDetonation.detonate(chained, x, y, z);
+            cir.setReturnValue(enhancedExplosion);
+            cir.cancel();
+            return;
+        }
+
+        // Generic compatibility switch: route any block-breaking explosion
+        // (gun/missile mods, beds, crystals, ...) through the enhanced blast.
+        if (ModConfig.enhanceAllExplosions && interaction != Level.ExplosionInteraction.NONE) {
+            float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
             float blockPower = ModConfig.blockPower * powerMult;
             float entityPower = ModConfig.entityPower * powerMult;
             float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
@@ -51,7 +73,7 @@ public class ExplosionMixin {
             List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
                 new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
                     x + chainRadius, y + chainRadius, z + chainRadius));
-            for (PrimedTnt tnt : chained) tnt.setFuse(0);
+            ChainDetonation.detonate(chained, x, y, z);
             cir.setReturnValue(enhancedExplosion);
             cir.cancel();
             return;
@@ -75,14 +97,12 @@ public class ExplosionMixin {
         enhancedExplosion.explode();
         enhancedExplosion.finalizeExplosion(true);
 
-        // Chain reaction: instantly detonate every primed TNT caught in the blast.
+        // Chain reaction: instant or staggered according to the config.
         float chainRadius = Math.max(blockPower, entityPower) * 2.0F + 4.0F;
         List<PrimedTnt> chained = level.getEntitiesOfClass(PrimedTnt.class,
             new AABB(x - chainRadius, y - chainRadius, z - chainRadius,
                 x + chainRadius, y + chainRadius, z + chainRadius));
-        for (PrimedTnt tnt : chained) {
-            tnt.setFuse(0);
-        }
+        ChainDetonation.detonate(chained, x, y, z);
 
         // Return the already-run explosion so callers get a valid object;
         // vanilla packets/particles are fully replaced by our own packet.

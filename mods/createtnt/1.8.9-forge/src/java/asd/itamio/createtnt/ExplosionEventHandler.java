@@ -45,8 +45,8 @@ public class ExplosionEventHandler {
 
             EntityCreeper creeper = (EntityCreeper) explosivePlacedBy;
             float powerMult = 1.0F + world.rand.nextFloat() * 2.0F;
-            float blockPower = ModConfig.blockPower * powerMult;
-            float entityPower = ModConfig.entityPower * powerMult;
+            float blockPower = ModConfig.blockPower * powerMult * ModConfig.creeperBlockDamageScale;
+            float entityPower = ModConfig.entityPower * powerMult * ModConfig.creeperEntityDamageScale;
             float particlePower = ModConfig.tntStrength
                 * (1.0F + (powerMult - 1.0F) * 0.25F);
 

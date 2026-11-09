@@ -47,6 +47,20 @@ public class ModConfig {
     /** Global explosive power scale applied to block destruction and entity
      *  damage power. 1.0 = full strength, 0.4 = reduced by 60%. */
     public static float explosionPowerScale = 0.4F;
+    /** Block (terrain) damage scale for TNT blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies to EVERY TNT blast: primed TNT, chain reactions and TNT caught in another explosion.
+     *  The smoke plume, particles, shake and sound are unaffected (excluded from this). */
+    public static float tntBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for TNT blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies to EVERY TNT blast. Visuals are unaffected. */
+    public static float tntEntityDamageScale = 1.0F;
+    /** Block (terrain) damage scale for creeper blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. The smoke plume and shake are unaffected. */
+    public static float creeperBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for creeper blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. Visuals are unaffected. */
+    public static float creeperEntityDamageScale = 1.0F;
+
     /** Knockback/scatter impulse scale for entities (mobs, players, primed
      *  TNT, debris). 1.0 = full shove, 0.35 = minimal nudge. */
     public static float entityKnockbackScale = 0.35F;
@@ -237,6 +251,10 @@ public class ModConfig {
         spec("enhancedCreeperExplosions", () -> enhancedCreeperExplosions, v -> enhancedCreeperExplosions = v, true);
         spec("tntStrength", () -> tntStrength, v -> tntStrength = v, 12.0F, 1.0F, 64.0F);
         spec("explosionPowerScale", () -> explosionPowerScale, v -> explosionPowerScale = v, 0.4F, 0.05F, 4.0F);
+        spec("tntBlockDamageScale", () -> tntBlockDamageScale, v -> tntBlockDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("tntEntityDamageScale", () -> tntEntityDamageScale, v -> tntEntityDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("creeperBlockDamageScale", () -> creeperBlockDamageScale, v -> creeperBlockDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("creeperEntityDamageScale", () -> creeperEntityDamageScale, v -> creeperEntityDamageScale = v, 1.0F, 0.0F, 4.0F);
         spec("entityKnockbackScale", () -> entityKnockbackScale, v -> entityKnockbackScale = v, 0.35F, 0.0F, 4.0F);
         spec("simultaneousChainDetonation", () -> simultaneousChainDetonation, v -> simultaneousChainDetonation = v, true);
         spec("chainDetonationDelay", () -> chainDetonationDelay, v -> chainDetonationDelay = v, 2, 0, 200);
@@ -479,6 +497,10 @@ public class ModConfig {
         section(sb, "enhancedCreeperExplosions", "Replace creeper explosions with EnhancedExplosion physics");
         section(sb, "tntStrength", "TNT strength (block destruction radius). Entity damage auto-scales to 1.5x");
         section(sb, "explosionPowerScale", "Global explosive power scale (0.4 = 60% weaker). Applies to block destruction and entity damage");
+        section(sb, "tntBlockDamageScale", "Block (terrain) damage scale for TNT blasts (1.0 = full destruction, 0 = no block damage, 0.5 = half). Visuals unaffected: set this to 0 to keep the smoke plume with no block damage");
+        section(sb, "tntEntityDamageScale", "Entity (mob/player) damage scale for TNT blasts (1.0 = full damage, 0 = no entity damage)");
+        section(sb, "creeperBlockDamageScale", "Block (terrain) damage scale for creeper blasts (1.0 = full destruction, 0 = no block damage). Visuals unaffected");
+        section(sb, "creeperEntityDamageScale", "Entity (mob/player) damage scale for creeper blasts (1.0 = full damage, 0 = no entity damage)");
         section(sb, "entityKnockbackScale", "Knockback impulse on mobs/players/primed TNT/debris (0.35 = minimal nudge, 1.0 = full shove)");
         section(sb, "simultaneousChainDetonation", "TNTs explode all at once instantly (true) or one-by-one (false)");
         section(sb, "chainDetonationDelay", "Ticks between each TNT when detonating one-by-one (20 ticks = 1 second)");
@@ -623,6 +645,10 @@ public class ModConfig {
         CURRENT_VALUES.put("enhancedCreeperExplosions", String.valueOf(enhancedCreeperExplosions));
         CURRENT_VALUES.put("tntStrength", String.valueOf(tntStrength));
         CURRENT_VALUES.put("explosionPowerScale", String.valueOf(explosionPowerScale));
+        CURRENT_VALUES.put("tntBlockDamageScale", String.valueOf(tntBlockDamageScale));
+        CURRENT_VALUES.put("tntEntityDamageScale", String.valueOf(tntEntityDamageScale));
+        CURRENT_VALUES.put("creeperBlockDamageScale", String.valueOf(creeperBlockDamageScale));
+        CURRENT_VALUES.put("creeperEntityDamageScale", String.valueOf(creeperEntityDamageScale));
         CURRENT_VALUES.put("entityKnockbackScale", String.valueOf(entityKnockbackScale));
         CURRENT_VALUES.put("simultaneousChainDetonation", String.valueOf(simultaneousChainDetonation));
         CURRENT_VALUES.put("chainDetonationDelay", String.valueOf(chainDetonationDelay));

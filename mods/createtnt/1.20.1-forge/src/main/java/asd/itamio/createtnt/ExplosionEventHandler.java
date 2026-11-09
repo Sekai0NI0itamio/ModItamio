@@ -29,6 +29,13 @@ public class ExplosionEventHandler {
         if (!ModConfig.rocketShellExplosions) {
             return;
         }
+        // Only the vanilla firework hit is suppressed. The mod's own shell
+        // blast uses an EXPLOSION damage source whose direct entity is also
+        // the rocket, so cancelling every rocket-sourced hit would delete the
+        // shell's entity damage entirely.
+        if (!event.getSource().is(net.minecraft.world.damagesource.DamageTypes.FIREWORKS)) {
+            return;
+        }
         Entity direct = event.getSource().getDirectEntity();
         if (direct instanceof FireworkRocketEntity
                 && RocketTracker.isTracked(direct.getUUID())) {

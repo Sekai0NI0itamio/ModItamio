@@ -45,10 +45,32 @@ public class ModConfig {
     /** Global explosive power scale applied to block destruction and entity
      *  damage power. 1.0 = full strength, 0.4 = reduced by 60%. */
     public static float explosionPowerScale = 0.4F;
+    /** Block (terrain) damage scale for TNT blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies to EVERY TNT blast: primed TNT, chain reactions and TNT caught in another explosion.
+     *  The smoke plume, particles, shake and sound are unaffected (excluded from this). */
+    public static float tntBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for TNT blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies to EVERY TNT blast. Visuals are unaffected. */
+    public static float tntEntityDamageScale = 1.0F;
+    /** Block (terrain) damage scale for creeper blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. The smoke plume and shake are unaffected. */
+    public static float creeperBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for creeper blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. Visuals are unaffected. */
+    public static float creeperEntityDamageScale = 1.0F;
+    /** Block (terrain) damage scale for rocket (firework shell) blasts — applied IN ADDITION to
+     *  {@code rocketShellBlockDamage}. 1.0 = full destruction, 0 = no block damage, 0.5 = half.
+     *  The smoke plume and entity damage are unaffected. */
+    public static float rocketBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for rocket blasts — applied IN ADDITION to
+     *  {@code rocketExplosionDamageScale}. 1.0 = full damage, 0 = no entity damage.
+     *  The smoke plume and block destruction are unaffected. */
+    public static float rocketEntityDamageScale = 1.0F;
+
     /** Knockback/scatter impulse scale for entities (mobs, players, primed
      *  TNT, debris). 1.0 = full shove, 0.35 = minimal nudge. */
     public static float entityKnockbackScale = 0.35F;
-    public static boolean simultaneousChainDetonation = true;
+    public static boolean simultaneousChainDetonation = false;
     public static int chainDetonationDelay = 2;
     public static boolean screenShake = true;
     /** Whether the big smoke plume cloud spawns for explosions. */
@@ -61,6 +83,37 @@ public class ModConfig {
      *  damage (1.0 = exactly TNT damage). Block destruction still scales
      *  with the firework's explosion stars. */
     public static float rocketExplosionDamageScale = 1.0F;
+    /** Whether rocket shell blasts destroy terrain. false = visuals and
+     *  entity damage only, so firework spells cannot grief a world. */
+    public static boolean rocketShellBlockDamage = true;
+    /** Whether fireworks shot from a dispenser become shell rockets. */
+    public static boolean rocketShellExplosionsFromDispensers = true;
+    /** Whether fireworks spawned by other mods (not a crossbow or a
+     *  dispenser) become shell rockets. Off by default so spells and other
+     *  modded fireworks keep their vanilla behavior. */
+    public static boolean rocketShellExplosionsFromOtherMods = false;
+    /** How far (in blocks) to search backward/upward for a clear blast
+     *  origin when a rocket detonates inside a block. 0 disables the search. */
+    public static float rocketBlastOriginSearch = 2.5F;
+    /** Whether several blasts in the same tick stack their entity damage
+     *  instead of being eaten by the 10-tick hurt immunity. */
+    public static boolean chainDamageStacking = true;
+    /** Maximum primed TNTs detonated by one chain reaction (0 = unlimited). */
+    public static int maxChainDetonations = 48;
+    /** Whether destroyed solid blocks are launched as flying debris. */
+    public static boolean scatterSolidBlocks = false;
+    /** Fraction of destroyed solid blocks that become debris. */
+    public static float blockScatterChance = 0.35F;
+    /** Speed multiplier for scattered solid blocks. */
+    public static float blockScatterSpeed = 1.0F;
+    /** Client-side: replace vanilla explosion particles with the mod's
+     *  plume. Works on servers that do not have the mod installed. */
+    public static boolean replaceVanillaExplosionVisuals = false;
+    /** Visual power used for replaced vanilla explosions. */
+    public static float vanillaExplosionVisualPower = 12.0F;
+    /** Route every ServerLevel explosion (not only TNT/creeper) through the
+     *  enhanced blast. Generic compatibility switch for gun/missile mods. */
+    public static boolean enhanceAllExplosions = false;
     /** Whether the explosion cloud spawns trailing blast-ray smoke
      *  streaks. */
     public static boolean showExtraShellExplosionTrails = true;
@@ -242,14 +295,32 @@ public class ModConfig {
         spec("scatterFluids", () -> scatterFluids, v -> scatterFluids = v, false);
         spec("tntStrength", () -> tntStrength, v -> tntStrength = v, 12.0F, 1.0F, 64.0F);
         spec("explosionPowerScale", () -> explosionPowerScale, v -> explosionPowerScale = v, 0.4F, 0.05F, 4.0F);
+        spec("tntBlockDamageScale", () -> tntBlockDamageScale, v -> tntBlockDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("tntEntityDamageScale", () -> tntEntityDamageScale, v -> tntEntityDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("creeperBlockDamageScale", () -> creeperBlockDamageScale, v -> creeperBlockDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("creeperEntityDamageScale", () -> creeperEntityDamageScale, v -> creeperEntityDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("rocketBlockDamageScale", () -> rocketBlockDamageScale, v -> rocketBlockDamageScale = v, 1.0F, 0.0F, 4.0F);
+        spec("rocketEntityDamageScale", () -> rocketEntityDamageScale, v -> rocketEntityDamageScale = v, 1.0F, 0.0F, 4.0F);
         spec("entityKnockbackScale", () -> entityKnockbackScale, v -> entityKnockbackScale = v, 0.35F, 0.0F, 4.0F);
-        spec("simultaneousChainDetonation", () -> simultaneousChainDetonation, v -> simultaneousChainDetonation = v, true);
+        spec("simultaneousChainDetonation", () -> simultaneousChainDetonation, v -> simultaneousChainDetonation = v, false);
         spec("chainDetonationDelay", () -> chainDetonationDelay, v -> chainDetonationDelay = v, 2, 0, 200);
         spec("screenShake", () -> screenShake, v -> screenShake = v, true);
         spec("showShellExplosionClouds", () -> showShellExplosionClouds, v -> showShellExplosionClouds = v, true);
         spec("enhancedCreeperExplosions", () -> enhancedCreeperExplosions, v -> enhancedCreeperExplosions = v, true);
         spec("rocketShellExplosions", () -> rocketShellExplosions, v -> rocketShellExplosions = v, true);
         spec("rocketExplosionDamageScale", () -> rocketExplosionDamageScale, v -> rocketExplosionDamageScale = v, 1.0F, 0.0F, 10.0F);
+        spec("rocketShellBlockDamage", () -> rocketShellBlockDamage, v -> rocketShellBlockDamage = v, true);
+        spec("rocketShellExplosionsFromDispensers", () -> rocketShellExplosionsFromDispensers, v -> rocketShellExplosionsFromDispensers = v, true);
+        spec("rocketShellExplosionsFromOtherMods", () -> rocketShellExplosionsFromOtherMods, v -> rocketShellExplosionsFromOtherMods = v, false);
+        spec("rocketBlastOriginSearch", () -> rocketBlastOriginSearch, v -> rocketBlastOriginSearch = v, 2.5F, 0.0F, 8.0F);
+        spec("chainDamageStacking", () -> chainDamageStacking, v -> chainDamageStacking = v, true);
+        spec("maxChainDetonations", () -> maxChainDetonations, v -> maxChainDetonations = v, 48, 0, 512);
+        spec("scatterSolidBlocks", () -> scatterSolidBlocks, v -> scatterSolidBlocks = v, false);
+        spec("blockScatterChance", () -> blockScatterChance, v -> blockScatterChance = v, 0.35F, 0.0F, 1.0F);
+        spec("blockScatterSpeed", () -> blockScatterSpeed, v -> blockScatterSpeed = v, 1.0F, 0.0F, 5.0F);
+        spec("replaceVanillaExplosionVisuals", () -> replaceVanillaExplosionVisuals, v -> replaceVanillaExplosionVisuals = v, false);
+        spec("vanillaExplosionVisualPower", () -> vanillaExplosionVisualPower, v -> vanillaExplosionVisualPower = v, 12.0F, 1.0F, 64.0F);
+        spec("enhanceAllExplosions", () -> enhanceAllExplosions, v -> enhanceAllExplosions = v, false);
         spec("showExtraShellExplosionTrails", () -> showExtraShellExplosionTrails, v -> showExtraShellExplosionTrails = v, true);
         spec("baseSmokeAmount", () -> baseSmokeAmount, v -> baseSmokeAmount = v, 0.45F, 0.1F, 3.0F);
         spec("explosionVisualScale", () -> explosionVisualScale, v -> explosionVisualScale = v, 0.5F, 0.05F, 4.0F);
@@ -486,6 +557,12 @@ public class ModConfig {
         section(sb, "scatterFluids", "Whether water/lava SOURCE blocks can be scattered by explosions (flowing water is never scattered)");
         section(sb, "tntStrength", "TNT strength (block destruction radius). Entity damage auto-scales to 1.5x");
         section(sb, "explosionPowerScale", "Global explosive power scale (0.4 = 60% weaker). Applies to block destruction and entity damage");
+        section(sb, "tntBlockDamageScale", "Block (terrain) damage scale for TNT blasts (1.0 = full destruction, 0 = no block damage, 0.5 = half). Visuals unaffected: set this to 0 to keep the smoke plume with no block damage");
+        section(sb, "tntEntityDamageScale", "Entity (mob/player) damage scale for TNT blasts (1.0 = full damage, 0 = no entity damage)");
+        section(sb, "creeperBlockDamageScale", "Block (terrain) damage scale for creeper blasts (1.0 = full destruction, 0 = no block damage). Only when enhancedCreeperExplosions is on");
+        section(sb, "creeperEntityDamageScale", "Entity (mob/player) damage scale for creeper blasts (1.0 = full damage, 0 = no entity damage). Only when enhancedCreeperExplosions is on");
+        section(sb, "rocketBlockDamageScale", "Block (terrain) damage scale for rocket blasts — added on top of rocketShellBlockDamage (1.0 = full, 0 = none, 0.5 = half). Visuals unaffected");
+        section(sb, "rocketEntityDamageScale", "Entity (mob/player) damage scale for rocket blasts — added on top of rocketExplosionDamageScale (1.0 = full, 0 = none)");
         section(sb, "entityKnockbackScale", "Knockback impulse on mobs/players/primed TNT/debris (0.35 = minimal nudge, 1.0 = full shove)");
         section(sb, "simultaneousChainDetonation", "TNTs explode all at once instantly (true) or one-by-one (false)");
         section(sb, "chainDetonationDelay", "Ticks between each TNT when detonating one-by-one (20 ticks = 1 second)");
@@ -494,6 +571,18 @@ public class ModConfig {
         section(sb, "enhancedCreeperExplosions", "Whether creeper explosions use enhanced TNT blast behavior instead of vanilla behavior (default on)");
         section(sb, "rocketShellExplosions", "Whether crossbow/dispenser-shot fireworks use enhanced rocket blasts; hand-launched fireworks remain vanilla (default on)");
         section(sb, "rocketExplosionDamageScale", "Entity damage of rocket shells as a multiple of a TNT blast's damage (1.0 = exactly TNT damage; block destruction still scales with stars)");
+        section(sb, "rocketShellBlockDamage", "Whether rocket shells destroy terrain (false = visuals + entity damage only, no griefing)");
+        section(sb, "rocketShellExplosionsFromDispensers", "Whether dispenser-shot fireworks become shell rockets");
+        section(sb, "rocketShellExplosionsFromOtherMods", "Whether fireworks spawned by other mods (spells, etc.) become shell rockets (false = vanilla)");
+        section(sb, "rocketBlastOriginSearch", "How far (blocks) to search backward/upward for a clear blast origin when a rocket hits a block (0 = off)");
+        section(sb, "chainDamageStacking", "Whether blasts in the same tick stack damage instead of being eaten by hurt immunity");
+        section(sb, "maxChainDetonations", "Maximum primed TNTs detonated by one chain reaction (0 = unlimited)");
+        section(sb, "scatterSolidBlocks", "Launch destroyed solid blocks as flying debris (shrapnel)");
+        section(sb, "blockScatterChance", "Fraction of destroyed solid blocks that become debris");
+        section(sb, "blockScatterSpeed", "Speed multiplier for scattered solid blocks");
+        section(sb, "replaceVanillaExplosionVisuals", "Client-side: replace vanilla explosion particles with this mod's plume (works on servers without the mod)");
+        section(sb, "vanillaExplosionVisualPower", "Visual power used for replaced vanilla explosions");
+        section(sb, "enhanceAllExplosions", "Route every ServerLevel explosion (not only TNT/creeper) through the enhanced blast (generic gun/missile mod compat)");
         section(sb, "showExtraShellExplosionTrails", "Spawn trailing smoke streaks in the cloud");
         section(sb, "baseSmokeAmount", "Main plume (base smoke) puff count multiplier (0.45 = half; does not affect the blast rays)");
         section(sb, "explosionVisualScale", "Visual size of the entire explosion effect (smoke, rays, shake, sound). 1.0 = full size, 0.5 = half. Block destruction = tntStrength");
@@ -632,6 +721,12 @@ public class ModConfig {
         CURRENT_VALUES.put("scatterFluids", String.valueOf(scatterFluids));
         CURRENT_VALUES.put("tntStrength", String.valueOf(tntStrength));
         CURRENT_VALUES.put("explosionPowerScale", String.valueOf(explosionPowerScale));
+        CURRENT_VALUES.put("tntBlockDamageScale", String.valueOf(tntBlockDamageScale));
+        CURRENT_VALUES.put("tntEntityDamageScale", String.valueOf(tntEntityDamageScale));
+        CURRENT_VALUES.put("creeperBlockDamageScale", String.valueOf(creeperBlockDamageScale));
+        CURRENT_VALUES.put("creeperEntityDamageScale", String.valueOf(creeperEntityDamageScale));
+        CURRENT_VALUES.put("rocketBlockDamageScale", String.valueOf(rocketBlockDamageScale));
+        CURRENT_VALUES.put("rocketEntityDamageScale", String.valueOf(rocketEntityDamageScale));
         CURRENT_VALUES.put("entityKnockbackScale", String.valueOf(entityKnockbackScale));
         CURRENT_VALUES.put("simultaneousChainDetonation", String.valueOf(simultaneousChainDetonation));
         CURRENT_VALUES.put("chainDetonationDelay", String.valueOf(chainDetonationDelay));
@@ -640,6 +735,18 @@ public class ModConfig {
         CURRENT_VALUES.put("enhancedCreeperExplosions", String.valueOf(enhancedCreeperExplosions));
         CURRENT_VALUES.put("rocketShellExplosions", String.valueOf(rocketShellExplosions));
         CURRENT_VALUES.put("rocketExplosionDamageScale", String.valueOf(rocketExplosionDamageScale));
+        CURRENT_VALUES.put("rocketShellBlockDamage", String.valueOf(rocketShellBlockDamage));
+        CURRENT_VALUES.put("rocketShellExplosionsFromDispensers", String.valueOf(rocketShellExplosionsFromDispensers));
+        CURRENT_VALUES.put("rocketShellExplosionsFromOtherMods", String.valueOf(rocketShellExplosionsFromOtherMods));
+        CURRENT_VALUES.put("rocketBlastOriginSearch", String.valueOf(rocketBlastOriginSearch));
+        CURRENT_VALUES.put("chainDamageStacking", String.valueOf(chainDamageStacking));
+        CURRENT_VALUES.put("maxChainDetonations", String.valueOf(maxChainDetonations));
+        CURRENT_VALUES.put("scatterSolidBlocks", String.valueOf(scatterSolidBlocks));
+        CURRENT_VALUES.put("blockScatterChance", String.valueOf(blockScatterChance));
+        CURRENT_VALUES.put("blockScatterSpeed", String.valueOf(blockScatterSpeed));
+        CURRENT_VALUES.put("replaceVanillaExplosionVisuals", String.valueOf(replaceVanillaExplosionVisuals));
+        CURRENT_VALUES.put("vanillaExplosionVisualPower", String.valueOf(vanillaExplosionVisualPower));
+        CURRENT_VALUES.put("enhanceAllExplosions", String.valueOf(enhanceAllExplosions));
         CURRENT_VALUES.put("showExtraShellExplosionTrails", String.valueOf(showExtraShellExplosionTrails));
         CURRENT_VALUES.put("baseSmokeAmount", String.valueOf(baseSmokeAmount));
         CURRENT_VALUES.put("explosionVisualScale", String.valueOf(explosionVisualScale));

@@ -23,7 +23,7 @@ public class BetterTNTs {
 
     public static final String MOD_ID = "createtnt";
     public static final String MOD_NAME = "Create TNT";
-    public static final String VERSION = "2.1.0";
+    public static final String VERSION = "2.2.0";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 

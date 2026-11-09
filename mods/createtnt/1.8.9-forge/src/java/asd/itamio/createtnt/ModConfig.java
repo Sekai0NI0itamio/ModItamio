@@ -27,6 +27,28 @@ public class ModConfig {
     /** Global explosive power scale applied to block destruction and entity
      *  damage power. 1.0 = full strength, 0.4 = reduced by 60%. */
     public static float explosionPowerScale = 0.4F;
+    /** Block (terrain) damage scale for TNT blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies to EVERY TNT blast: primed TNT, chain reactions and TNT caught in another explosion.
+     *  The smoke plume, particles, shake and sound are unaffected (excluded from this). */
+    public static float tntBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for TNT blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies to EVERY TNT blast. Visuals are unaffected. */
+    public static float tntEntityDamageScale = 1.0F;
+    /** Block (terrain) damage scale for creeper blasts. 1.0 = full destruction, 0 = no block damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. The smoke plume and shake are unaffected. */
+    public static float creeperBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for creeper blasts. 1.0 = full damage, 0 = no entity damage.
+     *  Applies only when {@code enhancedCreeperExplosions} is on. Visuals are unaffected. */
+    public static float creeperEntityDamageScale = 1.0F;
+    /** Block (terrain) damage scale for rocket (firework shell) blasts — applied IN ADDITION to
+     *  {@code rocketShellBlockDamage}. 1.0 = full destruction, 0 = no block damage, 0.5 = half.
+     *  The smoke plume and entity damage are unaffected. */
+    public static float rocketBlockDamageScale = 1.0F;
+    /** Entity (mob/player) damage scale for rocket blasts — applied IN ADDITION to
+     *  {@code rocketExplosionDamageScale}. 1.0 = full damage, 0 = no entity damage.
+     *  The smoke plume and block destruction are unaffected. */
+    public static float rocketEntityDamageScale = 1.0F;
+
     /** Knockback/scatter impulse scale for entities (mobs, players, primed
      *  TNT, debris). 1.0 = full shove, 0.35 = minimal nudge. */
     public static float entityKnockbackScale = 0.35F;
@@ -207,6 +229,14 @@ public class ModConfig {
             "TNT strength (block destruction radius). Entity damage auto-scales to 1.5x");
         explosionPowerScale = config.getFloat("explosionPowerScale", "general", 0.4F, 0.05F, 4.0F,
             "Global explosive power scale (0.4 = 60% weaker). Applies to block destruction and entity damage");
+        tntBlockDamageScale = config.getFloat("tntBlockDamageScale", "general", 1.0F, 0.0F, 4.0F,
+            "Block (terrain) damage scale for TNT blasts (1.0 = full destruction, 0 = no block damage, 0.5 = half). Visuals unaffected: set this to 0 to keep the smoke plume with no block damage");
+        tntEntityDamageScale = config.getFloat("tntEntityDamageScale", "general", 1.0F, 0.0F, 4.0F,
+            "Entity (mob/player) damage scale for TNT blasts (1.0 = full damage, 0 = no entity damage)");
+        creeperBlockDamageScale = config.getFloat("creeperBlockDamageScale", "general", 1.0F, 0.0F, 4.0F,
+            "Block (terrain) damage scale for creeper blasts (1.0 = full destruction, 0 = no block damage). Visuals unaffected");
+        creeperEntityDamageScale = config.getFloat("creeperEntityDamageScale", "general", 1.0F, 0.0F, 4.0F,
+            "Entity (mob/player) damage scale for creeper blasts (1.0 = full damage, 0 = no entity damage)");
         entityKnockbackScale = config.getFloat("entityKnockbackScale", "general", 0.35F, 0.0F, 4.0F,
             "Knockback impulse on mobs/players/primed TNT/debris (0.35 = minimal nudge, 1.0 = full shove)");
         simultaneousChainDetonation = config.getBoolean("simultaneousChainDetonation", "general", true,

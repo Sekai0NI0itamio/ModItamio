@@ -115,6 +115,8 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
                 BlockPos tntPos = this.blockPosition();
                 boolean inWaterBlock = this.level().getFluidState(tntPos).is(FluidTags.WATER);
                 boolean inLavaBlock = this.level().getFluidState(tntPos).is(FluidTags.LAVA);
+                blockPower *= ModConfig.tntBlockDamageScale;
+                entityPower *= ModConfig.tntEntityDamageScale;
                 if (inWaterBlock) {
                     blockPower *= ModConfig.waterResistanceScale;
                     entityPower *= ModConfig.waterResistanceScale;
@@ -236,12 +238,16 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
             }
         }
 
+        int cap = ModConfig.maxChainDetonations;
         if (ModConfig.simultaneousChainDetonation) {
             // Detonate all collected TNT positions immediately (same tick).
+            int count = 0;
             for (BlockPos pos : tntPositions) {
+                if (cap > 0 && count >= cap) break;
                 if (chainVisited.contains(pos)) continue;
                 chainVisited.add(pos);
                 detonatePosition(level, pos, cause);
+                count++;
             }
         } else {
             // One-by-one: schedule each position to explode with a staggered
@@ -249,6 +255,7 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
             long now = level.getGameTime();
             int index = 0;
             for (BlockPos pos : tntPositions) {
+                if (cap > 0 && index >= cap) break;
                 if (chainVisited.contains(pos)) continue;
                 chainVisited.add(pos);
                 long fireAt = now + (long) ModConfig.chainDetonationDelay * (index + 1);
@@ -273,6 +280,8 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         float chainParticlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         boolean inWater = level.getFluidState(pos).is(FluidTags.WATER);
         boolean inLava = level.getFluidState(pos).is(FluidTags.LAVA);
+        chainBlockPower *= ModConfig.tntBlockDamageScale;
+        chainEntityPower *= ModConfig.tntEntityDamageScale;
         if (inWater) {
             chainBlockPower *= ModConfig.waterResistanceScale;
             chainEntityPower *= ModConfig.waterResistanceScale;

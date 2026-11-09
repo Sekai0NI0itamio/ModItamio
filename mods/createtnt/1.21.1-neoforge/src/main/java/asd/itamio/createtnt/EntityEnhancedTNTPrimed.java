@@ -117,6 +117,8 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
                 BlockPos tntPos = this.blockPosition();
                 boolean inWaterBlock = this.level().getFluidState(tntPos).is(FluidTags.WATER);
                 boolean inLavaBlock = this.level().getFluidState(tntPos).is(FluidTags.LAVA);
+                blockPower *= ModConfig.tntBlockDamageScale;
+                entityPower *= ModConfig.tntEntityDamageScale;
                 if (inWaterBlock) {
                     blockPower *= ModConfig.waterResistanceScale;
                     entityPower *= ModConfig.waterResistanceScale;
@@ -275,6 +277,8 @@ public class EntityEnhancedTNTPrimed extends PrimedTnt {
         float chainParticlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
         boolean inWater = level.getFluidState(pos).is(FluidTags.WATER);
         boolean inLava = level.getFluidState(pos).is(FluidTags.LAVA);
+        chainBlockPower *= ModConfig.tntBlockDamageScale;
+        chainEntityPower *= ModConfig.tntEntityDamageScale;
         if (inWater) {
             chainBlockPower *= ModConfig.waterResistanceScale;
             chainEntityPower *= ModConfig.waterResistanceScale;

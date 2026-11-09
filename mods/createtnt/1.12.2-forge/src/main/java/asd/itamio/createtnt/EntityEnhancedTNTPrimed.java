@@ -105,8 +105,8 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
                 // specific behaviour entirely.
                 // 1.0x to 3.0x random power multiplier — each TNT varies in strength.
                 float powerMult = 1.0F + this.world.rand.nextFloat() * 2.0F;
-                float blockPower = ModConfig.blockPower * powerMult;
-                float entityPower = ModConfig.entityPower * powerMult;
+                float blockPower = ModConfig.blockPower * powerMult * ModConfig.tntBlockDamageScale;
+                float entityPower = ModConfig.entityPower * powerMult * ModConfig.tntEntityDamageScale;
                 // Particle power is decoupled from destruction power (the
                 // smoke stays BIG even though destruction is scaled down):
                 // based on full tntStrength with a gentle multiplier curve —
@@ -278,8 +278,8 @@ public class EntityEnhancedTNTPrimed extends EntityTNTPrimed {
     private static void detonatePosition(World world, BlockPos pos, EntityEnhancedTNTPrimed cause) {
         // Fluid resistance scaling for chain explosions.
         float powerMult = 1.0F + world.rand.nextFloat() * 2.0F;
-        float chainBlockPower = ModConfig.blockPower * powerMult;
-        float chainEntityPower = ModConfig.entityPower * powerMult;
+        float chainBlockPower = ModConfig.blockPower * powerMult * ModConfig.tntBlockDamageScale;
+        float chainEntityPower = ModConfig.entityPower * powerMult * ModConfig.tntEntityDamageScale;
         float chainParticlePower = ModConfig.tntStrength
             * (1.0F + (powerMult - 1.0F) * 0.25F);
         net.minecraft.block.material.Material mat = world.getBlockState(pos).getMaterial();

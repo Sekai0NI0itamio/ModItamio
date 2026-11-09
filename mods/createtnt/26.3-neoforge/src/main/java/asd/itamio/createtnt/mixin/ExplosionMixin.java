@@ -47,8 +47,8 @@ public class ExplosionMixin {
 
         if (ModConfig.enhancedCreeperExplosions && entity instanceof Creeper) {
             float powerMult = 1.0F + level.getRandom().nextFloat() * 2.0F;
-            float blockPower = ModConfig.blockPower * powerMult;
-            float entityPower = ModConfig.entityPower * powerMult;
+            float blockPower = ModConfig.blockPower * powerMult * ModConfig.creeperBlockDamageScale;
+            float entityPower = ModConfig.entityPower * powerMult * ModConfig.creeperEntityDamageScale;
             float particlePower = ModConfig.tntStrength * (1.0F + (powerMult - 1.0F) * 0.25F);
             EnhancedExplosion enhancedExplosion = new EnhancedExplosion(level, entity, x, y, z,
                 blockPower, entityPower, false, true, particlePower);

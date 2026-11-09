@@ -17,8 +17,10 @@ public class RocketExplosionMixin {
     private void createtnt$redirectBlast(CallbackInfo ci) {
         FireworkRocketEntity self = (FireworkRocketEntity) (Object) this;
         if (self.level().isClientSide || !self.isShotAtAngle() || !ModConfig.rocketShellExplosions) return;
+        if (!RocketTracker.isTracked(self.getUUID())) {
+            return;
+        }
         RocketTracker.detonateShell((ServerLevel) self.level(), self);
-        RocketTracker.untrack(self.getUUID());
         ci.cancel();
     }
 }

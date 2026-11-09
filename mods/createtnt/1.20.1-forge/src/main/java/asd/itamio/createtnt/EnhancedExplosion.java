@@ -106,6 +106,10 @@ public class EnhancedExplosion extends Explosion {
      */
     @Override
     public void explode() {
+        if (this.entityRadius <= 0.0F) {
+            sendExplosionToClients();
+            return;
+        }
         Set<BlockPos> set = Sets.newHashSet();
 
         // Block destruction sampling (same ray-cast approach as vanilla,
@@ -310,6 +314,15 @@ public class EnhancedExplosion extends Explosion {
                         double d14 = (double) Explosion.getSeenPercent(vec3, entity);
                         double d10 = (1.0D - d12) * d14;
                         // Entity damage formula: (d^2 + d)/2 * 7 * radius + 1
+                        if (ModConfig.chainDamageStacking && entity instanceof LivingEntity living
+                            && living.getLastDamageSource() != null
+                            && living.getLastDamageSource().is(net.minecraft.tags.DamageTypeTags.IS_EXPLOSION)) {
+                            // Several blasts can land in the same tick (chain
+                            // detonation); vanilla hurt immunity would let only
+                            // the first one deal damage. Only reset for an
+                            // explosion hit so sword/arrow immunity is intact.
+                            living.invulnerableTime = 0;
+                        }
                         entity.hurt(this.level.damageSources().explosion(this),
                             (float) ((int) ((d10 * d10 + d10) / 2.0D * 7.0D * (double) f3 + 1.0D)));
                         double d11 = d10;
@@ -475,6 +488,45 @@ public class EnhancedExplosion extends Explosion {
                         this.level.setBlock(blockpos, Blocks.AIR.defaultBlockState(), 18);
                         this.chainedTNTPositions.add(blockpos);
                     } else {
+                        // Optional shrapnel: launch a fraction of the destroyed
+                        // solid blocks as flying debris. Off by default so the
+                        // classic crater look is unchanged.
+                        boolean scatter = ModConfig.scatterSolidBlocks
+                            && this.level.getRandom().nextFloat() < ModConfig.blockScatterChance;
+                        if (scatter) {
+                            double dx = (double) blockpos.getX() + 0.5D - this.x;
+                            double dy = (double) blockpos.getY() + 0.5D - this.y;
+                            double dz = (double) blockpos.getZ() + 0.5D - this.z;
+                            double dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+                            Float stored = this.blockEnergyMap.get(blockpos);
+                            double energy = stored != null
+                                ? Math.max(0.2D, stored / Math.max(1.0D, this.blockRadius))
+                                : Math.max(0.2D, 1.0D - dist / (double) this.blockRadius);
+                            double speed = ModConfig.blockScatterSpeed * energy;
+                            double vx;
+                            double vy;
+                            double vz;
+                            if (dist > 0.001D) {
+                                vx = dx / dist * speed;
+                                vy = dy / dist * speed + 0.2D * energy;
+                                vz = dz / dist * speed;
+                            } else {
+                                vx = 0.0D;
+                                vy = speed;
+                                vz = 0.0D;
+                            }
+                            EntityEnhancedFallingBlock debris = new EntityEnhancedFallingBlock(
+                                this.level,
+                                (double) ((float) blockpos.getX() + 0.5F),
+                                (double) blockpos.getY(),
+                                (double) ((float) blockpos.getZ() + 0.5F),
+                                state);
+                            debris.setDeltaMovement(new Vec3(vx, vy, vz));
+                            this.level.addFreshEntity(debris);
+                            this.level.setBlock(blockpos, Blocks.AIR.defaultBlockState(), 18);
+                            block.wasExploded(this.level, blockpos, this);
+                            continue;
+                        }
                         // Solid blocks are destroyed in place — no scattering.
                         // Greatly reduced item drop chance (1/4 of vanilla's
                         // already-low rate) so explosions vaporize most blocks
