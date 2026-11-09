@@ -66,6 +66,9 @@ public final class RocketTracker {
         }
     }
 
+    public static boolean isTracked(UUID id) {
+        return TRACKED.containsKey(id);
+    }
     public static void untrack(UUID id) {
         TRACKED.remove(id);
     }
